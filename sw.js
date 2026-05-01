@@ -1,6 +1,16 @@
 /* NutriForge Africa — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-v6-3';
-var PRECACHE = ['./index.html', './landing.html', './manifest.json', './t2dm-clinical-field-guide.html'];
+var CACHE_NAME = 'nutriforge-v6-7';
+var PRECACHE = [
+  './index.html',
+  './landing.html',
+  './manifest.json',
+  './t2dm-clinical-field-guide.html',
+  './js/backup-core.mjs',
+  './js/foods-data.js',
+  './js/search-core.js',
+  './js/meals-core.js',
+  './js/scoring-core.js',
+];
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
