@@ -1,5 +1,5 @@
 /* NutriForge Africa — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-v6-2';
+var CACHE_NAME = 'nutriforge-v6-3';
 var PRECACHE = ['./index.html', './landing.html', './manifest.json', './t2dm-clinical-field-guide.html'];
 
 self.addEventListener('install', function (event) {

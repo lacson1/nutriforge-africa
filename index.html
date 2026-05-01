@@ -139,7 +139,7 @@ body.dark-mode .cond-pill:hover{background:var(--surface-2);border-color:var(--c
 .browse-hero-text strong{color:var(--text-secondary);font-weight:600}
 
 /* ── MAIN ── */
-.main{padding:1rem max(1.5rem,env(safe-area-inset-right)) 1rem max(1.5rem,env(safe-area-inset-left));position:relative;z-index:1}
+.main{padding:1rem max(1.5rem,env(safe-area-inset-right)) 1rem max(1.5rem,env(safe-area-inset-left));position:relative}
 
 /* ── GRID ── */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;margin-bottom:2rem}
@@ -343,6 +343,29 @@ body.dark-mode .exp-db-bridge{background:rgba(29,92,58,.25);border-color:#4ADE80
 .meal-tpl-head{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px}
 .meal-tpl-title{font-weight:700;font-size:13px;color:var(--text-primary)}
 .meal-tpl-meta{font-size:10px;color:var(--text-tertiary)}
+.meal-tpl-tags{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px}
+.meal-tag{font-size:9px;font-weight:600;padding:3px 8px;border-radius:999px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-secondary)}
+.meal-tag.time{border-color:rgba(217,119,6,.38);background:var(--accent-amber-light);color:#9A3412}
+.meal-tag.budget-low{border-color:rgba(29,92,58,.38);background:var(--accent-green-light);color:var(--accent-green)}
+.nf-doc-panel.community-start-panel{max-width:600px}
+.community-start-lead{font-size:12px;color:var(--text-secondary);line-height:1.55;margin:0 0 14px}
+.community-start-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px;margin-bottom:14px}
+.community-start-btn{text-align:left;font-size:12px;line-height:1.35;padding:12px;border-radius:12px;border:1px solid var(--card-border);background:var(--surface);cursor:pointer;color:var(--text-primary);transition:background .12s,border-color .12s;font-family:inherit}
+.community-start-btn:hover{border-color:var(--accent-green);background:var(--accent-green-light)}
+.community-start-btn .cs-emoji{font-size:20px;display:block;margin-bottom:4px}
+.community-start-btn .cs-sub{font-size:10px;color:var(--text-tertiary);font-weight:500;margin-top:4px;display:block;line-height:1.4}
+.community-start-foot{font-size:10px;color:var(--text-tertiary);line-height:1.45;margin:0}
+.portion-hand-hint{font-size:10px;color:var(--text-secondary);line-height:1.45;margin:10px 0 0;padding:8px 10px;border-radius:8px;background:var(--surface);border:1px solid var(--card-border)}
+.portion-hand-hint strong{color:var(--text-primary)}
+.portion-hand-hint em{font-style:normal;color:var(--text-tertiary);font-size:9px;display:block;margin-top:6px;line-height:1.4}
+.exp-condition-why{font-size:11px;color:var(--text-secondary);line-height:1.45;margin:8px 0 0;padding:8px 10px;border-radius:8px;border-left:3px solid var(--accent-green);background:var(--accent-green-light)}
+.browse-hero-why{margin-top:8px}
+body.dark-mode .meal-tag.time{border-color:rgba(251,191,36,.35);background:rgba(251,191,36,.1);color:#FCD34D}
+body.dark-mode .meal-tag.budget-low{border-color:rgba(52,211,153,.28);background:rgba(94,234,212,.1);color:#5EEAD4}
+body.dark-mode .community-start-btn{background:var(--surface);border-color:var(--card-border)}
+body.dark-mode .community-start-btn:hover{border-color:var(--accent-green);background:rgba(94,234,212,.08)}
+body.dark-mode .portion-hand-hint{border-color:var(--card-border);background:var(--surface)}
+body.dark-mode .exp-condition-why{background:rgba(94,234,212,.1);border-left-color:var(--accent-green)}
 .profile-row{display:flex;align-items:flex-start;gap:10px;padding:10px;border:1px solid var(--card-border);border-radius:10px;margin-bottom:8px;background:var(--surface)}
 .profile-row.profile-row-active{border-color:var(--accent-green);box-shadow:0 0 0 1px var(--accent-green-light)}
 .profile-row-main{flex:1;min-width:0}
@@ -675,6 +698,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <button onclick="openT2dmClinicalGuide();toggleOverflow()">Diabetes clinical field guide</button>
         <hr>
         <button onclick="openDrawer('diary');toggleOverflow()">Daily diary &amp; goals</button>
+        <button onclick="openCommunityStart();toggleOverflow()">Start guide (goals)</button>
         <button onclick="openDrawer('meals');toggleOverflow()">Meal templates (plates)</button>
         <button onclick="openDrawer('drugs');toggleOverflow()">Drug–food checker</button>
         <button onclick="openDrawer('profiles');toggleOverflow()">Client profiles</button>
@@ -786,9 +810,10 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
   </div>
   <div class="browse-hero" role="note" aria-label="How optional filters work">
     <div class="browse-hero-inner">
-      <span class="browse-hero-emoji" aria-hidden="true">🌍</span>
-      <div class="browse-hero-copy">
-        <p class="browse-hero-text">One <strong>global</strong> list for every kitchen. The chips above only narrow the view — e.g. <strong>African staples</strong>, a <strong>Nigeria</strong> lens, or <strong>ready-made dishes</strong>. Combine them when you want a mixed plate.</p>
+      <span class="browse-hero-emoji" id="browseHeroEmoji" aria-hidden="true">🌍</span>
+      <div class="browse-hero-copy" id="browseHeroCopy">
+        <p class="browse-hero-text" id="browseHeroLine1">One <strong>global</strong> list for every kitchen. The chips above only narrow the view — e.g. <strong>African staples</strong>, a <strong>Nigeria</strong> lens, or <strong>ready-made dishes</strong>. Combine them when you want a mixed plate.</p>
+        <p class="browse-hero-text browse-hero-why" id="browseHeroLine2" style="display:none" hidden></p>
       </div>
     </div>
   </div>
@@ -848,6 +873,20 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <p>The assistant uses an external model with a short system prompt and a slice of your current filter context. It can be wrong; verify critical facts on the food cards and original literature.</p>
         <h3>Privacy</h3>
         <p>Diary, goals, and client profiles are stored only in this browser (<code>localStorage</code>). Clearing site data removes them. There is no account server in this static build.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="communityStartOverlay" class="nf-doc-overlay" role="dialog" aria-modal="true" aria-labelledby="communityStartTitle" aria-hidden="true" onclick="if(event.target===this)closeCommunityStart()">
+    <div class="nf-doc-panel community-start-panel" onclick="event.stopPropagation()">
+      <div class="nf-doc-head">
+        <span id="communityStartTitle" class="nf-doc-title">What do you want to work on?</span>
+        <button type="button" class="drawer-close" onclick="closeCommunityStart()" aria-label="Close">&#10005;</button>
+      </div>
+      <div class="nf-doc-body">
+        <p class="community-start-lead">Pick one path — we will switch to <strong>patient-friendly labels</strong>, set a helpful food list, and open <strong>meal templates</strong> so you can log a day when you are ready. This is education, not a diagnosis; check changes with your clinician, especially if you use insulin, are pregnant, or have kidney disease.</p>
+        <div class="community-start-grid" id="communityStartGrid"></div>
+        <p class="community-start-foot">You can reopen this anytime from <strong>More → Start guide (goals)</strong>. We will not show this pop-up again after you pick a goal or tap close.</p>
       </div>
     </div>
   </div>
@@ -1871,6 +1910,43 @@ var CONDITIONS = [
    keywords:['respiratory','asthma','copd','lung','bronch','mucolytic','expectorant','airway','wheez','pulmonary','pneumonia','cough','1,8-cineole','thymol','bronchospasm']}
 ];
 
+// Plain-language “why” for self-guided users when a condition filter is active
+var CONDITION_COMMUNITY_WHY = {
+  t2d: 'These foods are linked in our notes to steadier glucose or insulin-friendly patterns — fibre and lower glycaemic load matter more than chasing perfection.',
+  htn: 'These entries lean toward patterns that support blood pressure — often more plants and potassium-friendly choices. Salt in cooking still counts; match portions to what your clinician advised.',
+  dyslip: 'Shown foods are tagged where our text mentions lipids or heart-risk pathways — helpful as you build plates with your care team.',
+  cvd: 'Heart-health angles in our database (fats, polyphenols, fibre, fish) — pair with movement and any medicines you already take.',
+  anaemia: 'Iron, folate, or blood-health themes show up in the write-ups here — vitamin C-rich veg still helps absorb plant iron.',
+  inflam: 'Anti-inflammatory or pain-related language surfaced in these entries — one piece of a broader plan (sleep, stress, meds).',
+  gut: 'Gut, fibre, or fermentation angles — add water gradually if you bump fibre up.',
+  obesity: 'Satiety, calorie density, or weight-related notes — small steady changes beat crash cycles.',
+  cancer: 'Risk-reduction or protective-diet language in sources we cite — not a substitute for screening or oncology care.',
+  brain: 'Cognitive or mood-related bioactives mentioned — useful add-ons, not a treatment.',
+  bone: 'Calcium, vitamin D, K, or bone tissue themes — still needs sunlight / supplements only if prescribed.',
+  liver: 'Liver or NAFLD-related mentions — alcohol and total energy matter enormously alongside any list.',
+  thyroid: 'Iodine, selenium, or thyroid-adjacent notes — if you take levothyroxine, timing with food and coffee is a separate conversation with your clinician.',
+  immune: 'Immune-support language in the evidence blurbs — hygiene, vaccines, and sleep are not replaced by food alone.',
+  menopause: 'Phytoestrogen or hormonal-balance mentions — symptoms vary; personalise with your clinician.',
+  anxiety: 'Calming or stress-axis language — food supports; it does not replace therapy or medication.',
+  skin: 'Skin or collagen-related nutrients — hydration and sun protection still carry most of the visible weight.',
+  fertility: 'Folate and reproductive-health angles — pre-conception care belongs with your provider.',
+  longevity: 'Patterns linked to healthy ageing in our grading — consistency beats any single “superfood”.',
+  african_def: 'Entries touching common public-health gaps (iron, vitamin A, iodine, zinc) in African contexts — fortification and diverse plates still matter.',
+  ckd: 'Kidney-related cautions in the text — limits for potassium, phosphorus, and fluid differ by stage; confirm with your nephrology team before major diet shifts.',
+  pcos: 'Insulin- or androgen-related angles — regular meals and activity pair well with these ideas.',
+  sickle: 'Nutrients often discussed alongside sickle cell (folate, hydration context in cards) — your haematology plan comes first.',
+  gout: 'Purine or uric-acid aware items where noted — sugary drinks and alcohol patterns often matter as much as individual foods.',
+  respiratory: 'Airway-friendly herbs or nutrients flagged in write-ups — inhaler plans are still primary for asthma/COPD.'
+};
+
+var COMMUNITY_START_GOALS = [
+  { id:'goal_t2d', label:'Steady energy & blood sugar', emoji:'📊', sub:'Fibre-friendly picks', cond:'t2d', filter:null },
+  { id:'goal_htn', label:'Blood pressure', emoji:'💓', sub:'Plant-forward patterns', cond:'htn', filter:null },
+  { id:'goal_weight', label:'Healthy weight', emoji:'⚖️', sub:'Filling, nutrient-dense foods', cond:'obesity', filter:null },
+  { id:'goal_heart', label:'Heart health', emoji:'❤️', sub:'Cholesterol & BP friendly', cond:'cvd', filter:null },
+  { id:'goal_family', label:'Family meals', emoji:'🥘', sub:'Ready-made dishes lens', cond:null, filter:'dishes' }
+];
+
 // Pre-compute condition matches for every food
 (function() {
   foods.forEach(function(f) {
@@ -1899,10 +1975,11 @@ foods.forEach(function(f){ foodsById[f.id] = f; });
 })();
 
 var MEAL_TEMPLATES = [
-  { id:'mt1', name:'Jollof + grilled chicken + pepper', emoji:'🍽️', region:'West Africa', notes:'Typical plate: jollof rice, skinless chicken, sweet pepper.', parts:[{id:170,g:280},{id:94,g:120},{id:15,g:70}] },
-  { id:'mt2', name:'Egusi soup + fufu', emoji:'🥣', region:'West / Central Africa', notes:'Melon-seed soup with fermented cassava swallow.', parts:[{id:171,g:320},{id:287,g:180}] },
-  { id:'mt3', name:'Injera + lentil wat', emoji:'🫓', region:'Horn of Africa', notes:'Fermented teff flatbread with spiced lentils.', parts:[{id:288,g:220},{id:34,g:200}] },
-  { id:'mt4', name:'Maize stiff porridge + tilapia + greens', emoji:'🍲', region:'East / Southern Africa', notes:'Nshima/ugali-style maize porridge (polenta proxy), fish, spinach.', parts:[{id:337,g:200},{id:140,g:160},{id:26,g:100}] }
+  { id:'mt1', name:'Jollof + grilled chicken + pepper', emoji:'🍽️', region:'West Africa', timeLabel:'~40 min active', budget:'medium', notes:'Typical plate: jollof rice, skinless chicken, sweet pepper. Oil in the pot drives calories — lighter oil keeps it closer to these numbers.', parts:[{id:170,g:280},{id:94,g:120},{id:15,g:70}] },
+  { id:'mt2', name:'Egusi soup + fufu', emoji:'🥣', region:'West / Central Africa', timeLabel:'45 min · freezes well', budget:'low', notes:'Melon-seed soup with fermented cassava swallow. Palm oil and stock cubes vary by cook — adjust if your clinician limits fat or salt.', parts:[{id:171,g:320},{id:287,g:180}] },
+  { id:'mt3', name:'Injera + lentil wat', emoji:'🫓', region:'Horn of Africa', timeLabel:'50+ min · batter ahead', budget:'low', notes:'Fermented teff flatbread with spiced lentils. Injera timing is skilled — treat times as orientation.', parts:[{id:288,g:220},{id:34,g:200}] },
+  { id:'mt4', name:'Maize stiff porridge + tilapia + greens', emoji:'🍲', region:'East / Southern Africa', timeLabel:'~35 min', budget:'low', notes:'Nshima/ugali-style maize porridge (polenta proxy), fish, spinach.', parts:[{id:337,g:200},{id:140,g:160},{id:26,g:100}] },
+  { id:'mt5', name:'Cowpeas + brown rice + tomato stew', emoji:'🍛', region:'Pan-African', timeLabel:'30 min · batch friendly', budget:'low', notes:'Budget bowl: soak beans if you have time to ease digestion; tomato adds vitamin C for plant iron.', parts:[{id:37,g:180},{id:72,g:150},{id:22,g:120}] }
 ];
 
 function computeMealTotals(parts){
@@ -1948,15 +2025,64 @@ var diaryGoals = { kcal:2000, protein:120, fiber:35 };
 var diaryByDate = {};
 var clientProfiles = [];
 var activeProfileId = null;
+/** When loading a client from a non-session state, stash favourites/plate/goals/condition to restore on End session. */
+var preSessionSnapshot = null;
 
 // ── HELPERS ──
 function getEv(c){return{High:'ev-hi',Moderate:'ev-mo',Low:'ev-lo'}[c]||'ev-lo'}
 function getGI(c){var m={Low:'gi-lo',Medium:'gi-me',High:'gi-hi','Low-Medium':'gi-me'};return m[c]||'gi-lo'}
 function getCatCls(cat){var m={fish:'cf',seafood:'cs',veg:'cv',leaf:'cv',legume:'cl',nut:'cn',fruit:'cft',grain:'cg',dairy:'cd',oil:'coil',fungi:'cfu',fermented:'ch',meat:'cmeat',spice:'ca',other:'co'};return m[cat]||'co'}
 function safeHtml(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function getHandPortionCue(cat){
+  var m = {
+    grain:'Grains: a loose fist of cooked food is often near a “cup” of starch — match to hunger and activity.',
+    legume:'Legumes: about half to three-quarters of a cup cooked (a scooped fist) is a common protein serve.',
+    meat:'Lean meat: a deck-of-cards thickness on your palm is often near 80–120 g raw — hand size varies.',
+    fish:'Fish: a whole palm (not stacked fingers) is a simple main-portion visual.',
+    seafood:'Seafood: think a palm-sized piece for mains.',
+    veg:'Non-starchy veg: two open hands nudges volume without many calories.',
+    leaf:'Leafy greens: two cupped hands is an easy “eat plenty” cue.',
+    fruit:'Fruit: one medium piece or one heaped cupped hand of chopped fruit ≈ one fruit serve.',
+    dairy:'Dairy: a mug of milk; cheese about two thumbs thick.',
+    nut:'Nuts and seeds: a small flat palmful (not heaped) — very calorie-dense.',
+    oil:'Oils: count in teaspoons — easy to pour past what you planned.',
+    fermented:'Fermented foods: small amounts for flavour — mind salt in soy, paste, and relish.',
+    fungi:'Mushrooms: generous portions add fill for modest calories.',
+    spice:'Herbs and spices: big flavour, tiny weight — pair with starch, protein, and veg.',
+    other:'Mixed plates: aim half veg when you can, then split the rest between starch and protein.'
+  };
+  return m[cat] || m.other;
+}
+function mealTemplateTagsHtml(m){
+  var tags = [];
+  if(m.timeLabel) tags.push('<span class="meal-tag time">' + safeHtml(m.timeLabel) + '</span>');
+  if(m.budget === 'low') tags.push('<span class="meal-tag budget-low">Budget-friendly</span>');
+  else if(m.budget === 'medium') tags.push('<span class="meal-tag">Moderate cost</span>');
+  else if(m.budget === 'varies') tags.push('<span class="meal-tag">Cost varies</span>');
+  return tags.length ? '<div class="meal-tpl-tags">' + tags.join('') + '</div>' : '';
+}
+function updateBrowseHero(){
+  var l1 = document.getElementById('browseHeroLine1');
+  var l2 = document.getElementById('browseHeroLine2');
+  var em = document.getElementById('browseHeroEmoji');
+  if(!l1) return;
+  l1.innerHTML = 'One <strong>global</strong> list for every kitchen. The chips above only narrow the view — e.g. <strong>African staples</strong>, a <strong>Nigeria</strong> lens, or <strong>ready-made dishes</strong>. Combine them when you want a mixed plate.';
+  if(em) em.textContent = activeCondition ? '💡' : '🌍';
+  if(l2){
+    if(activeCondition && CONDITION_COMMUNITY_WHY[activeCondition]){
+      l2.removeAttribute('hidden');
+      l2.style.display = 'block';
+      l2.innerHTML = '<strong>Why this list:</strong> ' + safeHtml(CONDITION_COMMUNITY_WHY[activeCondition]);
+    } else {
+      l2.setAttribute('hidden','hidden');
+      l2.style.display = 'none';
+      l2.innerHTML = '';
+    }
+  }
+}
 function getProfileById(pid){ if(!pid) return null; return clientProfiles.filter(function(x){ return x.id === pid; })[0] || null; }
 function saveActiveProfileStore(){ try{ if(activeProfileId) localStorage.setItem('nf_active_profile', JSON.stringify(activeProfileId)); else localStorage.removeItem('nf_active_profile'); }catch(e){} }
-function clearActiveProfile(){ activeProfileId = null; saveActiveProfileStore(); updateContextBadge(); if(activeDrawer === 'profiles') refreshProfilesView(); }
+function clearActiveProfile(){ endClientSession(); }
 function formatProfileDateLine(savedAt, lastVisitAt){
   function fmt(iso){ if(!iso || typeof iso !== 'string') return ''; var parts = iso.split('-'); if(parts.length !== 3) return iso; return parts[2] + '/' + parts[1] + '/' + parts[0]; }
   var s = fmt(savedAt), v = fmt(lastVisitAt);
@@ -1995,6 +2121,9 @@ function affordSynonymGroup(token){
 function foodSearchHaystack(f){
   return [f.name,f.aka||'',f.benefits||'',f.bio||'',f.use||'',f.catLabel||'',f.micro||'',f.limits||''].join(' ').toLowerCase();
 }
+function foodSearchHaystackShort(f){
+  return [f.name,f.aka||'',f.catLabel||''].join(' ').toLowerCase();
+}
 function tokenMatchesHaystack(hay,t){
   if(!t) return true;
   if(hay.indexOf(t)>-1) return true;
@@ -2010,18 +2139,18 @@ function fuzzySubsequence(hay,needle){
   }
   return qi===needle.length;
 }
-function tokenMatchesWithFuzzy(hay,t){
+function tokenMatchesWithFuzzy(f,t){
+  var hay=foodSearchHaystack(f);
   if(tokenMatchesHaystack(hay,t)) return true;
-  if(t.length>=3 && fuzzySubsequence(hay,t)) return true;
+  if(t.length>=3 && fuzzySubsequence(foodSearchHaystackShort(f),t)) return true;
   return false;
 }
 function foodMatchesSearch(f,qraw){
   var q=String(qraw||'').trim().toLowerCase();
   if(!q) return true;
-  var hay=foodSearchHaystack(f);
   var toks=q.split(/[\s,]+/).filter(function(x){return x.length>0});
   for(var ti=0;ti<toks.length;ti++){
-    if(!tokenMatchesWithFuzzy(hay,toks[ti])) return false;
+    if(!tokenMatchesWithFuzzy(f,toks[ti])) return false;
   }
   return true;
 }
@@ -2293,7 +2422,10 @@ function buildCompareDrawer(){
   return '<div class="compare-grid" id="compareGrid"><div class="compare-slot" id="cs0"><span class="compare-slot-label">Slot 1</span></div><div class="compare-slot" id="cs1"><span class="compare-slot-label">Slot 2</span></div><div class="compare-slot" id="cs2"><span class="compare-slot-label">Slot 3</span></div></div>';
 }
 function buildDiaryDrawer(){
-  return '<p class="drawer-tools-note">Entries stay on this device only. Use goals as soft targets — adjust with your clinician.</p>' +
+  var diaryNote = activeProfileId
+    ? 'Food log is <strong>per client</strong> for this session (separate from your default diary). Device-only — not synced.'
+    : 'Entries stay on this device only. Use goals as soft targets — adjust with your clinician.';
+  return '<p class="drawer-tools-note">' + diaryNote + '</p>' +
     '<div class="diary-date-row"><label style="font-size:11px;color:var(--text-secondary)">Day</label> <input type="date" id="diaryDateInput" onchange="diaryDate=this.value||todayISO();refreshDiaryView()"> ' +
     '<button type="button" class="ca-btn" onclick="diaryDate=todayISO();document.getElementById(\'diaryDateInput\').value=diaryDate;refreshDiaryView()">Today</button> ' +
     '<button type="button" class="ca-btn" onclick="logPlateToDiary()" title="Copies foods currently on My Plate into this day (use + on cards to build the plate first)">Log plate → diary</button></div>' +
@@ -2307,7 +2439,7 @@ function buildDiaryDrawer(){
     '<div class="exp-section-label" style="margin-top:8px">Logged items</div><div id="diaryEntriesList"></div>';
 }
 function buildMealsDrawer(){
-  return '<p class="drawer-tools-note">Composite plates built from database foods (typical portions). Tap <strong>Log all</strong> to add every line to your diary for the selected day.</p>' +
+  return '<p class="drawer-tools-note">Composite plates from database foods (typical portions). Tags show <strong>time</strong> and <strong>budget</strong> cues for home cooking — recipes still vary (oil, stock cubes). Tap <strong>Log all</strong> to add every line to your diary for the selected day.</p>' +
     '<div id="mealTemplatesList"></div>';
 }
 function buildDrugsDrawer(){
@@ -2316,7 +2448,7 @@ function buildDrugsDrawer(){
     '<div id="drugCheckerResults"></div>';
 }
 function buildProfilesDrawer(){
-  return '<p class="drawer-tools-note">Each profile stores this moment\'s <strong>favourites</strong>, <strong>My Plate</strong>, the <strong>condition</strong> filter, <strong>diary targets</strong> (kcal / protein / fibre), and an optional <strong>visit note</strong> — so the next session picks up where you left off.</p>' +
+  return '<p class="drawer-tools-note">A snapshot stores <strong>favourites</strong>, <strong>My Plate</strong>, <strong>condition</strong>, <strong>diary targets</strong>, and an optional <strong>visit note</strong>. While a client is loaded, their <strong>diary days</strong> are kept separately from your default workspace diary. <strong>End session</strong> restores your previous favourites, plate, condition, and goals. Use <strong>Update snapshot</strong> to write the current workspace back onto the active client.</p>' +
     '<label for="profileNameInput" style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text-tertiary);display:block;margin-bottom:4px">Client or session name</label>' +
     '<div style="display:flex;gap:8px;margin-bottom:6px;flex-wrap:wrap;align-items:flex-start">' +
     '<input type="text" id="profileNameInput" placeholder="e.g. Amina K. · follow-up 2" style="flex:1;min-width:140px;font-size:12px;padding:7px 10px;border:1px solid var(--card-border);border-radius:8px;background:var(--card-bg);color:var(--text-primary)">' +
@@ -2327,14 +2459,21 @@ function buildProfilesDrawer(){
     '<div id="profilesList"></div>';
 }
 
+function loadDiaryPayloadForProfile(pid){
+  if(!pid){
+    try{ return JSON.parse(localStorage.getItem('nf_diary') || '{}') || {}; }catch(e){ return {}; }
+  }
+  try{
+    var m = JSON.parse(localStorage.getItem('nf_diary_by_profile') || '{}') || {};
+    if(m[pid] && typeof m[pid] === 'object') return JSON.parse(JSON.stringify(m[pid]));
+    return {};
+  }catch(e){ return {}; }
+}
 function loadDiaryAndProfiles(){
   try{
     var dg = JSON.parse(localStorage.getItem('nf_diary_goals') || 'null');
     if(dg && typeof dg.kcal === 'number') diaryGoals = dg;
   }catch(e){}
-  try{
-    diaryByDate = JSON.parse(localStorage.getItem('nf_diary') || '{}') || {};
-  }catch(e){ diaryByDate = {}; }
   try{
     clientProfiles = JSON.parse(localStorage.getItem('nf_profiles') || '[]') || [];
   }catch(e){ clientProfiles = []; }
@@ -2343,8 +2482,22 @@ function loadDiaryAndProfiles(){
     activeProfileId = apRaw ? JSON.parse(apRaw) : null;
     if(activeProfileId && typeof activeProfileId !== 'string') activeProfileId = null;
   }catch(e){ activeProfileId = null; }
+  try{
+    diaryByDate = loadDiaryPayloadForProfile(activeProfileId);
+  }catch(e){ diaryByDate = {}; }
 }
-function saveDiaryStore(){ try{ localStorage.setItem('nf_diary', JSON.stringify(diaryByDate)); }catch(e){} }
+function saveDiaryStore(){
+  try{
+    if(activeProfileId){
+      var m = {};
+      try{ m = JSON.parse(localStorage.getItem('nf_diary_by_profile') || '{}') || {}; }catch(e2){}
+      m[activeProfileId] = diaryByDate;
+      localStorage.setItem('nf_diary_by_profile', JSON.stringify(m));
+    } else {
+      localStorage.setItem('nf_diary', JSON.stringify(diaryByDate));
+    }
+  }catch(e){}
+}
 function saveDiaryGoalsStore(){ try{ localStorage.setItem('nf_diary_goals', JSON.stringify(diaryGoals)); }catch(e){} }
 function saveProfilesStore(){ try{ localStorage.setItem('nf_profiles', JSON.stringify(clientProfiles)); }catch(e){} }
 
@@ -2494,7 +2647,7 @@ function renderMealTemplatesIfOpen(){
   if(!host) return;
   host.innerHTML = MEAL_TEMPLATES.map(function(m){
     var t = computeMealTotals(m.parts);
-    return '<div class="meal-tpl-card"><div class="meal-tpl-head"><span style="font-size:22px">' + m.emoji + '</span><div><div class="meal-tpl-title">' + safeHtml(m.name) + '</div><div class="meal-tpl-meta">' + safeHtml(m.region) + ' · ~' + t.kcal + ' kcal · ' + t.protein + ' g P · ' + t.fiber + ' g fibre</div></div></div><p style="font-size:11px;color:var(--text-secondary);margin:0 0 8px">' + safeHtml(m.notes) + '</p><div style="font-size:10px;color:var(--text-tertiary);margin-bottom:6px">' +
+    return '<div class="meal-tpl-card"><div class="meal-tpl-head"><span style="font-size:22px">' + m.emoji + '</span><div><div class="meal-tpl-title">' + safeHtml(m.name) + '</div><div class="meal-tpl-meta">' + safeHtml(m.region) + ' · ~' + t.kcal + ' kcal · ' + t.protein + ' g P · ' + t.fiber + ' g fibre</div></div></div>' + mealTemplateTagsHtml(m) + '<p style="font-size:11px;color:var(--text-secondary);margin:0 0 8px">' + safeHtml(m.notes) + '</p><div style="font-size:10px;color:var(--text-tertiary);margin-bottom:6px">' +
       m.parts.map(function(p){ var ff = foodsById[p.id]; return (ff ? ff.emoji + ' ' + safeHtml(ff.name) : '') + ' ' + p.g + 'g'; }).join(' · ') +
       '</div><button type="button" class="ca-btn" onclick="logMealTemplate(\'' + m.id + '\')">Log all to diary</button></div>';
   }).join('');
@@ -2527,10 +2680,63 @@ function saveCurrentProfile(){
   refreshProfilesView();
 }
 
+function restorePreSessionWorkspace(){
+  if(!preSessionSnapshot) return;
+  favourites = {};
+  (preSessionSnapshot.favIds || []).forEach(function(id){ var f = foodsById[id]; if(f) favourites[id] = f; });
+  plateMap = {};
+  (preSessionSnapshot.plateIds || []).forEach(function(id){ var f = foodsById[id]; if(f) plateMap[id] = f; });
+  var g = preSessionSnapshot.diaryGoals;
+  if(g && typeof g.kcal === 'number'){
+    if(g.kcal >= 500 && g.kcal <= 6000) diaryGoals.kcal = g.kcal;
+    if(typeof g.protein === 'number' && g.protein >= 20 && g.protein <= 300) diaryGoals.protein = g.protein;
+    if(typeof g.fiber === 'number' && g.fiber >= 5 && g.fiber <= 80) diaryGoals.fiber = g.fiber;
+  }
+  if(preSessionSnapshot.activeCondition && CONDITIONS.some(function(c){ return c.id === preSessionSnapshot.activeCondition; })) selectCondition(preSessionSnapshot.activeCondition);
+  else clearCondition();
+  preSessionSnapshot = null;
+  savePersistence();
+  saveDiaryGoalsStore();
+}
+
+function endClientSession(){
+  saveDiaryStore();
+  activeProfileId = null;
+  saveActiveProfileStore();
+  diaryByDate = loadDiaryPayloadForProfile(null);
+  restorePreSessionWorkspace();
+  updateContextBadge();
+  render();
+  if(activeDrawer === 'plate') updatePlatePanel();
+  if(document.getElementById('diaryEntriesList')) refreshDiaryView();
+  if(activeDrawer === 'profiles') refreshProfilesView();
+}
+
+function updateActiveProfileSnapshot(){
+  if(!activeProfileId) return;
+  var p = getProfileById(activeProfileId);
+  if(!p) return;
+  p.favIds = Object.keys(favourites).map(Number);
+  p.plateIds = Object.keys(plateMap).map(Number);
+  p.condition = activeCondition && CONDITIONS.some(function(c){ return c.id === activeCondition; }) ? activeCondition : null;
+  p.goals = { kcal: diaryGoals.kcal, protein: diaryGoals.protein, fiber: diaryGoals.fiber };
+  p.updatedAt = todayISO();
+  saveProfilesStore();
+  refreshProfilesView();
+}
+
 function loadProfile(pid){
-  loadDiaryAndProfiles();
+  saveDiaryStore();
   var p = clientProfiles.filter(function(x){ return x.id === pid; })[0];
   if(!p) return;
+  if(!activeProfileId){
+    preSessionSnapshot = {
+      favIds: Object.keys(favourites).map(Number),
+      plateIds: Object.keys(plateMap).map(Number),
+      diaryGoals: { kcal: diaryGoals.kcal, protein: diaryGoals.protein, fiber: diaryGoals.fiber },
+      activeCondition: activeCondition
+    };
+  }
   favourites = {};
   plateMap = {};
   (p.favIds || []).forEach(function(id){ var f = foodsById[id]; if(f) favourites[id] = f; });
@@ -2541,12 +2747,13 @@ function loadProfile(pid){
     if(typeof p.goals.fiber === 'number' && p.goals.fiber >= 5 && p.goals.fiber <= 80) diaryGoals.fiber = p.goals.fiber;
     saveDiaryGoalsStore();
   }
+  diaryByDate = loadDiaryPayloadForProfile(pid);
+  activeProfileId = pid;
+  saveActiveProfileStore();
   if(p.condition && CONDITIONS.some(function(c){ return c.id === p.condition; })) selectCondition(p.condition);
   else clearCondition();
   p.lastVisitAt = todayISO();
   saveProfilesStore();
-  activeProfileId = pid;
-  saveActiveProfileStore();
   savePersistence();
   render();
   if(activeDrawer === 'plate') updatePlatePanel();
@@ -2557,14 +2764,34 @@ function loadProfile(pid){
 }
 
 function deleteProfile(pid){
-  clientProfiles = clientProfiles.filter(function(x){ return x.id !== pid; });
-  saveProfilesStore();
-  if(activeProfileId === pid){
+  var wasActive = activeProfileId === pid;
+  if(wasActive){
+    saveDiaryStore();
+    try{
+      var m = JSON.parse(localStorage.getItem('nf_diary_by_profile') || '{}') || {};
+      delete m[pid];
+      localStorage.setItem('nf_diary_by_profile', JSON.stringify(m));
+    }catch(e){}
     activeProfileId = null;
     saveActiveProfileStore();
+    diaryByDate = loadDiaryPayloadForProfile(null);
+    restorePreSessionWorkspace();
+  } else {
+    try{
+      var m2 = JSON.parse(localStorage.getItem('nf_diary_by_profile') || '{}') || {};
+      delete m2[pid];
+      localStorage.setItem('nf_diary_by_profile', JSON.stringify(m2));
+    }catch(e2){}
   }
+  clientProfiles = clientProfiles.filter(function(x){ return x.id !== pid; });
+  saveProfilesStore();
   updateContextBadge();
   refreshProfilesView();
+  if(wasActive){
+    render();
+    if(activeDrawer === 'plate') updatePlatePanel();
+    if(document.getElementById('diaryEntriesList')) refreshDiaryView();
+  }
 }
 
 function refreshProfilesView(){
@@ -2579,7 +2806,7 @@ function refreshProfilesView(){
       }
       var condL = profileConditionLabel(ap.condition);
       var nl = ap.note ? ('<div style="font-size:11px;margin-top:6px;color:var(--text-secondary)">' + safeHtml(truncateProfileNote(ap.note, 200)) + '</div>') : '';
-      banner.innerHTML = '<div style="flex:1;min-width:0"><strong>Active session</strong> — <strong>' + safeHtml(ap.name) + '</strong>' + (condL ? (' · <span style="white-space:nowrap">' + safeHtml(condL) + '</span>') : '') + safeHtml(gl) + nl + '</div><button type="button" class="ca-btn" onclick="clearActiveProfile()">End session</button>';
+      banner.innerHTML = '<div style="flex:1;min-width:0"><strong>Active session</strong> — <strong>' + safeHtml(ap.name) + '</strong>' + (condL ? (' · <span style="white-space:nowrap">' + safeHtml(condL) + '</span>') : '') + safeHtml(gl) + nl + '</div><div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;flex-shrink:0"><button type="button" class="ca-btn" onclick="updateActiveProfileSnapshot()" title="Save current favourites, plate, condition, and diary targets into this profile">Update snapshot</button><button type="button" class="ca-btn" onclick="clearActiveProfile()" title="Save this client diary and restore your workspace from before you loaded them">End session</button></div>';
     } else {
       banner.classList.remove('open');
       banner.innerHTML = '';
@@ -2597,6 +2824,7 @@ function refreshProfilesView(){
       goalLine = 'Targets in snapshot: ~' + p.goals.kcal + ' kcal · ' + p.goals.protein + ' g P · ' + p.goals.fiber + ' g fibre';
     }
     var dateLine = formatProfileDateLine(p.savedAt, p.lastVisitAt);
+    if(p.updatedAt && p.updatedAt !== p.savedAt) dateLine = (dateLine ? dateLine + ' · ' : '') + 'Snapshot updated ' + (function(){ var x = p.updatedAt.split('-'); return x.length === 3 ? x[2] + '/' + x[1] + '/' + x[0] : p.updatedAt; })();
     var metaBits = [nFav + ' favourite' + (nFav === 1 ? '' : 's'), nPlate + ' on plate'];
     if(condL) metaBits.unshift(safeHtml(condL));
     var meta = metaBits.join(' · ') + (dateLine ? ' · ' + safeHtml(dateLine) : '');
@@ -2632,6 +2860,51 @@ function closeMethodology(){
   o.classList.remove('open');
   o.setAttribute('aria-hidden','true');
   document.body.style.overflow = '';
+}
+
+function renderCommunityStartButtons(){
+  var host = document.getElementById('communityStartGrid');
+  if(!host) return;
+  host.innerHTML = COMMUNITY_START_GOALS.map(function(g){
+    return '<button type="button" class="community-start-btn" onclick="applyCommunityGoal(\'' + g.id + '\')"><span class="cs-emoji">' + g.emoji + '</span>' + safeHtml(g.label) + '<span class="cs-sub">' + safeHtml(g.sub) + '</span></button>';
+  }).join('');
+}
+function openCommunityStart(){
+  closeDrawer();
+  closeMethodology();
+  renderCommunityStartButtons();
+  var o = document.getElementById('communityStartOverlay');
+  if(!o) return;
+  o.classList.add('open');
+  o.setAttribute('aria-hidden','false');
+  document.body.style.overflow = 'hidden';
+}
+function closeCommunityStart(){
+  var o = document.getElementById('communityStartOverlay');
+  if(!o) return;
+  o.classList.remove('open');
+  o.setAttribute('aria-hidden','true');
+  document.body.style.overflow = '';
+  try{ localStorage.setItem('nf_community_start_done','1'); }catch(e){}
+}
+function applyCommunityGoal(goalId){
+  closeCommunityStart();
+  var g = COMMUNITY_START_GOALS.filter(function(x){ return x.id === goalId; })[0];
+  if(!g) return;
+  clearAll();
+  if(g.cond) selectCondition(g.cond);
+  if(g.filter){
+    var chip = document.querySelector('.filter-row-scroll .chip[data-cat="' + g.filter + '"]');
+    setFilter(g.filter, chip || null);
+  }
+  setMode('patient');
+  openDrawer('meals');
+}
+function maybeOpenCommunityStart(){
+  try{
+    if(localStorage.getItem('nf_community_start_done')) return;
+  }catch(e){ return; }
+  setTimeout(function(){ openCommunityStart(); }, 450);
 }
 
 function buildCombosDrawer(){
@@ -2752,7 +3025,7 @@ function updateContextBadge(){
   if(activeProf){
     sessionHtml = '<span style="margin-right:8px;display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px;row-gap:4px"><strong>Client session:</strong> <span>' + safeHtml(activeProf.name) + '</span>';
     if(activeProf.note) sessionHtml += '<span style="font-size:11px;opacity:.88;font-weight:500">— ' + safeHtml(truncateProfileNote(activeProf.note, 72)) + '</span>';
-    sessionHtml += '</span><button type="button" class="ctx-end-session" onclick="clearActiveProfile()">End session</button> ';
+    sessionHtml += '</span><button type="button" class="ctx-end-session" onclick="clearActiveProfile()" title="Save this client diary and restore your pre-session favourites, plate, condition, and goals">End session</button> ';
   }
   if(activeCondition || filter !== 'all' || term || activeProf){
     var parts = [];
@@ -3231,7 +3504,28 @@ function checkDrugInteractions(med) {
 
 // ── PERSISTENCE ──
 function savePersistence(){try{localStorage.setItem('nf_favourites',JSON.stringify(Object.keys(favourites).map(Number)));localStorage.setItem('nf_plate',JSON.stringify(Object.keys(plateMap).map(Number)));localStorage.setItem('nf_portions',JSON.stringify(portionSizes))}catch(e){}}
-function loadPersistence(){try{var favIds=JSON.parse(localStorage.getItem('nf_favourites')||'[]');favIds.forEach(function(id){var f=foods.filter(function(x){return x.id===id})[0];if(f)favourites[id]=f});var plateIds=JSON.parse(localStorage.getItem('nf_plate')||'[]');plateIds.forEach(function(id){var f=foods.filter(function(x){return x.id===id})[0];if(f)plateMap[id]=f});var pr=JSON.parse(localStorage.getItem('nf_portions')||'null');if(pr&&typeof pr==='object')portionSizes=pr}catch(e){}}
+function loadPersistence(){
+  try{
+    var pr = JSON.parse(localStorage.getItem('nf_portions') || 'null');
+    if(pr && typeof pr === 'object') portionSizes = pr;
+  }catch(e){}
+  try{
+    if(activeProfileId){
+      var p = getProfileById(activeProfileId);
+      if(p){
+        favourites = {};
+        plateMap = {};
+        (p.favIds || []).forEach(function(id){ var f = foodsById[id]; if(f) favourites[id] = f; });
+        (p.plateIds || []).forEach(function(id){ var f = foodsById[id]; if(f) plateMap[id] = f; });
+        return;
+      }
+    }
+    var favIds = JSON.parse(localStorage.getItem('nf_favourites') || '[]');
+    favIds.forEach(function(id){ var f = foodsById[id]; if(f) favourites[id] = f; });
+    var plateIds = JSON.parse(localStorage.getItem('nf_plate') || '[]');
+    plateIds.forEach(function(id){ var f = foodsById[id]; if(f) plateMap[id] = f; });
+  }catch(e){}
+}
 
 // ── DARK MODE ──
 function toggleDarkMode(){darkMode=!darkMode;applyDarkMode(darkMode);try{localStorage.setItem('nf_darkmode',darkMode?'1':'0')}catch(e){}}
@@ -3299,6 +3593,8 @@ function setMobileTab(btn){document.querySelectorAll('.mnav-btn').forEach(functi
 // ── KEYBOARD SHORTCUTS ──
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){
+    var cs = document.getElementById('communityStartOverlay');
+    if(cs && cs.classList.contains('open')){ closeCommunityStart(); e.preventDefault(); return }
     var meth = document.getElementById('methodologyOverlay');
     if(meth && meth.classList.contains('open')){ closeMethodology(); e.preventDefault(); return }
     var t2go = document.getElementById('t2dmGuideOverlay');
@@ -3314,6 +3610,7 @@ document.addEventListener('keydown',function(e){
 // ══════════════════════════════════════════════════════════════
 var render = (function(){
   return function(){
+    updateBrowseHero();
     var list = foods.slice();
     if(filter==='favourites')list=list.filter(function(f){return!!favourites[f.id]});
     else if(filter==='african')list=list.filter(function(f){return f.african});
@@ -3461,6 +3758,8 @@ var render = (function(){
       var drugExpandHtml='';
       if(ds!=='none'){var dc=ds==='critical'?'cr':ds==='moderate'?'mo':'mi';var dt=ds==='critical'?'Critical Interaction':ds==='moderate'?'Moderate Interaction':'Mild Interaction';drugExpandHtml='<div class="exp-drug-box '+dc+'"><div class="exp-section-label">'+dt+'</div><div class="exp-text">'+safeHtml(f.limits)+'</div></div>'}
       var prepHtml=f.prep?'<div class="exp-prep-box"><div class="exp-section-label">Preparation</div><div class="exp-text">'+safeHtml(f.prep)+'</div></div>':'';
+      var condWhyNutrition=(activeCondition&&CONDITION_COMMUNITY_WHY[activeCondition])?('<div class="exp-condition-why"><strong>For your current filter:</strong> '+safeHtml(CONDITION_COMMUNITY_WHY[activeCondition])+'</div>'):'';
+      var handHintBar='<div class="portion-hand-hint"><strong>Hand guide</strong> (rough): a <strong>fist</strong> ≈ a cup of cooked starch or fruit; a <strong>flat palm</strong> ≈ protein portion; <strong>two cupped hands</strong> ≈ a big veg portion. '+safeHtml(getHandPortionCue(f.cat))+'<em>Oil, salt, and stock cubes change health impact more than these numbers suggest — adjust cooking to match your clinician\'s advice.</em></div>';
       var evSpan=appMode==='patient'?(f.evidence==='High'?'<span class="ev-hi">Strong</span>':f.evidence==='Moderate'?'<span class="ev-mo">Good</span>':'<span class="ev-lo">Traditional</span>'):'<span class="ev-'+f.evidence.toLowerCase().substring(0,2)+'">'+f.evidence+'</span>';
 
       html+=
@@ -3499,6 +3798,7 @@ var render = (function(){
         '</div>'+
         '<div class="exp-pane active" id="'+tid+'-nutrition">'+
           '<div class="portion-ctrl"><button class="portion-btn" onclick="changePortion('+f.id+',-25);event.stopPropagation()" title="−25 g">−</button><span class="portion-label" id="prt'+f.id+'">'+pg+'g serving</span><button class="portion-btn" onclick="changePortion('+f.id+',25);event.stopPropagation()" title="+25 g">+</button></div>'+
+          condWhyNutrition+handHintBar+
           '<div class="radar-center">'+radarSVG(f.radar,f.nigeria?'#008751':(f.african?'var(--accent-amber)':'var(--accent-green)'),86)+'</div>'+
           '<div class="exp-cols"><div><div class="exp-section-label">Key micronutrients</div><div class="exp-box"><div class="exp-text">'+safeHtml(f.micro)+'</div></div></div><div><div class="exp-section-label">Bioactive compounds</div><div class="exp-box"><div class="exp-text">'+safeHtml(f.bio)+'</div></div></div></div>'+
           regionExpandHtml+condTagsHtml+t2dmBridgeHtml+
@@ -3584,6 +3884,7 @@ render();
 updateCondDropdownLabel();
 updateContextBadge();
 updateFilterBadge();
+maybeOpenCommunityStart();
 
 // Populate category select
 (function(){
