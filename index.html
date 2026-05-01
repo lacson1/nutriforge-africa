@@ -45,8 +45,8 @@
   --header-gold-soft: rgba(212, 175, 98, 0.14);
 }
 
-html{overflow-x:clip}
-body{font-family:Roboto,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--body-bg);color:var(--text-primary);min-height:100vh;min-height:100dvh;-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-font-smoothing:antialiased}
+html{overflow-x:clip;max-width:100%}
+body{font-family:Roboto,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--body-bg);color:var(--text-primary);min-height:100vh;min-height:100dvh;max-width:100%;overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-font-smoothing:antialiased}
 button{cursor:pointer;border:none;background:none;font-family:inherit}
 input,select,textarea{font-family:inherit}
 
@@ -72,10 +72,11 @@ input,select,textarea{font-family:inherit}
 
 /* ── FILTER ROW — scrolls with content ── */
 /* overflow only on .filter-row-scroll so popovers (condition, filters) are not clipped */
-.filter-row{display:flex;align-items:center;gap:6px;padding:10px max(1.5rem,env(safe-area-inset-right)) 10px max(1.5rem,env(safe-area-inset-left));background:var(--card-bg);border-bottom:1px solid var(--card-border);flex-wrap:nowrap;overflow:visible;position:relative;z-index:40}
-.filter-row-scroll{display:flex;align-items:center;gap:6px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.filter-row{display:flex;align-items:center;gap:6px;padding:10px max(1.5rem,env(safe-area-inset-right)) 10px max(1.5rem,env(safe-area-inset-left));background:var(--card-bg);border-bottom:1px solid var(--card-border);flex-wrap:nowrap;overflow:visible;position:relative;z-index:40;width:100%;max-width:100%;box-sizing:border-box;min-width:0}
+/* iOS WebKit: momentum scrolling layer can paint over later siblings — keep chips under trailing popovers */
+.filter-row-scroll{display:flex;align-items:center;gap:6px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;position:relative;z-index:1}
 .filter-row-scroll::-webkit-scrollbar{display:none}
-.filter-row-trailing{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.filter-row-trailing{display:flex;align-items:center;gap:6px;flex-shrink:0;position:relative;z-index:8;min-width:0}
 .chip{font-size:11px;padding:4px 12px;border-radius:20px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-secondary);cursor:pointer;transition:all .12s;white-space:nowrap;flex-shrink:0}
 .chip.active{background:var(--text-primary);color:var(--card-bg);border-color:var(--text-primary);font-weight:600}
 .chip.african:not(.active){border-color:rgba(217,119,6,.42);background:linear-gradient(165deg,#FFFBF0,#FFF7ED);color:#9A3412;font-weight:500}
@@ -88,7 +89,7 @@ input,select,textarea{font-family:inherit}
 .filter-select{font-size:11px;padding:4px 8px;border:1px solid var(--card-border);border-radius:8px;background:var(--card-bg);color:var(--text-primary);cursor:pointer;outline:none;flex-shrink:0}
 .filter-divider{width:1px;height:20px;background:var(--card-border);flex-shrink:0;margin:0 2px}
 .filters-popover-wrap{position:relative;flex-shrink:0}
-.filters-popover{display:none;position:absolute;top:calc(100%+6px);left:0;background:var(--card-bg);border:1px solid var(--card-border);border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.14),0 0 0 1px rgba(0,0,0,.04);padding:14px 16px;z-index:400;min-width:220px}
+.filters-popover{display:none;position:absolute;top:calc(100%+6px);left:0;background:var(--card-bg);color:var(--text-primary);border:1px solid var(--card-border);border-radius:12px;box-shadow:0 16px 48px rgba(0,0,0,.18),0 0 0 1px rgba(0,0,0,.06);padding:14px 16px;z-index:500;min-width:220px;isolation:isolate;-webkit-transform:translateZ(0);transform:translateZ(0)}
 .filters-popover.open{display:block}
 .fp-group{margin-bottom:10px}
 .fp-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text-tertiary);display:block;margin-bottom:4px}
@@ -107,13 +108,18 @@ input,select,textarea{font-family:inherit}
 .cond-dd-value{font-size:12px;font-weight:600;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;line-height:1.2}
 .cond-dd-chevron{flex-shrink:0;opacity:.45;color:var(--text-secondary);transition:transform .2s ease;width:16px;height:16px}
 .cond-dropdown-wrap.open .cond-dd-chevron{transform:rotate(180deg)}
-.cond-dropdown-panel{display:none;position:absolute;left:0;top:calc(100%+8px);z-index:400;min-width:min(300px,calc(100vw - 24px - env(safe-area-inset-left) - env(safe-area-inset-right)));max-width:min(340px,calc(100vw - 20px));background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.14),0 0 0 1px rgba(0,0,0,.04)}
+.cond-dropdown-panel{display:none;position:absolute;left:0;top:calc(100%+8px);z-index:500;box-sizing:border-box;width:min(340px,calc(100vw - 20px - env(safe-area-inset-left) - env(safe-area-inset-right)));max-width:min(340px,calc(100vw - 20px - env(safe-area-inset-left) - env(safe-area-inset-right)));background:var(--card-bg);color:var(--text-primary);border:1px solid var(--card-border);border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,.18),0 0 0 1px rgba(0,0,0,.06);isolation:isolate;-webkit-transform:translateZ(0);transform:translateZ(0)}
 .cond-dropdown-wrap.open .cond-dropdown-panel{display:block}
 .cond-dropdown-scroll{padding:6px;max-height:min(58vh,400px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
-.cond-pill{display:block;width:100%;font-size:13px;line-height:1.35;padding:12px 14px;border-radius:10px;border:1px solid transparent;background:transparent;color:var(--text-primary);cursor:pointer;transition:background .12s,border-color .12s;text-align:left;margin:0;font-weight:500;-webkit-tap-highlight-color:transparent}
-.cond-pill:hover{background:var(--surface)}
+.cond-pill{display:block;width:100%;font-size:13px;line-height:1.35;padding:12px 14px;border-radius:10px;border:1px solid var(--card-border);background:var(--surface);color:var(--text-primary);cursor:pointer;transition:background .12s,border-color .12s;text-align:left;margin:0;font-weight:500;-webkit-tap-highlight-color:transparent}
+.cond-pill:hover{background:var(--surface-2);border-color:var(--card-border-hover)}
 .cond-pill.active{background:var(--text-primary);color:var(--body-bg);border-color:var(--text-primary);font-weight:600}
 body.dark-mode .cond-pill.active{color:#0A0B0C}
+body.dark-mode .cond-pill{background:var(--surface);border-color:var(--card-border)}
+body.dark-mode .cond-pill:hover{background:var(--surface-2);border-color:var(--card-border-hover)}
+@supports (width:1dvw){
+  .cond-dropdown-panel{width:min(340px,calc(100dvw - 20px - env(safe-area-inset-left) - env(safe-area-inset-right)));max-width:min(340px,calc(100dvw - 20px - env(safe-area-inset-left) - env(safe-area-inset-right)))}
+}
 
 /* ── CONTEXT BADGE ── */
 .context-badge{font-size:12px;color:var(--text-secondary);padding:8px max(1.5rem,env(safe-area-inset-right)) 8px max(1.5rem,env(safe-area-inset-left));display:flex;align-items:center;gap:8px}
@@ -681,7 +687,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
   <select id="catSelect" class="filter-select"></select>
   </div>
   <div class="filter-row-trailing">
-  <div class="filters-popover-wrap">
+  <div class="filters-popover-wrap" id="filtersPopoverWrap">
     <button class="chip" id="filtersBtn" onclick="toggleFiltersPopover()">Filters <span id="filterBadge" class="filter-badge" style="display:none">0</span></button>
     <div class="filters-popover" id="filtersPopover">
       <div class="fp-group"><label class="fp-label">Sort by</label>
@@ -2619,8 +2625,8 @@ function wireCombosEvents(){
 document.addEventListener('click',function(e){
   var wrap = document.querySelector('.overflow-menu-wrap');
   if(wrap && !wrap.contains(e.target)){document.getElementById('overflowMenu').classList.remove('open')}
-  var fpWrap = document.querySelector('.filters-popover-wrap');
-  if(fpWrap && !fpWrap.contains(e.target)){document.getElementById('filtersPopover').classList.remove('open')}
+  var fpWrap = document.getElementById('filtersPopoverWrap');
+  if(fpWrap && !fpWrap.contains(e.target)){var fpEl=document.getElementById('filtersPopover');if(fpEl)fpEl.classList.remove('open')}
   var condWrap = document.getElementById('condDropdownWrap');
   if(condWrap && !condWrap.contains(e.target)){closeCondDropdown()}
 });
