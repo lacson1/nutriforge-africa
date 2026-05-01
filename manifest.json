@@ -1,0 +1,18 @@
+{
+  "name": "NutriForge Africa",
+  "short_name": "NutriForge",
+  "description": "Evidence-based foods, African dishes, diary, and clinical nutrition tools.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f4f0",
+  "theme_color": "#0f2a30",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect fill='%231D5C3A' width='192' height='192' rx='24'/%3E%3Ctext x='96' y='118' font-size='72' text-anchor='middle' fill='white'%3E🌿%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
