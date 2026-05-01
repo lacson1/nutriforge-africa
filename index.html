@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0f2a30">
-<title>NutriForge Africa · v6.1 · 365 Foods</title>
+<title>NutriForge Africa · v6.1 · 390 Foods</title>
 <link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,8 +63,12 @@ input,select,textarea{font-family:inherit}
 .ha-btn{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:all .12s}
 .ha-btn:hover{background:rgba(255,255,255,.12);color:#fff}
 .ha-btn.active-drawer{background:rgba(255,255,255,.2);color:#fff}
+.header .dm-icon{display:flex;align-items:center;justify-content:center}
+.header .dm-sun{display:none}
+body.dark-mode .header .dm-moon{display:none}
+body.dark-mode .header .dm-sun{display:flex}
 .overflow-menu-wrap{position:relative}
-.overflow-menu{display:none;position:absolute;top:42px;right:0;background:var(--card-bg);border:1px solid var(--card-border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.15);min-width:200px;padding:4px 0;z-index:300}
+.overflow-menu{display:none;position:absolute;top:42px;right:0;background:var(--card-bg);border:1px solid var(--card-border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.15);min-width:200px;padding:4px 0;z-index:320;max-height:min(75dvh,560px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
 .overflow-menu.open{display:block}
 .overflow-menu button{display:block;width:100%;text-align:left;padding:8px 14px;font-size:12px;color:var(--text-primary);transition:background .1s}
 .overflow-menu button:hover{background:var(--surface)}
@@ -72,7 +76,7 @@ input,select,textarea{font-family:inherit}
 
 /* ── FILTER ROW — scrolls with content ── */
 /* overflow only on .filter-row-scroll so popovers (condition, filters) are not clipped */
-.filter-row{display:flex;align-items:center;gap:6px;padding:10px max(1.5rem,env(safe-area-inset-right)) 10px max(1.5rem,env(safe-area-inset-left));background:var(--card-bg);border-bottom:1px solid var(--card-border);flex-wrap:nowrap;overflow:visible;position:relative;z-index:40;width:100%;max-width:100%;box-sizing:border-box;min-width:0}
+.filter-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:10px max(1.5rem,env(safe-area-inset-right)) 10px max(1.5rem,env(safe-area-inset-left));background:var(--card-bg);border-bottom:1px solid var(--card-border);overflow:visible;position:relative;z-index:40;width:100%;max-width:100%;box-sizing:border-box;min-width:0}
 /* iOS WebKit: momentum scrolling layer can paint over later siblings — keep chips under trailing popovers */
 .filter-row-scroll{display:flex;align-items:center;gap:6px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;position:relative;z-index:1}
 .filter-row-scroll::-webkit-scrollbar{display:none}
@@ -126,8 +130,9 @@ body.dark-mode .cond-pill:hover{background:var(--surface-2);border-color:var(--c
 .context-badge strong{color:var(--text-primary)}
 .context-badge button{font-size:11px;padding:3px 10px;border-radius:15px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-secondary);cursor:pointer}
 
-/* ── Browse context note (quiet hint above the feed) ── */
-.browse-hero{margin:0 0 10px;padding:8px 12px;border-radius:10px;border:1px solid var(--card-border);background:linear-gradient(165deg,rgba(244,242,238,.92) 0%,rgba(250,250,248,.98) 100%);box-shadow:0 1px 2px rgba(0,0,0,.03)}
+/* ── Browse context note (lives inside #filterRow, full-width row under chips) ── */
+.browse-hero{margin:0;padding:8px 12px;border-radius:10px;border:1px solid var(--card-border);background:linear-gradient(165deg,rgba(244,242,238,.92) 0%,rgba(250,250,248,.98) 100%);box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.filter-row > .browse-hero{flex:1 1 100%;width:100%;min-width:0;box-sizing:border-box;margin:8px 0 0}
 .browse-hero-inner{display:flex;align-items:flex-start;gap:10px;max-width:72rem}
 .browse-hero-emoji{font-size:17px;line-height:1.25;flex-shrink:0;opacity:.72}
 .browse-hero-text{font-size:11px;line-height:1.5;color:var(--text-tertiary);margin:0;letter-spacing:.01em}
@@ -284,8 +289,10 @@ body.dark-mode .exp-db-bridge{background:rgba(29,92,58,.25);border-color:#4ADE80
 .table-view .tv-name:hover{color:var(--accent-green);text-decoration:underline}
 .table-view .tv-emoji{font-size:16px;flex-shrink:0}
 .table-view .tv-foodname{font-weight:600;font-size:12px;line-height:1.25;max-width:200px}
-.table-view .tv-num{font-variant-numeric:tabular-nums;text-align:right;font-weight:500}
+.table-view td.tv-num{font-variant-numeric:tabular-nums;text-align:right;font-weight:500}
+.table-view th.tv-num{font-variant-numeric:tabular-nums;text-align:right}
 .table-view .tv-ls{display:inline-flex;align-items:center;gap:3px}
+.table-view .tv-ls-val{font-variant-numeric:tabular-nums;min-width:2.5em;text-align:right}
 .table-view .tv-ls-bar{width:40px;height:3px;background:var(--surface-2);border-radius:2px;overflow:hidden;display:inline-block}
 .table-view .tv-ls-fill{height:100%;border-radius:2px}
 .table-view .tv-action{opacity:0;transition:opacity .12s}
@@ -560,7 +567,7 @@ body.dark-mode .plate-hint-action:hover{color:var(--text-primary)}
   .exp-cols{grid-template-columns:1fr}
   .header h1{font-size:14px}
   .header .search-wrap{max-width:none}
-  .header-actions .ha-btn:not(#overflowBtn){display:none}
+  .header-actions .ha-btn:not(#overflowBtn):not(#btnDarkMode){display:none}
   .mobile-nav{display:block}
   .mnav-btn{min-height:50px;padding:8px 12px 10px;font-size:10px}
   .main{padding-left:max(1rem,env(safe-area-inset-left));padding-right:max(1rem,env(safe-area-inset-right));padding-bottom:max(68px,calc(56px + env(safe-area-inset-bottom,0)))}
@@ -608,7 +615,7 @@ body.dark-mode .plate-hint-action:hover{color:var(--text-primary)}
   .exp-tab{font-size:8px;padding:10px 4px;letter-spacing:0}
 }
 @media print{
-  .header,.filter-row,.browse-hero,.mobile-nav,.drawer,.drawer-backdrop,.card-hover-actions{display:none!important}
+  .header,.filter-row,.mobile-nav,.drawer,.drawer-backdrop,.card-hover-actions{display:none!important}
   .card{break-inside:avoid;border:1px solid #ccc;margin-bottom:6px}
   .card.open .expand{display:block!important}
   body{background:#fff}
@@ -651,11 +658,17 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     <button class="ha-btn" id="btnPlate" onclick="openDrawer('plate')" title="My Plate">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5"/></svg>
     </button>
+    <button type="button" class="ha-btn" id="btnDarkMode" onclick="toggleDarkMode()" title="Dark mode" aria-label="Switch to dark theme" aria-pressed="false">
+      <span class="dm-icon dm-moon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
+      <span class="dm-icon dm-sun" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></span>
+    </button>
     <div class="overflow-menu-wrap">
       <button type="button" class="ha-btn" id="overflowBtn" onclick="toggleOverflow()" title="More" aria-label="More options">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
       </button>
       <div class="overflow-menu" id="overflowMenu">
+        <button type="button" onclick="(function(){var m=document.getElementById('overflowMenu');if(m)m.classList.remove('open');window.location.href='./landing.html';})()">Welcome page</button>
+        <hr>
         <button onclick="openDrawer('compare');toggleOverflow()">Compare foods</button>
         <button onclick="openDrawer('combos');toggleOverflow()">Food combinations</button>
         <button onclick="openDrawer('chart');toggleOverflow()">Nutrient chart</button>
@@ -670,7 +683,6 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <button onclick="exportCSV();toggleOverflow()">Export CSV</button>
         <button onclick="printView();toggleOverflow()">Print</button>
         <hr>
-        <button onclick="toggleDarkMode();toggleOverflow()" id="dmMenuBtn">Dark mode</button>
         <button onclick="toggleAppMode();toggleOverflow()" id="modeMenuBtn">Clinician mode</button>
       </div>
     </div>
@@ -772,11 +784,6 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
   </div>
   <span class="result-count" id="resultCount"></span>
   </div>
-</div>
-
-<div class="main">
-  <div class="context-badge" id="contextBadge" style="display:none"></div>
-
   <div class="browse-hero" role="note" aria-label="How optional filters work">
     <div class="browse-hero-inner">
       <span class="browse-hero-emoji" aria-hidden="true">🌍</span>
@@ -785,6 +792,10 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
       </div>
     </div>
   </div>
+</div>
+
+<div class="main">
+  <div class="context-badge" id="contextBadge" style="display:none"></div>
 
   <!-- Drawer -->
   <div class="drawer-backdrop" id="drawerBackdrop" onclick="closeDrawer()"></div>
@@ -800,7 +811,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     <div class="t2dm-guide-bar">
       <div class="t2dm-guide-bar-left">
         <h2 id="t2dmGuideOverlayTitle" class="t2dm-guide-title">NutriForge · Diabetes field guide</h2>
-        <p class="t2dm-guide-sub">Same app, same session: this panel is the structured T2DM guide; the <strong>365-food</strong> list stays underneath. Use <strong>Back to NutriForge</strong> or <strong>Esc</strong> to return to browsing, search, and tools.</p>
+        <p class="t2dm-guide-sub">Same app, same session: this panel is the structured T2DM guide; the <strong>390-food</strong> list stays underneath. Use <strong>Back to NutriForge</strong> or <strong>Esc</strong> to return to browsing, search, and tools.</p>
       </div>
       <div class="t2dm-guide-actions">
         <button type="button" class="t2dm-guide-home" onclick="closeT2dmClinicalGuide()">Back to NutriForge</button>
@@ -875,7 +886,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
       <div style="font-size:14px;font-weight:700;margin-bottom:3px">NutriForge <span class="brand-africa">Africa</span></div>
       <div style="opacity:.5;line-height:1.6;font-size:10px">
         Evidence-based nutrition for Africa and the African diaspora.<br>
-        365 foods · dishes filter · Nigeria spotlight · diary &amp; goals · client profiles · drug–food checker · meal templates · offline PWA · AI assistant<br>
+        390 foods · dishes filter · Nigeria spotlight · diary &amp; goals · client profiles · drug–food checker · meal templates · offline PWA · AI assistant<br>
         Data: USDA FoodData Central, WHO, peer-reviewed literature.<br>
         <button type="button" onclick="openT2dmClinicalGuide()" style="margin-top:8px;font-size:11px;font-weight:600;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);cursor:pointer;margin-right:6px">Open diabetes clinical field guide</button>
         <button type="button" onclick="openMethodology()" style="margin-top:8px;font-size:11px;font-weight:600;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);cursor:pointer">Methodology &amp; trust</button>
@@ -1309,7 +1320,33 @@ const foods = [
 {id:362,name:"Sea buckthorn berries",aka:"Hippophae rhamnoides",emoji:"🟠",cat:"fruit",catLabel:"Functional berry",african:false,top3:false,kcal:82,carbs:6,protein:1.2,fat:5.4,fiber:4.5,gi:"Low",evidence:"Moderate",micro:"Vitamin C (400–900mg — among highest known), Vitamin E (tocopherols + tocotrienols — both forms), Vitamin A (60mcg RAE), Omega-7 palmitoleic acid (35%), Carotenoids (high)",bio:"Palmitoleic acid (omega-7 — rare fatty acid), isorhamnetin, quercetin, kaempferol, proanthocyanidins, zeaxanthin, SOD",benefits:"Among the highest vitamin C sources known (400-900mg/100g). Only common food source of palmitoleic acid (omega-7) — RCTs show omega-7 improves insulin sensitivity, reduces CRP, and supports mucosal integrity (vaginal dryness in menopause). Complete fatty acid profile (omega-3, 6, 7, 9). Carotenoid density rivals carrots.",use:"Vitamin C (extraordinary), omega-7 (mucosal health, insulin sensitivity), menopause (vaginal dryness — RCT), skin health, anti-inflammatory",limits:"Very sour — requires processing. Omega-7 supplements often contain palmitic acid (pro-inflammatory) — verify purity. Limited availability fresh. Expensive."},
 {id:363,name:"Jackfruit (young/green)",aka:"Artocarpus heterophyllus — unripe",emoji:"🌿",cat:"veg",catLabel:"Tropical meat substitute",african:true,top3:false,kcal:95,carbs:23.2,protein:1.7,fat:0.6,fiber:1.5,gi:"Low",evidence:"Low",micro:"Potassium (448mg), Vitamin C (13.7mg), Magnesium (29mg), Vitamin B6 (0.3mg), Calcium (24mg)",bio:"Carotenoids (beta-carotene, lutein), flavonoids (artocarpin — anti-inflammatory), lectins (jacalin — immunostimulatory), resistant starch",benefits:"Young/green jackfruit: pulled pork texture — increasingly used as meat substitute. Lower GI than ripe jackfruit. Grown across E. Africa (Tanzania, Uganda, Kenya). Artocarpin: anti-inflammatory. Jacalin: immunostimulatory lectin (anti-cancer research). High potassium. Sustainable crop — massive fruit yield per tree.",use:"Plant-based meat alternative, potassium, East African fruit, sustainable protein alternative, food security",limits:"Latex allergy cross-reactivity (birch pollen). Ripe jackfruit is high GI — use green/young only for glycaemic benefit. Low protein — not a true protein replacement despite meat-like texture."},
 {id:364,name:"Colostrum (bovine)",aka:"First milk — immunoglobulin-rich",emoji:"🥛",cat:"dairy",catLabel:"Functional dairy",african:false,top3:false,kcal:140,carbs:12,protein:14,fat:6,fiber:0,gi:"Low",evidence:"Moderate",micro:"IgG immunoglobulins (20–40%), Lactoferrin (1.5g/L), Growth factors (IGF-1, TGF-β), Proline-rich polypeptides (PRP), Lysozyme",bio:"IgG (passive immunity), lactoferrin (antimicrobial iron-binding), PRP (immunomodulatory — colostrinin), IGF-1 (growth factor), alpha-lactalbumin, oligosaccharides (prebiotic)",benefits:"Highest natural source of IgG antibodies — passive immune transfer. RCTs: bovine colostrum reduces upper respiratory tract infections (URI) in athletes and children. Lactoferrin: antimicrobial, anti-inflammatory, iron-binding. PRP (colostrinin): immunomodulatory — pilot RCTs in mild Alzheimer's. Gut barrier support — reduces exercise-induced gut permeability.",use:"Immune support (IgG — URI prevention RCT), gut barrier integrity, lactoferrin (antimicrobial), athletic recovery, mild cognitive impairment (emerging)",limits:"Dairy allergy/lactose (contains lactose). Very expensive. IGF-1 content — theoretical cancer concern (no clinical evidence). Source quality varies enormously. Not vegan."},
-{id:365,name:"Bambara groundnut",aka:"Vigna subterranea — Southern/West African",emoji:"🥜",cat:"legume",catLabel:"African legume",african:true,top3:false,kcal:367,carbs:54,protein:20,fat:6.5,fiber:6.4,gi:"Low",evidence:"Low",micro:"Iron (5mg), Calcium (95mg), Zinc (3.7mg), Potassium (1160mg), Phosphorus (372mg), Thiamine (0.4mg)",bio:"Isoflavones (genistein, daidzein), resistant starch, phytosterols, saponins, phenolic acids",benefits:"Complete protein — one of the few plant foods with balanced amino acid profile (including methionine). Drought-tolerant crop — critical for food security across Southern and W. Africa (Zimbabwe, Botswana, Mali, Nigeria). Isoflavone content comparable to soybean. High resistant starch supports gut microbiome. Nitrogen-fixing — improves soil fertility.",use:"Complete plant protein, food security (drought-tolerant), iron/zinc (African deficiency), isoflavones, gut microbiome (resistant starch), Southern African staple",limits:"Hard seed coat requires prolonged soaking/cooking. Flatulence (oligosaccharides). Limited clinical evidence. Less commercially developed than soybean despite equivalent nutritional profile."}
+{id:365,name:"Bambara groundnut",aka:"Vigna subterranea — Southern/West African",emoji:"🥜",cat:"legume",catLabel:"African legume",african:true,top3:false,kcal:367,carbs:54,protein:20,fat:6.5,fiber:6.4,gi:"Low",evidence:"Low",micro:"Iron (5mg), Calcium (95mg), Zinc (3.7mg), Potassium (1160mg), Phosphorus (372mg), Thiamine (0.4mg)",bio:"Isoflavones (genistein, daidzein), resistant starch, phytosterols, saponins, phenolic acids",benefits:"Complete protein — one of the few plant foods with balanced amino acid profile (including methionine). Drought-tolerant crop — critical for food security across Southern and W. Africa (Zimbabwe, Botswana, Mali, Nigeria). Isoflavone content comparable to soybean. High resistant starch supports gut microbiome. Nitrogen-fixing — improves soil fertility.",use:"Complete plant protein, food security (drought-tolerant), iron/zinc (African deficiency), isoflavones, gut microbiome (resistant starch), Southern African staple",limits:"Hard seed coat requires prolonged soaking/cooking. Flatulence (oligosaccharides). Limited clinical evidence. Less commercially developed than soybean despite equivalent nutritional profile."},
+// ══════════ v6.2 — ADDITIONAL AFRICAN & GLOBAL STAPLES ══════════
+{id:366,name:"Teff grain (cooked)",aka:"Eragrostis tef — Ethiopian injera staple",emoji:"🌾",cat:"grain",catLabel:"Horn of Africa staple",african:true,top3:false,kcal:101,carbs:19.9,protein:3.9,fat:0.7,fiber:2.8,gi:"Low",evidence:"Moderate",micro:"Calcium (49mg), Iron (2.1mg), Magnesium (50mg), Phosphorus (99mg), Zinc (1.2mg), Manganese (2.1mg)",bio:"Resistant starch (cooled), lysine-rich protein for a cereal, polyphenols",benefits:"Naturally gluten-free whole grain. Higher calcium and iron than many cereals; supports bone and anaemia programmes. Fermented injera adds probiotics and may lower phytate. Staple for millions in Ethiopia and Eritrea.",use:"Gluten-free energy, calcium/iron, gut-friendly when fermented as injera",limits:"Very low fat; combine with legumes or dairy for balanced meals. Raw flour phytates — traditional fermentation improves minerals."},
+{id:367,name:"Finger millet (ragi, cooked)",aka:"Eleusine coracana",emoji:"🌾",cat:"grain",catLabel:"East/Southern African millet",african:true,top3:false,kcal:108,carbs:22.9,protein:3.2,fat:1.3,fiber:2.7,gi:"Low",evidence:"Moderate",micro:"Calcium (344mg — very high for a grain), Iron (3.6mg), Magnesium (84mg), Phosphorus (100mg)",bio:"Polyphenols, dietary fibre, slow starch digestion",benefits:"Exceptional calcium density supports bone health in plant-based diets. Lower GI than refined grains; useful in glycaemic management. Drought-tolerant crop important across East and Southern Africa and India.",use:"Calcium and iron in plant-based diets, glycaemic-friendly staple",limits:"Phytates reduce mineral absorption unless sprouted/fermented. Oxalate content moderate."},
+{id:368,name:"Pearl millet (cooked)",aka:"Cenchrus americanus / Pennisetum glaucum",emoji:"🌾",cat:"grain",catLabel:"Sahel & Southern African millet",african:true,top3:false,kcal:119,carbs:23.7,protein:3.5,fat:1.1,fiber:1.3,gi:"Low-Medium",evidence:"Moderate",micro:"Iron (3mg), Magnesium (76mg), Phosphorus (100mg), Zinc (1.6mg), Folate (38mcg)",bio:"Polyphenols, insoluble fibre, resistant starch when cooled",benefits:"Major Sahel staple; more protein than white rice. Supports iron intake in cereal-based diets. Climate-resilient grain for arid zones.",use:"Iron-rich staple, food security in drylands, fibre",limits:"Contains goitrogenic C-glycosyl flavones — balance with iodised salt. Phytates; soaking/fermentation helps."},
+{id:369,name:"Sorghum grain (cooked)",aka:"Sorghum bicolor",emoji:"🌾",cat:"grain",catLabel:"African cereal",african:true,top3:false,kcal:97,carbs:21.7,protein:3.3,fat:1.1,fiber:2.7,gi:"Low-Medium",evidence:"Moderate",micro:"Iron (1.6mg), Magnesium (39mg), Phosphorus (97mg), Zinc (1.1mg), Niacin (1.3mg)",bio:"3-Deoxyanthocyanidins (unique sorghum polyphenols), tannins (in some varieties)",benefits:"Gluten-free staple across West and East Africa. Polyphenols have antioxidant and anti-inflammatory activity in vitro. Whole grain supports microbiome fibre intake.",use:"Gluten-free energy, antioxidant polyphenols, African diaspora staple",limits:"High-tannin varieties reduce protein digestibility — prefer decorticated or low-tannin types. Medium GI when finely milled."},
+{id:370,name:"Baobab fruit pulp (dried)",aka:"Adansonia digitata",emoji:"🌳",cat:"fruit",catLabel:"African superfruit",african:true,top3:false,kcal:250,carbs:79.7,protein:2.3,fat:0.5,fiber:44.5,gi:"Low",evidence:"Low",micro:"Vitamin C (very high when fresh; moderate dried), Potassium (1240mg), Calcium (295mg), Magnesium (148mg)",bio:"Polyphenols, pectin, prebiotic fibre, citric and malic acids",benefits:"Traditional food-medicine across Sahel and Southern Africa. Very high soluble fibre may blunt postprandial glucose. Mild prebiotic effects in small trials.",use:"Fibre-rich additive to smoothies/yogurt, vitamin C (fresh pulp), potassium",limits:"High fibre — titrate to avoid bloating. Dried products vary in vitamin C. Sorbitol-sensitive individuals may bloat."},
+{id:371,name:"Hibiscus drink (zobo / bissap, unsweetened)",aka:"Hibiscus sabdariffa — cold brew",emoji:"🌺",cat:"other",catLabel:"West African herbal beverage",african:true,top3:false,kcal:11,carbs:2.6,protein:0.1,fat:0,fiber:0.1,gi:"Low",evidence:"Moderate",micro:"Anthocyanins (delphinidin-3-sambubioside), Vitamin C (variable), Iron (trace)",bio:"Polyphenols, organic acids, mild diuretic",benefits:"RCTs and meta-analyses: hibiscus tea lowers SBP/DBP modestly. Anthocyanins improve endothelial function markers. Widely consumed in Nigeria (zobo), Senegal (bissap), Caribbean.",use:"Blood pressure support (unsweetened), antioxidant beverage, cultural hydration",limits:"Commercial zobo often very high sugar — defeats metabolic benefit. Possible CYP450 interactions at high medicinal doses. Diuretic — monitor with antihypertensives."},
+{id:372,name:"Dried kapenta (Lake Tanganyika sardine)",aka:"Limnothrissa miodon / Stolothrissa tanganicae",emoji:"🐟",cat:"fish",catLabel:"Southern African small fish",african:true,top3:false,kcal:290,carbs:0,protein:63,fat:4,fiber:0,gi:"Low",evidence:"Low",micro:"Calcium (with bones), Vitamin B12, Selenium, Iodine, Zinc",bio:"EPA+DHA, taurine, haem iron",benefits:"Affordable whole small fish — calcium from edible bones, omega-3, complete protein. Critical micronutrient source in Zambia/Zimbabwe/Malawi lake regions.",use:"Calcium + omega-3 on a budget, B12, child nutrition programmes",limits:"Very high sodium when salted. Histamine in poorly stored dried fish. Purines — gout caution."},
+{id:373,name:"Stockfish / okporoko (dried cod)",aka:"Unsalted air-dried Atlantic cod",emoji:"🐟",cat:"fish",catLabel:"West African preserved fish",african:true,top3:false,kcal:290,carbs:0,protein:63,fat:2.4,fiber:0,gi:"Low",evidence:"Low",micro:"Vitamin B12, Selenium, Phosphorus, Iodine",bio:"Long-chain omega-3 (lower than oily fish), taurine, peptides",benefits:"Concentrated protein for Nigerian and Ghanaian soups/stews; long shelf life without refrigeration. Rehydration cooking reduces salt vs salted fish.",use:"High-protein soup base, food preservation tradition, B12",limits:"Must be soaked/rehydrated and cooked thoroughly. Histamine risk if poorly stored. Allergy to fish."},
+{id:374,name:"Cowpea leaves (mboga)",aka:"Vigna unguiculata — edible leaves",emoji:"🥬",cat:"leaf",catLabel:"East African leafy green",african:true,top3:false,kcal:23,carbs:4,protein:2.9,fat:0.3,fiber:2,gi:"Low",evidence:"Low",micro:"Vitamin A (high beta-carotene), Vitamin C, Iron, Calcium, Folate",bio:"Carotenoids, polyphenols, nitrates",benefits:"Dual-use crop — leaves and grain both eaten across East and Southern Africa. Supports vitamin A and iron in plant-forward diets.",use:"Vitamin A, iron, folate, traditional African greens",limits:"Oxalates and nitrates — cook; wash well. Seasonal supply."},
+{id:375,name:"Waterleaf (Talinum triangulare)",aka:"Gbure — Lagos spinach",emoji:"🥬",cat:"leaf",catLabel:"West African vegetable",african:true,top3:false,kcal:23,carbs:4.4,protein:2.2,fat:0.4,fiber:1,gi:"Low",evidence:"Low",micro:"Vitamin C, Vitamin A, Calcium, Magnesium, Omega-3 ALA (unusual for a leaf)",bio:"Alpha-linolenic acid in leaves, antioxidants",benefits:"Popular in Nigerian soups (efo riro, edikaikong). Adds bulk, potassium, and vitamin C to one-pot meals.",use:"Soup greens, vitamin C, potassium, Nigerian cuisine",limits:"High oxalate — moderate in renal stone history. Perishable."},
+{id:376,name:"Garden egg (African eggplant)",aka:"Solanum aethiopicum — small bitter types",emoji:"🍆",cat:"veg",catLabel:"West African vegetable",african:true,top3:false,kcal:25,carbs:5.9,protein:1,fat:0.2,fiber:1.3,gi:"Low",evidence:"Low",micro:"Potassium, Fibre, Vitamin C, Chlorogenic acid",bio:"Nasunin-related anthocyanins (purple types), phenolic acids",benefits:"Eaten raw with peanut dip in Ghana/Nigeria; low-calorie fibre snack. Polyphenols may support glycaemic control modestly.",use:"Low-calorie snack, fibre, traditional West African starter",limits:"Nightshade allergy/sensitivity. Bitter cultivars — palatability."},
+{id:377,name:"Garri (toasted cassava granules)",aka:"Gari — dry swallow or cereal",emoji:"🥣",cat:"grain",catLabel:"West African cassava product",african:true,top3:false,kcal:363,carbs:84.9,protein:1.4,fat:0.6,fiber:2.8,gi:"Medium-High",evidence:"Low",micro:"Carbohydrate-dense, small amounts of B vitamins if fortified",bio:"Resistant starch higher in yellow fermented garri; cyanogenic compounds reduced by fermentation + roasting",benefits:"Fermentation and roasting reduce cyanogenic glucosides vs raw cassava. Major energy staple in Nigeria/Ghana/Benin.",use:"Energy staple, swallow when soaked, iron if fortified",limits:"High GI when eaten dry as cereal; soak for eba lowers rate of intake slightly. Low protein — pair with soup rich in fish/legumes. Not a complete meal alone."},
+{id:378,name:"Kuli kuli (roasted peanut cake)",aka:"Compressed groundnut snack — Hausa",emoji:"🥜",cat:"legume",catLabel:"West African snack",african:true,top3:false,kcal:466,carbs:21.5,protein:25,fat:35,fiber:8.4,gi:"Low",evidence:"Low",micro:"Niacin, Magnesium, Vitamin E, Folate, Arginine",bio:"Resveratrol, arginine, MUFA/PUFA from peanuts",benefits:"Concentrated plant protein and MUFA snack; culturally familiar in Northern Nigeria/Niger.",use:"Portable protein, healthy fats when unsweetened",limits:"Very calorie-dense. Peanut allergy. Aflatoxin risk — buy reputable brands."},
+{id:379,name:"Kenkey (fermented maize dough, cooked)",aka:"Ga / Fante fermented corn — Ghana",emoji:"🌽",cat:"grain",catLabel:"West African fermented staple",african:true,top3:false,kcal:155,carbs:33.2,protein:3.4,fat:0.9,fiber:2.6,gi:"Medium",evidence:"Low",micro:"B vitamins from fermentation, Selenium (soil-dependent), Phosphorus",bio:"Lactic acid bacteria, organic acids, some resistant starch",benefits:"Fermentation improves flavour, shelf life, and may lower phytate vs unfermented maize. Staple with grilled fish and pepper.",use:"Fermented staple, gut-friendly acids, Ghanaian traditional plate",limits:"Medium GI; often served with high-sodium sauces. Low lysine — combine with legumes/fish."},
+{id:380,name:"Banku / akple (fermented corn-cassava)",aka:"Ghana/Togo fermented dough",emoji:"🥘",cat:"grain",catLabel:"West African fermented staple",african:true,top3:false,kcal:148,carbs:32,protein:2.1,fat:0.5,fiber:1.8,gi:"Medium",evidence:"Low",micro:"Potassium, Magnesium, small B vitamins from ferment",bio:"Lactic acid fermentation, reduced cyanide risk from cassava component when properly processed",benefits:"Smooth stretchy texture for soups/stews; fermentation is traditional food-safety strategy for cassava-maize mixes.",use:"Staple swallow with okra or palm-nut soup",limits:"Medium GI. Processing quality matters for residual cyanogenic compounds. Sodium from soups."},
+{id:381,name:"Attieke",aka:"Ivorian fermented cassava couscous",emoji:"🥘",cat:"grain",catLabel:"West African cassava dish",african:true,top3:false,kcal:125,carbs:28,protein:1.2,fat:0.3,fiber:1.5,gi:"Medium",evidence:"Low",micro:"Potassium (variable), small B vitamins from fermentation",bio:"Lactic acid bacteria, organic acids, modest resistant starch",benefits:"Lactic-fermented cassava granules from Côte d'Ivoire; fermentation reduces cyanogenic glucosides vs raw cassava. Staple with grilled fish and alloco across coastal West Africa.",use:"Fermented energy staple, Ivorian/West African plates",limits:"Medium GI. Low protein — pair with fish or legumes. Sodium varies by product."},
+{id:382,name:"Tamarillo (tree tomato)",aka:"Solanum betaceum — East African highlands",emoji:"🍅",cat:"fruit",catLabel:"African fruit",african:true,top3:false,kcal:31,carbs:6.5,protein:1.5,fat:0.1,fiber:1.9,gi:"Low",evidence:"Low",micro:"Vitamin C, Vitamin A, Potassium, Anthocyanins (red cultivars)",bio:"Polyphenols similar to tomato family",benefits:"Common in Kenya and Rwanda; anthocyanin-rich types add antioxidants to fruit intake.",use:"Vitamin C, potassium, low-calorie fruit",limits:"Nightshade family. Oxalic acid. Sour flavour may need culinary pairing."},
+{id:383,name:"Nopal cactus pads (cooked)",aka:"Opuntia ficus-indica — global diaspora",emoji:"🌵",cat:"veg",catLabel:"Vegetable",african:false,top3:false,kcal:16,carbs:3.3,protein:1.3,fat:0.1,fiber:1.3,gi:"Low",evidence:"Moderate",micro:"Vitamin C, Calcium, Magnesium, Potassium",bio:"Mucilage (soluble fibre), betalains, piscidic acid",benefits:"RCT evidence: nopales blunt postprandial glucose and insulin when added to meals. High mucilage supports satiety.",use:"Glycaemic management adjunct, soluble fibre, Mexican/Mediterranean tradition",limits:"Gradual introduction — loose stools. Vitamin K content — warfarin if eaten in large amounts."},
+{id:384,name:"Roasted chickpeas (dry snack)",aka:"Cicer arietinum — oven-roasted",emoji:"🫘",cat:"legume",catLabel:"Snack legume",african:true,top3:false,kcal:328,carbs:58,protein:14,fat:6,fiber:11,gi:"Low",evidence:"Low",micro:"Folate, Iron, Manganese, Zinc",bio:"Anthocyanins (black varieties), resistant starch, saponins",benefits:"Portable high-fibre plant protein; lower glycaemic load than potato chips. Familiar legume across Mediterranean, Middle East, and North African snacking.",use:"Travel snack, fibre, plant protein",limits:"FODMAP. Calorie-dense — portion control. Dental caution if very hard."},
+{id:385,name:"Black garlic (aged cloves)",aka:"Allium sativum — slow heat/Maillard fermented",emoji:"🧄",cat:"veg",catLabel:"Fermented allium",african:false,top3:false,kcal:265,carbs:52,protein:8,fat:0.5,fiber:3,gi:"Low",evidence:"Low",micro:"S-allyl cysteine (SAC — elevated vs raw), Fructans",bio:"SAC, melanoidins, antioxidants",benefits:"Mild sweet flavour may improve adherence vs raw garlic; SAC is stable at heat. Emerging small trials on lipids and oxidative stress.",use:"Garlic bioactives without harsh raw bite",limits:"High FODMAP (fructans). Warfarin/antiplatelet considerations remain. Not a substitute for prescribed antihypertensives."},
+{id:386,name:"Purple maize (cooked kernels)",aka:"Anthocyanin-rich Zea mays",emoji:"🌽",cat:"grain",catLabel:"Pigmented cereal",african:false,top3:false,kcal:96,carbs:20.9,protein:2.7,fat:1.1,fiber:2.2,gi:"Low-Medium",evidence:"Low",micro:"Anthocyanins, Phosphorus, Magnesium",bio:"Cyanidin-3-glucoside and related anthocyanins, phenolic acids",benefits:"Pigmented maize supplies anthocyanins that support vascular and antioxidant endpoints in limited human data; colourful nutrient-dense adjunct to maize-based diets.",use:"Polyphenol-rich staple, bowl salads, Latin American/Andean interest",limits:"Medium GI if puréed. Maize allergy rare."},
+{id:387,name:"Labneh (strained yoghurt)",aka:"Greek-style Middle Eastern yoghurt cheese",emoji:"🥛",cat:"dairy",catLabel:"Fermented dairy",african:true,top3:false,kcal:133,carbs:3.2,protein:9.5,fat:10,fiber:0,gi:"Low",evidence:"Moderate",micro:"Calcium, B12, Phosphorus, Probiotics (strain-dependent)",bio:"Whey removal concentrates casein and bioactive peptides",benefits:"Higher protein per spoonful than regular yoghurt; supports satiety and muscle maintenance in weight management.",use:"High-protein spread/dip, calcium, probiotic if live cultures",limits:"Lactose usually low but not zero. Saturated fat in full-fat versions. Dairy allergy."},
+{id:388,name:"Sunflower seed butter",aka:"Helianthus annuus — roasted spread",emoji:"🌻",cat:"nut",catLabel:"Seed butter",african:false,top3:false,kcal:617,carbs:21.5,protein:21,fat:56,fiber:7,gi:"Low",evidence:"Low",micro:"Vitamin E, Selenium, Magnesium, Copper",bio:"Phytosterols, chlorogenic acid",benefits:"Nut-free-school alternative to peanut butter; concentrates vitamin E and magnesium from whole seeds.",use:"Nut-free spreads, vitamin E, baking",limits:"High omega-6 — pair with omega-3 sources. Calorie-dense. Seed allergy."},
+{id:389,name:"Nutritional yeast (fortified flakes)",aka:"Saccharomyces cerevisiae — inactive",emoji:"🧀",cat:"other",catLabel:"Fortified condiment",african:false,top3:false,kcal:350,carbs:36,protein:50,fat:5,fiber:27,gi:"Low",evidence:"Low",micro:"B12 when fortified, Folate, Zinc (label-dependent)",bio:"Beta-glucans, savoury nucleotides",benefits:"Fortified flakes can deliver reliable vegan B12 and umami depth to beans, stews, and porridges.",use:"Vegan B12 (verify fortification), umami, protein sprinkle",limits:"Confirm fortification on label. Yeast sensitivity uncommon. MAOI patients should use reputable low-tyramine brands."},
+{id:390,name:"Coconut water (unsweetened)",aka:"Clear liquid from young coconut",emoji:"🥥",cat:"other",catLabel:"Tropical beverage",african:true,top3:false,kcal:19,carbs:3.7,protein:0.7,fat:0.2,fiber:0.1,gi:"Low",evidence:"Low",micro:"Potassium (250mg/cup typical), Magnesium, Sodium (low), Natural sugars",bio:"Cytokinins, L-arginine, electrolytes",benefits:"Lower sugar than fruit juice; potassium-rich oral rehydration adjunct after exercise (not equivalent to medical ORS for diarrhoea). Common across coastal Africa and tropics.",use:"Hydration, potassium, post-exercise electrolytes",limits:"Not a complete ORS for acute diarrhoea in children. Hyperkalaemia risk with ACE inhibitors/ARBs/spironolactone if consumed in very large volumes."}
 
 ];
 
@@ -3198,7 +3235,7 @@ function loadPersistence(){try{var favIds=JSON.parse(localStorage.getItem('nf_fa
 
 // ── DARK MODE ──
 function toggleDarkMode(){darkMode=!darkMode;applyDarkMode(darkMode);try{localStorage.setItem('nf_darkmode',darkMode?'1':'0')}catch(e){}}
-function applyDarkMode(on){document.body.classList.toggle('dark-mode',on);var btn=document.getElementById('dmMenuBtn');if(btn)btn.textContent=on?'Light mode':'Dark mode'}
+function applyDarkMode(on){document.body.classList.toggle('dark-mode',on);var hb=document.getElementById('btnDarkMode');if(hb){hb.setAttribute('aria-pressed',on?'true':'false');hb.title=on?'Light mode':'Dark mode';hb.setAttribute('aria-label',on?'Switch to light theme':'Switch to dark theme')}}
 (function(){var stored=null;try{stored=localStorage.getItem('nf_darkmode')}catch(e){}if(stored!==null)darkMode=stored==='1';else darkMode=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;applyDarkMode(darkMode)})();
 
 // ── APP MODE ──
@@ -3352,13 +3389,13 @@ var render = (function(){
       }
       var thtml='<div class="table-wrap"><table class="table-view"><thead><tr>';
       thtml+='<th class="'+thSortCls(['name','name_desc'])+'" onclick="cycleSort(\'name\')">Food '+thArrow(['name','name_desc'])+'</th>';
-      thtml+='<th class="'+thSortCls(['kcal_asc','kcal_desc'])+'" onclick="cycleSort(\'kcal\')">Kcal '+thArrow(['kcal_asc','kcal_desc'])+'</th>';
-      thtml+='<th class="'+thSortCls(['protein','protein_asc'])+'" onclick="cycleSort(\'protein\')">Protein '+thArrow(['protein','protein_asc'])+'</th>';
-      thtml+='<th class="'+thSortCls(['carbs','carbs_asc'])+'" onclick="cycleSort(\'carbs\')">Carbs '+thArrow(['carbs','carbs_asc'])+'</th>';
-      thtml+='<th class="'+thSortCls(['fat','fat_asc'])+'" onclick="cycleSort(\'fat\')">Fat '+thArrow(['fat','fat_asc'])+'</th>';
-      thtml+='<th class="'+thSortCls(['fiber','fiber_asc'])+'" onclick="cycleSort(\'fiber\')">Fibre '+thArrow(['fiber','fiber_asc'])+'</th>';
+      thtml+='<th class="tv-num '+thSortCls(['kcal_asc','kcal_desc'])+'" onclick="cycleSort(\'kcal\')">Kcal '+thArrow(['kcal_asc','kcal_desc'])+'</th>';
+      thtml+='<th class="tv-num '+thSortCls(['protein','protein_asc'])+'" onclick="cycleSort(\'protein\')">Protein '+thArrow(['protein','protein_asc'])+'</th>';
+      thtml+='<th class="tv-num '+thSortCls(['carbs','carbs_asc'])+'" onclick="cycleSort(\'carbs\')">Carbs '+thArrow(['carbs','carbs_asc'])+'</th>';
+      thtml+='<th class="tv-num '+thSortCls(['fat','fat_asc'])+'" onclick="cycleSort(\'fat\')">Fat '+thArrow(['fat','fat_asc'])+'</th>';
+      thtml+='<th class="tv-num '+thSortCls(['fiber','fiber_asc'])+'" onclick="cycleSort(\'fiber\')">Fibre '+thArrow(['fiber','fiber_asc'])+'</th>';
       thtml+='<th class="'+thSortCls(['gi','gi_desc'])+'" onclick="cycleSort(\'gi\')">GI '+thArrow(['gi','gi_desc'])+'</th>';
-      thtml+='<th class="'+thSortCls(['longevity','longevity_asc'])+'" onclick="cycleSort(\'longevity\')">LS '+thArrow(['longevity','longevity_asc'])+'</th>';
+      thtml+='<th class="tv-num '+thSortCls(['longevity','longevity_asc'])+'" onclick="cycleSort(\'longevity\')">LS '+thArrow(['longevity','longevity_asc'])+'</th>';
       thtml+='<th class="'+thSortCls(['confidence','confidence_asc'])+'" onclick="cycleSort(\'confidence\')">Evidence '+thArrow(['confidence','confidence_asc'])+'</th>';
       thtml+='<th>Drug</th>';
       thtml+='<th>Actions</th>';
@@ -3378,7 +3415,7 @@ var render = (function(){
           '<td class="tv-num">'+tf.fat+'g</td>'+
           '<td class="tv-num">'+tf.fiber+'g</td>'+
           '<td><span class="'+(tf.gi==='Low'?'ev-hi':tf.gi==='High'?'ev-lo':'ev-mo')+'" style="font-size:8px">'+tf.gi+'</span></td>'+
-          '<td class="tv-num"><span class="tv-ls"><span class="tv-ls-bar"><span class="tv-ls-fill '+tlsFill+'" style="width:'+tf.longevity+'%"></span></span> '+tf.longevity+'</span></td>'+
+          '<td class="tv-num"><span class="tv-ls"><span class="tv-ls-bar"><span class="tv-ls-fill '+tlsFill+'" style="width:'+tf.longevity+'%"></span></span><span class="tv-ls-val">'+tf.longevity+'</span></span></td>'+
           '<td>'+tevBadge+'</td>'+
           '<td>'+tdpill+'</td>'+
           '<td class="tv-action">'+

@@ -1,6 +1,6 @@
 /* NutriForge Africa — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-v6-1';
-var PRECACHE = ['./index.html', './manifest.json', './t2dm-clinical-field-guide.html'];
+var CACHE_NAME = 'nutriforge-v6-2';
+var PRECACHE = ['./index.html', './landing.html', './manifest.json', './t2dm-clinical-field-guide.html'];
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
@@ -28,6 +28,29 @@ self.addEventListener('fetch', function (event) {
     var url = new URL(event.request.url);
     if (url.origin !== self.location.origin) return;
   } catch (e) { return; }
+
+  /* HTML navigations: network-first so menu/links (e.g. Welcome page) are never stuck on an old cached shell. */
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .then(function (response) {
+          if (response && response.status === 200 && response.type === 'basic') {
+            var copy = response.clone();
+            caches.open(CACHE_NAME).then(function (cache) {
+              cache.put(event.request, copy);
+            });
+          }
+          return response;
+        })
+        .catch(function () {
+          return caches.match(event.request, { ignoreSearch: false }).then(function (cached) {
+            if (cached) return cached;
+            return caches.match('./index.html');
+          });
+        })
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(event.request, { ignoreSearch: false }).then(function (cached) {

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1f24">
+  <meta name="description" content="NutriForge Africa — evidence-based nutrition with African dishes, daily diary, goals, and offline-ready tools for clinicians and clients.">
+  <title>NutriForge Africa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #0d1210;
+      --ink-soft: #3d4540;
+      --muted: #6b736e;
+      --line: rgba(13, 18, 16, 0.08);
+      --surface: #faf9f6;
+      --surface-elevated: #ffffff;
+      --teal-deep: #0a1f24;
+      --teal-mid: #123a42;
+      --teal-glow: #1a5c52;
+      --gold: #c9a227;
+      --gold-soft: rgba(201, 162, 39, 0.15);
+      --green: #1d5c3a;
+      --green-soft: #e8f2ec;
+      --radius-lg: 20px;
+      --radius-sm: 12px;
+      --shadow-soft: 0 24px 64px rgba(10, 31, 36, 0.08);
+      --shadow-card: 0 4px 24px rgba(10, 31, 36, 0.06);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Manrope, system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      background: var(--surface);
+      min-height: 100dvh;
+      -webkit-font-smoothing: antialiased;
+    }
+    .bg-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 120% 80% at 50% -20%, rgba(26, 92, 82, 0.09), transparent 55%),
+        radial-gradient(ellipse 90% 60% at 100% 0%, rgba(201, 162, 39, 0.07), transparent 45%),
+        radial-gradient(ellipse 70% 50% at 0% 100%, rgba(18, 58, 66, 0.06), transparent 50%),
+        var(--surface);
+    }
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 max(24px, env(safe-area-inset-left)) 80px max(24px, env(safe-area-inset-right));
+    }
+    /* Nav */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: max(20px, env(safe-area-inset-top)) 0 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    .logo {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+    .logo span {
+      font-style: italic;
+      color: var(--teal-mid);
+      font-weight: 400;
+    }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .link-quiet {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      transition: color 0.15s, background 0.15s;
+    }
+    .link-quiet:hover {
+      color: var(--ink);
+      background: rgba(10, 31, 36, 0.05);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      border-radius: var(--radius-sm);
+      padding: 12px 22px;
+      transition: transform 0.15s, box-shadow 0.2s, background 0.15s;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary {
+      background: linear-gradient(145deg, var(--teal-mid) 0%, var(--teal-deep) 100%);
+      color: #f4f0e8;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12) inset, 0 4px 20px rgba(10, 31, 36, 0.25);
+      border: 1px solid rgba(201, 162, 39, 0.25);
+    }
+    .btn-primary:hover {
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 8px 28px rgba(10, 31, 36, 0.32);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--teal-mid);
+      border: 1px solid var(--line);
+    }
+    .btn-ghost:hover {
+      background: var(--surface-elevated);
+      border-color: rgba(18, 58, 66, 0.15);
+    }
+    /* Hero */
+    .hero {
+      padding: clamp(48px, 10vw, 96px) 0 clamp(56px, 8vw, 88px);
+      text-align: center;
+    }
+    .eyebrow {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(2.5rem, 6vw, 3.75rem);
+      font-weight: 400;
+      line-height: 1.08;
+      color: var(--ink);
+      letter-spacing: -0.03em;
+      max-width: 14ch;
+      margin: 0 auto 20px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--teal-mid);
+    }
+    .hero-lead {
+      font-size: clamp(1rem, 2.2vw, 1.125rem);
+      color: var(--muted);
+      max-width: 36rem;
+      margin: 0 auto 36px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-note {
+      margin-top: 20px;
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+    /* Stats strip */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      margin-bottom: clamp(64px, 10vw, 100px);
+    }
+    @media (max-width: 640px) {
+      .stats { grid-template-columns: 1fr; }
+    }
+    .stat {
+      background: var(--surface-elevated);
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .stat-val {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .stat-lbl {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+    /* Features */
+    .section-title {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      font-weight: 400;
+      color: var(--ink);
+      text-align: center;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--muted);
+      max-width: 32rem;
+      margin: 0 auto 48px;
+      font-size: 0.9375rem;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: clamp(64px, 10vw, 96px);
+    }
+    @media (max-width: 720px) {
+      .features { grid-template-columns: 1fr; }
+    }
+    .feature {
+      background: var(--surface-elevated);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 28px 28px 30px;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .feature:hover {
+      border-color: rgba(201, 162, 39, 0.22);
+      box-shadow: var(--shadow-soft);
+    }
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+      background: var(--green-soft);
+    }
+    .feature:nth-child(2) .feature-icon { background: #fff7ed; }
+    .feature:nth-child(3) .feature-icon { background: #eef6ff; }
+    .feature:nth-child(4) .feature-icon { background: #f3f0ff; }
+    .feature h3 {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .feature p {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    /* CTA band */
+    .cta-band {
+      border-radius: var(--radius-lg);
+      padding: clamp(40px, 6vw, 56px) clamp(28px, 5vw, 48px);
+      text-align: center;
+      background: linear-gradient(155deg, var(--teal-deep) 0%, #0d3038 42%, #123a42 100%);
+      color: rgba(244, 240, 232, 0.88);
+      border: 1px solid rgba(201, 162, 39, 0.2);
+      box-shadow: 0 24px 48px rgba(10, 31, 36, 0.2);
+    }
+    .cta-band h2 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 400;
+      color: #faf9f6;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .cta-band p {
+      font-size: 0.9375rem;
+      opacity: 0.9;
+      max-width: 28rem;
+      margin: 0 auto 24px;
+    }
+    .cta-band .btn-primary {
+      background: linear-gradient(145deg, #f4f0e8 0%, #e8e0d4 100%);
+      color: var(--teal-deep);
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    }
+    .cta-band .btn-primary:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+    /* Footer */
+    footer {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--teal-mid);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="nav">
+      <a class="logo" href="./landing.html">NutriForge <span>Africa</span></a>
+      <nav class="nav-cta" aria-label="Primary">
+        <a class="link-quiet" href="./t2dm-clinical-field-guide.html">Clinical guide</a>
+        <a class="btn btn-primary" href="./index.html">Open app</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-heading">
+        <p class="eyebrow">Evidence-based · Offline-ready</p>
+        <h1 id="hero-heading">Nutrition tools rooted in <em>real</em> plates.</h1>
+        <p class="hero-lead">
+          Browse hundreds of foods and African dishes, tailor views for conditions and regions, track the day in a diary, and keep drug–food checks close at hand — built for clarity in the clinic and at home.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="./index.html">Launch NutriForge</a>
+          <a class="btn btn-ghost" href="./t2dm-clinical-field-guide.html">T2DM field guide</a>
+        </div>
+        <p class="hero-note">Installable PWA · Works in the browser, no account wall</p>
+      </section>
+
+      <div class="stats" role="list">
+        <div class="stat" role="listitem">
+          <div class="stat-val">390+</div>
+          <div class="stat-lbl">Foods in database</div>
+        </div>
+        <div class="stat" role="listitem">
+          <div class="stat-val">Diary &amp; goals</div>
+          <div class="stat-lbl">Daily planning</div>
+        </div>
+        <div class="stat" role="listitem">
+          <div class="stat-val">Offline</div>
+          <div class="stat-lbl">Progressive web app</div>
+        </div>
+      </div>
+
+      <section aria-labelledby="features-heading">
+        <h2 class="section-title" id="features-heading">Everything in one calm surface</h2>
+        <p class="section-sub">Filters for African dishes and regional spotlights sit next to macros, longevity cues, and practical add-ons — without clutter.</p>
+        <div class="features">
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">🥘</div>
+            <h3>Foods &amp; dishes</h3>
+            <p>Evidence-aligned entries with macros, tags, and filters that respect how people actually eat across the continent.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">📓</div>
+            <h3>Diary &amp; profiles</h3>
+            <p>Log meals, set goals, and switch client context when you are supporting more than one person.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">💊</div>
+            <h3>Drug–food awareness</h3>
+            <p>Surface interactions and cautions alongside foods so medication timing and diet stay in the same frame.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">📋</div>
+            <h3>Meal templates &amp; compare</h3>
+            <p>Build plates, compare options side by side, and reuse patterns with meal templates.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="cta-heading">
+        <h2 id="cta-heading">Ready when you are</h2>
+        <p>Open the full app to search, filter, and use every tool in the current release.</p>
+        <a class="btn btn-primary" href="./index.html">Enter NutriForge Africa</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>NutriForge Africa · clinical nutrition companion</span>
+      <span><a href="./index.html">App</a> · <a href="./t2dm-clinical-field-guide.html">T2DM guide</a></span>
+    </footer>
+  </div>
+</body>
+</html>
