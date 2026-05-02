@@ -52,8 +52,23 @@ input,select,textarea{font-family:inherit}
 
 /* ── HEADER — unified bar ── */
 .header{background:linear-gradient(165deg,#164a52 0%,#103842 38%,#0c2830 72%,#081c22 100%);color:var(--header-fg);padding:env(safe-area-inset-top,0) max(1.5rem,env(safe-area-inset-right)) 0 max(1.5rem,env(safe-area-inset-left));min-height:calc(52px + env(safe-area-inset-top,0));position:sticky;top:0;z-index:200;display:flex;align-items:center;gap:12px;box-sizing:border-box;border-bottom:1px solid var(--header-gold);box-shadow:0 1px 0 var(--header-gold-soft),inset 0 1px 0 rgba(255,255,255,.06)}
-.header h1{font-size:16px;font-weight:700;letter-spacing:-.2px;white-space:nowrap;flex-shrink:0;color:var(--header-fg)}
-.brand-mark{font-weight:600;letter-spacing:-.02em;background:linear-gradient(118deg,#fff8e7 0%,#e8c76b 28%,#c9a227 52%,#2dd4bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.header .brand-site-title{font-size:16px;font-weight:700;letter-spacing:-.2px;flex-shrink:0;color:var(--header-fg);margin:0;line-height:1.2;display:block}
+.header .brand-site-title .brand-dropdown-trigger{font-size:inherit;font-weight:inherit}
+.header .brand-dropdown-trigger:focus-visible{outline:2px solid rgba(212,175,98,.75);outline-offset:2px}
+.brand-dropdown-wrap{position:relative;flex-shrink:0;max-width:100%}
+.brand-dropdown-trigger{display:inline-flex;align-items:center;gap:5px;max-width:100%;padding:2px 4px 2px 2px;margin:0;border-radius:8px;background:transparent;color:inherit;font-size:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;white-space:nowrap;min-width:0}
+.brand-dropdown-trigger:hover{background:rgba(255,255,255,.08)}
+.brand-dropdown-wrap.open .brand-dropdown-trigger{background:rgba(255,255,255,.1)}
+.brand-mark{font-weight:600;letter-spacing:-.02em;background:linear-gradient(118deg,#fff8e7 0%,#e8c76b 28%,#c9a227 52%,#2dd4bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.brand-dd-chevron{flex-shrink:0;width:14px;height:14px;opacity:.5;color:rgba(244,240,230,.9);transition:transform .2s ease}
+.brand-dropdown-wrap.open .brand-dd-chevron{transform:rotate(180deg);opacity:.75}
+.brand-dropdown-panel{display:none;position:absolute;top:calc(100% + 6px);left:0;z-index:315;box-sizing:border-box;width:min(22rem,calc(100vw - 2rem - env(safe-area-inset-left) - env(safe-area-inset-right)));max-height:min(70vh,440px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;border-radius:12px;border:1px solid var(--card-border);background:var(--card-bg);box-shadow:0 16px 48px rgba(0,0,0,.2),0 0 0 1px rgba(0,0,0,.04);isolation:isolate}
+.brand-dropdown-wrap.open .brand-dropdown-panel{display:block}
+.brand-dropdown-panel .browse-hero{margin:0;border:none;border-radius:0;box-shadow:none;background:linear-gradient(165deg,rgba(244,242,238,.92) 0%,rgba(250,250,248,.98) 100%)}
+body.dark-mode .brand-dropdown-panel .browse-hero{background:linear-gradient(165deg,rgba(26,30,34,.95) 0%,rgba(18,20,24,.98) 100%)}
+@supports (width:1dvw){
+  .brand-dropdown-panel{width:min(22rem,calc(100dvw - 2rem - env(safe-area-inset-left) - env(safe-area-inset-right)))}
+}
 .header .search-wrap{flex:1;max-width:420px;position:relative}
 .header .search-wrap input{width:100%;font-size:13px;padding:7px 10px 7px 30px;border:1px solid rgba(255,255,255,.12);border-radius:8px;background:rgba(0,0,0,.18);color:var(--header-fg);outline:none;transition:all .15s}
 .header .search-wrap input::placeholder{color:rgba(244,240,230,.42)}
@@ -130,9 +145,8 @@ body.dark-mode .cond-pill:hover{background:var(--surface-2);border-color:var(--c
 .context-badge strong{color:var(--text-primary)}
 .context-badge button{font-size:11px;padding:3px 10px;border-radius:15px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-secondary);cursor:pointer}
 
-/* ── Browse context note (lives inside #filterRow, full-width row under chips) ── */
+/* ── Browse context note (default: in header brand dropdown) ── */
 .browse-hero{margin:0;padding:8px 12px;border-radius:10px;border:1px solid var(--card-border);background:linear-gradient(165deg,rgba(244,242,238,.92) 0%,rgba(250,250,248,.98) 100%);box-shadow:0 1px 2px rgba(0,0,0,.03)}
-.filter-row > .browse-hero{flex:1 1 100%;width:100%;min-width:0;box-sizing:border-box;margin:8px 0 0}
 .browse-hero-inner{display:flex;align-items:flex-start;gap:10px;max-width:72rem}
 .browse-hero-emoji{font-size:17px;line-height:1.25;flex-shrink:0;opacity:.72}
 .browse-hero-text{font-size:11px;line-height:1.5;color:var(--text-tertiary);margin:0;letter-spacing:.01em}
@@ -359,11 +373,9 @@ body.dark-mode .exp-db-bridge{background:rgba(29,92,58,.25);border-color:#4ADE80
 .vat-protocol-panel{border-left:4px solid #c9a227;box-shadow:inset 4px 0 0 0 rgba(201,162,39,.12)}
 .nf-doc-head.vat-doc-head{align-items:flex-start;padding-bottom:12px}
 .vat-head-brand{display:flex;flex-direction:column;gap:6px;align-items:flex-start;flex:1;min-width:0}
-.vat-badge{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:7px;background:linear-gradient(135deg,rgba(201,162,39,.22),rgba(29,92,58,.12));color:var(--accent-green);border:1px solid rgba(201,162,39,.38)}
 .vat-head-title{font-family:'Roboto Serif',Georgia,serif;font-size:17px;font-weight:700;color:var(--text-primary);letter-spacing:-.02em;line-height:1.2;margin:0}
 .vat-head-sub{font-size:11px;font-weight:500;color:var(--text-secondary);line-height:1.4;margin:0;max-width:38rem}
 body.dark-mode .vat-protocol-panel{border-left-color:#d4a824;box-shadow:inset 4px 0 0 0 rgba(212,168,36,.15)}
-body.dark-mode .vat-badge{color:#B6E4C7;border-color:rgba(251,191,36,.35)}
 .vat-section-kicker{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-tertiary);margin:16px 0 6px}
 .vat-doc-split{border-top:1px dashed var(--card-border);margin:14px 0;padding-top:12px}
 .browse-hero-actions{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
@@ -621,7 +633,7 @@ body.dark-mode .plate-hint-action:hover{color:var(--text-primary)}
 @media(max-width:700px){
   .grid{grid-template-columns:1fr;gap:8px}
   .exp-cols{grid-template-columns:1fr}
-  .header h1{font-size:14px}
+  .header .brand-site-title{font-size:14px}
   .header .search-wrap{max-width:none}
   .header-actions .ha-btn:not(#overflowBtn):not(#btnDarkMode){display:none}
   .mobile-nav{display:block}
@@ -653,7 +665,9 @@ body.dark-mode .plate-hint-action:hover{color:var(--text-primary)}
 }
 @media(max-width:520px){
   .header{flex-wrap:wrap;height:auto;min-height:calc(52px + env(safe-area-inset-top,0));padding:10px max(12px,env(safe-area-inset-right)) 10px max(12px,env(safe-area-inset-left));padding-top:max(10px,env(safe-area-inset-top));gap:8px;align-items:center}
-  .header h1{font-size:13px;flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .header .brand-site-title{font-size:13px}
+  .brand-dropdown-wrap{min-width:0;flex:1 1 auto;max-width:100%}
+  .brand-dropdown-trigger{min-width:0;max-width:100%}
   .header-actions{margin-left:0;flex-shrink:0}
   .header .search-wrap{flex:1 0 100%;order:3;max-width:none;margin-top:4px}
   .filter-row{padding:8px max(12px,env(safe-area-inset-right)) 8px max(12px,env(safe-area-inset-left));flex-wrap:wrap;row-gap:8px;column-gap:6px}
@@ -701,7 +715,28 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <body>
 
 <div class="header">
-  <h1><span class="brand-mark" lang="en">NutriForge</span></h1>
+  <div class="brand-dropdown-wrap" id="brandBrowseWrap">
+    <h1 class="brand-site-title">
+      <button type="button" class="brand-dropdown-trigger" id="brandBrowseBtn" onclick="toggleBrandBrowsePanel(event)" aria-expanded="false" aria-haspopup="true" aria-controls="brandBrowsePanel" title="How browsing &amp; filters work">
+        <span class="brand-mark" lang="en">NutriForge</span>
+        <svg class="brand-dd-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </h1>
+    <div class="brand-dropdown-panel" id="brandBrowsePanel" role="region" aria-label="How optional filters work" aria-hidden="true">
+      <div class="browse-hero" role="note">
+        <div class="browse-hero-inner">
+          <span class="browse-hero-emoji" id="browseHeroEmoji" aria-hidden="true">🌍</span>
+          <div class="browse-hero-copy" id="browseHeroCopy">
+            <p class="browse-hero-text" id="browseHeroLine1">One <strong>global</strong> list for every kitchen. The filter chips only narrow the view — e.g. <strong>African staples</strong>, a <strong>Nigeria</strong> lens, or <strong>ready-made dishes</strong>. Combine them when you want a mixed plate.</p>
+            <p class="browse-hero-text browse-hero-why" id="browseHeroLine2" style="display:none" hidden></p>
+            <div class="browse-hero-actions">
+              <button type="button" class="vat-hub-quick" onclick="openVatProtocol();closeBrandBrowsePanel();">VAT visceral-fat protocol — overview &amp; documents</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="search-wrap">
     <span class="search-icon">&#x1F50D;</span>
     <input type="text" id="srch" placeholder="Search foods, herbs, costs (e.g. budget)…  Ctrl+K" aria-label="Search foods" autocomplete="off" autocapitalize="off" spellcheck="false">
@@ -843,18 +878,6 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
   </div>
   <span class="result-count" id="resultCount"></span>
   </div>
-  <div class="browse-hero" role="note" aria-label="How optional filters work">
-    <div class="browse-hero-inner">
-      <span class="browse-hero-emoji" id="browseHeroEmoji" aria-hidden="true">🌍</span>
-      <div class="browse-hero-copy" id="browseHeroCopy">
-        <p class="browse-hero-text" id="browseHeroLine1">One <strong>global</strong> list for every kitchen. The chips above only narrow the view — e.g. <strong>African staples</strong>, a <strong>Nigeria</strong> lens, or <strong>ready-made dishes</strong>. Combine them when you want a mixed plate.</p>
-        <p class="browse-hero-text browse-hero-why" id="browseHeroLine2" style="display:none" hidden></p>
-        <div class="browse-hero-actions">
-          <button type="button" class="vat-hub-quick" onclick="openVatProtocol()">VAT visceral-fat protocol — overview &amp; documents</button>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
 <div class="main">
@@ -923,7 +946,6 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     <div class="nf-doc-panel vat-protocol-panel" onclick="event.stopPropagation()">
       <div class="nf-doc-head vat-doc-head">
         <div class="vat-head-brand">
-          <span class="vat-badge" aria-hidden="true">Clinical protocol</span>
           <h2 id="vatProtocolTitle" class="vat-head-title">VAT · visceral adiposity</h2>
           <p class="vat-head-sub">Structured eating pattern, phased energy intake, mechanism-tiered food lists (general + African spotlight), biomarkers, and safety screens — aligned with NutriForge evidence grades. Not individual medical advice.</p>
         </div>
@@ -1682,7 +1704,7 @@ function updateBrowseHero(){
   var l2 = document.getElementById('browseHeroLine2');
   var em = document.getElementById('browseHeroEmoji');
   if(!l1) return;
-  l1.innerHTML = 'One <strong>global</strong> list for every kitchen. The chips above only narrow the view — e.g. <strong>African staples</strong>, a <strong>Nigeria</strong> lens, or <strong>ready-made dishes</strong>. Combine them when you want a mixed plate.';
+  l1.innerHTML = 'One <strong>global</strong> list for every kitchen. The filter chips only narrow the view — e.g. <strong>African staples</strong>, a <strong>Nigeria</strong> lens, or <strong>ready-made dishes</strong>. Combine them when you want a mixed plate.';
   if(em) em.textContent = activeCondition ? '💡' : '🌍';
   if(l2){
     if(activeCondition && CONDITION_COMMUNITY_WHY[activeCondition]){
@@ -2517,6 +2539,31 @@ function buildCombosDrawer(){
 // ── OVERFLOW MENU ──
 function toggleOverflow(){document.getElementById('overflowMenu').classList.toggle('open')}
 
+function closeBrandBrowsePanel(){
+  var w = document.getElementById('brandBrowseWrap');
+  var btn = document.getElementById('brandBrowseBtn');
+  var pan = document.getElementById('brandBrowsePanel');
+  if(w) w.classList.remove('open');
+  if(btn) btn.setAttribute('aria-expanded','false');
+  if(pan) pan.setAttribute('aria-hidden','true');
+}
+function toggleBrandBrowsePanel(ev){
+  if(ev){ ev.preventDefault(); ev.stopPropagation(); }
+  var w = document.getElementById('brandBrowseWrap');
+  if(!w) return;
+  var next = !w.classList.contains('open');
+  if(next){
+    var om = document.getElementById('overflowMenu'); if(om) om.classList.remove('open');
+    var fp = document.getElementById('filtersPopover'); if(fp) fp.classList.remove('open');
+    closeCondDropdown();
+  }
+  w.classList.toggle('open', next);
+  var btn = document.getElementById('brandBrowseBtn');
+  var pan = document.getElementById('brandBrowsePanel');
+  if(btn) btn.setAttribute('aria-expanded', next ? 'true' : 'false');
+  if(pan) pan.setAttribute('aria-hidden', next ? 'false' : 'true');
+}
+
 // ── COMBO EVENTS WIRING ──
 var comboTypeFilter = 'all';
 var comboSearchTerm = '';
@@ -2536,6 +2583,8 @@ function wireCombosEvents(){
 document.addEventListener('click',function(e){
   var wrap = document.querySelector('.overflow-menu-wrap');
   if(wrap && !wrap.contains(e.target)){document.getElementById('overflowMenu').classList.remove('open')}
+  var brandWrap = document.getElementById('brandBrowseWrap');
+  if(brandWrap && !brandWrap.contains(e.target)){closeBrandBrowsePanel()}
   var fpWrap = document.getElementById('filtersPopoverWrap');
   if(fpWrap && !fpWrap.contains(e.target)){var fpEl=document.getElementById('filtersPopover');if(fpEl)fpEl.classList.remove('open')}
   var condWrap = document.getElementById('condDropdownWrap');
@@ -3266,6 +3315,8 @@ document.addEventListener('keydown',function(e){
     if(meth && meth.classList.contains('open')){ closeMethodology(); e.preventDefault(); return }
     var t2go = document.getElementById('t2dmGuideOverlay');
     if(t2go && t2go.classList.contains('open')){ closeT2dmClinicalGuide(); e.preventDefault(); return }
+    var bb = document.getElementById('brandBrowseWrap');
+    if(bb && bb.classList.contains('open')){ closeBrandBrowsePanel(); e.preventDefault(); return }
     closeCondDropdown();closeDrawer();document.querySelectorAll('.card.open').forEach(function(c){c.classList.remove('open')})
   }
   if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();var s=document.getElementById('srch');if(s){s.focus();s.select()}}
