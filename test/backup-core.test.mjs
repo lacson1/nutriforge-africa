@@ -26,6 +26,9 @@ describe('backup-core', () => {
   it('lists stable keys', () => {
     expect(NF_BACKUP_KEYS).toContain('nf_diary');
     expect(NF_BACKUP_KEYS).toContain('nf_profiles');
+    expect(NF_BACKUP_KEYS).toContain('nf_saved_plates');
+    expect(NF_BACKUP_KEYS).toContain('nf_meal_plates');
+    expect(NF_BACKUP_KEYS).toContain('nf_today_focus');
     expect(new Set(NF_BACKUP_KEYS).size).toBe(NF_BACKUP_KEYS.length);
   });
 
