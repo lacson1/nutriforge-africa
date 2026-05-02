@@ -381,6 +381,9 @@ body.dark-mode .exp-db-bridge{background:rgba(29,92,58,.25);border-color:#4ADE80
 .meal-tag{font-size:9px;font-weight:600;padding:3px 8px;border-radius:999px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-secondary)}
 .meal-tag.time{border-color:rgba(217,119,6,.38);background:var(--accent-amber-light);color:#9A3412}
 .meal-tag.budget-low{border-color:rgba(29,92,58,.38);background:var(--accent-green-light);color:var(--accent-green)}
+.meal-focus-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 12px}
+.meal-focus-chip{font-size:10px;font-weight:600;padding:5px 10px;border-radius:999px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-secondary);cursor:pointer}
+.meal-focus-chip.active{background:var(--text-primary);color:var(--card-bg);border-color:var(--text-primary)}
 .nf-doc-panel.community-start-panel{max-width:600px}
 .nf-doc-panel.vat-protocol-panel{max-width:680px}
 .vat-unlock-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}
@@ -1636,11 +1639,11 @@ var CONDITION_COMMUNITY_WHY = {
 };
 
 var COMMUNITY_START_GOALS = [
-  { id:'goal_t2d', label:'Steady energy & blood sugar', emoji:'📊', sub:'Fibre-friendly picks', cond:'t2d', filter:null },
-  { id:'goal_htn', label:'Blood pressure', emoji:'💓', sub:'Plant-forward patterns', cond:'htn', filter:null },
-  { id:'goal_weight', label:'Healthy weight', emoji:'⚖️', sub:'Filling, nutrient-dense foods', cond:'obesity', filter:null },
-  { id:'goal_heart', label:'Heart health', emoji:'❤️', sub:'Cholesterol & BP friendly', cond:'cvd', filter:null },
-  { id:'goal_family', label:'Family meals', emoji:'🥘', sub:'Ready-made dishes lens', cond:null, filter:'dishes' }
+  { id:'goal_t2d', label:'Steady energy & blood sugar', emoji:'📊', sub:'Fibre-friendly picks', cond:'t2d', filter:null, mealFocus:'t2d' },
+  { id:'goal_htn', label:'Blood pressure', emoji:'💓', sub:'Plant-forward patterns', cond:'htn', filter:null, mealFocus:'htn' },
+  { id:'goal_weight', label:'Healthy weight', emoji:'⚖️', sub:'Filling, nutrient-dense foods', cond:'obesity', filter:null, mealFocus:'weight' },
+  { id:'goal_heart', label:'Heart health', emoji:'❤️', sub:'Cholesterol & BP friendly', cond:'cvd', filter:null, mealFocus:'heart' },
+  { id:'goal_family', label:'Family meals', emoji:'🥘', sub:'Ready-made dishes lens', cond:null, filter:'dishes', mealFocus:'family' }
 ];
 
 // Pre-compute condition matches for every food
@@ -1671,12 +1674,26 @@ foods.forEach(function(f){ foodsById[f.id] = f; });
 })();
 
 var MEAL_TEMPLATES = [
-  { id:'mt1', name:'Jollof + grilled chicken + pepper', emoji:'🍽️', region:'West Africa', timeLabel:'~40 min active', budget:'medium', notes:'Typical plate: jollof rice, skinless chicken, sweet pepper. Oil in the pot drives calories — lighter oil keeps it closer to these numbers.', parts:[{id:170,g:280},{id:94,g:120},{id:15,g:70}] },
-  { id:'mt2', name:'Egusi soup + fufu', emoji:'🥣', region:'West / Central Africa', timeLabel:'45 min · freezes well', budget:'low', notes:'Melon-seed soup with fermented cassava swallow. Palm oil and stock cubes vary by cook — adjust if your clinician limits fat or salt.', parts:[{id:171,g:320},{id:287,g:180}] },
-  { id:'mt3', name:'Injera + lentil wat', emoji:'🫓', region:'Horn of Africa', timeLabel:'50+ min · batter ahead', budget:'low', notes:'Fermented teff flatbread with spiced lentils. Injera timing is skilled — treat times as orientation.', parts:[{id:288,g:220},{id:34,g:200}] },
-  { id:'mt4', name:'Maize stiff porridge + tilapia + greens', emoji:'🍲', region:'East / Southern Africa', timeLabel:'~35 min', budget:'low', notes:'Nshima/ugali-style maize porridge (polenta proxy), fish, spinach.', parts:[{id:337,g:200},{id:140,g:160},{id:26,g:100}] },
-  { id:'mt5', name:'Cowpeas + brown rice + tomato stew', emoji:'🍛', region:'Pan-African', timeLabel:'30 min · batch friendly', budget:'low', notes:'Budget bowl: soak beans if you have time to ease digestion; tomato adds vitamin C for plant iron.', parts:[{id:37,g:180},{id:72,g:150},{id:22,g:120}] }
+  { id:'mt1', name:'Jollof + grilled chicken + pepper', emoji:'🍽️', region:'West Africa', timeLabel:'~40 min active', budget:'medium', focus:['family','weight','heart'], notes:'Typical plate: jollof rice, skinless chicken, sweet pepper. Oil in the pot drives calories — lighter oil keeps it closer to these numbers.', parts:[{id:170,g:280},{id:94,g:120},{id:15,g:70}] },
+  { id:'mt2', name:'Egusi soup + fufu', emoji:'🥣', region:'West / Central Africa', timeLabel:'45 min · freezes well', budget:'low', focus:['family'], notes:'Melon-seed soup with fermented cassava swallow. Palm oil and stock cubes vary by cook — adjust if your clinician limits fat or salt.', parts:[{id:171,g:320},{id:287,g:180}] },
+  { id:'mt3', name:'Injera + lentil wat', emoji:'🫓', region:'Horn of Africa', timeLabel:'50+ min · batter ahead', budget:'low', focus:['heart','t2d'], notes:'Fermented teff flatbread with spiced lentils. Injera timing is skilled — treat times as orientation.', parts:[{id:288,g:220},{id:34,g:200}] },
+  { id:'mt4', name:'Maize stiff porridge + tilapia + greens', emoji:'🍲', region:'East / Southern Africa', timeLabel:'~35 min', budget:'low', focus:['heart','htn','family'], notes:'Nshima/ugali-style maize porridge (polenta proxy), fish, spinach.', parts:[{id:337,g:200},{id:140,g:160},{id:26,g:100}] },
+  { id:'mt5', name:'Cowpeas + brown rice + tomato stew', emoji:'🍛', region:'Pan-African', timeLabel:'30 min · batch friendly', budget:'low', focus:['t2d','weight','heart','htn'], notes:'Budget bowl: soak beans if you have time to ease digestion; tomato adds vitamin C for plant iron.', parts:[{id:37,g:180},{id:72,g:150},{id:22,g:120}] },
+  { id:'mt6', name:'Nigerian breakfast bowl (beans + greens + pepper)', emoji:'🥗', region:'West Africa', timeLabel:'~20 min', budget:'low', focus:['t2d','weight','htn'], notes:'Simple high-fibre breakfast option using beans, leafy greens, and sweet pepper. Add chili separately if tolerated.', parts:[{id:37,g:180},{id:21,g:120},{id:15,g:70}] },
+  { id:'mt7', name:'Lentil + spinach + tomato recovery plate', emoji:'🥬', region:'Pan-African', timeLabel:'~25 min', budget:'low', focus:['t2d','heart','htn','weight'], notes:'Protein-forward and iron-aware plant plate. Tomato and pepper can support non-haem iron absorption.', parts:[{id:34,g:220},{id:26,g:120},{id:22,g:120},{id:15,g:60}] },
+  { id:'mt8', name:'Tilapia + jollof + greens', emoji:'🐟', region:'West / East Africa fusion', timeLabel:'~35 min', budget:'medium', focus:['heart','htn','family'], notes:'Balanced fish-centered lunch template. Use less oil in rice when targeting tighter calorie goals.', parts:[{id:140,g:180},{id:170,g:220},{id:26,g:100}] },
+  { id:'mt9', name:'Sweet potato + chicken + spinach', emoji:'🍠', region:'Pan-African clinic-friendly', timeLabel:'~30 min', budget:'medium', focus:['weight','t2d','family'], notes:'Straightforward plate for satiety and protein target days. Roast or boil sweet potato based on preference.', parts:[{id:12,g:260},{id:94,g:140},{id:26,g:100}] },
+  { id:'mt10', name:'Injera + lentils + greens', emoji:'🌿', region:'Horn of Africa', timeLabel:'~40 min', budget:'low', focus:['heart','t2d','htn'], notes:'A higher-fibre variation of injera and wat with extra greens for volume and micronutrients.', parts:[{id:288,g:200},{id:34,g:180},{id:26,g:120}] }
 ];
+
+var MEAL_TEMPLATE_FOCUS_LABELS = {
+  all: 'All templates',
+  t2d: 'Blood sugar',
+  htn: 'Blood pressure',
+  weight: 'Weight',
+  heart: 'Heart',
+  family: 'Family meals'
+};
 
 function computeMealTotals(parts){
   return NFMealsCore.computeMealTotals(parts, foodsById);
@@ -1700,6 +1717,7 @@ var portionSizes = {};
 var activeDrawer = null;
 var darkMode = false;
 var currentView = 'grid';
+var activeMealTemplateFocus = 'all';
 var diaryDate = todayISO();
 var diaryGoals = { kcal:2000, protein:120, fiber:35 };
 var diaryByDate = {};
@@ -2081,6 +2099,7 @@ function buildDiaryDrawer(){
 }
 function buildMealsDrawer(){
   return '<p class="drawer-tools-note">Composite plates from database foods (typical portions). Tags show <strong>time</strong> and <strong>budget</strong> cues for home cooking — recipes still vary (oil, stock cubes). Tap <strong>Log all</strong> to add every line to your diary for the selected day.</p>' +
+    '<div class="meal-focus-row" id="mealTemplateFocusRow"></div>' +
     '<div id="mealTemplatesList"></div>';
 }
 function buildDrugsDrawer(){
@@ -2271,14 +2290,35 @@ function refreshDiaryView(){
 }
 
 function renderMealTemplatesIfOpen(){
+  var row = document.getElementById('mealTemplateFocusRow');
+  if(row){
+    var focusKeys = ['all','t2d','htn','weight','heart','family'];
+    row.innerHTML = focusKeys.map(function(k){
+      var lbl = MEAL_TEMPLATE_FOCUS_LABELS[k] || k;
+      var activeCls = k === activeMealTemplateFocus ? ' active' : '';
+      return '<button type="button" class="meal-focus-chip' + activeCls + '" onclick="setMealTemplateFocus(\'' + k + '\')">' + safeHtml(lbl) + '</button>';
+    }).join('');
+  }
   var host = document.getElementById('mealTemplatesList');
   if(!host) return;
-  host.innerHTML = MEAL_TEMPLATES.map(function(m){
+  var filtered = MEAL_TEMPLATES.filter(function(m){
+    if(activeMealTemplateFocus === 'all') return true;
+    if(!m.focus || !m.focus.length) return false;
+    return m.focus.indexOf(activeMealTemplateFocus) > -1;
+  });
+  host.innerHTML = filtered.map(function(m){
     var t = computeMealTotals(m.parts);
     return '<div class="meal-tpl-card"><div class="meal-tpl-head"><span style="font-size:22px">' + m.emoji + '</span><div><div class="meal-tpl-title">' + safeHtml(m.name) + '</div><div class="meal-tpl-meta">' + safeHtml(m.region) + ' · ~' + t.kcal + ' kcal · ' + t.protein + ' g P · ' + t.fiber + ' g fibre</div></div></div>' + mealTemplateTagsHtml(m) + '<p style="font-size:11px;color:var(--text-secondary);margin:0 0 8px">' + safeHtml(m.notes) + '</p><div style="font-size:10px;color:var(--text-tertiary);margin-bottom:6px">' +
       m.parts.map(function(p){ var ff = foodsById[p.id]; return (ff ? ff.emoji + ' ' + safeHtml(ff.name) : '') + ' ' + p.g + 'g'; }).join(' · ') +
       '</div><button type="button" class="ca-btn" onclick="logMealTemplate(\'' + m.id + '\')">Log all to diary</button></div>';
   }).join('');
+  if(!filtered.length){
+    host.innerHTML = '<div class="meal-tpl-card"><div class="meal-tpl-title">No templates in this focus yet.</div><p style="font-size:11px;color:var(--text-secondary);margin:6px 0 0">Switch the filter above to see more templates, or use All templates.</p></div>';
+  }
+}
+function setMealTemplateFocus(focus){
+  activeMealTemplateFocus = focus || 'all';
+  renderMealTemplatesIfOpen();
 }
 
 function saveCurrentProfile(){
@@ -2588,6 +2628,7 @@ function applyCommunityGoal(goalId){
     setFilter(g.filter, chip || null);
   }
   setMode('patient');
+  activeMealTemplateFocus = g.mealFocus || 'all';
   openDrawer('meals');
 }
 function maybeOpenCommunityStart(){
