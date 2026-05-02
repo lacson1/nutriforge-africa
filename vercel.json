@@ -1,4 +1,7 @@
 {
+  "redirects": [
+    { "source": "/", "destination": "/landing.html", "permanent": false }
+  ],
   "rewrites": [
     { "source": "/_protocol/:path*", "destination": "/api/protocol-private-block" },
     { "source": "/protocol/vat-protocol.pdf", "destination": "/api/protocol-pdf" },

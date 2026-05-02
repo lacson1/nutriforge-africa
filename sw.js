@@ -1,5 +1,5 @@
 /* NutriForge Africa — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-v6-9';
+var CACHE_NAME = 'nutriforge-v6-10';
 var PRECACHE = [
   './index.html',
   './landing.html',
@@ -51,7 +51,7 @@ self.addEventListener('fetch', function (event) {
     }
   } catch (e) { return; }
 
-  /* HTML navigations: network-first so menu/links (e.g. Welcome page) are never stuck on an old cached shell. */
+  /* HTML navigations: network-first so landing/app shells are not stuck on stale cached HTML. */
   if (event.request.mode === 'navigate') {
     event.respondWith(
       fetch(event.request)
