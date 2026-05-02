@@ -348,6 +348,15 @@ body.dark-mode .exp-db-bridge{background:rgba(29,92,58,.25);border-color:#4ADE80
 .meal-tag.time{border-color:rgba(217,119,6,.38);background:var(--accent-amber-light);color:#9A3412}
 .meal-tag.budget-low{border-color:rgba(29,92,58,.38);background:var(--accent-green-light);color:var(--accent-green)}
 .nf-doc-panel.community-start-panel{max-width:600px}
+.nf-doc-panel.vat-protocol-panel{max-width:680px}
+.vat-unlock-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}
+.vat-unlock-row input[type=password]{flex:1;min-width:160px;font-size:12px;padding:7px 10px;border:1px solid var(--card-border);border-radius:8px;background:var(--card-bg);color:var(--text-primary)}
+.vat-protocol-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:center}
+.vat-toc{font-size:11px;margin:0 0 12px;padding-left:1.15rem;color:var(--text-secondary)}
+.vat-toc li{margin:4px 0}
+.vat-toc a{color:var(--accent-green);font-weight:600;text-decoration:underline;cursor:pointer}
+.vat-unlock-msg{font-size:11px;margin-top:8px;min-height:1.2em}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .community-start-lead{font-size:12px;color:var(--text-secondary);line-height:1.55;margin:0 0 14px}
 .community-start-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px;margin-bottom:14px}
 .community-start-btn{text-align:left;font-size:12px;line-height:1.35;padding:12px;border-radius:12px;border:1px solid var(--card-border);background:var(--surface);cursor:pointer;color:var(--text-primary);transition:background .12s,border-color .12s;font-family:inherit}
@@ -696,6 +705,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <button onclick="openDrawer('combos');toggleOverflow()">Food combinations</button>
         <button onclick="openDrawer('chart');toggleOverflow()">Nutrient chart</button>
         <button onclick="openT2dmClinicalGuide();toggleOverflow()">Diabetes clinical field guide</button>
+        <button type="button" onclick="openVatProtocol();toggleOverflow()">VAT protocol</button>
         <hr>
         <button onclick="openDrawer('diary');toggleOverflow()">Daily diary &amp; goals</button>
         <button onclick="openCommunityStart();toggleOverflow()">Start guide (goals)</button>
@@ -880,6 +890,66 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     </div>
   </div>
 
+  <div id="vatProtocolOverlay" class="nf-doc-overlay" role="dialog" aria-modal="true" aria-labelledby="vatProtocolTitle" aria-hidden="true" onclick="if(event.target===this)closeVatProtocol()">
+    <div class="nf-doc-panel vat-protocol-panel" onclick="event.stopPropagation()">
+      <div class="nf-doc-head">
+        <span id="vatProtocolTitle" class="nf-doc-title">VAT protocol</span>
+        <button type="button" class="drawer-close" onclick="closeVatProtocol()" aria-label="Close">&#10005;</button>
+      </div>
+      <div class="nf-doc-body" id="vatProtocolBody">
+        <p><strong>Visceral adiposity toolkit</strong> — structured eating window, phased energy intake, mechanism-tiered food lists (general + African spotlight), biomarker anchors, and safety screens. Aligned with NutriForge evidence language; it does <strong>not</strong> replace individual medical advice.</p>
+        <p>For how we grade foods in-app, see <button type="button" class="ca-btn" onclick="closeVatProtocol();openMethodology()" style="display:inline-flex;vertical-align:middle">Methodology &amp; trust</button>.</p>
+        <h3>Contents</h3>
+        <ol class="vat-toc">
+          <li><a href="#vat-sec-1">Daily protocol summary</a></li>
+          <li><a href="#vat-sec-2">General food base</a> · <a href="#vat-sec-3">African food base</a></li>
+          <li><a href="#vat-sec-4">Daily timelines</a></li>
+          <li><a href="#vat-sec-5">Protocol rules</a></li>
+          <li><a href="#vat-sec-6">Biomarker targets</a></li>
+          <li><a href="#vat-sec-7">Synergies &amp; meal rotation</a></li>
+          <li><a href="#vat-sec-8">Periodisation &amp; training</a></li>
+          <li><a href="#vat-sec-9">Supplements, hydration, lifestyle</a></li>
+          <li><a href="#vat-sec-10">Shopping, portions, eating out</a></li>
+          <li><a href="#vat-sec-11">Safety &amp; contraindications</a></li>
+        </ol>
+        <h3 id="vat-sec-1">Daily protocol summary</h3>
+        <p>Fixed fasting/eating window with timed hydration, fibre, protein-forward meals, and sleep-support habits. Exact clock times and kcal splits live in the secured PDF.</p>
+        <h3 id="vat-sec-2">General food base</h3>
+        <p>Tiered list by mechanisms (protein leverage, fibre, thermogenic cues, fat quality, volume). Each item carries an evidence grade — interpret alongside your clinician and labs.</p>
+        <h3 id="vat-sec-3">African food base</h3>
+        <p>Parallel list emphasising culturally familiar staples and condiments; lower funded trial tiers are flagged explicitly while mechanisms may still align with established pathways.</p>
+        <h3 id="vat-sec-4">Daily timelines</h3>
+        <p>Separate schedules for general and African pantry emphasis; spacing for iron absorption vs tea/polyphenols is spelled out in the document.</p>
+        <h3 id="vat-sec-5">Protocol rules</h3>
+        <p>Non‑negotiables include protein-first sequencing, starch cooling for resistant starch, carb-cycle days, fluid targets with psyllium, and cooking-fat discipline.</p>
+        <h3 id="vat-sec-6">Biomarker targets</h3>
+        <p>Triglyceride/HDL ratio flagged as priority alongside fasting insulin, HOMA‑IR, waist, hsCRP, and related markers — always contextualise with testing frequency your team recommends.</p>
+        <h3 id="vat-sec-7">Synergies &amp; meal rotation</h3>
+        <p>Pairing logic and a one-week rotation template to reduce decision fatigue while keeping fibre and protein thresholds.</p>
+        <h3 id="vat-sec-8">Periodisation &amp; training</h3>
+        <p>Three phases with diet breaks and guidance to sync intake around harder training days.</p>
+        <h3 id="vat-sec-9">Supplements, hydration, lifestyle</h3>
+        <p>Optional stacks, fluid rules, stress/cortisol hygiene — verify interactions with prescriptions.</p>
+        <h3 id="vat-sec-10">Shopping, portions, eating out</h3>
+        <p>Lists, cost thinking, portion visuals, and restaurant tactics.</p>
+        <h3 id="vat-sec-11">Safety &amp; contraindications</h3>
+        <p><strong>Read this in the PDF before starting.</strong> Pregnancy, diabetes medications/insulin, anticoagulants, renal disease, history of eating disorders, and acute illness change whether phased deficits, fasting, or supplement suggestions are appropriate.</p>
+        <h3>Full document access</h3>
+        <p class="drawer-tools-note">The printable PDF and expanded HTML outline are gated with a passphrase set by the deployment owner (not stored in the app). After unlocking, your browser receives an HttpOnly cookie for about seven days.</p>
+        <div class="vat-unlock-row">
+          <label for="vatProtocolPassphrase" class="sr-only">Passphrase</label>
+          <input type="password" id="vatProtocolPassphrase" autocomplete="current-password" placeholder="Passphrase" aria-label="Protocol passphrase">
+          <button type="button" class="ca-btn" onclick="unlockVatProtocol()">Unlock access</button>
+        </div>
+        <div id="vatProtocolUnlockErr" class="vat-unlock-msg" role="status" aria-live="polite"></div>
+        <div class="vat-protocol-actions">
+          <button type="button" class="ca-btn" onclick="openVatPdf()">Open PDF</button>
+          <button type="button" class="ca-btn" onclick="openVatGuide()">Open web outline</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="communityStartOverlay" class="nf-doc-overlay" role="dialog" aria-modal="true" aria-labelledby="communityStartTitle" aria-hidden="true" onclick="if(event.target===this)closeCommunityStart()">
     <div class="nf-doc-panel community-start-panel" onclick="event.stopPropagation()">
       <div class="nf-doc-head">
@@ -933,6 +1003,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         Data: USDA FoodData Central, WHO, peer-reviewed literature.<br>
         <button type="button" onclick="openT2dmClinicalGuide()" style="margin-top:8px;font-size:11px;font-weight:600;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);cursor:pointer;margin-right:6px">Open diabetes clinical field guide</button>
         <button type="button" onclick="openMethodology()" style="margin-top:8px;font-size:11px;font-weight:600;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);cursor:pointer">Methodology &amp; trust</button>
+        <button type="button" onclick="openVatProtocol()" style="margin-top:8px;font-size:11px;font-weight:600;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);cursor:pointer;margin-left:6px">VAT protocol</button>
       </div>
     </div>
     <div style="opacity:.35;font-size:9px;white-space:nowrap">v6.1 · 2026</div>
@@ -2284,6 +2355,58 @@ function closeMethodology(){
   document.body.style.overflow = '';
 }
 
+function openVatProtocol(){
+  closeDrawer();
+  var o = document.getElementById('vatProtocolOverlay');
+  if(!o) return;
+  o.classList.add('open');
+  o.setAttribute('aria-hidden','false');
+  document.body.style.overflow = 'hidden';
+  var err = document.getElementById('vatProtocolUnlockErr');
+  if(err){ err.textContent = ''; err.style.color = ''; }
+}
+function closeVatProtocol(){
+  var o = document.getElementById('vatProtocolOverlay');
+  if(!o) return;
+  o.classList.remove('open');
+  o.setAttribute('aria-hidden','true');
+  document.body.style.overflow = '';
+}
+function unlockVatProtocol(){
+  var inp = document.getElementById('vatProtocolPassphrase');
+  var err = document.getElementById('vatProtocolUnlockErr');
+  if(!inp || !err) return;
+  var v = inp.value || '';
+  err.textContent = '';
+  err.style.color = '';
+  fetch('/api/protocol-session',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    credentials:'same-origin',
+    body:JSON.stringify({ passphrase:v })
+  }).then(function(r){
+    return r.text().then(function(t){
+      var j={};
+      try{ j=JSON.parse(t); }catch(e2){}
+      if(!r.ok) throw new Error(j.error||t||r.statusText);
+      return j;
+    });
+  }).then(function(){
+    err.style.color = 'var(--accent-green)';
+    err.textContent = 'Unlocked on this device for about a week. You can open the PDF or web outline.';
+    inp.value = '';
+  }).catch(function(e){
+    err.style.color = 'var(--red)';
+    err.textContent = e.message||String(e);
+  });
+}
+function openVatPdf(){
+  window.open('/protocol/vat-protocol.pdf','_blank','noopener,noreferrer');
+}
+function openVatGuide(){
+  window.open('/protocol/','_blank','noopener,noreferrer');
+}
+
 function renderCommunityStartButtons(){
   var host = document.getElementById('communityStartGrid');
   if(!host) return;
@@ -3077,6 +3200,8 @@ document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){
     var cs = document.getElementById('communityStartOverlay');
     if(cs && cs.classList.contains('open')){ closeCommunityStart(); e.preventDefault(); return }
+    var vat = document.getElementById('vatProtocolOverlay');
+    if(vat && vat.classList.contains('open')){ closeVatProtocol(); e.preventDefault(); return }
     var meth = document.getElementById('methodologyOverlay');
     if(meth && meth.classList.contains('open')){ closeMethodology(); e.preventDefault(); return }
     var t2go = document.getElementById('t2dmGuideOverlay');

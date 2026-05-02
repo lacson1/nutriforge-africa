@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/_protocol/:path*", "destination": "/api/protocol-private-block" },
+    { "source": "/protocol/vat-protocol.pdf", "destination": "/api/protocol-pdf" },
+    { "source": "/protocol/index.html", "destination": "/api/protocol-guide" },
+    { "source": "/protocol/", "destination": "/api/protocol-guide" },
+    { "source": "/protocol", "destination": "/api/protocol-guide" }
+  ]
+}
