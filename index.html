@@ -356,6 +356,30 @@ body.dark-mode .exp-db-bridge{background:rgba(29,92,58,.25);border-color:#4ADE80
 .vat-toc li{margin:4px 0}
 .vat-toc a{color:var(--accent-green);font-weight:600;text-decoration:underline;cursor:pointer}
 .vat-unlock-msg{font-size:11px;margin-top:8px;min-height:1.2em}
+.vat-protocol-panel{border-left:4px solid #c9a227;box-shadow:inset 4px 0 0 0 rgba(201,162,39,.12)}
+.nf-doc-head.vat-doc-head{align-items:flex-start;padding-bottom:12px}
+.vat-head-brand{display:flex;flex-direction:column;gap:6px;align-items:flex-start;flex:1;min-width:0}
+.vat-badge{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:7px;background:linear-gradient(135deg,rgba(201,162,39,.22),rgba(29,92,58,.12));color:var(--accent-green);border:1px solid rgba(201,162,39,.38)}
+.vat-head-title{font-family:'Roboto Serif',Georgia,serif;font-size:17px;font-weight:700;color:var(--text-primary);letter-spacing:-.02em;line-height:1.2;margin:0}
+.vat-head-sub{font-size:11px;font-weight:500;color:var(--text-secondary);line-height:1.4;margin:0;max-width:38rem}
+body.dark-mode .vat-protocol-panel{border-left-color:#d4a824;box-shadow:inset 4px 0 0 0 rgba(212,168,36,.15)}
+body.dark-mode .vat-badge{color:#B6E4C7;border-color:rgba(251,191,36,.35)}
+.vat-section-kicker{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-tertiary);margin:16px 0 6px}
+.vat-doc-split{border-top:1px dashed var(--card-border);margin:14px 0;padding-top:12px}
+.browse-hero-actions{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.vat-hub-quick{font-family:inherit;font-size:11px;font-weight:600;padding:7px 14px;border-radius:999px;border:1px solid rgba(201,162,39,.5);background:linear-gradient(165deg,rgba(255,248,231,.65),rgba(250,249,246,.95));color:#6b5420;cursor:pointer;line-height:1.25}
+.vat-hub-quick:hover{border-color:#c9a227;background:rgba(255,248,231,.95)}
+.vat-hub-quick:focus-visible{outline:2px solid var(--accent-green);outline-offset:2px}
+body.dark-mode .vat-hub-quick{color:#FCD34D;border-color:rgba(251,191,36,.42);background:rgba(251,191,36,.08)}
+body.dark-mode .vat-hub-quick:hover{background:rgba(251,191,36,.14)}
+.vat-header-cta{font-size:10px;font-weight:700;letter-spacing:.06em;padding:0 9px;min-height:34px;border-radius:8px;border:1px solid rgba(201,162,39,.42);color:#9a7618;background:rgba(255,248,231,.2);cursor:pointer;font-family:inherit}
+.vat-header-cta:hover{border-color:#c9a227;background:rgba(255,248,231,.45)}
+body.dark-mode .vat-header-cta{color:#FCD34D;border-color:rgba(251,191,36,.38);background:rgba(251,191,36,.08)}
+body.dark-mode .vat-header-cta:hover{background:rgba(251,191,36,.14)}
+.context-badge .ctx-vat-btn{font-size:11px;font-weight:600;padding:4px 12px;border-radius:15px;border:1px solid rgba(217,119,6,.42);background:rgba(254,243,199,.4);color:#9A3412;cursor:pointer;margin-left:4px;transition:background .12s,border-color .12s}
+.context-badge .ctx-vat-btn:hover{background:rgba(251,191,36,.28);border-color:rgba(245,158,11,.55)}
+body.dark-mode .context-badge .ctx-vat-btn{color:#FCD34D;border-color:rgba(251,191,36,.35);background:rgba(251,191,36,.1)}
+body.dark-mode .context-badge .ctx-vat-btn:hover{background:rgba(251,191,36,.18)}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .community-start-lead{font-size:12px;color:var(--text-secondary);line-height:1.55;margin:0 0 14px}
 .community-start-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px;margin-bottom:14px}
@@ -694,6 +718,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
       <span class="dm-icon dm-moon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
       <span class="dm-icon dm-sun" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></span>
     </button>
+    <button type="button" class="vat-header-cta" onclick="openVatProtocol()" title="Visceral adiposity protocol — summaries &amp; documents">VAT</button>
     <div class="overflow-menu-wrap">
       <button type="button" class="ha-btn" id="overflowBtn" onclick="toggleOverflow()" title="More" aria-label="More options">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
@@ -703,7 +728,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <button onclick="openDrawer('combos');toggleOverflow()">Food combinations</button>
         <button onclick="openDrawer('chart');toggleOverflow()">Nutrient chart</button>
         <button onclick="openT2dmClinicalGuide();toggleOverflow()">Diabetes clinical field guide</button>
-        <button type="button" onclick="openVatProtocol();toggleOverflow()">VAT protocol</button>
+        <button type="button" onclick="openVatProtocol();toggleOverflow()">VAT hub (visceral fat protocol)</button>
         <hr>
         <button onclick="openDrawer('diary');toggleOverflow()">Daily diary &amp; goals</button>
         <button onclick="openCommunityStart();toggleOverflow()">Start guide (goals)</button>
@@ -824,6 +849,9 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
       <div class="browse-hero-copy" id="browseHeroCopy">
         <p class="browse-hero-text" id="browseHeroLine1">One <strong>global</strong> list for every kitchen. The chips above only narrow the view — e.g. <strong>African staples</strong>, a <strong>Nigeria</strong> lens, or <strong>ready-made dishes</strong>. Combine them when you want a mixed plate.</p>
         <p class="browse-hero-text browse-hero-why" id="browseHeroLine2" style="display:none" hidden></p>
+        <div class="browse-hero-actions">
+          <button type="button" class="vat-hub-quick" onclick="openVatProtocol()">VAT visceral-fat protocol — overview &amp; documents</button>
+        </div>
       </div>
     </div>
   </div>
@@ -881,6 +909,9 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <p>The drawer matches your medication search against <strong>keyword rules</strong> and each food’s <strong>limits</strong> text. Severities are editorial flags for teaching, not verified drug–nutrient interaction pairs. It does <strong>not</strong> replace Lexicomp, Stockley’s, your formulary, or pharmacist review. Always confirm with the prescriber.</p>
         <h3>AI assistant</h3>
         <p>The assistant uses an external model with a short system prompt and a slice of your current filter context. On hosted builds, requests are sent to this site’s <code>/api/chat</code> proxy so your browser never holds an API key. It can still be wrong — verify critical facts on the food cards and original literature.</p>
+        <h3>Visceral adiposity (VAT) protocol</h3>
+        <p>For clinicians and motivated clients working on <strong>visceral fat</strong>, metabolic markers, and structured meal timing: we host an evidence-aligned protocol hub with an in-app outline (always available here) and optional gated PDF / web outline from your deployment.</p>
+        <p><button type="button" class="ca-btn" onclick="closeMethodology();openVatProtocol()">Open VAT hub</button></p>
         <h3>Privacy &amp; portability</h3>
         <p>Diary, goals, and client profiles are stored only in this browser (<code>localStorage</code>). Clearing site data removes them. There is no signed-in account in this build.</p>
         <p>Use <strong>More → Download data backup</strong> to save a JSON file (keep it private — it may contain visit notes). Use <strong>Restore from backup</strong> on this or another device to reload that snapshot.</p>
@@ -890,13 +921,18 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 
   <div id="vatProtocolOverlay" class="nf-doc-overlay" role="dialog" aria-modal="true" aria-labelledby="vatProtocolTitle" aria-hidden="true" onclick="if(event.target===this)closeVatProtocol()">
     <div class="nf-doc-panel vat-protocol-panel" onclick="event.stopPropagation()">
-      <div class="nf-doc-head">
-        <span id="vatProtocolTitle" class="nf-doc-title">VAT protocol</span>
+      <div class="nf-doc-head vat-doc-head">
+        <div class="vat-head-brand">
+          <span class="vat-badge" aria-hidden="true">Clinical protocol</span>
+          <h2 id="vatProtocolTitle" class="vat-head-title">VAT · visceral adiposity</h2>
+          <p class="vat-head-sub">Structured eating pattern, phased energy intake, mechanism-tiered food lists (general + African spotlight), biomarkers, and safety screens — aligned with NutriForge evidence grades. Not individual medical advice.</p>
+        </div>
         <button type="button" class="drawer-close" onclick="closeVatProtocol()" aria-label="Close">&#10005;</button>
       </div>
       <div class="nf-doc-body" id="vatProtocolBody">
-        <p><strong>Visceral adiposity toolkit</strong> — structured eating window, phased energy intake, mechanism-tiered food lists (general + African spotlight), biomarker anchors, and safety screens. Aligned with NutriForge evidence language; it does <strong>not</strong> replace individual medical advice.</p>
+        <p class="drawer-tools-note" style="margin-top:0">Bookmark this panel: append <code>#vat</code> to the app URL (e.g. share <code>…/index.html#vat</code>). Full PDF outline requires unlock below.</p>
         <p>For how we grade foods in-app, see <button type="button" class="ca-btn" onclick="closeVatProtocol();openMethodology()" style="display:inline-flex;vertical-align:middle">Methodology &amp; trust</button>.</p>
+        <p class="vat-section-kicker">In this panel</p>
         <h3>Contents</h3>
         <ol class="vat-toc">
           <li><a href="#vat-sec-1">Daily protocol summary</a></li>
@@ -932,17 +968,20 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <p>Lists, cost thinking, portion visuals, and restaurant tactics.</p>
         <h3 id="vat-sec-11">Safety &amp; contraindications</h3>
         <p><strong>Read this in the PDF before starting.</strong> Pregnancy, diabetes medications/insulin, anticoagulants, renal disease, history of eating disorders, and acute illness change whether phased deficits, fasting, or supplement suggestions are appropriate.</p>
-        <h3>Full document access</h3>
-        <p class="drawer-tools-note">The printable PDF and expanded HTML outline are gated with a passphrase set by the deployment owner (not stored in the app). After unlocking, your browser receives an HttpOnly cookie for about seven days.</p>
+        <div class="vat-doc-split">
+          <h3>Full documents (PDF &amp; web outline)</h3>
+          <p class="drawer-tools-note">These open in a new tab after unlock. Passphrase comes from your team or deployment settings — it is never stored in the app. Your browser then keeps an HttpOnly cookie for about seven days.</p>
+          <p class="drawer-tools-note" style="margin-top:6px">If unlock fails on a plain file server, use the hosted app (<code>vercel dev</code> or production) so <code>/api/protocol-session</code> runs.</p>
+        </div>
         <div class="vat-unlock-row">
           <label for="vatProtocolPassphrase" class="sr-only">Passphrase</label>
-          <input type="password" id="vatProtocolPassphrase" autocomplete="current-password" placeholder="Passphrase" aria-label="Protocol passphrase">
-          <button type="button" class="ca-btn" onclick="unlockVatProtocol()">Unlock access</button>
+          <input type="password" id="vatProtocolPassphrase" autocomplete="current-password" placeholder="Enter passphrase" aria-label="Protocol passphrase">
+          <button type="button" class="ca-btn" onclick="unlockVatProtocol()">Unlock &amp; enable tabs</button>
         </div>
         <div id="vatProtocolUnlockErr" class="vat-unlock-msg" role="status" aria-live="polite"></div>
         <div class="vat-protocol-actions">
-          <button type="button" class="ca-btn" onclick="openVatPdf()">Open PDF</button>
-          <button type="button" class="ca-btn" onclick="openVatGuide()">Open web outline</button>
+          <button type="button" class="ca-btn" onclick="openVatPdf()">Open full PDF</button>
+          <button type="button" class="ca-btn" onclick="openVatGuide()">Open gated web outline</button>
         </div>
       </div>
     </div>
@@ -1001,7 +1040,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         Data: USDA FoodData Central, WHO, peer-reviewed literature.<br>
         <button type="button" onclick="openT2dmClinicalGuide()" style="margin-top:8px;font-size:11px;font-weight:600;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);cursor:pointer;margin-right:6px">Open diabetes clinical field guide</button>
         <button type="button" onclick="openMethodology()" style="margin-top:8px;font-size:11px;font-weight:600;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);cursor:pointer">Methodology &amp; trust</button>
-        <button type="button" onclick="openVatProtocol()" style="margin-top:8px;font-size:11px;font-weight:600;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);cursor:pointer;margin-left:6px">VAT protocol</button>
+        <button type="button" onclick="openVatProtocol()" style="margin-top:8px;font-size:11px;font-weight:600;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);cursor:pointer;margin-left:6px">VAT hub</button>
       </div>
     </div>
     <div style="opacity:.35;font-size:9px;white-space:nowrap">v6.1 · 2026</div>
@@ -1835,39 +1874,47 @@ function openT2dmGuideNewTab(){
   window.open('t2dm-clinical-field-guide.html'+hash,'_blank','noopener');
 }
 
-/** Deep links: #condition=t2d or #cond=t2d, optional &food=123 */
+/** Deep links: #condition=t2d or #cond=t2d, optional &food=123, #vat or &vat=1 opens VAT hub */
 function applyStateFromURL(){
   var raw = (location.hash||'').replace(/^#/,'');
-  if(!raw) return;
-  var params;
-  try{ params = new URLSearchParams(raw); }catch(e){ return; }
-  var cond = (params.get('condition') || params.get('cond') || '').trim();
-  if(cond){
-    var ok = CONDITIONS.some(function(c){ return c.id === cond; });
-    if(ok){
-      activeCondition = cond;
-      document.querySelectorAll('.cond-pill').forEach(function(p){
-        var v = p.getAttribute('data-cond');
-        if(v === null || v === undefined) v = '';
-        p.classList.toggle('active', v === cond);
-      });
-      updateCondDropdownLabel();
-      updateContextBadge();
-      closeCondDropdown();
+  var openVatLater = raw === 'vat';
+  var params = null;
+  if(raw){
+    try{ params = new URLSearchParams(raw); }catch(e){ params = null; }
+    if(params && params.get('vat') === '1') openVatLater = true;
+  }
+  if(params){
+    var cond = (params.get('condition') || params.get('cond') || '').trim();
+    if(cond){
+      var ok = CONDITIONS.some(function(c){ return c.id === cond; });
+      if(ok){
+        activeCondition = cond;
+        document.querySelectorAll('.cond-pill').forEach(function(p){
+          var v = p.getAttribute('data-cond');
+          if(v === null || v === undefined) v = '';
+          p.classList.toggle('active', v === cond);
+        });
+        updateCondDropdownLabel();
+        updateContextBadge();
+        closeCondDropdown();
+      }
+    }
+    var foodId = params.get('food');
+    if(foodId){
+      var id = parseInt(foodId, 10);
+      if(!isNaN(id) && foods.some(function(f){ return f.id === id; })){
+        setTimeout(function(){
+          var el = document.getElementById('c'+id);
+          if(el){
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if(!el.classList.contains('open')) el.click();
+          }
+        }, 300);
+      }
     }
   }
-  var foodId = params.get('food');
-  if(foodId){
-    var id = parseInt(foodId, 10);
-    if(!isNaN(id) && foods.some(function(f){ return f.id === id; })){
-      setTimeout(function(){
-        var el = document.getElementById('c'+id);
-        if(el){
-          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          if(!el.classList.contains('open')) el.click();
-        }
-      }, 300);
-    }
+  if(openVatLater){
+    setTimeout(function(){ openVatProtocol(); }, 480);
   }
 }
 function syncUrlHash(){
@@ -1910,6 +1957,7 @@ function buildAIDrawer(){
     '<button class="ai-sug" onclick="aiAsk(\'Best longevity foods with RCT evidence?\')">Longevity</button>' +
     '<button class="ai-sug" onclick="aiAsk(\'Best anti-inflammatory foods?\')">Anti-inflammatory</button>' +
     '<button class="ai-sug" onclick="closeDrawer();openT2dmClinicalGuide()">T2DM field guide</button>' +
+    '<button class="ai-sug" onclick="closeDrawer();openVatProtocol()">VAT visceral-fat protocol</button>' +
   '</div>' +
   '<div class="ai-messages" id="aiMessages"><div class="ai-msg bot"><div class="ai-avatar">&#127807;</div><div class="ai-bubble">Hello! Ask me about any food, condition, drug interaction, or African nutrition topic.</div></div></div>' +
   '<div class="ai-input-row"><textarea class="ai-input" id="aiInput" placeholder="Ask about foods, conditions..." rows="2"></textarea><button class="ai-send" onclick="sendAI()">Send</button></div>';
@@ -2355,6 +2403,15 @@ function closeMethodology(){
 
 function openVatProtocol(){
   closeDrawer();
+  if(typeof closeT2dmClinicalGuide==='function'){ try{ closeT2dmClinicalGuide(); }catch(e){} }
+  closeMethodology();
+  (function(){
+    var cs = document.getElementById('communityStartOverlay');
+    if(cs && cs.classList.contains('open')){
+      cs.classList.remove('open');
+      cs.setAttribute('aria-hidden','true');
+    }
+  })();
   var o = document.getElementById('vatProtocolOverlay');
   if(!o) return;
   o.classList.add('open');
@@ -2362,6 +2419,7 @@ function openVatProtocol(){
   document.body.style.overflow = 'hidden';
   var err = document.getElementById('vatProtocolUnlockErr');
   if(err){ err.textContent = ''; err.style.color = ''; }
+  try{ document.getElementById('vatProtocolBody') && document.getElementById('vatProtocolBody').scrollTo(0,0); }catch(e){}
 }
 function closeVatProtocol(){
   var o = document.getElementById('vatProtocolOverlay');
@@ -2584,10 +2642,14 @@ function updateContextBadge(){
     var protocolBtn = activeCondition==='t2d'
       ? ' <button type="button" class="ctx-protocol-btn" onclick="openT2dmClinicalGuide(\'view=principles&state=all\')">Clinical field guide</button>'
       : '';
+    var vatHubCond = { obesity:1, dyslip:1, pcos:1, liver:1, t2d:1, longevity:1, cvd:1, htn:1 };
+    var vatHubBtn = activeCondition && vatHubCond[activeCondition]
+      ? ' <button type="button" class="ctx-vat-btn" onclick="openVatProtocol()">VAT hub</button>'
+      : '';
     var showingBlock = parts.length
       ? '<strong>Showing:</strong> ' + safeHtml(parts.join(' · ')) + '  <button onclick="clearAll()">Clear all</button>'
       : '';
-    badge.innerHTML = sessionHtml + showingBlock + protocolBtn;
+    badge.innerHTML = sessionHtml + showingBlock + protocolBtn + vatHubBtn;
     badge.style.display = 'flex';
   } else {
     badge.style.display = 'none';
