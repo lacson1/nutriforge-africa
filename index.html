@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="description" content="NutriForge Africa v6.1 — Evidence-based foods & African dishes, Nigeria spotlight filter, daily diary, goals, client profiles, drug–food checker, meal templates, offline-ready PWA.">
+<meta name="description" content="NutriForge v6.1 — Evidence-based foods & African dishes, Nigeria spotlight filter, daily diary, goals, client profiles, drug–food checker, meal templates, offline-ready PWA.">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0f2a30">
-<title>NutriForge Africa · v6.1 · 390 Foods</title>
+<title>NutriForge · v6.1 · 390 Foods</title>
 <link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,7 +53,7 @@ input,select,textarea{font-family:inherit}
 /* ── HEADER — unified bar ── */
 .header{background:linear-gradient(165deg,#164a52 0%,#103842 38%,#0c2830 72%,#081c22 100%);color:var(--header-fg);padding:env(safe-area-inset-top,0) max(1.5rem,env(safe-area-inset-right)) 0 max(1.5rem,env(safe-area-inset-left));min-height:calc(52px + env(safe-area-inset-top,0));position:sticky;top:0;z-index:200;display:flex;align-items:center;gap:12px;box-sizing:border-box;border-bottom:1px solid var(--header-gold);box-shadow:0 1px 0 var(--header-gold-soft),inset 0 1px 0 rgba(255,255,255,.06)}
 .header h1{font-size:16px;font-weight:700;letter-spacing:-.2px;white-space:nowrap;flex-shrink:0;color:var(--header-fg)}
-.brand-africa{font-weight:600;letter-spacing:-.02em;background:linear-gradient(118deg,#fff8e7 0%,#e8c76b 28%,#c9a227 52%,#2dd4bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand-mark{font-weight:600;letter-spacing:-.02em;background:linear-gradient(118deg,#fff8e7 0%,#e8c76b 28%,#c9a227 52%,#2dd4bf 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .header .search-wrap{flex:1;max-width:420px;position:relative}
 .header .search-wrap input{width:100%;font-size:13px;padding:7px 10px 7px 30px;border:1px solid rgba(255,255,255,.12);border-radius:8px;background:rgba(0,0,0,.18);color:var(--header-fg);outline:none;transition:all .15s}
 .header .search-wrap input::placeholder{color:rgba(244,240,230,.42)}
@@ -677,7 +677,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <body>
 
 <div class="header">
-  <h1>NutriForge <span class="brand-africa" lang="en">Africa</span></h1>
+  <h1><span class="brand-mark" lang="en">NutriForge</span></h1>
   <div class="search-wrap">
     <span class="search-icon">&#x1F50D;</span>
     <input type="text" id="srch" placeholder="Search foods, herbs, costs (e.g. budget)…  Ctrl+K" aria-label="Search foods" autocomplete="off" autocapitalize="off" spellcheck="false">
@@ -994,7 +994,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <footer class="nf-footer" style="background:var(--header-bg);color:var(--header-fg);padding:20px max(24px,env(safe-area-inset-right)) 20px max(24px,env(safe-area-inset-left));margin-top:2rem;font-size:11px">
   <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
     <div>
-      <div style="font-size:14px;font-weight:700;margin-bottom:3px">NutriForge <span class="brand-africa">Africa</span></div>
+      <div style="font-size:14px;font-weight:700;margin-bottom:3px"><span class="brand-mark">NutriForge</span></div>
       <div style="opacity:.5;line-height:1.6;font-size:10px">
         Evidence-based nutrition for Africa and the African diaspora.<br>
         390 foods · dishes filter · Nigeria spotlight · diary &amp; goals · client profiles · drug–food checker · meal templates · offline PWA · AI assistant<br>
@@ -2816,7 +2816,7 @@ function shareFood(id){
   var f=foods.filter(function(x){return x.id===id})[0];
   if(!f)return;
   var deep=(location.href.split('#')[0])+'#food='+id;
-  var text=f.emoji+' '+f.name+' | '+f.kcal+'kcal | '+f.protein+'g protein | Longevity: '+f.longevity+'/100 | NutriForge Africa\n'+deep;
+  var text=f.emoji+' '+f.name+' | '+f.kcal+'kcal | '+f.protein+'g protein | Longevity: '+f.longevity+'/100 | NutriForge\n'+deep;
   if(navigator.clipboard)navigator.clipboard.writeText(text);
   else prompt('Copy:',text);
 }
@@ -2857,7 +2857,7 @@ function aiAsk(q){
   else if(filter==='favourites') browseHint=' The user\'s visible food list is filtered to saved items only.';
   var aiPayload={
     max_tokens:1000,
-    system:'You are a clinical nutrition AI in NutriForge Africa — an evidence-based food database with '+foods.length+' foods ('+foods.filter(function(f){return f.african}).length+' African, '+foods.filter(function(f){return f.nigeria}).length+' Nigeria spotlight). Evidence grades: High=RCT/meta-analysis, Moderate=cohort, Low=mechanistic/traditional. User context: practising GP, liberal low-carb (~1750 kcal, ~140g protein), 16:8 IF, longevity-focused.'+condLine+profileLine+browseHint+' Answer concisely (max 200 words). Representative foods from the user\'s current filter: '+ctx,
+    system:'You are a clinical nutrition AI in NutriForge — an evidence-based food database with '+foods.length+' foods ('+foods.filter(function(f){return f.african}).length+' African, '+foods.filter(function(f){return f.nigeria}).length+' Nigeria spotlight). Evidence grades: High=RCT/meta-analysis, Moderate=cohort, Low=mechanistic/traditional. User context: practising GP, liberal low-carb (~1750 kcal, ~140g protein), 16:8 IF, longevity-focused.'+condLine+profileLine+browseHint+' Answer concisely (max 200 words). Representative foods from the user\'s current filter: '+ctx,
     messages:[{role:'user',content:q}]
   };
   fetch('/api/chat',{

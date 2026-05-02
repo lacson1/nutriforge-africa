@@ -1,4 +1,4 @@
-/* NutriForge Africa — pure meal/diary macro aggregation (no DOM). */
+/* NutriForge — pure meal/diary macro aggregation (no DOM). */
 var NFMealsCore = {
   computeMealTotals: function (parts, foodsById) {
     var o = { kcal: 0, protein: 0, carbs: 0, fat: 0, fiber: 0 };

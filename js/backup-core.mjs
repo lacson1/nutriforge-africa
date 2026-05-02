@@ -1,4 +1,4 @@
-/** Keys owned by NutriForge Africa client state (localStorage). Keep in sync with index.html usage. */
+/** Keys owned by NutriForge client state (localStorage). Keep in sync with index.html usage. */
 export const NF_BACKUP_SCHEMA = 'nutriforge-backup';
 export const NF_BACKUP_VERSION = 1;
 

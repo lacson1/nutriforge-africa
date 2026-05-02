@@ -12,7 +12,7 @@ const PAGE = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VAT protocol · NutriForge Africa</title>
+  <title>VAT protocol · NutriForge</title>
   <style>
     body{font-family:system-ui,sans-serif;max-width:42rem;margin:0 auto;padding:1.25rem;line-height:1.55;color:#1a1a17;background:#faf9f6}
     h1{font-size:1.25rem;margin:0 0 .5rem}
@@ -28,7 +28,7 @@ const PAGE = `<!DOCTYPE html>
 </head>
 <body>
   <h1>Visceral fat loss protocol</h1>
-  <p class="lead">Evidence-oriented outline aligned with NutriForge Africa food grading. This page is access-controlled; it is not medical advice.</p>
+  <p class="lead">Evidence-oriented outline aligned with NutriForge food grading. This page is access-controlled; it is not medical advice.</p>
   <div class="banner"><strong>Safety:</strong> Review contraindications, medications, pregnancy, diabetes meds/insulin, renal disease, and eating-disorder history with your clinician before applying phased deficits or supplements.</div>
   <a class="pdf" href="/protocol/vat-protocol.pdf">Open full PDF</a>
 
@@ -46,7 +46,7 @@ const PAGE = `<!DOCTYPE html>
   <section id="s19"><h2>19. Portion guide</h2><p>Portion language mapped to practical cooking.</p></section>
   <section id="s20"><h2>20. Safety &amp; contraindications</h2><p>Must-read section in the PDF — do not skip.</p></section>
 
-  <p style="margin-top:1.5rem;font-size:.8rem;color:#888"><a href="/index.html">← Back to NutriForge Africa</a></p>
+  <p style="margin-top:1.5rem;font-size:.8rem;color:#888"><a href="/index.html">← Back to NutriForge</a></p>
 </body>
 </html>`;
 

@@ -69,7 +69,7 @@
           try { window.parent.postMessage({ type: 'nutriforge', action: 'from-t2dm-guide', condition: 't2d' }, '*'); } catch (e) {}
         });
       } else {
-        span.innerHTML = 'This guide is a companion to <strong>NutriForge Africa</strong> — open the main app for the full 390-food database (GI, macros, drug flags, Nigeria spotlight).';
+        span.innerHTML = 'This guide is a companion to <strong>NutriForge</strong> — open the main app for the full 390-food database (GI, macros, drug flags, Nigeria spotlight).';
         btn.textContent = 'Open NutriForge';
         btn.addEventListener('click', function(){ window.location.href = 'index.html#condition=t2d'; });
       }
@@ -2352,7 +2352,7 @@ function Header({
           </div>
           <div className="leading-tight">
             <div className="eyebrow" style={{ color: palette.textMuted }}>
-              NutriForge Africa · Diabetes
+              NutriForge · Diabetes
             </div>
             <div
               className="display"
@@ -2395,7 +2395,7 @@ function Header({
           title={
             typeof window !== "undefined" && window.parent !== window
               ? "Return to NutriForge (closes this panel)"
-              : "Open NutriForge Africa with diabetes filter"
+              : "Open NutriForge with diabetes filter"
           }
         >
           <ChevronLeft size={14} aria-hidden />

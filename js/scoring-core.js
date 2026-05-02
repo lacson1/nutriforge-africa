@@ -1,4 +1,4 @@
-/* NutriForge Africa — drug severity heuristic, longevity score, evidence stars. */
+/* NutriForge — drug severity heuristic, longevity score, evidence stars. */
 function classifyDrug(limits) {
   var l = (limits || '').toLowerCase();
   if (l.indexOf('critical') > -1 || l.indexOf('ricin') > -1 || l.indexOf('fatal') > -1 ||

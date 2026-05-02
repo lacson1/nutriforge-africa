@@ -1,4 +1,4 @@
-/* NutriForge Africa — food search (multi-word AND, affordability synonyms, light fuzzy). */
+/* NutriForge — food search (multi-word AND, affordability synonyms, light fuzzy). */
 var AFFORD_SYNONYM_GROUPS = [
   ['cheap', 'economical', 'inexpensive', 'affordable', 'budget', 'low-cost', 'low cost', 'economic', 'food security', 'accessible', 'widely available', 'staple'],
   ['expensive', 'costly', 'premium', 'imported', 'hard to source', 'very expensive', 'higher cost'],

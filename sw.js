@@ -1,5 +1,5 @@
-/* NutriForge Africa — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-v6-10';
+/* NutriForge — offline shell for static assets (same-origin only). */
+var CACHE_NAME = 'nutriforge-v6-11';
 var PRECACHE = [
   './index.html',
   './landing.html',
