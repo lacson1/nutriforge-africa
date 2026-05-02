@@ -1191,6 +1191,39 @@ const PATIENT_STATES = [
   },
 ];
 
+const PATIENT_STATE_ALIASES = {
+  all: "all",
+  general: "all",
+  prev: "prevention",
+  prevention: "prevention",
+  mgmt: "management",
+  management: "management",
+  rem: "remission",
+  remission: "remission",
+  ins: "insulin",
+  insulin: "insulin",
+  su: "insulin",
+};
+
+const PATIENT_STATE_TO_SHORT = {
+  all: "all",
+  prevention: "prev",
+  management: "mgmt",
+  remission: "rem",
+  insulin: "ins",
+};
+
+function normalizePatientState(value) {
+  const key = String(value || "").trim().toLowerCase();
+  if (!key) return "all";
+  return PATIENT_STATE_ALIASES[key] || (PATIENT_STATES.some((s) => s.id === key) ? key : "all");
+}
+
+function encodePatientState(value) {
+  const normalized = normalizePatientState(value);
+  return PATIENT_STATE_TO_SHORT[normalized] || "all";
+}
+
 const STATE_OVERRIDES = {
   "bitter-leaf": {
     insulin:   { label: "CAUTION", note: "Strong hypoglycaemic effect. Avoid concentrated preparations. Monitor BGL if adding to diet. Reduce sulphonylurea dose if regular intake." },
@@ -3260,10 +3293,8 @@ function T2DMFoodGuideV3() {
       if (!hash) return;
       const raw = hash.replace(/^#/, "");
       const params = new URLSearchParams(raw);
-      const stateParam = params.get("state");
-      if (stateParam && PATIENT_STATES.some((s) => s.id === stateParam)) {
-        setPatientState(stateParam);
-      }
+      const stateParam = params.get("state") || params.get("patient");
+      setPatientState(normalizePatientState(stateParam));
       const mealParam = params.get("meal");
       if (mealParam) {
         const parts = mealParam.split(",").filter(Boolean);
@@ -3292,7 +3323,7 @@ function T2DMFoodGuideV3() {
       if (mealItems.length) {
         parts.push("meal=" + mealItems.map((m) => `${m.food.id}:${m.servings}`).join(","));
       }
-      if (patientState !== "all") parts.push("state=" + patientState);
+      if (patientState !== "all") parts.push("state=" + encodePatientState(patientState));
       if (theme !== "light") parts.push("theme=" + theme);
       if (view !== "foods") parts.push("view=" + view);
       const next = parts.length ? "#" + parts.join("&") : "";
