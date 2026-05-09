@@ -450,6 +450,25 @@ body.dark-mode .exp-db-bridge{background:rgba(29,92,58,.25);border-color:#4ADE80
 .meal-focus-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 12px}
 .meal-focus-chip{font-size:10px;font-weight:600;padding:5px 10px;border-radius:999px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-secondary);cursor:pointer}
 .meal-focus-chip.active{background:var(--text-primary);color:var(--card-bg);border-color:var(--text-primary)}
+.meal-type-row{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 4px;padding-bottom:8px;border-bottom:1px solid var(--card-border)}
+.meal-type-chip{font-size:10px;font-weight:600;padding:5px 10px;border-radius:6px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-secondary);cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+.meal-type-chip.active{background:var(--accent-green);color:#fff;border-color:var(--accent-green)}
+.meal-type-chip .meal-chip-count{font-size:9px;font-weight:700;padding:1px 5px;border-radius:10px;background:var(--surface);color:var(--text-tertiary);font-variant-numeric:tabular-nums}
+.meal-type-chip.active .meal-chip-count{background:rgba(255,255,255,.22);color:#fff}
+.meal-type-badge{display:inline-block;font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 6px;border-radius:4px;background:var(--surface);color:var(--text-tertiary);margin-right:6px;vertical-align:middle;border:1px solid var(--card-border)}
+.meal-tpl-glucose{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:600;padding:5px 10px;border-radius:999px;background:color-mix(in srgb,var(--gv,#15803D) 12%,transparent);color:var(--gv,#15803D);border:1px solid color-mix(in srgb,var(--gv,#15803D) 30%,transparent);margin-bottom:6px}
+.meal-tpl-glucose .mtg-peak{font-variant-numeric:tabular-nums}
+.meal-tpl-glucose .mtg-peak small{font-size:8px;font-weight:500;opacity:.75;margin-left:1px}
+.meal-tpl-glucose .mtg-sep{opacity:.45}
+.meal-tpl-glucose .mtg-gl{font-variant-numeric:tabular-nums}
+.meal-tpl-glucose .mtg-verdict{font-weight:700}
+.meal-tpl-actions{display:flex;gap:6px;flex-wrap:wrap}
+.meal-tpl-actions .ca-btn{flex:1;min-width:140px;justify-content:center;text-align:center}
+.ca-btn.meal-tpl-primary{background:var(--accent-green);color:#fff;border-color:var(--accent-green)}
+.ca-btn.meal-tpl-primary:hover{filter:brightness(1.05)}
+@supports not (background:color-mix(in srgb,red,blue)){
+  .meal-tpl-glucose{background:rgba(21,128,61,0.10);border-color:rgba(21,128,61,0.30)}
+}
 .nf-doc-panel.community-start-panel{max-width:600px}
 .nf-doc-panel.vat-protocol-panel{max-width:680px}
 .vat-unlock-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}
@@ -1821,16 +1840,21 @@ foods.forEach(function(f){ foodsById[f.id] = f; });
 })();
 
 var MEAL_TEMPLATES = [
-  { id:'mt1', name:'Jollof + grilled chicken + pepper', emoji:'🍽️', region:'West Africa', timeLabel:'~40 min active', budget:'medium', focus:['family','weight','heart'], notes:'Typical plate: jollof rice, skinless chicken, sweet pepper. Oil in the pot drives calories — lighter oil keeps it closer to these numbers.', parts:[{id:170,g:280},{id:94,g:120},{id:15,g:70}] },
-  { id:'mt2', name:'Egusi soup + fufu', emoji:'🥣', region:'West / Central Africa', timeLabel:'45 min · freezes well', budget:'low', focus:['family'], notes:'Melon-seed soup with fermented cassava swallow. Palm oil and stock cubes vary by cook — adjust if your clinician limits fat or salt.', parts:[{id:171,g:320},{id:287,g:180}] },
-  { id:'mt3', name:'Injera + lentil wat', emoji:'🫓', region:'Horn of Africa', timeLabel:'50+ min · batter ahead', budget:'low', focus:['heart','t2d'], notes:'Fermented teff flatbread with spiced lentils. Injera timing is skilled — treat times as orientation.', parts:[{id:288,g:220},{id:34,g:200}] },
-  { id:'mt4', name:'Maize stiff porridge + tilapia + greens', emoji:'🍲', region:'East / Southern Africa', timeLabel:'~35 min', budget:'low', focus:['heart','htn','family'], notes:'Nshima/ugali-style maize porridge (polenta proxy), fish, spinach.', parts:[{id:337,g:200},{id:140,g:160},{id:26,g:100}] },
-  { id:'mt5', name:'Cowpeas + brown rice + tomato stew', emoji:'🍛', region:'Pan-African', timeLabel:'30 min · batch friendly', budget:'low', focus:['t2d','weight','heart','htn'], notes:'Budget bowl: soak beans if you have time to ease digestion; tomato adds vitamin C for plant iron.', parts:[{id:37,g:180},{id:72,g:150},{id:22,g:120}] },
-  { id:'mt6', name:'Nigerian breakfast bowl (beans + greens + pepper)', emoji:'🥗', region:'West Africa', timeLabel:'~20 min', budget:'low', focus:['t2d','weight','htn'], notes:'Simple high-fibre breakfast option using beans, leafy greens, and sweet pepper. Add chili separately if tolerated.', parts:[{id:37,g:180},{id:21,g:120},{id:15,g:70}] },
-  { id:'mt7', name:'Lentil + spinach + tomato recovery plate', emoji:'🥬', region:'Pan-African', timeLabel:'~25 min', budget:'low', focus:['t2d','heart','htn','weight'], notes:'Protein-forward and iron-aware plant plate. Tomato and pepper can support non-haem iron absorption.', parts:[{id:34,g:220},{id:26,g:120},{id:22,g:120},{id:15,g:60}] },
-  { id:'mt8', name:'Tilapia + jollof + greens', emoji:'🐟', region:'West / East Africa fusion', timeLabel:'~35 min', budget:'medium', focus:['heart','htn','family'], notes:'Balanced fish-centered lunch template. Use less oil in rice when targeting tighter calorie goals.', parts:[{id:140,g:180},{id:170,g:220},{id:26,g:100}] },
-  { id:'mt9', name:'Sweet potato + chicken + spinach', emoji:'🍠', region:'Pan-African clinic-friendly', timeLabel:'~30 min', budget:'medium', focus:['weight','t2d','family'], notes:'Straightforward plate for satiety and protein target days. Roast or boil sweet potato based on preference.', parts:[{id:12,g:260},{id:94,g:140},{id:26,g:100}] },
-  { id:'mt10', name:'Injera + lentils + greens', emoji:'🌿', region:'Horn of Africa', timeLabel:'~40 min', budget:'low', focus:['heart','t2d','htn'], notes:'A higher-fibre variation of injera and wat with extra greens for volume and micronutrients.', parts:[{id:288,g:200},{id:34,g:180},{id:26,g:120}] }
+  { id:'mt1', name:'Jollof + grilled chicken + pepper', emoji:'🍽️', region:'West Africa', mealType:'lunch', timeLabel:'~40 min active', budget:'medium', focus:['family','weight','heart'], notes:'Typical plate: jollof rice, skinless chicken, sweet pepper. Oil in the pot drives calories — lighter oil keeps it closer to these numbers.', parts:[{id:170,g:280},{id:94,g:120},{id:15,g:70}] },
+  { id:'mt2', name:'Egusi soup + fufu', emoji:'🥣', region:'West / Central Africa', mealType:'lunch', timeLabel:'45 min · freezes well', budget:'low', focus:['family'], notes:'Melon-seed soup with fermented cassava swallow. Palm oil and stock cubes vary by cook — adjust if your clinician limits fat or salt.', parts:[{id:171,g:320},{id:287,g:180}] },
+  { id:'mt3', name:'Injera + lentil wat', emoji:'🫓', region:'Horn of Africa', mealType:'dinner', timeLabel:'50+ min · batter ahead', budget:'low', focus:['heart','t2d'], notes:'Fermented teff flatbread with spiced lentils. Injera timing is skilled — treat times as orientation.', parts:[{id:288,g:220},{id:34,g:200}] },
+  { id:'mt4', name:'Maize stiff porridge + tilapia + greens', emoji:'🍲', region:'East / Southern Africa', mealType:'dinner', timeLabel:'~35 min', budget:'low', focus:['heart','htn','family'], notes:'Nshima/ugali-style maize porridge (polenta proxy), fish, spinach.', parts:[{id:337,g:200},{id:140,g:160},{id:26,g:100}] },
+  { id:'mt5', name:'Cowpeas + brown rice + tomato stew', emoji:'🍛', region:'Pan-African', mealType:'lunch', timeLabel:'30 min · batch friendly', budget:'low', focus:['t2d','weight','heart','htn'], notes:'Budget bowl: soak beans if you have time to ease digestion; tomato adds vitamin C for plant iron.', parts:[{id:37,g:180},{id:72,g:150},{id:22,g:120}] },
+  { id:'mt6', name:'Nigerian breakfast bowl (beans + greens + pepper)', emoji:'🥗', region:'West Africa', mealType:'breakfast', timeLabel:'~20 min', budget:'low', focus:['t2d','weight','htn'], notes:'Simple high-fibre breakfast option using beans, leafy greens, and sweet pepper. Add chili separately if tolerated.', parts:[{id:37,g:180},{id:21,g:120},{id:15,g:70}] },
+  { id:'mt7', name:'Lentil + spinach + tomato recovery plate', emoji:'🥬', region:'Pan-African', mealType:'lunch', timeLabel:'~25 min', budget:'low', focus:['t2d','heart','htn','weight'], notes:'Protein-forward and iron-aware plant plate. Tomato and pepper can support non-haem iron absorption.', parts:[{id:34,g:220},{id:26,g:120},{id:22,g:120},{id:15,g:60}] },
+  { id:'mt8', name:'Tilapia + jollof + greens', emoji:'🐟', region:'West / East Africa fusion', mealType:'lunch', timeLabel:'~35 min', budget:'medium', focus:['heart','htn','family'], notes:'Balanced fish-centered lunch template. Use less oil in rice when targeting tighter calorie goals.', parts:[{id:140,g:180},{id:170,g:220},{id:26,g:100}] },
+  { id:'mt9', name:'Sweet potato + chicken + spinach', emoji:'🍠', region:'Pan-African clinic-friendly', mealType:'dinner', timeLabel:'~30 min', budget:'medium', focus:['weight','t2d','family'], notes:'Straightforward plate for satiety and protein target days. Roast or boil sweet potato based on preference.', parts:[{id:12,g:260},{id:94,g:140},{id:26,g:100}] },
+  { id:'mt10', name:'Injera + lentils + greens', emoji:'🌿', region:'Horn of Africa', mealType:'dinner', timeLabel:'~40 min', budget:'low', focus:['heart','t2d','htn'], notes:'A higher-fibre variation of injera and wat with extra greens for volume and micronutrients.', parts:[{id:288,g:200},{id:34,g:180},{id:26,g:120}] },
+  { id:'mt11', name:'Oats + Greek yogurt + blueberries + walnuts', emoji:'🥣', region:'Cosmopolitan', mealType:'breakfast', timeLabel:'~5 min', budget:'medium', focus:['t2d','heart','weight'], notes:'Beta-glucan oats, probiotic yogurt, anthocyanin-rich berries, ALA from walnuts. The fibre + fat combination flattens the curve nicely.', parts:[{id:66,g:50},{id:74,g:150},{id:54,g:80},{id:42,g:15}] },
+  { id:'mt12', name:'Eggs + avocado + boiled plantain', emoji:'🍳', region:'West / Central Africa', mealType:'breakfast', timeLabel:'~15 min', budget:'medium', focus:['weight','heart','family'], notes:'Choline + complete protein from eggs, MUFA from avocado, slow carbs from boiled (not fried) plantain. Pick unripe plantain for lower GI.', parts:[{id:75,g:120},{id:56,g:80},{id:102,g:150}] },
+  { id:'mt13', name:'Greek yogurt + chia + strawberries', emoji:'🫐', region:'Cosmopolitan', mealType:'snack', timeLabel:'2 min · soak chia 10 min', budget:'medium', focus:['t2d','weight','heart'], notes:'High-protein, gel-forming chia fibre, fisetin from strawberries. Quick clinic-friendly snack with negligible glycaemic impact.', parts:[{id:74,g:170},{id:45,g:15},{id:58,g:80}] },
+  { id:'mt14', name:'Sardines + quinoa + spinach', emoji:'🐟', region:'Cosmopolitan', mealType:'lunch', timeLabel:'~20 min · uses tinned fish', budget:'low', focus:['heart','t2d','htn','weight'], notes:'Budget omega-3, complete-protein quinoa, leafy greens for folate and nitrates. Rinse sardines if salt-restricted.', parts:[{id:2,g:120},{id:73,g:120},{id:26,g:100}] },
+  { id:'mt15', name:'Tuna + brown rice + tomato + avocado', emoji:'🥑', region:'Cosmopolitan', mealType:'lunch', timeLabel:'~15 min · post-workout', budget:'medium', focus:['weight','heart','t2d'], notes:'Post-workout plate: lean protein, slow carbs, MUFA, lycopene. Use canned light skipjack tuna for the lowest mercury option.', parts:[{id:8,g:120},{id:72,g:140},{id:22,g:100},{id:56,g:60}] }
 ];
 
 var MEAL_TEMPLATE_FOCUS_LABELS = {
@@ -1840,6 +1864,13 @@ var MEAL_TEMPLATE_FOCUS_LABELS = {
   weight: 'Weight',
   heart: 'Heart',
   family: 'Family meals'
+};
+var MEAL_TEMPLATE_TYPE_LABELS = {
+  all: 'Any time',
+  breakfast: 'Breakfast',
+  lunch: 'Lunch',
+  dinner: 'Dinner',
+  snack: 'Snack'
 };
 
 function computeMealTotals(parts){
@@ -1865,6 +1896,7 @@ var activeDrawer = null;
 var darkMode = false;
 var currentView = 'grid';
 var activeMealTemplateFocus = 'all';
+var activeMealTemplateType = 'all';
 var diaryDate = todayISO();
 var diaryGoals = { kcal:2000, protein:120, fiber:35 };
 var diaryByDate = {};
@@ -2259,7 +2291,8 @@ function buildDiaryDrawer(){
     '<div class="exp-section-label" style="margin-top:8px">Logged items</div><div id="diaryEntriesList"></div>';
 }
 function buildMealsDrawer(){
-  return '<p class="drawer-tools-note">Composite plates from database foods (typical portions). Tags show <strong>time</strong> and <strong>budget</strong> cues for home cooking — recipes still vary (oil, stock cubes). Tap <strong>Log all</strong> to add every line to your diary for the selected day.</p>' +
+  return '<p class="drawer-tools-note">Composite plates from database foods (typical portions). Each card shows the predicted <strong>postprandial peak</strong> based on its glycaemic load + fibre. <strong>Try on plate</strong> loads it into My Plate so you can tweak portions and watch the curve; <strong>Log all</strong> sends every line into the diary for the selected day.</p>' +
+    '<div class="meal-type-row" id="mealTemplateTypeRow"></div>' +
     '<div class="meal-focus-row" id="mealTemplateFocusRow"></div>' +
     '<div id="mealTemplatesList"></div>';
 }
@@ -2450,35 +2483,105 @@ function refreshDiaryView(){
   }).join('');
 }
 
+function computeTemplateGlucose(parts){
+  var totalGL=0,fibreLoad=0,giSum=0,giCarbWeight=0,avoidBoost=0;
+  parts.forEach(function(p){
+    var f=foodsById[p.id]; if(!f) return;
+    var m=p.g/100;
+    var carbs=(f.carbs||0)*m;
+    var fiber=(f.fiber||0)*m;
+    var giNum=plateGlucoseGiNum(f.gi);
+    var availableCarbs=Math.max(0,carbs-fiber);
+    totalGL+=giNum*availableCarbs/100;
+    if(carbs>0){giSum+=giNum*carbs;giCarbWeight+=carbs;}
+    fibreLoad+=Math.min(fiber/5,2.5);
+    if(f.gi==='High'&&f.evidence!=='High') avoidBoost+=0.3;
+  });
+  var stats={
+    totalGL:Math.round(totalGL),
+    avgGI:giCarbWeight>0?Math.round(giSum/giCarbWeight):null,
+    fibreLoad:Math.round(fibreLoad*10)/10,
+    avoidBoost:avoidBoost,
+    count:parts.length
+  };
+  var data=plateGlucoseCurvePoints(stats);
+  var verdict=classifyPlateGlucose(stats);
+  return {stats:stats,peak:data.peak,tPeak:data.tPeak,verdict:verdict};
+}
+function applyMealTemplateToPlate(tplId){
+  var tpl=MEAL_TEMPLATES.filter(function(m){return m.id===tplId;})[0];
+  if(!tpl||!tpl.parts) return;
+  plateMap={};
+  tpl.parts.forEach(function(p){
+    var f=foodsById[p.id]; if(!f) return;
+    plateMap[p.id]=f;
+    portionSizes[p.id]=p.g;
+  });
+  if(typeof savePersistence==='function') try{savePersistence()}catch(e){}
+  if(typeof render==='function') try{render()}catch(e){}
+  openDrawer('plate');
+}
 function renderMealTemplatesIfOpen(){
-  var row = document.getElementById('mealTemplateFocusRow');
-  if(row){
-    var focusKeys = ['all','t2d','htn','weight','heart','family'];
-    row.innerHTML = focusKeys.map(function(k){
-      var lbl = MEAL_TEMPLATE_FOCUS_LABELS[k] || k;
-      var activeCls = k === activeMealTemplateFocus ? ' active' : '';
-      return '<button type="button" class="meal-focus-chip' + activeCls + '" onclick="setMealTemplateFocus(\'' + k + '\')">' + safeHtml(lbl) + '</button>';
+  var typeRow=document.getElementById('mealTemplateTypeRow');
+  if(typeRow){
+    var typeKeys=['all','breakfast','lunch','dinner','snack'];
+    typeRow.innerHTML=typeKeys.map(function(k){
+      var lbl=MEAL_TEMPLATE_TYPE_LABELS[k]||k;
+      var n=k==='all'?MEAL_TEMPLATES.length:MEAL_TEMPLATES.filter(function(m){return m.mealType===k;}).length;
+      var activeCls=k===activeMealTemplateType?' active':'';
+      return '<button type="button" class="meal-type-chip'+activeCls+'" onclick="setMealTemplateType(\''+k+'\')">'+safeHtml(lbl)+' <span class="meal-chip-count">'+n+'</span></button>';
     }).join('');
   }
-  var host = document.getElementById('mealTemplatesList');
-  if(!host) return;
-  var filtered = MEAL_TEMPLATES.filter(function(m){
-    if(activeMealTemplateFocus === 'all') return true;
-    if(!m.focus || !m.focus.length) return false;
-    return m.focus.indexOf(activeMealTemplateFocus) > -1;
-  });
-  host.innerHTML = filtered.map(function(m){
-    var t = computeMealTotals(m.parts);
-    return '<div class="meal-tpl-card"><div class="meal-tpl-head"><span style="font-size:22px">' + m.emoji + '</span><div><div class="meal-tpl-title">' + safeHtml(m.name) + '</div><div class="meal-tpl-meta">' + safeHtml(m.region) + ' · ~' + t.kcal + ' kcal · ' + t.protein + ' g P · ' + t.fiber + ' g fibre</div></div></div>' + mealTemplateTagsHtml(m) + '<p style="font-size:11px;color:var(--text-secondary);margin:0 0 8px">' + safeHtml(m.notes) + '</p><div style="font-size:10px;color:var(--text-tertiary);margin-bottom:6px">' +
-      m.parts.map(function(p){ var ff = foodsById[p.id]; return (ff ? ff.emoji + ' ' + safeHtml(ff.name) : '') + ' ' + p.g + 'g'; }).join(' · ') +
-      '</div><button type="button" class="ca-btn" onclick="logMealTemplate(\'' + m.id + '\')">Log all to diary</button></div>';
-  }).join('');
-  if(!filtered.length){
-    host.innerHTML = '<div class="meal-tpl-card"><div class="meal-tpl-title">No templates in this focus yet.</div><p style="font-size:11px;color:var(--text-secondary);margin:6px 0 0">Switch the filter above to see more templates, or use All templates.</p></div>';
+  var row=document.getElementById('mealTemplateFocusRow');
+  if(row){
+    var focusKeys=['all','t2d','htn','weight','heart','family'];
+    row.innerHTML=focusKeys.map(function(k){
+      var lbl=MEAL_TEMPLATE_FOCUS_LABELS[k]||k;
+      var activeCls=k===activeMealTemplateFocus?' active':'';
+      return '<button type="button" class="meal-focus-chip'+activeCls+'" onclick="setMealTemplateFocus(\''+k+'\')">'+safeHtml(lbl)+'</button>';
+    }).join('');
   }
+  var host=document.getElementById('mealTemplatesList');
+  if(!host) return;
+  var filtered=MEAL_TEMPLATES.filter(function(m){
+    if(activeMealTemplateType!=='all' && m.mealType!==activeMealTemplateType) return false;
+    if(activeMealTemplateFocus==='all') return true;
+    if(!m.focus||!m.focus.length) return false;
+    return m.focus.indexOf(activeMealTemplateFocus)>-1;
+  });
+  if(!filtered.length){
+    host.innerHTML='<div class="meal-tpl-card"><div class="meal-tpl-title">No templates match these filters.</div><p style="font-size:11px;color:var(--text-secondary);margin:6px 0 0">Try a different meal type or switch focus to <strong>All templates</strong>.</p></div>';
+    return;
+  }
+  host.innerHTML=filtered.map(function(m){
+    var t=computeMealTotals(m.parts);
+    var g=computeTemplateGlucose(m.parts);
+    var verdictColor=g.verdict.color;
+    var typeBadge=m.mealType?'<span class="meal-type-badge">'+safeHtml(MEAL_TEMPLATE_TYPE_LABELS[m.mealType]||m.mealType)+'</span>':'';
+    var glucoseChip='<span class="meal-tpl-glucose" style="--gv:'+verdictColor+'"><span class="mtg-peak">Peak '+g.peak.toFixed(1)+' <small>mmol/L</small></span><span class="mtg-sep">·</span><span class="mtg-gl">GL '+g.stats.totalGL+'</span><span class="mtg-sep">·</span><span class="mtg-verdict">'+safeHtml(g.verdict.label)+'</span></span>';
+    return '<div class="meal-tpl-card">'+
+      '<div class="meal-tpl-head"><span style="font-size:22px">'+m.emoji+'</span>'+
+        '<div><div class="meal-tpl-title">'+typeBadge+safeHtml(m.name)+'</div>'+
+        '<div class="meal-tpl-meta">'+safeHtml(m.region)+' · ~'+t.kcal+' kcal · '+t.protein+' g P · '+t.fiber+' g fibre</div></div></div>'+
+      glucoseChip+
+      mealTemplateTagsHtml(m)+
+      '<p style="font-size:11px;color:var(--text-secondary);margin:0 0 8px">'+safeHtml(m.notes)+'</p>'+
+      '<div style="font-size:10px;color:var(--text-tertiary);margin-bottom:8px">'+
+      m.parts.map(function(p){var ff=foodsById[p.id];return (ff?ff.emoji+' '+safeHtml(ff.name):'')+' '+p.g+'g';}).join(' · ')+
+      '</div>'+
+      '<div class="meal-tpl-actions">'+
+        '<button type="button" class="ca-btn meal-tpl-primary" onclick="applyMealTemplateToPlate(\''+m.id+'\')">Try on plate</button>'+
+        '<button type="button" class="ca-btn" onclick="logMealTemplate(\''+m.id+'\')">Log all to diary</button>'+
+      '</div>'+
+    '</div>';
+  }).join('');
 }
 function setMealTemplateFocus(focus){
-  activeMealTemplateFocus = focus || 'all';
+  activeMealTemplateFocus=focus||'all';
+  renderMealTemplatesIfOpen();
+}
+function setMealTemplateType(type){
+  activeMealTemplateType=type||'all';
   renderMealTemplatesIfOpen();
 }
 
