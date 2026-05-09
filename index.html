@@ -633,6 +633,28 @@ body.dark-mode .context-badge .ctx-protocol-btn{background:rgba(29,92,58,.35);co
 .plate-energy-seg.pes-f{background:#D97706}
 .plate-insights{font-size:11px;color:var(--text-secondary);margin:8px 0 4px;padding:10px 12px;background:var(--surface);border-radius:10px;border:1px solid var(--card-border);line-height:1.5}
 .plate-insights-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-tertiary);margin-bottom:6px}
+/* Postprandial glucose sketch (My Plate) */
+.plate-glucose{margin:12px 0 6px;padding:14px;border:1px solid var(--card-border);border-radius:12px;background:var(--surface)}
+.plate-glucose-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;gap:8px}
+.plate-glucose-eyebrow{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--text-tertiary)}
+.plate-glucose-sub{font-size:10px;color:var(--text-tertiary);margin-top:3px;line-height:1.4}
+.plate-glucose-peak{text-align:right;flex-shrink:0}
+.plate-glucose-peak-val{font-family:'Roboto Serif',Georgia,serif;font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1;margin-top:2px;letter-spacing:-.01em}
+.plate-glucose-peak-meta{font-size:9px;color:var(--text-tertiary);margin-top:3px}
+.plate-glucose-svg{margin-bottom:10px;background:var(--card-bg);border-radius:8px;padding:6px 4px}
+.plate-glucose-svg svg{display:block;width:100%;height:auto}
+.plate-glucose-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding-top:10px;border-top:1px solid var(--card-border)}
+.pgs-cell{min-width:0}
+.pgs-lbl{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text-tertiary);margin-bottom:4px;white-space:nowrap}
+.pgs-val{font-family:'Roboto Serif',Georgia,serif;font-size:18px;font-weight:500;color:var(--text-primary);font-variant-numeric:tabular-nums;line-height:1.1}
+.pgs-verdict-val{font-size:13px;font-weight:600;line-height:1.2;font-family:'Roboto',system-ui,sans-serif}
+.plate-glucose-note{margin-top:10px;font-size:11px;line-height:1.55;color:var(--text-secondary);font-style:italic}
+@media(max-width:600px){
+  .plate-glucose-stats{grid-template-columns:repeat(2,1fr);gap:10px}
+  .plate-glucose-peak-val{font-size:18px}
+  .plate-glucose{padding:12px}
+}
+body.dark-mode .plate-glucose-svg{background:var(--surface-2)}
 .plate-saved-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:8px}
 .plate-saved-row input[type="text"]{flex:1;min-width:120px;font-size:12px;padding:6px 8px;border-radius:8px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-primary)}
 .plate-saved-row select{flex:1;min-width:140px;font-size:12px;padding:6px 8px;border-radius:8px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-primary)}
@@ -2178,6 +2200,20 @@ function buildPlateDrawer(){
     '<div class="plate-items" id="plateItems">' +
     '<div class="plate-empty" id="plateEmptyHint"><div class="plate-empty-title">No foods yet</div>Tap + on a card (expand on mobile if needed).</div></div>' +
     '<div class="plate-macros"><div class="pm-box"><span class="pm-label">Calories</span><span class="pm-val" id="pm-kcal">0</span><span class="pm-unit">kcal</span></div><div class="pm-box"><span class="pm-label">Protein</span><span class="pm-val" id="pm-p">0</span><span class="pm-unit">g</span></div><div class="pm-box"><span class="pm-label">Carbs</span><span class="pm-val" id="pm-c">0</span><span class="pm-unit">g</span></div><div class="pm-box"><span class="pm-label">Fat</span><span class="pm-val" id="pm-f">0</span><span class="pm-unit">g</span></div><div class="pm-box"><span class="pm-label">Fibre</span><span class="pm-val" id="pm-fi">0</span><span class="pm-unit">g</span></div></div>' +
+    '<div class="plate-glucose" id="plateGlucoseWrap">' +
+      '<div class="plate-glucose-head">' +
+        '<div><div class="plate-glucose-eyebrow">Postprandial sketch</div><div class="plate-glucose-sub">0–180 min · illustrative · educational only — not a clinical prediction</div></div>' +
+        '<div class="plate-glucose-peak"><div class="plate-glucose-eyebrow">Peak</div><div class="plate-glucose-peak-val" id="plateGlucosePeakVal">5.5<span style="font-size:10px;color:var(--text-tertiary);margin-left:2px">mmol/L</span></div><div class="plate-glucose-peak-meta" id="plateGlucosePeakAt"></div></div>' +
+      '</div>' +
+      '<div class="plate-glucose-svg" id="plateGlucoseSvg"></div>' +
+      '<div class="plate-glucose-stats">' +
+        '<div class="pgs-cell"><div class="pgs-lbl">Total GL</div><div class="pgs-val" id="pgsGL">0</div></div>' +
+        '<div class="pgs-cell"><div class="pgs-lbl">Avg GI</div><div class="pgs-val" id="pgsGI">—</div></div>' +
+        '<div class="pgs-cell"><div class="pgs-lbl">Fibre load</div><div class="pgs-val" id="pgsFib">—</div></div>' +
+        '<div class="pgs-cell"><div class="pgs-lbl">Verdict</div><div class="pgs-verdict-val" id="pgsVerdict">Empty</div></div>' +
+      '</div>' +
+      '<div class="plate-glucose-note" id="plateGlucoseNote">Add a few foods to see how they shape the curve.</div>' +
+    '</div>' +
     '<div class="plate-energy-mix" id="plateEnergyMix"><strong>Energy from macros</strong> (approx.): <span id="plateEnergyMixText">Add foods to see % of calories from protein, carbs, and fat.</span><div class="plate-energy-bar" id="plateEnergyBar" style="display:none"><span class="plate-energy-seg pes-p" id="plateEnergySegP" style="width:0%"></span><span class="plate-energy-seg pes-c" id="plateEnergySegC" style="width:0%"></span><span class="plate-energy-seg pes-f" id="plateEnergySegF" style="width:0%"></span></div></div>' +
     '<div class="plate-insights" id="plateInsightsWrap"><div class="plate-insights-title">Plate insights</div><div id="plateInsightsBody">Add foods for longevity mix, categories, and glycaemic notes.</div></div>' +
     '<div class="plate-bar-wrap">' +
@@ -3431,6 +3467,122 @@ function getPlateSummaryForAI(){
   if(totK>0&&hiGiK>0)s+=' ~'+Math.round(hiGiK/totK*100)+'% kcal from High-GI items.';
   return s;
 }
+/* ── POSTPRANDIAL GLUCOSE SKETCH (My Plate) ──
+ * Educational model — not a clinical prediction. Curve shape is driven by
+ * total Glycaemic Load, average GI, and a fibre-flatten heuristic. Imported
+ * (and adapted) from the field guide's BuilderView. */
+function plateGlucoseGiNum(gi){
+  return gi==='Low' ? 35 : gi==='High' ? 75 : 55;
+}
+function computePlateGlucoseStats(){
+  var ids=Object.keys(plateMap);
+  var totalGL=0,fibreLoad=0,giSum=0,giCarbWeight=0,avoidBoost=0;
+  ids.forEach(function(id){
+    var f=plateMap[id]; if(!f) return;
+    var fid=parseInt(id,10);
+    var g=portionSizes[fid]||portionSizes[id]||100;
+    var m=g/100;
+    var carbs=(f.carbs||0)*m;
+    var fiber=(f.fiber||0)*m;
+    var giNum=plateGlucoseGiNum(f.gi);
+    var availableCarbs=Math.max(0,carbs-fiber);
+    totalGL+=giNum*availableCarbs/100;
+    if(carbs>0){giSum+=giNum*carbs;giCarbWeight+=carbs;}
+    fibreLoad+=Math.min(fiber/5,2.5);
+    if(f.gi==='High' && f.evidence!=='High') avoidBoost+=0.3;
+  });
+  return {
+    totalGL:Math.round(totalGL),
+    avgGI:giCarbWeight>0?Math.round(giSum/giCarbWeight):null,
+    fibreLoad:Math.round(fibreLoad*10)/10,
+    avoidBoost:avoidBoost,
+    count:ids.length
+  };
+}
+function plateGlucoseCurvePoints(stats){
+  var baseline=5.5;
+  var gl=stats.totalGL;
+  var fibreFlatten=Math.min(stats.fibreLoad*0.35,1.4);
+  var rise=Math.max(0,gl*0.085-fibreFlatten)+(stats.avoidBoost||0);
+  var tPeak=Math.max(40,60-Math.min(gl*0.5,15)+stats.fibreLoad*6);
+  var pts=[];
+  for(var t=0;t<=180;t+=10){
+    var sigma=t<tPeak?18:34;
+    var v=baseline+rise*Math.exp(-((t-tPeak)*(t-tPeak))/(2*sigma*sigma));
+    pts.push({t:t,v:v});
+  }
+  return {pts:pts,peak:baseline+rise,tPeak:tPeak,baseline:baseline};
+}
+function classifyPlateGlucose(stats){
+  if(stats.count===0) return {label:'Empty',color:'var(--text-tertiary)',note:'Add a few foods to see how they shape the curve. Educational only — not a clinical prediction.'};
+  if(stats.avoidBoost>0.6) return {label:'Risky plate',color:'#B91C1C',note:'Several High-GI items with limited evidence — swap a starch for a legume or whole grain to flatten the curve.'};
+  if(stats.totalGL>30) return {label:'High GL',color:'#C2410C',note:'GL above 30. Consider trimming a high-GI portion by ⅓, adding fibre, or pairing with vinegar/protein.'};
+  if(stats.totalGL>15) return {label:'Moderate load',color:'#A16207',note:'Defensible at one meal. Fibre and slow-digesting protein keep the curve flatter.'};
+  return {label:'Low GL',color:'#15803D',note:'Well-balanced. Fibre, fat, and protein are keeping the postprandial curve flat.'};
+}
+function renderPlateGlucoseSVG(stats){
+  var data=plateGlucoseCurvePoints(stats);
+  var pts=data.pts,peak=data.peak,tPeak=data.tPeak,baseline=data.baseline;
+  var W=460,H=110,padX=28,padY=14;
+  var maxY=Math.max(peak+0.5,10);
+  var minY=4.5;
+  var yFor=function(v){return H-padY-((v-minY)/(maxY-minY))*(H-padY*2);};
+  var xFor=function(t){return padX+(t/180)*(W-padX*2);};
+  var d=pts.map(function(p,i){return (i===0?'M':'L')+' '+xFor(p.t).toFixed(1)+' '+yFor(p.v).toFixed(1);}).join(' ');
+  var dFill=d+' L '+xFor(180).toFixed(1)+' '+(H-padY)+' L '+xFor(0).toFixed(1)+' '+(H-padY)+' Z';
+  var zones=[
+    {top:7.8,color:'#15803D',bg:'rgba(21,128,61,0.10)'},
+    {top:10,color:'#B45309',bg:'rgba(180,83,9,0.09)'},
+    {top:maxY,color:'#B91C1C',bg:'rgba(185,28,28,0.10)'}
+  ];
+  var peakZone=zones.filter(function(z){return peak<=z.top;})[0]||zones[zones.length-1];
+  var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" role="img" aria-label="Estimated glucose peak '+peak.toFixed(1)+' mmol/L at '+Math.round(tPeak)+' minutes">';
+  zones.forEach(function(z,i){
+    var y1=yFor(z.top);
+    var y0=i===0?H-padY:yFor(zones[i-1].top);
+    svg+='<rect x="'+padX+'" y="'+y1.toFixed(1)+'" width="'+(W-padX*2)+'" height="'+Math.max(0,y0-y1).toFixed(1)+'" fill="'+z.bg+'"/>';
+  });
+  svg+='<line x1="'+padX+'" y1="'+yFor(baseline).toFixed(1)+'" x2="'+(W-padX)+'" y2="'+yFor(baseline).toFixed(1)+'" stroke="var(--card-border)" stroke-dasharray="2 3"/>';
+  svg+='<path d="'+dFill+'" fill="'+peakZone.color+'" fill-opacity="0.14"/>';
+  svg+='<path d="'+d+'" fill="none" stroke="'+peakZone.color+'" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>';
+  svg+='<circle cx="'+xFor(tPeak).toFixed(1)+'" cy="'+yFor(peak).toFixed(1)+'" r="3.5" fill="'+peakZone.color+'"/>';
+  [0,60,120,180].forEach(function(t){
+    svg+='<line x1="'+xFor(t).toFixed(1)+'" y1="'+(H-padY)+'" x2="'+xFor(t).toFixed(1)+'" y2="'+(H-padY+3)+'" stroke="var(--text-tertiary)"/>';
+    svg+='<text x="'+xFor(t).toFixed(1)+'" y="'+(H-2)+'" text-anchor="middle" font-size="8" fill="var(--text-tertiary)">'+t+'m</text>';
+  });
+  [5.5,7.8,10].forEach(function(v){
+    svg+='<text x="'+(padX-4)+'" y="'+(yFor(v)+3).toFixed(1)+'" text-anchor="end" font-size="8" fill="var(--text-tertiary)">'+v+'</text>';
+  });
+  svg+='</svg>';
+  return {svg:svg,peak:peak,tPeak:tPeak,peakColor:peakZone.color};
+}
+function refreshPlateGlucose(){
+  var wrap=document.getElementById('plateGlucoseWrap');
+  if(!wrap) return;
+  var stats=computePlateGlucoseStats();
+  var sketch=renderPlateGlucoseSVG(stats);
+  var verdict=classifyPlateGlucose(stats);
+  var svgEl=document.getElementById('plateGlucoseSvg');
+  if(svgEl) svgEl.innerHTML=sketch.svg;
+  var peakEl=document.getElementById('plateGlucosePeakVal');
+  if(peakEl){
+    peakEl.innerHTML=sketch.peak.toFixed(1)+'<span style="font-size:10px;color:var(--text-tertiary);margin-left:2px">mmol/L</span>';
+    peakEl.style.color=stats.count>0?sketch.peakColor:'var(--text-primary)';
+  }
+  var peakAtEl=document.getElementById('plateGlucosePeakAt');
+  if(peakAtEl) peakAtEl.textContent=stats.count>0?'@ ~'+Math.round(sketch.tPeak)+' min':'';
+  var glEl=document.getElementById('pgsGL');
+  if(glEl) glEl.textContent=stats.totalGL;
+  var giEl=document.getElementById('pgsGI');
+  if(giEl) giEl.textContent=stats.avgGI||'—';
+  var fibEl=document.getElementById('pgsFib');
+  if(fibEl) fibEl.textContent=stats.fibreLoad||'—';
+  var verdictEl=document.getElementById('pgsVerdict');
+  if(verdictEl){verdictEl.textContent=verdict.label;verdictEl.style.color=verdict.color;}
+  var noteEl=document.getElementById('plateGlucoseNote');
+  if(noteEl) noteEl.textContent=verdict.note;
+}
+
 function updatePlatePanel(){
   var items=document.getElementById('plateItems');
   if(!items)return;
@@ -3559,6 +3711,7 @@ function updatePlatePanel(){
     statusEl.className='plate-status '+statusClass;
     statusText.textContent=msg;
   }
+  refreshPlateGlucose();
   refreshTodayDashboard();
 }
 
