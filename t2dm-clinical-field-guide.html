@@ -2454,9 +2454,11 @@ function Header({
                   letterSpacing: "0.02em",
                 }}
                 aria-pressed={active}
-                title={s.description}
+                aria-label={s.label}
+                title={s.label + " — " + s.description}
               >
-                {s.short || s.label}
+                <span className="hidden md:inline">{s.label}</span>
+                <span className="md:hidden">{s.short || s.label}</span>
               </button>
             );
           })}
