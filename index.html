@@ -2281,14 +2281,14 @@ function buildAIDrawer(){
 }
 function buildPlateDrawer(){
   return '<div class="plate-premium">' +
-    '<p class="plate-hint">Tap <span class="plate-kbd">+</span> on a food · macros are per 100g — use <strong>− / +</strong> on each row for your grams (e.g. 25g) · bars use your <strong>Daily diary</strong> targets: <span id="plateHintGoals">— kcal / —g protein / —g fibre</span> <button type="button" class="plate-hint-action" onclick="openDrawer(\'diary\')">Edit goals</button> <button type="button" class="plate-hint-action" onclick="closeDrawer()">Back to foods</button></p>' +
-    '<div class="plate-status ps-neutral" id="plateStatus"><span id="plateStatusText">Add foods to see how you compare to the reference bars below.</span></div>' +
+    '<p class="plate-hint">Macros are per 100g — use <strong>−/+</strong> on each row for your grams. Targets: <span id="plateHintGoals">— kcal / —g protein / —g fibre</span> <button type="button" class="plate-hint-action" onclick="openDrawer(\'diary\')">Edit goals</button> <button type="button" class="plate-hint-action" onclick="closeDrawer()">Back to foods</button></p>' +
+    '<div class="plate-status ps-neutral" id="plateStatus"><span id="plateStatusText">Add foods to see how you compare to your targets.</span></div>' +
     '<div class="plate-items" id="plateItems">' +
-    '<div class="plate-empty" id="plateEmptyHint"><div class="plate-empty-title">No foods yet</div>Tap + on a card (expand on mobile if needed).</div></div>' +
+    '<div class="plate-empty" id="plateEmptyHint"><div class="plate-empty-title">Empty plate</div>Tap + on any food card to add it.</div></div>' +
     '<div class="plate-macros"><div class="pm-box"><span class="pm-label">Calories</span><span class="pm-val" id="pm-kcal">0</span><span class="pm-unit">kcal</span></div><div class="pm-box"><span class="pm-label">Protein</span><span class="pm-val" id="pm-p">0</span><span class="pm-unit">g</span></div><div class="pm-box"><span class="pm-label">Carbs</span><span class="pm-val" id="pm-c">0</span><span class="pm-unit">g</span></div><div class="pm-box"><span class="pm-label">Fat</span><span class="pm-val" id="pm-f">0</span><span class="pm-unit">g</span></div><div class="pm-box"><span class="pm-label">Fibre</span><span class="pm-val" id="pm-fi">0</span><span class="pm-unit">g</span></div></div>' +
     '<div class="plate-glucose" id="plateGlucoseWrap">' +
       '<div class="plate-glucose-head">' +
-        '<div><div class="plate-glucose-eyebrow">Postprandial sketch</div><div class="plate-glucose-sub">0–180 min · illustrative · educational only — not a clinical prediction</div></div>' +
+        '<div><div class="plate-glucose-eyebrow">Postprandial sketch</div><div class="plate-glucose-sub">0–180 min · educational, not a clinical prediction</div></div>' +
         '<div class="plate-glucose-peak"><div class="plate-glucose-eyebrow">Peak</div><div class="plate-glucose-peak-val" id="plateGlucosePeakVal">5.5<span style="font-size:10px;color:var(--text-tertiary);margin-left:2px">mmol/L</span></div><div class="plate-glucose-peak-meta" id="plateGlucosePeakAt"></div></div>' +
       '</div>' +
       '<div class="plate-glucose-svg" id="plateGlucoseSvg"></div>' +
@@ -2298,30 +2298,30 @@ function buildPlateDrawer(){
         '<div class="pgs-cell"><div class="pgs-lbl">Fibre load</div><div class="pgs-val" id="pgsFib">—</div></div>' +
         '<div class="pgs-cell"><div class="pgs-lbl">Verdict</div><div class="pgs-verdict-val" id="pgsVerdict">Empty</div></div>' +
       '</div>' +
-      '<div class="plate-glucose-note" id="plateGlucoseNote">Add a few foods to see how they shape the curve.</div>' +
+      '<div class="plate-glucose-note" id="plateGlucoseNote">Add foods to see the curve shape.</div>' +
     '</div>' +
-    '<div class="plate-energy-mix" id="plateEnergyMix"><strong>Energy from macros</strong> (approx.): <span id="plateEnergyMixText">Add foods to see % of calories from protein, carbs, and fat.</span><div class="plate-energy-bar" id="plateEnergyBar" style="display:none"><span class="plate-energy-seg pes-p" id="plateEnergySegP" style="width:0%"></span><span class="plate-energy-seg pes-c" id="plateEnergySegC" style="width:0%"></span><span class="plate-energy-seg pes-f" id="plateEnergySegF" style="width:0%"></span></div></div>' +
-    '<div class="plate-insights" id="plateInsightsWrap"><div class="plate-insights-title">Plate insights</div><div id="plateInsightsBody">Add foods for longevity mix, categories, and glycaemic notes.</div></div>' +
+    '<div class="plate-energy-mix" id="plateEnergyMix"><strong>Energy split</strong>: <span id="plateEnergyMixText">Add foods to see protein / carbs / fat.</span><div class="plate-energy-bar" id="plateEnergyBar" style="display:none"><span class="plate-energy-seg pes-p" id="plateEnergySegP" style="width:0%"></span><span class="plate-energy-seg pes-c" id="plateEnergySegC" style="width:0%"></span><span class="plate-energy-seg pes-f" id="plateEnergySegF" style="width:0%"></span></div></div>' +
+    '<div class="plate-insights" id="plateInsightsWrap"><div class="plate-insights-title">Plate insights</div><div id="plateInsightsBody">Add foods for longevity, category mix, and GI notes.</div></div>' +
     '<div class="plate-bar-wrap">' +
     '<div class="pb-row"><div class="pb-label"><span>Calories vs <strong id="plateBarGoalKcal">1,750</strong> kcal</span><span class="pb-pct" id="pct-kcal">0%</span></div><div class="pb-track"><div class="pb-fill pb-band-low" id="bar-kcal" style="width:0%"></div></div></div>' +
     '<div class="pb-row"><div class="pb-label"><span>Protein vs <strong id="plateBarGoalP">140</strong> g</span><span class="pb-pct" id="pct-p">0%</span></div><div class="pb-track"><div class="pb-fill pb-band-low" id="bar-p" style="width:0%"></div></div></div>' +
     '<div class="pb-row"><div class="pb-label"><span>Fibre vs <strong id="plateBarGoalFi">30</strong> g</span><span class="pb-pct" id="pct-fi">0%</span></div><div class="pb-track"><div class="pb-fill pb-band-low" id="bar-fi" style="width:0%"></div></div></div></div>' +
-    '<p class="drawer-tools-note" style="margin-top:10px;margin-bottom:6px;font-size:11px;line-height:1.45"><strong>Breakfast, lunch, dinner</strong> — three slots on this device. <strong>Save to this meal</strong> stores your <em>current</em> My Plate (foods + grams) into that slot (overwrites any previous save). <strong>Load this meal</strong> replaces the live My Plate with that slot so you can tweak or log it.</p>' +
+    '<div class="plate-insights-title" style="margin-top:14px">Meal slots</div>' +
+    '<p class="drawer-tools-note" style="margin:4px 0 6px;font-size:11px;line-height:1.45"><strong>Save</strong> stores the current plate; <strong>Load</strong> swaps it back in.</p>' +
     '<div class="plate-saved-row"><label for="plateMealSlotSelect" class="sr-only">Meal slot</label><select id="plateMealSlotSelect" aria-label="Meal slot for breakfast lunch or dinner">' +
     '<option value="breakfast">Breakfast</option><option value="lunch">Lunch</option><option value="dinner">Dinner</option></select>' +
-    '<button type="button" class="ca-btn" onclick="savePlateToMealSlot()">Save to this meal</button>' +
-    '<button type="button" class="ca-btn" onclick="loadPlateFromMealSlot()">Load this meal</button>' +
-    '<button type="button" class="ca-btn" onclick="clearMealPlateSlot()">Clear slot</button></div>' +
+    '<button type="button" class="ca-btn" onclick="savePlateToMealSlot()">Save</button>' +
+    '<button type="button" class="ca-btn" onclick="loadPlateFromMealSlot()">Load</button>' +
+    '<button type="button" class="ca-btn" onclick="clearMealPlateSlot()">Clear</button></div>' +
     '<p class="drawer-tools-note" id="plateMealSlotStatus" style="margin-top:4px;margin-bottom:8px;font-size:10px;line-height:1.45;color:var(--text-tertiary)"></p>' +
-    '<div class="plate-insights-title" style="margin-top:4px">Custom templates (optional)</div>' +
-    '<p class="drawer-tools-note" style="margin-bottom:6px;font-size:10px">Extra named plates beyond the three meal slots.</p>' +
+    '<div class="plate-insights-title" style="margin-top:4px">Saved plates</div>' +
     '<div class="plate-saved-row"><input type="text" id="plateSaveNameInput" maxlength="48" placeholder="Name this plate" aria-label="Name for saved plate">' +
-    '<button type="button" class="ca-btn" onclick="saveNamedPlateFromInput()">Save plate</button></div>' +
+    '<button type="button" class="ca-btn" onclick="saveNamedPlateFromInput()">Save</button></div>' +
     '<div class="plate-saved-row"><select id="plateSavedSelect" aria-label="Saved plates"><option value="">Load saved plate…</option></select>' +
     '<button type="button" class="ca-btn" onclick="loadNamedPlate()">Load</button>' +
     '<button type="button" class="ca-btn" onclick="deleteNamedPlate()">Remove</button></div>' +
     '<div class="plate-foot">' +
-    '<div class="plate-foot-actions"><button type="button" class="ca-btn" onclick="sharePlate()">Copy plate summary</button></div>' +
+    '<div class="plate-foot-actions"><button type="button" class="ca-btn" onclick="sharePlate()">Copy summary</button></div>' +
     '<button type="button" class="ctrl-btn danger" onclick="clearPlate()">Clear plate</button></div></div>';
 }
 function buildCompareDrawer(){
@@ -3886,17 +3886,17 @@ function updatePlatePanel(){
   var segC=document.getElementById('plateEnergySegC');
   var segF=document.getElementById('plateEnergySegF');
   if(!ids.length||sumMacroK<=0){
-    if(mixEl)mixEl.textContent='Add foods to see % of calories from protein, carbs, and fat.';
+    if(mixEl)mixEl.textContent='Add foods to see protein / carbs / fat.';
     if(barEl)barEl.style.display='none';
   }else{
     var pPct=Math.round(kcalP/sumMacroK*100),cPct=Math.round(kcalC/sumMacroK*100),fPct=Math.max(0,100-pPct-cPct);
-    if(mixEl)mixEl.textContent='Protein ~'+pPct+'% · Carbs ~'+cPct+'% · Fat ~'+fPct+'% of macro-derived calories (4·P + 4·C + 9·F).';
+    if(mixEl)mixEl.textContent=pPct+'% protein · '+cPct+'% carbs · '+fPct+'% fat';
     if(barEl){barEl.style.display='flex';if(segP)segP.style.width=pPct+'%';if(segC)segC.style.width=cPct+'%';if(segF)segF.style.width=fPct+'%';}
   }
   var ins=document.getElementById('plateInsightsBody');
   if(ins){
     if(!ids.length){
-      ins.textContent='Add foods for longevity mix, categories, and glycaemic notes.';
+      ins.textContent='Add foods for longevity, category mix, and GI notes.';
     }else{
       var wL=wLongDen>0?Math.round(wLongNum/wLongDen):0;
       var parts=[];
@@ -3905,12 +3905,12 @@ function updatePlatePanel(){
         var pct=Math.round((kcalByCat[cat]||0)/tk*100);
         var sample=ids.map(function(id){return plateMap[id];}).filter(function(f){return f&&(f.cat||'other')===cat;})[0];
         var label=sample&&sample.catLabel?sample.catLabel:cat;
-        parts.push(label+' ~'+pct+'%');
+        parts.push(label+' '+pct+'%');
       });
       var giLine='';
-      if(totals.kcal>0&&hiGiKcal>0)giLine=' About '+Math.round(hiGiKcal/totals.kcal*100)+'% of calories come from High-GI items.';
-      if(activeCondition==='t2d')giLine+=' For structured glycaemic tiers, use the field guide from the menu.';
-      ins.textContent='Kcal-weighted longevity score (approx.): '+wL+'/100. Mix by calories: '+parts.join(' · ')+'.'+giLine;
+      if(totals.kcal>0&&hiGiKcal>0)giLine=' · '+Math.round(hiGiKcal/totals.kcal*100)+'% kcal from High-GI items';
+      if(activeCondition==='t2d')giLine+=' · field guide → menu for tier tables';
+      ins.textContent='Longevity '+wL+'/100 · '+parts.join(' · ')+giLine;
     }
   }
   var rK=TK?totals.kcal/TK*100:0;
@@ -3926,30 +3926,30 @@ function updatePlatePanel(){
     var msg='';
     var kLbl=formatPlateInt(TK);
     if(!ids.length){
-      msg='Add foods to see how you compare to the reference bars below.';
+      msg='Add foods to compare against your targets.';
     }else if(rK>118){
       statusClass='ps-high';
-      msg='Well over your ~'+kLbl+' kcal target — try swapping one dense item for veg, fish, or beans.';
+      msg='Well over '+kLbl+' kcal — swap a dense item for veg, fish, or beans.';
     }else if(rK>108){
       statusClass='ps-high';
-      msg='Above your calorie target — trim oils, nuts, or a heavy item if that fits your goal.';
+      msg='Over your kcal target — trim oils, nuts, or a heavy item.';
     }else if(rK>=80&&rK<=105&&rP>=70&&rP<=125&&rF>=68){
       statusClass='ps-ok';
-      msg='Roughly on track for your diary targets (database lines are per 100g — adjust grams per row).';
+      msg='On track. Tweak grams per row to fine-tune.';
     }else if(rK<55||rP<60||rF<55){
       statusClass='ps-low';
-      msg='Room left on calories, protein, or fibre — whichever bar is lowest is the nudge.';
+      msg='Room on the lowest bar — that\'s your nudge.';
     }else{
-      msg='Close to the mix — check the lowest bar to fine-tune.';
+      msg='Close — adjust the lowest bar.';
     }
     if(ids.length&&rK<=108&&rK>=55&&(rP<68||rF<65)){
       if(statusClass==='ps-neutral')statusClass='ps-low';
-      if(rP<68&&rF<65)msg='Protein and fibre are both under target — add fish, beans, or greens.';
-      else if(rP<68)msg='Protein is under target — fish, eggs, dairy, or legumes help.';
-      else if(rF<65)msg='Fibre is under target — greens, pulses, or oats help.';
+      if(rP<68&&rF<65)msg='Protein + fibre under target — add fish, beans, or greens.';
+      else if(rP<68)msg='Protein under target — fish, eggs, dairy, or legumes.';
+      else if(rF<65)msg='Fibre under target — greens, pulses, or oats.';
     }
     if(ids.length&&activeCondition==='t2d'){
-      msg+=' For glycaemic pillars alongside this plate, use the field guide (overflow menu or the button when Diabetes is your active filter).';
+      msg+=' Field guide → tier tables.';
     }
     statusEl.className='plate-status '+statusClass;
     statusText.textContent=msg;
