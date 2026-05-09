@@ -12,23 +12,32 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --ink: #0d1210;
+      /* Aligned with main app palette (index.html :root). Tokens mirror
+         the app so the landing and app read as one product:
+           --surface         ≡ index --body-bg
+           --surface-elevated≡ index --card-bg
+           --ink             ≡ index --text-primary
+           --muted           ≡ index --text-secondary
+           --teal-deep       ≡ index --header-bg
+           --green           ≡ index --accent-green
+      */
+      --ink: #1A1A17;
       --ink-soft: #3d4540;
-      --muted: #6b736e;
-      --line: rgba(13, 18, 16, 0.08);
-      --surface: #faf9f6;
-      --surface-elevated: #ffffff;
-      --teal-deep: #0a1f24;
-      --teal-mid: #123a42;
-      --teal-glow: #1a5c52;
+      --muted: #6B6860;
+      --line: rgba(26, 26, 23, 0.08);
+      --surface: #f5f4f0;
+      --surface-elevated: #FAFAF8;
+      --teal-deep: #0f2a30;
+      --teal-mid: #1a4854;
+      --teal-glow: #236862;
       --gold: #c9a227;
       --gold-soft: rgba(201, 162, 39, 0.15);
-      --green: #1d5c3a;
-      --green-soft: #e8f2ec;
+      --green: #1D5C3A;
+      --green-soft: #E8F2EC;
       --radius-lg: 20px;
       --radius-sm: 12px;
-      --shadow-soft: 0 24px 64px rgba(10, 31, 36, 0.08);
-      --shadow-card: 0 4px 24px rgba(10, 31, 36, 0.06);
+      --shadow-soft: 0 24px 64px rgba(15, 42, 48, 0.08);
+      --shadow-card: 0 4px 24px rgba(15, 42, 48, 0.06);
     }
     html { scroll-behavior: smooth; }
     body {
@@ -273,16 +282,16 @@
       border-radius: var(--radius-lg);
       padding: clamp(40px, 6vw, 56px) clamp(28px, 5vw, 48px);
       text-align: center;
-      background: linear-gradient(155deg, var(--teal-deep) 0%, #0d3038 42%, #123a42 100%);
+      background: linear-gradient(155deg, var(--teal-deep) 0%, #133840 42%, var(--teal-mid) 100%);
       color: rgba(244, 240, 232, 0.88);
-      border: 1px solid rgba(201, 162, 39, 0.2);
-      box-shadow: 0 24px 48px rgba(10, 31, 36, 0.2);
+      border: 1px solid rgba(201, 162, 39, 0.22);
+      box-shadow: 0 24px 48px rgba(15, 42, 48, 0.22);
     }
     .cta-band h2 {
       font-family: "Instrument Serif", Georgia, serif;
       font-size: clamp(1.5rem, 3vw, 2rem);
       font-weight: 400;
-      color: #faf9f6;
+      color: #f5f4f0;
       margin-bottom: 12px;
       letter-spacing: -0.02em;
     }
