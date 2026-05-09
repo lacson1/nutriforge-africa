@@ -336,18 +336,43 @@ body.dark-mode .exp-db-bridge{background:rgba(29,92,58,.25);border-color:#4ADE80
 .grid.view-list .card.african-food{border-left:none;border-left:3px solid var(--accent-amber-bright)}
 .grid.view-list .card.nigeria-food{border-left:none;border-left:3px solid #008751}
 .grid.view-list .card:hover{transform:none;box-shadow:none}
-/* List: horizontal layout for closed cards */
-.grid.view-list .card:not(.open){display:flex;flex-direction:row;align-items:stretch}
-.grid.view-list .card:not(.open) .card-header{flex-direction:row;align-items:center;padding:7px 10px;gap:8px;flex:1;min-width:0;border-radius:0}
-.grid.view-list .card:not(.open) .card-header .card-emoji-wrap{width:28px;height:28px;font-size:15px}
-.grid.view-list .card:not(.open) .card-header .card-name{font-size:12px;text-align:left;-webkit-line-clamp:1;flex:1;min-width:0}
-.grid.view-list .card:not(.open) .card-header .card-cat-row{display:none}
-.grid.view-list .card:not(.open) .card-body{display:flex;align-items:center;padding:0;flex-shrink:0}
-.grid.view-list .card:not(.open) .card-meta-row{display:none}
-.grid.view-list .card:not(.open) .card-secondary-macros{display:flex;border-top:none;border-left:1px solid rgba(0,0,0,.08);margin-top:0;background:#fff}
-.grid.view-list .card:not(.open) .sec-mac{padding:2px 8px;min-width:40px}
+/* List: horizontal layout for closed cards — dense info row */
+.grid.view-list .card:not(.open){display:flex;flex-direction:row;align-items:stretch;min-height:48px}
+/* Header zone: emoji + name + tags */
+.grid.view-list .card:not(.open) .card-header{flex-direction:row;align-items:center;padding:6px 10px;gap:7px;flex:1 1 200px;min-width:160px;border-radius:0}
+.grid.view-list .card:not(.open) .card-header .card-emoji-wrap{width:30px;height:30px;font-size:16px;box-shadow:none}
+.grid.view-list .card:not(.open) .card-header .card-name{font-size:12px;font-weight:500;text-align:left;-webkit-line-clamp:1;flex:0 1 auto;min-width:0;line-height:1.2}
+.grid.view-list .card:not(.open) .card-header .card-cat-row{display:flex;justify-content:flex-start;flex-shrink:0;gap:3px;margin-top:0;flex-wrap:nowrap}
+.grid.view-list .card:not(.open) .card-header .card-cat{font-size:7px;padding:1px 5px}
+.grid.view-list .card:not(.open) .card-header .card-african-tag,
+.grid.view-list .card:not(.open) .card-header .card-nigeria-tag{font-size:7px}
+.grid.view-list .card:not(.open) .card-header .drug-pill{font-size:7px;padding:1px 4px}
+/* Body zone: meta + secondary macros */
+.grid.view-list .card:not(.open) .card-body{display:flex;align-items:stretch;padding:0;flex-shrink:0;background:var(--card-bg)}
+/* Meta row inline: ring + kcal/protein + GI + evidence + stars */
+.grid.view-list .card:not(.open) .card-meta-row{display:flex;align-items:center;gap:7px;padding:3px 10px;margin-bottom:0;border-left:1px solid rgba(0,0,0,.08);align-self:stretch}
+.grid.view-list .card:not(.open) .ls-ring{width:36px;height:36px;flex-shrink:0}
+.grid.view-list .card:not(.open) .card-primary-stats{flex:none;min-width:0;display:flex;flex-direction:column;gap:2px;justify-content:center}
+.grid.view-list .card:not(.open) .card-kcal-prot{flex-direction:row;margin-bottom:0;gap:3px;flex-wrap:nowrap;align-items:baseline}
+.grid.view-list .card:not(.open) .stat-big{font-size:11px}
+.grid.view-list .card:not(.open) .stat-lbl{font-size:7px}
+.grid.view-list .card:not(.open) .stat-sep{font-size:9px;margin:0 1px}
+.grid.view-list .card:not(.open) .card-badges-row{flex-wrap:nowrap;gap:3px}
+.grid.view-list .card:not(.open) .gi-pill{font-size:7px;padding:1px 5px}
+.grid.view-list .card:not(.open) .ev-hi,
+.grid.view-list .card:not(.open) .ev-mo,
+.grid.view-list .card:not(.open) .ev-lo{font-size:8px;padding:1px 5px}
+.grid.view-list .card:not(.open) .stars-mini{font-size:7px}
+/* Secondary macros */
+.grid.view-list .card:not(.open) .card-secondary-macros{display:flex;border-top:none;border-left:1px solid rgba(0,0,0,.08);margin-top:0;background:transparent;align-self:stretch}
+.grid.view-list .card:not(.open) .sec-mac{padding:2px 7px;min-width:40px;display:flex;flex-direction:column;justify-content:center}
 .grid.view-list .card:not(.open) .card-actions{display:none}
 .grid.view-list .card:not(.open) .expand{display:none}
+/* Mobile: drop the meta row to save horizontal space */
+@media (max-width:600px){
+  .grid.view-list .card:not(.open) .card-meta-row{display:none}
+  .grid.view-list .card:not(.open) .card-header .card-cat-row{display:none}
+}
 /* List: open card — restore column layout */
 .grid.view-list .card.open .card-header{flex-direction:column;align-items:center;padding:18px 14px 12px}
 .grid.view-list .card.open .card-header .card-name{text-align:center}
