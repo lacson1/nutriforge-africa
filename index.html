@@ -226,30 +226,31 @@ body.dark-mode .cond-pill:hover{background:var(--surface-2);border-color:var(--c
 .drug-pill.mo{background:var(--red-light);color:#991B1B;border:1px solid #FECACA}
 .drug-pill.mi{background:var(--orange-light);color:#92400E;border:1px solid #FDE68A}
 
-/* ── CARD REDESIGN: BOLD CATEGORY HEADER (Option B) ── */
-.card-header{display:flex;flex-direction:column;align-items:center;gap:5px;padding:18px 14px 12px}
-.card-header .card-emoji-wrap{width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,.18);font-size:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.card-header .card-name{font-family:'Roboto Serif',Georgia,serif;font-size:14px;font-weight:700;color:#fff;text-align:center;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;letter-spacing:-.015em}
-.card-header .card-cat-row{justify-content:center;margin-top:0}
-.card-header .card-cat{background:rgba(255,255,255,.2);color:rgba(255,255,255,.9)}
-.card-header .card-african-tag{color:rgba(255,255,255,.8)}
-.card-header .card-nigeria-tag{color:rgba(255,255,255,.85)}
-.card-header .drug-pill{background:rgba(0,0,0,.25);color:#fff;border:none}
-/* Category header gradients */
-.card-header.cf{background:linear-gradient(135deg,#1E40AF,#2563EB)}
-.card-header.cv{background:linear-gradient(135deg,#166534,#16A34A)}
-.card-header.cl{background:linear-gradient(135deg,#78350F,#B45309)}
-.card-header.cn{background:linear-gradient(135deg,#581C87,#7C3AED)}
-.card-header.cft{background:linear-gradient(135deg,#9D174D,#DB2777)}
-.card-header.cg{background:linear-gradient(135deg,#374151,#6B7280)}
-.card-header.cd{background:linear-gradient(135deg,#065F46,#059669)}
-.card-header.cfu{background:linear-gradient(135deg,#7C2D12,#C2410C)}
-.card-header.co{background:linear-gradient(135deg,#7F1D1D,#B91C1C)}
-.card-header.ca{background:linear-gradient(135deg,#713F12,#A16207)}
-.card-header.cs{background:linear-gradient(135deg,#0C4A6E,#0369A1)}
-.card-header.ch{background:linear-gradient(135deg,#3B0764,#6D28D9)}
-.card-header.coil{background:linear-gradient(135deg,#7C2D12,#EA580C)}
-.card-header.cmeat{background:linear-gradient(135deg,#7F1D1D,#DC2626)}
+/* ── CARD REDESIGN: MATERIAL-STYLE CATEGORY HEADER (Option B, Google look) ── */
+.card-header{--hbg:#F5F5F5;--hfg:#37474F;display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 14px 14px;background:var(--hbg);color:var(--hfg)}
+.card-header .card-emoji-wrap{width:50px;height:50px;border-radius:50%;background:#fff;font-size:26px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.05)}
+.card-header .card-name{font-family:'Roboto',system-ui,sans-serif;font-size:14px;font-weight:500;color:var(--hfg);text-align:center;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;letter-spacing:.005em}
+.card-header .card-cat-row{justify-content:center;margin-top:1px;gap:4px}
+.card-header .card-cat{background:rgba(255,255,255,.65);color:var(--hfg);font-weight:500;letter-spacing:.04em;border:1px solid rgba(0,0,0,.04)}
+.card-header .card-african-tag{color:var(--hfg);opacity:.78}
+.card-header .card-nigeria-tag{color:var(--hfg);opacity:.82}
+.card-header .drug-pill{background:rgba(0,0,0,.06);color:var(--hfg);border:1px solid rgba(0,0,0,.06)}
+.card-header .drug-pill.cr{background:#D32F2F;color:#fff;border:none}
+/* Material 50/100 backgrounds with 800/900 text per category */
+.card-header.cf{--hbg:#E3F2FD;--hfg:#0D47A1}
+.card-header.cv{--hbg:#E8F5E9;--hfg:#1B5E20}
+.card-header.cl{--hbg:#FFF8E1;--hfg:#E65100}
+.card-header.cn{--hbg:#F3E5F5;--hfg:#4A148C}
+.card-header.cft{--hbg:#FCE4EC;--hfg:#880E4F}
+.card-header.cg{--hbg:#ECEFF1;--hfg:#263238}
+.card-header.cd{--hbg:#E0F2F1;--hfg:#004D40}
+.card-header.cfu{--hbg:#FFF3E0;--hfg:#BF360C}
+.card-header.co{--hbg:#FFEBEE;--hfg:#B71C1C}
+.card-header.ca{--hbg:#FFFDE7;--hfg:#FF6F00}
+.card-header.cs{--hbg:#E1F5FE;--hfg:#01579B}
+.card-header.ch{--hbg:#EDE7F6;--hfg:#311B92}
+.card-header.coil{--hbg:#FBE9E7;--hfg:#A6280B}
+.card-header.cmeat{--hbg:#FFEBEE;--hfg:#7F0000}
 /* Card body */
 .card-body{padding:10px 12px 0}
 .card-meta-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
@@ -343,10 +344,8 @@ body.dark-mode .exp-db-bridge{background:rgba(29,92,58,.25);border-color:#4ADE80
 .grid.view-list .card:not(.open) .card-header .card-cat-row{display:none}
 .grid.view-list .card:not(.open) .card-body{display:flex;align-items:center;padding:0;flex-shrink:0}
 .grid.view-list .card:not(.open) .card-meta-row{display:none}
-.grid.view-list .card:not(.open) .card-secondary-macros{display:flex;border-top:none;border-left:1px solid rgba(255,255,255,.2);margin-top:0}
+.grid.view-list .card:not(.open) .card-secondary-macros{display:flex;border-top:none;border-left:1px solid rgba(0,0,0,.08);margin-top:0;background:#fff}
 .grid.view-list .card:not(.open) .sec-mac{padding:2px 8px;min-width:40px}
-.grid.view-list .card:not(.open) .sec-mac .mac-val{color:#fff}
-.grid.view-list .card:not(.open) .sec-mac .mac-lbl{color:rgba(255,255,255,.65)}
 .grid.view-list .card:not(.open) .card-actions{display:none}
 .grid.view-list .card:not(.open) .expand{display:none}
 /* List: open card — restore column layout */
@@ -705,6 +704,25 @@ body.dark-mode .ev-lo{background:var(--surface-2);color:var(--text-secondary);bo
 body.dark-mode .gi-pill.lo{background:rgba(94,234,212,.15);color:#A7F3E0;border:1px solid rgba(94,234,212,.22)}
 body.dark-mode .gi-pill.me{background:rgba(251,191,36,.12);color:#FDE68A;border:1px solid rgba(251,191,36,.2)}
 body.dark-mode .gi-pill.hi{background:rgba(248,113,113,.12);color:#FCA5A5;border:1px solid rgba(248,113,113,.2)}
+/* Dark mode: keep tonal hierarchy but with darker container colours */
+body.dark-mode .card-header{--hbg:#1E2329;--hfg:#E0E0E0}
+body.dark-mode .card-header .card-emoji-wrap{background:rgba(255,255,255,.08);box-shadow:none}
+body.dark-mode .card-header .card-cat{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.06)}
+body.dark-mode .card-header .drug-pill{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.08)}
+body.dark-mode .card-header.cf{--hbg:#0F2A4A;--hfg:#90CAF9}
+body.dark-mode .card-header.cv{--hbg:#15321B;--hfg:#A5D6A7}
+body.dark-mode .card-header.cl{--hbg:#3D2810;--hfg:#FFCC80}
+body.dark-mode .card-header.cn{--hbg:#2A1640;--hfg:#CE93D8}
+body.dark-mode .card-header.cft{--hbg:#3D1428;--hfg:#F48FB1}
+body.dark-mode .card-header.cg{--hbg:#1E272C;--hfg:#B0BEC5}
+body.dark-mode .card-header.cd{--hbg:#0F2926;--hfg:#80CBC4}
+body.dark-mode .card-header.cfu{--hbg:#3D2310;--hfg:#FFAB91}
+body.dark-mode .card-header.co{--hbg:#3D1414;--hfg:#EF9A9A}
+body.dark-mode .card-header.ca{--hbg:#3D3010;--hfg:#FFE082}
+body.dark-mode .card-header.cs{--hbg:#0F2638;--hfg:#81D4FA}
+body.dark-mode .card-header.ch{--hbg:#1F1438;--hfg:#B39DDB}
+body.dark-mode .card-header.coil{--hbg:#3D1F14;--hfg:#FFAB91}
+body.dark-mode .card-header.cmeat{--hbg:#3D1010;--hfg:#EF9A9A}
 body.dark-mode .drawer-backdrop{background:rgba(0,0,0,.55)}
 body.dark-mode .mobile-nav{background:var(--card-bg);border-top-color:var(--card-border)}
 body.dark-mode .mnav-btn.active{color:var(--accent-green)}
@@ -4061,7 +4079,7 @@ var render = (function(){
       var starHtml='<span class="stars-mini">';for(var si=0;si<5;si++)starHtml+=si<f.stars?'★':'☆';starHtml+='</span>';
       var tid='tab'+f.id;
       var catCls=getCatCls(f.cat);
-      var ringFill=f.longevity>=90?'#34A865':f.longevity>=75?'#56C27A':f.longevity>=55?'#9CA3AF':f.longevity>=35?'#D97706':'#B91C1C';
+      var ringFill=f.longevity>=90?'#43A047':f.longevity>=75?'#7CB342':f.longevity>=55?'#9E9E9E':f.longevity>=35?'#FB8C00':'#E53935';
       var ringDash=(f.longevity/100*138.2).toFixed(1)+' 138.2';
       var lsRingHtml='<svg class="ls-ring" width="54" height="54" viewBox="0 0 54 54" aria-label="Longevity score '+f.longevity+'"><circle cx="27" cy="27" r="22" fill="none" stroke="var(--surface-2)" stroke-width="4.5"/><circle cx="27" cy="27" r="22" fill="none" stroke="'+ringFill+'" stroke-width="4.5" stroke-dasharray="'+ringDash+'" stroke-dashoffset="34.6" stroke-linecap="round" transform="rotate(-90 27 27)"/><text x="27" y="23" text-anchor="middle" font-size="11" font-weight="700" fill="var(--text-tertiary)" font-family="Roboto,system-ui">LS</text><text x="27" y="36" text-anchor="middle" font-size="13" font-weight="800" fill="'+ringFill+'" font-family="Roboto,system-ui">'+f.longevity+'</text></svg>';
       var evBadgeHtml=f.evidence==='High'?'<span class="ev-hi">High ev</span>':f.evidence==='Moderate'?'<span class="ev-mo">Mod ev</span>':'<span class="ev-lo">Low ev</span>';
