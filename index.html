@@ -226,6 +226,52 @@ body.dark-mode .cond-pill:hover{background:var(--surface-2);border-color:var(--c
 .drug-pill.mo{background:var(--red-light);color:#991B1B;border:1px solid #FECACA}
 .drug-pill.mi{background:var(--orange-light);color:#92400E;border:1px solid #FDE68A}
 
+/* ── CARD REDESIGN: BOLD CATEGORY HEADER (Option B) ── */
+.card-header{display:flex;flex-direction:column;align-items:center;gap:5px;padding:18px 14px 12px}
+.card-header .card-emoji-wrap{width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,.18);font-size:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.card-header .card-name{font-family:'Roboto Serif',Georgia,serif;font-size:14px;font-weight:700;color:#fff;text-align:center;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;letter-spacing:-.015em}
+.card-header .card-cat-row{justify-content:center;margin-top:0}
+.card-header .card-cat{background:rgba(255,255,255,.2);color:rgba(255,255,255,.9)}
+.card-header .card-african-tag{color:rgba(255,255,255,.8)}
+.card-header .card-nigeria-tag{color:rgba(255,255,255,.85)}
+.card-header .drug-pill{background:rgba(0,0,0,.25);color:#fff;border:none}
+/* Category header gradients */
+.card-header.cf{background:linear-gradient(135deg,#1E40AF,#2563EB)}
+.card-header.cv{background:linear-gradient(135deg,#166534,#16A34A)}
+.card-header.cl{background:linear-gradient(135deg,#78350F,#B45309)}
+.card-header.cn{background:linear-gradient(135deg,#581C87,#7C3AED)}
+.card-header.cft{background:linear-gradient(135deg,#9D174D,#DB2777)}
+.card-header.cg{background:linear-gradient(135deg,#374151,#6B7280)}
+.card-header.cd{background:linear-gradient(135deg,#065F46,#059669)}
+.card-header.cfu{background:linear-gradient(135deg,#7C2D12,#C2410C)}
+.card-header.co{background:linear-gradient(135deg,#7F1D1D,#B91C1C)}
+.card-header.ca{background:linear-gradient(135deg,#713F12,#A16207)}
+.card-header.cs{background:linear-gradient(135deg,#0C4A6E,#0369A1)}
+.card-header.ch{background:linear-gradient(135deg,#3B0764,#6D28D9)}
+.card-header.coil{background:linear-gradient(135deg,#7C2D12,#EA580C)}
+.card-header.cmeat{background:linear-gradient(135deg,#7F1D1D,#DC2626)}
+/* Card body */
+.card-body{padding:10px 12px 0}
+.card-meta-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.ls-ring{flex-shrink:0}
+.card-primary-stats{flex:1;min-width:0}
+.card-kcal-prot{display:flex;align-items:baseline;gap:5px;margin-bottom:4px;flex-wrap:wrap}
+.stat-big{font-size:17px;font-weight:700;color:var(--text-primary);line-height:1;font-variant-numeric:tabular-nums}
+.stat-lbl{font-size:8px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.06em}
+.stat-sep{color:var(--text-tertiary);font-size:12px;font-weight:300;margin:0 2px}
+.card-badges-row{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.gi-pill{font-size:8px;font-weight:600;padding:2px 7px;border-radius:20px}
+.gi-pill.lo{background:#DCFCE7;color:#166534}
+.gi-pill.me{background:#FEF9C3;color:#854D0E}
+.gi-pill.hi{background:#FEE2E2;color:#991B1B}
+/* Secondary macros strip */
+.card-secondary-macros{display:flex;border-top:1px solid var(--card-border);margin-top:8px}
+.sec-mac{flex:1;text-align:center;padding:6px 2px}
+.sec-mac:not(:last-child){border-right:1px solid var(--card-border)}
+/* Always-visible card actions */
+.card-actions{display:flex;gap:3px;padding:8px 10px 10px;border-top:1px solid var(--card-border)}
+.card-actions .ca-btn{flex:1;text-align:center;justify-content:center;padding:5px 4px}
+
 /* ── EXPANDED STATE ── */
 .expand{display:none;border-top:1px solid var(--card-border)}
 .card.open .expand{display:block}
@@ -288,25 +334,27 @@ body.dark-mode .exp-db-bridge{background:rgba(29,92,58,.25);border-color:#4ADE80
 .grid.view-list .card:last-child{border-bottom:1px solid var(--card-border);border-radius:0 0 10px 10px}
 .grid.view-list .card.african-food{border-left:none;border-left:3px solid var(--accent-amber-bright)}
 .grid.view-list .card.nigeria-food{border-left:none;border-left:3px solid #008751}
-.grid.view-list .card:hover{transform:none;box-shadow:none;background:var(--surface)}
-.grid.view-list .card-top{padding:8px 14px 8px;gap:8px;align-items:center}
-.grid.view-list .card-emoji-wrap{width:30px;height:30px;border-radius:8px;font-size:16px}
-.grid.view-list .card-name{font-size:13px;-webkit-line-clamp:1}
-.grid.view-list .card-cat-row{display:none}
-.grid.view-list .card-macros{display:flex;gap:0;border:none;margin:0;flex-shrink:0;width:auto}
-.grid.view-list .mac-item{padding:2px 8px;border-right:none!important;min-width:42px}
+.grid.view-list .card:hover{transform:none;box-shadow:none}
+/* List: horizontal layout for closed cards */
+.grid.view-list .card:not(.open){display:flex;flex-direction:row;align-items:stretch}
+.grid.view-list .card:not(.open) .card-header{flex-direction:row;align-items:center;padding:7px 10px;gap:8px;flex:1;min-width:0;border-radius:0}
+.grid.view-list .card:not(.open) .card-header .card-emoji-wrap{width:28px;height:28px;font-size:15px}
+.grid.view-list .card:not(.open) .card-header .card-name{font-size:12px;text-align:left;-webkit-line-clamp:1;flex:1;min-width:0}
+.grid.view-list .card:not(.open) .card-header .card-cat-row{display:none}
+.grid.view-list .card:not(.open) .card-body{display:flex;align-items:center;padding:0;flex-shrink:0}
+.grid.view-list .card:not(.open) .card-meta-row{display:none}
+.grid.view-list .card:not(.open) .card-secondary-macros{display:flex;border-top:none;border-left:1px solid rgba(255,255,255,.2);margin-top:0}
+.grid.view-list .card:not(.open) .sec-mac{padding:2px 8px;min-width:40px}
+.grid.view-list .card:not(.open) .sec-mac .mac-val{color:#fff}
+.grid.view-list .card:not(.open) .sec-mac .mac-lbl{color:rgba(255,255,255,.65)}
+.grid.view-list .card:not(.open) .card-actions{display:none}
+.grid.view-list .card:not(.open) .expand{display:none}
+/* List: open card — restore column layout */
+.grid.view-list .card.open .card-header{flex-direction:column;align-items:center;padding:18px 14px 12px}
+.grid.view-list .card.open .card-header .card-name{text-align:center}
+.grid.view-list .card.open .card-header .card-cat-row{display:flex;justify-content:center}
 .grid.view-list .mac-val{font-size:11px}
 .grid.view-list .mac-lbl{font-size:6px}
-.grid.view-list .card-scores{padding:0 8px;flex-shrink:0;gap:4px}
-.grid.view-list .longevity-bar-wrap{min-width:80px}
-.grid.view-list .card-hover-actions{display:none}
-.grid.view-list .card.open .card-hover-actions{display:flex;opacity:1;height:auto;padding:4px 14px 8px}
-/* List: horizontal layout */
-.grid.view-list .card:not(.open){display:flex;flex-direction:row;align-items:center}
-.grid.view-list .card:not(.open) .card-top{flex:1;min-width:0}
-.grid.view-list .card:not(.open) .card-macros{border-top:none;border-bottom:none}
-.grid.view-list .card:not(.open) .card-scores{border:none}
-.grid.view-list .card:not(.open) .expand{display:none}
 
 /* ── TABLE VIEW ── */
 .table-wrap{overflow-x:auto;border:1px solid var(--card-border);border-radius:10px;background:var(--card-bg)}
@@ -654,6 +702,9 @@ body.dark-mode .ai-send:hover{filter:brightness(1.08)}
 body.dark-mode .ev-hi{background:rgba(94,234,212,.18);color:#A7F3E0;border:1px solid rgba(94,234,212,.25)}
 body.dark-mode .ev-mo{background:rgba(196,181,253,.15);color:#DDD6FE;border:1px solid rgba(196,181,253,.22)}
 body.dark-mode .ev-lo{background:var(--surface-2);color:var(--text-secondary);border:1px solid var(--card-border)}
+body.dark-mode .gi-pill.lo{background:rgba(94,234,212,.15);color:#A7F3E0;border:1px solid rgba(94,234,212,.22)}
+body.dark-mode .gi-pill.me{background:rgba(251,191,36,.12);color:#FDE68A;border:1px solid rgba(251,191,36,.2)}
+body.dark-mode .gi-pill.hi{background:rgba(248,113,113,.12);color:#FCA5A5;border:1px solid rgba(248,113,113,.2)}
 body.dark-mode .drawer-backdrop{background:rgba(0,0,0,.55)}
 body.dark-mode .mobile-nav{background:var(--card-bg);border-top-color:var(--card-border)}
 body.dark-mode .mnav-btn.active{color:var(--accent-green)}
@@ -4009,6 +4060,11 @@ var render = (function(){
       var drugPillHtml=ds!=='none'?'<span class="drug-pill '+(ds==='critical'?'cr':ds==='moderate'?'mo':'mi')+'">'+(ds==='critical'?'Critical':ds==='moderate'?'Caution':'Mild')+'</span>':'';
       var starHtml='<span class="stars-mini">';for(var si=0;si<5;si++)starHtml+=si<f.stars?'★':'☆';starHtml+='</span>';
       var tid='tab'+f.id;
+      var catCls=getCatCls(f.cat);
+      var ringFill=f.longevity>=90?'#34A865':f.longevity>=75?'#56C27A':f.longevity>=55?'#9CA3AF':f.longevity>=35?'#D97706':'#B91C1C';
+      var ringDash=(f.longevity/100*138.2).toFixed(1)+' 138.2';
+      var lsRingHtml='<svg class="ls-ring" width="54" height="54" viewBox="0 0 54 54" aria-label="Longevity score '+f.longevity+'"><circle cx="27" cy="27" r="22" fill="none" stroke="var(--surface-2)" stroke-width="4.5"/><circle cx="27" cy="27" r="22" fill="none" stroke="'+ringFill+'" stroke-width="4.5" stroke-dasharray="'+ringDash+'" stroke-dashoffset="34.6" stroke-linecap="round" transform="rotate(-90 27 27)"/><text x="27" y="23" text-anchor="middle" font-size="11" font-weight="700" fill="var(--text-tertiary)" font-family="Roboto,system-ui">LS</text><text x="27" y="36" text-anchor="middle" font-size="13" font-weight="800" fill="'+ringFill+'" font-family="Roboto,system-ui">'+f.longevity+'</text></svg>';
+      var evBadgeHtml=f.evidence==='High'?'<span class="ev-hi">High ev</span>':f.evidence==='Moderate'?'<span class="ev-mo">Mod ev</span>':'<span class="ev-lo">Low ev</span>';
 
       // Condition tags for expanded view
       var condTagsHtml='';
@@ -4035,30 +4091,43 @@ var render = (function(){
 
       html+=
       '<div class="card'+(f.nigeria?' nigeria-food':(f.african?' african-food':''))+(inCompare?' in-compare':'')+(inPlate?' in-plate':'')+'" id="c'+f.id+'" onclick="tog('+f.id+')" style="animation-delay:'+Math.min(i*0.02,0.2)+'s">'+
-      '<div class="card-top">'+
+      '<div class="card-header '+catCls+'">'+
         '<div class="card-emoji-wrap">'+f.emoji+'</div>'+
-        '<div class="card-identity">'+
-          '<div class="card-name">'+safeHtml(f.name)+'</div>'+
-          '<div class="card-cat-row"><span class="card-cat '+getCatCls(f.cat)+'">'+safeHtml(f.catLabel)+'</span>'+(f.nigeria?'<span class="card-nigeria-tag">Nigeria</span>':'')+(f.african?'<span class="card-african-tag">African</span>':'')+'</div>'+
+        '<div class="card-name">'+safeHtml(f.name)+'</div>'+
+        '<div class="card-cat-row">'+
+          '<span class="card-cat">'+safeHtml(f.catLabel)+'</span>'+
+          (f.nigeria?'<span class="card-nigeria-tag">Nigeria</span>':'')+
+          (f.african?'<span class="card-african-tag">African</span>':'')+
+          drugPillHtml+
         '</div>'+
-        drugPillHtml+
       '</div>'+
-      '<div class="card-macros">'+
-        '<div class="mac-item"><span class="mac-val">'+f.kcal+'</span><span class="mac-lbl">kcal</span></div>'+
-        '<div class="mac-item"><span class="mac-val">'+f.protein+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">protein</span></div>'+
-        '<div class="mac-item"><span class="mac-val">'+f.carbs+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">carbs</span></div>'+
-        '<div class="mac-item"><span class="mac-val">'+f.fat+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">fat</span></div>'+
-        '<div class="mac-item"><span class="mac-val">'+f.fiber+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">fibre</span></div>'+
+      '<div class="card-body">'+
+        '<div class="card-meta-row">'+
+          lsRingHtml+
+          '<div class="card-primary-stats">'+
+            '<div class="card-kcal-prot">'+
+              '<span class="stat-big">'+f.kcal+'</span><span class="stat-lbl">kcal</span>'+
+              '<span class="stat-sep">·</span>'+
+              '<span class="stat-big">'+f.protein+'<span style="font-size:10px;font-weight:400;opacity:.55">g</span></span><span class="stat-lbl">protein</span>'+
+            '</div>'+
+            '<div class="card-badges-row">'+
+              starHtml+
+              '<span class="gi-pill '+giPillCls+'">'+f.gi+' GI</span>'+
+              evBadgeHtml+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+        '<div class="card-secondary-macros">'+
+          '<div class="sec-mac"><span class="mac-val">'+f.carbs+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">carbs</span></div>'+
+          '<div class="sec-mac"><span class="mac-val">'+f.fat+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">fat</span></div>'+
+          '<div class="sec-mac"><span class="mac-val">'+f.fiber+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">fibre</span></div>'+
+        '</div>'+
       '</div>'+
-      '<div class="card-scores">'+
-        '<div class="longevity-bar-wrap" title="Longevity: '+f.longevity+'/100"><span class="longevity-label">LS</span><div class="longevity-bar-track"><div class="longevity-bar-fill '+lsFill+'" style="width:'+f.longevity+'%"></div></div><span class="longevity-score">'+f.longevity+'</span></div>'+
-        starHtml+
-      '</div>'+
-      '<div class="card-hover-actions" onclick="event.stopPropagation()">'+
+      '<div class="card-actions" onclick="event.stopPropagation()">'+
         '<button class="ca-btn'+(isFavourite(f.id)?' fav-active':'')+'" onclick="toggleFavourite('+f.id+')" title="Save">'+(isFavourite(f.id)?'★':'☆')+'</button>'+
         '<button class="ca-btn'+(inCompare?' compare-active':'')+'" onclick="toggleCompare('+f.id+')" title="Compare">'+(inCompare?'✓':'⚖')+'</button>'+
         '<button class="ca-btn'+(inPlate?' plate-active':'')+'" onclick="togglePlate('+f.id+')" title="'+(inPlate?'On your plate — tap to remove':'Add to My Plate')+'">'+(inPlate?'✓':'+')+'</button>'+
-        '<button class="ca-btn" onclick="logFoodToDiaryFromCard('+f.id+');event.stopPropagation()" title="Log to diary (uses portion if set)">Log</button>'+
+        '<button class="ca-btn" onclick="logFoodToDiaryFromCard('+f.id+');event.stopPropagation()" title="Log to diary">Log</button>'+
         '<button class="ca-btn" onclick="shareFood('+f.id+')" title="Share">↗</button>'+
       '</div>'+
       '<div class="expand">'+
