@@ -945,6 +945,11 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span{animation:aiDots 1.4s infinite both}
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
+/* Toast (used by share + future feedback) */
+.nf-toast{position:fixed;bottom:max(86px,env(safe-area-inset-bottom,16px));left:50%;transform:translateX(-50%) translateY(20px);padding:10px 18px;border-radius:999px;background:var(--text-primary);color:var(--card-bg);font-size:12px;font-weight:500;letter-spacing:.01em;box-shadow:0 8px 24px rgba(0,0,0,.18);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:1000;max-width:min(90vw,420px);text-align:center;line-height:1.4}
+.nf-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.nf-toast.nf-toast-error{background:#B91C1C;color:#fff}
+@media (max-width:768px){.nf-toast{bottom:max(72px,env(safe-area-inset-bottom,12px));font-size:11px;padding:9px 14px}}
 </style>
 </head>
 <body>
@@ -3706,9 +3711,8 @@ function sharePlate(){
     totals.kcal+=f.kcal*m;totals.p+=f.protein*m;totals.c+=f.carbs*m;totals.f+=f.fat*m;totals.fi+=f.fiber*m;
   });
   var base=(location.href.split('#')[0]);
-  var text='My Plate — NutriForge\n'+lines.join('\n')+'\n—\n~'+Math.round(totals.kcal)+' kcal · '+Math.round(totals.p*10)/10+'g P · '+Math.round(totals.c*10)/10+'g C · '+Math.round(totals.f*10)/10+'g F · '+Math.round(totals.fi*10)/10+'g fibre\nvs diary targets '+formatPlateInt(T.kcal)+' kcal / '+T.protein+'g protein / '+T.fiber+'g fibre\n'+base;
-  if(navigator.clipboard)navigator.clipboard.writeText(text);
-  else prompt('Copy:',text);
+  var text='My Plate — NutriForge\n'+lines.join('\n')+'\n—\n~'+Math.round(totals.kcal)+' kcal · '+Math.round(totals.p*10)/10+'g P · '+Math.round(totals.c*10)/10+'g C · '+Math.round(totals.f*10)/10+'g F · '+Math.round(totals.fi*10)/10+'g fibre\nvs diary targets '+formatPlateInt(T.kcal)+' kcal / '+T.protein+'g protein / '+T.fiber+'g fibre';
+  nfShare({title:'My Plate — NutriForge',text:text,url:base});
 }
 function getPlateSummaryForAI(){
   var ids=Object.keys(plateMap);
@@ -3992,13 +3996,71 @@ function toggleFavourite(id){
 function isFavourite(id){return!!favourites[id]}
 
 // ── SHARE ──
+function nfToast(msg, kind){
+  var existing=document.querySelector('.nf-toast');
+  if(existing && existing.parentNode) existing.parentNode.removeChild(existing);
+  var t=document.createElement('div');
+  t.className='nf-toast'+(kind?' nf-toast-'+kind:'');
+  t.textContent=msg;
+  document.body.appendChild(t);
+  requestAnimationFrame(function(){t.classList.add('show')});
+  setTimeout(function(){
+    t.classList.remove('show');
+    setTimeout(function(){if(t.parentNode) t.parentNode.removeChild(t)},220);
+  },1800);
+}
+function nfShare(opts){
+  // opts: {title, text, url}
+  var combined=(opts.text||'')+(opts.url?'\n'+opts.url:'');
+  // Try Web Share API first (mobile + supported browsers — opens OS share sheet)
+  if(navigator.share){
+    var payload={title:opts.title||'NutriForge',text:opts.text||'',url:opts.url||''};
+    var canShareOk=true;
+    try{if(navigator.canShare) canShareOk=navigator.canShare(payload);}catch(e){canShareOk=true;}
+    if(canShareOk){
+      navigator.share(payload).then(function(){
+        nfToast('Shared');
+      }).catch(function(err){
+        // User cancelled — silent. Other errors → fall back to clipboard.
+        if(err && (err.name==='AbortError'||err.name==='NotAllowedError')) return;
+        nfShareCopy(combined);
+      });
+      return;
+    }
+  }
+  nfShareCopy(combined);
+}
+function nfShareCopy(text){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(function(){
+      nfToast('Copied to clipboard');
+    }).catch(function(){
+      nfShareLegacy(text);
+    });
+    return;
+  }
+  nfShareLegacy(text);
+}
+function nfShareLegacy(text){
+  // Final fallback: textarea + execCommand for older browsers / non-secure contexts
+  try{
+    var ta=document.createElement('textarea');
+    ta.value=text;
+    ta.style.position='fixed';ta.style.top='-1000px';
+    document.body.appendChild(ta);
+    ta.focus();ta.select();
+    var ok=document.execCommand('copy');
+    document.body.removeChild(ta);
+    if(ok){nfToast('Copied to clipboard');return;}
+  }catch(e){}
+  prompt('Copy:',text);
+}
 function shareFood(id){
   var f=foods.filter(function(x){return x.id===id})[0];
   if(!f)return;
-  var deep=(location.href.split('#')[0])+'#food='+id;
-  var text=f.emoji+' '+f.name+' | '+f.kcal+'kcal | '+f.protein+'g protein | Longevity: '+f.longevity+'/100 | NutriForge\n'+deep;
-  if(navigator.clipboard)navigator.clipboard.writeText(text);
-  else prompt('Copy:',text);
+  var url=(location.href.split('#')[0])+'#food='+id;
+  var text=f.emoji+' '+f.name+' · '+f.kcal+' kcal · '+f.protein+'g protein · Longevity '+f.longevity+'/100 · NutriForge';
+  nfShare({title:'NutriForge — '+f.name,text:text,url:url});
 }
 
 // ── AI ──
