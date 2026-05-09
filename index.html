@@ -103,7 +103,13 @@ body.dark-mode .today-focus-chip.active{color:#0A0B0C}
 body.dark-mode .header .dm-moon{display:none}
 body.dark-mode .header .dm-sun{display:flex}
 .overflow-menu-wrap{position:relative}
-.ha-icon-group{display:flex;align-items:center;gap:2px;border-left:1px solid rgba(255,255,255,.15);padding-left:6px;margin-left:2px}
+.ha-icon-group{display:flex;align-items:center;gap:0;border-left:1px solid rgba(255,255,255,.15);padding-left:6px;margin-left:2px}
+.ha-group{display:inline-flex;align-items:center;gap:2px;padding:0 4px;position:relative}
+.ha-group + .ha-group::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:1px;background:rgba(255,255,255,.1)}
+.ha-vat{color:#FCD34D}
+.ha-vat:hover{background:rgba(251,191,36,.18);color:#FDE68A}
+/* Mobile-only feature shortcuts inside overflow menu */
+.overflow-mobile-only{display:none}
 .overflow-menu{display:none;position:absolute;top:42px;right:0;background:var(--card-bg);border:1px solid var(--card-border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.15);min-width:200px;padding:4px 0;z-index:320;max-height:min(75dvh,560px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
 .overflow-menu.open{display:block}
 .overflow-menu button{display:block;width:100%;text-align:left;padding:8px 14px;font-size:12px;color:var(--text-primary);transition:background .1s}
@@ -187,34 +193,21 @@ body.dark-mode .cond-pill:hover{background:var(--surface-2);border-color:var(--c
 .card.nigeria-food{border-left:3px solid #008751}
 .card.in-compare{outline:2px solid #2563EB;outline-offset:1px}
 .card.in-plate{outline:2px solid var(--accent-green);outline-offset:1px}
-.card-top{padding:12px 14px 0;display:flex;align-items:flex-start;gap:10px}
 .card-emoji-wrap{width:40px;height:40px;border-radius:12px;background:var(--surface);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;line-height:1}
-.card-identity{flex:1;min-width:0;padding-top:1px}
 .card-name{font-family:'Roboto Serif',Georgia,serif;font-size:14px;font-weight:700;font-optical-sizing:auto;color:var(--text-primary);line-height:1.25;margin-bottom:1px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;letter-spacing:-.015em}
 .card-cat-row{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin-top:2px}
 .card-cat{font-size:8px;font-weight:600;padding:1px 6px;border-radius:20px;letter-spacing:.03em;text-transform:uppercase}
 .card-african-tag{font-size:8px;color:#B45309;font-weight:700;letter-spacing:.02em}
 .card-nigeria-tag{font-size:8px;color:#008751;font-weight:600}
 
-/* Macro bar */
-.card-macros{display:grid;grid-template-columns:repeat(5,1fr);margin:8px 0 0;border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border)}
-.mac-item{text-align:center;padding:6px 2px}
-.mac-item:not(:last-child){border-right:1px solid var(--card-border)}
+/* Macro labels (used in secondary-macros and table view) */
 .mac-val{display:block;font-size:13px;font-weight:600;color:var(--text-primary);line-height:1;font-variant-numeric:tabular-nums}
 .mac-lbl{display:block;font-size:7px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
 
-/* Longevity bar — minimal */
-.card-scores{display:flex;align-items:center;gap:6px;padding:6px 14px 4px}
-.longevity-bar-wrap{flex:1;display:flex;align-items:center;gap:5px}
-.longevity-bar-track{flex:1;height:3px;background:var(--surface-2);border-radius:3px;overflow:hidden}
-.longevity-bar-fill{height:100%;border-radius:3px;transition:width .4s}
+/* Longevity tier gradients (still used in table view via JS) */
 .ls-fill-5{background:linear-gradient(90deg,#1D5C3A,#34A865)}.ls-fill-4{background:linear-gradient(90deg,#2D7D46,#56C27A)}.ls-fill-3{background:linear-gradient(90deg,#6B7280,#9CA3AF)}.ls-fill-2{background:linear-gradient(90deg,#B45309,#D97706)}.ls-fill-1{background:linear-gradient(90deg,#7F1D1D,#B91C1C)}
-.longevity-label{font-size:8px;color:var(--text-tertiary)}
-.longevity-score{font-size:10px;font-weight:700;color:var(--text-primary);font-variant-numeric:tabular-nums;min-width:20px}
 
-/* Hover actions — appear on hover */
-.card-hover-actions{display:flex;gap:3px;padding:0 12px 8px;justify-content:flex-end;opacity:0;transition:opacity .15s;height:0;overflow:hidden}
-.card:hover .card-hover-actions,.card.open .card-hover-actions{opacity:1;height:auto;padding:4px 12px 10px}
+/* Card action buttons (used in .card-actions footer) */
 .ca-btn{font-size:10px;font-weight:500;padding:4px 10px;border-radius:16px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-secondary);cursor:pointer;transition:all .1s;white-space:nowrap;display:inline-flex;align-items:center;gap:3px}
 .ca-btn:hover{background:var(--text-primary);color:var(--card-bg);border-color:var(--text-primary)}
 .ca-btn.fav-active{color:#F59E0B;border-color:#FDE68A;background:#FFFBEB}
@@ -480,10 +473,6 @@ body.dark-mode .vat-protocol-panel{border-left-color:#d4a824;box-shadow:inset 4p
 .vat-hub-quick:focus-visible{outline:2px solid var(--accent-green);outline-offset:2px}
 body.dark-mode .vat-hub-quick{color:#FCD34D;border-color:rgba(251,191,36,.42);background:rgba(251,191,36,.08)}
 body.dark-mode .vat-hub-quick:hover{background:rgba(251,191,36,.14)}
-.vat-header-cta{font-size:10px;font-weight:700;letter-spacing:.06em;padding:0 9px;min-height:34px;border-radius:8px;border:1px solid rgba(201,162,39,.42);color:#9a7618;background:rgba(255,248,231,.2);cursor:pointer;font-family:inherit}
-.vat-header-cta:hover{border-color:#c9a227;background:rgba(255,248,231,.45)}
-body.dark-mode .vat-header-cta{color:#FCD34D;border-color:rgba(251,191,36,.38);background:rgba(251,191,36,.08)}
-body.dark-mode .vat-header-cta:hover{background:rgba(251,191,36,.14)}
 .context-badge .ctx-vat-btn{font-size:11px;font-weight:600;padding:4px 12px;border-radius:15px;border:1px solid rgba(217,119,6,.42);background:rgba(254,243,199,.4);color:#9A3412;cursor:pointer;margin-left:4px;transition:background .12s,border-color .12s}
 .context-badge .ctx-vat-btn:hover{background:rgba(251,191,36,.28);border-color:rgba(245,158,11,.55)}
 body.dark-mode .context-badge .ctx-vat-btn{color:#FCD34D;border-color:rgba(251,191,36,.35);background:rgba(251,191,36,.1)}
@@ -768,6 +757,7 @@ body.dark-mode .plate-hint-action:hover{color:var(--text-primary)}
   .header .search-wrap{max-width:none}
   .header-actions .ha-btn:not(#overflowBtn):not(#btnDarkMode){display:none}
   .ha-icon-group{display:none}
+  .overflow-mobile-only{display:block}
   .mobile-nav{display:block}
   .mnav-btn{min-height:50px;padding:8px 12px 10px;font-size:10px}
   .main{padding-left:max(1rem,env(safe-area-inset-left));padding-right:max(1rem,env(safe-area-inset-right));padding-bottom:max(68px,calc(56px + env(safe-area-inset-bottom,0)))}
@@ -782,13 +772,8 @@ body.dark-mode .plate-hint-action:hover{color:var(--text-primary)}
   .table-view td,.table-view th{padding:4px 6px}
   .table-view .tv-foodname{max-width:120px}
   .table-view .tv-action{opacity:1}
-  .grid.view-list .card-macros{display:none}
-  .grid.view-list .card-scores{display:none}
   .view-switcher{margin-left:auto}
-  .card-macros .mac-val{font-size:12px}
-  .card-macros .mac-lbl{font-size:6px}
   .ai-messages{height:min(38vh,280px);min-height:160px}
-  .card .card-hover-actions,.card:hover .card-hover-actions,.card.open .card-hover-actions{opacity:1;height:auto;padding:4px 12px 10px}
   .chip,.filter-select,.filters-popover-wrap .chip,.filter-row .cond-dropdown-trigger{min-height:40px;display:inline-flex;align-items:center}
   .ca-btn{min-height:40px;padding:6px 12px}
   .exp-tab{font-size:8px;padding:10px 6px}
@@ -817,7 +802,7 @@ body.dark-mode .plate-hint-action:hover{color:var(--text-primary)}
   .exp-tab{font-size:8px;padding:10px 4px;letter-spacing:0}
 }
 @media print{
-  .header,.filter-row,.mobile-nav,.drawer,.drawer-backdrop,.card-hover-actions{display:none!important}
+  .header,.filter-row,.mobile-nav,.drawer,.drawer-backdrop,.card-actions{display:none!important}
   .card{break-inside:avoid;border:1px solid #ccc;margin-bottom:6px}
   .card.open .expand{display:block!important}
   body{background:#fff}
@@ -825,7 +810,7 @@ body.dark-mode .plate-hint-action:hover{color:var(--text-primary)}
 }
 
 /* Patient mode */
-body.patient-mode .card-hover-actions .ca-btn:last-child{display:none}
+body.patient-mode .card-actions .ca-btn:last-child{display:none}
 body.patient-mode .ev-hi::before{content:'Strong evidence · '}
 body.patient-mode .ev-mo::before{content:'Good evidence · '}
 body.patient-mode .ev-lo::before{content:'Traditional use · '}
@@ -894,41 +879,67 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
       <span class="dm-icon dm-moon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
       <span class="dm-icon dm-sun" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></span>
     </button>
-    <button type="button" class="vat-header-cta" onclick="openVatProtocol()" title="Visceral adiposity protocol — summaries &amp; documents">VAT</button>
     <div class="ha-icon-group" role="group" aria-label="Feature shortcuts">
-      <button class="ha-btn" onclick="openDrawer('compare')" title="Compare foods — side-by-side nutrient comparison" aria-label="Compare foods">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
-      </button>
-      <button class="ha-btn" onclick="openDrawer('combos')" title="Food combinations — synergy &amp; anti-nutrient pairings" aria-label="Food combinations">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg>
-      </button>
-      <button class="ha-btn" onclick="openDrawer('chart')" title="Nutrient chart — visual macro &amp; micronutrient breakdown" aria-label="Nutrient chart">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9"/><rect x="9.5" y="7" width="4" height="14"/><rect x="16" y="3" width="4" height="18"/><line x1="2" y1="21" x2="22" y2="21"/></svg>
-      </button>
-      <button class="ha-btn" onclick="openT2dmClinicalGuide()" title="The field guide — NutriForge clinical nutrition reference" aria-label="Field guide">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-      </button>
-      <button class="ha-btn" onclick="openDrawer('diary')" title="Daily diary &amp; goals — log meals and track daily targets" aria-label="Daily diary and goals">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="14" x2="13" y2="14"/></svg>
-      </button>
-      <button class="ha-btn" onclick="openCommunityStart()" title="Start guide — set your health goals to personalise NutriForge" aria-label="Start guide">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg>
-      </button>
-      <button class="ha-btn" onclick="openDrawer('meals')" title="Meal templates — browse and save ready-made plates" aria-label="Meal templates">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-      </button>
-      <button class="ha-btn" onclick="openDrawer('drugs')" title="Drug–food checker — interactions between medications and foods" aria-label="Drug–food checker">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.5 20.5L3.5 13.5a6 6 0 018.5-8.5l7 7a6 6 0 01-8.5 8.5z"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/></svg>
-      </button>
-      <button class="ha-btn" onclick="openDrawer('profiles')" title="Client profiles — manage per-client sessions and snapshots" aria-label="Client profiles">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-      </button>
+      <span class="ha-group personal" role="group" aria-label="Personal">
+        <button class="ha-btn" onclick="openDrawer('diary')" title="Daily diary &amp; goals — log meals and track daily targets" aria-label="Daily diary and goals">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="14" x2="13" y2="14"/></svg>
+        </button>
+        <button class="ha-btn" onclick="openDrawer('meals')" title="Meal templates — browse and save ready-made plates" aria-label="Meal templates">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </button>
+        <button class="ha-btn" onclick="openCommunityStart()" title="Start guide — set your health goals to personalise NutriForge" aria-label="Start guide">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg>
+        </button>
+      </span>
+      <span class="ha-group explore" role="group" aria-label="Explore">
+        <button class="ha-btn" onclick="openDrawer('compare')" title="Compare foods — side-by-side nutrient comparison" aria-label="Compare foods">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+        </button>
+        <button class="ha-btn" onclick="openDrawer('combos')" title="Food combinations — synergy &amp; anti-nutrient pairings" aria-label="Food combinations">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg>
+        </button>
+        <button class="ha-btn" onclick="openDrawer('chart')" title="Nutrient chart — visual macro &amp; micronutrient breakdown" aria-label="Nutrient chart">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9"/><rect x="9.5" y="7" width="4" height="14"/><rect x="16" y="3" width="4" height="18"/><line x1="2" y1="21" x2="22" y2="21"/></svg>
+        </button>
+      </span>
+      <span class="ha-group clinical" role="group" aria-label="Clinical">
+        <button class="ha-btn" onclick="openDrawer('drugs')" title="Drug–food checker — interactions between medications and foods" aria-label="Drug–food checker">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.5 20.5L3.5 13.5a6 6 0 018.5-8.5l7 7a6 6 0 01-8.5 8.5z"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/></svg>
+        </button>
+        <button class="ha-btn" onclick="openT2dmClinicalGuide()" title="The field guide — NutriForge clinical nutrition reference" aria-label="Field guide">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        </button>
+        <button class="ha-btn ha-vat" onclick="openVatProtocol()" title="VAT hub — visceral adiposity protocol &amp; documents" aria-label="VAT visceral fat protocol">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </button>
+      </span>
+      <span class="ha-group admin" role="group" aria-label="Admin">
+        <button class="ha-btn" onclick="openDrawer('profiles')" title="Client profiles — manage per-client sessions and snapshots" aria-label="Client profiles">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </button>
+      </span>
     </div>
     <div class="overflow-menu-wrap">
       <button type="button" class="ha-btn" id="overflowBtn" onclick="toggleOverflow()" title="More options" aria-label="More options">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
       </button>
       <div class="overflow-menu" id="overflowMenu">
+        <div class="overflow-mobile-only">
+          <button onclick="openDrawer('diary');toggleOverflow()">Daily diary &amp; goals</button>
+          <button onclick="openDrawer('meals');toggleOverflow()">Meal templates</button>
+          <button onclick="openCommunityStart();toggleOverflow()">Start guide (goals)</button>
+          <hr>
+          <button onclick="openDrawer('compare');toggleOverflow()">Compare foods</button>
+          <button onclick="openDrawer('combos');toggleOverflow()">Food combinations</button>
+          <button onclick="openDrawer('chart');toggleOverflow()">Nutrient chart</button>
+          <hr>
+          <button onclick="openDrawer('drugs');toggleOverflow()">Drug–food checker</button>
+          <button onclick="openT2dmClinicalGuide();toggleOverflow()">The field guide</button>
+          <button onclick="openVatProtocol();toggleOverflow()">VAT hub (visceral fat)</button>
+          <hr>
+          <button onclick="openDrawer('profiles');toggleOverflow()">Client profiles</button>
+          <hr>
+        </div>
         <button onclick="openMethodology();toggleOverflow()">Methodology &amp; trust</button>
         <hr>
         <button onclick="exportCSV();toggleOverflow()">Export CSV</button>
