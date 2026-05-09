@@ -85,7 +85,61 @@ body.dark-mode .brand-dropdown-panel .browse-hero{background:linear-gradient(165
 body.dark-mode .today-focus-chip.active{color:#0A0B0C}
 .today-dash-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .today-dash-links .ca-btn{font-size:11px}
-.today-focus-note{width:100%;min-height:52px;font-size:12px;padding:8px;border-radius:8px;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text-primary);resize:vertical;box-sizing:border-box;margin-top:6px}
+.today-focus-note{width:100%;min-height:48px;font-size:12px;padding:8px 10px;border-radius:8px;border:1px solid var(--card-border);background:var(--surface);color:var(--text-primary);resize:vertical;box-sizing:border-box;margin-top:6px;font-family:inherit}
+.today-focus-note:focus{outline:none;border-color:var(--accent-green);background:var(--card-bg)}
+.today-focus-save{margin-top:8px;width:100%}
+/* Premium Today dashboard */
+.today-head{display:flex;align-items:baseline;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--card-border)}
+.today-head-day{font-family:'Roboto Serif',Georgia,serif;font-size:18px;font-weight:600;letter-spacing:-.01em;color:var(--text-primary);line-height:1}
+.today-head-date{font-size:11px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.08em}
+.today-banner{font-size:11px;line-height:1.45;padding:8px 10px;border-radius:8px;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.today-banner button{font-size:10px;font-weight:600;padding:4px 8px;border-radius:6px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer;font-family:inherit}
+.today-banner-warn{background:rgba(217,119,6,.10);color:#B45309;border:1px solid rgba(217,119,6,.25)}
+.today-banner-info{background:var(--surface);color:var(--text-secondary);border:1px solid var(--card-border)}
+body.dark-mode .today-banner-warn{background:rgba(251,191,36,.10);color:#FCD34D;border-color:rgba(251,191,36,.25)}
+.today-cta-primary{display:flex;align-items:center;gap:10px;width:100%;padding:12px 14px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--accent-green) 0%,#16A34A 100%);color:#fff;cursor:pointer;font-family:inherit;text-align:left;margin-bottom:14px;box-shadow:0 2px 8px rgba(22,163,74,.18);transition:transform .12s,box-shadow .12s}
+.today-cta-primary:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(22,163,74,.28)}
+.today-cta-icon{flex-shrink:0;display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.18)}
+.today-cta-text{flex:1;display:flex;flex-direction:column;gap:1px;min-width:0}
+.today-cta-label{font-size:13px;font-weight:600;letter-spacing:.005em;line-height:1.25}
+.today-cta-sub{font-size:10px;opacity:.85;line-height:1.35}
+.today-cta-arrow{font-size:16px;opacity:.85}
+.today-section-head{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--text-tertiary);margin:14px 0 6px}
+.today-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px}
+.today-stat{padding:8px 10px;border-radius:8px;border:1px solid var(--card-border);background:var(--surface)}
+.today-stat-head{display:flex;justify-content:space-between;align-items:center;gap:4px;margin-bottom:3px}
+.today-stat-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text-tertiary)}
+.today-stat-pct{font-size:9px;font-weight:700;font-variant-numeric:tabular-nums}
+.today-stat-pct.tsbar-under{color:#B45309}
+.today-stat-pct.tsbar-ok{color:#15803D}
+.today-stat-pct.tsbar-over{color:#B91C1C}
+.today-stat-vals{display:flex;align-items:baseline;gap:3px;margin-bottom:5px}
+.today-stat-val{font-family:'Roboto Serif',Georgia,serif;font-size:16px;font-weight:600;color:var(--text-primary);font-variant-numeric:tabular-nums;line-height:1}
+.today-stat-goal{font-size:10px;color:var(--text-tertiary);font-variant-numeric:tabular-nums}
+.today-stat-bar{height:4px;border-radius:4px;background:var(--surface-2);overflow:hidden}
+.today-stat-bar-fill{height:100%;border-radius:4px;transition:width .35s ease}
+.today-stat-bar-fill.tsbar-under{background:linear-gradient(90deg,#D97706,#F59E0B)}
+.today-stat-bar-fill.tsbar-ok{background:linear-gradient(90deg,#15803D,#22C55E)}
+.today-stat-bar-fill.tsbar-over{background:linear-gradient(90deg,#B91C1C,#EF4444)}
+.today-meal-pills{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 4px}
+.today-meal-pill{font-size:10px;font-weight:500;padding:4px 9px;border-radius:999px;border:1px solid var(--card-border);background:var(--surface);color:var(--text-tertiary)}
+.today-meal-pill.has-saved{background:var(--accent-green-light);color:var(--accent-green);border-color:#86EFAC;font-weight:600}
+body.dark-mode .today-meal-pill.has-saved{background:rgba(94,234,212,.12);color:#A7F3E0;border-color:rgba(94,234,212,.25)}
+.today-card{border:1px solid var(--card-border);border-radius:10px;background:var(--surface);padding:10px 12px;margin-top:10px}
+.today-card-head{display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.today-card-icon{font-size:14px;line-height:1}
+.today-card-title{font-size:11px;font-weight:600;color:var(--text-primary);flex:1;letter-spacing:.01em}
+.today-card-action{font-size:10px;font-weight:600;color:var(--accent-green);background:transparent;border:none;cursor:pointer;font-family:inherit;padding:2px 4px}
+.today-card-action:hover{text-decoration:underline}
+.today-curve-card .today-mini-curve{display:block;width:100%;height:46px;margin:4px 0}
+.today-curve-peak{font-family:'Roboto Serif',Georgia,serif;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+.today-curve-peak small{font-size:9px;font-weight:500;opacity:.75;margin-left:1px}
+.today-curve-meta{font-size:10px;color:var(--text-tertiary);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.today-plate-line{font-size:12px;color:var(--text-primary);margin-bottom:3px}
+.today-plate-mix{font-size:10px;color:var(--text-tertiary)}
+.today-saved-line{margin-top:8px;padding:6px 10px;font-size:10px;color:var(--accent-green);background:var(--accent-green-light);border-radius:6px;line-height:1.45}
+body.dark-mode .today-saved-line{background:rgba(94,234,212,.10);color:#A7F3E0}
+.today-context-foot{margin-top:12px;padding-top:8px;border-top:1px solid var(--card-border);font-size:10px;color:var(--text-tertiary);line-height:1.5}
 @supports (width:1dvw){
   .today-dashboard-panel{width:min(26rem,calc(100dvw - 2rem - env(safe-area-inset-left) - env(safe-area-inset-right)))}
 }
@@ -3396,11 +3450,78 @@ function browseContextSummaryHtml(){
   if(term)parts.push('Search: “'+term+'”');
   return parts.length?parts.map(function(p){return'<span>'+safeHtml(p)+'</span>';}).join(' · '):'<span>No topic filter — full database.</span>';
 }
+function pickTodayPrimaryCTA(ctx){
+  var hour=new Date().getHours();
+  var dayEmpty=ctx.dayEntries.length===0;
+  var hasPlate=ctx.plateIds.length>0;
+  if(hasPlate){
+    return {label:'Open My Plate',sub:ctx.plateIds.length+' items waiting · log when ready',action:"closeTodayDashboardPanel();openDrawer('plate')",icon:'plate'};
+  }
+  if(dayEmpty && hour<11){
+    return {label:'Log breakfast',sub:'Diary is empty for today',action:"closeTodayDashboardPanel();openDrawer('diary')",icon:'sun'};
+  }
+  if(dayEmpty && hour<16){
+    return {label:'Log lunch',sub:'No entries yet — start with what you ate',action:"closeTodayDashboardPanel();openDrawer('diary')",icon:'utensils'};
+  }
+  if(dayEmpty){
+    return {label:'Log dinner',sub:'Nothing recorded today',action:"closeTodayDashboardPanel();openDrawer('diary')",icon:'moon'};
+  }
+  if(ctx.totals.fiber<ctx.goals.fiber*0.4){
+    return {label:'Add fibre to today',sub:'Fibre is under '+Math.round(ctx.totals.fiber)+' / '+ctx.goals.fiber+'g — try beans, oats, greens',action:"closeTodayDashboardPanel()",icon:'leaf'};
+  }
+  if(ctx.totals.protein<ctx.goals.protein*0.45){
+    return {label:'Add protein',sub:'Protein '+Math.round(ctx.totals.protein)+' / '+ctx.goals.protein+'g — try fish, eggs, beans',action:"closeTodayDashboardPanel()",icon:'protein'};
+  }
+  return {label:'Browse foods',sub:'Find your next plate',action:"closeTodayDashboardPanel()",icon:'browse'};
+}
+function todayCtaIcon(name){
+  var ic={
+    plate:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5"/></svg>',
+    sun:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>',
+    utensils:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h2a2 2 0 002-2V2M5 11v11M14 14V2c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h2"/><path d="M19 2v20"/></svg>',
+    moon:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>',
+    leaf:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 014 13C4 8 7 5 12 4c8 0 9 4 9 8 0 6-3 8-7 8zm0 0v-9"/></svg>',
+    protein:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5l11 11M21 21l-1-1M3 3l1 1M18 22l4-4-3-3-1.5 1.5L13 12l-1.5 1.5L7.5 9 9 7.5 4.5 3 3 4.5 7.5 9 6 10.5 10.5 15 9 16.5 13.5 21 15 19.5 18 22z"/></svg>',
+    browse:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>'
+  };
+  return ic[name]||ic.browse;
+}
+function todayStatBlock(label,val,goal,unit){
+  var pct=goal>0?Math.round(val/goal*100):0;
+  var cls=pct<60?'tsbar-under':pct>115?'tsbar-over':'tsbar-ok';
+  var widthPct=Math.min(100,pct);
+  return '<div class="today-stat">'+
+    '<div class="today-stat-head"><span class="today-stat-lbl">'+label+'</span><span class="today-stat-pct '+cls+'">'+pct+'%</span></div>'+
+    '<div class="today-stat-vals"><span class="today-stat-val">'+Math.round(val)+'</span><span class="today-stat-goal">/ '+goal+(unit?' '+unit:'')+'</span></div>'+
+    '<div class="today-stat-bar"><div class="today-stat-bar-fill '+cls+'" style="width:'+widthPct+'%"></div></div>'+
+    '</div>';
+}
+function todayMiniCurve(stats){
+  var data=plateGlucoseCurvePoints(stats);
+  var pts=data.pts,peak=data.peak,baseline=5.5;
+  var W=200,H=46,padX=4,padY=4;
+  var maxY=Math.max(peak+0.3,9);
+  var minY=4.7;
+  var yFor=function(v){return H-padY-((v-minY)/(maxY-minY))*(H-padY*2);};
+  var xFor=function(t){return padX+(t/180)*(W-padX*2);};
+  var d=pts.map(function(p,i){return (i===0?'M':'L')+' '+xFor(p.t).toFixed(1)+' '+yFor(p.v).toFixed(1);}).join(' ');
+  var dFill=d+' L '+xFor(180).toFixed(1)+' '+(H-padY)+' L '+xFor(0).toFixed(1)+' '+(H-padY)+' Z';
+  var verdict=classifyPlateGlucose(stats);
+  var color=verdict.color;
+  return '<svg class="today-mini-curve" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none">'+
+    '<line x1="'+padX+'" y1="'+yFor(baseline).toFixed(1)+'" x2="'+(W-padX)+'" y2="'+yFor(baseline).toFixed(1)+'" stroke="var(--card-border)" stroke-dasharray="2 2"/>'+
+    '<path d="'+dFill+'" fill="'+color+'" fill-opacity="0.18"/>'+
+    '<path d="'+d+'" fill="none" stroke="'+color+'" stroke-width="1.5"/>'+
+    '</svg>';
+}
 function refreshTodayDashboard(){
   var mount=document.getElementById('todayDashboardBody');
   if(!mount)return;
   loadDiaryAndProfiles();
   var iso=todayISO();
+  var d=new Date();
+  var weekday=d.toLocaleDateString(undefined,{weekday:'long'});
+  var monthDay=d.toLocaleDateString(undefined,{month:'short',day:'numeric'});
   var rawPrev=loadRawTodayFocus();
   var staleOtherDay=rawPrev&&rawPrev.date&&rawPrev.date!==iso;
   var ef=getEffectiveTodayFocus();
@@ -3409,61 +3530,80 @@ function refreshTodayDashboard(){
   var dayEntries=diaryByDate[iso]||[];
   var totals=NFMealsCore.aggregateDiaryEntries(dayEntries,foodsById);
   var gk=diaryGoals.kcal,gp=diaryGoals.protein,gfi=diaryGoals.fiber;
-  function bar(label,val,goal){
-    var pct=goal>0?Math.min(100,Math.round(val/goal*100)):0;
-    return'<div class="diary-bar-wrap"><div class="diary-bar-label"><span>'+label+'</span><span>'+Math.round(val)+' / '+goal+'</span></div><div class="diary-bar-track"><div class="diary-bar-fill" style="width:'+pct+'%"></div></div></div>';
-  }
   var plateIds=Object.keys(plateMap);
   var plateK=0;
+  var catMix={};
   plateIds.forEach(function(id){
     var f=plateMap[id];
     var fid=parseInt(id,10);
     var gr=portionSizes[fid]||portionSizes[id]||100;
     plateK+=f.kcal*(gr/100);
+    var c=f.catLabel||f.cat||'other';
+    catMix[c]=(catMix[c]||0)+1;
   });
+  var plateGlucoseStats=plateIds.length?computePlateGlucoseStats():null;
+  var plateVerdict=plateIds.length?classifyPlateGlucose(plateGlucoseStats):null;
+  var primary=pickTodayPrimaryCTA({dayEntries:dayEntries,plateIds:plateIds,totals:totals,goals:{kcal:gk,protein:gp,fiber:gfi},focus:ef});
   var mp=getMealPlatesMap();
-  var mealLine=['breakfast','lunch','dinner'].map(function(m){
+  var mealPills=['breakfast','lunch','dinner'].map(function(m){
     var s=mp[m];
-    return mealPlateSlotLabel(m)+': '+(s&&s.ids&&s.ids.length?s.ids.length+' saved':'—');
-  }).join(' · ');
+    var has=s&&s.ids&&s.ids.length;
+    var cls=has?' has-saved':'';
+    return '<span class="today-meal-pill'+cls+'">'+mealPlateSlotLabel(m).slice(0,1).toUpperCase()+mealPlateSlotLabel(m).slice(1)+(has?' · '+s.ids.length:'')+'</span>';
+  }).join('');
   var diaryMis=(diaryDate!==iso)
-    ?'<p class="drawer-tools-note" style="margin:0 0 8px;font-size:11px;color:var(--accent-amber)">Diary drawer is on <strong>'+safeHtml(diaryDate)+'</strong>, not calendar today. <button type="button" class="ca-btn" onclick="jumpDiaryToToday();closeTodayDashboardPanel();openDrawer(\'diary\')">Jump diary to today</button></p>'
+    ?'<div class="today-banner today-banner-warn"><strong>Diary view is on '+safeHtml(diaryDate)+'</strong> (not today). <button type="button" onclick="jumpDiaryToToday();closeTodayDashboardPanel();openDrawer(\'diary\')">Jump to today →</button></div>'
     :'';
   var staleNote=staleOtherDay
-    ?'<p class="drawer-tools-note" style="margin:0 0 8px;font-size:11px">A focus was saved for another day. Pick <strong>today’s</strong> protocol below and Save.</p>'
+    ?'<div class="today-banner today-banner-info">A focus was saved for another day. Pick today\'s and save below.</div>'
     :'';
   var chips=buildTodayFocusPresets().map(function(p){
     var act=p.id===draft?' active':'';
-    return'<button type="button" class="today-focus-chip'+act+'" onclick="todayFocusPick(\''+p.id+'\')">'+p.emoji+' '+safeHtml(p.label)+'</button>';
+    return '<button type="button" class="today-focus-chip'+act+'" onclick="todayFocusPick(\''+p.id+'\')">'+p.emoji+' '+safeHtml(p.label)+'</button>';
   }).join('');
   var savedLine=ef
-    ?'<p class="drawer-tools-note" style="margin:6px 0 0;font-size:10px;color:var(--accent-green)">Saved for today: '+safeHtml(todayFocusLabel(ef.protocolId))+(ef.note?' · “'+safeHtml(ef.note)+'”':'')+'</p>'
-    :'<p class="drawer-tools-note" style="margin:6px 0 0;font-size:10px;color:var(--text-tertiary)">No protocol saved for today yet — choose a chip and Save.</p>';
+    ?'<div class="today-saved-line">✓ Saved: <strong>'+safeHtml(todayFocusLabel(ef.protocolId))+'</strong>'+(ef.note?' · '+safeHtml(ef.note):'')+'</div>'
+    :'';
+  var glucoseCard=plateIds.length
+    ?'<div class="today-card today-curve-card">'+
+      '<div class="today-card-head"><span class="today-card-icon" aria-hidden="true">📈</span><span class="today-card-title">Postprandial preview</span><span class="today-curve-peak" style="color:'+plateVerdict.color+'">'+plateGlucoseCurvePoints(plateGlucoseStats).peak.toFixed(1)+' <small>mmol/L</small></span></div>'+
+      todayMiniCurve(plateGlucoseStats)+
+      '<div class="today-curve-meta">GL '+plateGlucoseStats.totalGL+' · '+(plateGlucoseStats.avgGI||'—')+' avg GI · '+plateVerdict.label+'</div>'+
+    '</div>'
+    :'';
+  var plateCard=plateIds.length
+    ?'<div class="today-card">'+
+      '<div class="today-card-head"><span class="today-card-icon" aria-hidden="true">🍽️</span><span class="today-card-title">My Plate</span><button type="button" class="today-card-action" onclick="closeTodayDashboardPanel();openDrawer(\'plate\')">Open →</button></div>'+
+      '<div class="today-plate-line"><strong>'+plateIds.length+'</strong> item'+(plateIds.length===1?'':'s')+' · ~'+Math.round(plateK)+' kcal</div>'+
+      '<div class="today-plate-mix">'+Object.keys(catMix).slice(0,4).map(function(c){return safeHtml(c)+' ×'+catMix[c]}).join(' · ')+'</div>'+
+    '</div>'
+    :'';
+  var ctxLine=browseContextSummaryHtml();
   mount.innerHTML=
-    '<h2 class="today-dash-title">Today · '+safeHtml(iso)+'</h2>'+
-    '<p class="drawer-tools-note" style="margin:0 0 10px;font-size:11px;line-height:1.45">Summary uses <strong>calendar today</strong> for the diary totals below. Your plate and browse filters are live.</p>'+
+    '<div class="today-head"><div class="today-head-day">'+safeHtml(weekday)+'</div><div class="today-head-date">'+safeHtml(monthDay)+'</div></div>'+
     staleNote+diaryMis+
-    '<div class="plate-insights-title" style="margin-top:4px">Logged today</div>'+
-    '<p class="drawer-tools-note" style="margin:4px 0 6px;font-size:11px">'+(dayEntries.length?dayEntries.length+' entr'+(dayEntries.length===1?'y':'ies'):'Nothing logged yet')+' · ~'+totals.kcal+' kcal · '+totals.protein+' g protein · '+totals.fiber+' g fibre</p>'+
-    bar('kcal',totals.kcal,gk)+bar('Protein (g)',totals.protein,gp)+bar('Fibre (g)',totals.fiber,gfi)+
-    '<div class="plate-insights-title" style="margin-top:12px">Planning</div>'+
-    '<p class="drawer-tools-note" style="margin:4px 0;font-size:11px"><strong>My Plate:</strong> '+plateIds.length+' item(s)'+(plateIds.length?' · ~'+Math.round(plateK)+' kcal':'')+'</p>'+
-    '<p class="drawer-tools-note" style="margin:4px 0 10px;font-size:11px"><strong>Meal slots:</strong> '+mealLine+'</p>'+
-    '<div class="plate-insights-title" style="margin-top:4px">Browse context</div>'+
-    '<p class="drawer-tools-note" style="margin:4px 0 10px;font-size:11px;line-height:1.45">'+browseContextSummaryHtml()+'</p>'+
-    '<div class="plate-insights-title" style="margin-top:4px">Today’s protocol focus</div>'+
-    '<p class="drawer-tools-note" style="margin:4px 0;font-size:10px;line-height:1.45">What you intend to follow today (device only). Does not change filters automatically.</p>'+
+    '<button type="button" class="today-cta-primary" onclick="'+primary.action+'"><span class="today-cta-icon">'+todayCtaIcon(primary.icon)+'</span><span class="today-cta-text"><span class="today-cta-label">'+safeHtml(primary.label)+'</span><span class="today-cta-sub">'+safeHtml(primary.sub)+'</span></span><span class="today-cta-arrow">→</span></button>'+
+    '<div class="today-section-head">Diary today</div>'+
+    '<div class="today-stats-row">'+
+      todayStatBlock('kcal',totals.kcal,gk,'')+
+      todayStatBlock('Protein',totals.protein,gp,'g')+
+      todayStatBlock('Fibre',totals.fiber,gfi,'g')+
+    '</div>'+
+    '<div class="today-meal-pills" aria-label="Meal slot status">'+mealPills+'</div>'+
+    glucoseCard+
+    plateCard+
+    '<div class="today-section-head">Today\'s focus</div>'+
     '<div class="today-focus-chips">'+chips+'</div>'+
-    '<label for="todayFocusNote" class="fp-label" style="margin-top:6px">Short note (optional)</label>'+
-    '<textarea id="todayFocusNote" class="today-focus-note" maxlength="120" placeholder="e.g. Walk after lunch · extra water" oninput="todayFocusNoteInput(this)"></textarea>'+
-    '<button type="button" class="ca-btn" style="margin-top:8px" onclick="commitTodayFocusSave()">Save today’s focus</button>'+
+    '<textarea id="todayFocusNote" class="today-focus-note" maxlength="120" placeholder="Short note (optional) — e.g. Walk after lunch" oninput="todayFocusNoteInput(this)"></textarea>'+
+    '<button type="button" class="ca-btn today-focus-save" onclick="commitTodayFocusSave()">Save today\'s focus</button>'+
     savedLine+
+    (ctxLine?'<div class="today-context-foot">'+ctxLine+'</div>':'')+
     '<div class="today-dash-links">'+
     '<button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openDrawer(\'diary\')">Diary</button>'+
     '<button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openDrawer(\'plate\')">My Plate</button>'+
-    '<button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openVatProtocol()">VAT hub</button>'+
-    '<button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openT2dmClinicalGuide(\'view=principles&state=all\')">The field guide</button>'+
-    '<button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openCommunityStart()">Start guide</button>'+
+    '<button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openVatProtocol()">VAT</button>'+
+    '<button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openT2dmClinicalGuide(\'view=principles&state=all\')">Field guide</button>'+
+    '<button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openCommunityStart()">Start</button>'+
     '</div>';
   var ta=document.getElementById('todayFocusNote');
   if(ta)ta.value=String(window.__todayFocusNoteDraft||'');
