@@ -375,48 +375,61 @@ body.dark-mode .exp-db-bridge{background:rgba(29,92,58,.25);border-color:#4ADE80
 .vs-btn.active{color:var(--card-bg);background:var(--text-primary)}
 .result-count{font-size:10px;color:var(--text-tertiary);white-space:nowrap;flex-shrink:0;margin-left:2px;font-variant-numeric:tabular-nums}
 
-/* ── LIST VIEW ── */
+/* ── LIST VIEW (aligned grid columns) ── */
 .grid.view-list{display:flex;flex-direction:column;gap:0}
 .grid.view-list .card{border-radius:0;border-left:none;border-right:none;border-bottom:none;box-shadow:none}
 .grid.view-list .card:first-child{border-top:none;border-radius:10px 10px 0 0}
 .grid.view-list .card:last-child{border-bottom:1px solid var(--card-border);border-radius:0 0 10px 10px}
 .grid.view-list .card.african-food{border-left:none;border-left:3px solid var(--accent-amber-bright)}
 .grid.view-list .card.nigeria-food{border-left:none;border-left:3px solid #008751}
-.grid.view-list .card:hover{transform:none;box-shadow:none}
-/* List: horizontal layout for closed cards — dense info row */
-.grid.view-list .card:not(.open){display:flex;flex-direction:row;align-items:stretch;min-height:48px}
-/* Header zone: emoji + name + tags */
-.grid.view-list .card:not(.open) .card-header{flex-direction:row;align-items:center;padding:6px 10px;gap:7px;flex:1 1 200px;min-width:160px;border-radius:0}
-.grid.view-list .card:not(.open) .card-header .card-emoji-wrap{width:30px;height:30px;font-size:16px;box-shadow:none}
-.grid.view-list .card:not(.open) .card-header .card-name{font-size:12px;font-weight:500;text-align:left;-webkit-line-clamp:1;flex:0 1 auto;min-width:0;line-height:1.2}
-.grid.view-list .card:not(.open) .card-header .card-cat-row{display:flex;justify-content:flex-start;flex-shrink:0;gap:3px;margin-top:0;flex-wrap:nowrap}
+.grid.view-list .card:hover{transform:none;box-shadow:none;background:var(--surface)}
+/* Closed row: 5 fixed-width columns so values align vertically across rows */
+.grid.view-list .card:not(.open){display:flex;flex-direction:row;align-items:stretch;min-height:54px}
+/* Header zone (emoji + name + tags) — flex-grows to fill remaining */
+.grid.view-list .card:not(.open) .card-header{display:grid;grid-template-columns:30px 1fr;grid-template-rows:auto auto;align-items:center;column-gap:10px;row-gap:1px;padding:7px 14px;flex:1 1 0;min-width:200px;border-radius:0}
+.grid.view-list .card:not(.open) .card-header .card-emoji-wrap{grid-column:1;grid-row:1 / span 2;width:30px;height:30px;font-size:16px;box-shadow:none;align-self:center}
+.grid.view-list .card:not(.open) .card-header .card-name{grid-column:2;grid-row:1;font-size:12px;font-weight:500;text-align:left;-webkit-line-clamp:1;min-width:0;line-height:1.25;margin:0}
+.grid.view-list .card:not(.open) .card-header .card-cat-row{grid-column:2;grid-row:2;display:flex;gap:3px;flex-wrap:nowrap;margin:0;min-width:0;overflow:hidden;align-items:center}
 .grid.view-list .card:not(.open) .card-header .card-cat{font-size:7px;padding:1px 5px}
 .grid.view-list .card:not(.open) .card-header .card-african-tag,
 .grid.view-list .card:not(.open) .card-header .card-nigeria-tag{font-size:7px}
 .grid.view-list .card:not(.open) .card-header .drug-pill{font-size:7px;padding:1px 4px}
-/* Body zone: meta + secondary macros */
-.grid.view-list .card:not(.open) .card-body{display:flex;align-items:stretch;padding:0;flex-shrink:0;background:var(--card-bg)}
-/* Meta row inline: ring + kcal/protein + GI + evidence + stars */
-.grid.view-list .card:not(.open) .card-meta-row{display:flex;align-items:center;gap:7px;padding:3px 10px;margin-bottom:0;border-left:1px solid rgba(0,0,0,.08);align-self:stretch}
-.grid.view-list .card:not(.open) .ls-ring{width:36px;height:36px;flex-shrink:0}
-.grid.view-list .card:not(.open) .card-primary-stats{flex:none;min-width:0;display:flex;flex-direction:column;gap:2px;justify-content:center}
-.grid.view-list .card:not(.open) .card-kcal-prot{flex-direction:row;margin-bottom:0;gap:3px;flex-wrap:nowrap;align-items:baseline}
+/* Body zone container */
+.grid.view-list .card:not(.open) .card-body{display:flex;align-items:stretch;padding:0;flex-shrink:0;background:var(--card-bg);margin:0}
+/* Meta row — fixed-width column with internal grid for ring | kcal/protein | badges */
+.grid.view-list .card:not(.open) .card-meta-row{display:grid;grid-template-columns:38px 92px 96px;align-items:center;column-gap:8px;width:auto;flex-shrink:0;padding:3px 12px;margin:0;border-left:1px solid rgba(0,0,0,.08);align-self:stretch}
+.grid.view-list .card:not(.open) .ls-ring{grid-column:1;width:36px;height:36px;justify-self:center}
+.grid.view-list .card:not(.open) .card-primary-stats{grid-column:2;flex:none;min-width:0;display:flex;flex-direction:column;gap:2px;justify-content:center;align-items:flex-start}
+.grid.view-list .card:not(.open) .card-kcal-prot{flex-direction:row;margin:0;gap:3px;flex-wrap:nowrap;align-items:baseline;font-variant-numeric:tabular-nums}
 .grid.view-list .card:not(.open) .stat-big{font-size:11px}
 .grid.view-list .card:not(.open) .stat-lbl{font-size:7px}
 .grid.view-list .card:not(.open) .stat-sep{font-size:9px;margin:0 1px}
-.grid.view-list .card:not(.open) .card-badges-row{flex-wrap:nowrap;gap:3px}
-.grid.view-list .card:not(.open) .gi-pill{font-size:7px;padding:1px 5px}
+.grid.view-list .card:not(.open) .card-badges-row{grid-column:3;display:flex;flex-direction:column;align-items:flex-start;gap:2px;flex-wrap:nowrap;min-width:0}
+.grid.view-list .card:not(.open) .stars-mini{font-size:8px;letter-spacing:0;line-height:1}
+.grid.view-list .card:not(.open) .gi-pill{font-size:7px;padding:1px 5px;line-height:1.4}
 .grid.view-list .card:not(.open) .ev-hi,
 .grid.view-list .card:not(.open) .ev-mo,
-.grid.view-list .card:not(.open) .ev-lo{font-size:8px;padding:1px 5px}
-.grid.view-list .card:not(.open) .stars-mini{font-size:7px}
-/* Secondary macros */
-.grid.view-list .card:not(.open) .card-secondary-macros{display:flex;border-top:none;border-left:1px solid rgba(0,0,0,.08);margin-top:0;background:transparent;align-self:stretch}
-.grid.view-list .card:not(.open) .sec-mac{padding:2px 7px;min-width:40px;display:flex;flex-direction:column;justify-content:center}
+.grid.view-list .card:not(.open) .ev-lo{font-size:7px;padding:1px 5px;line-height:1.4}
+/* Secondary macros — fixed 3-column grid (carbs / fat / fibre) */
+.grid.view-list .card:not(.open) .card-secondary-macros{display:grid;grid-template-columns:repeat(3,52px);align-items:stretch;width:156px;flex-shrink:0;border-top:none;border-left:1px solid rgba(0,0,0,.08);margin:0;background:transparent;align-self:stretch}
+.grid.view-list .card:not(.open) .sec-mac{padding:4px 2px;min-width:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border-right:none}
+.grid.view-list .card:not(.open) .sec-mac .mac-val{font-size:11px;font-variant-numeric:tabular-nums}
+.grid.view-list .card:not(.open) .sec-mac .mac-lbl{font-size:7px}
 .grid.view-list .card:not(.open) .card-actions{display:none}
 .grid.view-list .card:not(.open) .expand{display:none}
-/* Mobile: drop the meta row to save horizontal space */
-@media (max-width:600px){
+/* Responsive: hide columns when space tightens */
+@media (max-width:1080px){
+  .grid.view-list .card:not(.open) .card-secondary-macros{display:none}
+}
+@media (max-width:880px){
+  .grid.view-list .card:not(.open) .card-meta-row{grid-template-columns:38px 92px;column-gap:8px;padding:3px 10px}
+  .grid.view-list .card:not(.open) .card-badges-row{display:none}
+}
+@media (max-width:680px){
+  .grid.view-list .card:not(.open) .card-meta-row{grid-template-columns:32px auto;padding:3px 8px}
+  .grid.view-list .card:not(.open) .ls-ring{width:32px;height:32px}
+}
+@media (max-width:520px){
   .grid.view-list .card:not(.open) .card-meta-row{display:none}
   .grid.view-list .card:not(.open) .card-header .card-cat-row{display:none}
 }
