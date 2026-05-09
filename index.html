@@ -462,10 +462,14 @@ body.dark-mode .exp-db-bridge{background:rgba(29,92,58,.25);border-color:#4ADE80
 .drawer{--drawer-w:380px;position:fixed;top:0;right:calc(-1 * var(--drawer-w) - 20px);width:var(--drawer-w);height:100vh;height:100dvh;max-height:100dvh;background:var(--card-bg);border-left:1px solid var(--card-border);box-shadow:-8px 0 24px rgba(0,0,0,.1);z-index:300;display:flex;flex-direction:column;transition:right .25s cubic-bezier(.4,0,.2,1);padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0);padding-right:env(safe-area-inset-right,0);box-sizing:border-box}
 .drawer.open{right:0}
 .drawer.resizing{transition:none;user-select:none}
-.drawer-resize-handle{position:absolute;top:0;left:-3px;bottom:0;width:8px;cursor:ew-resize;z-index:5;touch-action:none;background:transparent}
-.drawer-resize-handle::before{content:"";position:absolute;left:3px;top:50%;transform:translateY(-50%);width:2px;height:36px;border-radius:2px;background:var(--card-border);opacity:0;transition:opacity .15s,background .15s}
-.drawer-resize-handle:hover::before{opacity:.85;background:var(--accent-green)}
-.drawer.resizing .drawer-resize-handle::before{opacity:1;background:var(--accent-green);height:48px;width:3px}
+.drawer-resize-handle{position:absolute;top:0;left:-7px;bottom:0;width:14px;cursor:ew-resize;z-index:6;touch-action:none;background:transparent;display:flex;align-items:center;justify-content:center}
+.drawer-resize-handle::before{content:"";display:block;width:3px;height:54px;border-radius:3px;background:var(--card-border);box-shadow:0 0 0 1px rgba(0,0,0,.04);transition:background .15s,height .15s,width .15s,box-shadow .15s}
+.drawer-resize-handle:hover::before{background:var(--accent-green);height:72px;width:4px;box-shadow:0 0 0 4px var(--accent-green-light)}
+.drawer.resizing .drawer-resize-handle::before{background:var(--accent-green);height:90px;width:4px;box-shadow:0 0 0 6px var(--accent-green-light)}
+.drawer-resize-handle:focus-visible{outline:none}
+.drawer-resize-handle:focus-visible::before{background:var(--accent-green);box-shadow:0 0 0 3px var(--accent-green-light)}
+body.dark-mode .drawer-resize-handle::before{background:rgba(255,255,255,.18)}
+body.dark-mode .drawer-resize-handle:hover::before,body.dark-mode .drawer.resizing .drawer-resize-handle::before{background:var(--accent-green)}
 @media(max-width:768px){.drawer-resize-handle{display:none}}
 .drawer-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--card-border);flex-shrink:0}
 .drawer-title{font-size:14px;font-weight:700;color:var(--text-primary)}
