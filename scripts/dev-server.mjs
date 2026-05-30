@@ -100,7 +100,7 @@ function readBody(req) {
 
 function resolvePathname(pathname) {
   if (pathname === '/') {
-    return { redirect: '/landing.html' };
+    return { redirect: '/landing' };
   }
   for (const [pattern, dest] of REWRITES) {
     if (pattern.test(pathname)) {
