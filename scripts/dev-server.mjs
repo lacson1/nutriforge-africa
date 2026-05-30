@@ -50,12 +50,6 @@ const API_HANDLERS = {
   '/api/protocol-private-block': () => import('../api/protocol-private-block.js'),
 };
 
-/** Extensionless paths that map to HTML entry points. */
-const EXTENSIONLESS = {
-  '/landing': '/landing.html',
-  '/index': '/index.html',
-};
-
 const MIME = {
   '.html': 'text/html; charset=utf-8',
   '.js': 'application/javascript; charset=utf-8',
@@ -108,9 +102,6 @@ function resolvePathname(pathname) {
   if (pathname === '/') {
     return { redirect: '/landing.html' };
   }
-  if (EXTENSIONLESS[pathname]) {
-    return { file: EXTENSIONLESS[pathname] };
-  }
   for (const [pattern, dest] of REWRITES) {
     if (pattern.test(pathname)) {
       return { api: dest };
@@ -134,6 +125,16 @@ function serveFile(relativePath, res) {
   if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
     const indexPath = path.join(filePath, 'index.html');
     if (fs.existsSync(indexPath)) filePath = indexPath;
+  }
+
+  if (
+    (!fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) &&
+    !path.extname(rel)
+  ) {
+    const htmlPath = path.join(ROOT, rel + '.html');
+    if (fs.existsSync(htmlPath) && fs.statSync(htmlPath).isFile()) {
+      filePath = htmlPath;
+    }
   }
 
   if (!fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) {
@@ -193,6 +194,5 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(PORT, '0.0.0.0', () => {
   console.log(`NutriForge dev server running at http://localhost:${PORT}/`);
-  console.log('  Landing → / or /landing or /landing.html');
-  console.log('  App     → /index.html');
+  console.log('  Extensionless HTML paths resolve automatically (e.g. /landing, /t2dm-clinical-field-guide)');
 });
