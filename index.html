@@ -3,10 +3,11 @@
 <head>
 <meta name="description" content="NutriForge v6.1 — Evidence-based foods & African dishes, Nigeria spotlight filter, daily diary, goals, client profiles, drug–food checker, meal templates, offline-ready PWA.">
 <meta charset="UTF-8">
+<base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0f2a30">
 <title>NutriForge · v6.1 · 390 Foods</title>
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="/manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,600;0,8..144,700;1,8..144,600&display=swap" rel="stylesheet">
@@ -1115,10 +1116,10 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 </footer>
 
 <div class="tooltip" id="tooltip"></div>
-<script src="js/foods-data.js"></script>
-<script src="js/search-core.js"></script>
-<script src="js/meals-core.js"></script>
-<script src="js/scoring-core.js"></script>
+<script src="/js/foods-data.js"></script>
+<script src="/js/search-core.js"></script>
+<script src="/js/meals-core.js"></script>
+<script src="/js/scoring-core.js"></script>
 <script>
 // ── ENRICHMENT (classifyDrug, calcLongevity, confStars — ./js/scoring-core.js)
 
@@ -1923,7 +1924,7 @@ function t2dmGuideNavigate(fragment){
   var frame = document.getElementById('t2dmGuideFrame');
   if(!frame) return;
   var f = String(fragment||'').replace(/^#/,'');
-  frame.src = 't2dm-clinical-field-guide.html#' + f;
+  frame.src = '/t2dm-clinical-field-guide#' + f;
 }
 function openT2dmClinicalGuide(fragment){
   closeDrawer();
@@ -1934,7 +1935,7 @@ function openT2dmClinicalGuide(fragment){
   var frame = document.getElementById('t2dmGuideFrame');
   if(!overlay||!frame) return;
   var frag = (fragment && String(fragment).replace(/^#/,'')) || 'view=principles&state=all';
-  frame.src = 't2dm-clinical-field-guide.html#' + frag;
+  frame.src = '/t2dm-clinical-field-guide#' + frag;
   overlay.classList.add('open');
   overlay.setAttribute('aria-hidden','false');
   document.body.style.overflow = 'hidden';
@@ -1955,7 +1956,7 @@ function openT2dmGuideNewTab(){
       if(i>-1) hash = frame.src.slice(i);
     }
   }catch(e){}
-  window.open('t2dm-clinical-field-guide.html'+hash,'_blank','noopener');
+  window.open('/t2dm-clinical-field-guide'+hash,'_blank','noopener');
 }
 
 /** Deep links: #condition=t2d or #cond=t2d, optional &food=123, #vat or &vat=1 opens VAT hub */
@@ -4153,12 +4154,12 @@ window.addEventListener('scroll',function(){
 
 if('serviceWorker' in navigator){
   window.addEventListener('load', function(){
-    navigator.serviceWorker.register('sw.js').catch(function(){});
+    navigator.serviceWorker.register('/sw.js').catch(function(){});
   });
 }
 </script>
 <script type="module">
-import * as NFBackupCore from './js/backup-core.mjs';
+import * as NFBackupCore from '/js/backup-core.mjs';
 window.NFBackupCore = NFBackupCore;
 </script>
 </body>
