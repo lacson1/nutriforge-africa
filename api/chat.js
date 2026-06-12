@@ -18,7 +18,7 @@ export default async function handler(req, res) {
   const model =
     process.env.ANTHROPIC_MODEL && String(process.env.ANTHROPIC_MODEL).trim()
       ? String(process.env.ANTHROPIC_MODEL).trim()
-      : 'claude-sonnet-4-20250514';
+      : 'claude-sonnet-4-6';
 
   let body;
   try {
