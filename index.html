@@ -1036,6 +1036,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <p>Lists, cost thinking, portion visuals, and restaurant tactics.</p>
         <h3 id="vat-sec-11">Safety &amp; contraindications</h3>
         <p><strong>Read this in the PDF before starting.</strong> Pregnancy, diabetes medications/insulin, anticoagulants, renal disease, history of eating disorders, and acute illness change whether phased deficits, fasting, or supplement suggestions are appropriate.</p>
+        <div id="vatUnlockBlock">
         <div class="vat-doc-split">
           <h3>Full documents (PDF &amp; web outline)</h3>
           <p class="drawer-tools-note">These open in a new tab after unlock. Passphrase comes from your team or deployment settings — it is never stored in the app. Your browser then keeps an HttpOnly cookie for about seven days.</p>
@@ -1050,6 +1051,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <div class="vat-protocol-actions">
           <button type="button" class="ca-btn" onclick="openVatPdf()">Open full PDF</button>
           <button type="button" class="ca-btn" onclick="openVatGuide()">Open gated web outline</button>
+        </div>
         </div>
       </div>
     </div>
@@ -1876,8 +1878,21 @@ function cycleSort(col){
   render();
 }
 
+// ── FEATURE FLAGS ──
+// The AI assistant (/api/chat) needs ANTHROPIC_API_KEY, and the VAT unlock
+// (/api/protocol-session, -pdf, -guide) needs PROTOCOL_PASSPHRASE +
+// PROTOCOL_COOKIE_SECRET on the deployment. Until those env vars are set, hide
+// the UI that would otherwise return a 503. Flip a flag to true once the
+// matching env vars are configured on Vercel.
+var NF_FEATURES = { aiAssistant: false, protocolUnlock: false };
+function applyFeatureFlags(){
+  if(!NF_FEATURES.aiAssistant){ var b=document.getElementById('btnAI'); if(b) b.style.display='none'; }
+  if(!NF_FEATURES.protocolUnlock){ var u=document.getElementById('vatUnlockBlock'); if(u) u.style.display='none'; }
+}
+
 // ── DRAWER SYSTEM ──
 function openDrawer(name){
+  if(name==='ai' && !NF_FEATURES.aiAssistant) return;
   closeDrawer();
   activeDrawer = name;
   var drawer = document.getElementById('drawer');
@@ -4151,6 +4166,8 @@ window.addEventListener('scroll',function(){
   var btt=document.getElementById('bttBtn');
   if(btt){btt.classList.toggle('visible',window.scrollY>400)}
 });
+
+applyFeatureFlags();
 
 if('serviceWorker' in navigator){
   window.addEventListener('load', function(){
