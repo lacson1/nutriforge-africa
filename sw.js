@@ -1,5 +1,5 @@
 /* NutriForge — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-v6-12';
+var CACHE_NAME = 'nutriforge-v6-13';
 var PRECACHE = [
   './index.html',
   './landing.html',
@@ -44,7 +44,8 @@ self.addEventListener('fetch', function (event) {
       p.indexOf('/protocol/') === 0 ||
       p === '/api/protocol-session' ||
       p === '/api/protocol-pdf' ||
-      p === '/api/protocol-guide'
+      p === '/api/protocol-guide' ||
+      p === '/api/chat'
     ) {
       event.respondWith(fetch(event.request));
       return;

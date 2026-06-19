@@ -6,6 +6,8 @@ import {
   PROTOCOL_COOKIE_NAME,
   signProtocolCookie,
 } from '../lib/protocol-token.js';
+import { safeEqualString } from '../lib/passphrase.js';
+import { checkRateLimit, clientIp, sendRateLimitResponse } from '../lib/rate-limit.js';
 
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
@@ -13,6 +15,10 @@ export default async function handler(req, res) {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   }
+
+  const ip = clientIp(req);
+  const attempts = checkRateLimit(`protocol:attempt:${ip}`, { limit: 12, windowMs: 15 * 60_000 });
+  if (!attempts.ok) return sendRateLimitResponse(res, attempts.retryAfterSec);
 
   const pass = process.env.PROTOCOL_PASSPHRASE;
   const secret = process.env.PROTOCOL_COOKIE_SECRET;
@@ -33,7 +39,7 @@ export default async function handler(req, res) {
   const phrase =
     typeof body.passphrase === 'string' ? body.passphrase : typeof body.password === 'string' ? body.password : '';
 
-  if (!phrase || phrase !== pass) {
+  if (!phrase || !safeEqualString(phrase, pass)) {
     return res.status(401).json({ error: 'Incorrect passphrase.' });
   }
 
