@@ -1119,6 +1119,10 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <script src="js/search-core.js"></script>
 <script src="js/meals-core.js"></script>
 <script src="js/scoring-core.js"></script>
+<script type="module">
+import * as NFBackupCore from './js/backup-core.mjs';
+window.NFBackupCore = NFBackupCore;
+</script>
 <script>
 // ── ENRICHMENT (classifyDrug, calcLongevity, confStars — ./js/scoring-core.js)
 
@@ -2011,6 +2015,7 @@ function syncUrlHash(){
   }catch(e){}
 }
 window.addEventListener('message', function(e){
+  if(!e || e.origin !== window.location.origin) return;
   var d = e && e.data;
   if(!d || d.type !== 'nutriforge') return;
   if(d.action !== 'from-t2dm-guide') return;
@@ -2135,12 +2140,12 @@ function loadDiaryAndProfiles(){
     if(dg && typeof dg.kcal === 'number') diaryGoals = dg;
   }catch(e){}
   try{
-    clientProfiles = JSON.parse(localStorage.getItem('nf_profiles') || '[]') || [];
+    clientProfiles = sanitizeClientProfiles(JSON.parse(localStorage.getItem('nf_profiles') || '[]') || []);
   }catch(e){ clientProfiles = []; }
   try{
     var apRaw = localStorage.getItem('nf_active_profile');
     activeProfileId = apRaw ? JSON.parse(apRaw) : null;
-    if(activeProfileId && typeof activeProfileId !== 'string') activeProfileId = null;
+    if(activeProfileId && (typeof activeProfileId !== 'string' || !isSafeProfileId(activeProfileId))) activeProfileId = null;
   }catch(e){ activeProfileId = null; }
   try{
     diaryByDate = loadDiaryPayloadForProfile(activeProfileId);
@@ -2394,6 +2399,7 @@ function updateActiveProfileSnapshot(){
 }
 
 function loadProfile(pid){
+  if(!isSafeProfileId(pid)) return;
   saveDiaryStore();
   var p = clientProfiles.filter(function(x){ return x.id === pid; })[0];
   if(!p) return;
@@ -2432,6 +2438,7 @@ function loadProfile(pid){
 }
 
 function deleteProfile(pid){
+  if(!isSafeProfileId(pid)) return;
   var wasActive = activeProfileId === pid;
   if(wasActive){
     saveDiaryStore();
@@ -2462,7 +2469,51 @@ function deleteProfile(pid){
   }
 }
 
+var NF_PROFILE_ID_RE = /^p\d+$/;
+function isSafeProfileId(id){ return typeof id === 'string' && NF_PROFILE_ID_RE.test(id.trim()); }
+function sanitizeClientProfiles(list){
+  if(window.NFBackupCore && typeof window.NFBackupCore.sanitizeProfilesPayload === 'function'){
+    return window.NFBackupCore.sanitizeProfilesPayload(list);
+  }
+  if(!Array.isArray(list)) return [];
+  var out = [];
+  for(var si = 0; si < list.length; si++){
+    var p = list[si];
+    if(!p || typeof p !== 'object') continue;
+    var sid = typeof p.id === 'string' ? p.id.trim() : '';
+    var sname = typeof p.name === 'string' ? p.name.trim() : '';
+    if(!isSafeProfileId(sid) || !sname) continue;
+    var copy = {};
+    for(var k in p){ if(Object.prototype.hasOwnProperty.call(p, k)) copy[k] = p[k]; }
+    copy.id = sid;
+    copy.name = sname.slice(0, 120);
+    if(typeof copy.note === 'string') copy.note = copy.note.slice(0, 280);
+    out.push(copy);
+  }
+  return out;
+}
+var profilesListWired = false;
+function wireProfilesListActions(){
+  if(profilesListWired) return;
+  var host = document.getElementById('profilesList');
+  if(!host) return;
+  profilesListWired = true;
+  host.addEventListener('click', function(ev){
+    var t = ev.target;
+    if(!t || !t.closest) return;
+    var loadBtn = t.closest('[data-profile-load]');
+    var delBtn = t.closest('[data-profile-delete]');
+    var btn = loadBtn || delBtn;
+    if(!btn) return;
+    var pid = btn.getAttribute('data-profile-id');
+    if(!isSafeProfileId(pid)) return;
+    if(loadBtn) loadProfile(pid);
+    else deleteProfile(pid);
+  });
+}
+
 function refreshProfilesView(){
+  wireProfilesListActions();
   var banner = document.getElementById('profileSessionBanner');
   if(banner){
     var ap = activeProfileId && getProfileById(activeProfileId);
@@ -2509,8 +2560,8 @@ function refreshProfilesView(){
       '<div class="profile-row-meta">' + meta + '</div>' + noteBlock +
       (favChips ? '<div class="profile-fav-preview">' + favChips + '</div>' : '') +
       '</div><div class="profile-row-actions">' +
-      '<button type="button" class="primary" onclick="loadProfile(\'' + p.id + '\')">Load</button> ' +
-      '<button type="button" onclick="deleteProfile(\'' + p.id + '\')">Delete</button></div></div>';
+      '<button type="button" class="primary" data-profile-load data-profile-id="' + safeHtml(p.id) + '">Load</button> ' +
+      '<button type="button" data-profile-delete data-profile-id="' + safeHtml(p.id) + '">Delete</button></div></div>';
   }).join('');
 }
 
@@ -4156,10 +4207,6 @@ if('serviceWorker' in navigator){
     navigator.serviceWorker.register('sw.js').catch(function(){});
   });
 }
-</script>
-<script type="module">
-import * as NFBackupCore from './js/backup-core.mjs';
-window.NFBackupCore = NFBackupCore;
 </script>
 </body>
 </html>
