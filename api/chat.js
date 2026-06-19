@@ -1,3 +1,5 @@
+import { checkRateLimit, clientIp, sendRateLimitResponse } from '../lib/rate-limit.js';
+
 /**
  * Proxies Anthropic Messages API so the browser never holds ANTHROPIC_API_KEY.
  * Set env on Vercel: ANTHROPIC_API_KEY (required), ANTHROPIC_MODEL (optional).
@@ -7,6 +9,12 @@ export default async function handler(req, res) {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   }
+
+  const ip = clientIp(req);
+  const burst = checkRateLimit(`chat:burst:${ip}`, { limit: 8, windowMs: 60_000 });
+  if (!burst.ok) return sendRateLimitResponse(res, burst.retryAfterSec);
+  const hourly = checkRateLimit(`chat:hour:${ip}`, { limit: 40, windowMs: 3_600_000 });
+  if (!hourly.ok) return sendRateLimitResponse(res, hourly.retryAfterSec);
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
@@ -71,9 +79,12 @@ export default async function handler(req, res) {
 
   const text = await upstream.text();
   if (!upstream.ok) {
-    return res.status(upstream.status >= 400 && upstream.status < 600 ? upstream.status : 502).json({
-      error: text || upstream.statusText || 'Upstream error',
-    });
+    const status = upstream.status >= 400 && upstream.status < 600 ? upstream.status : 502;
+    const clientError =
+      status >= 400 && status < 500
+        ? text || upstream.statusText || 'Upstream rejected the request.'
+        : 'AI service is temporarily unavailable.';
+    return res.status(status).json({ error: clientError });
   }
 
   try {

@@ -6,6 +6,8 @@ import {
   validateBackupDocument,
   collectBackupKeys,
   applyBackupKeys,
+  sanitizeProfilesPayload,
+  sanitizeBackupKeys,
 } from '../js/backup-core.mjs';
 
 function memoryStore(initial = {}) {
@@ -66,14 +68,14 @@ describe('backup-core', () => {
       nf_darkmode: '0',
     });
     applyBackupKeys(
-      { nf_diary: '{"x":[]}', nf_profiles: '[{"id":"p1"}]' },
+      { nf_diary: '{"x":[]}', nf_profiles: '[{"id":"p1700000000001","name":"Test"}]' },
       mem.setItem,
       mem.removeItem,
       { mode: 'replace' },
     );
     const snap = mem.snapshot();
     expect(snap.nf_diary).toBe('{"x":[]}');
-    expect(snap.nf_profiles).toBe('[{"id":"p1"}]');
+    expect(snap.nf_profiles).toBe('[{"id":"p1700000000001","name":"Test"}]');
     expect(snap.nf_chat).toBeUndefined();
     expect(snap.nf_darkmode).toBeUndefined();
   });
@@ -83,5 +85,25 @@ describe('backup-core', () => {
     applyBackupKeys({ nf_diary: '{"y":[]}' }, mem.setItem, mem.removeItem, { mode: 'merge' });
     expect(mem.snapshot().nf_darkmode).toBe('1');
     expect(mem.snapshot().nf_diary).toBe('{"y":[]}');
+  });
+
+  it('sanitizeProfilesPayload drops unsafe ids', () => {
+    const raw = [
+      { id: 'p123', name: 'Ada' },
+      { id: "');alert(1);//", name: 'Evil' },
+      { id: 'p456', name: '' },
+    ];
+    const clean = sanitizeProfilesPayload(raw);
+    expect(clean).toHaveLength(1);
+    expect(clean[0].id).toBe('p123');
+  });
+
+  it('sanitizeBackupKeys strips malicious active profile', () => {
+    const keys = sanitizeBackupKeys({
+      nf_profiles: JSON.stringify([{ id: 'p1700000000001', name: 'Ok' }]),
+      nf_active_profile: "');alert(1);//",
+    });
+    expect(keys.nf_active_profile).toBeUndefined();
+    expect(JSON.parse(keys.nf_profiles)[0].id).toBe('p1700000000001');
   });
 });
