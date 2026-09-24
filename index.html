@@ -747,6 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
+<link rel="stylesheet" href="layout.css?v=5">
 </head>
 <body>
 
@@ -781,11 +782,6 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     <div class="today-dashboard-panel" id="todayDashboardPanel" role="region" aria-label="Today dashboard" aria-hidden="true">
       <div id="todayDashboardBody"></div>
     </div>
-  </div>
-  <div class="search-wrap">
-    <span class="search-icon">&#x1F50D;</span>
-    <input type="text" id="srch" placeholder="Search foods, herbs, costs (e.g. budget)…  Ctrl+K" aria-label="Search foods" autocomplete="off" autocapitalize="off" spellcheck="false">
-    <button type="button" class="search-clear" id="searchClear" title="Clear search" aria-label="Clear search">&times;</button>
   </div>
   <div class="header-actions">
     <button class="ha-btn" id="btnAI" onclick="openDrawer('ai')" title="AI Assistant (Ctrl+Enter)" aria-label="Open AI nutrition assistant">
@@ -828,6 +824,36 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
   </div>
 </div>
 
+<!-- Shared navigation: tabs on desktop, bottom bar on mobile -->
+<nav class="mobile-nav" aria-label="Main navigation">
+  <div class="mobile-nav-inner">
+    <button class="mnav-btn active" onclick="closeDrawer();setMobileTab(this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      Browse
+    </button>
+    <button class="mnav-btn" onclick="openDrawer('ai');setMobileTab(this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M8 7V5a4 4 0 018 0v2"/><circle cx="9" cy="13" r="1" fill="currentColor"/><circle cx="15" cy="13" r="1" fill="currentColor"/></svg>
+      AI
+    </button>
+    <button class="mnav-btn" onclick="openDrawer('plate');setMobileTab(this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5"/></svg>
+      Plate
+    </button>
+    <button class="mnav-btn" onclick="openDrawer('combos');setMobileTab(this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+      Combos
+    </button>
+  </div>
+</nav>
+
+<section class="browse-toolbar" aria-label="Browse foods">
+  <div class="browse-heading"><h2>Browse foods</h2><span class="result-count" id="resultCount" aria-live="polite"></span></div>
+  <div class="search-wrap">
+    <span class="search-icon">&#x1F50D;</span>
+    <input type="text" id="srch" placeholder="Search foods, ingredients, or nutrients…" aria-label="Search foods" autocomplete="off" autocapitalize="off" spellcheck="false">
+    <button type="button" class="search-clear" id="searchClear" title="Clear search" aria-label="Clear search">&times;</button>
+  </div>
+</section>
 <div class="filter-row" id="filterRow">
   <div class="filter-row-scroll" aria-label="Category filters">
   <button class="chip active" data-cat="all" id="totalChip" onclick="setFilter('all',this)">All</button>
@@ -835,7 +861,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
   <button class="chip dishes" data-cat="dishes" onclick="setFilter('dishes',this)">Dishes</button>
   <button class="chip nigeria" data-cat="nigeria" onclick="setFilter('nigeria',this)">Nigeria</button>
   <button class="chip" data-cat="favourites" id="favChip" onclick="setFilter('favourites',this)">Saved <span id="favCount" style="opacity:.6"></span></button>
-  <select id="catSelect" class="filter-select"></select>
+  <select aria-label="Food category" id="catSelect" class="filter-select"></select>
   </div>
   <div class="filter-row-trailing">
   <div class="filters-popover-wrap" id="filtersPopoverWrap">
@@ -921,7 +947,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
       <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="16" height="3" rx="0.5"/><rect x="0" y="4.5" width="5" height="2" rx="0.5" opacity=".5"/><rect x="6" y="4.5" width="4" height="2" rx="0.5" opacity=".5"/><rect x="11" y="4.5" width="5" height="2" rx="0.5" opacity=".5"/><rect x="0" y="8" width="5" height="2" rx="0.5" opacity=".5"/><rect x="6" y="8" width="4" height="2" rx="0.5" opacity=".5"/><rect x="11" y="8" width="5" height="2" rx="0.5" opacity=".5"/><rect x="0" y="11.5" width="5" height="2" rx="0.5" opacity=".5"/><rect x="6" y="11.5" width="4" height="2" rx="0.5" opacity=".5"/><rect x="11" y="11.5" width="5" height="2" rx="0.5" opacity=".5"/></svg>
     </button>
   </div>
-  <span class="result-count" id="resultCount"></span>
+
   </div>
 </div>
 
@@ -930,10 +956,10 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 
   <!-- Drawer -->
   <div class="drawer-backdrop" id="drawerBackdrop" onclick="closeDrawer()"></div>
-  <div class="drawer" id="drawer">
+  <div class="drawer" id="drawer" role="dialog" aria-labelledby="drawerTitle" aria-hidden="true" inert>
     <div class="drawer-header">
       <span class="drawer-title" id="drawerTitle"></span>
-      <button class="drawer-close" onclick="closeDrawer()">&#10005;</button>
+      <button class="drawer-close" aria-label="Close panel" onclick="closeDrawer()">&#10005;</button>
     </div>
     <div class="drawer-body" id="drawerBody"></div>
   </div>
@@ -981,7 +1007,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <p>For clinicians and motivated clients working on <strong>visceral fat</strong>, metabolic markers, and structured meal timing: we host an evidence-aligned protocol hub with an in-app outline (always available here) and optional gated PDF / web outline from your deployment.</p>
         <p><button type="button" class="ca-btn" onclick="closeMethodology();openVatProtocol()">Open VAT hub</button></p>
         <h3>Privacy &amp; portability</h3>
-        <p>Diary, goals, and client profiles are stored only in this browser (<code>localStorage</code>). Clearing site data removes them. There is no signed-in account in this build.</p>
+        <p>Diary, goals, and client profiles are saved in this browser (<code>localStorage</code>). Clearing site data removes them. There is no signed-in account in this build. When you use AI, messages, recent replies, food filters, plate and nutrition targets are sent to the AI service. Client names and clinical notes are not added automatically.</p>
         <p>Use <strong>More → Download data backup</strong> to save a JSON file (keep it private — it may contain visit notes). Use <strong>Restore from backup</strong> on this or another device to reload that snapshot.</p>
       </div>
     </div>
@@ -1074,28 +1100,6 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <!-- Back to top -->
 <button class="btt" id="bttBtn" onclick="scrollToTop()" aria-label="Back to top" title="Back to top">&#8593;</button>
 <input type="file" id="nfBackupFileInput" accept="application/json,.json" tabindex="-1" aria-hidden="true" style="position:absolute;width:0;height:0;opacity:0;pointer-events:none">
-
-<!-- Mobile bottom nav -->
-<div class="mobile-nav">
-  <div class="mobile-nav-inner">
-    <button class="mnav-btn active" onclick="closeDrawer();setMobileTab(this)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-      Browse
-    </button>
-    <button class="mnav-btn" onclick="openDrawer('ai');setMobileTab(this)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M8 7V5a4 4 0 018 0v2"/><circle cx="9" cy="13" r="1" fill="currentColor"/><circle cx="15" cy="13" r="1" fill="currentColor"/></svg>
-      AI
-    </button>
-    <button class="mnav-btn" onclick="openDrawer('plate');setMobileTab(this)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5"/></svg>
-      Plate
-    </button>
-    <button class="mnav-btn" onclick="openDrawer('combos');setMobileTab(this)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
-      Combos
-    </button>
-  </div>
-</div>
 
 <footer class="nf-footer" style="background:var(--header-bg);color:var(--header-fg);padding:20px max(24px,env(safe-area-inset-right)) 20px max(24px,env(safe-area-inset-left));margin-top:2rem;font-size:11px">
   <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
@@ -1876,9 +1880,13 @@ function cycleSort(col){
 }
 
 // ── DRAWER SYSTEM ──
+var drawerReturnFocus = null;
 function openDrawer(name){
-  closeDrawer();
+  var trigger = activeDrawer ? drawerReturnFocus : document.activeElement;
+  closeDrawer(false);
+  drawerReturnFocus = trigger;
   activeDrawer = name;
+  document.getElementById('drawer').classList.toggle('plate-design',name==='plate');
   var drawer = document.getElementById('drawer');
   var backdrop = document.getElementById('drawerBackdrop');
   var title = document.getElementById('drawerTitle');
@@ -1895,7 +1903,24 @@ function openDrawer(name){
   else if(name==='meals'){body.innerHTML = buildMealsDrawer();renderMealTemplatesIfOpen();}
   else if(name==='drugs'){body.innerHTML = buildDrugsDrawer();}
   else if(name==='profiles'){body.innerHTML = buildProfilesDrawer();refreshProfilesView();}
+  drawer.dataset.panel=name;
+  var introductions={
+    ai:['Ask, explore, understand.','Nutrition questions, with your current foods and plate in context.'],
+    diary:['Your day, in view.','Keep track of meals and see progress towards your daily targets.'],
+    compare:['Find your best fit.','Compare up to three foods on the same 100 g basis.'],
+    combos:['Better together.','Explore food pairings and the evidence behind them.'],
+    meals:['A starting point for your next meal.','Browse ready-made plates, then make them your own.'],
+    drugs:['Check before you combine.','Explore the database’s educational medication flags.'],
+    profiles:['A workspace for each client.','Keep food preferences, targets and visit notes organised.'],
+    chart:['See foods differently.','Explore energy and protein across the food database.']
+  };
+  if(introductions[name])body.insertAdjacentHTML('afterbegin','<div class="tool-intro"><h2>'+introductions[name][0]+'</h2><p>'+introductions[name][1]+'</p></div>');
+  document.querySelectorAll('.mnav-btn').forEach(function(nav){nav.classList.toggle('active',nav.textContent.trim().toLowerCase()===name)});
+  drawer.inert=false;
+  drawer.setAttribute('aria-hidden','false');
   drawer.classList.add('open');
+  drawer.querySelector('.drawer-close').focus();
+  body.scrollTop=0;
   backdrop.classList.add('visible');
   document.querySelectorAll('.ha-btn').forEach(function(b){b.classList.remove('active-drawer')});
   var btn = document.getElementById('btn'+name.charAt(0).toUpperCase()+name.slice(1));
@@ -1908,10 +1933,15 @@ function openDrawer(name){
   }
   if(name==='plate') updatePlatePanel();
 }
-function closeDrawer(){
+function closeDrawer(restoreFocus){
   var drawer = document.getElementById('drawer');
   var backdrop = document.getElementById('drawerBackdrop');
+  if(drawer.contains(document.activeElement))document.activeElement.blur();
+  drawer.inert=true;
+  drawer.setAttribute('aria-hidden','true');
   drawer.classList.remove('open');
+  if(restoreFocus!==false && drawerReturnFocus && drawerReturnFocus.isConnected)drawerReturnFocus.focus();
+  drawerReturnFocus=null;
   backdrop.classList.remove('visible');
   document.querySelectorAll('.ha-btn').forEach(function(b){b.classList.remove('active-drawer')});
   activeDrawer = null;
@@ -2043,16 +2073,21 @@ function buildAIDrawer(){
     '<button class="ai-sug" onclick="closeDrawer();openT2dmClinicalGuide()">The field guide</button>' +
     '<button class="ai-sug" onclick="closeDrawer();openVatProtocol()">VAT visceral-fat protocol</button>' +
   '</div>' +
+  '<p class="drawer-tools-note">AI sends your messages and recent replies, current food filters, plate and nutrition targets to the AI service. Client names and clinical notes are not added automatically. Avoid entering identifying information. Conversation context lasts until you reload or start a new chat.</p><button type="button" class="ca-btn" onclick="startNewAIChat()">New chat</button>' +
   '<div class="ai-messages" id="aiMessages"><div class="ai-msg bot"><div class="ai-avatar">&#127807;</div><div class="ai-bubble">Hello! Ask me about any food, condition, drug interaction, or African nutrition topic.</div></div></div>' +
   '<div class="ai-input-row"><textarea class="ai-input" id="aiInput" placeholder="Ask about foods, conditions..." rows="2"></textarea><button class="ai-send" onclick="sendAI()">Send</button></div>';
 }
 function buildPlateDrawer(){
   return '<div class="plate-premium">' +
-    '<p class="plate-hint">Tap <span class="plate-kbd">+</span> on a food · macros are per 100g — use <strong>− / +</strong> on each row for your grams (e.g. 25g) · bars use your <strong>Daily diary</strong> targets: <span id="plateHintGoals">— kcal / —g protein / —g fibre</span> <button type="button" class="plate-hint-action" onclick="openDrawer(\'diary\')">Edit goals</button> <button type="button" class="plate-hint-action" onclick="closeDrawer()">Back to foods</button></p>' +
-    '<div class="plate-status ps-neutral" id="plateStatus"><span id="plateStatusText">Add foods to see how you compare to the reference bars below.</span></div>' +
+    '<div class="plate-intro"><h2>Build your plate.</h2><p>A little of what you love. Portions that work for you.</p></div>' +
+    '<div class="plate-stage"><div id="plateVisual" class="plate-visual"></div><p class="plate-visual-caption">Food proportions by weight</p></div>' +
+    '<div class="plate-main-actions"><button type="button" class="ca-btn" onclick="closeDrawer()">+ Add foods</button><button type="button" class="ca-btn" id="logPlateButton" onclick="logPlateToDiary()">Log plate to diary ↗</button></div>' +
+    '<div class="plate-section-heading"><h3>On your plate</h3><span id="plateFoodCount">0 foods</span></div>' +
     '<div class="plate-items" id="plateItems">' +
     '<div class="plate-empty" id="plateEmptyHint"><div class="plate-empty-title">No foods yet</div>Tap + on a card (expand on mobile if needed).</div></div>' +
     '<div class="plate-macros"><div class="pm-box"><span class="pm-label">Calories</span><span class="pm-val" id="pm-kcal">0</span><span class="pm-unit">kcal</span></div><div class="pm-box"><span class="pm-label">Protein</span><span class="pm-val" id="pm-p">0</span><span class="pm-unit">g</span></div><div class="pm-box"><span class="pm-label">Carbs</span><span class="pm-val" id="pm-c">0</span><span class="pm-unit">g</span></div><div class="pm-box"><span class="pm-label">Fat</span><span class="pm-val" id="pm-f">0</span><span class="pm-unit">g</span></div><div class="pm-box"><span class="pm-label">Fibre</span><span class="pm-val" id="pm-fi">0</span><span class="pm-unit">g</span></div></div>' +
+    '<div class="plate-status ps-neutral" id="plateStatus"><span id="plateStatusText">Add foods to see how you compare to the reference bars below.</span></div>' +
+    '<div class="plate-section-heading"><h3>Your daily targets</h3><button type="button" class="plate-hint-action" onclick="openDrawer(\'diary\')">Edit goals</button></div>' +
     '<div class="plate-energy-mix" id="plateEnergyMix"><strong>Energy from macros</strong> (approx.): <span id="plateEnergyMixText">Add foods to see % of calories from protein, carbs, and fat.</span><div class="plate-energy-bar" id="plateEnergyBar" style="display:none"><span class="plate-energy-seg pes-p" id="plateEnergySegP" style="width:0%"></span><span class="plate-energy-seg pes-c" id="plateEnergySegC" style="width:0%"></span><span class="plate-energy-seg pes-f" id="plateEnergySegF" style="width:0%"></span></div></div>' +
     '<div class="plate-insights" id="plateInsightsWrap"><div class="plate-insights-title">Plate insights</div><div id="plateInsightsBody">Add foods for longevity mix, categories, and glycaemic notes.</div></div>' +
     '<div class="plate-bar-wrap">' +
@@ -2078,14 +2113,14 @@ function buildPlateDrawer(){
     '<button type="button" class="ctrl-btn danger" onclick="clearPlate()">Clear plate</button></div></div>';
 }
 function buildCompareDrawer(){
-  return '<div class="compare-grid" id="compareGrid"><div class="compare-slot" id="cs0"><span class="compare-slot-label">Slot 1</span></div><div class="compare-slot" id="cs1"><span class="compare-slot-label">Slot 2</span></div><div class="compare-slot" id="cs2"><span class="compare-slot-label">Slot 3</span></div></div>';
+  return '<button type="button" class="ca-btn tool-primary" onclick="closeDrawer()">+ Choose foods to compare</button><div class="compare-grid" id="compareGrid"><div class="compare-slot" id="cs0"><span class="compare-slot-label">Slot 1</span></div><div class="compare-slot" id="cs1"><span class="compare-slot-label">Slot 2</span></div><div class="compare-slot" id="cs2"><span class="compare-slot-label">Slot 3</span></div></div>';
 }
 function buildDiaryDrawer(){
   var diaryNote = activeProfileId
     ? 'Food log is <strong>per client</strong> for this session (separate from your default diary). Device-only — not synced.'
     : 'Entries stay on this device only. Use goals as soft targets — adjust with your clinician.';
   return '<p class="drawer-tools-note">' + diaryNote + '</p>' +
-    '<div class="diary-date-row"><label style="font-size:11px;color:var(--text-secondary)">Day</label> <input type="date" id="diaryDateInput" onchange="diaryDate=this.value||todayISO();refreshDiaryView()"> ' +
+    '<div class="diary-date-row"><label for="diaryDateInput" style="font-size:11px;color:var(--text-secondary)">Day</label> <input type="date" id="diaryDateInput" onchange="diaryDate=this.value||todayISO();refreshDiaryView()"> ' +
     '<button type="button" class="ca-btn" onclick="diaryDate=todayISO();document.getElementById(\'diaryDateInput\').value=diaryDate;refreshDiaryView()">Today</button> ' +
     '<button type="button" class="ca-btn" onclick="logPlateToDiary()" title="Copies foods currently on My Plate into this day (use + on cards to build the plate first)">Log plate → diary</button></div>' +
     '<p class="drawer-tools-note" style="margin-top:6px;margin-bottom:0">My Plate is built with <strong>+</strong> on food cards (open the <strong>My Plate</strong> drawer to see it). <strong>Log plate → diary</strong> copies that plate here — it does not add items to the plate.</p>' +
@@ -2104,7 +2139,7 @@ function buildMealsDrawer(){
 }
 function buildDrugsDrawer(){
   return '<p class="drawer-tools-note">Type a medication name (e.g. warfarin, metformin). Results come from <strong>keyword rules</strong> matched to each food’s <strong>limits</strong> text in this database — not Lexicomp, Stockley’s, or your hospital formulary. Severities are editorial flags for education, not verified interaction pairs. When in doubt, ask a pharmacist and the prescriber.</p>' +
-    '<input type="text" class="drug-check-input" id="drugCheckerInput" placeholder="e.g. warfarin, lisinopril, metformin…" autocomplete="off" oninput="checkDrugInteractions(this.value)">' +
+    '<input type="text" class="drug-check-input" id="drugCheckerInput" aria-label="Medication name" placeholder="e.g. warfarin, lisinopril, metformin…" autocomplete="off" oninput="checkDrugInteractions(this.value)">' +
     '<div id="drugCheckerResults"></div>';
 }
 function buildProfilesDrawer(){
@@ -2639,8 +2674,8 @@ function maybeOpenCommunityStart(){
 }
 
 function buildCombosDrawer(){
-  return '<input class="combo-search" id="comboSearch" placeholder="Search combinations...">' +
-    '<div class="combo-filters" id="comboFilters"><span class="combo-chip active" data-ctype="all">All</span><span class="combo-chip" data-ctype="absorption">Absorption</span><span class="combo-chip" data-ctype="antiinflam">Anti-inflammatory</span><span class="combo-chip" data-ctype="gut">Gut</span><span class="combo-chip" data-ctype="glycaemic">Glycaemic</span><span class="combo-chip" data-ctype="cardiovascular">Cardio</span><span class="combo-chip" data-ctype="longevity">Longevity</span><span class="combo-chip" data-ctype="brain">Brain</span><span class="combo-chip" data-ctype="bone">Bone</span><span class="combo-chip" data-ctype="african">African</span><span class="combo-chip" data-ctype="med">Mediterranean</span></div>' +
+  return '<input class="combo-search" aria-label="Search combinations" id="comboSearch" placeholder="Search combinations...">' +
+    '<div class="combo-filters" id="comboFilters"><button type="button" class="combo-chip active" data-ctype="all">All</button><button type="button" class="combo-chip" data-ctype="absorption">Absorption</button><button type="button" class="combo-chip" data-ctype="antiinflam">Anti-inflammatory</button><button type="button" class="combo-chip" data-ctype="gut">Gut</button><button type="button" class="combo-chip" data-ctype="glycaemic">Glycaemic</button><button type="button" class="combo-chip" data-ctype="cardiovascular">Cardio</button><button type="button" class="combo-chip" data-ctype="longevity">Longevity</button><button type="button" class="combo-chip" data-ctype="brain">Brain</button><button type="button" class="combo-chip" data-ctype="bone">Bone</button><button type="button" class="combo-chip" data-ctype="african">African</button><button type="button" class="combo-chip" data-ctype="med">Mediterranean</button></div>' +
     '<div class="combo-count" id="comboCount"></div><div class="combos-grid" id="combosGrid"></div>';
 }
 
@@ -2888,7 +2923,7 @@ function updateComparePanel(){
       var f=foods.filter(function(x){return x.id===compareSet[i]})[0];
       if(!f)continue;
       slot.className='compare-slot filled';
-      slot.innerHTML='<div style="font-size:12px;font-weight:600">'+f.emoji+' '+safeHtml(f.name)+'</div><div style="font-size:11px;color:var(--text-secondary);margin-top:4px">'+f.kcal+'kcal · '+f.protein+'g P · '+f.fiber+'g F · LS '+f.longevity+'</div><button onclick="compareSet.splice('+i+',1);updateComparePanel();render()" style="position:absolute;top:6px;right:8px;font-size:14px;opacity:.4;cursor:pointer;background:none;border:none;color:inherit">x</button>';
+      slot.innerHTML='<div style="font-size:12px;font-weight:600">'+f.emoji+' '+safeHtml(f.name)+'</div><div style="font-size:11px;color:var(--text-secondary);margin-top:4px">'+f.kcal+' kcal · '+f.protein+' g protein · '+f.fiber+' g fibre · Longevity '+f.longevity+'</div><button onclick="compareSet.splice('+i+',1);updateComparePanel();render()" style="position:absolute;top:6px;right:8px;font-size:14px;opacity:.4;cursor:pointer;background:none;border:none;color:inherit">x</button>';
     } else {
       slot.className='compare-slot';
       slot.innerHTML='<span class="compare-slot-label">Slot '+(i+1)+'</span>';
@@ -3306,7 +3341,20 @@ function getPlateSummaryForAI(){
   if(totK>0&&hiGiK>0)s+=' ~'+Math.round(hiGiK/totK*100)+'% kcal from High-GI items.';
   return s;
 }
+var plateColors=['#669b7c','#dfb668','#82adb9','#bc8caa','#b1b77b','#be8872'];
+function renderPlateVisual(ids){
+  var visual=document.getElementById('plateVisual');if(!visual)return;
+  var total=ids.reduce(function(sum,id){return sum+(portionSizes[id]||100)},0);
+  var angle=0;
+  var stops=ids.map(function(id,i){var end=angle+(portionSizes[id]||100)/total*360;var stop=plateColors[i%plateColors.length]+' '+angle+'deg '+end+'deg';angle=end;return stop});
+  visual.style.background=ids.length?'conic-gradient('+stops.join(',')+')':'var(--surface-2)';
+  visual.setAttribute('role','img');
+  visual.setAttribute('aria-label',ids.length?'Plate of '+total+' grams: '+ids.map(function(id){return plateMap[id].name+' '+(portionSizes[id]||100)+' grams'}).join(', '):'Empty plate. Add foods to begin.');
+  visual.innerHTML='<div class="plate-visual-center"><span class="plate-center-icon" aria-hidden="true">'+(ids.length?'◌':'＋')+'</span><strong>'+ (total?total+'<small>g</small>':'Your plate')+'</strong><span>'+(ids.length?ids.length+' food'+(ids.length===1?'':'s'):'Starts with one food')+'</span></div>';
+  var count=document.getElementById('plateFoodCount');if(count)count.textContent=ids.length+' food'+(ids.length===1?'':'s');
+}
 function updatePlatePanel(){
+  var logButton=document.getElementById('logPlateButton');if(logButton)logButton.disabled=!Object.keys(plateMap).length;
   var items=document.getElementById('plateItems');
   if(!items)return;
   loadDiaryAndProfiles();
@@ -3323,15 +3371,16 @@ function updatePlatePanel(){
   refreshPlateSavedSelect();
   updatePlateMealSlotHint();
   var ids=Object.keys(plateMap);
+  renderPlateVisual(ids);
   if(!ids.length){items.innerHTML=plateEmptyHtml();}
   else{
-    items.innerHTML=ids.map(function(id){
+    items.innerHTML=ids.map(function(id,i){
       var f=plateMap[id];
       var fid=parseInt(id,10);
       var g=portionSizes[fid]||portionSizes[id]||100;
       var m=g/100;
       var pk=Math.round(f.kcal*m),pp=Math.round(f.protein*m*10)/10,pfi=Math.round(f.fiber*m*10)/10;
-      return'<div class="plate-item"><div class="plate-item-emoji" aria-hidden="true">'+f.emoji+'</div><div class="plate-item-body"><span class="plate-item-name">'+safeHtml(f.name)+'</span><span class="plate-item-meta">'+g+' g · ~'+pk+' kcal · '+pp+'g protein · '+pfi+'g fibre</span><div class="plate-item-portion" onclick="event.stopPropagation()"><button type="button" class="portion-btn" onclick="changePortion('+fid+',-25)" title="Smaller portion">−</button><span class="portion-label">'+g+'g</span><button type="button" class="portion-btn" onclick="changePortion('+fid+',25)" title="Larger portion">+</button></div></div><button type="button" class="plate-item-remove" onclick="togglePlate('+fid+')" title="Remove from plate" aria-label="Remove from plate">×</button></div>';
+      return'<div class="plate-item" style="--food-color:'+plateColors[i%plateColors.length]+'"><div class="plate-item-emoji" aria-hidden="true">'+f.emoji+'</div><div class="plate-item-body"><span class="plate-item-name">'+safeHtml(f.name)+'</span><span class="plate-item-meta">'+g+' g · ~'+pk+' kcal · '+pp+'g protein · '+pfi+'g fibre</span><div class="plate-item-portion" onclick="event.stopPropagation()"><button type="button" class="portion-btn" onclick="changePortion('+fid+',-25)" aria-label="Reduce '+safeHtml(f.name)+' by 25 grams" title="Smaller portion">−</button><span class="portion-label">'+g+'g</span><button type="button" class="portion-btn" onclick="changePortion('+fid+',25)" aria-label="Increase '+safeHtml(f.name)+' by 25 grams" title="Larger portion">+</button></div></div><button type="button" class="plate-item-remove" onclick="togglePlate('+fid+')" title="Remove from plate" aria-label="Remove from plate">×</button></div>';
     }).join('');
   }
   var totals={kcal:0,p:0,c:0,f:0,fi:0};
@@ -3457,14 +3506,24 @@ function shareFood(id){
 }
 
 // ── AI ──
+var aiConversation=[];
+var aiPending=false;
+var aiPendingTurn=null;
+function startNewAIChat(){if(aiPending)return;aiConversation=[];if(activeDrawer==='ai')openDrawer('ai')}
+function setAIBusy(busy){aiPending=busy;document.querySelectorAll('.ai-send,.ai-sug').forEach(function(el){el.disabled=busy});var input=document.getElementById('aiInput');if(input)input.disabled=busy;}
 function sendAI(){
   var input=document.getElementById('aiInput');
-  if(!input||!input.value.trim())return;
+  if(aiPending||!input||!input.value.trim())return;
   var q=input.value.trim();input.value='';aiAsk(q);
 }
 function aiAsk(q){
+  if(aiPending||!String(q||'').trim())return;
+  if(activeDrawer!=='ai')openDrawer('ai');
+  setAIBusy(true);
+  var requestMessages=aiConversation.slice(-10).concat([{role:'user',content:String(q)}]);
   appendMsg('user',q);
   var loadId='ai-load-'+Date.now();
+  aiPendingTurn={question:q,id:loadId};
   appendMsg('bot','',loadId);
   var loadBubble=document.getElementById(loadId);
   if(loadBubble){var b=loadBubble.querySelector('.ai-bubble');if(b)b.innerHTML='<span class="ai-loading"><span>.</span><span>.</span><span>.</span></span> Thinking'}
@@ -3479,14 +3538,6 @@ function aiAsk(q){
     if(cx) condLine=' The user has filtered the database to condition topic: '+(appMode==='patient'?cx.patient:cx.pro)+' (id '+activeCondition+'). Prioritise foods and advice consistent with that filter and mention GI/fibre where relevant.';
     if(activeCondition==='t2d') condLine+=' They also have access to the field guide in the app (structured tiers); align general advice with that framing when useful.';
   }
-  var profileLine = '';
-  if(activeProfileId){
-    var pr = getProfileById(activeProfileId);
-    if(pr){
-      profileLine = ' An active client profile is loaded (name: ' + pr.name + '). Tailor examples and language to this person when appropriate.';
-      if(pr.note){ var nt = String(pr.note); profileLine += ' Clinician visit note on file: ' + nt.slice(0, 220) + (nt.length > 220 ? '…' : ''); }
-    }
-  }
   var browseHint='';
   if(filter==='dishes') browseHint=' The user\'s visible food list is filtered to dishes/traditional plates (composite preparations; macros are per-database serving basis).';
   else if(filter==='favourites') browseHint=' The user\'s visible food list is filtered to saved items only.';
@@ -3496,35 +3547,38 @@ function aiAsk(q){
   var plateLine=plateCtx?' '+plateCtx:'';
   var aiPayload={
     max_tokens:1000,
-    system:'You are a clinical nutrition AI in NutriForge — an evidence-based food database with '+foods.length+' foods ('+foods.filter(function(f){return f.african}).length+' African, '+foods.filter(function(f){return f.nigeria}).length+' Nigeria spotlight). Evidence grades: High=RCT/meta-analysis, Moderate=cohort, Low=mechanistic/traditional. User diary goal reference (kcal / protein / fibre): '+pg.kcal+' / '+pg.protein+'g / '+pg.fiber+'g. User context: practising GP, liberal low-carb framing, 16:8 IF, longevity-focused.'+condLine+profileLine+browseHint+plateLine+' Answer concisely (max 200 words). Representative foods from the user\'s current filter: '+ctx,
-    messages:[{role:'user',content:q}]
+    system:'You are a clinical nutrition AI in NutriForge — an evidence-based food database with '+foods.length+' foods ('+foods.filter(function(f){return f.african}).length+' African, '+foods.filter(function(f){return f.nigeria}).length+' Nigeria spotlight). Evidence grades: High=RCT/meta-analysis, Moderate=cohort, Low=mechanistic/traditional. User diary goal reference (kcal / protein / fibre): '+pg.kcal+' / '+pg.protein+'g / '+pg.fiber+'g. User context: practising GP, liberal low-carb framing, 16:8 IF, longevity-focused.'+condLine+browseHint+plateLine+' Answer concisely (max 200 words). Representative foods from the user\'s current filter: '+ctx,
+    messages:requestMessages
   };
+  var controller=new AbortController();
+  var timeout=setTimeout(function(){controller.abort()},30000);
   fetch('/api/chat',{
+    signal:controller.signal,
     method:'POST',headers:{'Content-Type':'application/json'},
     body:JSON.stringify(aiPayload)
   }).then(function(r){
     return r.text().then(function(t){
-      var data;
-      try{ data=JSON.parse(t); }catch(e2){ throw new Error(t||r.statusText||'Bad response'); }
       if(!r.ok){
-        var msg=(data&&data.error)?data.error:(t||r.statusText||String(r.status));
-        throw new Error(msg);
+        if([404,405,501,503].indexOf(r.status)>-1)throw new Error('AI is unavailable in this preview. The AI service needs to be connected.');
+        if(r.status===429)throw new Error('AI is busy. Please try again shortly.');
+        throw new Error('AI could not answer right now. Please try again.');
       }
+      var data;
+      try{data=JSON.parse(t)}catch(e2){throw new Error('AI returned an unreadable response. Please try again.');}
+      if(!data.content||!data.content[0]||typeof data.content[0].text!=='string'||!data.content[0].text.trim())throw new Error('AI returned an empty response. Please try again.');
       return data;
     });
   }).then(function(data){
     var text=data.content&&data.content[0]?data.content[0].text:'No response';
     var el=document.getElementById(loadId);
     if(el){var b=el.querySelector('.ai-bubble');if(b)b.textContent=text}
-    saveAIChatHistory();
+    aiConversation=requestMessages.concat([{role:'assistant',content:text}]).slice(-10);
   }).catch(function(err){
     var elErr=document.getElementById(loadId);
-    var hint='';
-    if(String(err&&err.message||'').indexOf('Failed to fetch')>=0||String(err&&err.message||'').indexOf('NetworkError')>=0){
-      hint=' Open this app over http(s) with /api/chat configured (e.g. Vercel + ANTHROPIC_API_KEY), not as a raw file URL.';
-    }
-    if(elErr){var b2=elErr.querySelector('.ai-bubble');if(b2)b2.textContent='Error: '+(err&&err.message?err.message:String(err))+hint}
-  });
+    var message=err.name==='AbortError'?'AI took too long to respond. Please try again.':err instanceof TypeError?'Could not connect to AI. Check your connection and try again.':err.message;
+    if(elErr){elErr.dataset.aiError='true';var b2=elErr.querySelector('.ai-bubble');if(b2)b2.textContent=message;}
+  }).finally(function(){clearTimeout(timeout);aiPendingTurn=null;setAIBusy(false)});
+
 }
 function appendMsg(role,text,id){
   var msgs=document.getElementById('aiMessages');if(!msgs)return;
@@ -3532,12 +3586,18 @@ function appendMsg(role,text,id){
   var av=document.createElement('div');av.className='ai-avatar';av.innerHTML=role==='user'?'&#128100;':'&#127807;';
   var bub=document.createElement('div');bub.className='ai-bubble';bub.textContent=text;
   div.appendChild(av);div.appendChild(bub);msgs.appendChild(div);msgs.scrollTop=msgs.scrollHeight;
-  saveAIChatHistory();
 }
-function saveAIChatHistory(){try{var msgs=document.getElementById('aiMessages');if(!msgs)return;var items=msgs.querySelectorAll('.ai-bubble');var h=Array.from(items).slice(-10).map(function(el){return{role:el.parentElement.classList.contains('user')?'user':'assistant',text:el.textContent}});localStorage.setItem('nf_chat',JSON.stringify(h))}catch(e){}}
-function loadAIChatHistory(){try{var stored=JSON.parse(localStorage.getItem('nf_chat')||'[]');stored.forEach(function(m){appendMsg(m.role==='user'?'user':'bot',m.text)})}catch(e){}}
+function loadAIChatHistory(){
+  aiConversation.forEach(function(m){appendMsg(m.role==='user'?'user':'bot',m.content)});
+  if(aiPendingTurn){appendMsg('user',aiPendingTurn.question);appendMsg('bot','Thinking…',aiPendingTurn.id)}
+  setAIBusy(aiPending);
+}
+
 
 function renderCombos() {
+  document.querySelectorAll('#comboFilters .combo-chip').forEach(function(chip){var selected=chip.dataset.ctype===comboTypeFilter;chip.classList.toggle('active',selected);chip.setAttribute('aria-pressed',String(selected))});
+  var search=document.getElementById('comboSearch');if(search&&search.value!==comboSearchTerm)search.value=comboSearchTerm;
+
   var list = COMBOS.slice();
   if (comboTypeFilter !== 'all') list = list.filter(function(c){ return c.type === comboTypeFilter; });
   if (comboSearchTerm) {
@@ -3742,6 +3802,7 @@ function changePortion(foodId,delta){
   var labelEl=document.getElementById('prt'+foodId);if(labelEl)labelEl.textContent=next+'g serving';
   var food=foods.filter(function(f){return f.id===foodId})[0];if(!food)return;var mult=next/100;
   var macroEl=document.getElementById('c'+foodId);if(macroEl){
+    var servingEl=macroEl.querySelector('.card-serving');if(servingEl)servingEl.textContent='Per '+next+' g serving';
     var vals=macroEl.querySelectorAll('.mac-val');var fields=['kcal','protein','carbs','fat','fiber'];
     vals.forEach(function(el,i){if(fields[i]){var raw=Math.round(food[fields[i]]*mult*10)/10;var unitSpan=el.querySelector('span');el.textContent=String(raw);if(unitSpan)el.appendChild(unitSpan)}});
   }
@@ -4023,21 +4084,21 @@ var render = (function(){
         '</div>'+
         drugPillHtml+
       '</div>'+
-      '<div class="card-macros">'+
-        '<div class="mac-item"><span class="mac-val">'+f.kcal+'</span><span class="mac-lbl">kcal</span></div>'+
-        '<div class="mac-item"><span class="mac-val">'+f.protein+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">protein</span></div>'+
-        '<div class="mac-item"><span class="mac-val">'+f.carbs+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">carbs</span></div>'+
-        '<div class="mac-item"><span class="mac-val">'+f.fat+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">fat</span></div>'+
-        '<div class="mac-item"><span class="mac-val">'+f.fiber+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">fibre</span></div>'+
+      '<div class="card-serving">Per '+pg+' g serving</div><div class="card-macros">'+
+        '<div class="mac-item"><span class="mac-val">'+(Math.round(f.kcal*pg/100*10)/10)+'</span><span class="mac-lbl">kcal</span></div>'+
+        '<div class="mac-item"><span class="mac-val">'+(Math.round(f.protein*pg/100*10)/10)+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">protein</span></div>'+
+        '<div class="mac-item"><span class="mac-val">'+(Math.round(f.carbs*pg/100*10)/10)+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">carbs</span></div>'+
+        '<div class="mac-item"><span class="mac-val">'+(Math.round(f.fat*pg/100*10)/10)+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">fat</span></div>'+
+        '<div class="mac-item"><span class="mac-val">'+(Math.round(f.fiber*pg/100*10)/10)+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">fibre</span></div>'+
       '</div>'+
       '<div class="card-scores">'+
-        '<div class="longevity-bar-wrap" title="Longevity: '+f.longevity+'/100"><span class="longevity-label">LS</span><div class="longevity-bar-track"><div class="longevity-bar-fill '+lsFill+'" style="width:'+f.longevity+'%"></div></div><span class="longevity-score">'+f.longevity+'</span></div>'+
+        '<div class="longevity-bar-wrap" title="Longevity: '+f.longevity+'/100"><span class="longevity-label">Longevity</span><div class="longevity-bar-track"><div class="longevity-bar-fill '+lsFill+'" style="width:'+f.longevity+'%"></div></div><span class="longevity-score">'+f.longevity+'</span></div>'+
         starHtml+
       '</div>'+
       '<div class="card-hover-actions" onclick="event.stopPropagation()">'+
-        '<button class="ca-btn'+(isFavourite(f.id)?' fav-active':'')+'" onclick="toggleFavourite('+f.id+')" title="Save">'+(isFavourite(f.id)?'★':'☆')+'</button>'+
-        '<button class="ca-btn'+(inCompare?' compare-active':'')+'" onclick="toggleCompare('+f.id+')" title="Compare">'+(inCompare?'✓':'⚖')+'</button>'+
-        '<button class="ca-btn'+(inPlate?' plate-active':'')+'" onclick="togglePlate('+f.id+')" title="'+(inPlate?'On your plate — tap to remove':'Add to My Plate')+'">'+(inPlate?'✓':'+')+'</button>'+
+        '<button class="ca-btn'+(isFavourite(f.id)?' fav-active':'')+'" onclick="toggleFavourite('+f.id+')" title="Save">'+(isFavourite(f.id)?'★':'☆')+' Save</button>'+
+        '<button class="ca-btn'+(inCompare?' compare-active':'')+'" onclick="toggleCompare('+f.id+')" title="Compare">'+(inCompare?'✓':'⚖')+' Compare</button>'+
+        '<button class="ca-btn'+(inPlate?' plate-active':'')+'" onclick="togglePlate('+f.id+')" title="'+(inPlate?'On your plate — tap to remove':'Add to My Plate')+'">'+(inPlate?'✓ On plate':'+ Plate')+'</button>'+
         '<button class="ca-btn" onclick="logFoodToDiaryFromCard('+f.id+');event.stopPropagation()" title="Log to diary (uses portion if set)">Log</button>'+
         '<button class="ca-btn" onclick="shareFood('+f.id+')" title="Share">↗</button>'+
       '</div>'+
