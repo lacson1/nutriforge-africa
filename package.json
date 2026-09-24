@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run && node test-ai-flow.cjs"
   },
   "devDependencies": {
     "vitest": "^3.0.0"
