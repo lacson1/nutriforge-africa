@@ -1,8 +1,8 @@
 /* NutriForge — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-goals-9';
+var CACHE_NAME = 'nutriforge-layout-10';
 var PRECACHE = [
   './index.html',
-  './layout.css?v=9',
+  './layout.css?v=10',
   './landing.html',
   './manifest.json',
   './t2dm-clinical-field-guide.html',
