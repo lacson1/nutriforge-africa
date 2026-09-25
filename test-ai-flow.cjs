@@ -2,7 +2,7 @@ const fs=require('fs'),vm=require('vm'),assert=require('assert/strict');
 const html=fs.readFileSync('index.html','utf8');
 for(const m of html.matchAll(/<script(.*?)>([\s\S]*?)<\/script>/g))if(!m[1].includes('src=')&&!m[1].includes('type="module"'))new Function(m[2]);
 let requests=[],els={},reply={ok:true,status:200,text:async()=>JSON.stringify({content:[{text:'Synthetic answer'}]})};
-const c={console,AbortController,setTimeout,clearTimeout,TypeError,document:{querySelectorAll:()=>[],getElementById:id=>els[id]},activeDrawer:'ai',foods:[],activeCondition:null,filter:'all',loadDiaryAndProfiles(){},getPlateTargets:()=>({kcal:2000,protein:100,fiber:30}),getPlateSummaryForAI:()=>'',getProfileById:()=>({name:'PRIVATE_NAME',note:'PRIVATE_NOTE'}),activeProfileId:'test',fetch:async(url,opts)=>{requests.push(JSON.parse(opts.body));return reply},openDrawer(){}};
+const c={console,AbortController,setTimeout,clearTimeout,TypeError,document:{querySelectorAll:()=>[],getElementById:id=>els[id]},getVisibleFoods:()=>[],activeDrawer:'ai',foods:[],activeCondition:null,filter:'all',loadDiaryAndProfiles(){},getPlateTargets:()=>({kcal:2000,protein:100,fiber:30}),getPlateSummaryForAI:()=>'',getProfileById:()=>({name:'PRIVATE_NAME',note:'PRIVATE_NOTE'}),activeProfileId:'test',fetch:async(url,opts)=>{requests.push(JSON.parse(opts.body));return reply},openDrawer(){}};
 vm.createContext(c);vm.runInContext(html.slice(html.indexOf('var aiConversation=[];'),html.indexOf('function renderCombos()')),c);
 c.appendMsg=(role,text,id)=>{if(id){const bubble={textContent:text};els[id]={dataset:{},querySelector:()=>bubble}}};
 const settle=()=>new Promise(r=>setImmediate(r));

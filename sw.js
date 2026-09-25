@@ -1,16 +1,17 @@
 /* NutriForge — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-layout-11';
+var CACHE_NAME = 'nutriforge-layout-12';
 var PRECACHE = [
   './index.html',
-  './layout.css?v=11',
+  './layout.css?v=12',
   './landing.html',
   './manifest.json',
   './t2dm-clinical-field-guide.html',
   './js/backup-core.mjs',
-  './js/foods-data.js',
-  './js/search-core.js',
+  './js/foods-data.js?v=12',
+  './js/search-core.js?v=12',
+  './js/filter-core.js?v=12',
   './js/meals-core.js',
-  './js/scoring-core.js',
+  './js/scoring-core.js?v=12',
 ];
 
 self.addEventListener('install', function (event) {

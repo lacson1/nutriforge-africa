@@ -39,7 +39,11 @@ function fuzzySubsequence(hay, needle) {
 function tokenMatchesWithFuzzy(f, t) {
   var hay = foodSearchHaystack(f);
   if (tokenMatchesHaystack(hay, t)) return true;
-  if (t.length >= 3 && fuzzySubsequence(foodSearchHaystackShort(f), t)) return true;
+  // Limit omitted-letter matching to a single nearby-length word.
+  // Short searches such as yam must not match scattered letters across a description.
+  if (t.length >= 4 && foodSearchHaystackShort(f).split(/[^a-z0-9]+/).some(function(word){
+    return word.length >= t.length && word.length <= t.length + 2 && fuzzySubsequence(word, t);
+  })) return true;
   return false;
 }
 function foodMatchesSearch(f, qraw) {

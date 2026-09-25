@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0f2a30">
-<title>NutriForge · v6.1 · 390 Foods</title>
+<title>NutriForge · v6.1 · 402 Foods</title>
 <link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -747,7 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=11">
+<link rel="stylesheet" href="layout.css?v=12">
 </head>
 <body>
 
@@ -853,8 +853,9 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     <button type="button" class="search-clear" id="searchClear" title="Clear search" aria-label="Clear search">&times;</button>
   </div>
 </section>
+<p class="filter-help">Choose a kitchen, then narrow by category or search. Filters work together.</p>
 <div class="filter-row" id="filterRow">
-  <div class="filter-row-scroll" aria-label="Category filters">
+  <div class="filter-row-scroll" aria-label="Kitchen filters">
   <button class="chip active" data-cat="all" id="totalChip" onclick="setFilter('all',this)">All</button>
   <button class="chip african" data-cat="african" onclick="setFilter('african',this)">African</button>
   <button class="chip dishes" data-cat="dishes" onclick="setFilter('dishes',this)">Dishes</button>
@@ -866,7 +867,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
   <div class="filters-popover-wrap" id="filtersPopoverWrap">
     <button class="chip" id="filtersBtn" onclick="toggleFiltersPopover()">Filters <span id="filterBadge" class="filter-badge" style="display:none">0</span></button>
     <div class="filters-popover" id="filtersPopover">
-      <div class="fp-group"><label class="fp-label">Sort by</label>
+      <div class="fp-group"><label for="sortSel" class="fp-label">Sort by</label>
         <select id="sortSel" class="fp-select" onchange="sort=this.value;render();updateFilterBadge()">
           <option value="name">A–Z</option><option value="name_desc">Z–A</option>
           <option value="kcal_asc">Calories ↑</option><option value="kcal_desc">Calories ↓</option>
@@ -878,15 +879,15 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
           <option value="longevity">Longevity Score ↓</option><option value="longevity_asc">Longevity Score ↑</option>
           <option value="confidence">Evidence Stars ↓</option><option value="confidence_asc">Evidence Stars ↑</option>
         </select></div>
-      <div class="fp-group"><label class="fp-label">Evidence</label>
+      <div class="fp-group"><label for="evidence_filter" class="fp-label">Evidence</label>
         <select id="evidence_filter" class="fp-select" onchange="evidenceFilter=this.value;render();updateFilterBadge()">
           <option value="all">All</option><option value="High">High only (RCT/Meta)</option><option value="Moderate">Moderate+</option>
         </select></div>
-      <div class="fp-group"><label class="fp-label">Drug interactions</label>
+      <div class="fp-group"><label for="drug_filter" class="fp-label">Drug interactions</label>
         <select id="drug_filter" class="fp-select" onchange="drugFilter=this.value;render();updateFilterBadge()">
           <option value="all">All</option><option value="critical">Critical only</option><option value="moderate">Moderate+</option><option value="mild">Any flagged</option>
         </select></div>
-      <div class="fp-group"><label class="fp-label">Region</label>
+      <div class="fp-group"><label for="region_filter" class="fp-label">Region</label>
         <select id="region_filter" class="fp-select" onchange="regionFilter=this.value;render();updateFilterBadge()">
           <option value="all">All regions</option><option value="West Africa">West Africa</option><option value="East Africa">East Africa</option>
           <option value="North Africa">North Africa</option><option value="Central Africa">Central Africa</option>
@@ -967,7 +968,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     <div class="t2dm-guide-bar">
       <div class="t2dm-guide-bar-left">
         <h2 id="t2dmGuideOverlayTitle" class="t2dm-guide-title">NutriForge · the field guide</h2>
-        <p class="t2dm-guide-sub">Same app, same session: this panel is the field guide; the <strong>390-food</strong> list stays underneath. Use <strong>Back to NutriForge</strong> or <strong>Esc</strong> to return to browsing, search, and tools.</p>
+        <p class="t2dm-guide-sub">Same app, same session: this panel is the field guide; the <strong>402-food</strong> list stays underneath. Use <strong>Back to NutriForge</strong> or <strong>Esc</strong> to return to browsing, search, and tools.</p>
       </div>
       <div class="t2dm-guide-actions">
         <button type="button" class="t2dm-guide-home" onclick="closeT2dmClinicalGuide()">Back to NutriForge</button>
@@ -1111,8 +1112,8 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
       <div style="font-size:14px;font-weight:700;margin-bottom:3px"><span class="brand-mark">NutriForge</span></div>
       <div style="opacity:.5;line-height:1.6;font-size:10px">
         Evidence-based nutrition for Africa and the African diaspora.<br>
-        390 foods · dishes filter · Nigeria spotlight · diary &amp; goals · client profiles · drug–food checker · meal templates · offline PWA · AI assistant<br>
-        Data: USDA FoodData Central, WHO, peer-reviewed literature.<br>
+        402 foods · dishes filter · Nigeria spotlight · diary &amp; goals · client profiles · drug–food checker · meal templates · offline PWA · AI assistant<br>
+        Data: FAO/INFOODS, USDA FoodData Central, WHO, peer-reviewed literature.<br>
         <button type="button" onclick="openT2dmClinicalGuide()" style="margin-top:8px;font-size:11px;font-weight:600;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);cursor:pointer;margin-right:6px">Open the field guide</button>
         <button type="button" onclick="openMethodology()" style="margin-top:8px;font-size:11px;font-weight:600;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);cursor:pointer">Methodology &amp; trust</button>
         <button type="button" onclick="openVatProtocol()" style="margin-top:8px;font-size:11px;font-weight:600;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);cursor:pointer;margin-left:6px">VAT hub</button>
@@ -1123,12 +1124,13 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 </footer>
 
 <div class="tooltip" id="tooltip"></div>
-<script src="js/foods-data.js"></script>
-<script src="js/search-core.js"></script>
+<script src="js/foods-data.js?v=12"></script>
+<script src="js/search-core.js?v=12"></script>
+<script src="js/filter-core.js?v=12"></script>
 <script src="js/meals-core.js"></script>
-<script src="js/scoring-core.js"></script>
+<script src="js/scoring-core.js?v=12"></script>
 <script>
-// ── ENRICHMENT (classifyDrug, calcLongevity, confStars — ./js/scoring-core.js)
+// ── ENRICHMENT (classifyDrug, calcLongevity, confStars — ./js/scoring-core.js?v=12)
 
 // ── RADAR SVG ────────────────────────────────────────────────
 function radarSVG(axes, color, size) {
@@ -1238,7 +1240,7 @@ foods.forEach(function(f) {
   f.stars       = confStars(f.evidence);
   f.drugSev     = classifyDrug(f.limits || '');
   f.radar       = radarAxes(f);
-  f.regions     = africanRegions(f);
+  f.regions     = f.regions || africanRegions(f);
   f.prep        = prepNote(f);
 });
 
@@ -1658,6 +1660,7 @@ var COMMUNITY_START_GOALS = [
 (function() {
   foods.forEach(function(f) {
     var text = [f.name,f.aka||'',f.benefits||'',f.use||'',f.bio||'',f.micro||'',f.limits||'',f.catLabel||''].join(' ').toLowerCase();
+    if(f.compositionOnly){ f.conditions=[]; return; }
     f.conditions = CONDITIONS.filter(function(c){
       return c.keywords.some(function(kw){ return text.indexOf(kw) > -1; });
     }).map(function(c){ return c.id; });
@@ -1714,6 +1717,7 @@ function todayISO(){
 }
 
 // ── STATE ──
+var categoryFilter = '';
 var filter = 'all', term = '', sort = 'name';
 var evidenceFilter = 'all', drugFilter = 'all', regionFilter = 'all';
 var compareSet = [];
@@ -1813,7 +1817,7 @@ function truncateProfileNote(s, max){
   return t.slice(0, m - 1) + '…';
 }
 
-// ── Food search: ./js/search-core.js (foodMatchesSearch, foodSearchRelevance, …)
+// ── Food search: ./js/search-core.js?v=12 (foodMatchesSearch, foodSearchRelevance, …)
 
 // ── VIEW SWITCHER ──
 function setView(view,btn){
@@ -2845,17 +2849,22 @@ function updateContextBadge(){
     if(activeProf.note) sessionHtml += '<span style="font-size:11px;opacity:.88;font-weight:500">— ' + safeHtml(truncateProfileNote(activeProf.note, 72)) + '</span>';
     sessionHtml += '</span><button type="button" class="ctx-end-session" onclick="clearActiveProfile()" title="Save this client diary and restore your pre-session favourites, plate, condition, and goals">End session</button> ';
   }
-  if(activeCondition || filter !== 'all' || term || activeProf){
+  if(activeCondition || filter !== 'all' || categoryFilter || term || evidenceFilter!=='all' || drugFilter!=='all' || regionFilter!=='all' || sort!=='name' || activeProf){
     var parts = [];
+    function addPart(key,label){parts.push('<button type="button" class="active-filter" onclick="removeBrowseFilter(\''+key+'\')" aria-label="Remove '+safeHtml(label)+' filter">'+safeHtml(label)+' <span aria-hidden="true">×</span></button>');}
     if(activeCondition){
       var c = CONDITIONS.filter(function(x){return x.id===activeCondition})[0];
-      if(c) parts.push(appMode==='patient'?c.patient:c.pro);
+      if(c) addPart('condition',appMode==='patient'?c.patient:c.pro);
     }
-    if(filter==='african') parts.push('African foods');
-    if(filter==='nigeria') parts.push('Nigeria foods');
-    if(filter==='dishes') parts.push('Dishes & traditional plates');
-    if(filter==='favourites') parts.push('Saved foods');
-    if(term) parts.push('"' + term + '"');
+    if(filter==='african') addPart('scope','African foods');
+    if(filter==='nigeria') addPart('scope','Nigeria foods');
+    if(filter==='dishes') addPart('scope','Dishes & traditional plates');
+    if(filter==='favourites') addPart('scope','Saved foods');
+    ['catSelect','evidence_filter','drug_filter','region_filter','sortSel'].forEach(function(id){
+      var el=document.getElementById(id);
+      if(el && el.selectedIndex>0) addPart(id,el.options[el.selectedIndex].text);
+    });
+    if(term) addPart('search','Search: '+term);
     var protocolBtn = activeCondition==='t2d'
       ? ' <button type="button" class="ctx-protocol-btn" onclick="openT2dmClinicalGuide(\'view=principles&state=all\')">The field guide</button>'
       : '';
@@ -2864,7 +2873,7 @@ function updateContextBadge(){
       ? ' <button type="button" class="ctx-vat-btn" onclick="openVatProtocol()">VAT hub</button>'
       : '';
     var showingBlock = parts.length
-      ? '<strong>Showing:</strong> ' + safeHtml(parts.join(' · ')) + '  <button onclick="clearAll()">Clear all</button>'
+      ? '<strong>Showing:</strong> ' + parts.join(' ') + '  <button onclick="clearAll()">Clear all</button>'
       : '';
     badge.innerHTML = sessionHtml + showingBlock + protocolBtn + vatHubBtn;
     badge.style.display = 'flex';
@@ -2873,26 +2882,34 @@ function updateContextBadge(){
   }
 }
 
+function removeBrowseFilter(key){
+  if(key==='condition'){clearCondition();return;}
+  if(key==='scope'){setFilter('all');return;}
+  if(key==='search'){term='';document.getElementById('srch').value='';document.getElementById('searchClear').classList.remove('visible');}
+  if(key==='catSelect'){categoryFilter='';document.getElementById(key).value='';}
+  if(key==='evidence_filter'){evidenceFilter='all';document.getElementById(key).value='all';}
+  if(key==='drug_filter'){drugFilter='all';document.getElementById(key).value='all';}
+  if(key==='region_filter'){regionFilter='all';document.getElementById(key).value='all';}
+  if(key==='sortSel'){sort='name';document.getElementById(key).value='name';}
+  updateFilterBadge();render();
+}
+
 // ── FILTER + SORT ──
 function setFilter(cat,btn){
   filter = cat;
   document.querySelectorAll('.filter-row .chip[data-cat]').forEach(function(c){c.classList.remove('active')});
   if(btn) btn.classList.add('active');
   else { var chip=document.querySelector('.filter-row .chip[data-cat="'+cat+'"]'); if(chip) chip.classList.add('active'); }
-  var sel = document.getElementById('catSelect');
-  if(sel && cat!==sel.value) sel.value = '';
   updateContextBadge();
   render();
 }
 document.getElementById('catSelect') && document.getElementById('catSelect').addEventListener('change',function(e){
-  filter = e.target.value || 'all';
-  document.querySelectorAll('.filter-row .chip[data-cat]').forEach(function(c){c.classList.remove('active')});
-  if(!e.target.value){var allChip=document.querySelector('.chip[data-cat="all"]');if(allChip)allChip.classList.add('active')}
+  categoryFilter = e.target.value;
   render();
 });
 
 function clearAll(){
-  filter='all';term='';sort='name';evidenceFilter='all';drugFilter='all';regionFilter='all';activeCondition=null;
+  categoryFilter='';filter='all';term='';sort='name';evidenceFilter='all';drugFilter='all';regionFilter='all';activeCondition=null;
   document.getElementById('srch').value='';
   var clrAll=document.getElementById('searchClear');if(clrAll)clrAll.classList.remove('visible');
   document.getElementById('sortSel').value='name';
@@ -2945,7 +2962,7 @@ function updateComparePanel(){
       var f=foods.filter(function(x){return x.id===compareSet[i]})[0];
       if(!f)continue;
       slot.className='compare-slot filled';
-      slot.innerHTML='<div style="font-size:12px;font-weight:600">'+f.emoji+' '+safeHtml(f.name)+'</div><div style="font-size:11px;color:var(--text-secondary);margin-top:4px">'+f.kcal+' kcal · '+f.protein+' g protein · '+f.fiber+' g fibre · Longevity '+f.longevity+'</div><button onclick="compareSet.splice('+i+',1);updateComparePanel();render()" style="position:absolute;top:6px;right:8px;font-size:14px;opacity:.4;cursor:pointer;background:none;border:none;color:inherit">x</button>';
+      slot.innerHTML='<div style="font-size:12px;font-weight:600">'+f.emoji+' '+safeHtml(f.name)+'</div><div style="font-size:11px;color:var(--text-secondary);margin-top:4px">'+f.kcal+' kcal · '+f.protein+' g protein · '+f.fiber+' g fibre · Longevity '+(f.compositionOnly?'Not rated':f.longevity)+'</div><button onclick="compareSet.splice('+i+',1);updateComparePanel();render()" style="position:absolute;top:6px;right:8px;font-size:14px;opacity:.4;cursor:pointer;background:none;border:none;color:inherit">x</button>';
     } else {
       slot.className='compare-slot';
       slot.innerHTML='<span class="compare-slot-label">Slot '+(i+1)+'</span>';
@@ -3455,13 +3472,14 @@ function updatePlatePanel(){
       Object.keys(kcalByCat).sort(function(a,b){return (kcalByCat[b]||0)-(kcalByCat[a]||0);}).slice(0,5).forEach(function(cat){
         var pct=Math.round((kcalByCat[cat]||0)/tk*100);
         var sample=ids.map(function(id){return plateMap[id];}).filter(function(f){return f&&(f.cat||'other')===cat;})[0];
-        var label=sample&&sample.catLabel?sample.catLabel:cat;
+        var label=({veg:'Vegetables & roots',leaf:'Leafy greens',grain:'Grains & cereals',fruit:'Fruits',legume:'Legumes',fish:'Fish',seafood:'Seafood',meat:'Meat',dairy:'Dairy',nut:'Nuts & seeds',oil:'Oils',fermented:'Fermented foods',fungi:'Mushrooms',spice:'Spices & herbs',other:'Other'})[cat]||cat;
         parts.push(label+' ~'+pct+'%');
       });
       var giLine='';
       if(totals.kcal>0&&hiGiKcal>0)giLine=' About '+Math.round(hiGiKcal/totals.kcal*100)+'% of calories come from High-GI items.';
       if(activeCondition==='t2d')giLine+=' For structured glycaemic tiers, use the field guide from the menu.';
-      ins.textContent='Kcal-weighted longevity score (approx.): '+wL+'/100. Mix by calories: '+parts.join(' · ')+'.'+giLine;
+      var hasUnrated=ids.some(function(id){return plateMap[id].compositionOnly;});
+      ins.textContent=(hasUnrated?'Longevity score unavailable: this plate includes foods not yet rated. ':'Kcal-weighted longevity score (approx.): '+wL+'/100. ')+'Mix by calories: '+parts.join(' · ')+'.'+giLine+(hasUnrated?' New FAO entries report available carbs (excluding fibre); other entries may use total carbs.':'');
     }
   }
   var rK=TK?totals.kcal/TK*100:0;
@@ -3549,10 +3567,7 @@ function aiAsk(q){
   appendMsg('bot','',loadId);
   var loadBubble=document.getElementById(loadId);
   if(loadBubble){var b=loadBubble.querySelector('.ai-bubble');if(b)b.innerHTML='<span class="ai-loading"><span>.</span><span>.</span><span>.</span></span> Thinking'}
-  var pool=foods.slice();
-  if(activeCondition) pool=pool.filter(function(f){return f.conditions&&f.conditions.indexOf(activeCondition)>-1});
-  if(filter==='nigeria') pool=pool.filter(function(f){return f.nigeria});
-  else if(filter==='african') pool=pool.filter(function(f){return f.african});
+  var pool=getVisibleFoods();
   var ctx=pool.sort(function(a,b){return b.longevity-a.longevity}).slice(0,8).map(function(f){return f.name+' ('+f.kcal+'kcal, '+f.protein+'g P, GI '+f.gi+', '+f.evidence+')'}).join('; ');
   var condLine='';
   if(activeCondition){
@@ -3569,7 +3584,7 @@ function aiAsk(q){
   var plateLine=plateCtx?' '+plateCtx:'';
   var aiPayload={
     max_tokens:1000,
-    system:'You are a clinical nutrition AI in NutriForge — an evidence-based food database with '+foods.length+' foods ('+foods.filter(function(f){return f.african}).length+' African, '+foods.filter(function(f){return f.nigeria}).length+' Nigeria spotlight). Evidence grades: High=RCT/meta-analysis, Moderate=cohort, Low=mechanistic/traditional. User diary goal reference (kcal / protein / fibre): '+pg.kcal+' / '+pg.protein+'g / '+pg.fiber+'g. User context: practising GP, liberal low-carb framing, 16:8 IF, longevity-focused.'+condLine+browseHint+plateLine+' Answer concisely (max 200 words). Representative foods from the user\'s current filter: '+ctx,
+    system:'You are a clinical nutrition AI in NutriForge — an evidence-based food database with '+foods.length+' foods ('+foods.filter(function(f){return f.african}).length+' African, '+foods.filter(function(f){return f.nigeria}).length+' Nigeria spotlight). Evidence grades: High=RCT/meta-analysis, Moderate=cohort, Low=mechanistic/traditional, Not rated=composition only, not clinically reviewed. User diary goal reference (kcal / protein / fibre): '+pg.kcal+' / '+pg.protein+'g / '+pg.fiber+'g. User context: practising GP, liberal low-carb framing, 16:8 IF, longevity-focused.'+condLine+browseHint+plateLine+' Answer concisely (max 200 words). Representative foods from the user\'s current filter: '+ctx,
     messages:requestMessages
   };
   var controller=new AbortController();
@@ -3690,16 +3705,8 @@ function jumpToFood(name) {
     render();
     return;
   }
-  if (filter !== 'all') {
-    filter = 'all';
-    document.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('active'); });
-    var allChip = document.querySelector('.chip[data-cat="all"]');
-    if (allChip) allChip.classList.add('active');
-    term = '';
-    var srch2 = document.getElementById('srch');
-    if (srch2) srch2.value = '';
-    render();
-  }
+  clearAll();
+  if(currentView==='table') setView('list');
   setTimeout(function(){
     var el = document.getElementById('c' + target.id);
     if (el) { el.scrollIntoView({behavior:'smooth',block:'center'}); if (!el.classList.contains('open')) el.click(); }
@@ -3892,17 +3899,10 @@ function importFullDataBackupPick(){
 
 // ── EXPORT / PRINT ──
 function exportCSV(){
-  var list=foods.slice();
-  if(activeCondition)list=list.filter(function(f){return f.conditions&&f.conditions.indexOf(activeCondition)>-1});
-  if(filter==='favourites')list=list.filter(function(f){return!!favourites[f.id]});
-  else if(filter==='african')list=list.filter(function(f){return f.african});
-  else if(filter==='dishes')list=list.filter(function(f){return f.browseAsDish;});
-  else if(filter==='nigeria')list=list.filter(function(f){return f.nigeria});
-  else if(filter!=='all')list=list.filter(function(f){return f.cat===filter});
-  if(term)list=list.filter(function(f){return foodMatchesSearch(f,term)});
-  var headers=['Name','Latin/Aka','Category','African','Kcal','Protein(g)','Carbs(g)','Fat(g)','Fibre(g)','GI','Evidence','Longevity','Drug','Micronutrients','Use'];
+  var list=getVisibleFoods();
+  var headers=['Name','Latin/Aka','Category','African','Kcal','Protein(g)','Carbs(g)','Fat(g)','Fibre(g)','GI','Evidence','Longevity','Drug','Micronutrients','Use','Nutrition source','Source code','Carbohydrate basis'];
   var rows=[headers];
-  list.forEach(function(f){rows.push([f.name,f.aka||'',f.catLabel,f.african?'Yes':'No',f.kcal,f.protein,f.carbs,f.fat,f.fiber,f.gi,f.evidence,f.longevity,f.drugSev,(f.micro||'').replace(/,/g,';'),(f.use||'').replace(/,/g,';')].map(function(v){return'"'+String(v).replace(/"/g,'""')+'"'}))});
+  list.forEach(function(f){rows.push([f.name,f.aka||'',f.catLabel,f.african?'Yes':'No',f.kcal,f.protein,f.carbs,f.fat,f.fiber,f.gi,f.evidence,f.longevity,f.drugSev,(f.micro||'').replace(/,/g,';'),(f.use||'').replace(/,/g,';'),f.sourceUrl||'',f.sourceCode||'',f.carbohydrateBasis||'Not specified'].map(function(v){return'"'+String(v).replace(/"/g,'""')+'"'}))});
   var csv=rows.map(function(r){return r.join(',')}).join('\n');
   var blob=new Blob([csv],{type:'text/csv'});var url=URL.createObjectURL(blob);
   var a=document.createElement('a');a.href=url;a.download='nutriforge-'+(activeCondition||filter||'all')+'.csv';
@@ -3943,46 +3943,10 @@ document.addEventListener('keydown',function(e){
 var render = (function(){
   return function(){
     updateBrowseHero();
-    var list = foods.slice();
-    if(filter==='favourites')list=list.filter(function(f){return!!favourites[f.id]});
-    else if(filter==='african')list=list.filter(function(f){return f.african});
-    else if(filter==='dishes')list=list.filter(function(f){return f.browseAsDish;});
-    else if(filter==='nigeria')list=list.filter(function(f){return f.nigeria});
-    else if(filter!=='all')list=list.filter(function(f){return f.cat===filter});
-    if(term)list=list.filter(function(f){return foodMatchesSearch(f,term)});
-    if(evidenceFilter==='High')list=list.filter(function(f){return f.evidence==='High'});
-    else if(evidenceFilter==='Moderate')list=list.filter(function(f){return f.evidence==='High'||f.evidence==='Moderate'});
-    if(drugFilter==='critical')list=list.filter(function(f){return f.drugSev==='critical'});
-    else if(drugFilter==='moderate')list=list.filter(function(f){return f.drugSev==='critical'||f.drugSev==='moderate'});
-    else if(drugFilter==='mild')list=list.filter(function(f){return f.drugSev!=='none'});
-    if(regionFilter!=='all')list=list.filter(function(f){return f.regions&&f.regions.indexOf(regionFilter)>-1});
-    if(activeCondition)list=list.filter(function(f){return f.conditions&&f.conditions.indexOf(activeCondition)>-1});
-
-    var qTrim=String(term||'').trim();
-    if(qTrim){
-      list.sort(function(a,b){
-        var dr=foodSearchRelevance(b,term)-foodSearchRelevance(a,term);
-        if(dr!==0)return dr;
-        if(activeCondition){var eo={High:0,Moderate:1,Low:2};var d=(eo[a.evidence]||2)-(eo[b.evidence]||2);if(d!==0)return d;return b.longevity-a.longevity}
-        return a.name.localeCompare(b.name);
-      });
-    } else {
-      list.sort(function(a,b){
-        if(activeCondition){var eo={High:0,Moderate:1,Low:2};var d=(eo[a.evidence]||2)-(eo[b.evidence]||2);if(d!==0)return d;return b.longevity-a.longevity}
-        if(sort==='name')return a.name.localeCompare(b.name);
-        if(sort==='name_desc')return b.name.localeCompare(a.name);
-        if(sort==='kcal_asc')return a.kcal-b.kcal;if(sort==='kcal_desc')return b.kcal-a.kcal;
-        if(sort==='protein')return b.protein-a.protein;if(sort==='protein_asc')return a.protein-b.protein;
-        if(sort==='carbs')return b.carbs-a.carbs;if(sort==='carbs_asc')return a.carbs-b.carbs;
-        if(sort==='fat')return b.fat-a.fat;if(sort==='fat_asc')return a.fat-b.fat;
-        if(sort==='fiber')return b.fiber-a.fiber;if(sort==='fiber_asc')return a.fiber-b.fiber;
-        if(sort==='longevity')return b.longevity-a.longevity;if(sort==='longevity_asc')return a.longevity-b.longevity;
-        if(sort==='confidence')return b.stars-a.stars;if(sort==='confidence_asc')return a.stars-b.stars;
-        if(sort==='gi'){var o={Low:0,'Low-Medium':1,Medium:2,High:3};return(o[a.gi]||2)-(o[b.gi]||2)}
-        if(sort==='gi_desc'){var o2={Low:0,'Low-Medium':1,Medium:2,High:3};return(o2[b.gi]||2)-(o2[a.gi]||2)}
-        return 0;
-      });
-    }
+    var suggestions=document.getElementById('searchSugList');if(suggestions)suggestions.style.display='none';
+    updateContextBadge();
+    document.querySelectorAll('.filter-row .chip[data-cat]').forEach(function(el){el.setAttribute('aria-pressed',el.dataset.cat===filter?'true':'false');});
+    var list = getVisibleFoods();
 
     var favCountEl=document.getElementById('favCount');
     if(favCountEl){var fc=Object.keys(favourites).length;favCountEl.textContent=fc?'('+fc+')':''}
@@ -4003,7 +3967,7 @@ var render = (function(){
 
     if(!list.length){
       grid.innerHTML='<div class="no-results">' +
-        (filter==='favourites'?'No saved foods yet.':'No foods match your filters.') +
+        (filter==='favourites'&&!Object.keys(favourites).length?'No saved foods yet.':'No foods match this combination. Try another category or clear the filters.') +
         '<br><button onclick="clearAll()" style="margin-top:8px;padding:6px 16px;background:var(--surface-2);color:var(--text-primary);border:none;border-radius:20px;cursor:pointer;font-size:12px">Clear all filters</button></div>';
       refreshTodayDashboard();
       return;
@@ -4035,7 +3999,7 @@ var render = (function(){
         var tds=tf.drugSev;
         var tlsFill=tf.longevity>=90?'ls-fill-5':tf.longevity>=75?'ls-fill-4':tf.longevity>=55?'ls-fill-3':tf.longevity>=35?'ls-fill-2':'ls-fill-1';
         var tdpill=tds!=='none'?'<span class="drug-pill '+(tds==='critical'?'cr':tds==='moderate'?'mo':'mi')+'">'+(tds==='critical'?'CRIT':tds==='moderate'?'MOD':'MILD')+'</span>':'-';
-        var tevBadge=tf.evidence==='High'?'<span class="ev-hi">High</span>':tf.evidence==='Moderate'?'<span class="ev-mo">Mod</span>':'<span class="ev-lo">Low</span>';
+        var tevBadge=tf.evidence==='High'?'<span class="ev-hi">High</span>':tf.evidence==='Moderate'?'<span class="ev-mo">Mod</span>':'<span class="ev-lo">'+safeHtml(tf.evidence)+'</span>';
         var tInPlate=!!plateMap[tf.id];var tInComp=compareSet.indexOf(tf.id)>-1;var tIsFav=!!favourites[tf.id];
         thtml+='<tr class="'+(tf.nigeria?'nigeria-row':(tf.african?'african-row':''))+'">'+
           '<td><div class="tv-name" onclick="closeTableExpand();setTimeout(function(){var e=document.getElementById(\'c\'+'+tf.id+');if(e){e.scrollIntoView({behavior:\'smooth\',block:\'center\'});e.click()}},100)"><span class="tv-emoji">'+tf.emoji+'</span><span class="tv-foodname">'+safeHtml(tf.name)+(tf.nigeria?' <span style="color:#008751;font-size:8px;font-weight:700">NG</span>':'')+(tf.african?' <span style="color:var(--accent-amber);font-size:8px;font-weight:700">AF</span>':'')+'</span></div></td>'+
@@ -4045,7 +4009,7 @@ var render = (function(){
           '<td class="tv-num">'+tf.fat+'g</td>'+
           '<td class="tv-num">'+tf.fiber+'g</td>'+
           '<td><span class="'+(tf.gi==='Low'?'ev-hi':tf.gi==='High'?'ev-lo':'ev-mo')+'" style="font-size:8px">'+tf.gi+'</span></td>'+
-          '<td class="tv-num"><span class="tv-ls"><span class="tv-ls-bar"><span class="tv-ls-fill '+tlsFill+'" style="width:'+tf.longevity+'%"></span></span><span class="tv-ls-val">'+tf.longevity+'</span></span></td>'+
+          '<td class="tv-num"><span class="tv-ls"><span class="tv-ls-bar"><span class="tv-ls-fill '+tlsFill+'" style="width:'+tf.longevity+'%"></span></span><span class="tv-ls-val">'+(tf.compositionOnly?'—':tf.longevity)+'</span></span></td>'+
           '<td>'+tevBadge+'</td>'+
           '<td>'+tdpill+'</td>'+
           '<td class="tv-action">'+
@@ -4093,9 +4057,11 @@ var render = (function(){
       if(ds!=='none'){var dc=ds==='critical'?'cr':ds==='moderate'?'mo':'mi';var dt=ds==='critical'?'Critical Interaction':ds==='moderate'?'Moderate Interaction':'Mild Interaction';drugExpandHtml='<div class="exp-drug-box '+dc+'"><div class="exp-section-label">'+dt+'</div><div class="exp-text">'+safeHtml(f.limits)+'</div></div>'}
       var prepHtml=f.prep?'<div class="exp-prep-box"><div class="exp-section-label">Preparation</div><div class="exp-text">'+safeHtml(f.prep)+'</div></div>':'';
       var condWhyNutrition=(activeCondition&&CONDITION_COMMUNITY_WHY[activeCondition])?('<div class="exp-condition-why"><strong>For your current filter:</strong> '+safeHtml(CONDITION_COMMUNITY_WHY[activeCondition])+'</div>'):'';
-      var handHintBar='<div class="portion-hand-hint"><strong>Hand guide</strong> (rough): a <strong>fist</strong> ≈ a cup of cooked starch or fruit; a <strong>flat palm</strong> ≈ protein portion; <strong>two cupped hands</strong> ≈ a big veg portion. '+safeHtml(getHandPortionCue(f.cat))+'<em>Oil, salt, and stock cubes change health impact more than these numbers suggest — adjust cooking to match your clinician\'s advice.</em></div>';
+      var handHintBar='<div class="portion-hand-hint"><strong>Hand guide</strong> (rough): a <strong>fist</strong> ≈ a cup of cooked starch or fruit; a <strong>flat palm</strong> ≈ protein portion; <strong>two cupped hands</strong> ≈ a big veg portion. '+safeHtml(getHandPortionCue(f.catLabel==='Starchy vegetable'?'grain':f.cat))+'<em>Oil, salt, and stock cubes change health impact more than these numbers suggest — adjust cooking to match your clinician\'s advice.</em></div>';
       var evSpan=appMode==='patient'?(f.evidence==='High'?'<span class="ev-hi">Strong</span>':f.evidence==='Moderate'?'<span class="ev-mo">Good</span>':'<span class="ev-lo">Traditional</span>'):'<span class="ev-'+f.evidence.toLowerCase().substring(0,2)+'">'+f.evidence+'</span>';
 
+      if(f.compositionOnly){evSpan='<span class="ev-lo">Not rated</span>';starHtml='<span class="stars-mini">Not rated</span>';}
+      var sourceHtml=f.sourceUrl?'<div class="food-source" onclick="event.stopPropagation()"><a href="'+safeHtml(f.sourceUrl)+'" target="_blank" rel="noopener noreferrer">FAO/INFOODS 2019 · '+safeHtml(f.sourceCode)+'</a><p>'+safeHtml(f.sourceNote)+'</p></div>':'';
       html+=
       '<div class="card'+(f.nigeria?' nigeria-food':(f.african?' african-food':''))+(inCompare?' in-compare':'')+(inPlate?' in-plate':'')+'" id="c'+f.id+'" onclick="tog('+f.id+')" style="animation-delay:'+Math.min(i*0.02,0.2)+'s">'+
       '<div class="card-top">'+
@@ -4114,7 +4080,7 @@ var render = (function(){
         '<div class="mac-item"><span class="mac-val">'+(Math.round(f.fiber*pg/100*10)/10)+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">fibre</span></div>'+
       '</div>'+
       '<div class="card-scores">'+
-        '<div class="longevity-bar-wrap" title="Longevity: '+f.longevity+'/100"><span class="longevity-label">Longevity</span><div class="longevity-bar-track"><div class="longevity-bar-fill '+lsFill+'" style="width:'+f.longevity+'%"></div></div><span class="longevity-score">'+f.longevity+'</span></div>'+
+        '<div class="longevity-bar-wrap" title="Longevity: '+(f.compositionOnly?'Not rated':f.longevity+'/100')+'"><span class="longevity-label">Longevity</span><div class="longevity-bar-track"><div class="longevity-bar-fill '+lsFill+'" style="width:'+f.longevity+'%"></div></div><span class="longevity-score">'+(f.compositionOnly?'—':f.longevity)+'</span></div>'+
         starHtml+
       '</div>'+
       '<div class="card-hover-actions" onclick="event.stopPropagation()">'+
@@ -4132,8 +4098,8 @@ var render = (function(){
         '</div>'+
         '<div class="exp-pane active" id="'+tid+'-nutrition">'+
           '<div class="portion-ctrl"><button class="portion-btn" onclick="changePortion('+f.id+',-25);event.stopPropagation()" title="−25 g">−</button><span class="portion-label" id="prt'+f.id+'">'+pg+'g serving</span><button class="portion-btn" onclick="changePortion('+f.id+',25);event.stopPropagation()" title="+25 g">+</button></div>'+
-          condWhyNutrition+handHintBar+
-          '<div class="radar-center">'+radarSVG(f.radar,f.nigeria?'#008751':(f.african?'var(--accent-amber)':'var(--accent-green)'),86)+'</div>'+
+          sourceHtml+condWhyNutrition+handHintBar+
+          (f.compositionOnly?'':'<div class="radar-center">'+radarSVG(f.radar,f.nigeria?'#008751':(f.african?'var(--accent-amber)':'var(--accent-green)'),86)+'</div>')+
           '<div class="exp-cols"><div><div class="exp-section-label">Key micronutrients</div><div class="exp-box"><div class="exp-text">'+safeHtml(f.micro)+'</div></div></div><div><div class="exp-section-label">Bioactive compounds</div><div class="exp-box"><div class="exp-text">'+safeHtml(f.bio)+'</div></div></div></div>'+
           regionExpandHtml+condTagsHtml+t2dmBridgeHtml+
         '</div>'+
@@ -4172,7 +4138,7 @@ var render = (function(){
   function showSuggestions(raw){
     var v=String(raw||'').trim();
     if(v.length<2){hideSug();return}
-    var allM=foods.filter(function(f){return foodMatchesSearch(f,v)});
+    var allM=getVisibleFoods();
     var m=allM.slice().sort(function(a,b){return foodSearchRelevance(b,v)-foodSearchRelevance(a,v)||a.name.localeCompare(b.name)}).slice(0,10);
     if(!m.length){hideSug();return}
     sugIds=m.map(function(f){return f.id});
@@ -4224,7 +4190,7 @@ maybeOpenCommunityStart();
 // Populate category select
 (function(){
   var sel=document.getElementById('catSelect');if(!sel)return;
-  var cats=[{v:'fish',l:'Fatty fish'},{v:'seafood',l:'Seafood'},{v:'meat',l:'Lean meat'},{v:'dairy',l:'Dairy'},{v:'veg',l:'Vegetables'},{v:'leaf',l:'Leafy greens'},{v:'legume',l:'Legumes'},{v:'fruit',l:'Fruits'},{v:'nut',l:'Nuts & seeds'},{v:'grain',l:'Whole grains'},{v:'fungi',l:'Mushrooms'},{v:'spice',l:'Spices & herbs'},{v:'oil',l:'Oils'},{v:'fermented',l:'Fermented'},{v:'other',l:'Other'}];
+  var cats=[{v:'fish',l:'Fish'},{v:'seafood',l:'Seafood'},{v:'meat',l:'Meat'},{v:'dairy',l:'Dairy'},{v:'veg',l:'Vegetables'},{v:'leaf',l:'Leafy greens'},{v:'legume',l:'Legumes'},{v:'fruit',l:'Fruits'},{v:'nut',l:'Nuts & seeds'},{v:'grain',l:'Grains & cereals'},{v:'fungi',l:'Mushrooms'},{v:'spice',l:'Spices & herbs'},{v:'oil',l:'Oils'},{v:'fermented',l:'Fermented'},{v:'other',l:'Other'}];
   sel.innerHTML='<option value="">All categories</option>'+cats.map(function(c){return'<option value="'+c.v+'">'+c.l+'</option>'}).join('');
 })();
 
