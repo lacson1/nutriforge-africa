@@ -281,3 +281,14 @@ body.dark-mode .community-start-btn[aria-pressed=true] { background:rgba(94,234,
 .browse-guide-wrap .browse-hero { padding:18px; }
 .browse-guide-wrap .browse-hero-text { font-size:13px; line-height:1.65; }
 @media(max-width:760px){.browse-guide-wrap {position:static}.browse-heading {position:relative}.browse-guide-wrap .brand-dropdown-panel {left:0;top:100%;}}
+
+/* Explain combined filters and keep provenance readable in food details. */
+.filter-help { margin: 0; padding: 8px 24px 0; color: var(--text-secondary); font-size: 12px; }
+.food-source { margin: 10px 0; padding: 12px; border: 1px solid var(--card-border); border-radius: 10px; font-size: 12px; line-height: 1.5; }
+.food-source a { color: var(--accent-green); font-weight: 650; }
+.food-source p { margin: 6px 0 0; color: var(--text-secondary); }
+.context-badge { flex-wrap: wrap; gap: 8px; }
+@media (max-width: 600px) { .filter-help { padding: 8px 14px 0; } }
+.context-badge .active-filter { margin: 0; padding: 5px 9px; border: 1px solid var(--card-border); border-radius: 16px; background: var(--surface); color: var(--text-primary); text-decoration: none; font-size: 12px; }
+.context-badge .active-filter:hover { border-color: var(--accent-green); }
+.context-badge .active-filter:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px; }

@@ -15,6 +15,7 @@ function classifyDrug(limits) {
 }
 
 function calcLongevity(f) {
+  if (f.compositionOnly) return 0;
   var score = f.evidence === 'High' ? 35 : f.evidence === 'Moderate' ? 20 : 5;
   score += Math.min(15, f.fiber * 1.5);
   score += Math.min(10, f.protein * 0.3);
@@ -30,5 +31,5 @@ function calcLongevity(f) {
 }
 
 function confStars(ev) {
-  return ev === 'High' ? 5 : ev === 'Moderate' ? 3 : 1;
+  return ev === 'Not rated' ? 0 : ev === 'High' ? 5 : ev === 'Moderate' ? 3 : 1;
 }

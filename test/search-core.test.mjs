@@ -48,6 +48,12 @@ describe('search-core.js', () => {
     expect(s.foodMatchesSearch(f, 'cheap')).toBe(true);
   });
 
+  it('does not match short queries across unrelated words', () => {
+    const s=loadSearchSandbox();
+    expect(s.foodMatchesSearch({name:'Acerola cherry',catLabel:'Superfruit'},'yam')).toBe(false);
+    expect(s.foodMatchesSearch({name:'Moringa'},'mrnga')).toBe(true);
+  });
+
   it('scores name prefix higher than substring', () => {
     const s = loadSearchSandbox();
     const a = { name: 'Oats', aka: '', benefits: '', bio: '', use: '', catLabel: '', micro: '', limits: '' };
