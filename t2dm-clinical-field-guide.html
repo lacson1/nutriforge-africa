@@ -41,6 +41,56 @@
     #boot-splash .eyebrow { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.22em; color: #7d8678; }
     #boot-splash .title { font-size: 28px; font-weight: 380; font-style: italic; color: #244a20; letter-spacing: -0.015em; }
     .gone { opacity: 0; pointer-events: none; transition: opacity 280ms; }
+
+    /* Explicit layout rules keep the guide independent of generated utility CSS. */
+    .guide-header { position: relative; }
+    .guide-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:16px; max-width:1280px; margin:auto; padding:20px 32px; }
+    .guide-brand { display:flex; align-items:center; gap:12px; flex:1 1 340px; }
+    .guide-states { display:flex; flex-wrap:wrap; gap:4px; order:3; flex:1 1 100%; padding-top:8px; }
+    .guide-states::before { content:'Your focus'; align-self:center; font-size:12px; margin-right:12px; }
+    .guide-states button { min-height:40px; padding:8px 14px; border-radius:6px 6px 0 0; }
+    .guide-actions { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+    .guide-actions button { min-height:40px; gap:6px; }
+    .guide-actions button span { display:inline; }
+    .guide-nav { position:sticky; top:0!important; }
+    .guide-nav > div { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); max-width:1280px; padding:0 32px; margin:auto; }
+    .guide-nav button { display:flex; align-items:center; gap:12px; padding:16px 12px; min-width:0; }
+    .guide-nav button > span:nth-child(2) { display:flex; flex-direction:column; gap:5px; }
+    .guide-nav button .num { display:inline-block; margin-left:8px; padding:2px 6px; }
+    .guide-nav > div > span { display:none; }
+    .guide-principles { max-width:1160px; margin:auto; padding:40px 32px 100px; }
+    .guide-intro { max-width:720px; margin-bottom:28px; }
+    .guide-intro h1 { font-size:clamp(30px,4vw,48px); line-height:1.12; margin:12px 0 16px; letter-spacing:-.025em; }
+    .guide-intro p { font-size:16px; line-height:1.65; }
+    .principle-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .principle-card { border:1px solid; border-radius:14px; padding:24px; }
+    .principle-heading { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+    .principle-heading h2 { font-size:24px; line-height:1.2; flex:1; }
+    .principle-card p { font-size:14px; line-height:1.7; }
+    .principle-step { margin-top:16px; padding-top:14px; border-top:1px solid; }
+    .guide-next { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; padding:24px 0; }
+    .guide-next h2 { font-size:23px; margin-bottom:6px; }
+    .guide-next button { padding:13px 20px; border-radius:8px; font-weight:600; }
+    .guide-evidence { border:1px solid; border-radius:12px; padding:20px; }
+    .guide-evidence summary { cursor:pointer; font-weight:600; }
+    .guide-evidence ul { display:grid; gap:16px; margin-top:20px; }
+    .guide-evidence li { font-size:14px; line-height:1.6; }
+    .guide-evidence a { text-decoration:underline; text-underline-offset:3px; }
+    .guide-care-note { font-size:12px; line-height:1.65; margin-top:20px; }
+    button:focus-visible, a:focus-visible, summary:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+    @media(max-width:640px) {
+      .guide-toolbar { padding:16px; gap:12px; }
+      .guide-brand { flex-basis:100%; }
+      .guide-states { gap:2px; }
+      .guide-states::before { flex-basis:100%; margin:0 0 4px; }
+      .guide-states button { padding:8px; font-size:11px; }
+      .guide-nav > div { padding:0 8px; }
+      .guide-nav button { justify-content:center; padding:14px 4px; gap:4px; }
+      .guide-nav button > .section-num, .guide-nav button .eyebrow { display:none; }
+      .guide-principles { padding:28px 16px 100px; }
+      .principle-grid { grid-template-columns:1fr; }
+      .principle-card { padding:20px; }
+    }
   </style>
 </head>
 <body>
@@ -51,9 +101,9 @@
   </div>
   <div id="root"></div>
 
-  <!-- When embedded in NutriForge, link back to the full 390-food database -->
+  <!-- When embedded in NutriForge, link back to the full full food database -->
   <div id="nf-embed-strip" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;box-sizing:border-box;padding:8px 14px;padding-bottom:max(8px,env(safe-area-inset-bottom));background:rgba(27,35,26,.94);color:#f0f4eb;font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:12px;line-height:1.35;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.14)">
-    <span style="max-width:min(100%,42rem)">You’re in <strong style="font-weight:700">NutriForge</strong> — the <strong style="font-weight:700">390-food</strong> list (GI, macros, drug flags) is open behind this panel. Use the header <strong style="font-weight:700">NutriForge</strong> link or this button to return.</span>
+    <span style="max-width:min(100%,42rem)">Explore nutrition, portions and your diary in the main app.</span>
     <button type="button" id="nf-embed-strip-btn" style="flex-shrink:0;font:inherit;font-weight:600;font-size:11px;padding:7px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.14);color:#fff;cursor:pointer">Back to database</button>
   </div>
   <script>
@@ -69,7 +119,7 @@
           try { window.parent.postMessage({ type: 'nutriforge', action: 'from-t2dm-guide', condition: 't2d' }, '*'); } catch (e) {}
         });
       } else {
-        span.innerHTML = 'This guide is a companion to <strong>NutriForge</strong> — open the main app for the full 390-food database (GI, macros, drug flags, Nigeria spotlight).';
+        span.innerHTML = 'Explore the full food database and diary in <strong>NutriForge</strong>.';
         btn.textContent = 'Open NutriForge';
         btn.addEventListener('click', function(){ window.location.href = 'index.html#condition=t2d'; });
       }
@@ -1175,7 +1225,7 @@ const PATIENT_STATES = [
   },
   {
     id: "prevention", label: "Prevention", short: "Prev", color: "#1d4d2e",
-    description: "Pre-diabetes / prevent progression. DPP lifestyle arm cut incidence ~58%; PREDIMED Mediterranean ~30–40%. Aim 5–7% weight loss + ≥150 min/wk activity.",
+    description: "For people at risk of type 2 diabetes. The DPP lifestyle programme reduced new cases by 58% over about three years; prevention is different from treatment.",
   },
   {
     id: "management", label: "Management", short: "Mgmt", color: "#a8521f",
@@ -1183,7 +1233,7 @@ const PATIENT_STATES = [
   },
   {
     id: "remission", label: "Remission", short: "Rem", color: "#b8935a",
-    description: "DiRECT 2018: ~46% achieved remission with ≥10 kg weight loss. Strict calorie/carb restriction; more 'moderate' foods move to 'avoid'. Medication review essential before initiation.",
+    description: "A supervised weight-management pathway. DiRECT reported remission in 46% of intervention participants at one year. This food filter is not the trial protocol; discuss medication changes with your care team.",
   },
   {
     id: "insulin", label: "Insulin / SU", short: "Ins", color: "#7a2030",
@@ -1287,10 +1337,10 @@ const STATE_OVERRIDES = {
 };
 
 const PRINCIPLES = [
-  { kicker: "Pillar 1", title: "Fibre first",            icon: Leaf,     body: "≥30 g/day from legumes, vegetables, whole grains. Largest single dietary effect on HbA1c." },
-  { kicker: "Pillar 2", title: "Mediterranean core",     icon: Award,    body: "PREDIMED + DIRECT-PLUS: EVOO, nuts, fish, green-leafy, legumes. ~30–40% T2DM reduction." },
-  { kicker: "Pillar 3", title: "Weight loss → remission",icon: Activity, body: "DiRECT (2018): ~46% of recent-onset T2DM achieved remission with ≥10 kg loss." },
-  { kicker: "Pillar 4", title: "Liquid sugar out",       icon: Target,   body: "SSBs and fruit juice are the two most modifiable dietary risks." },
+  { title: "Choose fibre-rich foods", icon: Leaf, body: "Make room for beans, vegetables and whole grains in meals you already enjoy.", step: "Try beans or lentils alongside vegetables and a portion of whole grains." },
+  { title: "Build a varied plate", icon: Award, body: "A Mediterranean-style pattern brings together vegetables, legumes, nuts, fish and unsaturated oils. Adapt it to your own kitchen.", step: "Start with vegetables, add protein, then a portion of high-fibre carbohydrate." },
+  { title: "Find a sustainable weight plan", icon: Activity, body: "For some people with type 2 diabetes, supported weight loss can lead to remission. It is not guaranteed and needs ongoing follow-up.", step: "If weight loss is appropriate for you, agree a plan with your diabetes team." },
+  { title: "Rethink everyday drinks", icon: Target, body: "Water and unsweetened drinks can replace sugary drinks. Choose whole fruit more often than juice for its fibre.", step: "Try water or unsweetened tea with your next meal." },
 ];
 
 // ------------------------------------------------------------
@@ -1308,7 +1358,7 @@ const MEAL_TEMPLATES = [
   },
   {
     id: "mediterranean-lunch", label: "Mediterranean lunch", kicker: "PREDIMED",
-    description: "Lentils + EVOO + leafy greens + walnuts. The trial-proven combination.",
+    description: "Lentils, olive oil, leafy greens and walnuts. Inspired by a Mediterranean eating pattern.",
     items: [
       { id: "lentils", servings: 1 },
       { id: "evoo", servings: 1 },
@@ -1317,8 +1367,8 @@ const MEAL_TEMPLATES = [
     ],
   },
   {
-    id: "direct-remission", label: "DiRECT-style plate", kicker: "Remission",
-    description: "Fatty fish + non-starchy veg + EVOO. Low-energy, high-satiety.",
+    id: "direct-remission", label: "Fish & greens", kicker: "Meal idea",
+    description: "Fish, leafy vegetables and olive oil. A meal idea, not a remission programme.",
     items: [
       { id: "fatty-fish", servings: 1 },
       { id: "leafy", servings: 2 },
@@ -2345,15 +2395,15 @@ function Header({
 }) {
   return (
     <header
-      className="sticky top-0 z-30 border-b backdrop-blur"
+      className="guide-header z-30 border-b backdrop-blur"
       style={{
         background: theme === "dark" ? "rgba(16,21,16,0.86)" : "rgba(241,245,226,0.88)",
         borderColor: palette.border,
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-10 py-3 flex items-center gap-3 flex-wrap">
+      <div className="guide-toolbar">
         {/* Brand — editorial monogram */}
-        <div className="flex items-center gap-3 mr-2">
+        <div className="guide-brand">
           <div
             className="w-10 h-10 rounded-sm flex items-center justify-center relative"
             style={{
@@ -2399,7 +2449,7 @@ function Header({
               Food &amp; glycaemic tiers
             </div>
             <div className="text-[10px]" style={{ marginTop: 4, color: palette.textSubtle, letterSpacing: "0.04em" }}>
-              Tiers &amp; meal tools here · macros, GI &amp; 390 foods in the main app
+              Practical food choices for type 2 diabetes
             </div>
           </div>
         </div>
@@ -2438,7 +2488,7 @@ function Header({
         <div className="flex-1" />
 
         {/* Patient state selector — hairline underline style */}
-        <div className="flex items-center gap-0 overflow-x-auto" style={{ borderBottom: `1px solid ${palette.borderSoft}` }}>
+        <div className="guide-states" style={{ borderBottom: `1px solid ${palette.borderSoft}` }}>
           {PATIENT_STATES.map((s) => {
             const active = patientState === s.id;
             return (
@@ -2456,14 +2506,14 @@ function Header({
                 aria-pressed={active}
                 title={s.description}
               >
-                {s.short || s.label}
+                {s.label}
               </button>
             );
           })}
         </div>
 
         {/* Action rail */}
-        <div className="flex items-center gap-1.5">
+        <div className="guide-actions">
           <button
             onClick={onShowMeal}
             className="relative h-9 px-3 rounded-sm border text-[12px] flex items-center gap-1.5 chip-soft"
@@ -2535,7 +2585,7 @@ function Header({
 function TabBar({ tabs, active, setActive, palette, theme, counts }) {
   return (
     <nav
-      className="sticky z-20 border-b backdrop-blur"
+      className="guide-nav z-20 border-b backdrop-blur"
       style={{
         top: 64, // sits below the sticky header
         background: theme === "dark" ? "rgba(16,21,16,0.92)" : "rgba(241,245,226,0.92)",
@@ -2740,89 +2790,39 @@ function FilterBar({
 
 /* ─────────────────────────  PRINCIPLES VIEW  ───────────────────────── */
 
-function PrinciplesView({ palette }) {
+function PrinciplesView({ palette, onBuild }) {
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-10 pt-12 pb-16 fade-in">
-      <div className="flex items-baseline gap-4 mb-6">
-        <span className="section-num text-sm" style={{ color: palette.accentGold }}>02</span>
-        <span className="eyebrow" style={{ color: palette.textMuted }}>Principles</span>
-        <span className="flex-1 h-px" style={{ background: palette.border }} />
-        <span className="eyebrow" style={{ color: palette.textSubtle }}>Four pillars</span>
+    <section className="guide-principles fade-in" style={{ color: palette.text }} aria-labelledby="principles-title">
+      <div className="guide-intro">
+        <div className="eyebrow" style={{ color: palette.textMuted }}>02 / Principles</div>
+        <h1 id="principles-title" className="display">Small choices. A stronger foundation.</h1>
+        <p style={{ color: palette.textMuted }}>Four practical starting points for eating well with type 2 diabetes. Choose one to try, then build it into meals that suit your life.</p>
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
-        <div className="md:col-span-7">
-          <h2
-            className="display leading-[1.0] mb-5"
-            style={{ fontWeight: 360, fontSize: "clamp(2rem, 4.5vw, 3.4rem)", letterSpacing: "-0.02em", color: palette.text }}
-          >
-            Four ideas that do <span style={{ fontStyle: "italic", color: palette.accentDeep }}>most of the work.</span>
-          </h2>
-          <p
-            className="max-w-2xl text-[15px] leading-relaxed"
-            style={{ color: palette.textMuted, fontFamily: "'Source Serif 4', Georgia, serif" }}
-          >
-            Most of the literature on diet and type&nbsp;2 diabetes converges on the same four levers.
-            They aren't novel. They are unfashionable. They work.
-          </p>
-        </div>
-        <aside
-          className="md:col-span-5 rounded-sm border p-5"
-          style={{ borderColor: palette.border, background: palette.surface }}
-        >
-          <div className="eyebrow mb-3" style={{ color: palette.textMuted }}>Trial backbone</div>
-          <ul className="text-[13px] leading-snug space-y-2" style={{ color: palette.textMuted, fontFamily: "'Source Serif 4', Georgia, serif" }}>
-            {[
-              ["PREDIMED", "Mediterranean diet · ~30% CV-event reduction"],
-              ["DiRECT", "Low-energy diet · 46% remission at 1y"],
-              ["DIRECT-PLUS", "Green-Med · hepatic fat reduction"],
-              ["EPIC-InterAct", "Legumes ↔ lower T2DM incidence"],
-              ["DPP", "Lifestyle change · ~58% ↓ progression"],
-            ].map(([label, desc]) => (
-              <li key={label} className="flex gap-3">
-                <span className="serif" style={{ fontWeight: 600, color: palette.text, minWidth: 92 }}>{label}</span>
-                <span>{desc}</span>
-              </li>
-            ))}
-          </ul>
-        </aside>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="principle-grid">
         {PRINCIPLES.map((p, idx) => {
           const Icon = p.icon;
-          const num = String(idx + 1).padStart(2, "0");
-          return (
-            <article
-              key={p.title}
-              className="card-premium rounded-sm border p-7 flex flex-col"
-              style={{ borderColor: palette.border, background: palette.surface }}
-            >
-              <div className="flex items-center justify-between mb-5">
-                <div
-                  className="w-11 h-11 rounded-sm flex items-center justify-center"
-                  style={{ background: palette.surfaceAlt, color: palette.accentDeep, border: `1px solid ${palette.borderSoft}` }}
-                >
-                  <Icon size={18} />
-                </div>
-                <span className="section-num" style={{ fontSize: "22px", color: palette.accentGold, opacity: 0.85 }}>{num}</span>
-              </div>
-              <div className="eyebrow mb-2" style={{ color: palette.textSubtle }}>{p.kicker}</div>
-              <div
-                className="display mb-3"
-                style={{ fontSize: "22px", fontWeight: 480, color: palette.text, letterSpacing: "-0.01em", lineHeight: 1.15 }}
-              >
-                {p.title}
-              </div>
-              <p
-                className="text-[14px] leading-relaxed"
-                style={{ color: palette.textMuted, fontFamily: "'Source Serif 4', Georgia, serif" }}
-              >{p.body}</p>
-            </article>
-          );
+          return <article key={p.title} className="principle-card" style={{ background: palette.surface, borderColor: palette.border }}>
+            <div className="principle-heading"><Icon size={22} style={{ color: palette.accentDeep, flexShrink: 0 }} /><h2 className="display">{p.title}</h2><span className="num" style={{ color: palette.textSubtle }}>{String(idx + 1).padStart(2, "0")}</span></div>
+            <p style={{ color: palette.textMuted }}>{p.body}</p>
+            <p className="principle-step" style={{ borderColor: palette.borderSoft }}><strong>Try this: </strong>{p.step}</p>
+          </article>;
         })}
       </div>
-    </div>
+      <div className="guide-next">
+        <div><h2 className="display">Put it on your plate</h2><p style={{ color: palette.textMuted }}>Explore a meal template or build your own combination.</p></div>
+        <button onClick={onBuild} style={{ background: palette.accentDeep, color: palette.surface }}>Build a meal →</button>
+      </div>
+      <details className="guide-evidence" style={{ background: palette.surface, borderColor: palette.border }}>
+        <summary>Evidence &amp; sources</summary>
+        <ul style={{ color: palette.textMuted }}>
+          <li><a href="https://www.niddk.nih.gov/health-information/diabetes/overview/healthy-living-with-diabetes" target="_blank" rel="noopener noreferrer">NIDDK · Everyday food choices</a><br />Practical guidance on balanced meals, fibre-rich carbohydrates and drinks.</li>
+          <li><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa1800389" target="_blank" rel="noopener noreferrer">PREDIMED · Heart health</a><br />The revised 2018 report found fewer major cardiovascular events with Mediterranean diets supplemented with olive oil or nuts in adults at high cardiovascular risk. This is not a remission result.</li>
+          <li><a href="https://www.ncl.ac.uk/press/articles/archive/2024/02/direct-extensionstudy/" target="_blank" rel="noopener noreferrer">DiRECT · Supported remission</a><br />At one year, 46% of the weight-management intervention group were in remission. The programme used supervised total diet replacement and follow-up; an ordinary meal template does not reproduce it.</li>
+          <li><a href="https://www.niddk.nih.gov/about-niddk/research-areas/diabetes/diabetes-prevention-program-dpp" target="_blank" rel="noopener noreferrer">DPP · Prevention</a><br />An intensive lifestyle programme reduced new diabetes cases by 58% over about three years in adults at high risk. This concerns prevention, not treatment of established diabetes.</li>
+        </ul>
+      </details>
+      <p className="guide-care-note" style={{ color: palette.textMuted }}>Educational guidance, personalised with your care team. Discuss major diet changes before starting, especially if you use insulin or medicines that can cause low blood sugar, are pregnant, or have kidney disease.</p>
+    </section>
   );
 }
 
@@ -3687,7 +3687,7 @@ function T2DMFoodGuideV3() {
         </>)}
 
         {view === "principles" && (
-          <PrinciplesView palette={palette} />
+          <PrinciplesView palette={palette} onBuild={() => setView("builder")} />
         )}
 
         {view === "builder" && (
