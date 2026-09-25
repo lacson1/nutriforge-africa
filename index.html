@@ -747,7 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=8">
+<link rel="stylesheet" href="layout.css?v=9">
 </head>
 <body>
 
@@ -1087,12 +1087,14 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <button type="button" class="drawer-close" onclick="closeCommunityStart()" aria-label="Close">&#10005;</button>
       </div>
       <div class="nf-doc-body">
-        <p class="community-start-lead">Choose what matters most today. We’ll tailor your food list and meal ideas. You can change your focus anytime.</p>
+        <p class="community-start-lead">Choose a focus for food suggestions and meal ideas.</p>
         <div class="community-start-grid" id="communityStartGrid" role="group" aria-label="Choose a goal"></div>
-        <div class="community-next"><strong>Your next step</strong><p id="communityNextText" aria-live="polite">Choose a goal to explore matching meal ideas.</p></div>
-        <div class="community-start-actions"><button type="button" class="ca-btn" onclick="closeCommunityStart()">Just browse foods</button><button type="button" class="ca-btn" id="communityContinue" onclick="applyCommunityGoal(selectedCommunityGoal)" disabled>Explore meal ideas →</button></div>
+        </div>
+      <div class="community-start-footer">
+        <p id="communityNextText" class="community-selection-note" aria-live="polite">Select one goal to continue.</p>
+        <div class="community-start-actions"><button type="button" class="ca-btn" onclick="closeCommunityStart()">Just browse foods</button><button type="button" class="ca-btn" id="communityContinue" onclick="applyCommunityGoal(selectedCommunityGoal)" disabled>Show meal ideas →</button></div>
         <p class="community-start-foot">For education, not diagnosis. Discuss dietary changes with your clinician, especially during pregnancy or if you use insulin or have kidney disease.</p>
-        <p class="community-reopen">Change your focus in More → Start guide (goals).</p>
+
       </div>
     </div>
   </div>
@@ -1646,11 +1648,11 @@ var CONDITION_COMMUNITY_WHY = {
 };
 
 var COMMUNITY_START_GOALS = [
-  { id:'goal_t2d', label:'Steady energy & blood sugar', emoji:'📊', sub:'Fibre-friendly picks', cond:'t2d', filter:null, mealFocus:'t2d' },
+  { id:'goal_t2d', label:'Blood sugar & energy', emoji:'📊', sub:'Fibre-friendly picks', cond:'t2d', filter:null, mealFocus:'t2d' },
   { id:'goal_htn', label:'Blood pressure', emoji:'💓', sub:'Plant-forward patterns', cond:'htn', filter:null, mealFocus:'htn' },
   { id:'goal_weight', label:'Healthy weight', emoji:'⚖️', sub:'Filling, nutrient-dense foods', cond:'obesity', filter:null, mealFocus:'weight' },
-  { id:'goal_heart', label:'Heart health', emoji:'❤️', sub:'Cholesterol & BP friendly', cond:'cvd', filter:null, mealFocus:'heart' },
-  { id:'goal_family', label:'Family meals', emoji:'🥘', sub:'Ready-made dishes lens', cond:null, filter:'dishes', mealFocus:'family' }
+  { id:'goal_heart', label:'Heart health', emoji:'❤️', sub:'Everyday heart-conscious choices', cond:'cvd', filter:null, mealFocus:'heart' },
+  { id:'goal_family', label:'Family meals', emoji:'🥘', sub:'Simple meals to share', cond:null, filter:'dishes', mealFocus:'family' }
 ];
 
 // Pre-compute condition matches for every food
@@ -2637,7 +2639,7 @@ function selectCommunityGoal(id){
   selectedCommunityGoal=id;
   document.querySelectorAll('.community-start-btn').forEach(function(btn){btn.setAttribute('aria-pressed',String(btn.dataset.goal===id))});
   document.getElementById('communityContinue').disabled=false;
-  document.getElementById('communityNextText').textContent='Explore meal ideas for '+goal.label.toLowerCase()+', with foods and portions you can adjust.';
+  document.getElementById('communityNextText').textContent=goal.label+' selected. You can change this anytime.';
 }
 function renderCommunityStartButtons(){
   var host = document.getElementById('communityStartGrid');
@@ -2658,7 +2660,7 @@ function openCommunityStart(){
   o.classList.add('open');
   o.setAttribute('aria-hidden','false');
   document.getElementById('communityContinue').disabled=true;
-  document.getElementById('communityNextText').textContent='Choose a goal to explore matching meal ideas.';
+  document.getElementById('communityNextText').textContent='Select one goal to continue.';
   o.querySelector('.community-start-btn').focus();
   document.body.style.overflow = 'hidden';
 }
