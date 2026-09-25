@@ -747,33 +747,12 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=10">
+<link rel="stylesheet" href="layout.css?v=11">
 </head>
 <body>
 
 <div class="header">
-  <div class="brand-dropdown-wrap" id="brandBrowseWrap">
-    <h1 class="brand-site-title">
-      <button type="button" class="brand-dropdown-trigger" id="brandBrowseBtn" onclick="toggleBrandBrowsePanel(event)" aria-expanded="false" aria-haspopup="true" aria-controls="brandBrowsePanel" title="How browsing &amp; filters work">
-        <span class="brand-mark" lang="en">NutriForge</span>
-        <svg class="brand-dd-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-    </h1>
-    <div class="brand-dropdown-panel" id="brandBrowsePanel" role="region" aria-label="How optional filters work" aria-hidden="true">
-      <div class="browse-hero" role="note">
-        <div class="browse-hero-inner">
-          <span class="browse-hero-emoji" id="browseHeroEmoji" aria-hidden="true">🌍</span>
-          <div class="browse-hero-copy" id="browseHeroCopy">
-            <p class="browse-hero-text" id="browseHeroLine1">One <strong>global</strong> list for every kitchen. The filter chips only narrow the view — e.g. <strong>African staples</strong>, a <strong>Nigeria</strong> lens, or <strong>ready-made dishes</strong>. Combine them when you want a mixed plate.</p>
-            <p class="browse-hero-text browse-hero-why" id="browseHeroLine2" style="display:none" hidden></p>
-            <div class="browse-hero-actions">
-              <button type="button" class="vat-hub-quick" onclick="openVatProtocol();closeBrandBrowsePanel();">VAT visceral-fat protocol — overview &amp; documents</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <h1 class="brand-site-title"><span class="brand-mark" lang="en">NutriForge</span></h1>
   <div class="today-dashboard-wrap" id="todayDashboardWrap">
     <button type="button" class="today-dashboard-trigger" id="todayDashboardBtn" onclick="toggleTodayDashboardPanel(event)" aria-expanded="false" aria-haspopup="true" aria-controls="todayDashboardPanel" title="Today — diary, plate, and protocol focus">
       Today
@@ -847,7 +826,27 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 </nav>
 
 <section class="browse-toolbar" aria-label="Browse foods">
-  <div class="browse-heading"><h2>Browse foods</h2><span class="result-count" id="resultCount" aria-live="polite"></span></div>
+  <div class="browse-heading"><h2>Browse foods</h2><span class="result-count" id="resultCount" aria-live="polite"></span>  <div class="brand-dropdown-wrap browse-guide-wrap" id="brandBrowseWrap">
+      <button type="button" class="brand-dropdown-trigger" id="brandBrowseBtn" onclick="toggleBrandBrowsePanel(event)" aria-expanded="false" aria-haspopup="true" aria-controls="brandBrowsePanel" title="How browsing &amp; filters work">
+        <span>Browse guide</span>
+        <svg class="brand-dd-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    <div class="brand-dropdown-panel" id="brandBrowsePanel" role="region" aria-label="How optional filters work" aria-hidden="true">
+      <div class="browse-hero" role="note">
+        <div class="browse-hero-inner">
+          <span class="browse-hero-emoji" id="browseHeroEmoji" aria-hidden="true">🌍</span>
+          <div class="browse-hero-copy" id="browseHeroCopy">
+            <p class="browse-hero-text" id="browseHeroLine1">One <strong>global</strong> list for every kitchen. The filter chips only narrow the view — e.g. <strong>African staples</strong>, a <strong>Nigeria</strong> lens, or <strong>ready-made dishes</strong>. Combine them when you want a mixed plate.</p>
+            <p class="browse-hero-text browse-hero-why" id="browseHeroLine2" style="display:none" hidden></p>
+            <div class="browse-hero-actions">
+              <button type="button" class="vat-hub-quick" onclick="openVatProtocol();closeBrandBrowsePanel();">VAT visceral-fat protocol — overview &amp; documents</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   <div class="search-wrap">
     <span class="search-icon">&#x1F50D;</span>
     <input type="text" id="srch" placeholder="Search foods, ingredients, or nutrients…" aria-label="Search foods" autocomplete="off" autocapitalize="off" spellcheck="false">
