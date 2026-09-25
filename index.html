@@ -747,7 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=12">
+<link rel="stylesheet" href="layout.css?v=15">
 </head>
 <body>
 
@@ -773,7 +773,12 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
       <span class="dm-icon dm-moon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
       <span class="dm-icon dm-sun" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></span>
     </button>
-    <button type="button" class="vat-header-cta" onclick="openVatProtocol()" title="Visceral adiposity protocol — summaries &amp; documents">VAT</button>
+    <details class="welcome-guides" id="guidesMenu"><summary>Guides</summary><div class="welcome-guides-panel">
+      <button type="button" onclick="document.getElementById('guidesMenu').open=false;openCommunityStart()">Choose a goal</button>
+      <button type="button" onclick="document.getElementById('guidesMenu').open=false;openT2dmClinicalGuide()">Diabetes field guide</button>
+      <button type="button" onclick="document.getElementById('guidesMenu').open=false;openVatProtocol()">VAT overview &amp; documents</button>
+      <button type="button" onclick="document.getElementById('guidesMenu').open=false;openMethodology()">Methodology &amp; sources</button>
+    </div></details>
     <div class="overflow-menu-wrap">
       <button type="button" class="ha-btn" id="overflowBtn" onclick="toggleOverflow()" title="More" aria-label="More options">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
@@ -806,7 +811,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <!-- Shared navigation: tabs on desktop, bottom bar on mobile -->
 <nav class="mobile-nav" aria-label="Main navigation">
   <div class="mobile-nav-inner">
-    <button class="mnav-btn active" onclick="closeDrawer();setMobileTab(this)">
+    <button class="mnav-btn active" onclick="exploreWelcomeFoods();setMobileTab(this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
       Browse
     </button>
@@ -820,12 +825,36 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     </button>
     <button class="mnav-btn" onclick="openDrawer('combos');setMobileTab(this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
-      Combos
+      Food combinations
     </button>
   </div>
 </nav>
 
-<section class="browse-toolbar" aria-label="Browse foods">
+<section class="welcome" aria-labelledby="welcomeTitle">
+  <div class="welcome-summary"><p id="welcomeStatus">Your next meal starts here.</p><button type="button" id="welcomeToggle" aria-expanded="true" aria-controls="welcomeBody" onclick="toggleWelcome()">Hide welcome</button></div>
+  <div class="welcome-body" id="welcomeBody">
+    <div class="welcome-copy">
+      <h2 id="welcomeTitle">Build a better plate with foods you know.</h2>
+      <p class="welcome-lead">Explore African and global foods, plan meals and track your day.</p>
+      <div class="welcome-actions"><button type="button" class="welcome-primary" id="welcomePlateAction" onclick="openDrawer('plate')">Build my plate <span aria-hidden="true">→</span></button><button type="button" class="welcome-secondary" onclick="exploreWelcomeFoods()">Explore foods</button></div>
+      <div class="welcome-paths">
+        <button type="button" onclick="openCommunityStart()"><strong>Choose a goal <span aria-hidden="true">→</span></strong><span>Set a focus for your meals.</span></button>
+        <button type="button" onclick="openDrawer('meals')"><strong>Try a meal template <span aria-hidden="true">→</span></strong><span>Start with a ready-made idea.</span></button>
+        <button type="button" onclick="openDrawer('diary')"><strong>Your daily diary <span aria-hidden="true">→</span></strong><span>Log meals and follow your day.</span></button>
+      </div>
+    </div>
+    <div class="welcome-demo">
+      <h3>Try a plate</h3><p>Adjust the portions. See the totals change.</p>
+      <div class="welcome-demo-body"><div id="welcomePlateVisual" class="welcome-plate" role="img"></div><div id="welcomeIngredients" class="welcome-ingredients"></div></div>
+      <div id="welcomeNutrition" class="welcome-nutrition" aria-live="polite" aria-atomic="true"></div>
+      <p id="welcomeFeedback" role="status"></p>
+      <button type="button" class="welcome-primary welcome-add" onclick="addWelcomePlate()">Add example to my plate <span aria-hidden="true">→</span></button>
+      <p class="welcome-footnote">Adds to your current plate. Review nutrition and portions in My Plate.</p>
+    </div>
+  </div>
+</section>
+
+<section id="foodBrowser" class="browse-toolbar" aria-label="Browse foods">
   <div class="browse-heading"><h2>Browse foods</h2><span class="result-count" id="resultCount" aria-live="polite"></span>  <div class="brand-dropdown-wrap browse-guide-wrap" id="brandBrowseWrap">
       <button type="button" class="brand-dropdown-trigger" id="brandBrowseBtn" onclick="toggleBrandBrowsePanel(event)" aria-expanded="false" aria-haspopup="true" aria-controls="brandBrowsePanel" title="How browsing &amp; filters work">
         <span>Browse guide</span>
@@ -1092,7 +1121,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         </div>
       <div class="community-start-footer">
         <p id="communityNextText" class="community-selection-note" aria-live="polite">Select one goal to continue.</p>
-        <div class="community-start-actions"><button type="button" class="ca-btn" onclick="closeCommunityStart()">Just browse foods</button><button type="button" class="ca-btn" id="communityContinue" onclick="applyCommunityGoal(selectedCommunityGoal)" disabled>Show meal ideas →</button></div>
+        <div class="community-start-actions"><button type="button" class="ca-btn" onclick="closeCommunityStart();exploreWelcomeFoods()">Just browse foods</button><button type="button" class="ca-btn" id="communityContinue" onclick="applyCommunityGoal(selectedCommunityGoal)" disabled>Show meal ideas →</button></div>
         <p class="community-start-foot">For education, not diagnosis. Discuss dietary changes with your clinician, especially during pregnancy or if you use insulin or have kidney disease.</p>
 
       </div>
@@ -1127,6 +1156,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <script src="js/foods-data.js?v=12"></script>
 <script src="js/search-core.js?v=12"></script>
 <script src="js/filter-core.js?v=12"></script>
+<script src="js/welcome.js?v=15"></script>
 <script src="js/meals-core.js"></script>
 <script src="js/scoring-core.js?v=12"></script>
 <script>
@@ -2089,7 +2119,7 @@ function buildPlateDrawer(){
   return '<div class="plate-premium">' +
     '<div class="plate-intro"><h2>Build your plate.</h2><p>A little of what you love. Portions that work for you.</p></div>' +
     '<div class="plate-stage"><div id="plateVisual" class="plate-visual"></div><p class="plate-visual-caption">Food proportions by weight</p></div>' +
-    '<div class="plate-main-actions"><button type="button" class="ca-btn" onclick="closeDrawer()">+ Add foods</button><button type="button" class="ca-btn" id="logPlateButton" onclick="logPlateToDiary()">Log plate to diary ↗</button></div>' +
+    '<div class="plate-main-actions"><button type="button" class="ca-btn" onclick="exploreWelcomeFoods()">+ Add foods</button><button type="button" class="ca-btn" id="logPlateButton" onclick="logPlateToDiary()">Log plate to diary ↗</button></div>' +
     '<div class="plate-section-heading"><h3>On your plate</h3><span id="plateFoodCount">0 foods</span></div>' +
     '<div class="plate-items" id="plateItems">' +
     '<div class="plate-empty" id="plateEmptyHint"><div class="plate-empty-title">No foods yet</div>Tap + on a card (expand on mobile if needed).</div></div>' +
@@ -3943,6 +3973,7 @@ document.addEventListener('keydown',function(e){
 var render = (function(){
   return function(){
     updateBrowseHero();
+    updateWelcome();
     var suggestions=document.getElementById('searchSugList');if(suggestions)suggestions.style.display='none';
     updateContextBadge();
     document.querySelectorAll('.filter-row .chip[data-cat]').forEach(function(el){el.setAttribute('aria-pressed',el.dataset.cat===filter?'true':'false');});
@@ -4185,7 +4216,7 @@ render();
 updateCondDropdownLabel();
 updateContextBadge();
 updateFilterBadge();
-maybeOpenCommunityStart();
+initWelcome();
 
 // Populate category select
 (function(){

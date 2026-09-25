@@ -292,3 +292,57 @@ body.dark-mode .community-start-btn[aria-pressed=true] { background:rgba(94,234,
 .context-badge .active-filter { margin: 0; padding: 5px 9px; border: 1px solid var(--card-border); border-radius: 16px; background: var(--surface); color: var(--text-primary); text-decoration: none; font-size: 12px; }
 .context-badge .active-filter:hover { border-color: var(--accent-green); }
 .context-badge .active-filter:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px; }
+
+/* Interactive welcome: one practical starting point above the food browser. */
+.welcome { max-width:1288px; margin:auto; padding:20px 24px 32px; border-bottom:1px solid var(--card-border); }
+.welcome-summary { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:22px; color:var(--text-secondary); font-size:12px; }
+.welcome-summary p { margin:0; }
+.welcome-summary button { border:0; background:none; color:var(--text-secondary); padding:10px 0 10px 12px; cursor:pointer; white-space:nowrap; }
+.welcome-body { display:grid; grid-template-columns:1.15fr 1fr; align-items:center; gap:50px; }
+.welcome-body[hidden] { display:none; }
+.welcome-copy h2 { font-family:'Roboto Serif',Georgia,serif; font-size:clamp(32px,4vw,54px); font-weight:600; line-height:1.12; letter-spacing:-1.8px; margin:0 0 24px; color:var(--text-primary); }
+body.dark-mode .welcome-copy h2 { color:#c7eee0; }
+.welcome-lead { font-size:17px; line-height:1.7; color:var(--text-secondary); margin:0 0 28px; max-width:480px; }
+.welcome-actions { display:flex; flex-wrap:wrap; gap:12px; }
+.welcome-primary,.welcome-secondary { display:inline-flex; justify-content:center; align-items:center; gap:16px; padding:14px 20px; min-height:48px; border-radius:9px; font-size:14px; font-family:inherit; font-weight:600; cursor:pointer; }
+.welcome-primary { background:var(--accent-green); color:#092c25; border:1px solid var(--accent-green); font-weight:650; }
+.welcome-secondary { background:transparent; color:var(--text-primary); border:1px solid var(--card-border); }
+.welcome button:focus-visible { outline:3px solid var(--accent-green); outline-offset:4px; }
+.welcome button:hover { filter:brightness(1.1); }
+.welcome button:disabled { opacity:.35; cursor:default; }
+.welcome-paths { margin-top:38px; display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.welcome-paths button { border:0; border-right:1px solid var(--card-border); padding:0 12px 0 0; text-align:left; background:none; cursor:pointer; color:var(--text-secondary); font-size:12px; line-height:1.6; }
+.welcome-paths button:last-child { border-right:0; }
+.welcome-paths strong { display:block; color:var(--accent-green); font-size:13px; margin-bottom:8px; }
+.welcome-demo { padding:24px; border:1px solid var(--card-border); border-radius:20px; background:var(--card-bg); }
+.welcome-demo h3 { font:600 28px 'Roboto Serif',Georgia,serif; margin:0 0 8px; }
+.welcome-demo>p { font-size:13px; line-height:1.5; color:var(--text-secondary); margin:0; }
+.welcome-demo-body { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:24px; padding:24px 0; }
+.welcome-plate { aspect-ratio:1; border-radius:50%; display:grid; place-items:center; width:100%; max-width:220px; margin:auto; }
+.welcome-plate>div { width:65%; height:65%; border-radius:50%; background:var(--card-bg); display:flex; flex-direction:column; justify-content:center; align-items:center; gap:4px; }
+.welcome-plate strong { font-size:24px; }.welcome-plate small { font-size:14px; }.welcome-plate span { font-size:11px; color:var(--text-secondary); }
+.welcome-ingredient { margin-bottom:15px; }.welcome-ingredient:last-child { margin-bottom:0; }
+.welcome-ingredient strong { display:flex; align-items:center; gap:7px; font-size:13px; font-weight:500; margin-bottom:8px; }
+.welcome-ingredient i { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+.welcome-ingredient>div { display:flex; align-items:center; justify-content:space-between; gap:4px; }
+.welcome-ingredient button { width:36px; height:36px; border:1px solid var(--card-border); background:var(--surface-2); color:var(--text-primary); border-radius:7px; font-size:19px; cursor:pointer; }
+.welcome-ingredient output { font-size:12px; min-width:42px; text-align:center; }
+.welcome-nutrition { display:grid; grid-template-columns:repeat(3,1fr); padding:18px 0; border-top:1px solid var(--card-border); }
+.welcome-nutrition>div { display:flex; flex-direction:column; align-items:center; gap:5px; border-right:1px solid var(--card-border); }.welcome-nutrition>div:last-child { border:0; }
+.welcome-nutrition strong { font-size:17px; }.welcome-nutrition span { font-size:12px; color:var(--text-secondary); }
+.welcome-add { width:100%; }.welcome-demo .welcome-footnote { font-size:10px; margin-top:10px; line-height:1.5; }
+#foodBrowser { scroll-margin-top:80px; }
+@media(max-width:900px) { .welcome-body { gap:24px; }.welcome-copy h2 { font-size:36px; }.welcome-demo { padding:18px; }.welcome-demo-body { gap:12px; }.welcome-paths { grid-template-columns:1fr; gap:16px; margin-top:26px; }.welcome-paths button { border:0; }.welcome-paths strong { margin-bottom:1px; } }
+@media(max-width:640px) { .welcome { padding:14px 16px 24px; }.welcome-body { grid-template-columns:1fr; gap:26px; }.welcome-copy h2 { font-size:34px; letter-spacing:-1px; max-width:400px; }.welcome-lead { font-size:15px; margin-bottom:20px; }.welcome-paths { grid-template-columns:repeat(3,1fr); gap:12px; }.welcome-paths strong { font-size:12px; }.welcome-paths button { font-size:11px; }.welcome-demo-body { grid-template-columns:1fr 1fr; gap:20px; }.welcome-summary { font-size:11px; }.welcome-ingredient button { min-width:36px; }.mnav-btn { font-size:10px; } }
+@media print { .welcome { display:none; } }
+
+.welcome-demo-body { padding:18px 0; }.welcome-plate { max-width:190px; }.welcome-summary { margin-bottom:14px; }
+#welcomeFeedback:empty { display:none; }
+#welcomeFeedback { font-size:12px; margin-bottom:12px; color:var(--text-primary); }
+
+body:not(.dark-mode) .welcome-primary { color:#fff; }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+
+.welcome-guides { position:relative; }.welcome-guides summary { cursor:pointer; list-style:none; color:var(--header-fg); font-size:13px; padding:12px 8px; }.welcome-guides summary::-webkit-details-marker { display:none; }
+.welcome-guides-panel { position:absolute; right:0; top:100%; z-index:250; width:240px; max-width:calc(100vw - 32px); padding:8px; border:1px solid var(--card-border); border-radius:12px; background:var(--card-bg); box-shadow:0 12px 35px #0003; }
+.welcome-guides-panel button { display:block; width:100%; text-align:left; padding:12px; background:none; border:0; border-radius:6px; color:var(--text-primary); cursor:pointer; font-size:13px; }.welcome-guides-panel button:hover { background:var(--surface-2); }
