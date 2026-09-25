@@ -273,3 +273,11 @@ body.dark-mode .community-start-btn[aria-pressed=true] { background:rgba(94,234,
  .community-start-actions {gap:6px;}
  .community-start-actions .ca-btn {font-size:12px;padding:8px;}
 }
+
+/* Keep browsing guidance beside the list it explains. */
+.browse-heading { flex-wrap:wrap; }
+.browse-guide-wrap .brand-dropdown-trigger { color:var(--text-secondary); font-size:12px; font-family:inherit; font-weight:500; padding:7px 10px; border:1px solid var(--card-border); border-radius:8px; gap:6px; }
+.browse-guide-wrap .brand-dropdown-panel { width:min(440px,calc(100vw - 48px)); }
+.browse-guide-wrap .browse-hero { padding:18px; }
+.browse-guide-wrap .browse-hero-text { font-size:13px; line-height:1.65; }
+@media(max-width:760px){.browse-guide-wrap {position:static}.browse-heading {position:relative}.browse-guide-wrap .brand-dropdown-panel {left:0;top:100%;}}
