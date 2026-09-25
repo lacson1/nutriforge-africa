@@ -747,7 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=16">
+<link rel="stylesheet" href="layout.css?v=17">
 </head>
 <body>
 
@@ -3233,12 +3233,16 @@ function browseContextSummaryHtml(){
     if(chip)parts.push((chip.textContent||'').trim());
     else parts.push('Category: '+filter);
   }
+  ['catSelect','evidence_filter','drug_filter','region_filter','sortSel'].forEach(function(id){var el=document.getElementById(id);if(el&&el.selectedIndex>0)parts.push(el.options[el.selectedIndex].text);});
   if(term)parts.push('Search: “'+term+'”');
   return parts.length?parts.map(function(p){return'<span>'+safeHtml(p)+'</span>';}).join(' · '):'<span>No topic filter — full database.</span>';
 }
 function refreshTodayDashboard(){
   var mount=document.getElementById('todayDashboardBody');
   if(!mount)return;
+  var focusDetails=document.getElementById('todayFocusDetails');
+  var focusOpen=focusDetails&&focusDetails.open;
+  var focusKey=mount.contains(document.activeElement)?document.activeElement.getAttribute('data-focus-id'):null;
   loadDiaryAndProfiles();
   var iso=todayISO();
   var rawPrev=loadRawTodayFocus();
@@ -3250,8 +3254,10 @@ function refreshTodayDashboard(){
   var totals=NFMealsCore.aggregateDiaryEntries(dayEntries,foodsById);
   var gk=diaryGoals.kcal,gp=diaryGoals.protein,gfi=diaryGoals.fiber;
   function bar(label,val,goal){
-    var pct=goal>0?Math.min(100,Math.round(val/goal*100)):0;
-    return'<div class="diary-bar-wrap"><div class="diary-bar-label"><span>'+label+'</span><span>'+Math.round(val)+' / '+goal+'</span></div><div class="diary-bar-track"><div class="diary-bar-fill" style="width:'+pct+'%"></div></div></div>';
+    var actual=Math.round(val*10)/10;
+    var pct=goal>0?Math.round(val/goal*100):0;
+    var extra=goal>0&&val>goal?' · '+(Math.round((val-goal)*10)/10)+' above target':'';
+    return '<div class="today-metric"><div class="today-metric-label"><strong>'+label+'</strong><span>'+actual+' <small>/ '+goal+'</small></span></div><div class="diary-bar-track" role="meter" aria-label="'+label+' towards daily target" aria-valuemin="0" aria-valuemax="'+goal+'" aria-valuenow="'+Math.min(val,goal)+'" aria-valuetext="'+actual+' of '+goal+extra+'"><div class="diary-bar-fill" style="width:'+Math.min(100,pct)+'%"></div></div><p>'+pct+'% of target'+extra+'</p></div>';
   }
   var plateIds=Object.keys(plateMap);
   var plateK=0;
@@ -3274,39 +3280,29 @@ function refreshTodayDashboard(){
     :'';
   var chips=buildTodayFocusPresets().map(function(p){
     var act=p.id===draft?' active':'';
-    return'<button type="button" class="today-focus-chip'+act+'" onclick="todayFocusPick(\''+p.id+'\')">'+p.emoji+' '+safeHtml(p.label)+'</button>';
+    return'<button type="button" class="today-focus-chip'+act+'" data-focus-id="'+p.id+'" aria-pressed="'+(p.id===draft)+'" onclick="event.stopPropagation();todayFocusPick(\''+p.id+'\')">'+p.emoji+' '+safeHtml(p.label)+'</button>';
   }).join('');
   var savedLine=ef
     ?'<p class="drawer-tools-note" style="margin:6px 0 0;font-size:10px;color:var(--accent-green)">Saved for today: '+safeHtml(todayFocusLabel(ef.protocolId))+(ef.note?' · “'+safeHtml(ef.note)+'”':'')+'</p>'
     :'<p class="drawer-tools-note" style="margin:6px 0 0;font-size:10px;color:var(--text-tertiary)">No protocol saved for today yet — choose a chip and Save.</p>';
   mount.innerHTML=
-    '<h2 class="today-dash-title">Today · '+safeHtml(iso)+'</h2>'+
-    '<p class="drawer-tools-note" style="margin:0 0 10px;font-size:11px;line-height:1.45">Summary uses <strong>calendar today</strong> for the diary totals below. Your plate and browse filters are live.</p>'+
-    staleNote+diaryMis+
-    '<div class="plate-insights-title" style="margin-top:4px">Logged today</div>'+
-    '<p class="drawer-tools-note" style="margin:4px 0 6px;font-size:11px">'+(dayEntries.length?dayEntries.length+' entr'+(dayEntries.length===1?'y':'ies'):'Nothing logged yet')+' · ~'+totals.kcal+' kcal · '+totals.protein+' g protein · '+totals.fiber+' g fibre</p>'+
-    bar('kcal',totals.kcal,gk)+bar('Protein (g)',totals.protein,gp)+bar('Fibre (g)',totals.fiber,gfi)+
-    '<div class="plate-insights-title" style="margin-top:12px">Planning</div>'+
-    '<p class="drawer-tools-note" style="margin:4px 0;font-size:11px"><strong>My Plate:</strong> '+plateIds.length+' item(s)'+(plateIds.length?' · ~'+Math.round(plateK)+' kcal':'')+'</p>'+
-    '<p class="drawer-tools-note" style="margin:4px 0 10px;font-size:11px"><strong>Meal slots:</strong> '+mealLine+'</p>'+
-    '<div class="plate-insights-title" style="margin-top:4px">Browse context</div>'+
-    '<p class="drawer-tools-note" style="margin:4px 0 10px;font-size:11px;line-height:1.45">'+browseContextSummaryHtml()+'</p>'+
-    '<div class="plate-insights-title" style="margin-top:4px">Today’s protocol focus</div>'+
-    '<p class="drawer-tools-note" style="margin:4px 0;font-size:10px;line-height:1.45">What you intend to follow today (device only). Does not change filters automatically.</p>'+
+    '<div class="today-panel-heading"><div><h2 class="today-dash-title">Your day at a glance</h2><p>'+safeHtml(new Date(iso+'T12:00:00').toLocaleDateString(undefined,{weekday:'short',day:'numeric',month:'short'}))+'</p></div><button type="button" class="ca-btn" aria-label="Close Today summary" onclick="closeTodayDashboardPanel();document.getElementById(\'todayDashboardBtn\').focus()">×</button></div>'+
+    '<div class="today-quick-actions"><button type="button" class="ca-btn" onclick="jumpDiaryToToday();closeTodayDashboardPanel();openDrawer(\'diary\')">Open today’s diary →</button><button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openDrawer(\'plate\')">My Plate →</button></div>'+
+    diaryMis+
+    '<section class="today-section" aria-label="Logged today"><h3>Logged today <span>'+dayEntries.length+' entr'+(dayEntries.length===1?'y':'ies')+'</span></h3>'+
+    (dayEntries.length?'':'<p class="today-empty">No meals logged today. Add a food or log your plate to get started.</p>')+
+    bar('Energy (kcal)',totals.kcal,gk)+bar('Protein (g)',totals.protein,gp)+bar('Fibre (g)',totals.fiber,gfi)+'</section>'+
+    '<section class="today-section" aria-label="Meal planning"><h3>Meal planning</h3><p><strong>My Plate</strong> · '+plateIds.length+' food'+(plateIds.length===1?'':'s')+(plateIds.length?' · ~'+Math.round(plateK)+' kcal':'')+'</p><p class="today-muted">'+mealLine+'</p></section>'+
+    '<details class="today-details" id="todayFocusDetails"'+(focusOpen?' open':'')+'><summary>Today’s focus <span>'+safeHtml(ef?todayFocusLabel(ef.protocolId):'Optional')+'</span></summary><div class="today-details-body">'+staleNote+
+    '<p class="today-muted">Choose an intention for today. Saved on this device; your food filters stay as they are.</p>'+
     '<div class="today-focus-chips">'+chips+'</div>'+
-    '<label for="todayFocusNote" class="fp-label" style="margin-top:6px">Short note (optional)</label>'+
-    '<textarea id="todayFocusNote" class="today-focus-note" maxlength="120" placeholder="e.g. Walk after lunch · extra water" oninput="todayFocusNoteInput(this)"></textarea>'+
-    '<button type="button" class="ca-btn" style="margin-top:8px" onclick="commitTodayFocusSave()">Save today’s focus</button>'+
-    savedLine+
-    '<div class="today-dash-links">'+
-    '<button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openDrawer(\'diary\')">Diary</button>'+
-    '<button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openDrawer(\'plate\')">My Plate</button>'+
-    '<button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openVatProtocol()">VAT hub</button>'+
-    '<button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openT2dmClinicalGuide(\'view=principles&state=all\')">The field guide</button>'+
-    '<button type="button" class="ca-btn" onclick="closeTodayDashboardPanel();openCommunityStart()">Start guide</button>'+
-    '</div>';
+    '<label for="todayFocusNote" class="fp-label">Short note (optional)</label>'+
+    '<textarea id="todayFocusNote" class="today-focus-note" maxlength="120" placeholder="e.g. Walk after lunch" oninput="todayFocusNoteInput(this)"></textarea>'+
+    '<button type="button" class="ca-btn today-save" onclick="event.stopPropagation();commitTodayFocusSave()">Save today’s focus</button>'+savedLine+'</div></details>'+
+    '<details class="today-details"><summary>Current food filters</summary><p class="today-muted">'+browseContextSummaryHtml()+'</p></details>';
   var ta=document.getElementById('todayFocusNote');
   if(ta)ta.value=String(window.__todayFocusNoteDraft||'');
+  if(focusKey){var selected=mount.querySelector('[data-focus-id="'+focusKey+'"]');if(selected)selected.focus();}
 }
 function loadSavedPlates(){
   try{
@@ -3960,7 +3956,7 @@ document.addEventListener('keydown',function(e){
     var bb = document.getElementById('brandBrowseWrap');
     if(bb && bb.classList.contains('open')){ closeBrandBrowsePanel(); e.preventDefault(); return }
     var td = document.getElementById('todayDashboardWrap');
-    if(td && td.classList.contains('open')){ closeTodayDashboardPanel(); e.preventDefault(); return }
+    if(td && td.classList.contains('open')){ closeTodayDashboardPanel();document.getElementById('todayDashboardBtn').focus(); e.preventDefault(); return }
     closeCondDropdown();closeDrawer();document.querySelectorAll('.card.open').forEach(function(c){c.classList.remove('open')})
   }
   if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();var s=document.getElementById('srch');if(s){s.focus();s.select()}}
