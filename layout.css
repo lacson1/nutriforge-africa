@@ -61,6 +61,8 @@ body.dark-mode .filter-row { background:transparent; }
 .card-hover-actions .ca-btn:nth-child(3) { margin-left:auto; color:var(--accent-green); background:var(--accent-green-light); }
 .card-hover-actions .ca-btn:last-child { padding:6px 8px; }
 .exp-tab { min-height:44px; font-size:11px; }
+.grid.view-list { align-items:stretch; }
+.grid.view-list .card { width:100%; min-width:0; box-sizing:border-box; }
 .grid.view-list .card-serving { display:none; }
 .grid.view-list .card:not(.open) .card-hover-actions { display:none; }
 .grid.view-list .card-top { min-height:66px; }
