@@ -1991,7 +1991,7 @@ function t2dmGuideNavigate(fragment){
   var frame = document.getElementById('t2dmGuideFrame');
   if(!frame) return;
   var f = String(fragment||'').replace(/^#/,'');
-  frame.src = 't2dm-clinical-field-guide.html?v=18#' + f;
+  frame.src = 't2dm-clinical-field-guide.html?v=19#' + f;
 }
 function openT2dmClinicalGuide(fragment){
   closeDrawer();
@@ -2002,7 +2002,7 @@ function openT2dmClinicalGuide(fragment){
   var frame = document.getElementById('t2dmGuideFrame');
   if(!overlay||!frame) return;
   var frag = (fragment && String(fragment).replace(/^#/,'')) || 'view=principles&state=all';
-  frame.src = 't2dm-clinical-field-guide.html?v=18#' + frag;
+  frame.src = 't2dm-clinical-field-guide.html?v=19#' + frag;
   overlay.classList.add('open');
   overlay.setAttribute('aria-hidden','false');
   document.body.style.overflow = 'hidden';
@@ -2023,7 +2023,7 @@ function openT2dmGuideNewTab(){
       if(i>-1) hash = frame.src.slice(i);
     }
   }catch(e){}
-  window.open('t2dm-clinical-field-guide.html?v=18'+hash,'_blank','noopener');
+  window.open('t2dm-clinical-field-guide.html?v=19'+hash,'_blank','noopener');
 }
 
 /** Deep links: #condition=t2d or #cond=t2d, optional &food=123, #vat or &vat=1 opens VAT hub */

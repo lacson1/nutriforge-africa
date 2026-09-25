@@ -43,6 +43,10 @@
     .gone { opacity: 0; pointer-events: none; transition: opacity 280ms; }
 
     /* Explicit layout rules keep the guide independent of generated utility CSS. */
+    #nf-embed-strip { position:static!important; }
+    .guide-mobile-focus { display:none; }
+    .guide-next-actions { display:flex; flex-wrap:wrap; gap:10px; }
+    .guide-principles { scroll-margin-top:84px; }
     .guide-header { position: relative; }
     .guide-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:16px; max-width:1280px; margin:auto; padding:20px 32px; }
     .guide-brand { display:flex; align-items:center; gap:12px; flex:1 1 340px; }
@@ -58,8 +62,8 @@
     .guide-nav button > span:nth-child(2) { display:flex; flex-direction:column; gap:5px; }
     .guide-nav button .num { display:inline-block; margin-left:8px; padding:2px 6px; }
     .guide-nav > div > span { display:none; }
-    .guide-principles { max-width:1160px; margin:auto; padding:40px 32px 100px; }
-    .guide-intro { max-width:720px; margin-bottom:28px; }
+    .guide-principles { max-width:1160px; margin:auto; padding:32px 32px 40px; }
+    .guide-intro { max-width:850px; margin-bottom:28px; }
     .guide-intro h1 { font-size:clamp(30px,4vw,48px); line-height:1.12; margin:12px 0 16px; letter-spacing:-.025em; }
     .guide-intro p { font-size:16px; line-height:1.65; }
     .principle-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
@@ -80,14 +84,26 @@
     button:focus-visible, a:focus-visible, summary:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
     @media(max-width:640px) {
       .guide-toolbar { padding:16px; gap:12px; }
-      .guide-brand { flex-basis:100%; }
+      .guide-brand { flex:1 1 240px; }
+      .guide-brand > div:last-child > div:last-child { display:none; }
+      .guide-toolbar > .flex-1 { display:none; }
+      .guide-toolbar > a { margin-left:auto; }
+      .guide-actions { width:100%; }
+      .guide-actions button { flex:1; justify-content:center; padding:8px; }
+      .guide-actions button[aria-label="Toggle theme"] { flex:0 0 40px; }
+      .guide-states { display:none; }
+      .guide-mobile-focus { display:flex; width:100%; order:3; align-items:center; gap:12px; font-size:12px; }
+      .guide-mobile-focus select { flex:1; min-width:0; padding:10px 12px; border:1px solid; border-radius:8px; font:inherit; }
+      .guide-next-actions { width:100%; }
+      .guide-next-actions button { flex:1; }
+
       .guide-states { gap:2px; }
       .guide-states::before { flex-basis:100%; margin:0 0 4px; }
       .guide-states button { padding:8px; font-size:11px; }
       .guide-nav > div { padding:0 8px; }
       .guide-nav button { justify-content:center; padding:14px 4px; gap:4px; }
       .guide-nav button > .section-num, .guide-nav button .eyebrow { display:none; }
-      .guide-principles { padding:28px 16px 100px; }
+      .guide-principles { padding:24px 16px 32px; }
       .principle-grid { grid-template-columns:1fr; }
       .principle-card { padding:20px; }
     }
@@ -2487,6 +2503,12 @@ function Header({
 
         <div className="flex-1" />
 
+        <label className="guide-mobile-focus" style={{ color: palette.textMuted }}>
+          Your focus
+          <select aria-label="Your focus" value={patientState} onChange={(event) => setPatientState(event.target.value)} style={{ background: palette.surface, color: palette.text, borderColor: palette.border }}>
+            {PATIENT_STATES.map((state) => <option key={state.id} value={state.id}>{state.label}</option>)}
+          </select>
+        </label>
         {/* Patient state selector — hairline underline style */}
         <div className="guide-states" style={{ borderBottom: `1px solid ${palette.borderSoft}` }}>
           {PATIENT_STATES.map((s) => {
@@ -2587,7 +2609,7 @@ function TabBar({ tabs, active, setActive, palette, theme, counts }) {
     <nav
       className="guide-nav z-20 border-b backdrop-blur"
       style={{
-        top: 64, // sits below the sticky header
+        top: 0, // header scrolls away; navigation remains visible
         background: theme === "dark" ? "rgba(16,21,16,0.92)" : "rgba(241,245,226,0.92)",
         borderColor: palette.border,
       }}
@@ -2603,6 +2625,16 @@ function TabBar({ tabs, active, setActive, palette, theme, counts }) {
               key={t.id}
               onClick={() => setActive(t.id)}
               role="tab"
+              tabIndex={isActive ? 0 : -1}
+              onKeyDown={(event) => {
+                const index = tabs.findIndex((tab) => tab.id === t.id);
+                const next = event.key === "ArrowRight" ? (index + 1) % tabs.length : event.key === "ArrowLeft" ? (index + tabs.length - 1) % tabs.length : event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1 : -1;
+                if (next < 0) return;
+                event.preventDefault();
+                const buttons = event.currentTarget.parentElement.querySelectorAll('[role="tab"]');
+                setActive(tabs[next].id);
+                buttons[next].focus();
+              }}
               aria-selected={isActive}
               className="relative flex items-baseline gap-3 px-3 md:px-4 py-3 text-left chip-soft focus:outline-none"
               style={{
@@ -2790,7 +2822,7 @@ function FilterBar({
 
 /* ─────────────────────────  PRINCIPLES VIEW  ───────────────────────── */
 
-function PrinciplesView({ palette, onBuild }) {
+function PrinciplesView({ palette, onBuild, onBrowse }) {
   return (
     <section className="guide-principles fade-in" style={{ color: palette.text }} aria-labelledby="principles-title">
       <div className="guide-intro">
@@ -2810,7 +2842,10 @@ function PrinciplesView({ palette, onBuild }) {
       </div>
       <div className="guide-next">
         <div><h2 className="display">Put it on your plate</h2><p style={{ color: palette.textMuted }}>Explore a meal template or build your own combination.</p></div>
-        <button onClick={onBuild} style={{ background: palette.accentDeep, color: palette.surface }}>Build a meal →</button>
+        <div className="guide-next-actions">
+          <button onClick={onBrowse} style={{ border: `1px solid ${palette.border}`, color: palette.text, background: palette.surface }}>Browse foods</button>
+          <button onClick={onBuild} style={{ background: palette.accentDeep, color: palette.surface }}>Build a meal →</button>
+        </div>
       </div>
       <details className="guide-evidence" style={{ background: palette.surface, borderColor: palette.border }}>
         <summary>Evidence &amp; sources</summary>
@@ -3129,6 +3164,10 @@ function T2DMFoodGuideV3() {
     { id: "saved",      label: "Saved",      sub: "Favourites + compare",  num: "04" },
   ];
 
+  const navigateView = (next) => {
+    setView(next);
+    window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "auto" }));
+  };
   const palette = PALETTES[theme];
   const stateMeta = PATIENT_STATES.find((s) => s.id === patientState) || PATIENT_STATES[0];
   const stateLabel = stateMeta.label;
@@ -3277,7 +3316,7 @@ function T2DMFoodGuideV3() {
         handlePrint();
       } else if (e.key >= "1" && e.key <= "4") {
         e.preventDefault();
-        setView(TABS[parseInt(e.key, 10) - 1].id);
+        navigateView(TABS[parseInt(e.key, 10) - 1].id);
       }
     };
     window.addEventListener("keydown", onKey);
@@ -3439,7 +3478,7 @@ function T2DMFoodGuideV3() {
         <TabBar
           tabs={TABS}
           active={view}
-          setActive={setView}
+          setActive={navigateView}
           palette={palette}
           theme={theme}
           counts={{
@@ -3687,7 +3726,7 @@ function T2DMFoodGuideV3() {
         </>)}
 
         {view === "principles" && (
-          <PrinciplesView palette={palette} onBuild={() => setView("builder")} />
+          <PrinciplesView palette={palette} onBuild={() => navigateView("builder")} onBrowse={() => navigateView("foods")} />
         )}
 
         {view === "builder" && (
