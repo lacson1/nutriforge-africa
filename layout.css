@@ -12,7 +12,7 @@
 .mobile-nav-inner { justify-content:flex-start; gap:24px; }
 .mnav-btn { flex-direction:row; gap:9px; min-height:54px; padding:12px 4px; border-radius:0; border-bottom:2px solid transparent; color:var(--text-secondary); font-size:14px; font-weight:500; }
 .mnav-btn.active { border-bottom-color:var(--accent-green); }
-.browse-toolbar { max-width:1288px; margin:auto; padding:32px 24px 20px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.browse-toolbar { max-width:none; margin:auto; padding:32px 24px 20px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
 .browse-heading { display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; }
 .browse-heading h2 { font-family:'Roboto Serif',Georgia,serif; font-size:26px; letter-spacing:-.7px; font-weight:600; }
 .result-count { font-size:12px; color:var(--text-secondary); white-space:nowrap; }
@@ -22,7 +22,7 @@
 .browse-toolbar input:focus { outline:2px solid var(--accent-green); outline-offset:2px; }
 .browse-toolbar .search-icon { position:absolute; left:15px; top:50%; transform:translateY(-50%); font-size:14px; }
 .browse-toolbar .search-clear { color:var(--text-secondary); }
-.filter-row { padding:0 24px 20px; margin:0 auto; max-width:1288px; background:transparent; border-bottom:0; gap:14px; }
+.filter-row { padding:0 24px 20px; margin:0 auto; max-width:none; background:transparent; border-bottom:0; gap:14px; }
 body.dark-mode .filter-row { background:transparent; }
 .filter-row-scroll { overflow:visible; flex-wrap:wrap; flex:1 1 100%; gap:8px; }
 .filter-row-trailing { width:100%; gap:10px; padding-top:14px; border-top:1px solid var(--card-border); }
@@ -35,7 +35,7 @@ body.dark-mode .filter-row { background:transparent; }
 .vs-btn { width:36px; height:36px; }
 .filter-divider { display:none; }
 .filters-popover { top:calc(100% + 8px); }
-.main { max-width:1288px; margin:auto; padding:0 24px 32px; }
+.main { max-width:none; margin:auto; padding:0 24px 32px; }
 .grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; align-items:start; }
 .card { border-radius:12px; box-shadow:none; animation:none; }
 .card:hover { transform:none; }
