@@ -16,7 +16,7 @@ npm run build      # static site in dist/, with service worker
 npm run preview    # serve dist/ to try install/offline
 ```
 
-Deploy `dist/` to any static host over HTTPS. The app uses relative paths, so it also works from a subfolder. On iPhone, open it in Safari, tap Share, then **Add to Home Screen**. After the first visit it works offline, and the fonts are bundled.
+Deploy `dist/` to any static host over HTTPS. The app uses relative paths, so it also works from a subfolder. On iPhone, open it in Safari, tap Share, then **Add to Home Screen**. After the first visit it works offline, and the heading font (Google Fonts) is cached by the service worker on first use.
 
 URL options (these replace the design's tweak props):
 - `?start=app` skips onboarding with the sample patient (Adaeze, T2D, metformin twice a day, Nigerian + Ghanaian).
@@ -30,7 +30,7 @@ Answers and saved foods are kept in `localStorage`. **Restart prototype** in Me 
 - `src/state.ts` has the reducer, step rules and derived views (kitchen ordering, search, interaction warnings, situation tips, summary) and persistence.
 - `src/components/` has `Onboarding.tsx` (welcome + steps) and `AppTabs.tsx` (tabs, food detail), plus small shared pieces.
 - `src/styles.css` has the design's inline styles as classes, with the same values and tokens.
-- `scripts/icons.mjs` re-renders the PNG app icons from `public/icons/icon.svg`.
+- `scripts/icons.mjs` re-renders the PNG app icon from `public/icons/icon.svg`.
 
 ## Before real patients use it
 
