@@ -1,6 +1,6 @@
 # NutriForge Mobile
 
-Built from the Claude Design handoff `project/NutriForge Mobile.html`, a phone build of `NutriForge Onboarding Flow.dc.html`. It is an installable, offline-capable web app (PWA) in React, TypeScript and Vite.
+Built from the Claude Design handoff [`design/nutriforge-mobile/project/NutriForge Mobile.html`](../design/nutriforge-mobile/project/), a phone build of `NutriForge Onboarding Flow.dc.html`. It is an installable, offline-capable web app (PWA) in React, TypeScript and Vite.
 
 **Flow:** Welcome → 4 onboarding steps (condition, medicines + metformin frequency, kitchen, situation + name) → All set → app with four tabs: **Check** (search, "From your kitchen" list, food detail with Save), **Saved**, **Medicines** (per-drug alerts by severity) and **Me** (summary, change answers, restart).
 
@@ -34,4 +34,4 @@ Answers and saved foods are kept in `localStorage`. **Restart prototype** in Me 
 
 ## Before real patients use it
 
-All clinical content (verdicts, portions, warnings, sources) is **placeholder copy from the design**. A clinician must sign it off first; the Clinical Review and Test Pack in `project/` lists every claim. High blood pressure and high cholesterol stay "Coming soon", as in the design.
+All clinical content (verdicts, portions, warnings, sources) is **placeholder copy from the design**. A clinician must sign it off first; the Clinical Review and Test Pack in `design/nutriforge-mobile/project/` lists every claim. High blood pressure and high cholesterol stay "Coming soon", as in the design.
