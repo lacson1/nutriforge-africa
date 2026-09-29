@@ -363,3 +363,51 @@ body:not(.dark-mode) .welcome-primary { color:#fff; }
 .today-details { border-top:1px solid var(--card-border); padding:0; }.today-details summary { cursor:pointer; padding:16px 0; font-size:13px; font-weight:600; }.today-details summary span { display:block; font-size:11px; font-weight:400; color:var(--text-secondary); margin-top:5px; }.today-details-body { padding-bottom:12px; }.today-focus-chip { min-height:36px; font-size:12px; }.today-save { min-height:40px; margin-top:8px; }.today-focus-note { min-height:64px; font-size:13px; }
 @media(max-width:760px) { .today-dashboard-panel { left:12px; right:12px; width:auto; top:72px; max-height:calc(100dvh - 158px); padding:16px; } }
 @media(max-height:500px) { .today-dashboard-panel { position:fixed; top:12px; bottom:12px; max-height:calc(100dvh - 24px); left:auto; right:12px; } }
+
+/* Main app refinement: less chrome, more room for everyday tasks. */
+.welcome { padding-top:14px; padding-bottom:24px; }
+.welcome-summary { margin-bottom:14px; }
+.welcome-body { gap:32px; }
+.welcome-copy h2 { font-size:clamp(30px,3.3vw,44px); letter-spacing:-1.2px; margin-bottom:18px; }
+.welcome-lead { font-size:15px; line-height:1.65; margin-bottom:22px; }
+.welcome-paths { margin-top:26px; gap:12px; }
+.welcome-demo { padding:20px; border-radius:16px; }
+.welcome-demo h3 { font-size:24px; }
+.welcome-demo-body { padding:14px 0; gap:20px; }
+.welcome-plate { max-width:160px; }
+.welcome-ingredient { margin-bottom:10px; }
+.welcome-ingredient strong { margin-bottom:5px; }
+.welcome-nutrition { padding:12px 0; }
+.welcome-primary,.welcome-secondary { min-height:44px; padding:11px 16px; }
+.welcome-feedback:empty,#welcomeFeedback:empty { display:none; }
+.browse-toolbar { padding-top:24px; padding-bottom:12px; }
+.filter-help { padding-top:0; padding-bottom:12px; }
+.filter-row { gap:10px; }
+.filter-row-trailing { padding-top:10px; }
+.grid { gap:16px; }
+.card-top { padding-top:16px; min-height:78px; }
+.card-name { font-weight:600; }
+.card-macros { background:var(--surface-2); border-radius:8px; }
+.card-scores { padding-bottom:12px; }
+.card-hover-actions .ca-btn { border-color:transparent; background:transparent; }
+.card-hover-actions .ca-btn:hover { background:var(--surface-2); border-color:var(--card-border); }
+.card-hover-actions .ca-btn:nth-child(3) { border:1px solid var(--card-border); }
+button:focus-visible,select:focus-visible { outline:2px solid var(--accent-green); outline-offset:3px; }
+@media(max-width:760px) {
+  .mobile-nav-inner { gap:2px; }
+  .mnav-btn { flex:1; min-width:0; padding:8px 3px; font-size:10px; }
+  .welcome { padding:10px 16px 20px; }
+  .welcome-body { gap:20px; }
+  .welcome-copy h2 { font-size:30px; }
+  .welcome-summary { margin-bottom:12px; gap:10px; }
+  .welcome-summary button { font-size:11px; }
+  .welcome-paths { margin-top:20px; }
+  .welcome-demo { padding:16px; }
+  .browse-toolbar { padding:20px 16px 12px; gap:12px; }
+  .filter-row { padding-left:16px; padding-right:16px; }
+  .main { padding-left:16px; padding-right:16px; }
+  .filter-row-scroll { gap:6px; }
+  .chip,.filter-select { min-height:38px; padding:8px 11px; }
+  .card-hover-actions .ca-btn { min-height:40px; }
+}
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
