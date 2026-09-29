@@ -411,3 +411,35 @@ button:focus-visible,select:focus-visible { outline:2px solid var(--accent-green
   .card-hover-actions .ca-btn { min-height:40px; }
 }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
+
+/* Clear groups distinguish finding food from planning meals. */
+.filter-group-label { font-size:11px; font-weight:600; color:var(--text-secondary); white-space:nowrap; }
+.category-control { display:flex; align-items:center; gap:10px; margin-left:auto; }
+.category-control .filter-select { margin:0; }
+.filter-row-scroll { align-items:center; }
+.filter-row-scroll > .filter-group-label { margin-right:8px; }
+body .filter-row .chip:not(.active), body.dark-mode .filter-row .chip:not(.active) { background:var(--card-bg); border-color:var(--card-border); color:var(--text-secondary); box-shadow:none; }
+body .filter-row .chip.active, body.dark-mode .filter-row .chip.active { background:var(--accent-green); color:var(--body-bg, #fff); border-color:var(--accent-green); }
+.browse-heading h2 { margin:0; }
+.browse-toolbar { padding-top:28px; }
+.filter-row-trailing { padding-top:14px; padding-bottom:2px; align-items:center; }
+.filter-row .cond-dropdown-trigger { min-width:140px; }
+.card-top { align-items:flex-start; }
+.card-name { line-height:1.45; }
+.card .card-hover-actions { align-items:center; }
+@media(min-width:761px) {
+  .mobile-nav-inner { gap:12px; }
+  .mnav-btn { padding-left:14px; padding-right:14px; }
+  .welcome-summary { border-bottom:1px solid var(--card-border); padding-bottom:8px; }
+}
+@media(max-width:760px) {
+  .filter-row-scroll > .filter-group-label { flex-basis:100%; margin:0 0 2px; }
+  .category-control { flex-basis:100%; margin:6px 0 0; }
+  .category-control .filter-select { flex:1; }
+  .filter-row .cond-dropdown-trigger { min-width:0; }
+  .filter-row-trailing { flex-wrap:wrap; gap:8px; }
+  .filter-row-trailing #filtersBtn { font-size:12px; }
+  .browse-heading { gap:8px; }
+  .browse-guide-wrap { margin-left:auto; }
+  .welcome-paths { gap:12px; }
+}
