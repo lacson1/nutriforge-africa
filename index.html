@@ -747,7 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=20">
+<link rel="stylesheet" href="layout.css?v=22">
 </head>
 <body>
 
@@ -815,10 +815,6 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
       Browse
     </button>
-    <button class="mnav-btn" onclick="openDrawer('ai');setMobileTab(this)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M8 7V5a4 4 0 018 0v2"/><circle cx="9" cy="13" r="1" fill="currentColor"/><circle cx="15" cy="13" r="1" fill="currentColor"/></svg>
-      AI
-    </button>
     <button class="mnav-btn" onclick="openDrawer('plate');setMobileTab(this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5"/></svg>
       Plate
@@ -831,6 +827,15 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
       Combos
     </button>
+    <button class="mnav-btn" onclick="openDrawer('ai');setMobileTab(this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M8 7V5a4 4 0 018 0v2"/><circle cx="9" cy="13" r="1" fill="currentColor"/><circle cx="15" cy="13" r="1" fill="currentColor"/></svg>
+      AI
+    </button>
+
+
+
+
+
   </div>
 </nav>
 
@@ -886,19 +891,20 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     <button type="button" class="search-clear" id="searchClear" title="Clear search" aria-label="Clear search">&times;</button>
   </div>
 </section>
-<p class="filter-help">Choose a kitchen, then narrow by category or search. Filters work together.</p>
+<p class="filter-help">Find a food, choose your portions, and add it to your plate.</p>
 <div class="filter-row" id="filterRow">
-  <div class="filter-row-scroll" aria-label="Kitchen filters">
+  <div class="filter-row-scroll" role="group" aria-label="Kitchen filters">
+  <span class="filter-group-label">Kitchen</span>
   <button class="chip active" data-cat="all" id="totalChip" onclick="setFilter('all',this)">All</button>
   <button class="chip african" data-cat="african" onclick="setFilter('african',this)">African</button>
   <button class="chip dishes" data-cat="dishes" onclick="setFilter('dishes',this)">Dishes</button>
   <button class="chip nigeria" data-cat="nigeria" onclick="setFilter('nigeria',this)">Nigeria</button>
   <button class="chip" data-cat="favourites" id="favChip" onclick="setFilter('favourites',this)">Saved <span id="favCount" style="opacity:.6"></span></button>
-  <select aria-label="Food category" id="catSelect" class="filter-select"></select>
+  <label class="category-control"><span class="filter-group-label">Category</span><select aria-label="Food category" id="catSelect" class="filter-select"></select></label>
   </div>
   <div class="filter-row-trailing">
   <div class="filters-popover-wrap" id="filtersPopoverWrap">
-    <button class="chip" id="filtersBtn" onclick="toggleFiltersPopover()">Filters <span id="filterBadge" class="filter-badge" style="display:none">0</span></button>
+    <button class="chip" id="filtersBtn" onclick="toggleFiltersPopover()">Sort &amp; filters <span id="filterBadge" class="filter-badge" style="display:none">0</span></button>
     <div class="filters-popover" id="filtersPopover">
       <div class="fp-group"><label for="sortSel" class="fp-label">Sort by</label>
         <select id="sortSel" class="fp-select" onchange="sort=this.value;render();updateFilterBadge()">
