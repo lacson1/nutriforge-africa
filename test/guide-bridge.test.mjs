@@ -1,0 +1,5 @@
+import {it,expect} from 'vitest';import fs from 'node:fs';import vm from 'node:vm';
+const c={};vm.createContext(c);vm.runInContext(fs.readFileSync(new URL('../js/guide-bridge.js',import.meta.url),'utf8'),c);
+it('validates handoffs and keeps fractional guide servings',()=>{const p={version:1,items:[{id:'beans',name:'Beans',servings:1.5}]};expect(c.validateGuideMeal(p)).toBe(p);expect(c.validateGuideMeal({...p,version:2})).toBeNull();expect(c.validateGuideMeal({version:1,items:[{id:'x',name:'x',servings:NaN}]})).toBeNull();});
+it('merges reviewed grams without removing existing plate foods',()=>{const a={id:1},b={id:2};const plate={1:a},portions={1:80};const out=c.mergeGuideMeal(plate,portions,[{id:1,grams:120},{id:2,grams:50},{id:2,grams:25}],{1:a,2:b});expect(out.portions).toEqual({1:200,2:75});expect(Object.keys(out.plate)).toEqual(['1','2']);expect(portions).toEqual({1:80});});
+it('rejects incomplete reviews and combined oversized portions atomically',()=>{for(const rows of [[],[{id:99,grams:100}],[{id:1,grams:0}],[{id:1,grams:NaN}],[{id:1,grams:2000}]])expect(c.mergeGuideMeal({1:{id:1}},{1:100},rows,{1:{id:1}})).toBeNull();});

@@ -472,3 +472,9 @@ body .filter-row .chip.active, body.dark-mode .filter-row .chip.active { backgro
 .swap-empty{padding:22px 16px;border:1px dashed var(--card-border);border-radius:12px;color:var(--text-secondary);line-height:1.6;font-size:13px;margin-top:20px}
 .swap-success{padding:12px;background:var(--accent-green-light);border-radius:10px;line-height:1.6;font-size:13px}
 @media(max-width:480px){.browse-swap-row{align-items:flex-start}.browse-swap-row .filter-help{max-width:65%}.swap-controls{padding:14px}.swap-card{padding:14px}.swap-metrics strong{font-size:14px}}
+.guide-import h2{font:600 28px/1.2 Georgia,serif;margin-bottom:14px}
+.guide-import p{font-size:13px;line-height:1.7;color:var(--text-secondary)}
+.guide-import fieldset{min-width:0}.guide-import legend{font-weight:600;padding:0 5px}
+.guide-import label{display:grid;gap:7px;margin-top:12px;font-size:12px}
+.guide-import input:not([type=checkbox]),.guide-import select{width:100%;min-width:0;padding:10px;background:var(--surface);color:var(--text-primary);border:1px solid var(--card-border)}
+.guide-import .guide-import-include{display:flex;align-items:center;gap:8px}
