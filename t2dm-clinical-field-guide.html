@@ -107,6 +107,48 @@
       .principle-grid { grid-template-columns:1fr; }
       .principle-card { padding:20px; }
     }
+
+    /* A clear identity and a practical starting point for the field guide. */
+    .guide-toolbar { gap:14px; padding-top:22px; padding-bottom:16px; }
+    .guide-brand { flex-basis:360px; }
+    .guide-brand-title { line-height:1.25; margin-top:5px; }
+    .guide-actions { margin-left:auto; }
+    .guide-states { border-top:1px solid currentColor; border-top-color:rgba(120,130,110,.18); padding-top:12px; }
+    .guide-states button { border-radius:8px; }
+    .guide-nav button { min-height:76px; transition:background .15s; }
+    .guide-nav button[aria-selected="true"] { box-shadow:inset 0 -2px currentColor; }
+    .guide-home { max-width:1280px; margin:auto; padding:40px 32px; display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:48px; align-items:center; }
+    .guide-home h1 { font-size:clamp(34px,4vw,54px); line-height:1.08; letter-spacing:-.025em; margin:14px 0 18px; }
+    .guide-home-copy>p { font-size:15px; line-height:1.75; max-width:560px; }
+    .guide-home-actions { display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 14px; }
+    .guide-home-actions button { padding:12px 18px; min-height:44px; border-radius:9px; font-size:13px; font-weight:600; }
+    .guide-home-copy>.guide-home-caption { font-size:12px; }
+    .guide-start { border:1px solid; border-radius:16px; padding:22px; }
+    .guide-start h2 { font-size:23px; margin-bottom:14px; }
+    .guide-start button { display:flex; align-items:center; gap:14px; width:100%; text-align:left; padding:17px 0; border-top:1px solid; }
+    .guide-start button>span:nth-child(2) { flex:1; }
+    .guide-start strong { display:block; font-size:14px; line-height:1.5; }
+    .guide-start small { display:block; font-size:12px; line-height:1.6; margin-top:4px; }
+    .guide-start button:hover strong { text-decoration:underline; text-underline-offset:3px; }
+    @media(max-width:760px) {
+      .guide-home { grid-template-columns:1fr; padding:28px 20px; gap:24px; }
+      .guide-home h1 { font-size:36px; }
+      .guide-start { padding:18px; }
+    }
+    @media(max-width:640px) {
+      .guide-brand { flex-basis:100%; }
+      .guide-brand-title { font-size:24px!important; }
+      .guide-toolbar>a { margin-left:0; }
+      .guide-actions { display:grid; grid-template-columns:1fr 1.15fr 1fr 32px .8fr; width:100%; flex:1 1 100%; gap:4px; }
+      .guide-actions button,.guide-actions>a { min-width:0; padding:6px!important; justify-content:center; }
+      .guide-actions button:not([aria-label="Toggle theme"])>svg,.guide-actions>a>svg { display:none; }
+      .guide-actions>a { padding:8px 5px; font-size:11px; }
+      .guide-actions button { flex:0 1 auto; font-size:11px!important; }
+      .guide-actions button[aria-label="Toggle theme"] { flex-basis:34px; width:34px; }
+      .guide-nav button { min-height:58px; }
+      .guide-nav button .serif { font-size:13px!important; }
+    }
+    @media(prefers-reduced-motion:reduce) { .fade-in,.drawer { animation:none; } }
   </style>
 </head>
 <body>
@@ -2454,9 +2496,9 @@ function Header({
               NutriForge · the field guide
             </div>
             <div
-              className="display"
+              className="display guide-brand-title"
               style={{
-                fontSize: "17px",
+                fontSize: "26px",
                 fontWeight: 450,
                 letterSpacing: "-0.01em",
                 color: palette.text,
@@ -2470,36 +2512,6 @@ function Header({
           </div>
         </div>
 
-        <a
-          href="index.html#condition=t2d"
-          onClick={(e) => {
-            if (typeof window !== "undefined" && window.parent !== window) {
-              e.preventDefault();
-              try {
-                window.parent.postMessage(
-                  { type: "nutriforge", action: "from-t2dm-guide", condition: "t2d" },
-                  "*"
-                );
-              } catch (err) {}
-            }
-          }}
-          className="inline-flex items-center gap-1 shrink-0 px-2.5 py-2 rounded-sm border text-[11px] sm:text-[12px] font-semibold chip-soft"
-          style={{
-            borderColor: palette.border,
-            color: palette.accentDeep,
-            background: palette.surface,
-            textDecoration: "none",
-            letterSpacing: "0.02em",
-          }}
-          title={
-            typeof window !== "undefined" && window.parent !== window
-              ? "Return to NutriForge (closes this panel)"
-              : "Open NutriForge with diabetes filter"
-          }
-        >
-          <ChevronLeft size={14} aria-hidden />
-          <span className="whitespace-nowrap">NutriForge</span>
-        </a>
 
         <div className="flex-1" />
 
@@ -2536,6 +2548,37 @@ function Header({
 
         {/* Action rail */}
         <div className="guide-actions">
+        <a
+          href="index.html#condition=t2d"
+          onClick={(e) => {
+            if (typeof window !== "undefined" && window.parent !== window) {
+              e.preventDefault();
+              try {
+                window.parent.postMessage(
+                  { type: "nutriforge", action: "from-t2dm-guide", condition: "t2d" },
+                  "*"
+                );
+              } catch (err) {}
+            }
+          }}
+          className="inline-flex items-center gap-1 shrink-0 px-2.5 py-2 rounded-sm border text-[11px] sm:text-[12px] font-semibold chip-soft"
+          style={{
+            borderColor: palette.border,
+            color: palette.accentDeep,
+            background: palette.surface,
+            textDecoration: "none",
+            letterSpacing: "0.02em",
+          }}
+          title={
+            typeof window !== "undefined" && window.parent !== window
+              ? "Return to NutriForge (closes this panel)"
+              : "Open NutriForge with diabetes filter"
+          }
+        >
+          <ChevronLeft size={14} aria-hidden />
+          <span className="whitespace-nowrap">Main app</span>
+        </a>
+
           <button
             onClick={onShowMeal}
             className="relative h-9 px-3 rounded-sm border text-[12px] flex items-center gap-1.5 chip-soft"
@@ -2543,7 +2586,7 @@ function Header({
             title="Open meal builder"
           >
             <Utensils size={13} />
-            <span className="hidden sm:inline">Meal</span>
+            <span className="hidden sm:inline">Build meal</span>
             {mealCount > 0 && (
               <span
                 className="ml-1 px-1.5 rounded-sm text-[10px] num"
@@ -2594,7 +2637,7 @@ function Header({
             title="Print patient handout"
           >
             <Printer size={13} />
-            <span className="hidden sm:inline">Handout</span>
+            <span className="hidden sm:inline">Print</span>
           </button>
         </div>
       </div>
@@ -2639,6 +2682,7 @@ function TabBar({ tabs, active, setActive, palette, theme, counts }) {
               className="relative flex items-baseline gap-3 px-3 md:px-4 py-3 text-left chip-soft focus:outline-none"
               style={{
                 color: isActive ? palette.text : palette.textMuted,
+                background: isActive ? palette.surface : "transparent",
                 borderBottom: isActive ? `2px solid ${palette.accentDeep}` : "2px solid transparent",
                 marginBottom: "-1px",
               }}
@@ -3160,7 +3204,7 @@ function T2DMFoodGuideV3() {
   const TABS = [
     { id: "foods",      label: "Foods",      sub: "Browse + filter",       num: "01" },
     { id: "principles", label: "Principles", sub: "Pillars + evidence",    num: "02" },
-    { id: "builder",    label: "Builder",    sub: "Plate + glucose curve", num: "03" },
+    { id: "builder",    label: "Builder",    sub: "Templates + portions", num: "03" },
     { id: "saved",      label: "Saved",      sub: "Favourites + compare",  num: "04" },
   ];
 
@@ -3489,91 +3533,27 @@ function T2DMFoodGuideV3() {
         />
 
         {view === "foods" && (<>
-        {/* Hero */}
-        <section className="max-w-7xl mx-auto px-4 md:px-10 pt-14 pb-10">
-          <div className="flex items-baseline gap-4 mb-5">
-            <span className="section-num text-sm" style={{ color: palette.accentGold }}>00</span>
-            <span className="eyebrow" style={{ color: palette.textMuted }}>The Guide</span>
-            <span className="flex-1 h-px" style={{ background: palette.border }} />
-            <span className="eyebrow" style={{ color: palette.textSubtle }}>Evidence · Culture · Practice</span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-start">
-            <div className="md:col-span-8">
-              <h1
-                className="display leading-[0.95] mb-5"
-                style={{
-                  fontWeight: 340,
-                  fontSize: "clamp(2.6rem, 6.5vw, 5.2rem)",
-                  letterSpacing: "-0.022em",
-                  color: palette.text,
-                }}
-              >
-                What to eat{" "}
-                <span
-                  className="display"
-                  style={{
-                    fontStyle: "italic",
-                    fontWeight: 320,
-                    color: palette.accentDeep,
-                  }}
-                >
-                  when sugar
-                </span>{" "}
-                <span
-                  className="display"
-                  style={{
-                    fontStyle: "italic",
-                    fontWeight: 320,
-                    color: palette.accentDeep,
-                  }}
-                >
-                  runs high.
-                </span>
-              </h1>
-              <div className="flex items-center gap-3 mb-5" aria-hidden>
-                <span className="block h-px w-10" style={{ background: palette.accentGold }} />
-                <span className="eyebrow" style={{ color: palette.accentGold }}>the field guide</span>
-              </div>
-              <p
-                className="max-w-2xl leading-relaxed"
-                style={{
-                  color: palette.textMuted,
-                  fontSize: "17px",
-                  fontFamily: "'Source Serif 4', Georgia, serif",
-                }}
-              >
-                A quiet, clinician-written guide to type&nbsp;2 diabetes — one that takes African
-                staples (<em>egusi, ewedu, beans, garri</em>) as seriously as the evidence on olive
-                oil, oats, and lentils. Filter by your situation, build a meal, print a handout a
-                patient would actually read.
-              </p>
+        <section className="guide-home" aria-labelledby="guide-home-title" style={{ color: palette.text }}>
+          <div className="guide-home-copy">
+            <div className="eyebrow" style={{ color: palette.accentDeep }}>Explore · understand · build</div>
+            <h1 id="guide-home-title" className="display">Everyday foods.<br />More informed choices.</h1>
+            <p style={{ color: palette.textMuted }}>Explore {FOODS.length} foods, understand their tiers, and put your choices together in a meal. African staples and global favourites, in one practical guide.</p>
+            <div className="guide-home-actions">
+              <button onClick={() => { searchRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }); searchRef.current?.focus({ preventScroll: true }); }} style={{ background: palette.accentDeep, color: palette.surface }}>Find a food ↓</button>
+              <button onClick={() => navigateView("builder")} style={{ background: palette.surface, color: palette.text, border: `1px solid ${palette.border}` }}>Build a meal →</button>
             </div>
-
-            <aside
-              className="md:col-span-4 rounded-sm border p-5 fade-in"
-              style={{ borderColor: palette.border, background: palette.surface }}
-            >
-              <div className="eyebrow mb-3" style={{ color: palette.textMuted }}>The evidence stack</div>
-              <ul className="text-[13px] leading-snug space-y-2" style={{ color: palette.textMuted, fontFamily: "'Source Serif 4', Georgia, serif" }}>
-                {[
-                  ["PREDIMED", "Mediterranean diet · ~30% CV-event reduction"],
-                  ["DiRECT", "Low-energy diet · 46% remission at 1y"],
-                  ["DIRECT-PLUS", "Green-Med · hepatic fat reduction"],
-                  ["EPIC-InterAct", "Legumes ↔ lower T2DM incidence"],
-                  ["DPP", "Lifestyle change · ~58% ↓ progression"],
-                ].map(([label, desc]) => (
-                  <li key={label} className="flex gap-3">
-                    <span className="serif" style={{ fontWeight: 600, color: palette.text, minWidth: 92 }}>{label}</span>
-                    <span>{desc}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-4 pt-3 border-t text-[11px] italic" style={{ borderColor: palette.borderSoft, color: palette.textSubtle, fontFamily: "'Source Serif 4', Georgia, serif" }}>
-                Educational only. Discuss medication changes with your clinician.
-              </div>
-            </aside>
+            <p className="guide-home-caption" style={{ color: palette.textSubtle }}>Choose your focus above, then search or filter the food list below.</p>
           </div>
+          <aside className="guide-start" style={{ background: palette.surface, borderColor: palette.border }} aria-label="Guide shortcuts">
+            <h2 className="display">A useful place to start</h2>
+            {[
+              ["principles", "01", "Understand the principles", "Four practical ideas, with evidence and next steps."],
+              ["builder", "02", "Make it a meal", "Start with a template or your own food choices."],
+              ["saved", "03", "Keep your favourites", "Return to saved foods and your comparison list."],
+            ].map(([target, number, title, description]) => <button key={target} onClick={() => navigateView(target)} style={{ color: palette.text, borderColor: palette.borderSoft }}>
+              <span className="num" style={{ color: palette.accentDeep }}>{number}</span><span><strong>{title}</strong><small style={{ color: palette.textMuted }}>{description}</small></span><span aria-hidden="true">↗</span>
+            </button>)}
+          </aside>
         </section>
 
         <FilterBar
