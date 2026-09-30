@@ -747,7 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=23">
+<link rel="stylesheet" href="layout.css?v=24">
 </head>
 <body>
 
@@ -1169,6 +1169,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <script src="js/filter-core.js?v=12"></script>
 <script src="js/welcome.js?v=15"></script>
 <script src="js/meals-core.js"></script>
+<script src="js/guide-bridge.js?v=1"></script>
 <script src="js/swaps-core.js?v=2"></script>
 <script src="js/swaps-ui.js?v=2"></script>
 <script src="js/scoring-core.js?v=12"></script>
@@ -1942,10 +1943,11 @@ function openDrawer(name){
   var backdrop = document.getElementById('drawerBackdrop');
   var title = document.getElementById('drawerTitle');
   var body = document.getElementById('drawerBody');
-  var titles = {swaps:'Food swaps',ai:'AI Nutrition Assistant',plate:'My Plate',compare:'Compare Foods',combos:'Food Combinations',chart:'Nutrient Chart',diary:'Daily diary & goals',meals:'Meal templates',drugs:'Drug–food checker',profiles:'Client profiles'};
+  var titles = {guideImport:'Review guide meal',swaps:'Food swaps',ai:'AI Nutrition Assistant',plate:'My Plate',compare:'Compare Foods',combos:'Food Combinations',chart:'Nutrient Chart',diary:'Daily diary & goals',meals:'Meal templates',drugs:'Drug–food checker',profiles:'Client profiles'};
   title.textContent = titles[name] || name;
   body.innerHTML = '';
-  if(name==='swaps'){body.innerHTML=buildSwapsDrawer();initSwaps();}
+  if(name==='guideImport'){body.innerHTML=buildGuideImportDrawer();}
+  else if(name==='swaps'){body.innerHTML=buildSwapsDrawer();initSwaps();}
   else if(name==='ai') body.innerHTML = buildAIDrawer();
   else if(name==='plate') body.innerHTML = buildPlateDrawer();
   else if(name==='compare'){body.innerHTML = buildCompareDrawer();updateComparePanel();}
@@ -2005,7 +2007,7 @@ function t2dmGuideNavigate(fragment){
   var frame = document.getElementById('t2dmGuideFrame');
   if(!frame) return;
   var f = String(fragment||'').replace(/^#/,'');
-  frame.src = 't2dm-clinical-field-guide.html?v=20#' + f;
+  frame.src = 't2dm-clinical-field-guide.html?v=21#' + f;
 }
 function openT2dmClinicalGuide(fragment){
   closeDrawer();
@@ -2016,7 +2018,7 @@ function openT2dmClinicalGuide(fragment){
   var frame = document.getElementById('t2dmGuideFrame');
   if(!overlay||!frame) return;
   var frag = (fragment && String(fragment).replace(/^#/,'')) || 'view=principles&state=all';
-  frame.src = 't2dm-clinical-field-guide.html?v=20#' + frag;
+  frame.src = 't2dm-clinical-field-guide.html?v=21#' + frag;
   overlay.classList.add('open');
   overlay.setAttribute('aria-hidden','false');
   document.body.style.overflow = 'hidden';
@@ -2037,7 +2039,7 @@ function openT2dmGuideNewTab(){
       if(i>-1) hash = frame.src.slice(i);
     }
   }catch(e){}
-  window.open('t2dm-clinical-field-guide.html?v=20'+hash,'_blank','noopener');
+  window.open('t2dm-clinical-field-guide.html?v=21'+hash,'_blank','noopener');
 }
 
 /** Deep links: #condition=t2d or #cond=t2d, optional &food=123, #vat or &vat=1 opens VAT hub */
@@ -2095,6 +2097,11 @@ function syncUrlHash(){
 window.addEventListener('message', function(e){
   var d = e && e.data;
   if(!d || d.type !== 'nutriforge') return;
+  if(d.action==='guide-meal-ready'){
+    var frame=document.getElementById('t2dmGuideFrame');
+    if(e.origin!==location.origin || !frame || e.source!==frame.contentWindow)return;
+    closeT2dmClinicalGuide();reviewGuideMeal();return;
+  }
   if(d.action !== 'from-t2dm-guide') return;
   closeT2dmClinicalGuide();
   var cond = d.condition && CONDITIONS.some(function(c){ return c.id === d.condition; }) ? d.condition : 't2d';
@@ -4227,6 +4234,7 @@ updateCondDropdownLabel();
 updateContextBadge();
 updateFilterBadge();
 initWelcome();
+if(location.hash==='#guide-meal')reviewGuideMeal();
 
 // Populate category select
 (function(){

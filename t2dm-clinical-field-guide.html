@@ -2908,6 +2908,16 @@ function PrinciplesView({ palette, onBuild, onBrowse }) {
 /* ─────────────────────────  BUILDER VIEW  ───────────────────────── */
 
 function BuilderView({ items, onChange, onClear, onApplyTemplate, onOpen, palette, theme }) {
+  const [transferError, setTransferError] = useState("");
+  const sendToPlate = () => {
+    if (items.some(({servings}) => !Number.isFinite(servings) || servings <= 0 || servings > 100)) { setTransferError("Use between 0.5 and 100 guide servings per food before transferring."); return; }
+    try {
+      const payload = { version: 1, items: items.map(({ food, servings }) => ({ id: food.id, name: food.name, servings })) };
+      sessionStorage.setItem("nf_guide_handoff", JSON.stringify(payload));
+      if (window.parent !== window) window.parent.postMessage({ type: "nutriforge", action: "guide-meal-ready" }, window.location.origin);
+      else window.location.href = "index.html#guide-meal";
+    } catch (error) { setTransferError("Could not transfer this meal. Enable storage for this site and try again."); }
+  };
   const stats = useMemo(() => computeMealStats(items), [items]);
   const klass = classifyMeal(stats);
   return (
@@ -2930,6 +2940,11 @@ function BuilderView({ items, onChange, onClear, onApplyTemplate, onOpen, palett
         curve below redraws each time. Educational only — not a clinical prediction.
       </p>
 
+      <div className="guide-next" style={{ paddingTop: 0 }}>
+        <div><h2 className="display">Continue in My Plate</h2><p style={{ color: palette.textMuted, fontSize: 13 }}>Review matching foods and gram weights, then use swaps or log your meal.</p></div>
+        <button onClick={sendToPlate} disabled={!items.length} style={{ background: palette.accentDeep, color: palette.surface, opacity: items.length ? 1 : 0.45 }}>Review in My Plate →</button>
+        {transferError && <p role="alert">{transferError}</p>}
+      </div>
       {/* Template starters */}
       <div className="mb-8">
         <div className="eyebrow mb-3" style={{ color: palette.textMuted }}>Template starters</div>
@@ -3386,7 +3401,7 @@ function T2DMFoodGuideV3() {
             const [id, qty] = p.split(":");
             const food = FOODS.find((f) => f.id === id);
             if (!food) return null;
-            const servings = Math.max(1, Math.min(6, parseInt(qty || "1", 10) || 1));
+            const servings = Math.max(0.5, Math.min(100, parseFloat(qty || "1") || 1));
             return { food, servings };
           })
           .filter(Boolean);
