@@ -36,7 +36,7 @@ function updateWelcome(){
   var visual=document.getElementById('welcomePlateVisual');if(!visual)return;
   var ids=Object.keys(plateMap),count=ids.length;
   document.getElementById('welcomeStatus').textContent=count?'Your plate has '+count+' food'+(count===1?'':'s')+'. Pick up where you left off.':'Your next meal starts here.';
-  document.getElementById('welcomePlateAction').innerHTML=(count?'Continue my plate':'Build my plate')+' <span aria-hidden="true">→</span>';
+  document.getElementById('welcomePlateAction').innerHTML=(count?'2 · Continue my plate':'2 · Build my plate')+' <span aria-hidden="true">→</span>';
   var colors=['#82a27c','#dcb562','#51a7a3'];
   var names=['Brown rice','Cowpeas','Tomatoes'];
   var total=welcomeParts.reduce(function(n,p){return n+p.g},0),angle=0;
