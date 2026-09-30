@@ -747,7 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=22">
+<link rel="stylesheet" href="layout.css?v=23">
 </head>
 <body>
 
@@ -784,6 +784,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
       </button>
       <div class="overflow-menu" id="overflowMenu">
+        <button onclick="openDrawer('swaps');toggleOverflow()">Food swaps</button>
         <button onclick="openDrawer('compare');toggleOverflow()">Compare foods</button>
         <button onclick="openDrawer('combos');toggleOverflow()">Food combinations</button>
         <button onclick="openDrawer('chart');toggleOverflow()">Nutrient chart</button>
@@ -891,7 +892,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     <button type="button" class="search-clear" id="searchClear" title="Clear search" aria-label="Clear search">&times;</button>
   </div>
 </section>
-<p class="filter-help">Find a food, choose your portions, and add it to your plate.</p>
+<div class="browse-swap-row"><p class="filter-help">Find a food, choose your portions, and add it to your plate.</p><button type="button" class="ca-btn" onclick="openDrawer('swaps')">⇄ Food swaps</button></div>
 <div class="filter-row" id="filterRow">
   <div class="filter-row-scroll" role="group" aria-label="Kitchen filters">
   <span class="filter-group-label">Kitchen</span>
@@ -1168,6 +1169,8 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <script src="js/filter-core.js?v=12"></script>
 <script src="js/welcome.js?v=15"></script>
 <script src="js/meals-core.js"></script>
+<script src="js/swaps-core.js?v=2"></script>
+<script src="js/swaps-ui.js?v=2"></script>
 <script src="js/scoring-core.js?v=12"></script>
 <script>
 // ── ENRICHMENT (classifyDrug, calcLongevity, confStars — ./js/scoring-core.js?v=12)
@@ -1939,10 +1942,11 @@ function openDrawer(name){
   var backdrop = document.getElementById('drawerBackdrop');
   var title = document.getElementById('drawerTitle');
   var body = document.getElementById('drawerBody');
-  var titles = {ai:'AI Nutrition Assistant',plate:'My Plate',compare:'Compare Foods',combos:'Food Combinations',chart:'Nutrient Chart',diary:'Daily diary & goals',meals:'Meal templates',drugs:'Drug–food checker',profiles:'Client profiles'};
+  var titles = {swaps:'Food swaps',ai:'AI Nutrition Assistant',plate:'My Plate',compare:'Compare Foods',combos:'Food Combinations',chart:'Nutrient Chart',diary:'Daily diary & goals',meals:'Meal templates',drugs:'Drug–food checker',profiles:'Client profiles'};
   title.textContent = titles[name] || name;
   body.innerHTML = '';
-  if(name==='ai') body.innerHTML = buildAIDrawer();
+  if(name==='swaps'){body.innerHTML=buildSwapsDrawer();initSwaps();}
+  else if(name==='ai') body.innerHTML = buildAIDrawer();
   else if(name==='plate') body.innerHTML = buildPlateDrawer();
   else if(name==='compare'){body.innerHTML = buildCompareDrawer();updateComparePanel();}
   else if(name==='combos'){body.innerHTML = buildCombosDrawer();renderCombos();wireCombosEvents();}
@@ -2129,7 +2133,7 @@ function buildPlateDrawer(){
   return '<div class="plate-premium">' +
     '<div class="plate-intro"><h2>Build your plate.</h2><p>A little of what you love. Portions that work for you.</p></div>' +
     '<div class="plate-stage"><div id="plateVisual" class="plate-visual"></div><p class="plate-visual-caption">Food proportions by weight</p></div>' +
-    '<div class="plate-main-actions"><button type="button" class="ca-btn" onclick="exploreWelcomeFoods()">+ Add foods</button><button type="button" class="ca-btn" id="logPlateButton" onclick="logPlateToDiary()">Log plate to diary ↗</button></div>' +
+    '<div class="plate-main-actions"><button type="button" class="ca-btn" onclick="openDrawer(\'swaps\')">⇄ Find a swap</button><button type="button" class="ca-btn" onclick="exploreWelcomeFoods()">+ Add foods</button><button type="button" class="ca-btn" id="logPlateButton" onclick="logPlateToDiary()">Log plate to diary ↗</button></div>' +
     '<div class="plate-section-heading"><h3>On your plate</h3><span id="plateFoodCount">0 foods</span></div>' +
     '<div class="plate-items" id="plateItems">' +
     '<div class="plate-empty" id="plateEmptyHint"><div class="plate-empty-title">No foods yet</div>Tap + on a card (expand on mobile if needed).</div></div>' +
