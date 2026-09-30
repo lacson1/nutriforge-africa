@@ -29,3 +29,11 @@ function applyFoodSwap(plate, portions, source, target, grams) {
   nextPlate[target.id]=target; nextPortions[target.id]=grams;
   return {plate:nextPlate,portions:nextPortions,replaced:replaced};
 }
+function undoFoodSwap(plate, portions, change) {
+  if(!change || !plate[change.target.id] || portions[change.target.id]!==change.grams || (change.replaced && plate[change.source.id]))return null;
+  var nextPlate=Object.assign({},plate), nextPortions=Object.assign({},portions);
+  delete nextPlate[change.target.id];
+  if(change.targetPortion===undefined)delete nextPortions[change.target.id];else nextPortions[change.target.id]=change.targetPortion;
+  if(change.replaced){nextPlate[change.source.id]=change.source;nextPortions[change.source.id]=change.sourcePortion;}
+  return {plate:nextPlate,portions:nextPortions};
+}

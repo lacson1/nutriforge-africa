@@ -478,3 +478,15 @@ body .filter-row .chip.active, body.dark-mode .filter-row .chip.active { backgro
 .guide-import label{display:grid;gap:7px;margin-top:12px;font-size:12px}
 .guide-import input:not([type=checkbox]),.guide-import select{width:100%;min-width:0;padding:10px;background:var(--surface);color:var(--text-primary);border:1px solid var(--card-border)}
 .guide-import .guide-import-include{display:flex;align-items:center;gap:8px}
+.swap-plate-choices>span{font-size:12px;font-weight:600;display:block;margin:16px 0 9px}
+.swap-plate-choices>div{display:flex;flex-wrap:wrap;gap:6px}
+.swap-plate-choices button{max-width:100%;white-space:normal;text-align:left}
+.swap-method{font-size:12px;color:var(--text-secondary);margin:12px 0 20px}.swap-method summary{cursor:pointer}
+.swap-comparison{width:100%;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}
+.swap-comparison th,.swap-comparison td{padding:10px 5px;border-bottom:1px solid var(--card-border);text-align:right}
+.swap-comparison th:first-child{text-align:left}.swap-comparison thead{font-size:10px;color:var(--text-secondary)}
+.swap-comparison tbody th{font-weight:500}.swap-comparison small{font-size:10px;color:var(--text-secondary)}
+.swap-comparison .swap-focus-metric{background:var(--accent-green-light);color:var(--accent-green);font-weight:700}
+.swap-controls #swapSearchCount:empty{display:none}.swap-controls #swapSearchCount{margin:0}
+#swapStatus:not(:empty){margin:16px 0;padding:12px;border:1px solid var(--card-border);border-radius:10px;font-size:13px;line-height:1.6}
+#swapStatus .swap-success{margin:0;padding:0;background:none}

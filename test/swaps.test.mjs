@@ -29,3 +29,14 @@ describe('food swaps',()=>{
   for(const grams of [0,-1,NaN,Infinity,2001])expect(c.applyFoodSwap({}, {},a,b,grams)).toBeNull();
  });
 });
+it('undo restores original grams and preserves unrelated plate changes',()=>{
+ const change={source:a,target:b,replaced:true,grams:100,sourcePortion:175,targetPortion:60};
+ const out=c.undoFoodSwap({2:b,3:d},{1:175,2:100,3:90},change);
+ expect(Object.keys(out.plate)).toEqual(['1','3']);expect(out.portions).toEqual({1:175,2:60,3:90});
+ expect(c.undoFoodSwap({2:b},{2:120},change)).toBeNull();
+ expect(c.undoFoodSwap({1:a,2:b},{1:80,2:100},change)).toBeNull();
+});
+it('undoing an addition does not restore a source that was never on the plate',()=>{
+ const out=c.undoFoodSwap({2:b},{2:75},{source:a,target:b,replaced:false,grams:75});
+ expect(Object.keys(out.plate)).toEqual([]);expect(Object.keys(out.portions)).toEqual([]);
+});
