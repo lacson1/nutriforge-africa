@@ -747,7 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=25">
+<link rel="stylesheet" href="layout.css?v=26">
 </head>
 <body>
 
@@ -791,6 +791,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <button onclick="openT2dmClinicalGuide();toggleOverflow()">The field guide</button>
         <button type="button" onclick="openVatProtocol();toggleOverflow()">VAT hub (visceral fat protocol)</button>
         <hr>
+        <button onclick="openDrawer('planner');toggleOverflow()">Weekly planner</button>
         <button onclick="openDrawer('diary');toggleOverflow()">Daily diary &amp; goals</button>
         <button onclick="openCommunityStart();toggleOverflow()">Start guide (goals)</button>
         <button onclick="openDrawer('meals');toggleOverflow()">Meal templates (plates)</button>
@@ -846,9 +847,9 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     <div class="welcome-copy">
       <h2 id="welcomeTitle">Build a better plate with foods you know.</h2>
       <p class="welcome-lead">Explore African and global foods, plan meals and track your day.</p>
-      <div class="welcome-actions"><button type="button" class="welcome-primary" id="welcomePlateAction" onclick="openDrawer('plate')">Build my plate <span aria-hidden="true">→</span></button><button type="button" class="welcome-secondary" onclick="exploreWelcomeFoods()">Explore foods</button></div>
+      <div class="welcome-actions"><button type="button" class="welcome-primary" onclick="openCommunityStart()">1 · Choose a goal</button><button type="button" class="welcome-secondary" id="welcomePlateAction" onclick="openDrawer('plate')">Build my plate <span aria-hidden="true">→</span></button></div>
       <div class="welcome-paths">
-        <button type="button" onclick="openCommunityStart()"><strong>Choose a goal <span aria-hidden="true">→</span></strong><span>Set a focus for your meals.</span></button>
+        <button type="button" onclick="openDrawer('planner')"><strong>Plan your week <span aria-hidden="true">→</span></strong><span>Breakfast, lunch and dinner.</span></button>
         <button type="button" onclick="openDrawer('meals')"><strong>Try a meal template <span aria-hidden="true">→</span></strong><span>Start with a ready-made idea.</span></button>
         <button type="button" onclick="openDrawer('diary')"><strong>Your daily diary <span aria-hidden="true">→</span></strong><span>Log meals and follow your day.</span></button>
       </div>
@@ -903,7 +904,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
   <button class="chip" data-cat="favourites" id="favChip" onclick="setFilter('favourites',this)">Saved <span id="favCount" style="opacity:.6"></span></button>
   <label class="category-control"><span class="filter-group-label">Category</span><select aria-label="Food category" id="catSelect" class="filter-select"></select></label>
   </div>
-  <div class="filter-row-trailing">
+  <div class="filter-row-trailing"><button type="button" class="chip" onclick="clearAll()" title="Clear search and every food filter">Clear filters</button>
   <div class="filters-popover-wrap" id="filtersPopoverWrap">
     <button class="chip" id="filtersBtn" onclick="toggleFiltersPopover()">Sort &amp; filters <span id="filterBadge" class="filter-badge" style="display:none">0</span></button>
     <div class="filters-popover" id="filtersPopover">
@@ -919,7 +920,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
           <option value="longevity">Longevity Score ↓</option><option value="longevity_asc">Longevity Score ↑</option>
           <option value="confidence">Evidence Stars ↓</option><option value="confidence_asc">Evidence Stars ↑</option>
         </select></div>
-      <div class="fp-group"><label for="evidence_filter" class="fp-label">Evidence</label>
+      <details class="advanced-filters"><summary>Evidence &amp; interaction filters</summary>      <div class="fp-group"><label for="evidence_filter" class="fp-label">Evidence</label>
         <select id="evidence_filter" class="fp-select" onchange="evidenceFilter=this.value;render();updateFilterBadge()">
           <option value="all">All</option><option value="High">High only (RCT/Meta)</option><option value="Moderate">Moderate+</option>
         </select></div>
@@ -927,19 +928,20 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <select id="drug_filter" class="fp-select" onchange="drugFilter=this.value;render();updateFilterBadge()">
           <option value="all">All</option><option value="critical">Critical only</option><option value="moderate">Moderate+</option><option value="mild">Any flagged</option>
         </select></div>
+</details>
       <div class="fp-group"><label for="region_filter" class="fp-label">Region</label>
         <select id="region_filter" class="fp-select" onchange="regionFilter=this.value;render();updateFilterBadge()">
           <option value="all">All regions</option><option value="West Africa">West Africa</option><option value="East Africa">East Africa</option>
           <option value="North Africa">North Africa</option><option value="Central Africa">Central Africa</option>
           <option value="Southern Africa">Southern Africa</option><option value="Sahel">Sahel</option>
         </select></div>
-      <button class="fp-reset" onclick="clearAll();toggleFiltersPopover()">Reset all</button>
+      <button class="fp-reset" onclick="toggleFiltersPopover()">Done</button><button class="fp-reset" onclick="clearAll();toggleFiltersPopover()">Reset all</button>
     </div>
   </div>
   <div class="filters-popover-wrap cond-dropdown-wrap" id="condDropdownWrap">
     <button type="button" class="cond-dropdown-trigger" id="condDropdownBtn" onclick="toggleCondDropdown(event)" aria-expanded="false" aria-haspopup="listbox" aria-controls="condDropdownPanel">
       <span class="cond-dd-inner">
-        <span class="cond-dd-label">Condition</span>
+        <span class="cond-dd-label">Health focus</span>
         <span class="cond-dd-value" id="condDropdownLabel">All foods</span>
       </span>
       <svg class="cond-dd-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
@@ -1132,7 +1134,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         </div>
       <div class="community-start-footer">
         <p id="communityNextText" class="community-selection-note" aria-live="polite">Select one goal to continue.</p>
-        <div class="community-start-actions"><button type="button" class="ca-btn" onclick="closeCommunityStart();exploreWelcomeFoods()">Just browse foods</button><button type="button" class="ca-btn" id="communityContinue" onclick="applyCommunityGoal(selectedCommunityGoal)" disabled>Show meal ideas →</button></div>
+        <div class="community-start-actions"><button type="button" class="ca-btn" onclick="closeCommunityStart();exploreWelcomeFoods()">Just browse foods</button><button type="button" class="ca-btn" id="communityContinue" onclick="applyCommunityGoal(selectedCommunityGoal)" disabled>Build my plate →</button></div>
         <p class="community-start-foot">For education, not diagnosis. Discuss dietary changes with your clinician, especially during pregnancy or if you use insulin or have kidney disease.</p>
 
       </div>
@@ -1167,8 +1169,10 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <script src="js/foods-data.js?v=12"></script>
 <script src="js/search-core.js?v=12"></script>
 <script src="js/filter-core.js?v=12"></script>
-<script src="js/welcome.js?v=15"></script>
+<script src="js/welcome.js?v=16"></script>
 <script src="js/meals-core.js"></script>
+<script src="js/planner-core.js?v=1"></script>
+<script src="js/planner-ui.js?v=2"></script>
 <script src="js/guide-bridge.js?v=1"></script>
 <script src="js/swaps-core.js?v=3"></script>
 <script src="js/swaps-ui.js?v=4"></script>
@@ -1943,10 +1947,11 @@ function openDrawer(name){
   var backdrop = document.getElementById('drawerBackdrop');
   var title = document.getElementById('drawerTitle');
   var body = document.getElementById('drawerBody');
-  var titles = {guideImport:'Review guide meal',swaps:'Food swaps',ai:'AI Nutrition Assistant',plate:'My Plate',compare:'Compare Foods',combos:'Food Combinations',chart:'Nutrient Chart',diary:'Daily diary & goals',meals:'Meal templates',drugs:'Drug–food checker',profiles:'Client profiles'};
+  var titles = {planner:'Weekly planner',guideImport:'Review guide meal',swaps:'Food swaps',ai:'AI Nutrition Assistant',plate:'My Plate',compare:'Compare Foods',combos:'Food Combinations',chart:'Nutrient Chart',diary:'Daily diary & goals',meals:'Meal templates',drugs:'Drug–food checker',profiles:'Client profiles'};
   title.textContent = titles[name] || name;
   body.innerHTML = '';
-  if(name==='guideImport'){body.innerHTML=buildGuideImportDrawer();}
+  if(name==='planner'){body.innerHTML=buildPlannerDrawer();renderPlanner();}
+  else if(name==='guideImport'){body.innerHTML=buildGuideImportDrawer();}
   else if(name==='swaps'){body.innerHTML=buildSwapsDrawer();initSwaps();}
   else if(name==='ai') body.innerHTML = buildAIDrawer();
   else if(name==='plate') body.innerHTML = buildPlateDrawer();
@@ -2138,9 +2143,9 @@ function buildAIDrawer(){
 }
 function buildPlateDrawer(){
   return '<div class="plate-premium">' +
-    '<div class="plate-intro"><h2>Build your plate.</h2><p>A little of what you love. Portions that work for you.</p></div>' +
+    '<div class="plate-intro"><h2>Build your plate.</h2><p>'+safeHtml(currentGoalLabel())+'</p><button type="button" class="ca-btn" onclick="openCommunityStart()">Change goal</button></div>' +
     '<div class="plate-stage"><div id="plateVisual" class="plate-visual"></div><p class="plate-visual-caption">Food proportions by weight</p></div>' +
-    '<div class="plate-main-actions"><button type="button" class="ca-btn" onclick="openDrawer(\'swaps\')">⇄ Find a swap</button><button type="button" class="ca-btn" onclick="exploreWelcomeFoods()">+ Add foods</button><button type="button" class="ca-btn" id="logPlateButton" onclick="logPlateToDiary()">Log plate to diary ↗</button></div>' +
+    '<div class="plate-main-actions"><button type="button" class="ca-btn" onclick="openDrawer(\'planner\')">Plan this plate</button><button type="button" class="ca-btn" onclick="openDrawer(\'meals\')">Meal ideas</button><button type="button" class="ca-btn" onclick="openDrawer(\'swaps\')">⇄ Find a swap</button><button type="button" class="ca-btn" onclick="exploreWelcomeFoods()">+ Add foods</button><button type="button" class="ca-btn" id="logPlateButton" onclick="logPlateToDiary()">Log plate to diary ↗</button></div>' +
     '<div class="plate-section-heading"><h3>On your plate</h3><span id="plateFoodCount">0 foods</span></div>' +
     '<div class="plate-items" id="plateItems">' +
     '<div class="plate-empty" id="plateEmptyHint"><div class="plate-empty-title">No foods yet</div>Tap + on a card (expand on mobile if needed).</div></div>' +
@@ -2686,6 +2691,11 @@ function openVatGuide(){
   window.open('/protocol/','_blank','noopener,noreferrer');
 }
 
+function currentGoalLabel(){
+  var id='';try{id=localStorage.getItem('nf_selected_goal_'+(activeProfileId||'personal'));}catch(e){}
+  var goal=COMMUNITY_START_GOALS.find(function(g){return g.id===id;});
+  return goal?'Your goal: '+goal.label:'Choose a goal, then add foods and adjust your portions.';
+}
 var selectedCommunityGoal=null;
 var communityReturnFocus=null;
 function selectCommunityGoal(id){
@@ -2741,7 +2751,8 @@ function applyCommunityGoal(goalId){
   }
   setMode('patient');
   activeMealTemplateFocus = g.mealFocus || 'all';
-  openDrawer('meals');
+  try{localStorage.setItem('nf_selected_goal_'+(activeProfileId||'personal'),g.id);}catch(e){}
+  openDrawer('plate');
 }
 function maybeOpenCommunityStart(){
   try{
