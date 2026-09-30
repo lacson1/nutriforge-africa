@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#efebe4;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#1a1a1a}a{color:#0b6e4f}a:hover{color:#095940}.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 8px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}.dv-opts{display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.6);max-width:390px}.dv-opt:target .dv-oid{background:#0b6e4f;color:#fff}.dv-next{margin:26px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.55)}input:focus-visible,button:focus-visible{outline:2px solid #0b6e4f;outline-offset:2px}</style></helmet>
+<section class="dv-turn" id="t5">
+<div class="dv-thd"><a class="dv-tid" href="#t5">5</a><span class="dv-tname">One clickable app: onboarding, then all five tabs working</span></div>
+<p style="margin:0 0 24px;max-width:780px;font-size:13px;line-height:1.5;color:#555;text-wrap:pretty">This joins onboarding from <a href="#2a">2a</a>, Today from <a href="#3a">3a</a>, and the tabs from <a href="#4a">4a</a>–<a href="#4c">4c</a> into one app you can click through. The medicines you pick during onboarding decide what the Medicines tab and the food warnings show. It shares its settings with the earlier screens, so changing something here changes them too. Use this one for the patient test.</p>
+<div class="dv-opts">
+<div class="dv-opt" id="5a">
+<div class="dv-olabel"><a class="dv-oid" href="#5a">5a</a>Start at Welcome, or skip straight to the app with example answers filled in.</div>
+<div style="width:390px;height:844px;background:#f9f6f1;border-radius:44px;border:10px solid #1a1a1a;box-sizing:content-box;overflow:hidden;display:flex;flex-direction:column;position:relative">
+<div style="height:47px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px;font-size:15px;font-weight:600;background:{{ uBarBg }};color:{{ uBarFg }}"><span>9:41</span><span style="width:24px;height:11px;border:1.5px solid currentColor;border-radius:3px"></span></div>
+
+<sc-if value="{{ fShowTop }}" hint-placeholder-val="{{ false }}"><div style="flex:none;display:flex;flex-direction:column;gap:10px;padding:4px 20px 0">
+<div style="display:flex;align-items:center;justify-content:space-between"><button onClick="{{ fBack }}" style="background:none;border:none;font:inherit;font-size:15px;color:#0b6e4f;padding:10px 0;min-height:44px;cursor:pointer">‹ Back</button><span style="font-size:12px;color:#555;font-variant-numeric:tabular-nums">Step {{ fStep }} of 4</span></div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px"><sc-for list="{{ fProg }}" as="p" hint-placeholder-count="4"><span style="height:4px;border-radius:2px;background:{{ p.c }}"></span></sc-for></div>
+</div></sc-if>
+
+<sc-if value="{{ fIs0 }}" hint-placeholder-val="{{ true }}"><div style="flex:1;background:#0b6e4f;color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:32px 26px 40px">
+<div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#cfe5db">NutriForge</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:42px;line-height:1.05;margin:0;text-wrap:pretty">Food advice for the food you actually cook.</h1>
+<p style="margin:0;font-size:17px;line-height:1.45;color:#e3efe9;text-wrap:pretty">Check jollof, fufu, kenkey or rice and peas against your condition and your medicines.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;align-items:stretch">
+<button onClick="{{ fNext }}" style="background:#fff;color:#0b6e4f;border:none;border-radius:8px;font:inherit;font-size:17px;font-weight:700;padding:16px;cursor:pointer;min-height:52px">Get started</button>
+<span style="text-align:center;font-size:13px;color:#cfe5db">Takes about 2 minutes</span>
+</div>
+</div></sc-if>
+
+<sc-if value="{{ fIs1 }}" hint-placeholder-val="{{ false }}"><div style="flex:1;overflow-y:auto;padding:20px 20px 16px;display:flex;flex-direction:column;gap:8px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0">What has your GP diagnosed you with?</h1>
+<p style="margin:0 0 10px;font-size:14px;color:#555">Choose all that apply.</p>
+<sc-for list="{{ fConds }}" as="o" hint-placeholder-count="5"><button onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:12px;background:{{ o.bg }};border:1.5px solid {{ o.border }};border-radius:8px;padding:14px;font:inherit;font-size:16px;text-align:left;cursor:pointer;min-height:52px;color:#1a1a1a"><span style="width:22px;height:22px;flex:none;border-radius:4px;border:1.5px solid {{ o.border }};background:{{ o.box }};color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center">{{ o.mark }}</span>{{ o.label }}</button></sc-for>
+</div></sc-if>
+
+<sc-if value="{{ fIs2 }}" hint-placeholder-val="{{ false }}"><div style="flex:1;overflow-y:auto;padding:20px 20px 16px;display:flex;flex-direction:column;gap:8px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0">Which medicines do you take?</h1>
+<p style="margin:0 0 10px;font-size:14px;color:#555;line-height:1.4">Look at your repeat prescription. We use this to warn you about foods and drinks that affect your medicines.</p>
+<sc-for list="{{ fMeds }}" as="o" hint-placeholder-count="7"><button onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:12px;background:{{ o.bg }};border:1.5px solid {{ o.border }};border-radius:8px;padding:12px 14px;font:inherit;text-align:left;cursor:pointer;min-height:52px;color:#1a1a1a"><span style="width:22px;height:22px;flex:none;border-radius:4px;border:1.5px solid {{ o.border }};background:{{ o.box }};color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center">{{ o.mark }}</span><span style="display:flex;flex-direction:column;gap:1px"><strong style="font-size:16px">{{ o.name }}</strong><span style="font-size:12px;color:#555">For {{ o.forr }}</span></span></button></sc-for>
+<button onClick="{{ fNone.pick }}" style="display:flex;align-items:center;gap:12px;background:{{ fNone.bg }};border:1.5px dashed {{ fNone.border }};border-radius:8px;padding:14px;font:inherit;font-size:16px;text-align:left;cursor:pointer;min-height:52px;color:#1a1a1a;margin-top:4px"><span style="width:22px;height:22px;flex:none;border-radius:4px;border:1.5px solid {{ fNone.border }};background:{{ fNone.box }};color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center">{{ fNone.mark }}</span>I don't take any of these</button>
+</div></sc-if>
+
+<sc-if value="{{ fIs3 }}" hint-placeholder-val="{{ false }}"><div style="flex:1;overflow-y:auto;padding:20px 20px 16px;display:flex;flex-direction:column;gap:8px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0">What food do you cook at home?</h1>
+<p style="margin:0 0 10px;font-size:14px;color:#555;line-height:1.4">We'll show these foods first. You can still search for anything.</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ fCuis }}" as="c" hint-placeholder-count="8"><button onClick="{{ c.pick }}" style="border:1.5px solid {{ c.border }};background:{{ c.bg }};color:{{ c.fg }};font:inherit;font-size:15px;padding:10px 16px;border-radius:999px;cursor:pointer;min-height:44px">{{ c.label }}</button></sc-for></div>
+</div></sc-if>
+
+<sc-if value="{{ fIs4 }}" hint-placeholder-val="{{ false }}"><div style="flex:1;overflow-y:auto;padding:20px 20px 16px;display:flex;flex-direction:column;gap:14px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0">Before you start</h1>
+<div style="display:flex;flex-direction:column;background:#fff;border-radius:8px">
+<div style="display:grid;grid-template-columns:28px 1fr;gap:10px;padding:14px;border-bottom:1px solid #eee;font-size:15px;line-height:1.4"><span style="font-family:Fraunces,serif;font-weight:700;font-size:20px;color:#0b6e4f">1</span><span>This app gives you <strong>food guidance</strong>. It does not diagnose you or replace your GP.</span></div>
+<div style="display:grid;grid-template-columns:28px 1fr;gap:10px;padding:14px;border-bottom:1px solid #eee;font-size:15px;line-height:1.4"><span style="font-family:Fraunces,serif;font-weight:700;font-size:20px;color:#0b6e4f">2</span><span><strong>Never stop or change a medicine</strong> because of something you read here. Talk to your GP or pharmacist first.</span></div>
+<div style="display:grid;grid-template-columns:28px 1fr;gap:10px;padding:14px;font-size:15px;line-height:1.4"><span style="font-family:Fraunces,serif;font-weight:700;font-size:20px;color:#0b6e4f">3</span><span>Each tip shows how strong the evidence is, from <span style="color:#0b6e4f;letter-spacing:1px">●●●●</span> strong to <span style="color:#777;letter-spacing:1px">○○○○</span> expert opinion only.</span></div>
+</div>
+<div style="padding:12px 14px;border-left:3px solid #b3261e;background:#fff;font-size:14px;line-height:1.4"><strong>If you feel very unwell</strong>, for example you are confused, very drowsy, or being sick and can't keep fluids down, call <strong>999</strong> or <strong>111</strong>.</div>
+<button onClick="{{ fOkRow.pick }}" style="display:flex;align-items:center;gap:12px;background:{{ fOkRow.bg }};border:1.5px solid {{ fOkRow.border }};border-radius:8px;padding:14px;font:inherit;font-size:15px;text-align:left;cursor:pointer;min-height:52px;color:#1a1a1a"><span style="width:22px;height:22px;flex:none;border-radius:4px;border:1.5px solid {{ fOkRow.border }};background:{{ fOkRow.box }};color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center">{{ fOkRow.mark }}</span>I understand</button>
+</div></sc-if>
+
+<sc-if value="{{ fShowTop }}" hint-placeholder-val="{{ false }}"><div style="flex:none;padding:12px 20px 34px;background:#f9f6f1;border-top:1px solid #e6e0d6"><button onClick="{{ fNext }}" disabled="{{ fDisabled }}" style="width:100%;background:{{ fCtaBg }};color:{{ fCtaFg }};border:none;border-radius:8px;font:inherit;font-size:17px;font-weight:700;padding:16px;cursor:{{ fCtaCursor }};min-height:52px">{{ fCta }}</button></div></sc-if>
+
+<sc-if value="{{ uIsCheck }}" hint-placeholder-val="{{ false }}"><div style="flex:1;overflow-y:auto;padding:8px 20px 24px;background:#fff">
+<div style="font-size:13px;color:#555">{{ fGreeting }}</div>
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:2px 0 10px">Can I eat this?</h1>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 12px;background:#f9f6f1;border-radius:6px;font-size:13px;margin-bottom:14px"><span style="line-height:1.35"><span style="color:#555">Checking against: </span><strong>{{ fMedLine }}</strong></span><button onClick="{{ fEditMeds }}" style="background:none;border:none;font:inherit;font-size:13px;color:#0b6e4f;font-weight:600;cursor:pointer;padding:8px 0;min-height:36px;flex:none">Edit</button></div>
+<label for="nf-search-5" style="font-size:12px;color:#555;display:block;margin-bottom:6px">Type a food or drink</label>
+<div style="position:relative">
+<input id="nf-search-2" value="{{ fQ }}" onChange="{{ fType }}" placeholder="{{ fPh }}" style="width:100%;box-sizing:border-box;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid #1a1a1a;border-radius:6px;background:#f9f6f1"></input>
+<sc-if value="{{ fShowSug }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;left:0;right:0;top:50px;background:#fff;border:1px solid #d6cfc4;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.06);z-index:2;overflow:hidden">
+<sc-for list="{{ fSug }}" as="s" hint-placeholder-count="2"><button onClick="{{ s.pick }}" style="display:flex;width:100%;justify-content:space-between;background:#fff;border:none;border-bottom:1px solid #eee;padding:11px 14px;font:inherit;font-size:15px;cursor:pointer;text-align:left"><span>{{ s.name }}</span><span style="font-size:12px;font-weight:700;color:{{ s.color }}">{{ s.label }}</span></button></sc-for>
+<sc-if value="{{ fNoSug }}" hint-placeholder-val="{{ false }}"><div style="padding:11px 14px;font-size:14px;color:#555">We don't have that food yet. We'll add it.</div></sc-if>
+</div></sc-if>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px"><sc-for list="{{ fRecent }}" as="r" hint-placeholder-count="6"><button onClick="{{ r.pick }}" style="border:1px solid {{ r.border }};background:{{ r.bg }};color:{{ r.fg }};font:inherit;font-size:13px;padding:6px 11px;border-radius:999px;cursor:pointer">{{ r.name }}</button></sc-for></div>
+<div style="margin-top:22px;border-top:1px solid #d6cfc4;padding-top:18px">
+<div style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:{{ fFood.color }}"></span><span style="font-size:12px;font-weight:800;letter-spacing:1.5px;color:{{ fFood.color }}">{{ fFood.label }}</span></div>
+<h2 style="font-family:Fraunces,serif;font-size:34px;line-height:1.05;margin:8px 0 6px">{{ fFood.name }}</h2>
+<p style="margin:0;font-size:15px;line-height:1.45;text-wrap:pretty">{{ fFood.why }}</p>
+<div style="display:flex;flex-direction:column;gap:8px;margin-top:14px"><sc-for list="{{ fFood.ixs }}" as="x" hint-placeholder-count="0"><div style="padding:10px 12px;border-left:3px solid {{ x.line }};background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.06);font-size:13px;line-height:1.4"><span aria-label="Severity: {{ x.sev }}" style="font-size:10px;font-weight:700;letter-spacing:1px;color:{{ x.fg }};background:{{ x.bg }};padding:2px 6px;border-radius:3px;margin-right:6px">{{ x.sev }}</span>{{ x.text }}</div></sc-for></div>
+<div style="display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;margin-top:18px;padding:14px;background:#f9f6f1;border-radius:6px">
+<div style="width:96px;height:96px;border-radius:50%;background:conic-gradient(#0b6e4f 0 50%,#5a8f7c 50% 75%,#b89150 75% 100%);border:4px solid #fff;box-sizing:border-box"></div>
+<div style="display:flex;flex-direction:column;gap:4px;font-size:13px"><strong style="font-size:15px">How much</strong><span style="line-height:1.4">{{ fFood.portion }}</span><span style="color:#555;font-size:12px">Half vegetables · a quarter protein · a quarter starch</span></div>
+</div>
+<div style="margin-top:14px;display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #eee"><span style="font-size:13px;color:#555">Try instead</span><strong style="font-size:15px;text-align:right">{{ fFood.swap }}</strong></div>
+<div style="display:flex;gap:8px;align-items:center;padding:12px 0;font-size:12px;color:#555"><span aria-label="{{ fFood.tierLabel }}" style="font-size:11px;letter-spacing:1px;padding:2px 6px;border-radius:3px;background:#f9f6f1;color:{{ fFood.tierColor }}">{{ fFood.dots }}</span><span style="font-family:ui-monospace,SFMono-Regular,monospace">{{ fFood.src }}</span></div>
+</div>
+</div></sc-if>
+<sc-if value="{{ uIsToday }}" hint-placeholder-val="{{ false }}"><div style="flex:1;display:flex;flex-direction:column;min-height:0;background:#f4f1ec">
+<div style="flex:1;overflow-y:auto">
+<div style="background:#0b6e4f;color:#fff;padding:6px 20px 18px;display:flex;flex-direction:column;gap:12px">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;padding:3px;background:#095940;border-radius:8px"><sc-for list="{{ gConds }}" as="c" hint-placeholder-count="2"><button onClick="{{ c.pick }}" style="background:{{ c.bg }};color:{{ c.fg }};font:inherit;font-size:14px;font-weight:{{ c.weight }};border:none;border-radius:6px;padding:9px 6px;cursor:pointer;min-height:40px">{{ c.label }}</button></sc-for></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#cfe5db">Saturday 26 September</span><h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.1;margin:0">{{ gName }}</h1><span style="font-size:13px;color:#e3efe9">{{ gMedLine }}</span></div>
+<div style="display:flex;gap:6px;align-items:baseline;font-size:13px;color:#cfe5db"><span style="font-size:22px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums">{{ gTakenCount }}/{{ gDoseTotal }}</span>doses taken today</div>
+</div>
+<div style="padding:16px 18px 6px">
+<h2 style="font-family:Fraunces,serif;font-size:21px;margin:0 0 10px">Today</h2>
+<sc-for list="{{ gMeals }}" as="m" hint-placeholder-count="3">
+<div style="display:grid;grid-template-columns:48px 1fr;gap:10px">
+<div style="display:flex;flex-direction:column;align-items:flex-end;padding-top:10px"><span style="font-family:Fraunces,serif;font-size:18px;font-weight:700;font-variant-numeric:tabular-nums">{{ m.time }}</span><span style="font-size:11px;color:#888">{{ m.ampm }}</span></div>
+<div style="border-left:2px solid #d6cfc4;padding:0 0 12px 12px;display:flex;flex-direction:column;gap:6px">
+<button onClick="{{ m.toggle }}" style="text-align:left;background:#fff;border:1px solid {{ m.border }};border-radius:6px;padding:10px 12px;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:3px;color:#1a1a1a"><span style="display:flex;justify-content:space-between;align-items:baseline"><strong style="font-size:15px">{{ m.title }}</strong><span style="font-size:12px;color:#0b6e4f;font-weight:600">{{ m.cta }}</span></span><span style="font-size:13px;color:#555;line-height:1.35">{{ m.plan }}</span></button>
+<sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}"><div style="background:#fff;border-radius:6px;padding:12px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;height:10px;border-radius:3px;overflow:hidden"><span style="width:50%;background:#0b6e4f"></span><span style="width:25%;background:#5a8f7c"></span><span style="width:25%;background:#b89150"></span></div>
+<sc-for list="{{ m.plate }}" as="p" hint-placeholder-count="3"><div style="display:grid;grid-template-columns:62px 1fr;gap:8px;font-size:13px;line-height:1.35"><span style="font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:{{ p.color }}">{{ p.part }}</span><span>{{ p.food }}</span></div></sc-for>
+<div style="font-size:12px;color:#555;border-top:1px solid #eee;padding-top:8px">{{ m.tip }}</div>
+</div></sc-if>
+<sc-if value="{{ m.hasMed }}" hint-placeholder-val="{{ false }}"><button onClick="{{ m.take }}" style="display:flex;justify-content:space-between;align-items:center;background:{{ m.medBg }};color:{{ m.medFg }};border:1.5px solid #0b6e4f;border-radius:6px;padding:8px 12px;font:inherit;font-size:14px;cursor:pointer;min-height:44px"><strong>{{ m.medName }}</strong><span style="font-weight:700;font-size:13px">{{ m.medLabel }}</span></button></sc-if>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="padding:0 18px"><div style="padding:10px 12px;background:#fff;border-left:3px solid {{ gAlert.line }};font-size:13px;line-height:1.4;display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;gap:8px;align-items:center"><span aria-label="Severity: {{ gAlert.sev }}" style="font-size:10px;font-weight:700;letter-spacing:1px;color:{{ gAlert.fg }};background:{{ gAlert.bg }};padding:2px 6px;border-radius:3px">{{ gAlert.sev }}</span><strong>{{ gAlert.title }}</strong></div>
+<span style="color:#555">{{ gAlert.text }}</span>
+</div></div>
+<div style="padding:22px 18px 0">
+<h2 style="font-family:Fraunces,serif;font-size:21px;margin:0 0 10px">My situation</h2>
+<div style="display:flex;gap:6px;overflow-x:auto;margin:0 -18px;padding:0 18px 4px"><sc-for list="{{ gModes }}" as="m" hint-placeholder-count="5"><button onClick="{{ m.pick }}" style="flex:none;border:1px solid {{ m.border }};background:{{ m.bg }};color:{{ m.fg }};font-weight:{{ m.weight }};font-size:13px;padding:7px 12px;border-radius:999px;font-family:inherit;cursor:pointer">{{ m.label }}</button></sc-for></div>
+<div style="margin-top:10px;padding:10px 12px;background:#fff;border-left:3px solid #0b6e4f;font-size:13px;line-height:1.4">{{ gModeNote }}</div>
+</div>
+<div style="padding:22px 18px 20px">
+<h2 style="font-family:Fraunces,serif;font-size:21px;margin:0 0 10px">What to eat</h2>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #d6cfc4"><sc-for list="{{ gTabs }}" as="t" hint-placeholder-count="4"><button onClick="{{ t.pick }}" style="background:none;border:none;border-bottom:3px solid {{ t.line }};margin-bottom:-1px;padding:8px 2px;font-family:inherit;font-size:13px;font-weight:{{ t.weight }};color:{{ t.ink }};cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px"><span>{{ t.label }}</span><span style="font-size:11px;color:#888;font-variant-numeric:tabular-nums">{{ t.count }}</span></button></sc-for></div>
+<div style="display:flex;flex-direction:column;gap:8px;margin-top:12px"><sc-for list="{{ gList }}" as="f" hint-placeholder-count="4"><div style="background:#fff;border-left:3px solid {{ f.color }};padding:10px 12px;display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><div style="display:flex;flex-direction:column;gap:2px"><strong style="font-size:15px">{{ f.name }}</strong><span style="font-size:13px;color:#555;line-height:1.35">{{ f.note }}</span></div><span aria-label="{{ f.tierLabel }}" style="flex:none;font-size:11px;letter-spacing:1px;padding:2px 6px;border-radius:3px;background:#f9f6f1;color:{{ f.tierColor }}">{{ f.dots }}</span></div></sc-for></div>
+</div>
+</div>
+</div></sc-if>
+<sc-if value="{{ uIsPlate }}" hint-placeholder-val="{{ false }}"><div style="flex:1;display:flex;flex-direction:column;min-height:0;background:#fff">
+<div style="flex:1;overflow-y:auto;padding:8px 18px 20px;display:flex;flex-direction:column;gap:14px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0">Build your plate</h1>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;padding:12px;background:#f9f6f1;border-radius:8px">
+<div style="width:110px;height:110px;border-radius:50%;background:{{ hRing }};border:5px solid #fff;box-sizing:border-box;box-shadow:0 1px 3px rgba(0,0,0,.1)"></div>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:11px;font-weight:800;letter-spacing:1.5px;color:{{ hVerdict.color }}">{{ hVerdict.label }}</span><strong style="font-family:Fraunces,serif;font-size:19px;line-height:1.2">{{ hVerdict.title }}</strong>
+<sc-if value="{{ hNoIssues }}" hint-placeholder-val="{{ false }}"><span style="font-size:13px;color:#555">Half vegetables, a quarter protein, and a small starch.</span></sc-if></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px"><sc-for list="{{ hIssues }}" as="i" hint-placeholder-count="1"><div style="border-left:3px solid {{ i.color }};padding:6px 10px;font-size:13px;line-height:1.4;background:#fff">{{ i.text }}</div></sc-for></div>
+<sc-for list="{{ hSlots }}" as="sl" hint-placeholder-count="4"><div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:#555">{{ sl.label }}</span><div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ sl.opts }}" as="o" hint-placeholder-count="4"><button onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:6px;border:1px solid {{ o.border }};background:{{ o.bg }};color:{{ o.fg }};font:inherit;font-size:13px;padding:7px 11px;border-radius:999px;cursor:pointer;min-height:36px"><span style="width:8px;height:8px;border-radius:50%;background:{{ o.dot }}"></span>{{ o.name }}</button></sc-for></div></div></sc-for>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:#555">Starch portion</span><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px"><sc-for list="{{ hPortions }}" as="p" hint-placeholder-count="3"><button onClick="{{ p.pick }}" style="border:1px solid {{ p.border }};background:{{ p.bg }};color:{{ p.fg }};font:inherit;font-size:13px;padding:9px;border-radius:6px;cursor:pointer;min-height:44px">{{ p.label }}</button></sc-for></div></div>
+</div>
+</div></sc-if>
+<sc-if value="{{ uIsMeds }}" hint-placeholder-val="{{ false }}"><div style="flex:1;display:flex;flex-direction:column;min-height:0;background:#f9f6f1">
+<div style="flex:1;overflow-y:auto;padding:8px 18px 20px;display:flex;flex-direction:column;gap:10px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0 0 4px">Your medicines</h1>
+<sc-for list="{{ uMeds }}" as="m" hint-placeholder-count="2">
+<div style="background:#fff;border:1px solid {{ m.border }};border-radius:8px;overflow:hidden">
+<button onClick="{{ m.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;background:none;border:none;padding:14px;font:inherit;text-align:left;cursor:pointer;color:#1a1a1a"><span style="display:flex;flex-direction:column;gap:2px"><strong style="font-size:18px">{{ m.name }} <span style="font-weight:400;color:#555;font-size:14px">{{ m.dose }}</span></strong><span style="font-size:13px;color:#555">{{ m.when }}</span><span style="font-size:12px;color:#0b6e4f;font-weight:600">Next: {{ m.next }}</span></span><span style="font-size:22px;line-height:1;color:#0b6e4f">{{ m.chev }}</span></button>
+<sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}"><div style="border-top:1px solid #eee;padding:12px 14px 14px;display:flex;flex-direction:column;gap:10px">
+<button onClick="{{ m.rem }}" style="display:flex;justify-content:space-between;align-items:center;background:none;border:none;font:inherit;font-size:14px;padding:4px 0;cursor:pointer;min-height:44px;color:#1a1a1a"><span>Reminders · <strong>{{ m.remLabel }}</strong></span><span style="width:44px;height:26px;border-radius:13px;background:{{ m.trackBg }};position:relative;flex:none"><span style="position:absolute;top:2px;left:{{ m.knobX }};width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2)"></span></span></button>
+<div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:#555">Watch out for</div>
+<sc-for list="{{ m.watch }}" as="w" hint-placeholder-count="3"><div style="border-left:3px solid {{ w.line }};padding:2px 0 2px 10px;display:flex;flex-direction:column;gap:3px;font-size:13px;line-height:1.4"><span style="display:flex;gap:6px;align-items:center"><span aria-label="Severity: {{ w.sev }}" style="font-size:10px;font-weight:700;letter-spacing:1px;color:{{ w.fg }};background:{{ w.bg }};padding:2px 6px;border-radius:3px">{{ w.sev }}</span><strong>{{ w.title }}</strong></span><span style="color:#555">{{ w.text }}</span></div></sc-for>
+<span style="font-size:12px;color:#555">Prescribed for {{ m.forr }}</span>
+</div></sc-if>
+</div>
+</sc-for>
+<button style="border:1.5px dashed #0b6e4f;background:none;border-radius:8px;padding:14px;font:inherit;font-size:15px;font-weight:600;color:#0b6e4f;cursor:pointer;min-height:52px">+ Add a medicine</button>
+<p style="margin:0;font-size:12px;color:#555;line-height:1.4">Never stop a medicine because of something here. Ask your GP or pharmacist first.</p>
+</div>
+</div></sc-if>
+<sc-if value="{{ uIsHand }}" hint-placeholder-val="{{ false }}"><div style="flex:1;display:flex;flex-direction:column;min-height:0;background:#e9e4dc">
+<div style="flex:none;background:#f9f6f1;padding:4px 18px 12px;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid #d6cfc4">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:26px;line-height:1.15;margin:0">Your handout</h1>
+<div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#555"><span>A4, one page · updated today</span><button onClick="{{ hLargeToggle }}" style="background:#fff;border:1px solid #d6cfc4;border-radius:999px;padding:6px 12px;font:inherit;font-size:12px;cursor:pointer;color:#1a1a1a">{{ hLargeLabel }}</button></div>
+</div>
+<div style="flex:1;overflow-y:auto;padding:14px">
+<div style="background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12);padding:16px 16px 12px;font-size:{{ hPaperFs }};line-height:1.4;display:flex;flex-direction:column;gap:9px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #1a1a1a;padding-bottom:6px"><strong style="font-family:Fraunces,serif;font-size:{{ hPaperH }}">Adaeze O. · food and medicines</strong><span style="color:#555">26 Sep 2026</span></div>
+<div><strong>Conditions:</strong> Type 2 diabetes, high blood pressure</div>
+<div><strong>Medicines:</strong> Metformin 500 mg twice a day with food · Ramipril 5 mg once a day</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+<div style="border-top:3px solid #0b6e4f;padding-top:4px;display:flex;flex-direction:column;gap:2px"><strong style="color:#0b6e4f">EAT OFTEN</strong><span>Moi moi and beans</span><span>Okra, efo riro</span><span>Fresh grilled fish</span><span>Unripe plantain</span></div>
+<div style="border-top:3px solid #8a6a2e;padding-top:4px;display:flex;flex-direction:column;gap:2px"><strong style="color:#8a6a2e">GO EASY</strong><span>Jollof: one scoop</span><span>Swallow: tennis ball</span><span>Stock cubes: half</span><span>Suya</span></div>
+<div style="border-top:3px solid #b3261e;padding-top:4px;display:flex;flex-direction:column;gap:2px"><strong style="color:#b3261e">AVOID</strong><span>Malt drinks</span><span>Sugary zobo</span><span>LoSalt</span><span>Heavy drinking</span></div>
+</div>
+<div style="border:1.5px solid #1a1a1a;padding:6px 8px;display:flex;flex-direction:column;gap:2px"><strong>Medicine warnings</strong><span><strong>MAJOR</strong> · Alcohol with metformin: always eat, and keep it small.</span><span><strong>MAJOR</strong> · Salt substitutes with ramipril: potassium can rise dangerously.</span><span><strong>MODERATE</strong> · Metformin: ask for a yearly vitamin B12 test.</span></div>
+<div style="background:#f4f1ec;padding:6px 8px;display:flex;flex-direction:column;gap:2px"><strong>If you are being sick or have diarrhoea</strong><span>Pause metformin and ramipril. Keep sipping fluids. Restart 24–48 hours after you are eating normally.</span><span><strong>Confused, very drowsy or chest pain: call 999.</strong> Otherwise call 111.</span></div>
+<div style="display:flex;justify-content:space-between;color:#555;border-top:1px solid #d6cfc4;padding-top:5px"><span>Food guidance only. Not a diagnosis.</span><span>nutriforge.africa</span></div>
+</div>
+</div>
+<div style="flex:none;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 14px;background:#f9f6f1;border-top:1px solid #d6cfc4"><button onClick="{{ hPrint }}" style="background:#0b6e4f;color:#fff;border:none;border-radius:8px;font:inherit;font-size:15px;font-weight:700;padding:13px;min-height:48px;cursor:pointer">Print</button><button onClick="{{ hShare }}" style="background:#fff;color:#0b6e4f;border:1.5px solid #0b6e4f;border-radius:8px;font:inherit;font-size:15px;font-weight:700;padding:13px;min-height:48px;cursor:pointer">Share with GP</button></div>
+</div></sc-if>
+<sc-if value="{{ fIs5 }}" hint-placeholder-val="{{ false }}"><div style="flex:none;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #d6cfc4;background:#fff;padding:4px 0 22px"><sc-for list="{{ uTabs }}" as="t" hint-placeholder-count="5"><button onClick="{{ t.pick }}" style="background:none;border:none;font:inherit;font-size:11px;color:{{ t.fg }};font-weight:{{ t.weight }};padding:8px 0;min-height:44px;cursor:pointer">{{ t.label }}</button></sc-for></div></sc-if>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;max-width:390px"><button onClick="{{ uRestart }}" style="border:1px solid #d6cfc4;background:#fff;color:#1a1a1a;font:600 11px system-ui,sans-serif;padding:5px 9px;border-radius:5px;cursor:pointer">Restart from Welcome</button><button onClick="{{ uSkip }}" style="border:1px solid #1a1a1a;background:#1a1a1a;color:#fff;font:600 11px system-ui,sans-serif;padding:5px 9px;border-radius:5px;cursor:pointer">Skip onboarding (example answers)</button></div>
+</div>
+</div>
+</section>
+<section class="dv-turn" id="t4">
+<div class="dv-thd"><a class="dv-tid" href="#t4">4</a><span class="dv-tname">Missing tabs and edge cases</span></div>
+<div style="margin:0 0 24px;max-width:820px;display:flex;flex-direction:column;gap:8px;font-size:13px;line-height:1.5;color:#555">
+<p style="margin:0;text-wrap:pretty"><strong style="color:#1a1a1a">Suggested home screen:</strong> make <a href="#3a">3a</a> (Today) the default and put the search from <a href="#2a">2a</a> in the "Check" tab. The day plan brings people back every day, and search is always one tap away. Test it: if 3 or more of 5 people go straight to search, make "Check" the home instead. That test is in the <a href="Clinical Review and Test Pack.dc.html">review and test pack</a>.</p>
+<p style="margin:0">The tab bar is now five tabs: Today · Check · My plate · Medicines · Handout.</p>
+</div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="4a">
+<div class="dv-olabel"><a class="dv-oid" href="#4a">4a</a>Medicines tab. Each medicine shows its reminders and the foods and drinks to watch.</div>
+<div style="width:390px;height:844px;background:#f9f6f1;border-radius:44px;border:10px solid #1a1a1a;box-sizing:content-box;overflow:hidden;display:flex;flex-direction:column">
+<div style="height:47px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px;font-size:15px;font-weight:600"><span>9:41</span><span style="width:24px;height:11px;border:1.5px solid #1a1a1a;border-radius:3px"></span></div>
+<div style="flex:1;overflow-y:auto;padding:8px 18px 20px;display:flex;flex-direction:column;gap:10px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0 0 4px">Your medicines</h1>
+<sc-for list="{{ hMeds }}" as="m" hint-placeholder-count="2">
+<div style="background:#fff;border:1px solid {{ m.border }};border-radius:8px;overflow:hidden">
+<button onClick="{{ m.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;background:none;border:none;padding:14px;font:inherit;text-align:left;cursor:pointer;color:#1a1a1a"><span style="display:flex;flex-direction:column;gap:2px"><strong style="font-size:18px">{{ m.name }} <span style="font-weight:400;color:#555;font-size:14px">{{ m.dose }}</span></strong><span style="font-size:13px;color:#555">{{ m.when }}</span><span style="font-size:12px;color:#0b6e4f;font-weight:600">Next: {{ m.next }}</span></span><span style="font-size:22px;line-height:1;color:#0b6e4f">{{ m.chev }}</span></button>
+<sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}"><div style="border-top:1px solid #eee;padding:12px 14px 14px;display:flex;flex-direction:column;gap:10px">
+<button onClick="{{ m.rem }}" style="display:flex;justify-content:space-between;align-items:center;background:none;border:none;font:inherit;font-size:14px;padding:4px 0;cursor:pointer;min-height:44px;color:#1a1a1a"><span>Reminders · <strong>{{ m.remLabel }}</strong></span><span style="width:44px;height:26px;border-radius:13px;background:{{ m.trackBg }};position:relative;flex:none"><span style="position:absolute;top:2px;left:{{ m.knobX }};width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2)"></span></span></button>
+<div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:#555">Watch out for</div>
+<sc-for list="{{ m.watch }}" as="w" hint-placeholder-count="3"><div style="border-left:3px solid {{ w.line }};padding:2px 0 2px 10px;display:flex;flex-direction:column;gap:3px;font-size:13px;line-height:1.4"><span style="display:flex;gap:6px;align-items:center"><span aria-label="Severity: {{ w.sev }}" style="font-size:10px;font-weight:700;letter-spacing:1px;color:{{ w.fg }};background:{{ w.bg }};padding:2px 6px;border-radius:3px">{{ w.sev }}</span><strong>{{ w.title }}</strong></span><span style="color:#555">{{ w.text }}</span></div></sc-for>
+<span style="font-size:12px;color:#555">Prescribed for {{ m.forr }}</span>
+</div></sc-if>
+</div>
+</sc-for>
+<button style="border:1.5px dashed #0b6e4f;background:none;border-radius:8px;padding:14px;font:inherit;font-size:15px;font-weight:600;color:#0b6e4f;cursor:pointer;min-height:52px">+ Add a medicine</button>
+<p style="margin:0;font-size:12px;color:#555;line-height:1.4">Never stop a medicine because of something here. Ask your GP or pharmacist first.</p>
+</div>
+<div style="flex:none;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #d6cfc4;background:#fff;padding:10px 0 26px;font-size:11px;text-align:center;color:#888"><span>Today</span><span>Check</span><span>My plate</span><span style="color:#0b6e4f;font-weight:700">Medicines</span><span>Handout</span></div>
+</div>
+</div>
+
+<div class="dv-opt" id="4b">
+<div class="dv-olabel"><a class="dv-oid" href="#4b">4b</a>Handout tab. A one-page A4 summary to print or bring to your GP.</div>
+<div style="width:390px;height:844px;background:#e9e4dc;border-radius:44px;border:10px solid #1a1a1a;box-sizing:content-box;overflow:hidden;display:flex;flex-direction:column">
+<div style="height:47px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px;font-size:15px;font-weight:600;background:#f9f6f1"><span>9:41</span><span style="width:24px;height:11px;border:1.5px solid #1a1a1a;border-radius:3px"></span></div>
+<div style="flex:none;background:#f9f6f1;padding:4px 18px 12px;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid #d6cfc4">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:26px;line-height:1.15;margin:0">Your handout</h1>
+<div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#555"><span>A4, one page · updated today</span><button onClick="{{ hLargeToggle }}" style="background:#fff;border:1px solid #d6cfc4;border-radius:999px;padding:6px 12px;font:inherit;font-size:12px;cursor:pointer;color:#1a1a1a">{{ hLargeLabel }}</button></div>
+</div>
+<div style="flex:1;overflow-y:auto;padding:14px">
+<div style="background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12);padding:16px 16px 12px;font-size:{{ hPaperFs }};line-height:1.4;display:flex;flex-direction:column;gap:9px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #1a1a1a;padding-bottom:6px"><strong style="font-family:Fraunces,serif;font-size:{{ hPaperH }}">Adaeze O. · food and medicines</strong><span style="color:#555">26 Sep 2026</span></div>
+<div><strong>Conditions:</strong> Type 2 diabetes, high blood pressure</div>
+<div><strong>Medicines:</strong> Metformin 500 mg twice a day with food · Ramipril 5 mg once a day</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+<div style="border-top:3px solid #0b6e4f;padding-top:4px;display:flex;flex-direction:column;gap:2px"><strong style="color:#0b6e4f">EAT OFTEN</strong><span>Moi moi and beans</span><span>Okra, efo riro</span><span>Fresh grilled fish</span><span>Unripe plantain</span></div>
+<div style="border-top:3px solid #8a6a2e;padding-top:4px;display:flex;flex-direction:column;gap:2px"><strong style="color:#8a6a2e">GO EASY</strong><span>Jollof: one scoop</span><span>Swallow: tennis ball</span><span>Stock cubes: half</span><span>Suya</span></div>
+<div style="border-top:3px solid #b3261e;padding-top:4px;display:flex;flex-direction:column;gap:2px"><strong style="color:#b3261e">AVOID</strong><span>Malt drinks</span><span>Sugary zobo</span><span>LoSalt</span><span>Heavy drinking</span></div>
+</div>
+<div style="border:1.5px solid #1a1a1a;padding:6px 8px;display:flex;flex-direction:column;gap:2px"><strong>Medicine warnings</strong><span><strong>MAJOR</strong> · Alcohol with metformin: always eat, and keep it small.</span><span><strong>MAJOR</strong> · Salt substitutes with ramipril: potassium can rise dangerously.</span><span><strong>MODERATE</strong> · Metformin: ask for a yearly vitamin B12 test.</span></div>
+<div style="background:#f4f1ec;padding:6px 8px;display:flex;flex-direction:column;gap:2px"><strong>If you are being sick or have diarrhoea</strong><span>Pause metformin and ramipril. Keep sipping fluids. Restart 24–48 hours after you are eating normally.</span><span><strong>Confused, very drowsy or chest pain: call 999.</strong> Otherwise call 111.</span></div>
+<div style="display:flex;justify-content:space-between;color:#555;border-top:1px solid #d6cfc4;padding-top:5px"><span>Food guidance only. Not a diagnosis.</span><span>nutriforge.africa</span></div>
+</div>
+</div>
+<div style="flex:none;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 14px;background:#f9f6f1;border-top:1px solid #d6cfc4"><button onClick="{{ hPrint }}" style="background:#0b6e4f;color:#fff;border:none;border-radius:8px;font:inherit;font-size:15px;font-weight:700;padding:13px;min-height:48px;cursor:pointer">Print</button><button onClick="{{ hShare }}" style="background:#fff;color:#0b6e4f;border:1.5px solid #0b6e4f;border-radius:8px;font:inherit;font-size:15px;font-weight:700;padding:13px;min-height:48px;cursor:pointer">Share with GP</button></div>
+<div style="flex:none;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #d6cfc4;background:#fff;padding:10px 0 26px;font-size:11px;text-align:center;color:#888"><span>Today</span><span>Check</span><span>My plate</span><span>Medicines</span><span style="color:#0b6e4f;font-weight:700">Handout</span></div>
+</div>
+</div>
+
+<div class="dv-opt" id="4c">
+<div class="dv-olabel"><a class="dv-oid" href="#4c">4c</a>My plate. Build a meal, pick a starch portion, and get one clear verdict.</div>
+<div style="width:390px;height:844px;background:#fff;border-radius:44px;border:10px solid #1a1a1a;box-sizing:content-box;overflow:hidden;display:flex;flex-direction:column">
+<div style="height:47px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px;font-size:15px;font-weight:600"><span>9:41</span><span style="width:24px;height:11px;border:1.5px solid #1a1a1a;border-radius:3px"></span></div>
+<div style="flex:1;overflow-y:auto;padding:8px 18px 20px;display:flex;flex-direction:column;gap:14px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0">Build your plate</h1>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;padding:12px;background:#f9f6f1;border-radius:8px">
+<div style="width:110px;height:110px;border-radius:50%;background:{{ hRing }};border:5px solid #fff;box-sizing:border-box;box-shadow:0 1px 3px rgba(0,0,0,.1)"></div>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:11px;font-weight:800;letter-spacing:1.5px;color:{{ hVerdict.color }}">{{ hVerdict.label }}</span><strong style="font-family:Fraunces,serif;font-size:19px;line-height:1.2">{{ hVerdict.title }}</strong>
+<sc-if value="{{ hNoIssues }}" hint-placeholder-val="{{ false }}"><span style="font-size:13px;color:#555">Half vegetables, a quarter protein, and a small starch.</span></sc-if></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px"><sc-for list="{{ hIssues }}" as="i" hint-placeholder-count="1"><div style="border-left:3px solid {{ i.color }};padding:6px 10px;font-size:13px;line-height:1.4;background:#fff">{{ i.text }}</div></sc-for></div>
+<sc-for list="{{ hSlots }}" as="sl" hint-placeholder-count="4"><div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:#555">{{ sl.label }}</span><div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ sl.opts }}" as="o" hint-placeholder-count="4"><button onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:6px;border:1px solid {{ o.border }};background:{{ o.bg }};color:{{ o.fg }};font:inherit;font-size:13px;padding:7px 11px;border-radius:999px;cursor:pointer;min-height:36px"><span style="width:8px;height:8px;border-radius:50%;background:{{ o.dot }}"></span>{{ o.name }}</button></sc-for></div></div></sc-for>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:#555">Starch portion</span><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px"><sc-for list="{{ hPortions }}" as="p" hint-placeholder-count="3"><button onClick="{{ p.pick }}" style="border:1px solid {{ p.border }};background:{{ p.bg }};color:{{ p.fg }};font:inherit;font-size:13px;padding:9px;border-radius:6px;cursor:pointer;min-height:44px">{{ p.label }}</button></sc-for></div></div>
+</div>
+<div style="flex:none;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #d6cfc4;background:#fff;padding:10px 0 26px;font-size:11px;text-align:center;color:#888"><span>Today</span><span>Check</span><span style="color:#0b6e4f;font-weight:700">My plate</span><span>Medicines</span><span>Handout</span></div>
+</div>
+</div>
+
+<div class="dv-opt" id="4d">
+<div class="dv-olabel"><a class="dv-oid" href="#4d">4d</a>Edge cases. Use the buttons below the phone to switch between the four states.</div>
+<div style="width:390px;height:844px;background:#fff;border-radius:44px;border:10px solid #1a1a1a;box-sizing:content-box;overflow:hidden;display:flex;flex-direction:column">
+<div style="height:47px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px;font-size:15px;font-weight:600"><span>9:41</span><span style="width:24px;height:11px;border:1.5px solid #1a1a1a;border-radius:3px"></span></div>
+<div style="flex:1;overflow-y:auto;padding:8px 18px 20px">
+
+<sc-if value="{{ hIsNF }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-direction:column;gap:14px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0">Can I eat this?</h1>
+<div style="font-size:16px;padding:12px 14px;border:1.5px solid #1a1a1a;border-radius:6px;background:#f9f6f1">Ukwa</div>
+<div style="display:flex;flex-direction:column;gap:6px"><h2 style="font-family:Fraunces,serif;font-size:22px;margin:0">We don't have Ukwa yet</h2><p style="margin:0;font-size:14px;color:#555;line-height:1.45">Until we add it, use the plate rule: half vegetables, a quarter protein, a quarter starch.</p></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:#555">Similar foods we cover</span>
+<div style="display:flex;justify-content:space-between;padding:12px;border:1px solid #d6cfc4;border-radius:6px;font-size:15px"><span>Beans (moi moi)</span><span style="font-size:12px;font-weight:700;color:#0b6e4f">EAT OFTEN</span></div>
+<div style="display:flex;justify-content:space-between;padding:12px;border:1px solid #d6cfc4;border-radius:6px;font-size:15px"><span>Waakye</span><span style="font-size:12px;font-weight:700;color:#6b7280">FINE IN PORTIONS</span></div></div>
+<sc-if value="{{ hNotAsked }}" hint-placeholder-val="{{ true }}"><button onClick="{{ hAsk }}" style="background:#0b6e4f;color:#fff;border:none;border-radius:8px;font:inherit;font-size:16px;font-weight:700;padding:14px;min-height:52px;cursor:pointer">Ask us to add Ukwa</button></sc-if>
+<sc-if value="{{ hAsked }}" hint-placeholder-val="{{ false }}"><div style="padding:12px 14px;background:#e6f0eb;border-radius:8px;font-size:14px;line-height:1.4"><strong>Thanks.</strong> We'll let you know when a dietitian has checked it and it's been added.</div></sc-if>
+</div></sc-if>
+
+<sc-if value="{{ hIsTwo }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#8a6a2e"></span><span style="font-size:12px;font-weight:800;letter-spacing:1.5px;color:#8a6a2e">GO EASY</span></div>
+<h2 style="font-family:Fraunces,serif;font-size:34px;line-height:1.05;margin:0">Jollof rice</h2>
+<p style="margin:0;font-size:14px;color:#555;line-height:1.45">You have two conditions, so we show the stricter advice.</p>
+<div style="display:flex;flex-direction:column;border:1px solid #d6cfc4;border-radius:8px">
+<div style="padding:12px;border-bottom:1px solid #eee;display:flex;flex-direction:column;gap:3px"><span style="display:flex;justify-content:space-between;font-size:14px"><strong>Type 2 diabetes</strong><span style="font-size:12px;font-weight:700;color:#8a6a2e">GO EASY</span></span><span style="font-size:13px;color:#555">White rice raises sugar fast. Have one scoop the size of your fist.</span></div>
+<div style="padding:12px;display:flex;flex-direction:column;gap:3px"><span style="display:flex;justify-content:space-between;font-size:14px"><strong>High blood pressure</strong><span style="font-size:12px;font-weight:700;color:#6b7280">FINE IN PORTIONS</span></span><span style="font-size:13px;color:#555">The salt is in the stock cubes. Use half of what you normally would.</span></div>
+</div>
+<div style="display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #eee"><span style="font-size:13px;color:#555">One swap for both</span><strong style="font-size:15px;text-align:right">A fist of jollof made with half the cubes, plus salad</strong></div>
+</div></sc-if>
+
+<sc-if value="{{ hIsNew }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column;gap:14px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0">Add a medicine</h1>
+<div style="font-size:16px;padding:12px 14px;border:1.5px solid #1a1a1a;border-radius:6px;background:#f9f6f1">Losartan</div>
+<div style="padding:12px 14px;border-left:3px solid #9ca3af;background:#f9f6f1;font-size:14px;line-height:1.45;display:flex;flex-direction:column;gap:4px"><strong>We can't check Losartan against foods yet</strong><span style="color:#555">We'll add it to your list and handout, but we won't show food warnings for it.</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:#555">Ask your pharmacist</span><span style="font-size:14px;line-height:1.45">"Are there any foods, drinks or supplements I should avoid with losartan?"</span></div>
+<button style="background:#0b6e4f;color:#fff;border:none;border-radius:8px;font:inherit;font-size:16px;font-weight:700;padding:14px;min-height:52px;cursor:pointer">Add Losartan anyway</button>
+</div></sc-if>
+
+<sc-if value="{{ hIsUnwell }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column;gap:10px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0">You said you feel unwell</h1>
+<p style="margin:0 0 4px;font-size:14px;color:#555">Tick anything that is happening now.</p>
+<sc-for list="{{ hSyms }}" as="o" hint-placeholder-count="4"><button onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:12px;background:{{ o.bg }};border:1.5px solid {{ o.border }};border-radius:8px;padding:12px 14px;font:inherit;font-size:15px;text-align:left;cursor:pointer;min-height:52px;color:#1a1a1a"><span style="width:22px;height:22px;flex:none;border-radius:4px;border:1.5px solid {{ o.border }};background:{{ o.box }};color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center">{{ o.mark }}</span>{{ o.label }}</button></sc-for>
+<sc-if value="{{ hEmergency }}" hint-placeholder-val="{{ false }}"><div style="background:#b3261e;color:#fff;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:10px;margin-top:4px"><strong style="font-family:Fraunces,serif;font-size:24px">Call 999 now</strong><span style="font-size:14px;line-height:1.4">This could be an emergency. Tell them you have diabetes and which medicines you take.</span><button style="background:#fff;color:#b3261e;border:none;border-radius:6px;font:inherit;font-size:17px;font-weight:800;padding:14px;min-height:52px;cursor:pointer">Call 999</button></div></sc-if>
+<sc-if value="{{ hSick }}" hint-placeholder-val="{{ false }}"><div style="border:2px solid #b3261e;border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:8px;margin-top:4px"><strong style="font-size:16px">Sick day rules</strong><span style="font-size:14px;line-height:1.45">Pause <strong>metformin</strong> and <strong>ramipril</strong>. Keep sipping fluids. Restart 24–48 hours after you are eating and drinking normally.</span><button style="background:#b3261e;color:#fff;border:none;border-radius:6px;font:inherit;font-size:16px;font-weight:700;padding:13px;min-height:48px;cursor:pointer">Call 111 for advice</button></div></sc-if>
+<sc-if value="{{ hNoSym }}" hint-placeholder-val="{{ true }}"><p style="margin:4px 0 0;font-size:13px;color:#555;line-height:1.4">None of these? Rest and keep drinking fluids. If you are worried, call 111 at any time.</p></sc-if>
+</div></sc-if>
+
+</div>
+<div style="flex:none;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #d6cfc4;background:#fff;padding:10px 0 26px;font-size:11px;text-align:center;color:#888"><span>Today</span><span style="color:#0b6e4f;font-weight:700">Check</span><span>My plate</span><span>Medicines</span><span>Handout</span></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;max-width:390px"><sc-for list="{{ hEdges }}" as="e" hint-placeholder-count="4"><button onClick="{{ e.pick }}" style="border:1px solid {{ e.border }};background:{{ e.bg }};color:{{ e.fg }};font:600 11px system-ui,sans-serif;padding:5px 9px;border-radius:5px;cursor:pointer">{{ e.label }}</button></sc-for></div>
+</div>
+
+</div>
+</section>
+<section class="dv-turn" id="t3">
+<div class="dv-thd"><a class="dv-tid" href="#t3">3</a><span class="dv-tname">Timeline from <a href="#1c">1c</a> plus food groups from <a href="#1a">1a</a>, with a condition switch</span></div>
+<p style="margin:0 0 24px;max-width:760px;font-size:13px;line-height:1.5;color:#555;text-wrap:pretty">One home screen: today's meals and doses at the top, then an alert, "My situation", and the four food groups. The switch in the header swaps everything to high blood pressure on ramipril, which gives a salt-first plan, a potassium warning, and pregnancy and sick-day advice.</p>
+<div class="dv-opts">
+<div class="dv-opt" id="3a">
+<div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a>Interactive. Try switching the condition, opening a meal, marking a dose taken, or changing the food tab.</div>
+<div style="width:390px;height:844px;background:#f4f1ec;border-radius:44px;border:10px solid #1a1a1a;box-sizing:content-box;overflow:hidden;display:flex;flex-direction:column">
+<div style="height:47px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px;font-size:15px;font-weight:600;background:#0b6e4f;color:#fff"><span>9:41</span><span style="width:24px;height:11px;border:1.5px solid #fff;border-radius:3px"></span></div>
+<div style="flex:1;overflow-y:auto">
+<div style="background:#0b6e4f;color:#fff;padding:6px 20px 18px;display:flex;flex-direction:column;gap:12px">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;padding:3px;background:#095940;border-radius:8px"><sc-for list="{{ gConds }}" as="c" hint-placeholder-count="2"><button onClick="{{ c.pick }}" style="background:{{ c.bg }};color:{{ c.fg }};font:inherit;font-size:14px;font-weight:{{ c.weight }};border:none;border-radius:6px;padding:9px 6px;cursor:pointer;min-height:40px">{{ c.label }}</button></sc-for></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;color:#cfe5db">Saturday 26 September</span><h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.1;margin:0">{{ gName }}</h1><span style="font-size:13px;color:#e3efe9">{{ gMedLine }}</span></div>
+<div style="display:flex;gap:6px;align-items:baseline;font-size:13px;color:#cfe5db"><span style="font-size:22px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums">{{ gTakenCount }}/{{ gDoseTotal }}</span>doses taken today</div>
+</div>
+<div style="padding:16px 18px 6px">
+<h2 style="font-family:Fraunces,serif;font-size:21px;margin:0 0 10px">Today</h2>
+<sc-for list="{{ gMeals }}" as="m" hint-placeholder-count="3">
+<div style="display:grid;grid-template-columns:48px 1fr;gap:10px">
+<div style="display:flex;flex-direction:column;align-items:flex-end;padding-top:10px"><span style="font-family:Fraunces,serif;font-size:18px;font-weight:700;font-variant-numeric:tabular-nums">{{ m.time }}</span><span style="font-size:11px;color:#888">{{ m.ampm }}</span></div>
+<div style="border-left:2px solid #d6cfc4;padding:0 0 12px 12px;display:flex;flex-direction:column;gap:6px">
+<button onClick="{{ m.toggle }}" style="text-align:left;background:#fff;border:1px solid {{ m.border }};border-radius:6px;padding:10px 12px;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:3px;color:#1a1a1a"><span style="display:flex;justify-content:space-between;align-items:baseline"><strong style="font-size:15px">{{ m.title }}</strong><span style="font-size:12px;color:#0b6e4f;font-weight:600">{{ m.cta }}</span></span><span style="font-size:13px;color:#555;line-height:1.35">{{ m.plan }}</span></button>
+<sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}"><div style="background:#fff;border-radius:6px;padding:12px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;height:10px;border-radius:3px;overflow:hidden"><span style="width:50%;background:#0b6e4f"></span><span style="width:25%;background:#5a8f7c"></span><span style="width:25%;background:#b89150"></span></div>
+<sc-for list="{{ m.plate }}" as="p" hint-placeholder-count="3"><div style="display:grid;grid-template-columns:62px 1fr;gap:8px;font-size:13px;line-height:1.35"><span style="font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:{{ p.color }}">{{ p.part }}</span><span>{{ p.food }}</span></div></sc-for>
+<div style="font-size:12px;color:#555;border-top:1px solid #eee;padding-top:8px">{{ m.tip }}</div>
+</div></sc-if>
+<sc-if value="{{ m.hasMed }}" hint-placeholder-val="{{ false }}"><button onClick="{{ m.take }}" style="display:flex;justify-content:space-between;align-items:center;background:{{ m.medBg }};color:{{ m.medFg }};border:1.5px solid #0b6e4f;border-radius:6px;padding:8px 12px;font:inherit;font-size:14px;cursor:pointer;min-height:44px"><strong>{{ m.medName }}</strong><span style="font-weight:700;font-size:13px">{{ m.medLabel }}</span></button></sc-if>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="padding:0 18px"><div style="padding:10px 12px;background:#fff;border-left:3px solid {{ gAlert.line }};font-size:13px;line-height:1.4;display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;gap:8px;align-items:center"><span aria-label="Severity: {{ gAlert.sev }}" style="font-size:10px;font-weight:700;letter-spacing:1px;color:{{ gAlert.fg }};background:{{ gAlert.bg }};padding:2px 6px;border-radius:3px">{{ gAlert.sev }}</span><strong>{{ gAlert.title }}</strong></div>
+<span style="color:#555">{{ gAlert.text }}</span>
+</div></div>
+<div style="padding:22px 18px 0">
+<h2 style="font-family:Fraunces,serif;font-size:21px;margin:0 0 10px">My situation</h2>
+<div style="display:flex;gap:6px;overflow-x:auto;margin:0 -18px;padding:0 18px 4px"><sc-for list="{{ gModes }}" as="m" hint-placeholder-count="5"><button onClick="{{ m.pick }}" style="flex:none;border:1px solid {{ m.border }};background:{{ m.bg }};color:{{ m.fg }};font-weight:{{ m.weight }};font-size:13px;padding:7px 12px;border-radius:999px;font-family:inherit;cursor:pointer">{{ m.label }}</button></sc-for></div>
+<div style="margin-top:10px;padding:10px 12px;background:#fff;border-left:3px solid #0b6e4f;font-size:13px;line-height:1.4">{{ gModeNote }}</div>
+</div>
+<div style="padding:22px 18px 20px">
+<h2 style="font-family:Fraunces,serif;font-size:21px;margin:0 0 10px">What to eat</h2>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #d6cfc4"><sc-for list="{{ gTabs }}" as="t" hint-placeholder-count="4"><button onClick="{{ t.pick }}" style="background:none;border:none;border-bottom:3px solid {{ t.line }};margin-bottom:-1px;padding:8px 2px;font-family:inherit;font-size:13px;font-weight:{{ t.weight }};color:{{ t.ink }};cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px"><span>{{ t.label }}</span><span style="font-size:11px;color:#888;font-variant-numeric:tabular-nums">{{ t.count }}</span></button></sc-for></div>
+<div style="display:flex;flex-direction:column;gap:8px;margin-top:12px"><sc-for list="{{ gList }}" as="f" hint-placeholder-count="4"><div style="background:#fff;border-left:3px solid {{ f.color }};padding:10px 12px;display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><div style="display:flex;flex-direction:column;gap:2px"><strong style="font-size:15px">{{ f.name }}</strong><span style="font-size:13px;color:#555;line-height:1.35">{{ f.note }}</span></div><span aria-label="{{ f.tierLabel }}" style="flex:none;font-size:11px;letter-spacing:1px;padding:2px 6px;border-radius:3px;background:#f9f6f1;color:{{ f.tierColor }}">{{ f.dots }}</span></div></sc-for></div>
+</div>
+</div>
+<div style="flex:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #d6cfc4;background:#fff;padding:10px 0 26px;font-size:11px;text-align:center;color:#888"><span style="color:#0b6e4f;font-weight:700">Today</span><span>Check a food</span><span>Medicines</span><span>Handout</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Full flow: onboarding into the search-first home from <a href="#1b">1b</a></span></div>
+<p style="margin:0 0 24px;max-width:760px;font-size:13px;line-height:1.5;color:#555;text-wrap:pretty">Four onboarding steps, then the home. Your answers change what the home shows: the medicines you pick decide which interaction warnings appear, and the foods you cook decide which suggestions come first. For example, try picking Gliclazide or Ramipril, then look up Palm wine or Coconut water.</p>
+<div class="dv-opts">
+<div class="dv-opt" id="2a">
+<div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Interactive. Tap through it, or jump to a step with the buttons below.</div>
+<div style="width:390px;height:844px;background:#f9f6f1;border-radius:44px;border:10px solid #1a1a1a;box-sizing:content-box;overflow:hidden;display:flex;flex-direction:column;position:relative">
+<div style="height:47px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px;font-size:15px;font-weight:600;background:{{ fBarBg }};color:{{ fBarFg }}"><span>9:41</span><span style="width:24px;height:11px;border:1.5px solid currentColor;border-radius:3px"></span></div>
+
+<sc-if value="{{ fShowTop }}" hint-placeholder-val="{{ false }}"><div style="flex:none;display:flex;flex-direction:column;gap:10px;padding:4px 20px 0">
+<div style="display:flex;align-items:center;justify-content:space-between"><button onClick="{{ fBack }}" style="background:none;border:none;font:inherit;font-size:15px;color:#0b6e4f;padding:10px 0;min-height:44px;cursor:pointer">‹ Back</button><span style="font-size:12px;color:#555;font-variant-numeric:tabular-nums">Step {{ fStep }} of 4</span></div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px"><sc-for list="{{ fProg }}" as="p" hint-placeholder-count="4"><span style="height:4px;border-radius:2px;background:{{ p.c }}"></span></sc-for></div>
+</div></sc-if>
+
+<sc-if value="{{ fIs0 }}" hint-placeholder-val="{{ true }}"><div style="flex:1;background:#0b6e4f;color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:32px 26px 40px">
+<div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#cfe5db">NutriForge</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:42px;line-height:1.05;margin:0;text-wrap:pretty">Food advice for the food you actually cook.</h1>
+<p style="margin:0;font-size:17px;line-height:1.45;color:#e3efe9;text-wrap:pretty">Check jollof, fufu, kenkey or rice and peas against your condition and your medicines.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;align-items:stretch">
+<button onClick="{{ fNext }}" style="background:#fff;color:#0b6e4f;border:none;border-radius:8px;font:inherit;font-size:17px;font-weight:700;padding:16px;cursor:pointer;min-height:52px">Get started</button>
+<span style="text-align:center;font-size:13px;color:#cfe5db">Takes about 2 minutes</span>
+</div>
+</div></sc-if>
+
+<sc-if value="{{ fIs1 }}" hint-placeholder-val="{{ false }}"><div style="flex:1;overflow-y:auto;padding:20px 20px 16px;display:flex;flex-direction:column;gap:8px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0">What has your GP diagnosed you with?</h1>
+<p style="margin:0 0 10px;font-size:14px;color:#555">Choose all that apply.</p>
+<sc-for list="{{ fConds }}" as="o" hint-placeholder-count="5"><button onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:12px;background:{{ o.bg }};border:1.5px solid {{ o.border }};border-radius:8px;padding:14px;font:inherit;font-size:16px;text-align:left;cursor:pointer;min-height:52px;color:#1a1a1a"><span style="width:22px;height:22px;flex:none;border-radius:4px;border:1.5px solid {{ o.border }};background:{{ o.box }};color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center">{{ o.mark }}</span>{{ o.label }}</button></sc-for>
+</div></sc-if>
+
+<sc-if value="{{ fIs2 }}" hint-placeholder-val="{{ false }}"><div style="flex:1;overflow-y:auto;padding:20px 20px 16px;display:flex;flex-direction:column;gap:8px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0">Which medicines do you take?</h1>
+<p style="margin:0 0 10px;font-size:14px;color:#555;line-height:1.4">Look at your repeat prescription. We use this to warn you about foods and drinks that affect your medicines.</p>
+<sc-for list="{{ fMeds }}" as="o" hint-placeholder-count="7"><button onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:12px;background:{{ o.bg }};border:1.5px solid {{ o.border }};border-radius:8px;padding:12px 14px;font:inherit;text-align:left;cursor:pointer;min-height:52px;color:#1a1a1a"><span style="width:22px;height:22px;flex:none;border-radius:4px;border:1.5px solid {{ o.border }};background:{{ o.box }};color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center">{{ o.mark }}</span><span style="display:flex;flex-direction:column;gap:1px"><strong style="font-size:16px">{{ o.name }}</strong><span style="font-size:12px;color:#555">For {{ o.forr }}</span></span></button></sc-for>
+<button onClick="{{ fNone.pick }}" style="display:flex;align-items:center;gap:12px;background:{{ fNone.bg }};border:1.5px dashed {{ fNone.border }};border-radius:8px;padding:14px;font:inherit;font-size:16px;text-align:left;cursor:pointer;min-height:52px;color:#1a1a1a;margin-top:4px"><span style="width:22px;height:22px;flex:none;border-radius:4px;border:1.5px solid {{ fNone.border }};background:{{ fNone.box }};color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center">{{ fNone.mark }}</span>I don't take any of these</button>
+</div></sc-if>
+
+<sc-if value="{{ fIs3 }}" hint-placeholder-val="{{ false }}"><div style="flex:1;overflow-y:auto;padding:20px 20px 16px;display:flex;flex-direction:column;gap:8px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0">What food do you cook at home?</h1>
+<p style="margin:0 0 10px;font-size:14px;color:#555;line-height:1.4">We'll show these foods first. You can still search for anything.</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ fCuis }}" as="c" hint-placeholder-count="8"><button onClick="{{ c.pick }}" style="border:1.5px solid {{ c.border }};background:{{ c.bg }};color:{{ c.fg }};font:inherit;font-size:15px;padding:10px 16px;border-radius:999px;cursor:pointer;min-height:44px">{{ c.label }}</button></sc-for></div>
+</div></sc-if>
+
+<sc-if value="{{ fIs4 }}" hint-placeholder-val="{{ false }}"><div style="flex:1;overflow-y:auto;padding:20px 20px 16px;display:flex;flex-direction:column;gap:14px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0">Before you start</h1>
+<div style="display:flex;flex-direction:column;background:#fff;border-radius:8px">
+<div style="display:grid;grid-template-columns:28px 1fr;gap:10px;padding:14px;border-bottom:1px solid #eee;font-size:15px;line-height:1.4"><span style="font-family:Fraunces,serif;font-weight:700;font-size:20px;color:#0b6e4f">1</span><span>This app gives you <strong>food guidance</strong>. It does not diagnose you or replace your GP.</span></div>
+<div style="display:grid;grid-template-columns:28px 1fr;gap:10px;padding:14px;border-bottom:1px solid #eee;font-size:15px;line-height:1.4"><span style="font-family:Fraunces,serif;font-weight:700;font-size:20px;color:#0b6e4f">2</span><span><strong>Never stop or change a medicine</strong> because of something you read here. Talk to your GP or pharmacist first.</span></div>
+<div style="display:grid;grid-template-columns:28px 1fr;gap:10px;padding:14px;font-size:15px;line-height:1.4"><span style="font-family:Fraunces,serif;font-weight:700;font-size:20px;color:#0b6e4f">3</span><span>Each tip shows how strong the evidence is, from <span style="color:#0b6e4f;letter-spacing:1px">●●●●</span> strong to <span style="color:#777;letter-spacing:1px">○○○○</span> expert opinion only.</span></div>
+</div>
+<div style="padding:12px 14px;border-left:3px solid #b3261e;background:#fff;font-size:14px;line-height:1.4"><strong>If you feel very unwell</strong>, for example you are confused, very drowsy, or being sick and can't keep fluids down, call <strong>999</strong> or <strong>111</strong>.</div>
+<button onClick="{{ fOkRow.pick }}" style="display:flex;align-items:center;gap:12px;background:{{ fOkRow.bg }};border:1.5px solid {{ fOkRow.border }};border-radius:8px;padding:14px;font:inherit;font-size:15px;text-align:left;cursor:pointer;min-height:52px;color:#1a1a1a"><span style="width:22px;height:22px;flex:none;border-radius:4px;border:1.5px solid {{ fOkRow.border }};background:{{ fOkRow.box }};color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center">{{ fOkRow.mark }}</span>I understand</button>
+</div></sc-if>
+
+<sc-if value="{{ fShowTop }}" hint-placeholder-val="{{ false }}"><div style="flex:none;padding:12px 20px 34px;background:#f9f6f1;border-top:1px solid #e6e0d6"><button onClick="{{ fNext }}" disabled="{{ fDisabled }}" style="width:100%;background:{{ fCtaBg }};color:{{ fCtaFg }};border:none;border-radius:8px;font:inherit;font-size:17px;font-weight:700;padding:16px;cursor:{{ fCtaCursor }};min-height:52px">{{ fCta }}</button></div></sc-if>
+
+<sc-if value="{{ fIs5 }}" hint-placeholder-val="{{ false }}"><div style="flex:1;overflow-y:auto;padding:8px 20px 24px;background:#fff">
+<div style="font-size:13px;color:#555">{{ fGreeting }}</div>
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:2px 0 10px">Can I eat this?</h1>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 12px;background:#f9f6f1;border-radius:6px;font-size:13px;margin-bottom:14px"><span style="line-height:1.35"><span style="color:#555">Checking against: </span><strong>{{ fMedLine }}</strong></span><button onClick="{{ fEditMeds }}" style="background:none;border:none;font:inherit;font-size:13px;color:#0b6e4f;font-weight:600;cursor:pointer;padding:8px 0;min-height:36px;flex:none">Edit</button></div>
+<label for="nf-search-2" style="font-size:12px;color:#555;display:block;margin-bottom:6px">Type a food or drink</label>
+<div style="position:relative">
+<input id="nf-search-2" value="{{ fQ }}" onChange="{{ fType }}" placeholder="{{ fPh }}" style="width:100%;box-sizing:border-box;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid #1a1a1a;border-radius:6px;background:#f9f6f1"></input>
+<sc-if value="{{ fShowSug }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;left:0;right:0;top:50px;background:#fff;border:1px solid #d6cfc4;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.06);z-index:2;overflow:hidden">
+<sc-for list="{{ fSug }}" as="s" hint-placeholder-count="2"><button onClick="{{ s.pick }}" style="display:flex;width:100%;justify-content:space-between;background:#fff;border:none;border-bottom:1px solid #eee;padding:11px 14px;font:inherit;font-size:15px;cursor:pointer;text-align:left"><span>{{ s.name }}</span><span style="font-size:12px;font-weight:700;color:{{ s.color }}">{{ s.label }}</span></button></sc-for>
+<sc-if value="{{ fNoSug }}" hint-placeholder-val="{{ false }}"><div style="padding:11px 14px;font-size:14px;color:#555">We don't have that food yet. We'll add it.</div></sc-if>
+</div></sc-if>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px"><sc-for list="{{ fRecent }}" as="r" hint-placeholder-count="6"><button onClick="{{ r.pick }}" style="border:1px solid {{ r.border }};background:{{ r.bg }};color:{{ r.fg }};font:inherit;font-size:13px;padding:6px 11px;border-radius:999px;cursor:pointer">{{ r.name }}</button></sc-for></div>
+<div style="margin-top:22px;border-top:1px solid #d6cfc4;padding-top:18px">
+<div style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:{{ fFood.color }}"></span><span style="font-size:12px;font-weight:800;letter-spacing:1.5px;color:{{ fFood.color }}">{{ fFood.label }}</span></div>
+<h2 style="font-family:Fraunces,serif;font-size:34px;line-height:1.05;margin:8px 0 6px">{{ fFood.name }}</h2>
+<p style="margin:0;font-size:15px;line-height:1.45;text-wrap:pretty">{{ fFood.why }}</p>
+<div style="display:flex;flex-direction:column;gap:8px;margin-top:14px"><sc-for list="{{ fFood.ixs }}" as="x" hint-placeholder-count="0"><div style="padding:10px 12px;border-left:3px solid {{ x.line }};background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.06);font-size:13px;line-height:1.4"><span aria-label="Severity: {{ x.sev }}" style="font-size:10px;font-weight:700;letter-spacing:1px;color:{{ x.fg }};background:{{ x.bg }};padding:2px 6px;border-radius:3px;margin-right:6px">{{ x.sev }}</span>{{ x.text }}</div></sc-for></div>
+<div style="display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;margin-top:18px;padding:14px;background:#f9f6f1;border-radius:6px">
+<div style="width:96px;height:96px;border-radius:50%;background:conic-gradient(#0b6e4f 0 50%,#5a8f7c 50% 75%,#b89150 75% 100%);border:4px solid #fff;box-sizing:border-box"></div>
+<div style="display:flex;flex-direction:column;gap:4px;font-size:13px"><strong style="font-size:15px">How much</strong><span style="line-height:1.4">{{ fFood.portion }}</span><span style="color:#555;font-size:12px">Half vegetables · a quarter protein · a quarter starch</span></div>
+</div>
+<div style="margin-top:14px;display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #eee"><span style="font-size:13px;color:#555">Try instead</span><strong style="font-size:15px;text-align:right">{{ fFood.swap }}</strong></div>
+<div style="display:flex;gap:8px;align-items:center;padding:12px 0;font-size:12px;color:#555"><span aria-label="{{ fFood.tierLabel }}" style="font-size:11px;letter-spacing:1px;padding:2px 6px;border-radius:3px;background:#f9f6f1;color:{{ fFood.tierColor }}">{{ fFood.dots }}</span><span style="font-family:ui-monospace,SFMono-Regular,monospace">{{ fFood.src }}</span></div>
+</div>
+</div></sc-if>
+<sc-if value="{{ fIs5 }}" hint-placeholder-val="{{ false }}"><div style="flex:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #d6cfc4;background:#fff;padding:10px 0 26px;font-size:11px;text-align:center;color:#888"><span style="color:#0b6e4f;font-weight:700">Check</span><span>My plate</span><span>Medicines</span><span>Me</span></div></sc-if>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;max-width:390px"><sc-for list="{{ fJump }}" as="j" hint-placeholder-count="6"><button onClick="{{ j.go }}" style="border:1px solid {{ j.border }};background:{{ j.bg }};color:{{ j.fg }};font:600 11px system-ui,sans-serif;padding:5px 9px;border-radius:5px;cursor:pointer">{{ j.label }}</button></sc-for></div>
+</div>
+</div>
+</section>
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">NutriForge for patients: three home screens</span></div>
+<p style="margin:0 0 24px;max-width:760px;font-size:13px;line-height:1.5;color:#555;text-wrap:pretty">Assumptions, since the brief didn't say: a UK patient of Nigerian heritage with type 2 diabetes, on metformin 500 mg twice a day. Copy is written for a reading age of about 12. All three use v5.0 tokens: Fraunces for headings, the system font for body text, the four food bucket colours, and severity shown as colour plus a text label. Every screen is clickable.</p>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Condition home. The standard layout: pick your situation, see alerts, then browse the four food buckets.</div>
+<div style="width:390px;height:844px;background:#f9f6f1;border-radius:44px;border:10px solid #1a1a1a;box-sizing:content-box;overflow:hidden;display:flex;flex-direction:column;position:relative">
+<div style="height:47px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px;font-size:15px;font-weight:600"><span>9:41</span><span style="width:24px;height:11px;border:1.5px solid #1a1a1a;border-radius:3px"></span></div>
+<div style="flex:1;overflow-y:auto;padding:8px 20px 20px">
+<div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#0b6e4f;font-weight:700">NutriForge</div>
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:30px;line-height:1.1;margin:6px 0 4px">Type 2 diabetes</h1>
+<div style="font-size:13px;color:#555">Metformin 500 mg · twice a day with food</div>
+<div style="display:flex;gap:6px;overflow-x:auto;margin:16px -20px 0;padding:0 20px 4px">
+<sc-for list="{{ aModes }}" as="m" hint-placeholder-count="5"><button onClick="{{ m.pick }}" style="flex:none;border:1px solid {{ m.border }};background:{{ m.bg }};color:{{ m.fg }};font-weight:{{ m.weight }};text-decoration:{{ m.deco }};text-underline-offset:3px;font-size:13px;padding:7px 12px;border-radius:999px;font-family:inherit;cursor:pointer">{{ m.label }}</button></sc-for>
+</div>
+<div style="margin-top:14px;padding:10px 12px;background:#fff;border-left:3px solid #0b6e4f;font-size:13px;line-height:1.4">{{ aModeNote }}</div>
+<div style="margin-top:10px;padding:10px 12px;background:#fff;border-left:3px solid #b89150;font-size:13px;line-height:1.4;display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;gap:8px;align-items:center"><span aria-label="Severity: moderate" style="font-size:10px;font-weight:700;letter-spacing:1px;color:#7a5a22;background:#f4ecdc;padding:2px 6px;border-radius:3px">MODERATE</span><strong>Metformin and vitamin B12</strong></div>
+<span style="color:#555">Taking metformin for a long time can lower your B12. Ask your GP for a yearly blood test.</span>
+</div>
+<h2 style="font-family:Fraunces,serif;font-size:21px;margin:24px 0 10px">What to eat</h2>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #d6cfc4">
+<sc-for list="{{ aTabs }}" as="t" hint-placeholder-count="4"><button onClick="{{ t.pick }}" style="background:none;border:none;border-bottom:3px solid {{ t.line }};margin-bottom:-1px;padding:8px 2px;font-family:inherit;font-size:13px;font-weight:{{ t.weight }};color:{{ t.ink }};cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px"><span>{{ t.label }}</span><span style="font-size:11px;color:#888;font-variant-numeric:tabular-nums">{{ t.count }}</span></button></sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+<sc-for list="{{ aList }}" as="f" hint-placeholder-count="4"><div style="background:#fff;border-left:3px solid {{ f.color }};padding:10px 12px;display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><div style="display:flex;flex-direction:column;gap:2px"><strong style="font-size:15px">{{ f.name }}</strong><span style="font-size:13px;color:#555;line-height:1.35">{{ f.note }}</span></div><span aria-label="{{ f.tierLabel }}" style="flex:none;font-size:11px;letter-spacing:1px;padding:2px 6px;border-radius:3px;background:#f9f6f1;color:{{ f.tierColor }}">{{ f.dots }}</span></div></sc-for>
+</div>
+</div>
+<div style="flex:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #d6cfc4;background:#fff;padding:10px 0 26px;font-size:11px;text-align:center;color:#888"><span style="color:#0b6e4f;font-weight:700">Home</span><span>Foods</span><span>Medicines</span><span>Handout</span></div>
+</div>
+</div>
+
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Search first. One question: "Can I eat this?" You get a verdict, a portion size, a swap and the source.</div>
+<div style="width:390px;height:844px;background:#fff;border-radius:44px;border:10px solid #1a1a1a;box-sizing:content-box;overflow:hidden;display:flex;flex-direction:column">
+<div style="height:47px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px;font-size:15px;font-weight:600"><span>9:41</span><span style="width:24px;height:11px;border:1.5px solid #1a1a1a;border-radius:3px"></span></div>
+<div style="flex:1;overflow-y:auto;padding:8px 20px 24px">
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:28px;line-height:1.15;margin:0 0 14px">Can I eat this?</h1>
+<label for="nf-search" style="font-size:12px;color:#555;display:block;margin-bottom:6px">Type a food or drink</label>
+<div style="position:relative">
+<input id="nf-search" value="{{ bQ }}" onChange="{{ bType }}" placeholder="Jollof, fufu, malt…" style="width:100%;box-sizing:border-box;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid #1a1a1a;border-radius:6px;background:#f9f6f1"></input>
+<sc-if value="{{ bShowSug }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;left:0;right:0;top:50px;background:#fff;border:1px solid #d6cfc4;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.06);z-index:2;overflow:hidden">
+<sc-for list="{{ bSug }}" as="s" hint-placeholder-count="2"><button onClick="{{ s.pick }}" style="display:flex;width:100%;justify-content:space-between;background:#fff;border:none;border-bottom:1px solid #eee;padding:11px 14px;font:inherit;font-size:15px;cursor:pointer;text-align:left"><span>{{ s.name }}</span><span style="font-size:12px;font-weight:700;color:{{ s.color }}">{{ s.label }}</span></button></sc-for>
+<sc-if value="{{ bNoSug }}" hint-placeholder-val="{{ false }}"><div style="padding:11px 14px;font-size:14px;color:#555">We don't have that food yet. We'll add it.</div></sc-if>
+</div></sc-if>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px">
+<sc-for list="{{ bRecent }}" as="r" hint-placeholder-count="5"><button onClick="{{ r.pick }}" style="border:1px solid {{ r.border }};background:{{ r.bg }};color:{{ r.fg }};font:inherit;font-size:13px;padding:6px 11px;border-radius:999px;cursor:pointer">{{ r.name }}</button></sc-for>
+</div>
+<div style="margin-top:22px;border-top:1px solid #d6cfc4;padding-top:18px">
+<div style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:{{ bFood.color }}"></span><span style="font-size:12px;font-weight:800;letter-spacing:1.5px;color:{{ bFood.color }}">{{ bFood.label }}</span></div>
+<h2 style="font-family:Fraunces,serif;font-size:34px;line-height:1.05;margin:8px 0 6px">{{ bFood.name }}</h2>
+<p style="margin:0;font-size:15px;line-height:1.45;color:#1a1a1a;text-wrap:pretty">{{ bFood.why }}</p>
+<sc-if value="{{ bFood.hasIx }}" hint-placeholder-val="{{ false }}"><div style="margin-top:14px;padding:10px 12px;border-left:3px solid #b3261e;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.06);font-size:13px;line-height:1.4"><span aria-label="Severity: major" style="font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;background:#b3261e;padding:2px 6px;border-radius:3px;margin-right:6px">MAJOR</span>{{ bFood.ix }}</div></sc-if>
+<div style="display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;margin-top:18px;padding:14px;background:#f9f6f1;border-radius:6px">
+<div style="width:96px;height:96px;border-radius:50%;background:conic-gradient(#0b6e4f 0 50%,#5a8f7c 50% 75%,#b89150 75% 100%);border:4px solid #fff;box-sizing:border-box"></div>
+<div style="display:flex;flex-direction:column;gap:4px;font-size:13px"><strong style="font-size:15px">How much</strong><span style="line-height:1.4">{{ bFood.portion }}</span><span style="color:#555;font-size:12px">Half vegetables · a quarter protein · a quarter starch</span></div>
+</div>
+<div style="margin-top:14px;display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #eee"><span style="font-size:13px;color:#555">Try instead</span><strong style="font-size:15px;text-align:right">{{ bFood.swap }}</strong></div>
+<div style="display:flex;gap:8px;align-items:center;padding:12px 0;font-size:12px;color:#555"><span aria-label="{{ bFood.tierLabel }}" style="font-size:11px;letter-spacing:1px;padding:2px 6px;border-radius:3px;background:#f9f6f1;color:{{ bFood.tierColor }}">{{ bFood.dots }}</span><span style="font-family:ui-monospace,SFMono-Regular,monospace">{{ bFood.src }}</span></div>
+</div>
+</div>
+<div style="flex:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #d6cfc4;background:#fff;padding:10px 0 26px;font-size:11px;text-align:center;color:#888"><span style="color:#0b6e4f;font-weight:700">Check</span><span>My plate</span><span>Medicines</span><span>Me</span></div>
+</div>
+</div>
+
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>My day. A timeline of your meals and medicine. Tap a meal to see a plate built from foods you already cook.</div>
+<div style="width:390px;height:844px;background:#f4f1ec;border-radius:44px;border:10px solid #1a1a1a;box-sizing:content-box;overflow:hidden;display:flex;flex-direction:column">
+<div style="height:47px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 28px;font-size:15px;font-weight:600;background:#0b6e4f;color:#fff"><span>9:41</span><span style="width:24px;height:11px;border:1.5px solid #fff;border-radius:3px"></span></div>
+<div style="background:#0b6e4f;color:#fff;padding:6px 22px 20px;flex:none">
+<div style="font-size:13px;color:#cfe5db">Saturday 26 September</div>
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:30px;line-height:1.1;margin:4px 0 12px">Your day, Adaeze</h1>
+<div style="display:flex;gap:18px;font-size:13px"><div style="display:flex;flex-direction:column"><span style="font-size:22px;font-weight:700;font-variant-numeric:tabular-nums">{{ cTakenCount }}/2</span><span style="color:#cfe5db">doses taken</span></div><div style="display:flex;flex-direction:column"><span style="font-size:22px;font-weight:700;font-variant-numeric:tabular-nums">{{ cDone }}/3</span><span style="color:#cfe5db">meals planned</span></div></div>
+</div>
+<div style="flex:1;overflow-y:auto;padding:14px 18px 20px">
+<sc-for list="{{ cMeals }}" as="m" hint-placeholder-count="3">
+<div style="display:grid;grid-template-columns:56px 1fr;gap:10px">
+<div style="display:flex;flex-direction:column;align-items:flex-end;padding-top:12px"><span style="font-family:Fraunces,serif;font-size:20px;font-weight:700;font-variant-numeric:tabular-nums">{{ m.time }}</span><span style="font-size:11px;color:#888">{{ m.ampm }}</span></div>
+<div style="border-left:2px solid #d6cfc4;padding:0 0 16px 12px;display:flex;flex-direction:column;gap:8px">
+<button onClick="{{ m.toggle }}" style="text-align:left;background:#fff;border:1px solid {{ m.border }};border-radius:6px;padding:12px;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:4px;color:#1a1a1a"><span style="display:flex;justify-content:space-between;align-items:baseline"><strong style="font-size:16px">{{ m.title }}</strong><span style="font-size:12px;color:#0b6e4f;font-weight:600">{{ m.cta }}</span></span><span style="font-size:13px;color:#555;line-height:1.35">{{ m.plan }}</span></button>
+<sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}"><div style="background:#fff;border-radius:6px;padding:12px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;height:10px;border-radius:3px;overflow:hidden"><span style="width:50%;background:#0b6e4f"></span><span style="width:25%;background:#5a8f7c"></span><span style="width:25%;background:#b89150"></span></div>
+<sc-for list="{{ m.plate }}" as="p" hint-placeholder-count="3"><div style="display:grid;grid-template-columns:62px 1fr;gap:8px;font-size:13px;line-height:1.35"><span style="font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:{{ p.color }}">{{ p.part }}</span><span>{{ p.food }}</span></div></sc-for>
+<div style="font-size:12px;color:#555;border-top:1px solid #eee;padding-top:8px">{{ m.tip }}</div>
+</div></sc-if>
+<sc-if value="{{ m.hasMed }}" hint-placeholder-val="{{ false }}"><button onClick="{{ m.take }}" style="display:flex;justify-content:space-between;align-items:center;background:{{ m.medBg }};color:{{ m.medFg }};border:1.5px solid #0b6e4f;border-radius:6px;padding:10px 12px;font:inherit;font-size:14px;cursor:pointer;min-height:44px"><span><strong>Metformin 500 mg</strong> · take with this meal</span><span style="font-weight:700;font-size:13px">{{ m.medLabel }}</span></button></sc-if>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="flex:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #d6cfc4;background:#fff;padding:10px 0 26px;font-size:11px;text-align:center;color:#888"><span style="color:#0b6e4f;font-weight:700">Today</span><span>Foods</span><span>Medicines</span><span>Handout</span></div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "build <a class="dv-oid" href="#1b">1b</a> out into a full flow with onboarding" · "combine the timeline from <a class="dv-oid" href="#1c">1c</a> with the food buckets from <a class="dv-oid" href="#1a">1a</a>" · "change the condition to hypertension"</p>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const B = {
+  beneficial: { c: '#0b6e4f', l: 'EAT OFTEN' },
+  neutral: { c: '#6b7280', l: 'FINE IN PORTIONS' },
+  caution: { c: '#8a6a2e', l: 'GO EASY' },
+  avoid: { c: '#b3261e', l: 'BEST AVOIDED' }
+};
+const T = { 1: ['●●●●', '#0b6e4f'], 2: ['●●●○', '#4d7f6d'], 3: ['●●○○', '#8a6a2e'], 4: ['●○○○', '#a85f40'], 5: ['○○○○', '#777'] };
+const tier = n => ({ dots: T[n][0], tierColor: T[n][1], tierLabel: 'Evidence tier ' + n + ' of 5' });
+
+const A_FOODS = {
+  beneficial: [['Moi moi and beans', 'Beans release sugar slowly', 1], ['Okra soup with fish', 'The fibre slows the rise in blood sugar', 3], ['Efo riro (ugu, spinach)', 'Fill half your plate with greens', 2], ['Garden egg', 'Low in starch. A good snack.', 3], ['Boiled unripe plantain', 'Raises sugar less than ripe plantain', 3]],
+  neutral: [['Brown or ofada rice', 'Keep it to a fist-sized portion', 2], ['Boiled yam', 'A fist-sized portion, eaten with soup', 3], ['Fish pepper soup', 'Use fewer stock cubes (they are salty)', 3]],
+  caution: [['Jollof rice', 'One scoop, with a side salad', 3], ['Pounded yam or fufu', 'A smaller swallow and more soup', 3], ['Dodo (fried ripe plantain)', 'Ripe and fried raises sugar fast', 3], ['Agege bread', 'Soft white bread raises sugar quickly', 2]],
+  avoid: [['Malt drinks', 'About 9 teaspoons of sugar in a bottle', 1], ['Zobo with added sugar', 'Make it with no sugar, or drink water', 2], ['Puff-puff', 'Fried dough with sugar', 2], ['Palm wine and other alcohol', 'Can be risky with metformin. Ask your GP.', 2]]
+};
+const MODES = {
+  'Newly diagnosed': 'Start small: make one food swap a week. Your GP will check your HbA1c again in 3 months.',
+  'Stable': 'Keep going. Eat regular meals, take metformin with food, and have your HbA1c checked every 6–12 months.',
+  'Fasting': 'Planning to fast, for example in Ramadan? Talk to your GP first, because your metformin times may need to move to suhoor and iftar.',
+  'Pregnant': 'Tell your GP or midwife straight away. Your blood sugar targets and medicines may change.',
+  'Unwell': "If you are being sick or can't keep fluids down, stop metformin and call 111 or your GP."
+};
+const B_FOODS = {
+  jollof: { name: 'Jollof rice', b: 'caution', why: 'White rice raises blood sugar quickly. The tomato stew and oil are fine. It is the size of the rice portion that matters most.', portion: 'One scoop the size of your fist, about 150 g cooked', swap: 'Half jollof, half fried cabbage or salad', t: 3, src: 'International GI tables, 2021' },
+  poundo: { name: 'Pounded yam', b: 'caution', why: 'A big swallow is a lot of fast starch at once. Make it smaller and add more soup and fish.', portion: 'A ball the size of a tennis ball', swap: 'A smaller swallow with extra okra or efo', t: 3, src: 'International GI tables, 2021' },
+  moimoi: { name: 'Moi moi', b: 'beneficial', why: 'Made from beans, so it gives protein and fibre and raises blood sugar slowly. Steamed is better than fried.', portion: 'One or two wraps, as your protein', swap: 'Already a good choice', t: 1, src: 'NICE NG28 · legume meta-analyses' },
+  malt: { name: 'Malt drink', b: 'avoid', why: 'A 330 ml bottle has about 9 teaspoons of sugar. Sugar in a drink raises blood sugar faster than sugar in food.', portion: 'Best kept for rare treats', swap: 'Sparkling water with lime, or zobo with no sugar', t: 1, src: 'NICE NG28 · product labels' },
+  palmwine: { name: 'Palm wine', b: 'avoid', why: 'It contains alcohol and sugar. Alcohol can cause low blood sugar and adds to the risks of metformin.', portion: 'If you drink, keep it small and have it with food', swap: 'Zobo or tiger nut drink with no added sugar', t: 2, src: 'BNF: metformin · MHRA', ix: 'Metformin and alcohol: heavy drinking raises the risk of lactic acidosis, which is rare but serious. Ask your GP what is safe for you.' },
+  dodo: { name: 'Dodo', b: 'caution', why: 'Ripe plantain is sweeter, and frying adds oil. Unripe, boiled or roasted plantain raises sugar less.', portion: '4–5 slices, as your starch', swap: 'Boiled or roasted unripe plantain', t: 3, src: 'International GI tables, 2021' }
+};
+const RECENT = ['jollof', 'poundo', 'moimoi', 'malt', 'palmwine', 'dodo'];
+const F_FOODS = { ...B_FOODS,
+  kenkey: { name: 'Kenkey', b: 'caution', why: 'Fermented maize is a fast-acting starch. Fermenting helps a little, but the portion size matters most.', portion: 'Half a ball, with shito and fish', swap: 'Half a ball of kenkey, with extra pepper sauce and grilled fish', t: 3, src: 'International GI tables, 2021' },
+  waakye: { name: 'Waakye', b: 'neutral', why: 'Rice cooked with beans. The beans slow the rise in blood sugar compared with plain white rice.', portion: 'A fist-sized portion', swap: 'More beans, less rice, and a side salad', t: 2, src: 'NICE NG28 · legume meta-analyses' },
+  riceandpeas: { name: 'Rice and peas', b: 'neutral', why: 'The kidney beans help, but the white rice and coconut milk add up. Keep the portion small.', portion: 'A fist-sized portion', swap: 'Brown rice with extra peas', t: 2, src: 'NICE NG28' },
+  dumpling: { name: 'Fried dumpling', b: 'caution', why: 'Fried white flour. It raises sugar quickly and adds a lot of fat.', portion: 'One small dumpling', swap: 'A boiled wholemeal dumpling, or green banana', t: 3, src: 'International GI tables, 2021' },
+  canjeero: { name: 'Canjeero', b: 'neutral', why: 'A fermented flatbread. Better than white bread, but it is still starch.', portion: 'One or two pieces', swap: 'Eat it with eggs and vegetables, not sugar and ghee', t: 3, src: 'International GI tables, 2021' },
+  coconutwater: { name: 'Coconut water', b: 'neutral', why: 'It has natural sugar, but less than juice or malt. A small glass is fine.', portion: 'One small glass (200 ml)', swap: 'Water with fresh lime', t: 3, src: 'Product labels · BNF' }
+};
+const F_CU = { jollof: ['ng', 'gh', 'sl'], poundo: ['ng', 'gh', 'cm'], moimoi: ['ng'], malt: ['ng', 'gh', 'jm'], palmwine: ['ng', 'gh', 'cm'], dodo: ['ng', 'cm'], kenkey: ['gh'], waakye: ['gh'], riceandpeas: ['jm'], dumpling: ['jm'], canjeero: ['so', 'et'], coconutwater: ['jm', 'ng', 'gh', 'ke'] };
+const HYPO = ['MODERATE', "On gliclazide, don't cut out starch completely. A meal that is too small can cause a hypo (low blood sugar)."];
+const F_IX = {
+  palmwine: { metformin: ['MAJOR', 'Metformin and alcohol: heavy drinking raises the risk of lactic acidosis, which is rare but serious.'], gliclazide: ['MAJOR', 'Gliclazide and alcohol: this can cause a hypo, sometimes hours later. Always eat when you drink.'], insulin: ['MAJOR', 'Insulin and alcohol: this can cause a hypo, sometimes hours later. Always eat when you drink.'] },
+  poundo: { gliclazide: HYPO }, kenkey: { gliclazide: HYPO },
+  coconutwater: { ramipril: ['MODERATE', "Ramipril can raise your potassium. Coconut water is high in potassium, so don't drink it every day without asking your GP."] }
+};
+const F_COND = [['t2d', 'Type 2 diabetes'], ['pre', 'Prediabetes'], ['bp', 'High blood pressure'], ['chol', 'High cholesterol'], ['unsure', "I'm not sure"]];
+const F_MEDS = [['metformin', 'Metformin', 'diabetes'], ['gliclazide', 'Gliclazide', 'diabetes'], ['sitagliptin', 'Sitagliptin', 'diabetes'], ['insulin', 'Insulin', 'diabetes'], ['amlodipine', 'Amlodipine', 'blood pressure'], ['ramipril', 'Ramipril', 'blood pressure'], ['atorvastatin', 'Atorvastatin', 'cholesterol']];
+const F_CUIS = [['ng', 'Nigerian'], ['gh', 'Ghanaian'], ['sl', 'Sierra Leonean'], ['cm', 'Cameroonian'], ['jm', 'Jamaican / Caribbean'], ['so', 'Somali'], ['et', 'Ethiopian / Eritrean'], ['ke', 'Kenyan']];
+const F_STEPS = ['Welcome', 'Conditions', 'Medicines', 'Foods', 'Safety', 'Home'];
+const G = {
+  t2d: { tab: 'Diabetes', name: 'Type 2 diabetes', med: 'Metformin 500 mg', medWhen: 'twice a day with food', doses: [0, 2],
+    alert: ['MODERATE', 'Metformin and vitamin B12', 'Taking metformin for a long time can lower your B12. Ask your GP for a yearly blood test.'],
+    modes: MODES, foods: A_FOODS,
+    meals: [
+      ['8:00', 'am', 'Breakfast', 'Moi moi, sautéed garden egg, and tea with no sugar', ['Garden egg and pepper sauce', 'Moi moi (2 wraps) or boiled egg', 'Half a slice of wholemeal bread, or nothing'], 'Take metformin with your first bite. It upsets the stomach less that way.'],
+      ['1:00', 'pm', 'Lunch', 'Fist of jollof, fried cabbage and grilled chicken', ['Fried cabbage and carrots', 'Grilled chicken or fish', 'A fist of jollof rice'], 'Leftovers from Sunday? Reheat the jollof and add extra veg.'],
+      ['7:00', 'pm', 'Dinner', 'Okra soup with fish and a small swallow', ['Okra soup with ugu leaves', 'Mackerel or stockfish', 'Eba or pounded yam the size of a tennis ball'], 'Try to finish eating 2–3 hours before bed.']] },
+  bp: { tab: 'Blood pressure', name: 'High blood pressure', med: 'Ramipril 5 mg', medWhen: 'once a day, same time', doses: [0],
+    alert: ['MAJOR', 'Ramipril and salt substitutes', 'Low-salt products like LoSalt are high in potassium. With ramipril they can push your potassium up to a dangerous level. Use herbs, lemon and fresh pepper instead.'],
+    modes: {
+      'Newly diagnosed': 'Cutting salt is the quickest win. Aim for less than 6 g a day, about one teaspoon, and that includes the salt already in food.',
+      'Stable': 'Check your blood pressure at home once a week, and bring your readings to your review.',
+      'Fasting': 'Fasting is usually fine with blood pressure tablets. Ask your GP when to take your dose.',
+      'Pregnant': 'Tell your GP or midwife straight away. Ramipril must not be taken in pregnancy.',
+      'Unwell': 'If you are being sick or have diarrhoea, you may need to pause ramipril for a while. Ask your pharmacist or call 111.' },
+    foods: {
+      beneficial: [['Efo riro and other greens', 'Leafy greens are high in potassium, which helps lower blood pressure', 2], ['Beans and moi moi', 'Fibre and potassium. Steam them rather than fry.', 2], ['Fresh fish, grilled', 'Choose fresh fish over salted or smoked fish', 2], ['Boiled unripe plantain', 'Rich in potassium, and no added salt', 3], ['Garden egg and cucumber', 'A snack with no salt', 3]],
+      neutral: [['Home-made jollof rice', 'Use half the stock cubes you normally would', 3], ['Boiled yam', 'Fine on its own. Watch the salt in what goes on top.', 3], ['Pepper soup', 'Flavour it with fresh pepper and herbs, not cubes', 3]],
+      caution: [['Stock cubes (Maggi, Knorr)', 'One cube has about half a day of salt', 1], ['Stockfish and smoked fish', 'Soak them overnight to remove salt', 3], ['Suya', 'The spice mix is often very salty', 3], ['Ground crayfish', 'Salty. Use a small pinch.', 3]],
+      avoid: [['Salt substitutes (LoSalt)', 'High in potassium, which is risky with ramipril', 1], ['Chin chin and salted crisps', 'High in salt', 2], ['Corned beef and tinned meat', 'Very high in salt', 2], ['More than 14 units of alcohol a week', 'Raises blood pressure', 1]] },
+    meals: [
+      ['8:00', 'am', 'Breakfast', 'Oats with banana, and a boiled egg', ['Banana, plus tomato and pepper sauce with no cube', 'Boiled egg or moi moi', 'Oats or wholemeal bread'], 'Take ramipril at the same time every day.'],
+      ['1:00', 'pm', 'Lunch', 'Home-made jollof with half the cubes, fish and salad', ['Salad or fried cabbage', 'Grilled fresh fish', 'A fist of jollof rice'], 'Taste before adding salt at the table. You often won’t need it.'],
+      ['7:00', 'pm', 'Dinner', 'Egusi with ugu, fresh fish and a small swallow', ['Egusi soup with lots of ugu', 'Fresh mackerel or chicken', 'A small swallow'], 'Soak stockfish overnight to cut the salt.']] }
+};
+const SEV = { MAJOR: { bg: '#b3261e', fg: '#fff', line: '#b3261e' }, MODERATE: { bg: '#f4ecdc', fg: '#7a5a22', line: '#b89150' }, MINOR: { bg: '#eef0f2', fg: '#4b5563', line: '#9ca3af' } };
+const H_MEDS = [
+  { k: 'metformin', name: 'Metformin', dose: '500 mg tablet', when: 'Twice a day, with breakfast and dinner', next: '7:00 pm with dinner', forr: 'Type 2 diabetes',
+    watch: [['MAJOR', 'Alcohol, including palm wine', 'Raises the risk of lactic acidosis, which is rare but serious. Keep alcohol small and always have it with food.'], ['MODERATE', 'Vitamin B12', 'Long-term use can lower your B12. Ask for a yearly blood test.'], ['MINOR', 'Taking it on an empty stomach', 'This can upset your stomach. Take it with your first bite of food.']] },
+  { k: 'ramipril', name: 'Ramipril', dose: '5 mg capsule', when: 'Once a day, at the same time', next: '8:00 am tomorrow', forr: 'High blood pressure',
+    watch: [['MAJOR', 'Salt substitutes (LoSalt)', 'These are high in potassium and can push your potassium up to a dangerous level.'], ['MODERATE', 'Coconut water every day', 'It is high in potassium. A glass now and then is fine.'], ['MODERATE', 'Being sick or having diarrhoea', 'You may need to pause it for a while. See "Feeling unwell".']] }
+];
+const H_SLOTS = {
+  veg: ['Vegetables', [['Okra soup', 'beneficial'], ['Efo riro', 'beneficial'], ['Fried cabbage', 'beneficial'], ['No vegetables', 'none']]],
+  protein: ['Protein', [['Grilled fish', 'beneficial'], ['Moi moi', 'beneficial'], ['Chicken', 'beneficial'], ['Suya', 'caution']]],
+  starch: ['Starch', [['Boiled unripe plantain', 'beneficial'], ['Brown rice', 'neutral'], ['Jollof rice', 'caution'], ['Pounded yam', 'caution']]],
+  drink: ['Drink', [['Water', 'beneficial'], ['Zobo, no sugar', 'beneficial'], ['Malt drink', 'avoid'], ['Palm wine', 'avoid']]]
+};
+const H_EDGES = [['notfound', 'Food not found'], ['two', 'Two conditions'], ['newmed', 'Medicine not listed'], ['unwell', 'Feeling unwell']];
+const H_SYM = [['vomit', 'Being sick or having diarrhoea'], ['fluids', "Can't keep fluids down"], ['confused', 'Confused, very drowsy, or breathing fast'], ['pain', 'Chest pain']];
+
+class Component extends DCLogic {
+  state = { aTab: 'beneficial', aMode: 'Stable', bKey: 'jollof', bQ: '', cOpen: 0, cTaken: { 0: true }, fStep: 0, fCond: {}, fMeds: {}, fNone: false, fCu: {}, fOk: false, fKey: null, fQ: '', gCond: 't2d', gTab: 'beneficial', gMode: 'Stable', gOpen: -1, gTaken: {}, hMedOpen: 'metformin', hRem: { metformin: true, ramipril: true }, hLarge: false, hPlate: { veg: 0, protein: 0, starch: 2, drink: 0 }, hPortion: 1, hEdge: 'notfound', hAsked: false, hSym: {}, uTab: 'today' };
+  uVals() {
+    const s = this.state, t = s.uTab, done = s.fStep === 5;
+    const picked = Object.keys(s.fMeds).filter(k => s.fMeds[k]);
+    const all = this.turn4Vals().hMeds;
+    const tabs = [['today', 'Today'], ['check', 'Check'], ['plate', 'My plate'], ['meds', 'Medicines'], ['hand', 'Handout']];
+    return {
+      uTabs: tabs.map(([k, label]) => ({ label, fg: t === k ? '#0b6e4f' : '#888', weight: t === k ? 700 : 400, pick: () => this.setState({ uTab: k }) })),
+      uIsToday: done && t === 'today', uIsCheck: done && t === 'check', uIsPlate: done && t === 'plate', uIsMeds: done && t === 'meds', uIsHand: done && t === 'hand',
+      uBarBg: s.fStep === 0 || (done && t === 'today') ? '#0b6e4f' : done ? (t === 'hand' ? '#f9f6f1' : t === 'meds' ? '#f9f6f1' : '#fff') : '#f9f6f1',
+      uBarFg: s.fStep === 0 || (done && t === 'today') ? '#fff' : '#1a1a1a',
+      uMeds: picked.length ? all.filter(m => picked.includes(m.k)) : all,
+      uRestart: () => this.setState({ fStep: 0, fCond: {}, fMeds: {}, fNone: false, fCu: {}, fOk: false, fKey: null, fQ: '', uTab: 'today' }),
+      uSkip: () => this.setState({ fStep: 5, fCond: { t2d: true, bp: true }, fMeds: { metformin: true, ramipril: true }, fNone: false, fCu: { ng: true }, fOk: true, uTab: 'today' })
+    };
+  }
+  handoutUrl(print) {
+    const s = this.state, on = o => Object.keys(o).filter(k => o[k]);
+    const c = on(s.fCond), m = on(s.fMeds);
+    const p = new URLSearchParams({ c: (c.length ? c : ['t2d', 'bp']).join(','), m: (m.length || s.fNone ? m : ['metformin', 'ramipril']).join(',') });
+    if (s.hLarge) p.set('lp', '1');
+    if (print) p.set('print', '1');
+    return 'Patient Handout.dc.html?' + p.toString();
+  }
+  turn4Vals() {
+    const s = this.state;
+    const chip = on => ({ bg: on ? '#1a1a1a' : '#fff', fg: on ? '#fff' : '#1a1a1a', border: on ? '#1a1a1a' : '#d6cfc4' });
+    const hMeds = H_MEDS.map(m => { const open = s.hMedOpen === m.k, rem = !!s.hRem[m.k];
+      return { ...m, open, chev: open ? '−' : '+', border: open ? '#0b6e4f' : '#d6cfc4',
+        watch: m.watch.map(([sev, title, text]) => ({ sev, title, text, ...SEV[sev] })),
+        remLabel: rem ? 'On' : 'Off', trackBg: rem ? '#0b6e4f' : '#d6cfc4', knobX: rem ? '20px' : '2px',
+        toggle: () => this.setState({ hMedOpen: open ? '' : m.k }),
+        rem: () => this.setState(p => ({ hRem: { ...p.hRem, [m.k]: !p.hRem[m.k] } })) }; });
+    const picked = Object.fromEntries(Object.entries(H_SLOTS).map(([k, [, opts]]) => [k, opts[s.hPlate[k]]]));
+    const hSlots = Object.entries(H_SLOTS).map(([k, [label, opts]]) => ({ label, opts: opts.map(([name, b], i) => ({ name, dot: b === 'none' ? '#d6cfc4' : B[b].c, ...chip(s.hPlate[k] === i), pick: () => this.setState(p => ({ hPlate: { ...p.hPlate, [k]: i } })) })) }));
+    const issues = [];
+    if (picked.drink[1] === 'avoid') issues.push(['avoid', picked.drink[0] + ': swap it for water or zobo with no sugar.']);
+    if (picked.veg[1] === 'none') issues.push(['caution', 'Add vegetables. They should fill half your plate.']);
+    if (picked.starch[1] === 'caution' && s.hPortion > 0) issues.push(['caution', picked.starch[0] + ': ' + (s.hPortion === 2 ? 'this portion is too big. Make it the size of your fist or smaller.' : 'keep it to a fist or smaller, and add more vegetables.')]);
+    else if (s.hPortion === 2) issues.push(['caution', 'Make the starch smaller, about the size of your fist.']);
+    if (picked.protein[1] === 'caution') issues.push(['caution', 'Suya is often salty. Have a small portion.']);
+    const worst = issues.some(i => i[0] === 'avoid') ? 'avoid' : issues.length ? 'caution' : 'beneficial';
+    const vegPct = picked.veg[1] === 'none' ? 0 : 50, stPct = [15, 25, 40][s.hPortion];
+    const a = vegPct, b2 = a + 25, c = Math.min(100, b2 + stPct);
+    const sym = s.hSym; const emergency = sym.confused || sym.pain; const sick = sym.vomit || sym.fluids;
+    return {
+      hMeds,
+      hLargeLabel: s.hLarge ? 'Large print: on' : 'Large print: off', hPaperFs: s.hLarge ? '12px' : '9.5px', hPaperH: s.hLarge ? '13.5px' : '11px',
+      hLargeToggle: () => this.setState(p => ({ hLarge: !p.hLarge })),
+      hPrint: () => window.open(this.handoutUrl(true), '_blank'),
+      hShare: () => { const url = new URL(this.handoutUrl(false), location.href).href; if (navigator.share) navigator.share({ title: 'My NutriForge handout', url }).catch(() => {}); else window.open(url, '_blank'); },
+      hSlots, hPortions: ['Small', 'Fist-sized', 'Large'].map((label, i) => ({ label, ...chip(s.hPortion === i), pick: () => this.setState({ hPortion: i }) })),
+      hRing: `conic-gradient(#0b6e4f 0 ${a}%, #5a8f7c ${a}% ${b2}%, #b89150 ${b2}% ${c}%, #ece7df ${c}% 100%)`,
+      hVerdict: { color: B[worst].c, label: worst === 'beneficial' ? 'GOOD PLATE' : worst === 'avoid' ? 'CHANGE ONE THING' : 'NEARLY THERE', title: worst === 'beneficial' ? 'This plate works for you.' : issues.length + (issues.length === 1 ? ' thing to change' : ' things to change') },
+      hIssues: issues.map(([bk, text]) => ({ text, color: B[bk].c })), hNoIssues: !issues.length,
+      hEdges: H_EDGES.map(([k, label]) => ({ label, ...chip(s.hEdge === k), pick: () => this.setState({ hEdge: k }) })),
+      hIsNF: s.hEdge === 'notfound', hIsTwo: s.hEdge === 'two', hIsNew: s.hEdge === 'newmed', hIsUnwell: s.hEdge === 'unwell',
+      hAsked: s.hAsked, hNotAsked: !s.hAsked, hAsk: () => this.setState({ hAsked: true }),
+      hSyms: H_SYM.map(([k, label]) => { const on = !!sym[k]; return { label, bg: on ? '#fbeceb' : '#fff', border: on ? '#b3261e' : '#d6cfc4', box: on ? '#b3261e' : '#fff', mark: on ? '✓' : '', pick: () => this.setState(p => ({ hSym: { ...p.hSym, [k]: !p.hSym[k] } })) }; }),
+      hEmergency: !!emergency, hSick: !emergency && !!sick, hNoSym: !emergency && !sick
+    };
+  }
+  todayVals() {
+    const s = this.state, g = G[s.gCond];
+    const tabs = [['beneficial', 'Eat often'], ['neutral', 'Fine'], ['caution', 'Go easy'], ['avoid', 'Avoid']];
+    const takenCount = g.doses.filter(i => s.gTaken[s.gCond + i]).length;
+    const [sev, title, text] = g.alert;
+    return {
+      gConds: Object.entries(G).map(([k, v]) => { const on = s.gCond === k; return { label: v.tab, bg: on ? '#fff' : 'transparent', fg: on ? '#0b6e4f' : '#fff', weight: on ? 700 : 500, pick: () => this.setState({ gCond: k, gOpen: -1 }) }; }),
+      gName: g.name, gMedLine: g.med + ' · ' + g.medWhen, gTakenCount: takenCount, gDoseTotal: g.doses.length,
+      gAlert: { sev, title, text, ...SEV[sev] },
+      gMeals: g.meals.map(([time, ampm, mt, plan, plate, tip], i) => {
+        const open = s.gOpen === i, hasMed = g.doses.includes(i), taken = !!s.gTaken[s.gCond + i];
+        return { time, ampm, title: mt, plan, tip, open, hasMed, cta: open ? 'Close' : 'See plate', border: open ? '#0b6e4f' : '#d6cfc4',
+          plate: plate.map((food, j) => ({ food, part: ['Veg', 'Protein', 'Starch'][j], color: ['#0b6e4f', '#4d7f6d', '#8a6a2e'][j] })),
+          medName: g.med, medBg: taken ? '#0b6e4f' : '#fff', medFg: taken ? '#fff' : '#0b6e4f', medLabel: taken ? 'Taken ✓' : 'Mark taken',
+          toggle: () => this.setState({ gOpen: open ? -1 : i }),
+          take: () => this.setState(p => ({ gTaken: { ...p.gTaken, [s.gCond + i]: !p.gTaken[s.gCond + i] } })) };
+      }),
+      gModes: Object.keys(g.modes).map(label => { const on = s.gMode === label; return { label, bg: on ? '#0b6e4f' : '#fff', fg: on ? '#fff' : '#1a1a1a', border: on ? '#0b6e4f' : '#d6cfc4', weight: on ? 700 : 400, pick: () => this.setState({ gMode: label }) }; }),
+      gModeNote: g.modes[s.gMode],
+      gTabs: tabs.map(([k, label]) => ({ label, count: g.foods[k].length, line: s.gTab === k ? B[k].c : 'transparent', weight: s.gTab === k ? 700 : 400, ink: s.gTab === k ? '#1a1a1a' : '#555', pick: () => this.setState({ gTab: k }) })),
+      gList: g.foods[s.gTab].map(([name, note, t]) => ({ name, note, color: B[s.gTab].c, ...tier(t) }))
+    };
+  }
+  flowVals() {
+    const s = this.state, fs = s.fStep;
+    const has = o => Object.values(o).some(Boolean);
+    const ck = on => ({ bg: on ? '#e6f0eb' : '#fff', border: on ? '#0b6e4f' : '#d6cfc4', box: on ? '#0b6e4f' : '#fff', mark: on ? '✓' : '' });
+    const tog = (field, k, extra) => () => this.setState(p => ({ ...(extra || {}), [field]: { ...p[field], [k]: !p[field][k] } }));
+    const can = [true, has(s.fCond), has(s.fMeds) || s.fNone, has(s.fCu), s.fOk, true][fs];
+    const go = n => this.setState({ fStep: n, fQ: '' });
+    const medNames = F_MEDS.filter(([k]) => s.fMeds[k]).map(m => m[1]);
+    const order = Object.keys(F_FOODS).map((k, i) => ({ k, i, m: F_CU[k].some(c => s.fCu[c]) ? 0 : 1 })).sort((a, b) => a.m - b.m || a.i - b.i).map(o => o.k);
+    const key = s.fKey && F_FOODS[s.fKey] ? s.fKey : order[0];
+    const f = F_FOODS[key];
+    const ixs = Object.entries(F_IX[key] || {}).filter(([m]) => s.fMeds[m]).map(([, [sev, text]]) => ({ sev, text, ...SEV[sev] }));
+    const q = s.fQ.trim().toLowerCase();
+    const fSug = q ? Object.entries(F_FOODS).filter(([, v]) => v.name.toLowerCase().includes(q)).map(([k, v]) => ({ name: v.name, label: B[v.b].l, color: B[v.b].c, pick: () => this.setState({ fKey: k, fQ: '' }) })) : [];
+    const h = new Date().getHours();
+    return {
+      fStep: fs, fIs0: fs === 0, fIs1: fs === 1, fIs2: fs === 2, fIs3: fs === 3, fIs4: fs === 4, fIs5: fs === 5,
+      fShowTop: fs >= 1 && fs <= 4, fBarBg: fs === 0 ? '#0b6e4f' : (fs === 5 ? '#fff' : '#f9f6f1'), fBarFg: fs === 0 ? '#fff' : '#1a1a1a',
+      fProg: [1, 2, 3, 4].map(i => ({ c: i <= fs ? '#0b6e4f' : '#d6cfc4' })),
+      fNext: () => { if (!can) return; if (fs === 4) this.setState({ uTab: 'today', gCond: s.fCond.t2d || !s.fCond.bp ? 't2d' : 'bp' }); go(fs + 1); }, fBack: () => go(Math.max(0, fs - 1)),
+      fDisabled: !can, fCta: fs === 4 ? 'Start using NutriForge' : 'Continue',
+      fCtaBg: can ? '#0b6e4f' : '#d6cfc4', fCtaFg: can ? '#fff' : '#777', fCtaCursor: can ? 'pointer' : 'not-allowed',
+      fConds: F_COND.map(([k, label]) => ({ label, ...ck(!!s.fCond[k]), pick: tog('fCond', k) })),
+      fMeds: F_MEDS.map(([k, name, forr]) => ({ name, forr, ...ck(!!s.fMeds[k]), pick: tog('fMeds', k, { fNone: false }) })),
+      fNone: { ...ck(s.fNone), pick: () => this.setState(p => ({ fNone: !p.fNone, fMeds: {} })) },
+      fCuis: F_CUIS.map(([k, label]) => { const on = !!s.fCu[k]; return { label, bg: on ? '#1a1a1a' : '#fff', fg: on ? '#fff' : '#1a1a1a', border: on ? '#1a1a1a' : '#d6cfc4', pick: tog('fCu', k) }; }),
+      fOkRow: { ...ck(s.fOk), pick: () => this.setState(p => ({ fOk: !p.fOk })) },
+      fGreeting: h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening',
+      fMedLine: medNames.length ? medNames.join(', ') : 'No medicines added',
+      fEditMeds: () => go(2),
+      fQ: s.fQ, fType: e => this.setState({ fQ: e.target.value }), fPh: order.slice(0, 3).map(k => F_FOODS[k].name).join(', ') + '…',
+      fSug, fShowSug: !!q, fNoSug: !!q && !fSug.length,
+      fRecent: order.slice(0, 6).map(k => { const on = key === k; return { name: F_FOODS[k].name, bg: on ? '#1a1a1a' : '#fff', fg: on ? '#fff' : '#1a1a1a', border: on ? '#1a1a1a' : '#d6cfc4', pick: () => this.setState({ fKey: k, fQ: '' }) }; }),
+      fFood: { ...f, color: B[f.b].c, label: B[f.b].l, ixs, ...tier(f.t) },
+      fJump: F_STEPS.map((label, i) => { const on = fs === i; return { label: (i + 1) + ' ' + label, bg: on ? '#1a1a1a' : '#fff', fg: on ? '#fff' : '#1a1a1a', border: on ? '#1a1a1a' : '#d6cfc4', go: () => go(i) }; })
+    };
+  }
+  renderVals() {
+    const s = this.state;
+    const tabs = [['beneficial', 'Eat often'], ['neutral', 'Fine'], ['caution', 'Go easy'], ['avoid', 'Avoid']];
+    const aTabs = tabs.map(([k, label]) => ({ label, count: A_FOODS[k].length, line: s.aTab === k ? B[k].c : 'transparent', weight: s.aTab === k ? 700 : 400, ink: s.aTab === k ? '#1a1a1a' : '#555', pick: () => this.setState({ aTab: k }) }));
+    const aList = A_FOODS[s.aTab].map(([name, note, t]) => ({ name, note, color: B[s.aTab].c, ...tier(t) }));
+    const aModes = Object.keys(MODES).map(label => { const on = s.aMode === label; return { label, bg: on ? '#0b6e4f' : '#fff', fg: on ? '#fff' : '#1a1a1a', border: on ? '#0b6e4f' : '#d6cfc4', weight: on ? 700 : 400, deco: on ? 'underline' : 'none', pick: () => this.setState({ aMode: label }) }; });
+
+    const f = B_FOODS[s.bKey];
+    const bFood = { ...f, color: B[f.b].c, label: B[f.b].l, hasIx: !!f.ix, ...tier(f.t) };
+    const q = s.bQ.trim().toLowerCase();
+    const bSug = q ? Object.entries(B_FOODS).filter(([, v]) => v.name.toLowerCase().includes(q)).map(([k, v]) => ({ name: v.name, label: B[v.b].l, color: B[v.b].c, pick: () => this.setState({ bKey: k, bQ: '' }) })) : [];
+    const bRecent = RECENT.map(k => { const on = s.bKey === k; return { name: B_FOODS[k].name, bg: on ? '#1a1a1a' : '#fff', fg: on ? '#fff' : '#1a1a1a', border: on ? '#1a1a1a' : '#d6cfc4', pick: () => this.setState({ bKey: k, bQ: '' }) }; });
+
+    const meals = [
+      { time: '8:00', ampm: 'am', title: 'Breakfast', plan: 'Moi moi, sautéed garden egg, and tea with no sugar', med: true, plate: [['Veg', 'Garden egg and pepper sauce'], ['Protein', 'Moi moi (2 wraps) or boiled egg'], ['Starch', 'Half a slice of wholemeal bread, or nothing']], tip: 'Take metformin with your first bite. It upsets the stomach less that way.' },
+      { time: '1:00', ampm: 'pm', title: 'Lunch', plan: 'Fist of jollof, fried cabbage and grilled chicken', med: false, plate: [['Veg', 'Fried cabbage and carrots'], ['Protein', 'Grilled chicken or fish'], ['Starch', 'A fist of jollof rice']], tip: 'Leftovers from Sunday? Reheat the jollof and add extra veg.' },
+      { time: '7:00', ampm: 'pm', title: 'Dinner', plan: 'Okra soup with fish and a small swallow', med: true, plate: [['Veg', 'Okra soup with ugu leaves'], ['Protein', 'Mackerel or stockfish'], ['Starch', 'Eba or pounded yam the size of a tennis ball']], tip: 'Try to finish eating 2–3 hours before bed.' }
+    ];
+    let medIdx = 0;
+    const cMeals = meals.map((m, i) => {
+      const open = s.cOpen === i; const mi = m.med ? medIdx++ : -1; const taken = !!s.cTaken[mi];
+      return { ...m, open, cta: open ? 'Close' : 'See plate', border: open ? '#0b6e4f' : '#d6cfc4', hasMed: m.med,
+        plate: m.plate.map(([part, food], j) => ({ part, food, color: ['#0b6e4f', '#4d7f6d', '#8a6a2e'][j] })),
+        medBg: taken ? '#0b6e4f' : '#fff', medFg: taken ? '#fff' : '#0b6e4f', medLabel: taken ? 'Taken ✓' : 'Mark taken',
+        toggle: () => this.setState({ cOpen: open ? -1 : i }),
+        take: () => this.setState(p => ({ cTaken: { ...p.cTaken, [mi]: !p.cTaken[mi] } })) };
+    });
+
+    return {
+      aTabs, aList, aModes, aModeNote: MODES[s.aMode],
+      bFood, bQ: s.bQ, bType: e => this.setState({ bQ: e.target.value }), bSug, bShowSug: !!q, bNoSug: !!q && !bSug.length, bRecent,
+      cMeals, cTakenCount: Object.values(s.cTaken).filter(Boolean).length, cDone: 3,
+      ...this.flowVals(),
+      ...this.todayVals(),
+      ...this.turn4Vals(),
+      ...this.uVals()
+    };
+  }
+}
+</script>
+</body>
+</html>
