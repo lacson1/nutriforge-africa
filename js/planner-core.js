@@ -15,3 +15,17 @@ function plannerPut(store,date,meal,snapshot){
   if(!plannerWeek(date).length||!['breakfast','lunch','dinner'].includes(meal)||!snapshot)return null;
   var next=JSON.parse(JSON.stringify(store||{}));if(!next[date])next[date]={};next[date][meal]=JSON.parse(JSON.stringify(snapshot));return next;
 }
+
+// Keep prepared foods distinct: planned grams are not raw shopping weights.
+function plannerShoppingList(store,anchor,lookup){
+  var totals={};
+  plannerWeek(anchor).forEach(function(date){['breakfast','lunch','dinner'].forEach(function(meal){
+    var slot=(store[date]||{})[meal];if(!slot||!Array.isArray(slot.items))return;
+    slot.items.forEach(function(item){var food=lookup[item.id],g=Number(item.grams);if(!food||!Number.isFinite(g)||g<=0)return;
+      if(!totals[item.id])totals[item.id]={id:Number(item.id),name:food.name,grams:0,meals:0};
+      totals[item.id].grams+=g;totals[item.id].meals++;
+    });
+  });});
+  return Object.values(totals).map(function(item){item.grams=Math.round(item.grams*100)/100;return item;}).sort(function(a,b){return a.name.localeCompare(b.name);});
+}
+function plannerShoppingChecked(item,checks){return checks[item.id]===item.grams;}
