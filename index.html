@@ -747,7 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=28">
+<link rel="stylesheet" href="layout.css?v=29">
 </head>
 <body>
 
@@ -2999,8 +2999,8 @@ function tog(id){
   var el=document.getElementById('c'+id);
   if(!el)return;
   var wasOpen=el.classList.contains('open');
-  document.querySelectorAll('.card.open').forEach(function(c){c.classList.remove('open')});
-  if(!wasOpen){el.classList.add('open');el.scrollIntoView({behavior:'smooth',block:'nearest'})}
+  document.querySelectorAll('.card.open').forEach(function(c){c.classList.remove('open');var b=c.querySelector('.card-details-toggle');if(b)b.setAttribute('aria-expanded','false')});
+  if(!wasOpen){el.classList.add('open');var b=el.querySelector('.card-details-toggle');if(b)b.setAttribute('aria-expanded','true');el.scrollIntoView({behavior:'smooth',block:'nearest'})}
 }
 function switchTab(tid,pane,btn){
   var card=btn.closest('.card');
@@ -4130,7 +4130,7 @@ var render = (function(){
         '<div class="card-emoji-wrap">'+f.emoji+'</div>'+
         '<div class="card-identity">'+
           '<div class="card-name">'+safeHtml(f.name)+'</div>'+
-          '<div class="card-cat-row"><span class="card-cat '+getCatCls(f.cat)+'">'+safeHtml(f.catLabel)+'</span>'+(f.nigeria?'<span class="card-nigeria-tag">Nigeria</span>':'')+(f.african?'<span class="card-african-tag">African</span>':'')+'</div>'+
+          '<div class="card-cat-row"><span class="card-cat '+getCatCls(f.cat)+'">'+safeHtml(f.catLabel)+'</span>'+(f.nigeria?'<span class="card-nigeria-tag">Nigeria</span>':'')+(f.african&&!f.nigeria?'<span class="card-african-tag">African</span>':'')+'</div>'+
         '</div>'+
         drugPillHtml+
       '</div>'+
@@ -4147,11 +4147,12 @@ var render = (function(){
       '</div>'+
       '<div class="card-hover-actions" onclick="event.stopPropagation()">'+
         '<button class="ca-btn'+(isFavourite(f.id)?' fav-active':'')+'" onclick="toggleFavourite('+f.id+')" title="Save">'+(isFavourite(f.id)?'★':'☆')+' Save</button>'+
-        '<button class="ca-btn'+(inCompare?' compare-active':'')+'" onclick="toggleCompare('+f.id+')" title="Compare">'+(inCompare?'✓':'⚖')+' Compare</button>'+
+        '<button class="ca-btn card-extra-action'+(inCompare?' compare-active':'')+'" onclick="toggleCompare('+f.id+')" title="Compare">'+(inCompare?'✓':'⚖')+' Compare</button>'+
         '<button class="ca-btn'+(inPlate?' plate-active':'')+'" onclick="togglePlate('+f.id+')" title="'+(inPlate?'On your plate — tap to remove':'Add to My Plate')+'">'+(inPlate?'✓ On plate':'+ Plate')+'</button>'+
-        '<button class="ca-btn" onclick="logFoodToDiaryFromCard('+f.id+');event.stopPropagation()" title="Log to diary (uses portion if set)">Log</button>'+
-        '<button class="ca-btn" onclick="shareFood('+f.id+')" title="Share">↗</button>'+
+        '<button class="ca-btn card-extra-action" onclick="logFoodToDiaryFromCard('+f.id+');event.stopPropagation()" title="Log to diary (uses portion if set)">Log</button>'+
+        '<button class="ca-btn card-extra-action" onclick="shareFood('+f.id+')" title="Share">↗</button>'+
       '</div>'+
+      '<button type="button" class="card-details-toggle" aria-expanded="false" onclick="event.stopPropagation();tog('+f.id+')">Food details <span aria-hidden="true">↕</span></button>'+
       '<div class="expand">'+
         '<div class="exp-tabs" onclick="event.stopPropagation()">'+
           '<button class="exp-tab active" onclick="switchTab(\''+tid+'\',\'nutrition\',this)">Nutrition</button>'+
