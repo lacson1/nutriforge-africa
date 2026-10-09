@@ -592,3 +592,5 @@ body.has-plate-tray .card button{scroll-margin-top:90px;scroll-margin-bottom:130
 @media(max-width:480px){.combo-meal-card{padding:16px}.combo-meal-intro h2{font-size:26px}}
 
 #comboMealUndo[hidden]{display:none}
+.combo-meal-plan{display:block;width:100%;justify-content:center;padding:12px!important;margin:8px 0 12px;white-space:normal}
+.planner-source-preview{background:var(--surface);border:1px solid var(--card-border);border-radius:10px;padding:14px;font-size:12px;line-height:1.6}.planner-source-preview:empty{display:none}.planner-source-preview ul{padding-left:18px;margin-bottom:0}
