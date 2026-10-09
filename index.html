@@ -747,7 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=27">
+<link rel="stylesheet" href="layout.css?v=28">
 </head>
 <body>
 
@@ -845,22 +845,25 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
   <div class="welcome-summary"><p id="welcomeStatus">Your next meal starts here.</p><button type="button" id="welcomeToggle" aria-expanded="true" aria-controls="welcomeBody" onclick="toggleWelcome()">Hide welcome</button></div>
   <div class="welcome-body" id="welcomeBody">
     <div class="welcome-copy">
-      <h2 id="welcomeTitle">Build a better plate with foods you know.</h2>
-      <p class="welcome-lead">Explore African and global foods, plan meals and track your day.</p>
-      <div class="welcome-actions"><button type="button" class="welcome-primary" onclick="openCommunityStart()">1 · Choose a goal</button><button type="button" class="welcome-secondary" id="welcomePlateAction" onclick="openDrawer('plate')">Build my plate <span aria-hidden="true">→</span></button></div>
-      <div class="welcome-paths">
-        <button type="button" onclick="openDrawer('planner')"><strong>Plan your week <span aria-hidden="true">→</span></strong><span>Breakfast, lunch and dinner.</span></button>
-        <button type="button" onclick="openDrawer('meals')"><strong>Try a meal template <span aria-hidden="true">→</span></strong><span>Start with a ready-made idea.</span></button>
-        <button type="button" onclick="openDrawer('diary')"><strong>Your daily diary <span aria-hidden="true">→</span></strong><span>Log meals and follow your day.</span></button>
+      <h2 id="welcomeTitle">Eat well. Start with your plate.</h2>
+      <p class="welcome-lead">Familiar foods. Clear nutrition. A plan that fits your week.</p>
+      <div class="welcome-actions"><button type="button" class="welcome-primary" onclick="openCommunityStart()">Choose a health goal</button><button type="button" class="welcome-secondary" id="welcomePlateAction" onclick="openDrawer('plate')">Build my plate <span aria-hidden="true">→</span></button></div>
+      <div class="welcome-paths" aria-label="More ways to start">
+        <button type="button" onclick="openDrawer('planner')">Weekly planner <span aria-hidden="true">↗</span></button>
+        <button type="button" onclick="exploreWelcomeFoods()">Explore foods <span aria-hidden="true">↓</span></button>
       </div>
     </div>
     <div class="welcome-demo">
-      <h3>Try a plate</h3><p>Adjust the portions. See the totals change.</p>
-      <div class="welcome-demo-body"><div id="welcomePlateVisual" class="welcome-plate" role="img"></div><div id="welcomeIngredients" class="welcome-ingredients"></div></div>
+      <div class="welcome-demo-heading"><h3>A little inspiration</h3><span>EXAMPLE PLATE</span></div>
+      <div class="welcome-preview"><div id="welcomePlateVisual" class="welcome-plate" role="img"></div><div><p class="welcome-food-names">Brown rice<br>Cowpeas<br>Tomatoes</p><p class="welcome-preview-note">Everyday foods, brought together.</p></div></div>
       <div id="welcomeNutrition" class="welcome-nutrition" aria-live="polite" aria-atomic="true"></div>
-      <p id="welcomeFeedback" role="status"></p>
-      <button type="button" class="welcome-primary welcome-add" onclick="addWelcomePlate()">Add example to my plate <span aria-hidden="true">→</span></button>
-      <p class="welcome-footnote">Adds to your current plate. Review nutrition and portions in My Plate.</p>
+      <details class="welcome-customize"><summary>Make this plate yours <span aria-hidden="true">+</span></summary>
+        <p>Adjust the portions, then add to My Plate.</p>
+        <div id="welcomeIngredients" class="welcome-ingredients"></div>
+        <p id="welcomeFeedback" role="status"></p>
+        <button type="button" class="welcome-primary welcome-add" onclick="addWelcomePlate()">Add example to my plate <span aria-hidden="true">→</span></button>
+        <p class="welcome-footnote">Adds to your current plate. You can adjust it in My Plate.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -1169,7 +1172,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <script src="js/foods-data.js?v=12"></script>
 <script src="js/search-core.js?v=12"></script>
 <script src="js/filter-core.js?v=12"></script>
-<script src="js/welcome.js?v=16"></script>
+<script src="js/welcome.js?v=17"></script>
 <script src="js/meals-core.js"></script>
 <script src="js/planner-core.js?v=2"></script>
 <script src="js/planner-ui.js?v=3"></script>
