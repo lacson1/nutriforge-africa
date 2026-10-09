@@ -1,6 +1,7 @@
 /* One query for the visible list, CSV export and assistant food context. */
 function queryFoods(items, state, matchesSearch, relevance) {
   var list = items.filter(function(f) {
+    if(f.duplicateOf && state.scope !== "favourites") return false;
     if(state.scope === 'african' && !f.african) return false;
     if(state.scope === 'nigeria' && !f.nigeria) return false;
     if(state.scope === 'dishes' && !f.browseAsDish) return false;
