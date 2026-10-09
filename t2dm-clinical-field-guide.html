@@ -221,7 +221,10 @@
     };
   </script>
 
-  <script type="text/babel" data-presets="react">
+  <script>
+    Babel.registerPreset("nutriforge-react", { presets: [[Babel.availablePresets.react, { runtime: "classic" }]] });
+  </script>
+  <script type="text/babel" data-presets="nutriforge-react">
     const { useState, useMemo, useEffect, useCallback, useRef } = React;
     const ic = (n) => window.__lucideIcon(n);
     const Search = ic('Search'), X = ic('X'), BookOpen = ic('BookOpen');
