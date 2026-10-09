@@ -29,3 +29,12 @@ function plannerShoppingList(store,anchor,lookup){
   return Object.values(totals).map(function(item){item.grams=Math.round(item.grams*100)/100;return item;}).sort(function(a,b){return a.name.localeCompare(b.name);});
 }
 function plannerShoppingChecked(item,checks){return checks[item.id]===item.grams;}
+
+function plannerIngredientShoppingList(store,anchor,lookup,recipes,family,rawMode){
+ if(!Number.isInteger(family)||family<1||family>20)return [];
+ var totals={};
+ plannerShoppingList(store,anchor,lookup).forEach(function(item){var recipe=rawMode&&recipes[item.id],food=lookup[item.id];
+ var parts=recipe?recipe.ingredients.filter(function(p){return p.key!=='12_019';}).map(function(p){return {id:'raw-'+p.key,name:p.name,grams:item.grams*family*p.grams/recipe.yieldGrams,kind:'Raw / recipe ingredient'};}):[{id:'food-'+item.id,name:item.name,grams:item.grams*family,kind:rawMode&&(/boiled|cooked|porridge|sauce|stew|soup|fufu/i.test(food.name)||/dish/i.test(food.catLabel||''))?'Prepared weight — recipe unavailable':'As listed / edible weight'}];
+ parts.forEach(function(p){if(!totals[p.id])totals[p.id]={id:p.id,name:p.name,grams:0,kind:p.kind};totals[p.id].grams+=p.grams;});
+ });return Object.values(totals).map(function(p){p.grams=Math.round(p.grams*10)/10;return p;}).sort(function(a,b){return a.kind.localeCompare(b.kind)||a.name.localeCompare(b.name);});
+}
