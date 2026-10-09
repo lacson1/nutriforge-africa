@@ -560,3 +560,9 @@ body.has-plate-tray{padding-bottom:120px}body.has-plate-tray #cardActionStatus{b
 @media print{#livePlateTray{display:none!important}}
 body.has-plate-tray .card button{scroll-margin-top:90px;scroll-margin-bottom:130px}
 @media(max-width:760px){body.has-plate-tray .card button{scroll-margin-bottom:220px}}
+
+.swap-card .swap-reason{font-size:13px;line-height:1.6;color:var(--text-secondary);margin:8px 0 16px}
+.swap-quick{display:grid;grid-template-columns:1fr auto;align-items:center;gap:7px;padding:14px;background:var(--surface);border-radius:10px;margin-bottom:16px}.swap-quick>span{font-size:12px;color:var(--text-secondary)}.swap-quick strong{font-size:19px;font-variant-numeric:tabular-nums}.swap-quick strong span{font-weight:400;color:var(--text-secondary);margin:0 8px}.swap-quick small{grid-column:1/-1;text-align:right;color:var(--text-secondary);font-size:10px}
+.swap-full-nutrients{margin:0 0 16px}.swap-full-nutrients summary{font-size:12px;color:var(--text-secondary);cursor:pointer;padding:6px 0;min-height:24px}.swap-full-nutrients[open] summary{margin-bottom:8px}
+.swap-card .swap-action{white-space:normal;justify-content:center;line-height:1.5;min-height:44px;padding:10px 14px;font-size:13px}
+.swap-action-note{text-align:center;font-size:11px;line-height:1.6;color:var(--text-secondary);margin:8px 0 0}

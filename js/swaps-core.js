@@ -37,3 +37,12 @@ function undoFoodSwap(plate, portions, change) {
   if(change.replaced){nextPlate[change.source.id]=change.source;nextPortions[change.source.id]=change.sourcePortion;}
   return {plate:nextPlate,portions:nextPortions};
 }
+
+function foodSwapReason(source,target,goal,grams){
+  var labels={fiber:'fibre',protein:'protein',carbs:'carbs',kcal:'calories'};
+  if(!labels[goal])return 'Same food category, compared at the same weight.';
+  var before=Math.round(source[goal]*grams/10)/10,after=Math.round(target[goal]*grams/10)/10;
+  var difference=Math.round(Math.abs(after-before)*10)/10;
+  if(!difference)return 'Less than 0.1 '+(goal==='kcal'?'kcal':'g '+labels[goal])+' difference at this portion.';
+  return difference+(goal==='kcal'?'':' g')+' '+(after>before?'more ':goal==='fiber'||goal==='protein'?'less ':'fewer ')+labels[goal]+' at '+grams+' g.';
+}
