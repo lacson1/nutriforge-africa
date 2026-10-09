@@ -747,7 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=30">
+<link rel="stylesheet" href="layout.css?v=31">
 </head>
 <body>
 
@@ -1178,7 +1178,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <script src="js/planner-ui.js?v=3"></script>
 <script src="js/guide-bridge.js?v=1"></script>
 <script src="js/swaps-core.js?v=3"></script>
-<script src="js/swaps-ui.js?v=4"></script>
+<script src="js/swaps-ui.js?v=5"></script>
 <script src="js/scoring-core.js?v=12"></script>
 <script>
 // ── ENRICHMENT (classifyDrug, calcLongevity, confStars — ./js/scoring-core.js?v=12)
@@ -2002,11 +2002,12 @@ function closeDrawer(restoreFocus){
   drawer.inert=true;
   drawer.setAttribute('aria-hidden','true');
   drawer.classList.remove('open');
-  if(restoreFocus!==false && drawerReturnFocus && drawerReturnFocus.isConnected)drawerReturnFocus.focus();
+  if(restoreFocus!==false && drawerReturnFocus){if(drawerReturnFocus.isConnected)drawerReturnFocus.focus({preventScroll:true});else{var oldCard=drawerReturnFocus.closest('.card'),newCard=oldCard&&document.getElementById(oldCard.id);if(newCard)newCard.querySelector('.card-name').focus({preventScroll:true});}}
   drawerReturnFocus=null;
   backdrop.classList.remove('visible');
   document.querySelectorAll('.ha-btn').forEach(function(b){b.classList.remove('active-drawer')});
   activeDrawer = null;
+  updatePlateTray();
   // Reset mobile nav to Browse
   var browseBtn = document.querySelector('.mnav-btn');
   if(browseBtn){document.querySelectorAll('.mnav-btn').forEach(function(b){b.classList.remove('active')});browseBtn.classList.add('active')}
@@ -2994,6 +2995,17 @@ function clearAll(){
   render();
 }
 
+function updatePlateTray(){
+  var tray=document.getElementById('livePlateTray');
+  if(!tray){tray=document.createElement('section');tray.id='livePlateTray';tray.setAttribute('aria-label','Current plate summary');tray.innerHTML='<div class="plate-tray-copy"><strong id="plateTrayCount"></strong><span id="plateTrayFoods"></span><span id="plateTrayTotals" role="status" aria-live="polite"></span></div><div class="plate-tray-actions"><button type="button" class="welcome-primary" onclick="openDrawer(\'plate\')">Review plate</button><button type="button" class="welcome-secondary" onclick="openDrawer(\'planner\')">Plan meal</button></div>';document.body.appendChild(tray);}
+  var ids=Object.keys(plateMap);tray.hidden=!ids.length;document.body.classList.toggle('has-plate-tray',!!ids.length);if(!ids.length)return;
+  var totals=computeMealTotals(ids.map(function(id){return {id:Number(id),g:portionSizes[id]||100};}));
+  var names=ids.map(function(id){return plateMap[id].name;}).join(' · ');
+  document.getElementById('plateTrayCount').textContent='My plate · '+ids.length+' food'+(ids.length===1?'':'s');
+  var foodsEl=document.getElementById('plateTrayFoods');foodsEl.textContent=names;foodsEl.title=names;
+  document.getElementById('plateTrayTotals').textContent=totals.kcal+' kcal · '+totals.protein+' g protein · '+totals.fiber+' g fibre';
+}
+
 // ── CARD INTERACTION ──
 function setCardExpanded(card,open){
   card.classList.toggle('open',open);
@@ -3924,6 +3936,7 @@ function changePortion(foodId,delta){
     vals.forEach(function(el,i){if(fields[i]){var raw=Math.round(food[fields[i]]*mult*10)/10;var unitSpan=el.querySelector('span');el.textContent=String(raw);if(unitSpan)el.appendChild(unitSpan)}});
   }
   if(activeDrawer==='plate'&&plateMap[foodId])updatePlatePanel();
+  updatePlateTray();
   refreshTodayDashboard();
 }
 
@@ -4033,6 +4046,7 @@ var render = (function(){
     var cardState=captureCardInteraction();
     updateBrowseHero();
     updateWelcome();
+    updatePlateTray();
     var suggestions=document.getElementById('searchSugList');if(suggestions)suggestions.style.display='none';
     updateContextBadge();
     document.querySelectorAll('.filter-row .chip[data-cat]').forEach(function(el){el.setAttribute('aria-pressed',el.dataset.cat===filter?'true':'false');});
@@ -4181,6 +4195,7 @@ var render = (function(){
         '<button class="ca-btn card-extra-action" onclick="logFoodToDiaryFromCard('+f.id+');event.stopPropagation()" title="Log to diary (uses portion if set)">Log</button>'+
         '<button class="ca-btn card-extra-action" onclick="shareFood('+f.id+')" title="Share">↗</button>'+
       '</div>'+
+      '<div class="card-swap-row"><button type="button" class="card-swap-trigger" onclick="openCardSwap('+f.id+')" aria-label="Find swaps for '+safeHtml(f.name)+'">Find a swap <span aria-hidden="true">⇄</span></button></div>'+
       '<button type="button" class="card-details-toggle" data-card-toggle aria-controls="food-details-'+f.id+'" aria-expanded="false" onclick="event.stopPropagation();tog('+f.id+')">Food details <span aria-hidden="true">+</span></button>'+
       '<div class="expand" id="food-details-'+f.id+'">'+
         '<div class="exp-tabs" onclick="event.stopPropagation()">'+
