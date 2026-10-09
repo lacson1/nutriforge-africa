@@ -29,6 +29,7 @@
       .print-only { display: block !important; }
       * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     }
+    .guide-focus-feedback{margin:16px clamp(16px,4vw,48px);padding:14px 18px;border:1px solid;display:flex;align-items:center;justify-content:space-between;gap:14px;border-radius:10px;font-size:13px}.guide-focus-feedback p{margin:5px 0 0;line-height:1.5}.guide-focus-feedback button{padding:10px 12px;border:1px solid;border-radius:6px;background:transparent;font:inherit;cursor:pointer;flex-shrink:0}@media(max-width:640px){.guide-focus-feedback{align-items:flex-start;flex-direction:column}}
     /* Loading splash */
     #boot-splash {
       position: fixed; inset: 0;
@@ -3383,13 +3384,12 @@ function T2DMFoodGuideV3() {
     return () => window.removeEventListener("keydown", onKey);
   }, [selected, showCompare, showHelp, toggleFavourite, toggleCompare, handlePrint]);
 
-  // ── URL hash sync (read once on mount, write on change) ──
+  // Read initial and parent-frame navigation; local changes use replaceState.
   useEffect(() => {
-    if (hydratedRef.current) return;
+    const readGuideLocation = () => {
     hydratedRef.current = true;
     try {
       const hash = (typeof window !== "undefined" && window.location.hash) || "";
-      if (!hash) return;
       const raw = hash.replace(/^#/, "");
       const params = new URLSearchParams(raw);
       const stateParam = params.get("state") || params.get("patient");
@@ -3411,8 +3411,12 @@ function T2DMFoodGuideV3() {
       const themeParam = params.get("theme");
       if (themeParam === "dark" || themeParam === "light") setTheme(themeParam);
       const viewParam = params.get("view");
-      if (viewParam && ["foods","principles","builder","saved"].includes(viewParam)) setView(viewParam);
+      setView(["foods","principles","builder","saved"].includes(viewParam) ? viewParam : "foods");
     } catch {}
+    };
+    readGuideLocation();
+    window.addEventListener("hashchange", readGuideLocation);
+    return () => window.removeEventListener("hashchange", readGuideLocation);
   }, []);
 
   useEffect(() => {
@@ -3534,6 +3538,11 @@ function T2DMFoodGuideV3() {
           }}
           palette={palette}
         />
+
+        <section className="guide-focus-feedback" style={{ background: palette.surface, color: palette.text, borderColor: palette.borderSoft }} aria-label="Selected focus">
+          <div role="status" aria-live="polite"><strong>{stateLabel} focus</strong><p>{patientState === "all" ? "Showing general food guidance." : "Selected food guidance: " + stateLabel + "."} {view === "principles" ? "The core principles stay the same across focuses." : "Your selected focus carries across the guide."}</p></div>
+          {view !== "foods" && <button type="button" onClick={() => navigateView("foods")} style={{ color: palette.accentDeep, borderColor: palette.border }}>Browse foods for this focus →</button>}
+        </section>
 
         <TabBar
           tabs={TABS}
