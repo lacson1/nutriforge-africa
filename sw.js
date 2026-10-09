@@ -1,8 +1,8 @@
 /* NutriForge — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-layout-31';
+var CACHE_NAME = 'nutriforge-layout-32';
 var PRECACHE = [
   './index.html',
-  './layout.css?v=30',
+  './layout.css?v=31',
   './landing.html',
   './manifest.json',
   './t2dm-clinical-field-guide.html?v=21',
@@ -15,7 +15,7 @@ var PRECACHE = [
   './js/guide-bridge.js?v=1',
   './js/planner-core.js?v=2',
   './js/planner-ui.js?v=3',
-  './js/swaps-ui.js?v=4',
+  './js/swaps-ui.js?v=5',
   './js/welcome.js?v=17',
   './js/scoring-core.js?v=12',
 ];

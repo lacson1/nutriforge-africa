@@ -548,3 +548,15 @@ body .filter-row .chip.active, body.dark-mode .filter-row .chip.active { backgro
 #cardActionStatus{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:2000;max-width:calc(100vw - 40px);width:max-content;box-sizing:border-box;padding:13px 20px;border:1px solid var(--card-border);border-radius:12px;background:var(--card-bg);color:var(--text-primary);box-shadow:0 8px 30px #0002;font-size:13px;line-height:1.5;pointer-events:none}
 #cardActionStatus[hidden]{display:none}
 @media(max-width:760px){#cardActionStatus{bottom:86px}}
+
+.card-swap-row{padding:0 18px}.card-swap-trigger{width:100%;padding:10px 0;display:flex;justify-content:space-between;border:0;background:transparent;color:var(--accent-green);font:inherit;font-size:12px;cursor:pointer;text-align:left;min-height:40px}
+.grid.view-list .card:not(.open) .card-swap-row{padding:0 10px;flex-shrink:0}.grid.view-list .card:not(.open) .card-swap-trigger{gap:8px;font-size:10px}
+#livePlateTray{position:fixed;bottom:16px;left:24px;right:24px;z-index:95;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 20px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;box-shadow:0 4px 24px #0002}
+#livePlateTray[hidden],body:has(.drawer.open) #livePlateTray{display:none}
+.plate-tray-copy{min-width:0;display:grid;gap:5px}.plate-tray-copy strong{font-size:14px}.plate-tray-copy>span{font-size:12px;color:var(--text-secondary)}
+#plateTrayFoods{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:650px}.plate-tray-actions{display:flex;gap:10px;flex-shrink:0}.plate-tray-actions button{font-size:12px;min-height:40px;padding:10px 16px}
+body.has-plate-tray{padding-bottom:120px}body.has-plate-tray #cardActionStatus{bottom:130px}body.has-plate-tray #bttBtn{bottom:130px}
+@media(max-width:760px){#livePlateTray{bottom:70px;left:10px;right:10px;padding:12px;gap:10px;flex-wrap:wrap}.plate-tray-copy{width:100%}.plate-tray-actions{width:100%}.plate-tray-actions button{flex:1}#plateTrayFoods{display:none}.plate-tray-copy strong{font-size:13px}.plate-tray-copy>span{font-size:11px}body.has-plate-tray{padding-bottom:210px}body.has-plate-tray #cardActionStatus,body.has-plate-tray #bttBtn{bottom:210px}}
+@media print{#livePlateTray{display:none!important}}
+body.has-plate-tray .card button{scroll-margin-top:90px;scroll-margin-bottom:130px}
+@media(max-width:760px){body.has-plate-tray .card button{scroll-margin-bottom:220px}}

@@ -69,3 +69,10 @@ function undoLastFoodSwap(){
   plateMap=next.plate;portionSizes=next.portions;lastFoodSwap=null;savePersistence();render();renderSwapPlateChoices();renderSwapResults();
   document.getElementById('swapStatus').textContent='Swap undone. Your previous portion is restored.';
 }
+
+function openCardSwap(id){
+  if(!foodsById[id])return;
+  openDrawer('swaps');
+  pickPlateSwap(id);
+  document.getElementById('swapSource').focus();
+}
