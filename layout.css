@@ -566,3 +566,29 @@ body.has-plate-tray .card button{scroll-margin-top:90px;scroll-margin-bottom:130
 .swap-full-nutrients{margin:0 0 16px}.swap-full-nutrients summary{font-size:12px;color:var(--text-secondary);cursor:pointer;padding:6px 0;min-height:24px}.swap-full-nutrients[open] summary{margin-bottom:8px}
 .swap-card .swap-action{white-space:normal;justify-content:center;line-height:1.5;min-height:44px;padding:10px 14px;font-size:13px}
 .swap-action-note{text-align:center;font-size:11px;line-height:1.6;color:var(--text-secondary);margin:8px 0 0}
+
+/* Practical combinations */
+.combo-meal-intro h2{font-family:Georgia,serif;font-size:30px;line-height:1.15;margin:6px 0 12px}
+.combo-meal-intro p{font-size:13px;line-height:1.6;color:var(--text-secondary)}
+.combo-meal-search{display:block;font-size:12px;font-weight:600;margin:20px 0 8px}
+.combo-meal-search input{display:block;width:100%;margin-top:8px;box-sizing:border-box}
+.combo-meal-help{font-size:11px!important}
+.combo-meal-tools{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.combo-meal-card{background:var(--card-bg,var(--surface));border:1px solid var(--card-border);border-radius:16px;padding:20px;margin:14px 0}
+.combo-meal-card h3{font-family:Georgia,serif;font-size:23px;line-height:1.25;margin:8px 0}
+.combo-meal-tag{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent-green)}
+.combo-meal-size{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;margin:18px 0}
+.combo-meal-size select{font:inherit;color:var(--text-primary);background:var(--surface);border:1px solid var(--card-border);border-radius:8px;padding:10px;max-width:70%}
+.combo-meal-card ul{list-style:none;padding:0;margin:14px 0}
+.combo-meal-card li{display:flex;justify-content:space-between;gap:12px;font-size:12px;line-height:1.5;border-bottom:1px solid var(--card-border);padding:9px 0}
+.combo-meal-card li strong{white-space:nowrap;font-weight:500}
+.combo-meal-nutrition{background:var(--surface);padding:12px;border-radius:8px;font-weight:600;color:var(--text-primary)!important}
+.combo-meal-card summary,.combo-pairing-library>summary{cursor:pointer;font-size:12px;padding:10px 0}
+.combo-meal-add{display:block;width:100%;margin:16px 0 8px;padding:12px!important;background:var(--accent-green)!important;color:white!important;white-space:normal!important}
+.combo-meal-add:disabled{opacity:.55;cursor:default}
+.combo-meal-card small{display:block;font-size:11px;line-height:1.5;color:var(--text-secondary)}
+.combo-pairing-library{margin-top:24px;border-top:1px solid var(--card-border);padding-top:12px}
+.combo-pairing-library>summary{font-weight:600;margin-bottom:12px}
+@media(max-width:480px){.combo-meal-card{padding:16px}.combo-meal-intro h2{font-size:26px}}
+
+#comboMealUndo[hidden]{display:none}

@@ -747,7 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=32">
+<link rel="stylesheet" href="layout.css?v=34">
 </head>
 <body>
 
@@ -1174,6 +1174,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <script src="js/filter-core.js?v=13"></script>
 <script src="js/welcome.js?v=17"></script>
 <script src="js/meals-core.js"></script>
+<script src="js/combinations.js?v=1"></script>
 <script src="js/planner-core.js?v=2"></script>
 <script src="js/planner-ui.js?v=3"></script>
 <script src="js/guide-bridge.js?v=1"></script>
@@ -1959,7 +1960,7 @@ function openDrawer(name){
   else if(name==='ai') body.innerHTML = buildAIDrawer();
   else if(name==='plate') body.innerHTML = buildPlateDrawer();
   else if(name==='compare'){body.innerHTML = buildCompareDrawer();updateComparePanel();}
-  else if(name==='combos'){body.innerHTML = buildCombosDrawer();renderCombos();wireCombosEvents();}
+  else if(name==='combos'){body.innerHTML = buildCombosDrawer();renderComboMeals();renderCombos();wireCombosEvents();}
   else if(name==='chart'){body.innerHTML = '<div id="densityChart"></div>';setTimeout(buildDensityChart,50);}
   else if(name==='diary'){body.innerHTML = buildDiaryDrawer();refreshDiaryView();}
   else if(name==='meals'){body.innerHTML = buildMealsDrawer();renderMealTemplatesIfOpen();}
@@ -1970,7 +1971,6 @@ function openDrawer(name){
     ai:['Ask, explore, understand.','Nutrition questions, with your current foods and plate in context.'],
     diary:['Your day, in view.','Keep track of meals and see progress towards your daily targets.'],
     compare:['Find your best fit.','Compare up to three foods on the same 100 g basis.'],
-    combos:['Better together.','Explore food pairings and the evidence behind them.'],
     meals:['A starting point for your next meal.','Browse ready-made plates, then make them your own.'],
     drugs:['Check before you combine.','Explore the database’s educational medication flags.'],
     profiles:['A workspace for each client.','Keep food preferences, targets and visit notes organised.'],
@@ -2766,9 +2766,9 @@ function maybeOpenCommunityStart(){
 }
 
 function buildCombosDrawer(){
-  return '<input class="combo-search" aria-label="Search combinations" id="comboSearch" placeholder="Search combinations...">' +
+  return buildComboMealIdeas()+'<details class="combo-pairing-library"><summary>Explore food pairing explanations</summary><input class="combo-search" aria-label="Search combinations" id="comboSearch" placeholder="Search combinations...">' +
     '<div class="combo-filters" id="comboFilters"><button type="button" class="combo-chip active" data-ctype="all">All</button><button type="button" class="combo-chip" data-ctype="absorption">Absorption</button><button type="button" class="combo-chip" data-ctype="antiinflam">Anti-inflammatory</button><button type="button" class="combo-chip" data-ctype="gut">Gut</button><button type="button" class="combo-chip" data-ctype="glycaemic">Glycaemic</button><button type="button" class="combo-chip" data-ctype="cardiovascular">Cardio</button><button type="button" class="combo-chip" data-ctype="longevity">Longevity</button><button type="button" class="combo-chip" data-ctype="brain">Brain</button><button type="button" class="combo-chip" data-ctype="bone">Bone</button><button type="button" class="combo-chip" data-ctype="african">African</button><button type="button" class="combo-chip" data-ctype="med">Mediterranean</button></div>' +
-    '<div class="combo-count" id="comboCount"></div><div class="combos-grid" id="combosGrid"></div>';
+    '<div class="combo-count" id="comboCount"></div><div class="combos-grid" id="combosGrid"></div></details>';
 }
 
 // ── OVERFLOW MENU ──
