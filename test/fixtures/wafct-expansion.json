@@ -1,0 +1,338 @@
+[
+  {
+    "id": 403,
+    "sourceCode": "01_069",
+    "sourceName": "Rice, white, polished, boiled* (without salt), drained",
+    "raw": {
+      "H": "118",
+      "J": "2.3",
+      "K": "0.2",
+      "L": "26.4",
+      "M": "0.6"
+    }
+  },
+  {
+    "id": 404,
+    "sourceCode": "01_003",
+    "sourceName": "Fonio, white, whole grains, boiled* (without salt), drained",
+    "raw": {
+      "H": "139",
+      "J": "2.9",
+      "K": "1.6",
+      "L": "24.9",
+      "M": "6.9"
+    }
+  },
+  {
+    "id": 405,
+    "sourceCode": "01_049",
+    "sourceName": "Fonio, black, whole grains, boiled* (without salt), drained",
+    "raw": {
+      "H": "138",
+      "J": "3.5",
+      "K": "[1.3]",
+      "L": "24.9",
+      "M": "6.9"
+    }
+  },
+  {
+    "id": 406,
+    "sourceCode": "01_051",
+    "sourceName": "Fonio, decorticated grains (bran removed), boiled* (without salt), drained",
+    "raw": {
+      "H": "148",
+      "J": "3.0",
+      "K": "0.7",
+      "L": "32.0",
+      "M": "0.9"
+    }
+  },
+  {
+    "id": 407,
+    "sourceCode": "02_003",
+    "sourceName": "Cassava, tuber, white flesh, boiled* (without salt), drained",
+    "raw": {
+      "H": "121",
+      "J": "1.1000000000000001",
+      "K": "0.3",
+      "L": "27",
+      "M": "3.2"
+    }
+  },
+  {
+    "id": 408,
+    "sourceCode": "02_052",
+    "sourceName": "Cassava, tuber, yellow flesh, boiled* (without salt), drained",
+    "raw": {
+      "H": "66",
+      "J": "0.6",
+      "K": "0.1",
+      "L": "14.2",
+      "M": "2.5"
+    }
+  },
+  {
+    "id": 409,
+    "sourceCode": "02_072",
+    "sourceName": "Sweet potato, orange flesh, boiled* (without salt), drained",
+    "raw": {
+      "H": "91",
+      "J": "1",
+      "K": "0.2",
+      "L": "19.8",
+      "M": "3"
+    }
+  },
+  {
+    "id": 410,
+    "sourceCode": "02_023",
+    "sourceName": "Sweet potato, pale flesh (white/cream/pale yellow), boiled* (without salt), drained",
+    "raw": {
+      "H": "96",
+      "J": "1.5",
+      "K": "0.2",
+      "L": "20.5",
+      "M": "3"
+    }
+  },
+  {
+    "id": 411,
+    "sourceCode": "03_007",
+    "sourceName": "Cowpea, not soaked, boiled* (without salt), drained",
+    "raw": {
+      "H": "122",
+      "J": "8.5",
+      "K": "0.5",
+      "L": "18.3",
+      "M": "4.7"
+    }
+  },
+  {
+    "id": 412,
+    "sourceCode": "03_026",
+    "sourceName": "Cowpea, black, not soaked, boiled* (without salt), drained",
+    "raw": {
+      "H": "113",
+      "J": "8.1999999999999993",
+      "K": "0.6",
+      "L": "14.8",
+      "M": "7.9"
+    }
+  },
+  {
+    "id": 413,
+    "sourceCode": "03_028",
+    "sourceName": "Cowpea, brown, not soaked, boiled* (without salt), drained",
+    "raw": {
+      "H": "122",
+      "J": "8.9",
+      "K": "[0.7]",
+      "L": "17.600000000000001",
+      "M": "4.8"
+    }
+  },
+  {
+    "id": 414,
+    "sourceCode": "04_039",
+    "sourceName": "Jute mallow (bush-okra), leaves, fresh, boiled* (without salt), drained",
+    "raw": {
+      "H": "50",
+      "J": "4.4000000000000004",
+      "K": "[0.3]",
+      "L": "3.2",
+      "M": "8.4"
+    }
+  },
+  {
+    "id": 415,
+    "sourceCode": "04_042",
+    "sourceName": "Okra, fruit, fresh, boiled* (without salt), drained",
+    "raw": {
+      "H": "31",
+      "J": "1.5",
+      "K": "[0.2]",
+      "L": "3.8",
+      "M": "3.7"
+    }
+  },
+  {
+    "id": 416,
+    "sourceCode": "04_028",
+    "sourceName": "Cassava, leaves, fresh, boiled* (without salt), drained",
+    "raw": {
+      "H": "95",
+      "J": "7.7",
+      "K": "1.2",
+      "L": "9.3000000000000007",
+      "M": "8.1"
+    }
+  },
+  {
+    "id": 417,
+    "sourceCode": "04_030",
+    "sourceName": "Cowpea, leaves, fresh, boiled* (without salt), drained",
+    "raw": {
+      "H": "37",
+      "J": "4.5",
+      "K": "[0.3]",
+      "L": "1.8",
+      "M": "5"
+    }
+  },
+  {
+    "id": 418,
+    "sourceCode": "04_060",
+    "sourceName": "Sweet potato, leaves, fresh, boiled* (without salt), drained",
+    "raw": {
+      "H": "53",
+      "J": "4.8",
+      "K": "[0.2]",
+      "L": "5.0999999999999996",
+      "M": "5.5"
+    }
+  },
+  {
+    "id": 419,
+    "sourceCode": "01_102",
+    "sourceName": "Millet porridge, fermented (hausa koko/ben saalga), from whole millet grains only, cooked",
+    "raw": {
+      "H": "69",
+      "J": "0.9",
+      "K": "0.8",
+      "L": "8.9",
+      "M": "1.2"
+    }
+  },
+  {
+    "id": 420,
+    "sourceCode": "01_164",
+    "sourceName": "Jollof fonio (Burkina Faso)*: fonio with fish and vegetables",
+    "raw": {
+      "H": "143",
+      "J": "3.3",
+      "K": "6.0",
+      "L": "18.6",
+      "M": "1.0"
+    }
+  },
+  {
+    "id": 421,
+    "sourceCode": "01_156",
+    "sourceName": "Jollof macaroni (Burkina Faso)*: macaroni in tomato sauce with mutton",
+    "raw": {
+      "H": "201",
+      "J": "5.1",
+      "K": "[10.6]",
+      "L": "20.5",
+      "M": "1.6"
+    }
+  },
+  {
+    "id": 422,
+    "sourceCode": "03_144",
+    "sourceName": "Beng rougougdga (Burkina Faso)*: cowpeas and vegetables, boiled",
+    "raw": {
+      "H": "177",
+      "J": "7.2",
+      "K": "8.1999999999999993",
+      "L": "16.7",
+      "M": "4.2"
+    }
+  },
+  {
+    "id": 423,
+    "sourceCode": "03_150",
+    "sourceName": "Beng rougougdga né kui wesla (Burkina Faso)*: cowpeas and fonio, boiled",
+    "raw": {
+      "H": "207",
+      "J": "8.1999999999999993",
+      "K": "5.7",
+      "L": "28.6",
+      "M": "4.2"
+    }
+  },
+  {
+    "id": 424,
+    "sourceCode": "14_021",
+    "sourceName": "Babenda-1 (Burkina Faso)*: sauce from green leaves (amaranth, tchénébdo and hibiscus), groundnut powder, rice and onion",
+    "raw": {
+      "H": "69",
+      "J": "3.2",
+      "K": "3.0",
+      "L": "6.4",
+      "M": "2.1"
+    }
+  },
+  {
+    "id": 425,
+    "sourceCode": "14_008",
+    "sourceName": "Groundnut sauce with fish and vegetables (Burkina Faso)*",
+    "raw": {
+      "H": "166",
+      "J": "6.6",
+      "K": "12.5",
+      "L": "5.3",
+      "M": "2.6"
+    }
+  },
+  {
+    "id": 426,
+    "sourceCode": "14_019",
+    "sourceName": "Maân mâass zéindo (Burkina Faso)*: fresh okra sauce with fish, vegetables, red palm oil and fermented African locust beans",
+    "raw": {
+      "H": "74",
+      "J": "3.4",
+      "K": "5.2",
+      "L": "2.6",
+      "M": "1.6"
+    }
+  },
+  {
+    "id": 427,
+    "sourceCode": "14_004",
+    "sourceName": "Epinard zéédo (Burkina Faso)*: spinach sauce with fish and vegetables",
+    "raw": {
+      "H": "168",
+      "J": "6.7",
+      "K": "13.6",
+      "L": "3.5",
+      "M": "2.2"
+    }
+  },
+  {
+    "id": 428,
+    "sourceCode": "02_087",
+    "sourceName": "Kou né téhi kaam fufu (Burkina Faso)*: fufu of yam and red palm oil",
+    "raw": {
+      "H": "185",
+      "J": "2",
+      "K": "9",
+      "L": "21.8",
+      "M": "4.8"
+    }
+  },
+  {
+    "id": 429,
+    "sourceCode": "02_084",
+    "sourceName": "Plantain, deep fried in unfortified vegetable oil*",
+    "raw": {
+      "H": "375",
+      "J": "2.1",
+      "K": "16.899999999999999",
+      "L": "51.7",
+      "M": "3.7"
+    }
+  },
+  {
+    "id": 430,
+    "sourceCode": "01_174",
+    "sourceName": "Gappal (Burkina Faso)*: pearl millet porridge with milk and sugar",
+    "raw": {
+      "H": "129",
+      "J": "3.4",
+      "K": "3.0",
+      "L": "21.4",
+      "M": "1.2"
+    }
+  }
+]

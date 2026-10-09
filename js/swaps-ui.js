@@ -9,7 +9,7 @@ function buildSwapsDrawer(){
 }
 function filterSwapSources(term){
   var select=document.getElementById('swapSource'), previous=select.value;
-  var list=foods.filter(function(f){return (f.name+' '+(f.aka||'')).toLowerCase().includes((term||'').toLowerCase().trim());}).sort(function(a,b){return a.name.localeCompare(b.name);});
+  var list=foods.filter(function(f){return (!f.duplicateOf || plateMap[f.id]) && (f.name+' '+(f.aka||'')).toLowerCase().includes((term||'').toLowerCase().trim());}).sort(function(a,b){return a.name.localeCompare(b.name);});
   var retained=foodsById[previous];
   if(retained && !list.some(function(f){return f.id===retained.id;}))list.unshift(retained);
   document.getElementById('swapSearchCount').textContent=term?(list.filter(function(f){return (f.name+' '+(f.aka||'')).toLowerCase().includes(term.toLowerCase().trim());}).length+' matching foods — choose below.'):'';

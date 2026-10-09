@@ -8,16 +8,16 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const foodsPath = join(__dirname, '../js/foods-data.js');
 
 describe('foods-data.js', () => {
-  it('evaluates to an array of 402 foods with sequential ids', () => {
+  it('evaluates to an array of 430 foods with sequential ids', () => {
     const code = readFileSync(foodsPath, 'utf8');
     const ctx = { console };
     vm.createContext(ctx);
     vm.runInContext(code, ctx);
     expect(Array.isArray(ctx.foods)).toBe(true);
-    expect(ctx.foods.length).toBe(402);
+    expect(ctx.foods.length).toBe(430);
     expect(ctx.foods[0].id).toBe(1);
-    expect(ctx.foods[401].id).toBe(402);
-    expect(new Set(ctx.foods.map(f => f.id)).size).toBe(402);
+    expect(ctx.foods[429].id).toBe(430);
+    expect(new Set(ctx.foods.map(f => f.id)).size).toBe(430);
     for (const f of ctx.foods.slice(390)) {
       expect(f.sourceCode).toMatch(/^\d{2}_\d{3}$/);
       expect(f.sourceUrl).toContain('fao.org');

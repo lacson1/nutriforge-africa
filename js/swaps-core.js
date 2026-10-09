@@ -14,7 +14,7 @@ function findFoodSwaps(items, source, goal, africanOnly) {
   }
   var prep=preparation(source);
   return items.filter(function(f){
-    return f.id!==source.id && f.name.toLowerCase()!==source.name.toLowerCase() && preparation(f)===prep && f.cat===source.cat && !!f.browseAsDish===!!source.browseAsDish && valid(f) &&
+    return !f.duplicateOf && f.id!==(source.duplicateOf||source.id) && f.id!==source.id && f.name.toLowerCase()!==source.name.toLowerCase() && preparation(f)===prep && f.cat===source.cat && !!f.browseAsDish===!!source.browseAsDish && valid(f) &&
       (!africanOnly || f.african) && (!metric || (f[metric[0]]-source[metric[0]])*metric[1]>0.05);
   }).sort(function(a,b){
     function distance(f){return keys.reduce(function(sum,k){return sum+(metric && k===metric[0]?0:Math.abs(f[k]-source[k])/Math.max(1,source[k]));},0);}
