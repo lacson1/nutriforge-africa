@@ -538,3 +538,13 @@ body .filter-row .chip.active, body.dark-mode .filter-row .chip.active { backgro
 .card.open .card-details-toggle{border-bottom:1px solid var(--card-border)}
 .grid.view-list .card:not(.open) .card-details-toggle{width:auto;flex-shrink:0;padding:12px;font-size:10px}
 @media(max-width:480px){.grid:not(.view-list) .card-top{padding:16px 14px 10px}.grid:not(.view-list) .card-macros{margin-left:14px;margin-right:14px}.card .card-hover-actions{padding:10px 14px!important}.card .card-hover-actions .ca-btn{min-height:40px}.card-name{font-size:15px}}
+
+/* Explicit, stable card interactions. */
+.card{cursor:default}.card .card-name{border:0;padding:0;background:none;text-align:left;cursor:pointer;width:100%;color:var(--text-primary)}
+.card .card-name:hover{text-decoration:underline;text-underline-offset:3px}
+.card button:focus-visible{outline:2px solid var(--accent-green);outline-offset:2px}
+.card .card-name:focus-visible{outline-offset:4px}.card .ca-btn:active{transform:translateY(1px)}
+.card-details-toggle{min-height:40px;transition:background .15s ease}.card-details-toggle:hover{background:var(--surface)}
+#cardActionStatus{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:2000;max-width:calc(100vw - 40px);width:max-content;box-sizing:border-box;padding:13px 20px;border:1px solid var(--card-border);border-radius:12px;background:var(--card-bg);color:var(--text-primary);box-shadow:0 8px 30px #0002;font-size:13px;line-height:1.5;pointer-events:none}
+#cardActionStatus[hidden]{display:none}
+@media(max-width:760px){#cardActionStatus{bottom:86px}}
