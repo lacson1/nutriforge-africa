@@ -221,7 +221,10 @@
     };
   </script>
 
-  <script type="text/babel" data-presets="react">
+  <script>
+    Babel.registerPreset("nutriforge-react", { presets: [[Babel.availablePresets.react, { runtime: "classic" }]] });
+  </script>
+  <script type="text/babel" data-presets="nutriforge-react">
     const { useState, useMemo, useEffect, useCallback, useRef } = React;
     const ic = (n) => window.__lucideIcon(n);
     const Search = ic('Search'), X = ic('X'), BookOpen = ic('BookOpen');
@@ -2856,9 +2859,7 @@ function FilterBar({
 
         <div className="flex-1" />
 
-        <div className="text-[10px] uppercase tracking-[0.15em]" style={{ color: palette.textMuted }}>
-          {shownCount}/{totalCount} foods
-        </div>
+
       </div>
     </div>
   );
@@ -3541,7 +3542,6 @@ function T2DMFoodGuideV3() {
           palette={palette}
           theme={theme}
           counts={{
-            foods: filteredFoods.length,
             builder: mealItems.length,
             saved: favourites.size + compareIds.size,
           }}
@@ -3552,7 +3552,7 @@ function T2DMFoodGuideV3() {
           <div className="guide-home-copy">
             <div className="eyebrow" style={{ color: palette.accentDeep }}>Explore · understand · build</div>
             <h1 id="guide-home-title" className="display">Everyday foods.<br />More informed choices.</h1>
-            <p style={{ color: palette.textMuted }}>Explore {FOODS.length} foods, understand their tiers, and put your choices together in a meal. African staples and global favourites, in one practical guide.</p>
+            <p style={{ color: palette.textMuted }}>Explore foods, understand their tiers, and put your choices together in a meal. African staples and global favourites, in one practical guide.</p>
             <div className="guide-home-actions">
               <button onClick={() => { searchRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }); searchRef.current?.focus({ preventScroll: true }); }} style={{ background: palette.accentDeep, color: palette.surface }}>Find a food ↓</button>
               <button onClick={() => navigateView("builder")} style={{ background: palette.surface, color: palette.text, border: `1px solid ${palette.border}` }}>Build a meal →</button>
