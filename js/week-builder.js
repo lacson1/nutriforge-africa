@@ -1,0 +1,25 @@
+/* Reviewable week drafts; existing slots are kept until explicitly changed. */
+var comboWeekDraft=null;
+function makeComboWeekDraft(store,anchor,meals){
+ var breakfast=meals.filter(function(m){return ['koko-fruit','yogurt-papaya','gappal-orange'].includes(m.id);}),main=meals.filter(function(m){return !breakfast.includes(m);});
+ if(!breakfast.length||!main.length)return null;
+ var draft={};plannerWeek(anchor).forEach(function(date,i){draft[date]={};['breakfast','lunch','dinner'].forEach(function(slot,j){var choices=j?main:breakfast;draft[date][slot]={id:(store[date]||{})[slot]?'keep':choices[(i*(j?2:1)+Math.max(0,j-1))%choices.length].id,scale:1};});});return draft;
+}
+function applyComboWeekDraft(store,draft,anchor,meals,lookup){
+ var next=JSON.parse(JSON.stringify(store||{})),saved=0;
+ for(var date of plannerWeek(anchor)){for(var slot of ['breakfast','lunch','dinner']){var choice=draft&&draft[date]&&draft[date][slot];if(!choice||choice.id==='keep')continue;
+ var meal=meals.find(function(m){return m.id===choice.id;}),snapshot=comboPlannerSnapshot(meal,Number(choice.scale),lookup);if(!snapshot)return null;
+ next=plannerPut(next,date,slot,snapshot);saved++;
+ }}return {plan:next,saved:saved};
+}
+function weekBuilderScope(){return (activeProfileId||'personal')+':'+plannerWeek(plannerAnchor)[0];}
+function buildComboWeekSection(){return '<details id="comboWeekBuilder" class="combo-week-builder"><summary>Build a full week from combinations</summary><p>Start with meal ideas for seven days, then change any breakfast, lunch or dinner. Existing meals are kept unless you choose a replacement.</p><p class="swap-note">These are starting ideas, not a nutritionally complete or personalised diet. Adjust portions and add foods for your needs. Check ingredients for allergies.</p><button type="button" class="ca-btn" onclick="suggestComboWeek()">Suggest my week</button><div id="comboWeekDraft"></div><p id="comboWeekStatus" role="status" aria-live="polite"></p></details>';}
+function suggestComboWeek(){comboWeekDraft={scope:weekBuilderScope(),days:makeComboWeekDraft(weeklyPlan,plannerAnchor,COMBINATION_MEALS)};renderComboWeekDraft();document.getElementById('comboWeekStatus').textContent='Draft only — review the meals below before saving.';}
+function renderComboWeekDraft(){var host=document.getElementById('comboWeekDraft');if(!host)return;if(!comboWeekDraft||comboWeekDraft.scope!==weekBuilderScope()){host.innerHTML='';return;}
+ host.innerHTML=plannerWeek(plannerAnchor).map(function(date){return '<article class="combo-week-day"><h4>'+safeHtml(plannerDayLabel(date))+'</h4>'+['breakfast','lunch','dinner'].map(function(slot){var choice=comboWeekDraft.days[date][slot],existing=(weeklyPlan[date]||{})[slot],key=date+'-'+slot;return '<div class="combo-week-slot"><label for="week-meal-'+key+'">'+slot+'</label><select id="week-meal-'+key+'" onchange="setComboWeekChoice(\''+date+'\',\''+slot+'\',\'id\',this.value)"><option value="keep"'+(choice.id==='keep'?' selected':'')+'>'+safeHtml(existing?'Keep: '+existing.name:'Leave empty')+'</option>'+COMBINATION_MEALS.map(function(m){return '<option value="'+m.id+'"'+(choice.id===m.id?' selected':'')+'>'+safeHtml(m.name)+'</option>';}).join('')+'</select><select id="week-size-'+key+'" '+(choice.id==='keep'?'disabled':'')+' aria-label="Portion size for '+slot+' '+date+'" onchange="setComboWeekChoice(\''+date+'\',\''+slot+'\',\'scale\',this.value)">'+[[.75,'Smaller'],[1,'Standard'],[1.5,'Larger']].map(function(s){return '<option value="'+s[0]+'"'+(Number(choice.scale)===s[0]?' selected':'')+'>'+s[1]+'</option>';}).join('')+'</select>'+(existing?'<small>Choosing another meal replaces '+safeHtml(existing.name)+'.</small>':'')+'</div>';}).join('')+'</article>';}).join('')+'<button type="button" class="ca-btn swap-action" onclick="saveComboWeek()">Save week & generate shopping list</button>';
+}
+function setComboWeekChoice(date,slot,key,value){if(!comboWeekDraft||comboWeekDraft.scope!==weekBuilderScope())return;comboWeekDraft.days[date][slot][key]=key==='scale'?Number(value):value;if(key==='id')document.getElementById('week-size-'+date+'-'+slot).disabled=value==='keep';}
+function saveComboWeek(){if(!comboWeekDraft||comboWeekDraft.scope!==weekBuilderScope())return;var result=applyComboWeekDraft(weeklyPlan,comboWeekDraft.days,plannerAnchor,COMBINATION_MEALS,foodsById);if(!result){document.getElementById('comboWeekStatus').textContent='Check the meal choices and portion sizes before saving.';return;}
+ if(storeWeeklyPlan(result.plan)){comboWeekDraft=null;renderPlanner();document.getElementById('comboWeekBuilder').open=false;var shopping=document.querySelector('.planner-shopping');shopping.open=true;document.getElementById('plannerStatus').textContent='Week saved: '+result.saved+' meals added or updated. Your shopping list is ready.';shopping.querySelector('summary').focus();shopping.scrollIntoView({block:'start',behavior:'smooth'});}
+}
+function openComboWeekBuilder(){openDrawer('planner');document.getElementById('comboWeekBuilder').open=true;document.getElementById('comboWeekBuilder').querySelector('summary').focus();}
