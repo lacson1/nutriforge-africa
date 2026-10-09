@@ -40,3 +40,10 @@ it('undoing an addition does not restore a source that was never on the plate',(
  const out=c.undoFoodSwap({2:b},{2:75},{source:a,target:b,replaced:false,grams:75});
  expect(Object.keys(out.plate)).toEqual([]);expect(Object.keys(out.portions)).toEqual([]);
 });
+it('explains nutrient changes at the actual compared weight without rounded overclaims',()=>{
+ expect(c.foodSwapReason(a,b,'fiber',150)).toBe('4.5 g more fibre at 150 g.');
+ expect(c.foodSwapReason(a,b,'carbs',150)).toBe('7.5 g fewer carbs at 150 g.');
+ expect(c.foodSwapReason(a,{...b,kcal:100},'kcal',150)).toBe('30 fewer calories at 150 g.');
+ expect(c.foodSwapReason(a,{...b,fiber:1.06},'fiber',1)).toContain('Less than 0.1 g fibre');
+ expect(c.foodSwapReason(a,b,'similar',100)).toBe('Same food category, compared at the same weight.');
+});
