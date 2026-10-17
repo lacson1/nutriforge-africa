@@ -32,8 +32,8 @@
     },
     "titleSearchAttempted": true,
     "candidateCount": 5,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Downloaded exact-name candidate showed a meeting, not egusi soup; rejected."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-003": {
     "id": "dish-003",
@@ -49,8 +49,8 @@
     },
     "titleSearchAttempted": true,
     "candidateCount": 4,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-004": {
     "id": "dish-004",
@@ -66,8 +66,8 @@
     },
     "titleSearchAttempted": true,
     "candidateCount": 4,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-005": {
     "id": "dish-005",
@@ -84,8 +84,8 @@
     },
     "titleSearchAttempted": true,
     "candidateCount": 5,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Downloaded exact-name candidate showed an event poster, not Efo Riro; rejected."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-006": {
     "id": "dish-006",
@@ -102,8 +102,8 @@
     },
     "titleSearchAttempted": true,
     "candidateCount": 4,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-007": {
     "id": "dish-007",
@@ -137,8 +137,8 @@
     },
     "titleSearchAttempted": true,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-009": {
     "id": "dish-009",
@@ -155,8 +155,8 @@
     },
     "titleSearchAttempted": true,
     "candidateCount": 3,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-010": {
     "id": "dish-010",
@@ -172,8 +172,8 @@
     },
     "titleSearchAttempted": true,
     "candidateCount": 4,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Candidate has incomplete author/source metadata on its Commons page; attribution not securely established, so excluded."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-011": {
     "id": "dish-011",
@@ -226,8 +226,8 @@
     },
     "titleSearchAttempted": true,
     "candidateCount": 4,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Candidate showed a street vendor with concealed food; insufficient dish detail."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-014": {
     "id": "dish-014",
@@ -244,8 +244,8 @@
     },
     "titleSearchAttempted": true,
     "candidateCount": 4,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-015": {
     "id": "dish-015",
@@ -280,8 +280,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-017": {
     "id": "dish-017",
@@ -297,8 +297,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-018": {
     "id": "dish-018",
@@ -315,8 +315,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 2,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-019": {
     "id": "dish-019",
@@ -367,8 +367,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-022": {
     "id": "dish-022",
@@ -385,8 +385,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-023": {
     "id": "dish-023",
@@ -403,8 +403,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-024": {
     "id": "dish-024",
@@ -475,8 +475,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-028": {
     "id": "dish-028",
@@ -493,8 +493,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-029": {
     "id": "dish-029",
@@ -511,8 +511,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-030": {
     "id": "dish-030",
@@ -529,8 +529,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-031": {
     "id": "dish-031",
@@ -546,8 +546,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-032": {
     "id": "dish-032",
@@ -563,8 +563,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-033": {
     "id": "dish-033",
@@ -580,8 +580,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-034": {
     "id": "dish-034",
@@ -614,8 +614,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-036": {
     "id": "dish-036",
@@ -631,8 +631,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-037": {
     "id": "dish-037",
@@ -683,8 +683,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-041": {
     "id": "dish-041",
@@ -701,8 +701,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 2,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-042": {
     "id": "dish-042",
@@ -718,8 +718,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-043": {
     "id": "dish-043",
@@ -736,8 +736,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows jollof rice with chicken and avocado, not gari foto."
   },
   "dish-044": {
     "id": "dish-044",
@@ -754,8 +754,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-045": {
     "id": "dish-045",
@@ -790,8 +790,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-047": {
     "id": "dish-047",
@@ -808,8 +808,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-048": {
     "id": "dish-048",
@@ -825,8 +825,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-049": {
     "id": "dish-049",
@@ -843,8 +843,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows a person pounding in a yard, not the finished dish."
   },
   "dish-050": {
     "id": "dish-050",
@@ -861,8 +861,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 2,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-051": {
     "id": "dish-051",
@@ -879,8 +879,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-052": {
     "id": "dish-052",
@@ -897,8 +897,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Photo removed 2026-10-17 after visual re-review: it shows egusi (melon-seed) soup with cow foot, cow skin and chicken in palm oil, with only flecks of leaves. Kontomire stew is defined by cocoyam leaves, so the photo does not represent this dish."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-053": {
     "id": "dish-053",
@@ -914,8 +914,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-054": {
     "id": "dish-054",
@@ -931,8 +931,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: a collage of several dishes rather than a single photo of maafe."
   },
   "dish-055": {
     "id": "dish-055",
@@ -949,8 +949,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows hands mixing the food in a bowl; not a clear finished-dish photo."
   },
   "dish-056": {
     "id": "dish-056",
@@ -966,8 +966,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-057": {
     "id": "dish-057",
@@ -983,8 +983,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-058": {
     "id": "dish-058",
@@ -1000,8 +1000,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-059": {
     "id": "dish-059",
@@ -1017,8 +1017,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-060": {
     "id": "dish-060",
@@ -1052,8 +1052,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-062": {
     "id": "dish-062",
@@ -1087,8 +1087,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-064": {
     "id": "dish-064",
@@ -1105,8 +1105,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-065": {
     "id": "dish-065",
@@ -1123,8 +1123,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-066": {
     "id": "dish-066",
@@ -1141,8 +1141,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-067": {
     "id": "dish-067",
@@ -1192,8 +1192,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: the plate is mostly covered by folded injera; firfir is not visible."
   },
   "dish-070": {
     "id": "dish-070",
@@ -1209,8 +1209,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-071": {
     "id": "dish-071",
@@ -1227,8 +1227,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-072": {
     "id": "dish-072",
@@ -1245,8 +1245,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-073": {
     "id": "dish-073",
@@ -1262,8 +1262,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-074": {
     "id": "dish-074",
@@ -1279,8 +1279,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-075": {
     "id": "dish-075",
@@ -1313,8 +1313,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Candidate appeared to show a different boiled starch; identity not secure."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-077": {
     "id": "dish-077",
@@ -1331,8 +1331,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 2,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-078": {
     "id": "dish-078",
@@ -1349,8 +1349,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 2,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Candidate showed uncooked greens, not the prepared dish."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-079": {
     "id": "dish-079",
@@ -1366,8 +1366,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-080": {
     "id": "dish-080",
@@ -1383,8 +1383,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-081": {
     "id": "dish-081",
@@ -1401,8 +1401,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-082": {
     "id": "dish-082",
@@ -1418,8 +1418,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-083": {
     "id": "dish-083",
@@ -1435,8 +1435,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Photo removed 2026-10-17 after visual re-review: it shows a red-bean, chickpea and kale stew with no visible maize. Githeri is maize and beans boiled together, so the photo does not represent this dish."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-084": {
     "id": "dish-084",
@@ -1469,8 +1469,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: a vendor's face dominates the photo; not a clean dish photo."
   },
   "dish-086": {
     "id": "dish-086",
@@ -1486,8 +1486,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-087": {
     "id": "dish-087",
@@ -1556,8 +1556,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-download-limited",
-    "reason": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-091": {
     "id": "dish-091",
@@ -1573,8 +1573,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-092": {
     "id": "dish-092",
@@ -1609,8 +1609,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-094": {
     "id": "dish-094",
@@ -1627,8 +1627,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-download-limited",
-    "reason": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-095": {
     "id": "dish-095",
@@ -1663,8 +1663,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-097": {
     "id": "dish-097",
@@ -1681,8 +1681,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-098": {
     "id": "dish-098",
@@ -1698,8 +1698,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-099": {
     "id": "dish-099",
@@ -1750,8 +1750,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-102": {
     "id": "dish-102",
@@ -1767,8 +1767,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-103": {
     "id": "dish-103",
@@ -1801,8 +1801,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-105": {
     "id": "dish-105",
@@ -1818,8 +1818,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-106": {
     "id": "dish-106",
@@ -1835,8 +1835,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-107": {
     "id": "dish-107",
@@ -1852,8 +1852,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-108": {
     "id": "dish-108",
@@ -1869,8 +1869,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows raw grasshoppers on a table, not the prepared dish."
   },
   "dish-109": {
     "id": "dish-109",
@@ -1886,8 +1886,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-110": {
     "id": "dish-110",
@@ -1904,8 +1904,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-111": {
     "id": "dish-111",
@@ -1921,8 +1921,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-112": {
     "id": "dish-112",
@@ -1989,8 +1989,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-116": {
     "id": "dish-116",
@@ -2006,8 +2006,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-117": {
     "id": "dish-117",
@@ -2057,8 +2057,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Candidate showed raw leaves, not prepared Isombe."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-120": {
     "id": "dish-120",
@@ -2091,8 +2091,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-122": {
     "id": "dish-122",
@@ -2108,8 +2108,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-123": {
     "id": "dish-123",
@@ -2125,8 +2125,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-124": {
     "id": "dish-124",
@@ -2142,8 +2142,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-125": {
     "id": "dish-125",
@@ -2159,8 +2159,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-126": {
     "id": "dish-126",
@@ -2177,8 +2177,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-127": {
     "id": "dish-127",
@@ -2211,8 +2211,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-129": {
     "id": "dish-129",
@@ -2228,8 +2228,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-130": {
     "id": "dish-130",
@@ -2245,8 +2245,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-131": {
     "id": "dish-131",
@@ -2262,8 +2262,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-132": {
     "id": "dish-132",
@@ -2296,8 +2296,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-134": {
     "id": "dish-134",
@@ -2313,8 +2313,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Bread appearance did not securely establish the submitted recipe; held for identity review."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-135": {
     "id": "dish-135",
@@ -2330,8 +2330,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-136": {
     "id": "dish-136",
@@ -2347,8 +2347,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-137": {
     "id": "dish-137",
@@ -2364,8 +2364,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-138": {
     "id": "dish-138",
@@ -2398,8 +2398,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-140": {
     "id": "dish-140",
@@ -2450,8 +2450,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-143": {
     "id": "dish-143",
@@ -2484,8 +2484,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-145": {
     "id": "dish-145",
@@ -2501,8 +2501,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-146": {
     "id": "dish-146",
@@ -2518,8 +2518,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-147": {
     "id": "dish-147",
@@ -2536,8 +2536,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-148": {
     "id": "dish-148",
@@ -2570,8 +2570,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-150": {
     "id": "dish-150",
@@ -2587,8 +2587,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-151": {
     "id": "dish-151",
@@ -2604,8 +2604,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-152": {
     "id": "dish-152",
@@ -2640,8 +2640,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-154": {
     "id": "dish-154",
@@ -2657,8 +2657,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-155": {
     "id": "dish-155",
@@ -2674,8 +2674,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-156": {
     "id": "dish-156",
@@ -2708,8 +2708,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-158": {
     "id": "dish-158",
@@ -2725,8 +2725,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-159": {
     "id": "dish-159",
@@ -2742,8 +2742,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-160": {
     "id": "dish-160",
@@ -2760,8 +2760,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-162": {
     "id": "dish-162",
@@ -2829,8 +2829,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Serving composition did not securely establish Koshari; held for identity review."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-166": {
     "id": "dish-166",
@@ -2847,8 +2847,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-167": {
     "id": "dish-167",
@@ -2882,8 +2882,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-169": {
     "id": "dish-169",
@@ -2899,8 +2899,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-170": {
     "id": "dish-170",
@@ -2917,8 +2917,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-171": {
     "id": "dish-171",
@@ -2952,8 +2952,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-173": {
     "id": "dish-173",
@@ -2969,8 +2969,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-174": {
     "id": "dish-174",
@@ -3004,8 +3004,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-176": {
     "id": "dish-176",
@@ -3056,8 +3056,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows a breakfast table in which the bread is small and not the focus."
   },
   "dish-179": {
     "id": "dish-179",
@@ -3073,8 +3073,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-180": {
     "id": "dish-180",
@@ -3091,8 +3091,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-181": {
     "id": "dish-181",
@@ -3108,8 +3108,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-182": {
     "id": "dish-182",
@@ -3125,8 +3125,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Candidate showed retail packaging rather than a clear serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-183": {
     "id": "dish-183",
@@ -3142,8 +3142,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-184": {
     "id": "dish-184",
@@ -3159,8 +3159,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows raw meat on the grill, not cooked braaivleis."
   },
   "dish-185": {
     "id": "dish-185",
@@ -3176,8 +3176,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-186": {
     "id": "dish-186",
@@ -3247,8 +3247,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-190": {
     "id": "dish-190",
@@ -3264,8 +3264,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-191": {
     "id": "dish-191",
@@ -3298,8 +3298,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-193": {
     "id": "dish-193",
@@ -3315,8 +3315,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-download-limited",
-    "reason": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-194": {
     "id": "dish-194",
@@ -3332,8 +3332,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-195": {
     "id": "dish-195",
@@ -3350,8 +3350,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-196": {
     "id": "dish-196",
@@ -3367,8 +3367,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-197": {
     "id": "dish-197",
@@ -3419,8 +3419,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-200": {
     "id": "dish-200",
@@ -3504,8 +3504,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-205": {
     "id": "dish-205",
@@ -3558,8 +3558,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-208": {
     "id": "dish-208",
@@ -3575,8 +3575,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows bread rolls inside plastic retail packaging."
   },
   "dish-209": {
     "id": "dish-209",
@@ -3609,8 +3609,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-211": {
     "id": "dish-211",
@@ -3626,8 +3626,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-212": {
     "id": "dish-212",
@@ -3643,8 +3643,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-213": {
     "id": "dish-213",
@@ -3677,8 +3677,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows the dish being stirred in a pot during cooking."
   },
   "dish-215": {
     "id": "dish-215",
@@ -3728,8 +3728,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows heaps of dried fish at a market, not a prepared dish."
   },
   "dish-218": {
     "id": "dish-218",
@@ -3762,8 +3762,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows a jar of peanut butter, not a prepared dish."
   },
   "dish-220": {
     "id": "dish-220",
@@ -3779,8 +3779,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: three people posing dominate the photo."
   },
   "dish-221": {
     "id": "dish-221",
@@ -3813,8 +3813,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-223": {
     "id": "dish-223",
@@ -3830,8 +3830,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Candidate showed dried ingredients, not a prepared dish."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-224": {
     "id": "dish-224",
@@ -3847,8 +3847,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-225": {
     "id": "dish-225",
@@ -3864,8 +3864,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-226": {
     "id": "dish-226",
@@ -3882,8 +3882,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-download-limited",
-    "reason": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-227": {
     "id": "dish-227",
@@ -3899,8 +3899,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-228": {
     "id": "dish-228",
@@ -3933,8 +3933,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-download-limited",
-    "reason": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-230": {
     "id": "dish-230",
@@ -3950,8 +3950,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-231": {
     "id": "dish-231",
@@ -3985,8 +3985,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-233": {
     "id": "dish-233",
@@ -4072,8 +4072,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-238": {
     "id": "dish-238",
@@ -4108,8 +4108,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-240": {
     "id": "dish-240",
@@ -4143,8 +4143,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows a growing cassava plant, not cooked pondu."
   },
   "dish-242": {
     "id": "dish-242",
@@ -4160,8 +4160,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-243": {
     "id": "dish-243",
@@ -4195,8 +4195,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-245": {
     "id": "dish-245",
@@ -4247,8 +4247,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-248": {
     "id": "dish-248",
@@ -4265,8 +4265,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-249": {
     "id": "dish-249",
@@ -4299,8 +4299,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-download-limited",
-    "reason": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows raw plantain bunches at a market."
   },
   "dish-251": {
     "id": "dish-251",
@@ -4334,8 +4334,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows a bean field, not cooked madesu."
   },
   "dish-253": {
     "id": "dish-253",
@@ -4437,8 +4437,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows dried caterpillars beside raw vegetables, not the prepared dish."
   },
   "dish-259": {
     "id": "dish-259",
@@ -4489,8 +4489,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows a growing cassava plant, not the cooked dish."
   },
   "dish-262": {
     "id": "dish-262",
@@ -4524,8 +4524,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows raw sorrel leaves in a bag, not the prepared dish."
   },
   "dish-264": {
     "id": "dish-264",
@@ -4628,8 +4628,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-271": {
     "id": "dish-271",
@@ -4645,8 +4645,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-272": {
     "id": "dish-272",
@@ -4663,8 +4663,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-273": {
     "id": "dish-273",
@@ -4697,8 +4697,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-275": {
     "id": "dish-275",
@@ -4714,8 +4714,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-276": {
     "id": "dish-276",
@@ -4732,8 +4732,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-277": {
     "id": "dish-277",
@@ -4766,8 +4766,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: shows a raw cut fruit, not the prepared safou."
   },
   "dish-279": {
     "id": "dish-279",
@@ -4819,8 +4819,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-282": {
     "id": "dish-282",
@@ -4837,8 +4837,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-283": {
     "id": "dish-283",
@@ -4854,8 +4854,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-284": {
     "id": "dish-284",
@@ -4872,8 +4872,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-285": {
     "id": "dish-285",
@@ -4890,8 +4890,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-286": {
     "id": "dish-286",
@@ -4925,8 +4925,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-288": {
     "id": "dish-288",
@@ -4960,8 +4960,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-290": {
     "id": "dish-290",
@@ -5012,8 +5012,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-293": {
     "id": "dish-293",
@@ -5065,8 +5065,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-296": {
     "id": "dish-296",
@@ -5082,8 +5082,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-297": {
     "id": "dish-297",

@@ -43,9 +43,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Downloaded exact-name candidate showed a meeting, not egusi soup; rejected."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-002.jpg",
+      "alt": "Egusi soup with assorted meats and a mound of pounded yam on a white plate",
+      "author": "Onyenachi64",
+      "source": "https://commons.wikimedia.org/wiki/File:Egusi_soup_with_pounded_yam_and_assorted_meats.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-003",
@@ -65,9 +74,18 @@ var SKDishDiscovery = [
     "identityStatus": "needs-confirmation",
     "reviewNote": "Fufu covers several starches and preparations; specify the recipe before nutrition matching.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-003.jpg",
+      "alt": "Fufu in a bowl beside a bowl of light soup with meat",
+      "author": "daSupremo",
+      "source": "https://commons.wikimedia.org/wiki/File:Fufu_and_light_soup_in_asanka.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-004",
@@ -84,9 +102,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-004.jpg",
+      "alt": "Grilled suya meat with sliced onions and ground pepper sauce",
+      "author": "Bukky658",
+      "source": "https://commons.wikimedia.org/wiki/File:Suya_with_pepper_sauce.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-005",
@@ -103,9 +130,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Downloaded exact-name candidate showed an event poster, not Efo Riro; rejected."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-005.jpg",
+      "alt": "Efo riro, a leafy vegetable stew, served in a white bowl",
+      "author": "Bukky658",
+      "source": "https://commons.wikimedia.org/wiki/File:Efo_riro.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-006",
@@ -122,9 +158,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-006.jpg",
+      "alt": "Banga soup with fish in palm-fruit sauce",
+      "author": "Ehinomen55",
+      "source": "https://commons.wikimedia.org/wiki/File:Banga_Soup.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-007",
@@ -170,9 +215,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-008.jpg",
+      "alt": "White rice and fried plantain served with a bowl of Nigerian stew",
+      "author": "Beendy234",
+      "source": "https://commons.wikimedia.org/wiki/File:White_rice,_plantain_and_stew_(Nigerian_dish).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-009",
@@ -189,9 +243,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-009.jpg",
+      "alt": "Ofada rice topped with red pepper stew on a leaf",
+      "author": "Bukky658",
+      "source": "https://commons.wikimedia.org/wiki/File:Ofada_Rice_and_stew_on_leaf.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-010",
@@ -208,9 +271,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate has incomplete author/source metadata on its Commons page; attribution not securely established, so excluded."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-010.jpg",
+      "alt": "Asun, spicy roasted goat meat",
+      "author": "Afrolems (afrolems.com), uploaded by Atimukoh",
+      "source": "https://commons.wikimedia.org/wiki/File:Asun.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-011",
@@ -290,9 +362,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate showed a street vendor with concealed food; insufficient dish detail."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-013.jpg",
+      "alt": "Moi moi, steamed bean pudding, cut open on a plate",
+      "author": "Rka11111",
+      "source": "https://commons.wikimedia.org/wiki/File:Moin_Moin.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-014",
@@ -309,9 +390,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-014.jpg",
+      "alt": "Pounded yam served with a vegetable soup",
+      "author": "Halima Waziri",
+      "source": "https://commons.wikimedia.org/wiki/File:Pounded_yam_with_vegetable_soup.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-015",
@@ -347,9 +437,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-016.jpg",
+      "alt": "Chin chin, small fried dough snacks, in a sealed bag",
+      "author": "ChildofMidnight at English Wikipedia",
+      "source": "https://commons.wikimedia.org/wiki/File:Chin-chin.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-017",
@@ -366,9 +465,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-017.jpg",
+      "alt": "Masa, round fried rice cakes, on a plate",
+      "author": "Husnkimalika",
+      "source": "https://commons.wikimedia.org/wiki/File:Masan_Semovita.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-018",
@@ -385,9 +493,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-018.jpg",
+      "alt": "A bowl of puff-puff beside a bottle of soft drink",
+      "author": "Bukky658",
+      "source": "https://commons.wikimedia.org/wiki/File:Bowl_of_puff-puff_and_soft_drink_cocacola.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-019",
@@ -462,9 +579,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-021.jpg",
+      "alt": "Ogi, smooth fermented maize pap, in a bowl",
+      "author": "Tesleemah",
+      "source": "https://commons.wikimedia.org/wiki/File:Pap_(ogi).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-022",
@@ -485,9 +611,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-022.jpg",
+      "alt": "Eba served with a leafy vegetable soup",
+      "author": "Major Lyte",
+      "source": "https://commons.wikimedia.org/wiki/File:Garri_(Eba)_and_Vegetable_soup.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-023",
@@ -504,9 +639,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-023.jpg",
+      "alt": "Groundnut soup in a white bowl",
+      "author": "Derick Asamani",
+      "source": "https://commons.wikimedia.org/wiki/File:Ground_nut_soup.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-024",
@@ -600,9 +744,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-027.jpg",
+      "alt": "Ofe onugbu, bitter leaf soup, in a bowl",
+      "author": "Aderiqueza",
+      "source": "https://commons.wikimedia.org/wiki/File:Ofe_Onugbu_(Bitter_Leaf_Soup).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-028",
@@ -619,9 +772,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-028.jpg",
+      "alt": "Ofe nsala soup with meat in a bowl",
+      "author": "Onyeike Izuchi",
+      "source": "https://commons.wikimedia.org/wiki/File:Nigerian_food_(Ofe_%C7%B8s%C3%A0l%C3%A0).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-029",
@@ -638,9 +800,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-029.jpg",
+      "alt": "Tuwon shinkafa, soft rice balls, on a blue plate",
+      "author": "Anasskoko",
+      "source": "https://commons.wikimedia.org/wiki/File:Tuwon_shinkafa.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-030",
@@ -657,9 +828,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-030.jpg",
+      "alt": "Tuwon masara, maize swallow, in a blue bowl",
+      "author": "Al husuna",
+      "source": "https://commons.wikimedia.org/wiki/File:To_won_masara_a_kula.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-031",
@@ -676,9 +856,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-031.jpg",
+      "alt": "Kilishi, thin spiced dried meat, on a white plate",
+      "author": "Fanny Schertzer",
+      "source": "https://commons.wikimedia.org/wiki/File:Kilishi.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-032",
@@ -695,9 +884,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-032.jpg",
+      "alt": "Abacha (African salad) with garden eggs in a bowl",
+      "author": "NiferO",
+      "source": "https://commons.wikimedia.org/wiki/File:A_plate_of_abacha_(african_salad)_ready_for_consumption.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-033",
@@ -714,9 +912,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-033.jpg",
+      "alt": "Roasted plantain (boli) and grilled fish with pepper sauce",
+      "author": "Mavinren",
+      "source": "https://commons.wikimedia.org/wiki/File:Boli_and_fish.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-034",
@@ -752,9 +959,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-035.jpg",
+      "alt": "Gbegiri, bean soup, in a white bowl",
+      "author": "Bamjos",
+      "source": "https://commons.wikimedia.org/wiki/File:Gb%C3%A8g%C3%ACr%C3%AC_soup.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-036",
@@ -773,9 +989,18 @@ var SKDishDiscovery = [
     "identityStatus": "needs-confirmation",
     "reviewNote": "Ewedu may mean the leaf or prepared soup. The boiled-leaf record is related, not a complete soup recipe.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-036.jpg",
+      "alt": "Amala with ewedu soup and assorted meat in stew",
+      "author": "Omolarabasirat",
+      "source": "https://commons.wikimedia.org/wiki/File:Amala,_ewedu_and_assorted_meat.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-037",
@@ -830,9 +1055,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-040.jpg",
+      "alt": "Waakye, rice and beans, served with spaghetti and shito",
+      "author": "Edithobayaa1",
+      "source": "https://commons.wikimedia.org/wiki/File:Waakye_in_Ghana.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-041",
@@ -851,9 +1085,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "Ga Kenkey is retained as a regional variant; the current record groups Ga and Fante.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-041.jpg",
+      "alt": "Ga kenkey with fried fish, pepper and onions",
+      "author": "daSupremo",
+      "source": "https://commons.wikimedia.org/wiki/File:Ga_kenkey_and_shito_in_asanka.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-042",
@@ -870,9 +1113,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-042.jpg",
+      "alt": "Banku with pepper sauce and fish in an earthenware bowl",
+      "author": "daSupremo",
+      "source": "https://commons.wikimedia.org/wiki/File:Banku_with_pepper_in_Asanka.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-043",
@@ -891,7 +1143,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows jollof rice with chicken and avocado, not gari foto."
   },
   {
     "id": "dish-044",
@@ -908,9 +1160,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-044.jpg",
+      "alt": "Hausa koko porridge in a bowl, served with bofloat doughnuts",
+      "author": "Edithobayaa1",
+      "source": "https://commons.wikimedia.org/wiki/File:Hausa_Koko_with_bofloat.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-045",
@@ -946,9 +1207,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-046.jpg",
+      "alt": "Garden egg stew served with boiled yam",
+      "author": "Bukky658",
+      "source": "https://commons.wikimedia.org/wiki/File:Boiled_yam_and_garden_egg_sauce.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-047",
@@ -967,9 +1237,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-047.jpg",
+      "alt": "Red red bean stew with fried ripe plantain",
+      "author": "daSupremo",
+      "source": "https://commons.wikimedia.org/wiki/File:Red_red_and_ripe_plantain.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-048",
@@ -986,9 +1265,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-048.jpg",
+      "alt": "Kelewele, spiced fried plantain cubes",
+      "author": "Edithobayaa1",
+      "source": "https://commons.wikimedia.org/wiki/File:%E2%80%9CKelewele%E2%80%9D_in_Ghana.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-049",
@@ -1007,7 +1295,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows a person pounding in a yard, not the finished dish."
   },
   {
     "id": "dish-050",
@@ -1024,9 +1312,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-050.jpg",
+      "alt": "Tuo zaafi served with green soup and meat",
+      "author": "Shakeel03",
+      "source": "https://commons.wikimedia.org/wiki/File:Tuo_Zaafi_1.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-051",
@@ -1043,9 +1340,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-051.jpg",
+      "alt": "Light soup with meat and garden eggs in a bowl",
+      "author": "ZSM",
+      "source": "https://commons.wikimedia.org/wiki/File:Light_soup_with_fufu.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-052",
@@ -1062,9 +1368,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Photo removed 2026-10-17 after visual re-review: it shows egusi (melon-seed) soup with cow foot, cow skin and chicken in palm oil, with only flecks of leaves. Kontomire stew is defined by cocoyam leaves, so the photo does not represent this dish."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-052.jpg",
+      "alt": "Kontomire stew made with ground melon seeds",
+      "author": "Edithobayaa1",
+      "source": "https://commons.wikimedia.org/wiki/File:%E2%80%9CKontomire%E2%80%9D_stew_with_%E2%80%9CAgushi%E2%80%9D.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-053",
@@ -1081,9 +1396,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-053.jpg",
+      "alt": "Thieboudienne, fish and rice with vegetables, on a large platter",
+      "author": "Alweaver2",
+      "source": "https://commons.wikimedia.org/wiki/File:Ceebu_Jen,_Senegalese_dish.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-054",
@@ -1102,7 +1426,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: a collage of several dishes rather than a single photo of maafe."
   },
   {
     "id": "dish-055",
@@ -1121,7 +1445,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows hands mixing the food in a bowl; not a clear finished-dish photo."
   },
   {
     "id": "dish-056",
@@ -1138,9 +1462,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-056.jpg",
+      "alt": "Ndambé bean stew being served in a bread roll",
+      "author": "MoussaGaye87",
+      "source": "https://commons.wikimedia.org/wiki/File:Ndamb%C3%A9_in_Senegal.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-057",
@@ -1159,9 +1492,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-057.jpg",
+      "alt": "Alloco, fried ripe plantain slices, on a plate",
+      "author": "Krista",
+      "source": "https://commons.wikimedia.org/wiki/File:Aloko.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY 2.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-058",
@@ -1178,9 +1520,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-058.jpg",
+      "alt": "Attiéké with fish and side dishes on a tray",
+      "author": "daSupremo",
+      "source": "https://commons.wikimedia.org/wiki/File:Attieke_with_fish.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-059",
@@ -1197,9 +1548,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-059.jpg",
+      "alt": "Domoda, groundnut stew with vegetables, served with rice",
+      "author": "T.K. Naliaka",
+      "source": "https://commons.wikimedia.org/wiki/File:Domoda.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-060",
@@ -1235,9 +1595,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-061.jpg",
+      "alt": "Palm butter soup served with a bowl of rice",
+      "author": "Foundation Digital Schools Liberia",
+      "source": "https://commons.wikimedia.org/wiki/File:A_prepared_dish_of_palm_butter_soup.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-062",
@@ -1283,9 +1652,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-063.jpg",
+      "alt": "Doro wat chicken and egg on injera",
+      "author": "Edsel Little",
+      "source": "https://commons.wikimedia.org/wiki/File:Injera_and_doro_wat.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 2.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-064",
@@ -1302,9 +1680,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-064.jpg",
+      "alt": "Shiro served on injera with a pot of sauce",
+      "author": "David Stanley from Nanaimo, Canada",
+      "source": "https://commons.wikimedia.org/wiki/File:Ethiopian_Shiro_(11354785095).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY 2.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-065",
@@ -1321,9 +1708,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-065.jpg",
+      "alt": "Dabo kolo, small crunchy roasted bread bites",
+      "author": "Hans Muller",
+      "source": "https://commons.wikimedia.org/wiki/File:Dabo_kolo,_an_Ethiopian_dish_-_Afrika-Studiecentrum_Leiden_-_23_juni_2022.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-066",
@@ -1340,9 +1736,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-066.jpg",
+      "alt": "Beef tibs served on injera",
+      "author": "Khajitdadddy",
+      "source": "https://commons.wikimedia.org/wiki/File:Tibs_and_Injera.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-067",
@@ -1409,7 +1814,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: the plate is mostly covered by folded injera; firfir is not visible."
   },
   {
     "id": "dish-070",
@@ -1426,9 +1831,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-070.jpg",
+      "alt": "Chechebsa, crisp pieces of fried flatbread, in a pan",
+      "author": "Neftalem",
+      "source": "https://commons.wikimedia.org/wiki/File:Chipchipsa_Ethiopian_dish_2014.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-071",
@@ -1445,9 +1859,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-071.jpg",
+      "alt": "Kik alicha yellow split peas with other dishes on injera",
+      "author": "stu_spivack",
+      "source": "https://commons.wikimedia.org/wiki/File:KIK_ALICHA,_MISIR,_GOMEN_and_TIKIL_GOMEN.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 2.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-072",
@@ -1464,9 +1887,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-072.jpg",
+      "alt": "Misir wat lentil stew on injera",
+      "author": "Andy Li",
+      "source": "https://commons.wikimedia.org/wiki/File:Misir_Wot_and_Gomen_Besiga_-_Abyssinia,_Brighton.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-073",
@@ -1483,9 +1915,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-073.jpg",
+      "alt": "Gomen collard greens and ayib cheese on injera",
+      "author": "stu_spivack",
+      "source": "https://commons.wikimedia.org/wiki/File:Ayib_and_gomen.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 2.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-074",
@@ -1502,9 +1943,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-074.jpg",
+      "alt": "Ayib fresh cheese and gomen greens on injera",
+      "author": "stu_spivack",
+      "source": "https://commons.wikimedia.org/wiki/File:Ayib_and_gomen.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 2.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-075",
@@ -1542,9 +1992,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate appeared to show a different boiled starch; identity not secure."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-076.jpg",
+      "alt": "Ugali served with cooked cabbage and carrots",
+      "author": "Mark Skipper",
+      "source": "https://commons.wikimedia.org/wiki/File:Ugali_and_cabbage.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY 2.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-077",
@@ -1561,9 +2020,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-077.jpg",
+      "alt": "Nyama choma, grilled meat, on a barbecue grill",
+      "author": "Shyqo",
+      "source": "https://commons.wikimedia.org/wiki/File:Nyama_Choma_(BBQ_the_Kenyan_way).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-078",
@@ -1580,9 +2048,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate showed uncooked greens, not the prepared dish."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-078.jpg",
+      "alt": "Sukuma wiki greens served with ugali",
+      "author": "Paresh Jai from Nairobi, Kenya",
+      "source": "https://commons.wikimedia.org/wiki/File:Ugali_%26_Sukuma_Wiki.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY 2.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-079",
@@ -1599,9 +2076,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-079.jpg",
+      "alt": "Mandazi, triangular fried doughnuts, in a bowl",
+      "author": "The original uploader was ChildofMidnight at English Wikipedia.",
+      "source": "https://commons.wikimedia.org/wiki/File:Bowl_of_mandazi.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY 2.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-080",
@@ -1618,9 +2104,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-080.jpg",
+      "alt": "A stack of layered chapati flatbreads",
+      "author": "safaritravelplus",
+      "source": "https://commons.wikimedia.org/wiki/File:Chapati_kenya.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-081",
@@ -1639,9 +2134,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-081.jpg",
+      "alt": "Ugali with traditional greens and kienyeji chicken stew",
+      "author": "Napendakukula",
+      "source": "https://commons.wikimedia.org/wiki/File:Ugali,_Traditional_Greens_and_Kienyeji_Chicken_(Kisii).JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-082",
@@ -1658,9 +2162,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-082.jpg",
+      "alt": "Mursik, fermented milk, being poured from a gourd",
+      "author": "Maliqbhai",
+      "source": "https://commons.wikimedia.org/wiki/File:Serving_Mursik.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-083",
@@ -1677,9 +2190,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Photo removed 2026-10-17 after visual re-review: it shows a red-bean, chickpea and kale stew with no visible maize. Githeri is maize and beans boiled together, so the photo does not represent this dish."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-083.jpg",
+      "alt": "Githeri, maize and beans, in a bowl",
+      "author": "safaritravelplus",
+      "source": "https://commons.wikimedia.org/wiki/File:Githeri_Meal.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-084",
@@ -1717,7 +2239,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: a vendor's face dominates the photo; not a clean dish photo."
   },
   {
     "id": "dish-086",
@@ -1734,9 +2256,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-086.jpg",
+      "alt": "Mukimo, mashed potatoes and greens, with beef stew",
+      "author": "Anitah Pezz",
+      "source": "https://commons.wikimedia.org/wiki/File:Mukimo_%26_Beef_Stew.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-087",
@@ -1820,9 +2351,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-090.jpg",
+      "alt": "Chipsi mayai, chips cooked into an omelette, with sauce",
+      "author": "iamkevoo",
+      "source": "https://commons.wikimedia.org/wiki/File:Chipsi_mayai_(zege).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-091",
@@ -1839,9 +2379,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-091.jpg",
+      "alt": "Mishikaki meat skewers on a grill",
+      "author": "Rasheedhrasheed",
+      "source": "https://commons.wikimedia.org/wiki/File:Mishikaki_fasta.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-092",
@@ -1877,9 +2426,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-093.jpg",
+      "alt": "Biryani with meat, onion and salad on a plate",
+      "author": "Kennedy Bundi",
+      "source": "https://commons.wikimedia.org/wiki/File:Mutton_Biriani_with_sliced_onion_rings_and_lettuce.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-094",
@@ -1896,9 +2454,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-094.jpg",
+      "alt": "Swahili pilau with samosas and fried mutton",
+      "author": "Napendakukula",
+      "source": "https://commons.wikimedia.org/wiki/File:Pilau,_Samosa,Fried_Mutton_and_Kachumbari_(Mombasa_Island).JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-095",
@@ -1934,9 +2501,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-096.jpg",
+      "alt": "Ndizi nyama, plantain cooked with meat",
+      "author": "Thznguya",
+      "source": "https://commons.wikimedia.org/wiki/File:Ndizi_nyama.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-097",
@@ -1953,9 +2529,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-097.jpg",
+      "alt": "Banana soup with potato in a metal bowl",
+      "author": "Zakalingba",
+      "source": "https://commons.wikimedia.org/wiki/File:Soupe_de_banane_avec_la_patate.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-098",
@@ -1972,9 +2557,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-098.jpg",
+      "alt": "Vitumbua, round rice cakes, on a plate",
+      "author": "Imaculate",
+      "source": "https://commons.wikimedia.org/wiki/File:Vitumbua.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-099",
@@ -2029,9 +2623,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-101.jpg",
+      "alt": "Zanzibar mix (urojo) soup with a glass of sugarcane juice",
+      "author": "Hussein.gd",
+      "source": "https://commons.wikimedia.org/wiki/File:Zanzibar_Mix_and_Sugarcane_juice.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-102",
@@ -2048,9 +2651,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-102.jpg",
+      "alt": "A fried triangular samosa held in a hand",
+      "author": "Zahara5555",
+      "source": "https://commons.wikimedia.org/wiki/File:Samosa,_usually_taken_alone_or_accompanied_with_tea_01.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-103",
@@ -2088,9 +2700,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "The catalogue contains cooking banana, not a fully specified matoke dish.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-104.jpg",
+      "alt": "Matoke, steamed green bananas, with chicken in sauce",
+      "author": "Krugen",
+      "source": "https://commons.wikimedia.org/wiki/File:Matoke_and_Chicken.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-105",
@@ -2107,9 +2728,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-105.jpg",
+      "alt": "Rolex, an omelette rolled in chapati",
+      "author": "Zahara5555",
+      "source": "https://commons.wikimedia.org/wiki/File:Well_prepared_rolex_red_to_eat.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-106",
@@ -2126,9 +2756,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-106.jpg",
+      "alt": "Chicken luwombo steamed in banana leaves",
+      "author": "Namuganyi",
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_Luwombo.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-107",
@@ -2145,9 +2784,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-107.jpg",
+      "alt": "Kikomando, chopped chapati with beans",
+      "author": "Nalutaaya margret",
+      "source": "https://commons.wikimedia.org/wiki/File:Kikomando.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-108",
@@ -2166,7 +2814,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows raw grasshoppers on a table, not the prepared dish."
   },
   {
     "id": "dish-109",
@@ -2183,9 +2831,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-109.jpg",
+      "alt": "Eshabwe, white ghee sauce, in a glass bowl",
+      "author": "Erinamukuta",
+      "source": "https://commons.wikimedia.org/wiki/File:Eshabwe.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-110",
@@ -2202,9 +2859,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-110.jpg",
+      "alt": "Djiboutian rice and fish with liver stew and pancakes",
+      "author": "Skilla1st",
+      "source": "https://commons.wikimedia.org/wiki/File:Djiboutian_rice_(bariis)_and_fish_(kalluun),_Liver_(beerka)_with_vegetable_also_(Sabaayad)_pancakes.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-111",
@@ -2221,9 +2887,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-111.jpg",
+      "alt": "Golden fried somboosa pastries",
+      "author": "U.S. Air Force Photo by Staff Sgt. Eboni Prince",
+      "source": "https://commons.wikimedia.org/wiki/File:Somali_Sambuus.jpg",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-112",
@@ -2297,9 +2972,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-115.jpg",
+      "alt": "Malawah pancake topped with cream and jam",
+      "author": "Yallayallaletsgo",
+      "source": "https://commons.wikimedia.org/wiki/File:Malawah.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-116",
@@ -2316,9 +3000,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-116.jpg",
+      "alt": "Sabaayad flatbread served with rice and meat stew",
+      "author": "Skilla1st",
+      "source": "https://commons.wikimedia.org/wiki/File:Djiboutian_rice_(bariis)_and_fish_(kalluun),_Liver_(beerka)_with_vegetable_also_(Sabaayad)_pancakes.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-117",
@@ -2373,9 +3066,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate showed raw leaves, not prepared Isombe."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-119.jpg",
+      "alt": "Isombe, pounded cassava leaves, in bowls",
+      "author": "Mutiganda",
+      "source": "https://commons.wikimedia.org/wiki/File:ISOMBE_AND_RICE.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-120",
@@ -2413,9 +3115,18 @@ var SKDishDiscovery = [
     "identityStatus": "needs-confirmation",
     "reviewNote": "Couscous is a broad dish name; cereal and preparation need confirmation.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-121.jpg",
+      "alt": "Couscous topped with meat, chickpeas and almonds",
+      "author": "Emna Mizouni",
+      "source": "https://commons.wikimedia.org/wiki/File:Moroccan_Couscous_1.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-122",
@@ -2432,9 +3143,18 @@ var SKDishDiscovery = [
     "identityStatus": "needs-confirmation",
     "reviewNote": "Tagine describes many recipes; ingredients need confirmation.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-122.jpg",
+      "alt": "A meat tagine with olives in a clay dish",
+      "author": "Kim sosita",
+      "source": "https://commons.wikimedia.org/wiki/File:Moroccan_food_tagine.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-123",
@@ -2451,9 +3171,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-123.jpg",
+      "alt": "Pastilla dusted with sugar and cinnamon",
+      "author": "Miznate",
+      "source": "https://commons.wikimedia.org/wiki/File:Bastila_semma.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-124",
@@ -2470,9 +3199,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-124.jpg",
+      "alt": "Msemen, square layered flatbread",
+      "author": "Popo le Chien",
+      "source": "https://commons.wikimedia.org/wiki/File:Msemmen.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-125",
@@ -2489,9 +3227,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-125.jpg",
+      "alt": "Zaalouk, smoky aubergine and tomato salad",
+      "author": "Tamorlan",
+      "source": "https://commons.wikimedia.org/wiki/File:Zaalouk-01.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-126",
@@ -2508,9 +3255,18 @@ var SKDishDiscovery = [
     "identityStatus": "needs-confirmation",
     "reviewNote": "Sweet Couscous and Seffa may overlap; retained until the submitted recipes can be compared.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-126.jpg",
+      "alt": "Sweet couscous (seffa) with sugar and cinnamon",
+      "author": "Houssain tork",
+      "source": "https://commons.wikimedia.org/wiki/File:Moroccan_Seffa.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-127",
@@ -2546,9 +3302,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-128.jpg",
+      "alt": "Briouats, fried filled pastries, on a platter",
+      "author": "Ma. AB.",
+      "source": "https://commons.wikimedia.org/wiki/File:Briouats.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-129",
@@ -2565,9 +3330,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-129.jpg",
+      "alt": "Chermoula sauce with herbs in a bowl",
+      "author": "Tatiana Yalovaya",
+      "source": "https://commons.wikimedia.org/wiki/File:Chermula.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-130",
@@ -2584,9 +3358,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-130.jpg",
+      "alt": "Harira soup with noodles and chickpeas",
+      "author": "Miansari66",
+      "source": "https://commons.wikimedia.org/wiki/File:Harira..JPG",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-131",
@@ -2603,9 +3386,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-131.jpg",
+      "alt": "Bissara, split pea and fava bean soup, in bowls",
+      "author": "Ruby Josephine Smith",
+      "source": "https://commons.wikimedia.org/wiki/File:Bissara_Moroccan_split_pea_and_fava_bean_soup.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-132",
@@ -2641,9 +3433,18 @@ var SKDishDiscovery = [
     "identityStatus": "needs-confirmation",
     "reviewNote": "May overlap Sweet Couscous, but ingredients and serving style are unspecified.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-133.jpg",
+      "alt": "Seffa, sweet vermicelli with boiled eggs",
+      "author": "Mounir Neddi",
+      "source": "https://commons.wikimedia.org/wiki/File:Seffa_of_Morocco.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-134",
@@ -2660,9 +3461,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Bread appearance did not securely establish the submitted recipe; held for identity review."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-134.jpg",
+      "alt": "Round loaves of khobz bread",
+      "author": "Meriemou",
+      "source": "https://commons.wikimedia.org/wiki/File:Khobz_Tajine.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-135",
@@ -2679,9 +3489,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-135.jpg",
+      "alt": "Chebakia, sesame and honey pastries",
+      "author": "Indif",
+      "source": "https://commons.wikimedia.org/wiki/File:Chebakia.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-136",
@@ -2698,9 +3517,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-136.jpg",
+      "alt": "Baghrir, spongy semolina pancakes",
+      "author": "Tamorlan",
+      "source": "https://commons.wikimedia.org/wiki/File:Beghrir_(Homemade).jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-137",
@@ -2717,9 +3545,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-137.jpg",
+      "alt": "Sfenj, fried ring doughnuts, on a plate",
+      "author": "Jc wik m001",
+      "source": "https://commons.wikimedia.org/wiki/File:Sfenj_in_Marrakesh_Morocco.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-138",
@@ -2755,9 +3592,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-139.jpg",
+      "alt": "Rechta noodles with chickpeas, turnips and boiled eggs",
+      "author": "Ms10vc",
+      "source": "https://commons.wikimedia.org/wiki/File:Rechta.png",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-140",
@@ -2822,9 +3668,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-142.jpg",
+      "alt": "Tajine zitoune, chicken with green olives",
+      "author": "Slothtysloth",
+      "source": "https://commons.wikimedia.org/wiki/File:Tajine-zitoune-dzairi.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-143",
@@ -2862,9 +3717,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-144.jpg",
+      "alt": "Bourek, rolled fried pastries, with lemon wedges",
+      "author": "Sib2022",
+      "source": "https://commons.wikimedia.org/wiki/File:Bourek_alg%C3%A9rien.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-145",
@@ -2881,9 +3745,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-145.jpg",
+      "alt": "Mahjouba, folded semolina flatbread",
+      "author": "Charit halima",
+      "source": "https://commons.wikimedia.org/wiki/File:Mhajeb.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-146",
@@ -2900,9 +3773,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-146.jpg",
+      "alt": "Garantita, baked chickpea flan, in a tray",
+      "author": "Plwnt",
+      "source": "https://commons.wikimedia.org/wiki/File:Karantika_Algerian.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-147",
@@ -2919,9 +3801,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-147.jpg",
+      "alt": "Chorba frik soup with lemon in a white bowl",
+      "author": "Slothtysloth",
+      "source": "https://commons.wikimedia.org/wiki/File:Chorba_frik_algerienne.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-148",
@@ -2957,9 +3848,18 @@ var SKDishDiscovery = [
     "identityStatus": "needs-confirmation",
     "reviewNote": "Makoud may be a spelling variant of another dish; identity needs confirmation.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-149.jpg",
+      "alt": "Makroud, date-filled semolina pastries",
+      "author": "Mourad Ben Abdallah",
+      "source": "https://commons.wikimedia.org/wiki/File:Makrouds.JPG",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-150",
@@ -2976,9 +3876,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-150.jpg",
+      "alt": "Loubia, white bean stew with olives",
+      "author": "Kaouther Bedoui",
+      "source": "https://commons.wikimedia.org/wiki/File:Loubia.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-151",
@@ -2995,9 +3904,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-151.jpg",
+      "alt": "Shakshuka in a small bowl",
+      "author": "Citizen59",
+      "source": "https://commons.wikimedia.org/wiki/File:ChakchoukaTunisienne2010.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-152",
@@ -3033,9 +3951,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-153.jpg",
+      "alt": "Mechouia salad with tuna",
+      "author": "Emna Mizouni",
+      "source": "https://commons.wikimedia.org/wiki/File:Salade_Mechouia_au_thon.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-154",
@@ -3052,9 +3979,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-154.jpg",
+      "alt": "Brik, crisp fried pastries, with lime",
+      "author": "Habib M'henni",
+      "source": "https://commons.wikimedia.org/wiki/File:Brik_tunisien,_mai_2020.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-155",
@@ -3071,9 +4007,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-155.jpg",
+      "alt": "Mloukhiya stew with meat in a white bowl",
+      "author": "Habib M'henni",
+      "source": "https://commons.wikimedia.org/wiki/File:Plat_de_molokhya,_Tunisie,_novembre_2025_ZVE07370.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-156",
@@ -3119,9 +4064,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-157.jpg",
+      "alt": "Kafteji, fried vegetable mix with an egg",
+      "author": "Touzrimounir",
+      "source": "https://commons.wikimedia.org/wiki/File:Kafteji_1.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-158",
@@ -3138,9 +4092,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-158.jpg",
+      "alt": "Fricassé, small fried sandwiches with tuna and olives",
+      "author": "Habib M'henni",
+      "source": "https://commons.wikimedia.org/wiki/File:Fricass%C3%A9,_Tunisie,_19_mars_2020.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-159",
@@ -3157,9 +4120,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-159.jpg",
+      "alt": "Kamounia, cumin-spiced meat stew, on a decorated plate",
+      "author": "Sebleouf",
+      "source": "https://commons.wikimedia.org/wiki/File:Plat_de_kamounia_au_restaurant_tunisien_Sidi_Bou,_%C3%A0_Villeurbanne_(juil_2022).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-160",
@@ -3179,9 +4151,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-160.jpg",
+      "alt": "Osban sausages served with couscous",
+      "author": "AmelGhouila",
+      "source": "https://commons.wikimedia.org/wiki/File:Tunisian_Osban_couscous.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-162",
@@ -3269,9 +4250,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Serving composition did not securely establish Koshari; held for identity review."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-165.jpg",
+      "alt": "Koshari with lentils, rice, pasta and fried onions",
+      "author": "Dina Said",
+      "source": "https://commons.wikimedia.org/wiki/File:Egyptian_food_Koshary.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-166",
@@ -3288,9 +4278,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-166.jpg",
+      "alt": "Ful medames with bread and salad",
+      "author": "Zachbe at en.wikipedia",
+      "source": "https://commons.wikimedia.org/wiki/File:Ful_medames.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-167",
@@ -3336,9 +4335,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-168.jpg",
+      "alt": "Mulukhiyah soup in a clay bowl",
+      "author": "Habib M'henni",
+      "source": "https://commons.wikimedia.org/wiki/File:Molokheya_Egypt,_2012.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-169",
@@ -3355,9 +4363,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-169.jpg",
+      "alt": "Hawawshi, bread stuffed with spiced meat",
+      "author": "Mohamed Moheyeldin",
+      "source": "https://commons.wikimedia.org/wiki/File:Hawawshi_Main_1_Mohamed_Moheyeldin.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-170",
@@ -3374,9 +4391,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-170.jpg",
+      "alt": "A slice of macarona béchamel",
+      "author": "Zebi2424",
+      "source": "https://commons.wikimedia.org/wiki/File:Macarona_bechamel.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-171",
@@ -3412,9 +4438,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-172.jpg",
+      "alt": "Besbousa, semolina cake, with walnuts",
+      "author": "stu_spivack",
+      "source": "https://commons.wikimedia.org/wiki/File:Basboosa.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 2.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-173",
@@ -3431,9 +4466,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-173.jpg",
+      "alt": "Qatayef, folded stuffed pancakes",
+      "author": "Aseel zm",
+      "source": "https://commons.wikimedia.org/wiki/File:Kataef_12.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-174",
@@ -3469,9 +4513,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-175.jpg",
+      "alt": "Bamia, okra stew, in a bowl",
+      "author": "E4024",
+      "source": "https://commons.wikimedia.org/wiki/File:Bamya_stew.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-176",
@@ -3530,7 +4583,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows a breakfast table in which the bread is small and not the focus."
   },
   {
     "id": "dish-179",
@@ -3547,9 +4600,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-179.jpg",
+      "alt": "Matbucha, cooked tomato and pepper salad",
+      "author": "Chubbychef",
+      "source": "https://commons.wikimedia.org/wiki/File:Matboha.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-180",
@@ -3566,9 +4628,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-180.jpg",
+      "alt": "Bunny chow, a hollowed bread loaf filled with mutton curry",
+      "author": "Djreddy1985",
+      "source": "https://commons.wikimedia.org/wiki/File:Durban's_Famous_Mutton_Bunny_Chow.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-181",
@@ -3585,9 +4656,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "Retained as a distinct South African dish; do not merge with Babute on spelling similarity.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-181.jpg",
+      "alt": "Bobotie served with vegetables and sauce",
+      "author": "Olga Ernst",
+      "source": "https://commons.wikimedia.org/wiki/File:Bobotie,_South_African_dish.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-182",
@@ -3606,9 +4686,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate showed retail packaging rather than a clear serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-182.jpg",
+      "alt": "Pieces of biltong, dried meat",
+      "author": "Aisha.shipanga",
+      "source": "https://commons.wikimedia.org/wiki/File:Biltong_from_Namibia.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-183",
@@ -3625,9 +4714,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-183.jpg",
+      "alt": "Coils of boerewors sausage on a grill",
+      "author": "Ossewa",
+      "source": "https://commons.wikimedia.org/wiki/File:Boerewors_braai.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-184",
@@ -3646,7 +4744,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows raw meat on the grill, not cooked braaivleis."
   },
   {
     "id": "dish-185",
@@ -3663,9 +4761,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-185.jpg",
+      "alt": "Chakalaka relish cooking in a pot",
+      "author": "philipp from cape town, south africa",
+      "source": "https://commons.wikimedia.org/wiki/File:Chakalaka.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY 2.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-186",
@@ -3759,9 +4866,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-189.jpg",
+      "alt": "Tomato bredie with rice",
+      "author": "Craigfraser",
+      "source": "https://commons.wikimedia.org/wiki/File:Tamatie_Bredie.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-190",
@@ -3778,9 +4894,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-190.jpg",
+      "alt": "Sticks of droëwors, dried sausage",
+      "author": "Jamsta at en.wikipedia",
+      "source": "https://commons.wikimedia.org/wiki/File:Droewors.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-191",
@@ -3816,9 +4941,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-192.jpg",
+      "alt": "Toasted braaibroodjies, grilled sandwiches",
+      "author": "Dumbassman",
+      "source": "https://commons.wikimedia.org/wiki/File:Braai_broodjies.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-193",
@@ -3835,9 +4969,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-193.jpg",
+      "alt": "Potjiekos stew in a cast-iron pot",
+      "author": "Ji-Elle",
+      "source": "https://commons.wikimedia.org/wiki/File:Potjiekos-Namibie.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-194",
@@ -3854,9 +4997,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "Vetkoek/Amagwinya retained as the submitted South African version.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-194.jpg",
+      "alt": "Vetkoek served with a meat stew",
+      "author": "Stasia007",
+      "source": "https://commons.wikimedia.org/wiki/File:Vetkoek.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-195",
@@ -3873,9 +5025,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-195.jpg",
+      "alt": "Pap with tomato relish, wors and a mutton chop",
+      "author": "Pietersielie(PC)",
+      "source": "https://commons.wikimedia.org/wiki/File:Pap_with_sheba,_wors_and_mutton_chop.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-196",
@@ -3892,9 +5053,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-196.jpg",
+      "alt": "Umngqusho, samp and beans",
+      "author": "WomanON",
+      "source": "https://commons.wikimedia.org/wiki/File:Samp_%26_Beans.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-197",
@@ -3953,9 +5123,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-199.jpg",
+      "alt": "Mopane worms cooked with onions",
+      "author": "ComQuat",
+      "source": "https://commons.wikimedia.org/wiki/File:Mopane-Raupen_gekocht.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-200",
@@ -4078,9 +5257,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-204.jpg",
+      "alt": "Hertzoggies, jam and coconut tarts, in a bakery",
+      "author": "Discott",
+      "source": "https://commons.wikimedia.org/wiki/File:Hertzoggies_for_sale_in_a_Cape_Town_bakery_(22_July_2016).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-205",
@@ -4135,9 +5323,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-207.jpg",
+      "alt": "A Gatsby sandwich, a long roll with filling, held in the hand",
+      "author": "Warren Rohner from Cape Town, South Africa",
+      "source": "https://commons.wikimedia.org/wiki/File:Gatsby_(1).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 2.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-208",
@@ -4156,7 +5353,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows bread rolls inside plastic retail packaging."
   },
   {
     "id": "dish-209",
@@ -4194,9 +5391,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-210.jpg",
+      "alt": "Kapenta with sadza (maize porridge)",
+      "author": "Simz711",
+      "source": "https://commons.wikimedia.org/wiki/File:An_Example_of_Kapenta_And_Sadza(as_it_is_known_in_Zimbabwe).JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-211",
@@ -4215,9 +5421,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-211.jpg",
+      "alt": "Sadza with a tomato and bean relish",
+      "author": "Gody Mago",
+      "source": "https://commons.wikimedia.org/wiki/File:Sadza_and_Beans.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-212",
@@ -4234,9 +5449,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-212.jpg",
+      "alt": "Sadza made from millet with dried cowpea leaves",
+      "author": "Bitsnpaces",
+      "source": "https://commons.wikimedia.org/wiki/File:Sadza_rezviyo,_mufushwa_wemunyemba_and_beef_bones.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-213",
@@ -4274,7 +5498,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows the dish being stirred in a pot during cooking."
   },
   {
     "id": "dish-215",
@@ -4335,7 +5559,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows heaps of dried fish at a market, not a prepared dish."
   },
   {
     "id": "dish-218",
@@ -4373,7 +5597,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows a jar of peanut butter, not a prepared dish."
   },
   {
     "id": "dish-220",
@@ -4394,7 +5618,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: three people posing dominate the photo."
   },
   {
     "id": "dish-221",
@@ -4440,9 +5664,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-222.jpg",
+      "alt": "Chikanda, African polony, served on a dish",
+      "author": "LittleT889",
+      "source": "https://commons.wikimedia.org/wiki/File:Chikanda2.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-223",
@@ -4459,9 +5692,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate showed dried ingredients, not a prepared dish."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-223.jpg",
+      "alt": "Phaleche (maize porridge) with delele (okra)",
+      "author": "WomanON",
+      "source": "https://commons.wikimedia.org/wiki/File:Phaleche_%26_Delele.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-224",
@@ -4478,9 +5720,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-224.jpg",
+      "alt": "Seswaa, pounded shredded beef, on a plate",
+      "author": "Shoodho",
+      "source": "https://commons.wikimedia.org/wiki/File:Seswaa_meal.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-225",
@@ -4497,9 +5748,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-225.jpg",
+      "alt": "Ting, fermented sorghum porridge, in a bowl",
+      "author": "LoatilePro14",
+      "source": "https://commons.wikimedia.org/wiki/File:Ting_ya_mabele.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-226",
@@ -4516,9 +5776,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-226.jpg",
+      "alt": "Bogobe jwa lerotse with beans and chicken",
+      "author": "Gaone1991",
+      "source": "https://commons.wikimedia.org/wiki/File:Bogobe_jwa_lerotse.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-227",
@@ -4535,9 +5804,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-227.jpg",
+      "alt": "Serobe, tripe and offal stew",
+      "author": "Bonolo Nikita Rankaga",
+      "source": "https://commons.wikimedia.org/wiki/File:Serobe_(Beef_tripe_mixed_with_inner_parts_of_a_cow_or_goat).jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-228",
@@ -4573,9 +5851,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-229.jpg",
+      "alt": "Dikgobe, samp and beans, in a pot",
+      "author": "Jay Superthato",
+      "source": "https://commons.wikimedia.org/wiki/File:Ready_to_serve_Dikgobe_dish(mix_of_samp_and_beans).jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-230",
@@ -4592,9 +5879,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "Magwinya retained as Botswana variant, distinct from submitted South African Vetkoek.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-230.jpg",
+      "alt": "A bowl of magwinya fat cakes",
+      "author": "Attiem",
+      "source": "https://commons.wikimedia.org/wiki/File:Magwinya(Fatcakes).JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-231",
@@ -4630,9 +5926,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-232.jpg",
+      "alt": "Piri piri chicken with tomatoes",
+      "author": "CNEcija12345",
+      "source": "https://commons.wikimedia.org/wiki/File:Peri-Peri_Chicken_dish.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-233",
@@ -4727,9 +6032,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-237.jpg",
+      "alt": "Peanut curry with chicken (caril de amendoim)",
+      "author": "Adriao",
+      "source": "https://commons.wikimedia.org/wiki/File:Caril_de_amendoim.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-238",
@@ -4768,9 +6082,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "Mfumbwa merged as spelling alias; recipe composition remains unspecified.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-239.jpg",
+      "alt": "Fumbwa leaf stew served with fufu",
+      "author": "T.K. Naliaka",
+      "source": "https://commons.wikimedia.org/wiki/File:Mfumbwa_-_sauce_with_fufu.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-240",
@@ -4811,7 +6134,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows a growing cassava plant, not cooked pondu."
   },
   {
     "id": "dish-242",
@@ -4828,9 +6151,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-242.jpg",
+      "alt": "Chikwangue (kwanga), fermented cassava bread, sliced on a plate",
+      "author": "Lyokoï",
+      "source": "https://commons.wikimedia.org/wiki/File:Kikwanga_(chikwangue)_%C3%A0_la_fa%C3%A7on_de_la_RDC_mais_sans_sauce_et_coup%C3%A9.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-243",
@@ -4869,9 +6201,18 @@ var SKDishDiscovery = [
     "identityStatus": "needs-confirmation",
     "reviewNote": "Saka Saka may overlap Pondu; retained as a named regional preparation pending recipe comparison.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-244.jpg",
+      "alt": "Saka saka, pounded cassava leaves, in a bowl",
+      "author": "T.K. Naliaka",
+      "source": "https://commons.wikimedia.org/wiki/File:Saka-saka_-_pounded_and_cooked_cassava_leaves.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-245",
@@ -4926,9 +6267,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-247.jpg",
+      "alt": "Liboke, food steamed in leaves, opened on a plate",
+      "author": "Serein",
+      "source": "https://commons.wikimedia.org/wiki/File:Liboke_entrouvert_01.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-248",
@@ -4945,9 +6295,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-248.jpg",
+      "alt": "Moambe chicken with rice and greens",
+      "author": "OussamaHamama",
+      "source": "https://commons.wikimedia.org/wiki/File:Moambe_chicken.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-249",
@@ -4985,7 +6344,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows raw plantain bunches at a market."
   },
   {
     "id": "dish-251",
@@ -5023,7 +6382,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows a bean field, not cooked madesu."
   },
   {
     "id": "dish-253",
@@ -5137,7 +6496,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows dried caterpillars beside raw vegetables, not the prepared dish."
   },
   {
     "id": "dish-259",
@@ -5194,7 +6553,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows a growing cassava plant, not the cooked dish."
   },
   {
     "id": "dish-262",
@@ -5232,7 +6591,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows raw sorrel leaves in a bag, not the prepared dish."
   },
   {
     "id": "dish-264",
@@ -5344,9 +6703,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-270.jpg",
+      "alt": "Achu with yellow soup, meat and vegetables",
+      "author": "OlgaEmma",
+      "source": "https://commons.wikimedia.org/wiki/File:Achu_and_Yellow_Soup_with_vegetable.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-271",
@@ -5363,9 +6731,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-271.jpg",
+      "alt": "Ndolé with rice, fried plantain and meat",
+      "author": "PRA",
+      "source": "https://commons.wikimedia.org/wiki/File:Ndol%C3%A9_camerounais.JPG",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-272",
@@ -5382,9 +6759,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-272.jpg",
+      "alt": "Poulet DG, chicken with plantains and vegetables",
+      "author": "Affirebecca",
+      "source": "https://commons.wikimedia.org/wiki/File:Poulet_DG.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-273",
@@ -5420,9 +6806,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-274.jpg",
+      "alt": "Koki beans with boiled plantain",
+      "author": "Adesolive",
+      "source": "https://commons.wikimedia.org/wiki/File:Koki_Beans.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-275",
@@ -5439,9 +6834,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-275.jpg",
+      "alt": "Eru vegetable soup with water fufu",
+      "author": "BACHELOR45",
+      "source": "https://commons.wikimedia.org/wiki/File:Eru_du_nord-ouest.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-276",
@@ -5458,9 +6862,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-276.jpg",
+      "alt": "Kati kati grilled chicken on a grill",
+      "author": "Betterfoto",
+      "source": "https://commons.wikimedia.org/wiki/File:Khati_Khati.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-277",
@@ -5500,7 +6913,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows a raw cut fruit, not the prepared safou."
   },
   {
     "id": "dish-279",
@@ -5557,9 +6970,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-281.jpg",
+      "alt": "Fufu corn with khati khati and greens",
+      "author": "Adesolive",
+      "source": "https://commons.wikimedia.org/wiki/File:Fufu_corn_and_khati_khati.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-282",
@@ -5578,9 +7000,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-282.jpg",
+      "alt": "Water fufu with eru",
+      "author": "Kondah",
+      "source": "https://commons.wikimedia.org/wiki/File:Water_fufu_and_eru_01.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-283",
@@ -5597,9 +7028,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-283.jpg",
+      "alt": "Kwacoco bible, cocoyam parcels wrapped in leaves",
+      "author": "Joso11",
+      "source": "https://commons.wikimedia.org/wiki/File:Kwacoco_Bible,_a_traditional_meal_of_the_Bakweri_people_from_the_South_West_Region_of_Cameroon.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-284",
@@ -5616,9 +7056,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-284.jpg",
+      "alt": "Ekpang nkukwo, grated cocoyam and leaf pottage",
+      "author": "TessiDon",
+      "source": "https://commons.wikimedia.org/wiki/File:A_plate_of_Ekpang_(Nigerian_local_dish).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-285",
@@ -5635,9 +7084,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "Ndole with Plantains is a composite meal, retained separately from Ndolé.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-285.jpg",
+      "alt": "Ndolé served with plantains",
+      "author": "Fawaz.tairou",
+      "source": "https://commons.wikimedia.org/wiki/File:Ndol%C3%A8_et_banane_bouillie.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-286",
@@ -5673,9 +7131,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-287.jpg",
+      "alt": "Bongo'o tobi, black spiced fish sauce, with plantain",
+      "author": "Coco lago",
+      "source": "https://commons.wikimedia.org/wiki/File:Mbongo_tchobi_et_banae_plantin_malx%C3%A9.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-288",
@@ -5711,9 +7178,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-289.jpg",
+      "alt": "Maboke fish stew in a white bowl",
+      "author": "Simple fleur",
+      "source": "https://commons.wikimedia.org/wiki/File:Plat_de_maboke.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-290",
@@ -5778,9 +7254,18 @@ var SKDishDiscovery = [
     "identityStatus": "needs-confirmation",
     "reviewNote": "Muamba Ngal needs spelling/recipe confirmation; no automatic substitution.",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-292.jpg",
+      "alt": "Muamba stew with meat in a clay bowl",
+      "author": "Adriao",
+      "source": "https://commons.wikimedia.org/wiki/File:Muamba.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY 3.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-293",
@@ -5837,9 +7322,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-295.jpg",
+      "alt": "Nyembwe chicken served with cassava sticks",
+      "author": "Mabiala serge",
+      "source": "https://commons.wikimedia.org/wiki/File:Plat_de_Nyembwe.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-296",
@@ -5856,9 +7350,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-296.jpg",
+      "alt": "Maboké fish stew in a white bowl",
+      "author": "Simple fleur",
+      "source": "https://commons.wikimedia.org/wiki/File:Plat_de_maboke.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-297",

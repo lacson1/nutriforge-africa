@@ -748,8 +748,8 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=43">
-<link rel="stylesheet" href="savourkin-theme.css?v=18">
+<link rel="stylesheet" href="layout.css?v=44">
+<link rel="stylesheet" href="savourkin-theme.css?v=19">
 </head>
 <body>
 
@@ -1654,6 +1654,7 @@ function openDrawer(name){
   drawer.inert=false;
   drawer.setAttribute('aria-hidden','false');
   drawer.classList.add('open');
+  document.body.classList.add('drawer-open');
   drawer.querySelector('.drawer-close').focus();
   body.scrollTop=0;
   backdrop.classList.add('visible');
@@ -1673,21 +1674,30 @@ function closeDrawer(restoreFocus){
   if(activeDrawer==='planner')plannerCombinationDraft=null;
   var drawer = document.getElementById('drawer');
   var backdrop = document.getElementById('drawerBackdrop');
-  if(drawer.contains(document.activeElement))document.activeElement.blur();
-  drawer.inert=true;
+  var wasOpen = drawer.classList.contains('open');
+  // Visual close first so the next frame paints quickly (INP); the rest runs after that paint.
   drawer.setAttribute('aria-hidden','true');
   drawer.classList.remove('open');
   drawer.removeAttribute('aria-modal');
-  if(drawerPreviousOverflow!==null){document.body.style.overflow=drawerPreviousOverflow;drawerPreviousOverflow=null;}
-  if(restoreFocus!==false && drawerReturnFocus){if(drawerReturnFocus.isConnected)drawerReturnFocus.focus({preventScroll:true});else{var oldCard=drawerReturnFocus.closest('.card'),newCard=oldCard&&document.getElementById(oldCard.id);if(newCard)newCard.querySelector('.card-name').focus({preventScroll:true});}}
-  drawerReturnFocus=null;
   backdrop.classList.remove('visible');
-  document.querySelectorAll('.ha-btn').forEach(function(b){b.classList.remove('active-drawer')});
+  document.body.classList.remove('drawer-open');
+  if(drawerPreviousOverflow!==null){document.body.style.overflow=drawerPreviousOverflow;drawerPreviousOverflow=null;}
+  var returnFocus = restoreFocus!==false ? drawerReturnFocus : null;
+  drawerReturnFocus=null;
   activeDrawer = null;
-  updatePlateTray();
-  // Reset mobile nav to Browse
-  var browseBtn = document.querySelector('.mnav-btn');
-  if(browseBtn){document.querySelectorAll('.mnav-btn').forEach(function(b){b.classList.remove('active')});browseBtn.classList.add('active')}
+  if(!wasOpen){drawer.inert=true;return;}
+  requestAnimationFrame(function(){setTimeout(function(){
+    if(drawer.classList.contains('open'))return;
+    var focusAway=document.activeElement&&document.activeElement!==document.body&&!drawer.contains(document.activeElement);
+    if(returnFocus&&!focusAway){if(returnFocus.isConnected)returnFocus.focus({preventScroll:true});else{var oldCard=returnFocus.closest('.card'),newCard=oldCard&&document.getElementById(oldCard.id);if(newCard)newCard.querySelector('.card-name').focus({preventScroll:true});}}
+    else if(drawer.contains(document.activeElement))document.activeElement.blur();
+    drawer.inert=true;
+    document.querySelectorAll('.ha-btn').forEach(function(b){b.classList.remove('active-drawer')});
+    updatePlateTray();
+    // Reset mobile nav to Browse
+    var browseBtn = document.querySelector('.mnav-btn');
+    if(browseBtn){document.querySelectorAll('.mnav-btn').forEach(function(b){b.classList.remove('active')});browseBtn.classList.add('active')}
+  },0);});
 }
 function t2dmGuideNavigate(fragment){
   var frame = document.getElementById('t2dmGuideFrame');

@@ -554,7 +554,7 @@ body .filter-row .chip.active, body.dark-mode .filter-row .chip.active { backgro
 .card-swap-row{padding:0 18px}.card-swap-trigger{width:100%;padding:10px 0;display:flex;justify-content:space-between;border:0;background:transparent;color:var(--accent-green);font:inherit;font-size:12px;cursor:pointer;text-align:left;min-height:40px}
 .grid.view-list .card:not(.open) .card-swap-row{padding:0 10px;flex-shrink:0}.grid.view-list .card:not(.open) .card-swap-trigger{gap:8px;font-size:10px}
 #livePlateTray{position:fixed;bottom:16px;left:24px;right:24px;z-index:95;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 20px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;box-shadow:0 4px 24px #0002}
-#livePlateTray[hidden],body:has(.drawer.open) #livePlateTray{display:none}
+#livePlateTray[hidden],body.drawer-open #livePlateTray{display:none}
 .plate-tray-copy{min-width:0;display:grid;gap:5px}.plate-tray-copy strong{font-size:14px}.plate-tray-copy>span{font-size:12px;color:var(--text-secondary)}
 #plateTrayFoods{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:650px}.plate-tray-actions{display:flex;gap:10px;flex-shrink:0}.plate-tray-actions button{font-size:12px;min-height:40px;padding:10px 16px}
 body.has-plate-tray{padding-bottom:120px}body.has-plate-tray #cardActionStatus{bottom:130px}body.has-plate-tray #bttBtn{bottom:130px}
