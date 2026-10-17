@@ -150,6 +150,10 @@ body{font-size:var(--sk-reading-body);line-height:1.6}
 @media(max-width:45rem){.header{gap:8px 12px;justify-content:space-between}.header .brand-site-title{flex:1 1 auto}.header .header-actions{flex:1 1 100%;justify-content:flex-end;margin-left:0}.header .overflow-menu{position:fixed;top:130px;right:16px;left:auto;width:min(22rem,calc(100vw - 32px));max-height:calc(100dvh - 150px)}.today-dashboard-panel{position:fixed;left:16px;right:16px;width:auto;max-width:calc(100vw - 32px)}}
 @container planner-reading (max-width:20rem){.planner-week-nav{display:grid;grid-template-columns:1fr 1fr}.planner-week-nav label{grid-column:1/-1;grid-row:1}.planner-week-nav button{grid-row:2}.weekly-planner .planner-week-nav input{width:100%}.planner-slot-actions .ca-btn{flex:1 1 auto}}
 
+/* Keep page width stable when the drawer locks scrolling, and avoid a full-page blur repaint, so closing stays responsive (INP). */
+html{scrollbar-gutter:stable}
+.drawer-backdrop{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(0,0,0,.32)}
+body.dark-mode .drawer-backdrop{background:rgba(0,0,0,.55)}
 /* Close by the panel's own width, including expanded Plate and Planner panels. */
 .drawer{right:0;transform:translateX(100%);visibility:hidden;pointer-events:none;transition:transform .25s ease,visibility 0s linear .25s}
 .drawer.open{right:0;transform:translateX(0);visibility:visible;pointer-events:auto;transition:transform .25s ease,visibility 0s}

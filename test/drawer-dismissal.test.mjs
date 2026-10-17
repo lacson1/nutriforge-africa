@@ -6,9 +6,9 @@ const close=html.slice(html.indexOf('function closeDrawer(restoreFocus)'),html.i
 describe('drawer dismissal',()=>{
  it('removes overlay, restores previous scrolling and returns focus without touching saved data',()=>{
   const events=[];
-  const drawer={contains:()=>true,inert:false,setAttribute:(k,v)=>events.push([k,v]),removeAttribute:k=>events.push(['remove',k]),classList:{remove:k=>events.push(['drawer',k])}};
+  const drawer={contains:()=>true,inert:false,setAttribute:(k,v)=>events.push([k,v]),removeAttribute:k=>events.push(['remove',k]),open:true,classList:{remove:k=>{events.push(['drawer',k]);if(k==='open')drawer.open=false;},contains:k=>k==='open'&&drawer.open}};
   const backdrop={classList:{remove:k=>events.push(['backdrop',k])}};
-  const c={activeDrawer:'planner',plannerCombinationDraft:{preview:true},drawerPreviousOverflow:'auto',drawerReturnFocus:{isConnected:true,focus:()=>events.push('focus')},updatePlateTray:()=>events.push('tray'),document:{body:{style:{overflow:'hidden'}},activeElement:{blur:()=>events.push('blur')},getElementById:id=>id==='drawer'?drawer:backdrop,querySelectorAll:()=>[],querySelector:()=>null}};
+  const c={activeDrawer:'planner',plannerCombinationDraft:{preview:true},drawerPreviousOverflow:'auto',drawerReturnFocus:{isConnected:true,focus:()=>events.push('focus')},updatePlateTray:()=>events.push('tray'),requestAnimationFrame:f=>f(),setTimeout:f=>f(),document:{body:{style:{overflow:'hidden'},classList:{remove:()=>{}}},activeElement:{blur:()=>events.push('blur')},getElementById:id=>id==='drawer'?drawer:backdrop,querySelectorAll:()=>[],querySelector:()=>null}};
   vm.runInNewContext(close,c);c.closeDrawer();
   expect(drawer.inert).toBe(true);expect(c.activeDrawer).toBe(null);expect(c.document.body.style.overflow).toBe('auto');expect(c.drawerPreviousOverflow).toBe(null);expect(events).toContainEqual(['backdrop','visible']);expect(events).toContain('focus');
   c.closeDrawer();expect(c.document.body.style.overflow).toBe('auto');

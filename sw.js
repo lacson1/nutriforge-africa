@@ -1,15 +1,15 @@
 /* NutriForge — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-layout-67';
+var CACHE_NAME = 'nutriforge-layout-68';
 var PRECACHE = [
   './dish-library.html?v=2',
-  './dish-library.css?v=2',
-  './js/dish-discovery-data.js?v=3',
+  './dish-library.css?v=3',
+  './js/dish-discovery-data.js?v=4',
   './js/dish-discovery.js?v=3',
-  './savourkin-theme.css?v=18',
+  './savourkin-theme.css?v=19',
   './js/plate-exploration.js?v=9',
   './js/dish-images.js?v=1',
   './index.html',
-  './layout.css?v=43',
+  './layout.css?v=44',
   './landing.html',
   './landing-premium.css?v=5',
   './assets/planner-table.jpg',
