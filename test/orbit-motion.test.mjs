@@ -1,0 +1,4 @@
+import {it,expect} from 'vitest';import fs from 'node:fs';import vm from 'node:vm';
+const c={};vm.runInNewContext(fs.readFileSync(new URL('../js/plate-exploration.js',import.meta.url),'utf8'),c);
+it('keeps small, reduced-motion and empty layouts static',()=>{for(const args of [[true,1000,4],[false,390,4],[false,599,4],[false,1000,0]])expect(c.SKOrbitMotion.policy(...args)).toBe(false);expect(c.SKOrbitMotion.policy(false,900,4)).toBe(true);expect(c.SKOrbitMotion.policy(false,640,4)).toBe(true);});
+it('plays only by explicit choice and pauses on hover or keyboard focus',()=>{const m=c.SKOrbitMotion;expect(m.playing(true)).toBe(false);m.enabled=true;expect(m.playing(true)).toBe(true);m.hover=true;expect(m.playing(true)).toBe(false);m.hover=false;m.focus=true;expect(m.playing(true)).toBe(false);m.focus=false;expect(m.playing(true)).toBe(true);expect(m.playing(false)).toBe(false);});

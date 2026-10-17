@@ -749,7 +749,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
 <link rel="stylesheet" href="layout.css?v=41">
-<link rel="stylesheet" href="savourkin-theme.css?v=9">
+<link rel="stylesheet" href="savourkin-theme.css?v=13">
 </head>
 <body>
 
@@ -1007,7 +1007,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
   <div class="drawer" id="drawer" role="dialog" aria-labelledby="drawerTitle" aria-hidden="true" inert>
     <div class="drawer-header">
       <span class="drawer-title" id="drawerTitle"></span>
-      <button class="drawer-close" aria-label="Close panel" onclick="closeDrawer()">&#10005;</button>
+      <button type="button" class="drawer-close" aria-label="Close panel" onclick="closeDrawer()">&#10005;</button>
     </div>
     <div class="drawer-body" id="drawerBody"></div>
   </div>
@@ -1175,7 +1175,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <script src="js/swaps-ui.js?v=7"></script>
 <script src="js/scoring-core.js?v=49"></script>
 <script src="js/dish-images.js?v=1"></script>
-<script src="js/plate-exploration.js?v=6"></script>
+<script src="js/plate-exploration.js?v=8"></script>
 <script>
 // ── ENRICHMENT (classifyDrug, calcLongevity, confStars — ./js/scoring-core.js?v=49)
 
@@ -1616,6 +1616,7 @@ function cycleSort(col){
 
 // ── DRAWER SYSTEM ──
 var drawerReturnFocus = null;
+var drawerPreviousOverflow = null;
 function openDrawer(name){
   var trigger = activeDrawer ? drawerReturnFocus : document.activeElement;
   closeDrawer(false);
@@ -1653,6 +1654,9 @@ function openDrawer(name){
   };
   if(introductions[name])body.insertAdjacentHTML('afterbegin','<div class="tool-intro"><h2>'+introductions[name][0]+'</h2><p>'+introductions[name][1]+'</p></div>');
   document.querySelectorAll('.mnav-btn').forEach(function(nav){nav.classList.toggle('active',nav.textContent.trim().toLowerCase()===name)});
+  drawerPreviousOverflow=document.body.style.overflow;
+  document.body.style.overflow='hidden';
+  drawer.setAttribute('aria-modal','true');
   drawer.inert=false;
   drawer.setAttribute('aria-hidden','false');
   drawer.classList.add('open');
@@ -1671,6 +1675,7 @@ function openDrawer(name){
   if(name==='plate') updatePlatePanel();
 }
 function closeDrawer(restoreFocus){
+  if(typeof skPauseMotion==='function')skPauseMotion();
   if(activeDrawer==='planner')plannerCombinationDraft=null;
   var drawer = document.getElementById('drawer');
   var backdrop = document.getElementById('drawerBackdrop');
@@ -1678,6 +1683,8 @@ function closeDrawer(restoreFocus){
   drawer.inert=true;
   drawer.setAttribute('aria-hidden','true');
   drawer.classList.remove('open');
+  drawer.removeAttribute('aria-modal');
+  if(drawerPreviousOverflow!==null){document.body.style.overflow=drawerPreviousOverflow;drawerPreviousOverflow=null;}
   if(restoreFocus!==false && drawerReturnFocus){if(drawerReturnFocus.isConnected)drawerReturnFocus.focus({preventScroll:true});else{var oldCard=drawerReturnFocus.closest('.card'),newCard=oldCard&&document.getElementById(oldCard.id);if(newCard)newCard.querySelector('.card-name').focus({preventScroll:true});}}
   drawerReturnFocus=null;
   backdrop.classList.remove('visible');
@@ -3713,6 +3720,7 @@ document.addEventListener('keydown',function(e){
     if(bb && bb.classList.contains('open')){ closeBrandBrowsePanel(); e.preventDefault(); return }
     var td = document.getElementById('todayDashboardWrap');
     if(td && td.classList.contains('open')){ closeTodayDashboardPanel();document.getElementById('todayDashboardBtn').focus(); e.preventDefault(); return }
+    if(activeDrawer){closeDrawer();e.preventDefault();return;}
     closeCondDropdown();closeDrawer();document.querySelectorAll('.card.open').forEach(function(c){var focused=c.contains(document.activeElement);setCardExpanded(c,false);if(focused)c.querySelector('.card-details-toggle').focus({preventScroll:true});})
   }
   if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();var s=document.getElementById('srch');if(s){s.focus();s.select()}}
