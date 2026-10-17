@@ -9,3 +9,5 @@ Dish exploration: source-backed combinations can be previewed independently of t
 Readability: Plate uses 16px body/control text, 14px support/source labels, 24px tabular nutrient values and 28px dish headings at the default root size. Values and units are separate spans. Container queries reflow the orbit when the panel or available text measure narrows, including enlarged root text. Planner remains a separate simple working surface.
 
 App-wide readability: shared 16px reading/control text, 14px supporting text and units, 20px food values; rem-based sizes respect enlarged text. Planner uses container reflow for days, meal editor and shopping quantities. Evidence exclusions and source notes remain visible; landing retains the approved editorial composition.
+
+Optional dish motion: explicit Play/Pause starts a 16-second, upright 10px by 10px bounded orbit per ingredient within reserved grid gaps. Ingredient-card hover and focus pause; touch, portion edits, dish switching and closing stop playback. Reduced-motion and narrow panels stay static. Planner stays still.

@@ -1,4 +1,4 @@
-/* Static ingredient exploration; no independent nutrition dataset or storage schema. */
+/* Ingredient exploration with optional bounded motion; no independent nutrition dataset or storage schema. */
 var SKPlateScale = {
  preview: function(parts,multiplier,lookup){
   var m=Number(multiplier);
@@ -24,7 +24,7 @@ SKPlateScale.contributions=function(parts,lookup){
 var skDishId='',skNutrient='fiber',skOrbitParts=[];
 var skExampleDish={id:'welcome',name:'Rice, cowpeas, plantain & greens',parts:[{id:398,g:150},{id:411,g:100},{id:429,g:60},{id:418,g:75}]};
 function skDishes(){return [skExampleDish].concat(typeof COMBINATION_MEALS==='undefined'?[]:COMBINATION_MEALS.filter(function(m){return !NFMealsCore.computeMealTotals(m.parts,foodsById).incomplete;}));}
-function selectOrbitDish(id){skDishId=id;renderPlateExploration(Object.keys(plateMap));}
+function selectOrbitDish(id){skPauseMotion();skDishId=id;renderPlateExploration(Object.keys(plateMap));}
 function renderPlateExploration(ids){
  var host=document.getElementById('orbitIngredients');if(!host)return;
  var dish=skDishes().find(function(d){return d.id===skDishId;});
@@ -40,6 +40,7 @@ function renderPlateExploration(ids){
  renderDishOrbit(skScaleBase);
 }
 function renderDishOrbit(parts){
+ document.querySelector('.plate-orbit').style.setProperty('--orbit-rows',Math.max(1,Math.ceil(parts.length/2)));
  skOrbitParts=parts;var result=SKPlateScale.contributions(parts,foodsById),t=result.totals;
  var labels={fiber:'Fibre',protein:'Protein',carbs:'Carbohydrate',fat:'Fat',kcal:'Energy'},unit=skNutrient==='kcal'?'kcal':'g';
  var name=(skDishes().find(function(d){return d.id===skDishId;})||{}).name||'Your assembled plate';
@@ -50,9 +51,10 @@ function renderDishOrbit(parts){
  document.querySelector('.plate-visual-caption').textContent=photo?'Loading dish illustration…':'Prepared-weight diagram · your custom plate';
  document.getElementById('orbitDishSummary').innerHTML='<h3>'+safeHtml(name)+'</h3><strong class="dish-weight">'+result.grams+' <span class="nutrient-unit">g</span></strong><p>Combined serving · '+(skDishId?'suggested portions':'current foods')+'</p>'+(parts.length?(t.incomplete?'<p>Nutrition incomplete — source or carbohydrate basis cannot be combined.</p>':'<dl class="dish-nutrients">'+[['Energy','kcal','kcal'],['Protein','protein','g'],['Fibre','fiber','g'],['Carbohydrate','carbs','g'],['Fat','fat','g']].map(function(a){return '<div><dt>'+a[0]+'</dt><dd>'+t[a[1]]+' <span class="nutrient-unit">'+a[2]+'</span></dd></div>';}).join('')+'</dl><small>Source-based estimates for the listed prepared weights.</small>'):'<p>Add foods or choose a dish above.</p>');
  document.getElementById('orbitIngredients').innerHTML=result.rows.map(function(r,i){var f=foodsById[r.id],v=r.values,photo=skIngredientPhotos[r.id];
-  return '<button type="button" class="orbit-food" onclick="openPlateIngredient('+r.id+')" aria-label="View '+safeHtml(f.name)+' portion and source">'+(photo?'<img src="assets/'+photo+'-editorial.jpg" alt="Illustrative '+safeHtml(f.name)+'">':'<span class="ingredient-dot" aria-hidden="true" style="--food-color:'+plateColors[i%plateColors.length]+'"></span>')+'<span><strong>'+safeHtml(f.name)+'</strong><small>'+r.g+' g · named preparation</small>'+(v.incomplete?'<small>Nutrition incomplete</small>':'<b>'+v.kcal+' <span class="nutrient-unit">kcal</span></b><small>'+labels[skNutrient]+' '+v[skNutrient]+' '+unit+'</small>')+'<small>Portion, preparation &amp; source ↗</small></span></button>';
+  return '<button type="button" class="orbit-food" style="--ingredient-row:'+(Math.floor(i/2)+1)+';--ingredient-column:'+(i%2?3:1)+'" onclick="openPlateIngredient('+r.id+')" aria-label="View '+safeHtml(f.name)+' portion and source">'+(photo?'<img src="assets/'+photo+'-editorial.jpg" alt="Illustrative '+safeHtml(f.name)+'">':'<span class="ingredient-dot" aria-hidden="true" style="--food-color:'+plateColors[i%plateColors.length]+'"></span>')+'<span><strong>'+safeHtml(f.name)+'</strong><small>'+r.g+' g · named preparation</small>'+(v.incomplete?'<small>Nutrition incomplete</small>':'<b>'+v.kcal+' <span class="nutrient-unit">kcal</span></b><small>'+labels[skNutrient]+' '+v[skNutrient]+' '+unit+'</small>')+'<small>Portion, preparation &amp; source ↗</small></span></button>';
  }).join('');
  document.getElementById('orbitArithmetic').textContent=!parts.length?'':t.incomplete?'Individual estimates do not imply a complete dish total. Missing values are not zero.':result.rows.map(function(r){return r.values[skNutrient];}).join(' + ')+' = '+t[skNutrient]+' '+unit+' '+labels[skNutrient].toLowerCase()+'. Contributions are rounded together to reconcile with the dish total.';
+ skInitMotion();
 }
 function dishImageLoaded(img){
  if(!img.isConnected)return;
@@ -65,6 +67,7 @@ function dishImageFailed(img){
 }
 function skWeightGradient(parts){var total=parts.reduce(function(n,p){return n+p.g;},0),angle=0;return total?'conic-gradient('+parts.map(function(p,i){var start=angle;angle+=p.g/total*360;return plateColors[i%plateColors.length]+' '+start+'deg '+angle+'deg';}).join(',')+')':'#504338';}
 function previewPlateScale(value){
+ skPauseMotion();
  skScaleDraft=SKPlateScale.preview(skScaleBase,value,foodsById);
  document.getElementById('plateScaleValue').textContent=Number(value)+'×';
  var out=document.getElementById('plateScalePreview'),apply=document.getElementById('plateScaleApply');
@@ -81,6 +84,7 @@ function applyPlateScale(){
  document.getElementById('plateScale').focus();
 }
 function openPlateIngredient(id){
+ skPauseMotion();
  var f=foodsById[id];if(!f)return;var g=(skOrbitParts.find(function(p){return p.id===id;})||{}).g||portionSizes[id]||100,t=NFMealsCore.computeMealTotals([{id:id,g:g}],foodsById);
  var contribution=SKPlateScale.contributions(skOrbitParts,foodsById).rows.find(function(p){return p.id===id;});if(contribution)t=contribution.values;
  var dialog=document.getElementById('plateIngredientDialog');
@@ -102,3 +106,38 @@ if(typeof document!=='undefined')document.addEventListener('keydown',function(ev
  if(event.shiftKey&&(document.activeElement===first||!drawer.contains(document.activeElement))){event.preventDefault();last.focus();}
  else if(!event.shiftKey&&(document.activeElement===last||!drawer.contains(document.activeElement))){event.preventDefault();first.focus();}
 });
+
+// Optional bounded orbital motion. Nutrition, portions and saved data stay independent.
+var SKOrbitMotion={enabled:false,hover:false,focus:false,
+ policy:function(reduced,width,count){return !reduced&&width>=600&&count>0;},
+ playing:function(allowed){return allowed&&this.enabled&&!this.hover&&!this.focus;}
+};
+function skPauseMotion(){SKOrbitMotion.enabled=false;skUpdateMotion();}
+function skToggleMotion(){SKOrbitMotion.enabled=!SKOrbitMotion.enabled;skUpdateMotion();}
+function skUpdateMotion(){
+ var orbit=document.querySelector('.plate-orbit'),button=document.getElementById('orbitMotionToggle'),note=document.getElementById('orbitMotionStatus');if(!orbit||!button)return;
+ var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var allowed=SKOrbitMotion.policy(reduced,orbit.clientWidth*16/(parseFloat(getComputedStyle(document.documentElement).fontSize)||16),orbit.querySelectorAll('.orbit-food').length);
+ if(!allowed)SKOrbitMotion.enabled=false;
+ var playing=SKOrbitMotion.playing(allowed);
+ orbit.dataset.motion=playing?'playing':'paused';orbit.dataset.motionAllowed=String(allowed);
+ button.disabled=!allowed;button.textContent=SKOrbitMotion.enabled?'Pause orbit':'Play orbit';button.setAttribute('aria-pressed',String(SKOrbitMotion.enabled));
+ note.textContent=!allowed?(reduced?'Static view · reduced motion preference.':'Static on this small screen. Widen the window to play.'):(playing?'Orbit playing · hover an ingredient card to pause.':SKOrbitMotion.enabled?'Paused while you explore a card.':'Static view · play a gentle orbit when ready.');
+}
+function skInitMotion(){
+ var orbit=document.querySelector('.plate-orbit');if(!orbit)return;
+ if(!document.getElementById('orbitMotionToggle')){
+  orbit.insertAdjacentHTML('beforebegin','<div class="orbit-motion-controls"><button type="button" class="ca-btn" id="orbitMotionToggle" aria-pressed="false" onclick="skToggleMotion()">Play orbit</button><p id="orbitMotionStatus" role="status" aria-live="polite"></p></div>');
+ }
+ if(!orbit.dataset.motionWired){
+  orbit.dataset.motionWired='true';
+  orbit.addEventListener('pointerover',function(e){SKOrbitMotion.hover=!!e.target.closest('.orbit-food');skUpdateMotion();});
+  orbit.addEventListener('pointerout',function(e){SKOrbitMotion.hover=!!(e.relatedTarget&&e.relatedTarget.closest&&e.relatedTarget.closest('.orbit-food'));skUpdateMotion();});
+  orbit.addEventListener('focusin',function(){SKOrbitMotion.focus=true;skUpdateMotion();});
+  orbit.addEventListener('focusout',function(){setTimeout(function(){SKOrbitMotion.focus=orbit.contains(document.activeElement);skUpdateMotion();},0);});
+  orbit.addEventListener('pointerdown',skPauseMotion);
+  if(typeof ResizeObserver!=='undefined'){var observer=new ResizeObserver(function(){if(!orbit.isConnected){observer.disconnect();return;}skUpdateMotion();});observer.observe(orbit);}
+ }
+ skUpdateMotion();
+}
+if(typeof window!=='undefined')window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',skUpdateMotion);

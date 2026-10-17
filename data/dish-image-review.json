@@ -1,0 +1,5123 @@
+{
+  "dish-001": {
+    "id": "dish-001",
+    "sourceRows": [
+      1
+    ],
+    "name": "Jollof Rice",
+    "exactLookup": {
+      "titles": [
+        "File:Jollof Rice.jpg",
+        "File:Jollof rice.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 5,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-002": {
+    "id": "dish-002",
+    "sourceRows": [
+      2
+    ],
+    "name": "Egusi Soup",
+    "exactLookup": {
+      "titles": [
+        "File:Egusi Soup.jpg",
+        "File:Egusi soup.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 5,
+    "disposition": "pending-rejected-candidate",
+    "reason": "Downloaded exact-name candidate showed a meeting, not egusi soup; rejected."
+  },
+  "dish-003": {
+    "id": "dish-003",
+    "sourceRows": [
+      3
+    ],
+    "name": "Fufu",
+    "exactLookup": {
+      "titles": [
+        "File:Fufu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 4,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-004": {
+    "id": "dish-004",
+    "sourceRows": [
+      4
+    ],
+    "name": "Suya",
+    "exactLookup": {
+      "titles": [
+        "File:Suya.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 4,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-005": {
+    "id": "dish-005",
+    "sourceRows": [
+      5
+    ],
+    "name": "Efo Riro",
+    "exactLookup": {
+      "titles": [
+        "File:Efo Riro.jpg",
+        "File:Efo riro.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 5,
+    "disposition": "pending-rejected-candidate",
+    "reason": "Downloaded exact-name candidate showed an event poster, not Efo Riro; rejected."
+  },
+  "dish-006": {
+    "id": "dish-006",
+    "sourceRows": [
+      6
+    ],
+    "name": "Banga Soup",
+    "exactLookup": {
+      "titles": [
+        "File:Banga Soup.jpg",
+        "File:Banga soup.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 4,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-007": {
+    "id": "dish-007",
+    "sourceRows": [
+      7
+    ],
+    "name": "Nkwobi",
+    "exactLookup": {
+      "titles": [
+        "File:Nkwobi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 3,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-008": {
+    "id": "dish-008",
+    "sourceRows": [
+      8
+    ],
+    "name": "Nigerian Beef Stew",
+    "exactLookup": {
+      "titles": [
+        "File:Nigerian Beef Stew.jpg",
+        "File:Nigerian beef stew.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-009": {
+    "id": "dish-009",
+    "sourceRows": [
+      9
+    ],
+    "name": "Ofada Stew",
+    "exactLookup": {
+      "titles": [
+        "File:Ofada Stew.jpg",
+        "File:Ofada stew.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 3,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-010": {
+    "id": "dish-010",
+    "sourceRows": [
+      10
+    ],
+    "name": "Asun",
+    "exactLookup": {
+      "titles": [
+        "File:Asun.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 4,
+    "disposition": "pending-rejected-candidate",
+    "reason": "Candidate has incomplete author/source metadata on its Commons page; attribution not securely established, so excluded."
+  },
+  "dish-011": {
+    "id": "dish-011",
+    "sourceRows": [
+      11
+    ],
+    "name": "Ewa Agoyin",
+    "exactLookup": {
+      "titles": [
+        "File:Ewa Agoyin.jpg",
+        "File:Ewa agoyin.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 3,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-012": {
+    "id": "dish-012",
+    "sourceRows": [
+      12
+    ],
+    "name": "Akara",
+    "exactLookup": {
+      "titles": [
+        "File:Akara.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 4,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-013": {
+    "id": "dish-013",
+    "sourceRows": [
+      13,
+      39
+    ],
+    "name": "Moi Moi",
+    "exactLookup": {
+      "titles": [
+        "File:Moi Moi.jpg",
+        "File:Moi moi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 4,
+    "disposition": "pending-rejected-candidate",
+    "reason": "Candidate showed a street vendor with concealed food; insufficient dish detail."
+  },
+  "dish-014": {
+    "id": "dish-014",
+    "sourceRows": [
+      14
+    ],
+    "name": "Pounded Yam",
+    "exactLookup": {
+      "titles": [
+        "File:Pounded Yam.jpg",
+        "File:Pounded yam.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 4,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-015": {
+    "id": "dish-015",
+    "sourceRows": [
+      15
+    ],
+    "name": "Dambu Nama",
+    "exactLookup": {
+      "titles": [
+        "File:Dambu Nama.jpg",
+        "File:Dambu nama.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": true,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-016": {
+    "id": "dish-016",
+    "sourceRows": [
+      16
+    ],
+    "name": "Chin Chin",
+    "exactLookup": {
+      "titles": [
+        "File:Chin Chin.jpg",
+        "File:Chin chin.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-017": {
+    "id": "dish-017",
+    "sourceRows": [
+      17
+    ],
+    "name": "Masa",
+    "exactLookup": {
+      "titles": [
+        "File:Masa.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-018": {
+    "id": "dish-018",
+    "sourceRows": [
+      18
+    ],
+    "name": "Puff Puff",
+    "exactLookup": {
+      "titles": [
+        "File:Puff Puff.jpg",
+        "File:Puff puff.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 2,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-019": {
+    "id": "dish-019",
+    "sourceRows": [
+      19
+    ],
+    "name": "Afang Soup",
+    "exactLookup": {
+      "titles": [
+        "File:Afang Soup.jpg",
+        "File:Afang soup.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 2,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-020": {
+    "id": "dish-020",
+    "sourceRows": [
+      20
+    ],
+    "name": "Amala",
+    "exactLookup": {
+      "titles": [
+        "File:Amala.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-021": {
+    "id": "dish-021",
+    "sourceRows": [
+      21
+    ],
+    "name": "Ogi",
+    "exactLookup": {
+      "titles": [
+        "File:Ogi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-022": {
+    "id": "dish-022",
+    "sourceRows": [
+      22,
+      300
+    ],
+    "name": "Eba",
+    "exactLookup": {
+      "titles": [
+        "File:Eba.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-023": {
+    "id": "dish-023",
+    "sourceRows": [
+      23
+    ],
+    "name": "Groundnut Soup",
+    "exactLookup": {
+      "titles": [
+        "File:Groundnut Soup.jpg",
+        "File:Groundnut soup.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-024": {
+    "id": "dish-024",
+    "sourceRows": [
+      24
+    ],
+    "name": "Peppered Snail",
+    "exactLookup": {
+      "titles": [
+        "File:Peppered Snail.jpg",
+        "File:Peppered snail.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-025": {
+    "id": "dish-025",
+    "sourceRows": [
+      25
+    ],
+    "name": "Edikang Ikong",
+    "exactLookup": {
+      "titles": [
+        "File:Edikang Ikong.jpg",
+        "File:Edikang ikong.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-026": {
+    "id": "dish-026",
+    "sourceRows": [
+      26
+    ],
+    "name": "Ofe Owerri",
+    "exactLookup": {
+      "titles": [
+        "File:Ofe Owerri.jpg",
+        "File:Ofe owerri.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-027": {
+    "id": "dish-027",
+    "sourceRows": [
+      27
+    ],
+    "name": "Ofe Onugbu (Bitterleaf Soup)",
+    "exactLookup": {
+      "titles": [
+        "File:Ofe Onugbu.jpg",
+        "File:Ofe onugbu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-028": {
+    "id": "dish-028",
+    "sourceRows": [
+      28
+    ],
+    "name": "Ofe Nsala (White Soup)",
+    "exactLookup": {
+      "titles": [
+        "File:Ofe Nsala.jpg",
+        "File:Ofe nsala.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-029": {
+    "id": "dish-029",
+    "sourceRows": [
+      29
+    ],
+    "name": "Tuwo Shinkafa",
+    "exactLookup": {
+      "titles": [
+        "File:Tuwo Shinkafa.jpg",
+        "File:Tuwo shinkafa.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-030": {
+    "id": "dish-030",
+    "sourceRows": [
+      30
+    ],
+    "name": "Tuwo Masara",
+    "exactLookup": {
+      "titles": [
+        "File:Tuwo Masara.jpg",
+        "File:Tuwo masara.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-031": {
+    "id": "dish-031",
+    "sourceRows": [
+      31
+    ],
+    "name": "Kilishi",
+    "exactLookup": {
+      "titles": [
+        "File:Kilishi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-032": {
+    "id": "dish-032",
+    "sourceRows": [
+      32
+    ],
+    "name": "Abacha (African Salad)",
+    "exactLookup": {
+      "titles": [
+        "File:Abacha.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-033": {
+    "id": "dish-033",
+    "sourceRows": [
+      33
+    ],
+    "name": "Boli (Roasted Plantain)",
+    "exactLookup": {
+      "titles": [
+        "File:Boli.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-034": {
+    "id": "dish-034",
+    "sourceRows": [
+      34
+    ],
+    "name": "Gizdodo",
+    "exactLookup": {
+      "titles": [
+        "File:Gizdodo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-035": {
+    "id": "dish-035",
+    "sourceRows": [
+      35
+    ],
+    "name": "Gbegiri",
+    "exactLookup": {
+      "titles": [
+        "File:Gbegiri.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-036": {
+    "id": "dish-036",
+    "sourceRows": [
+      36
+    ],
+    "name": "Ewedu",
+    "exactLookup": {
+      "titles": [
+        "File:Ewedu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-037": {
+    "id": "dish-037",
+    "sourceRows": [
+      37
+    ],
+    "name": "Frejon",
+    "exactLookup": {
+      "titles": [
+        "File:Frejon.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-038": {
+    "id": "dish-038",
+    "sourceRows": [
+      38
+    ],
+    "name": "Efo Elegusi",
+    "exactLookup": {
+      "titles": [
+        "File:Efo Elegusi.jpg",
+        "File:Efo elegusi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-040": {
+    "id": "dish-040",
+    "sourceRows": [
+      40
+    ],
+    "name": "Waakye",
+    "exactLookup": {
+      "titles": [
+        "File:Waakye.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-041": {
+    "id": "dish-041",
+    "sourceRows": [
+      41
+    ],
+    "name": "Ga Kenkey",
+    "exactLookup": {
+      "titles": [
+        "File:Ga Kenkey.jpg",
+        "File:Ga kenkey.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 2,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-042": {
+    "id": "dish-042",
+    "sourceRows": [
+      42
+    ],
+    "name": "Banku",
+    "exactLookup": {
+      "titles": [
+        "File:Banku.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-043": {
+    "id": "dish-043",
+    "sourceRows": [
+      43
+    ],
+    "name": "Gari Foto",
+    "exactLookup": {
+      "titles": [
+        "File:Gari Foto.jpg",
+        "File:Gari foto.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-044": {
+    "id": "dish-044",
+    "sourceRows": [
+      44
+    ],
+    "name": "Hausa Koko",
+    "exactLookup": {
+      "titles": [
+        "File:Hausa Koko.jpg",
+        "File:Hausa koko.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-045": {
+    "id": "dish-045",
+    "sourceRows": [
+      45
+    ],
+    "name": "Shitor Sauce",
+    "exactLookup": {
+      "titles": [
+        "File:Shitor Sauce.jpg",
+        "File:Shitor sauce.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-046": {
+    "id": "dish-046",
+    "sourceRows": [
+      46
+    ],
+    "name": "Garden Egg Stew",
+    "exactLookup": {
+      "titles": [
+        "File:Garden Egg Stew.jpg",
+        "File:Garden egg stew.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-047": {
+    "id": "dish-047",
+    "sourceRows": [
+      47
+    ],
+    "name": "Red Red",
+    "exactLookup": {
+      "titles": [
+        "File:Red Red.jpg",
+        "File:Red red.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-048": {
+    "id": "dish-048",
+    "sourceRows": [
+      48
+    ],
+    "name": "Kelewele",
+    "exactLookup": {
+      "titles": [
+        "File:Kelewele.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-049": {
+    "id": "dish-049",
+    "sourceRows": [
+      49
+    ],
+    "name": "Omo Tuo",
+    "exactLookup": {
+      "titles": [
+        "File:Omo Tuo.jpg",
+        "File:Omo tuo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-050": {
+    "id": "dish-050",
+    "sourceRows": [
+      50
+    ],
+    "name": "Tuo Zaafi",
+    "exactLookup": {
+      "titles": [
+        "File:Tuo Zaafi.jpg",
+        "File:Tuo zaafi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 2,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-051": {
+    "id": "dish-051",
+    "sourceRows": [
+      51
+    ],
+    "name": "Light Soup",
+    "exactLookup": {
+      "titles": [
+        "File:Light Soup.jpg",
+        "File:Light soup.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-052": {
+    "id": "dish-052",
+    "sourceRows": [
+      52
+    ],
+    "name": "Kontomire Stew",
+    "exactLookup": {
+      "titles": [
+        "File:Kontomire Stew.jpg",
+        "File:Kontomire stew.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-053": {
+    "id": "dish-053",
+    "sourceRows": [
+      53
+    ],
+    "name": "Thieboudienne",
+    "exactLookup": {
+      "titles": [
+        "File:Thieboudienne.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-054": {
+    "id": "dish-054",
+    "sourceRows": [
+      54
+    ],
+    "name": "Maafe (Senegalese Peanut Stew)",
+    "exactLookup": {
+      "titles": [
+        "File:Maafe.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-055": {
+    "id": "dish-055",
+    "sourceRows": [
+      55
+    ],
+    "name": "Yassa Fish",
+    "exactLookup": {
+      "titles": [
+        "File:Yassa Fish.jpg",
+        "File:Yassa fish.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-056": {
+    "id": "dish-056",
+    "sourceRows": [
+      56
+    ],
+    "name": "Ndambe",
+    "exactLookup": {
+      "titles": [
+        "File:Ndambe.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-057": {
+    "id": "dish-057",
+    "sourceRows": [
+      57
+    ],
+    "name": "Alloco",
+    "exactLookup": {
+      "titles": [
+        "File:Alloco.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-058": {
+    "id": "dish-058",
+    "sourceRows": [
+      58
+    ],
+    "name": "Attiéké",
+    "exactLookup": {
+      "titles": [
+        "File:Attiéké.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-059": {
+    "id": "dish-059",
+    "sourceRows": [
+      59
+    ],
+    "name": "Domoda",
+    "exactLookup": {
+      "titles": [
+        "File:Domoda.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-060": {
+    "id": "dish-060",
+    "sourceRows": [
+      60
+    ],
+    "name": "Plasas",
+    "exactLookup": {
+      "titles": [
+        "File:Plasas.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-061": {
+    "id": "dish-061",
+    "sourceRows": [
+      61
+    ],
+    "name": "Palm Butter",
+    "exactLookup": {
+      "titles": [
+        "File:Palm Butter.jpg",
+        "File:Palm butter.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-062": {
+    "id": "dish-062",
+    "sourceRows": [
+      62
+    ],
+    "name": "Injera",
+    "exactLookup": {
+      "titles": [
+        "File:Injera.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-063": {
+    "id": "dish-063",
+    "sourceRows": [
+      63
+    ],
+    "name": "Doro Wat",
+    "exactLookup": {
+      "titles": [
+        "File:Doro Wat.jpg",
+        "File:Doro wat.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-064": {
+    "id": "dish-064",
+    "sourceRows": [
+      64
+    ],
+    "name": "Shiro Wat",
+    "exactLookup": {
+      "titles": [
+        "File:Shiro Wat.jpg",
+        "File:Shiro wat.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-065": {
+    "id": "dish-065",
+    "sourceRows": [
+      65
+    ],
+    "name": "Dabo Kolo",
+    "exactLookup": {
+      "titles": [
+        "File:Dabo Kolo.jpg",
+        "File:Dabo kolo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-066": {
+    "id": "dish-066",
+    "sourceRows": [
+      66
+    ],
+    "name": "Ethiopian Beef Tibs",
+    "exactLookup": {
+      "titles": [
+        "File:Ethiopian Beef Tibs.jpg",
+        "File:Ethiopian beef tibs.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-067": {
+    "id": "dish-067",
+    "sourceRows": [
+      67
+    ],
+    "name": "Kitfo",
+    "exactLookup": {
+      "titles": [
+        "File:Kitfo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-068": {
+    "id": "dish-068",
+    "sourceRows": [
+      68
+    ],
+    "name": "Genfo",
+    "exactLookup": {
+      "titles": [
+        "File:Genfo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-069": {
+    "id": "dish-069",
+    "sourceRows": [
+      69
+    ],
+    "name": "Firfir",
+    "exactLookup": {
+      "titles": [
+        "File:Firfir.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-070": {
+    "id": "dish-070",
+    "sourceRows": [
+      70
+    ],
+    "name": "Chechebsa",
+    "exactLookup": {
+      "titles": [
+        "File:Chechebsa.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-071": {
+    "id": "dish-071",
+    "sourceRows": [
+      71
+    ],
+    "name": "Kik Alicha",
+    "exactLookup": {
+      "titles": [
+        "File:Kik Alicha.jpg",
+        "File:Kik alicha.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-072": {
+    "id": "dish-072",
+    "sourceRows": [
+      72
+    ],
+    "name": "Misir Wat",
+    "exactLookup": {
+      "titles": [
+        "File:Misir Wat.jpg",
+        "File:Misir wat.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-073": {
+    "id": "dish-073",
+    "sourceRows": [
+      73
+    ],
+    "name": "Gomen",
+    "exactLookup": {
+      "titles": [
+        "File:Gomen.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-074": {
+    "id": "dish-074",
+    "sourceRows": [
+      74
+    ],
+    "name": "Ayib",
+    "exactLookup": {
+      "titles": [
+        "File:Ayib.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-075": {
+    "id": "dish-075",
+    "sourceRows": [
+      75
+    ],
+    "name": "Kocho",
+    "exactLookup": {
+      "titles": [
+        "File:Kocho.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-076": {
+    "id": "dish-076",
+    "sourceRows": [
+      76
+    ],
+    "name": "Ugali",
+    "exactLookup": {
+      "titles": [
+        "File:Ugali.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-rejected-candidate",
+    "reason": "Candidate appeared to show a different boiled starch; identity not secure."
+  },
+  "dish-077": {
+    "id": "dish-077",
+    "sourceRows": [
+      77
+    ],
+    "name": "Nyama Choma",
+    "exactLookup": {
+      "titles": [
+        "File:Nyama Choma.jpg",
+        "File:Nyama choma.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 2,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-078": {
+    "id": "dish-078",
+    "sourceRows": [
+      78
+    ],
+    "name": "Sukuma Wiki",
+    "exactLookup": {
+      "titles": [
+        "File:Sukuma Wiki.jpg",
+        "File:Sukuma wiki.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 2,
+    "disposition": "pending-rejected-candidate",
+    "reason": "Candidate showed uncooked greens, not the prepared dish."
+  },
+  "dish-079": {
+    "id": "dish-079",
+    "sourceRows": [
+      79
+    ],
+    "name": "Mandazi",
+    "exactLookup": {
+      "titles": [
+        "File:Mandazi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-080": {
+    "id": "dish-080",
+    "sourceRows": [
+      80
+    ],
+    "name": "Chapati",
+    "exactLookup": {
+      "titles": [
+        "File:Chapati.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-081": {
+    "id": "dish-081",
+    "sourceRows": [
+      81
+    ],
+    "name": "Kienyeji Mboga",
+    "exactLookup": {
+      "titles": [
+        "File:Kienyeji Mboga.jpg",
+        "File:Kienyeji mboga.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-082": {
+    "id": "dish-082",
+    "sourceRows": [
+      82
+    ],
+    "name": "Mursik",
+    "exactLookup": {
+      "titles": [
+        "File:Mursik.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-083": {
+    "id": "dish-083",
+    "sourceRows": [
+      83
+    ],
+    "name": "Githeri",
+    "exactLookup": {
+      "titles": [
+        "File:Githeri.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-084": {
+    "id": "dish-084",
+    "sourceRows": [
+      84
+    ],
+    "name": "Irio",
+    "exactLookup": {
+      "titles": [
+        "File:Irio.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-085": {
+    "id": "dish-085",
+    "sourceRows": [
+      85
+    ],
+    "name": "Mutura",
+    "exactLookup": {
+      "titles": [
+        "File:Mutura.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-086": {
+    "id": "dish-086",
+    "sourceRows": [
+      86
+    ],
+    "name": "Mukimo",
+    "exactLookup": {
+      "titles": [
+        "File:Mukimo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-087": {
+    "id": "dish-087",
+    "sourceRows": [
+      87
+    ],
+    "name": "Kachumbari",
+    "exactLookup": {
+      "titles": [
+        "File:Kachumbari.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-088": {
+    "id": "dish-088",
+    "sourceRows": [
+      88
+    ],
+    "name": "Mahamri",
+    "exactLookup": {
+      "titles": [
+        "File:Mahamri.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-089": {
+    "id": "dish-089",
+    "sourceRows": [
+      89
+    ],
+    "name": "Beef Makange",
+    "exactLookup": {
+      "titles": [
+        "File:Beef Makange.jpg",
+        "File:Beef makange.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-090": {
+    "id": "dish-090",
+    "sourceRows": [
+      90
+    ],
+    "name": "Chipsi Mayai",
+    "exactLookup": {
+      "titles": [
+        "File:Chipsi Mayai.jpg",
+        "File:Chipsi mayai.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-download-limited",
+    "reason": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+  },
+  "dish-091": {
+    "id": "dish-091",
+    "sourceRows": [
+      91
+    ],
+    "name": "Mishikaki",
+    "exactLookup": {
+      "titles": [
+        "File:Mishikaki.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-092": {
+    "id": "dish-092",
+    "sourceRows": [
+      92
+    ],
+    "name": "Pweza wa Nazi",
+    "exactLookup": {
+      "titles": [
+        "File:Pweza wa Nazi.jpg",
+        "File:Pweza wa nazi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-093": {
+    "id": "dish-093",
+    "sourceRows": [
+      93
+    ],
+    "name": "Zanzibari Biryani",
+    "exactLookup": {
+      "titles": [
+        "File:Zanzibari Biryani.jpg",
+        "File:Zanzibari biryani.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-094": {
+    "id": "dish-094",
+    "sourceRows": [
+      94
+    ],
+    "name": "Swahili Pilau",
+    "exactLookup": {
+      "titles": [
+        "File:Swahili Pilau.jpg",
+        "File:Swahili pilau.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-download-limited",
+    "reason": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+  },
+  "dish-095": {
+    "id": "dish-095",
+    "sourceRows": [
+      95
+    ],
+    "name": "Wali wa Nazi",
+    "exactLookup": {
+      "titles": [
+        "File:Wali wa Nazi.jpg",
+        "File:Wali wa nazi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-096": {
+    "id": "dish-096",
+    "sourceRows": [
+      96
+    ],
+    "name": "Ndizi Nyama",
+    "exactLookup": {
+      "titles": [
+        "File:Ndizi Nyama.jpg",
+        "File:Ndizi nyama.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-097": {
+    "id": "dish-097",
+    "sourceRows": [
+      97
+    ],
+    "name": "Supu ya Ndizi",
+    "exactLookup": {
+      "titles": [
+        "File:Supu ya Ndizi.jpg",
+        "File:Supu ya ndizi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-098": {
+    "id": "dish-098",
+    "sourceRows": [
+      98
+    ],
+    "name": "Vitumbua",
+    "exactLookup": {
+      "titles": [
+        "File:Vitumbua.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-099": {
+    "id": "dish-099",
+    "sourceRows": [
+      99
+    ],
+    "name": "Kaimati",
+    "exactLookup": {
+      "titles": [
+        "File:Kaimati.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-100": {
+    "id": "dish-100",
+    "sourceRows": [
+      100
+    ],
+    "name": "Kashata",
+    "exactLookup": {
+      "titles": [
+        "File:Kashata.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-101": {
+    "id": "dish-101",
+    "sourceRows": [
+      101
+    ],
+    "name": "Zanzibar Mix (Urojo)",
+    "exactLookup": {
+      "titles": [
+        "File:Zanzibar Mix.jpg",
+        "File:Zanzibar mix.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-102": {
+    "id": "dish-102",
+    "sourceRows": [
+      102
+    ],
+    "name": "Samosas (East African)",
+    "exactLookup": {
+      "titles": [
+        "File:Samosas.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-103": {
+    "id": "dish-103",
+    "sourceRows": [
+      103
+    ],
+    "name": "Ming'oko",
+    "exactLookup": {
+      "titles": [
+        "File:Ming'oko.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-104": {
+    "id": "dish-104",
+    "sourceRows": [
+      104
+    ],
+    "name": "Matoke",
+    "exactLookup": {
+      "titles": [
+        "File:Matoke.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-105": {
+    "id": "dish-105",
+    "sourceRows": [
+      105
+    ],
+    "name": "Rolex (Uganda)",
+    "exactLookup": {
+      "titles": [
+        "File:Rolex.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-106": {
+    "id": "dish-106",
+    "sourceRows": [
+      106
+    ],
+    "name": "Luwombo",
+    "exactLookup": {
+      "titles": [
+        "File:Luwombo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-107": {
+    "id": "dish-107",
+    "sourceRows": [
+      107
+    ],
+    "name": "Kikkomando",
+    "exactLookup": {
+      "titles": [
+        "File:Kikkomando.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-108": {
+    "id": "dish-108",
+    "sourceRows": [
+      108
+    ],
+    "name": "Nsenene (Grasshoppers)",
+    "exactLookup": {
+      "titles": [
+        "File:Nsenene.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-109": {
+    "id": "dish-109",
+    "sourceRows": [
+      109
+    ],
+    "name": "Eshabwe",
+    "exactLookup": {
+      "titles": [
+        "File:Eshabwe.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-110": {
+    "id": "dish-110",
+    "sourceRows": [
+      110
+    ],
+    "name": "Bariis Iskukaris",
+    "exactLookup": {
+      "titles": [
+        "File:Bariis Iskukaris.jpg",
+        "File:Bariis iskukaris.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-111": {
+    "id": "dish-111",
+    "sourceRows": [
+      111
+    ],
+    "name": "Somboosa",
+    "exactLookup": {
+      "titles": [
+        "File:Somboosa.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-112": {
+    "id": "dish-112",
+    "sourceRows": [
+      112
+    ],
+    "name": "Muqmad (Odkac)",
+    "exactLookup": {
+      "titles": [
+        "File:Muqmad.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-113": {
+    "id": "dish-113",
+    "sourceRows": [
+      113
+    ],
+    "name": "Suqaar",
+    "exactLookup": {
+      "titles": [
+        "File:Suqaar.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-114": {
+    "id": "dish-114",
+    "sourceRows": [
+      114
+    ],
+    "name": "Cambaabur",
+    "exactLookup": {
+      "titles": [
+        "File:Cambaabur.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-115": {
+    "id": "dish-115",
+    "sourceRows": [
+      115
+    ],
+    "name": "Malawah",
+    "exactLookup": {
+      "titles": [
+        "File:Malawah.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-116": {
+    "id": "dish-116",
+    "sourceRows": [
+      116
+    ],
+    "name": "Sabaayad",
+    "exactLookup": {
+      "titles": [
+        "File:Sabaayad.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-117": {
+    "id": "dish-117",
+    "sourceRows": [
+      117
+    ],
+    "name": "Xalwo (Halwa)",
+    "exactLookup": {
+      "titles": [
+        "File:Xalwo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-118": {
+    "id": "dish-118",
+    "sourceRows": [
+      118
+    ],
+    "name": "Agatogo",
+    "exactLookup": {
+      "titles": [
+        "File:Agatogo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-119": {
+    "id": "dish-119",
+    "sourceRows": [
+      119
+    ],
+    "name": "Isombe",
+    "exactLookup": {
+      "titles": [
+        "File:Isombe.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-rejected-candidate",
+    "reason": "Candidate showed raw leaves, not prepared Isombe."
+  },
+  "dish-120": {
+    "id": "dish-120",
+    "sourceRows": [
+      120
+    ],
+    "name": "Akabenz",
+    "exactLookup": {
+      "titles": [
+        "File:Akabenz.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-121": {
+    "id": "dish-121",
+    "sourceRows": [
+      121
+    ],
+    "name": "Couscous",
+    "exactLookup": {
+      "titles": [
+        "File:Couscous.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-122": {
+    "id": "dish-122",
+    "sourceRows": [
+      122
+    ],
+    "name": "Tagine",
+    "exactLookup": {
+      "titles": [
+        "File:Tagine.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-123": {
+    "id": "dish-123",
+    "sourceRows": [
+      123
+    ],
+    "name": "Pastilla",
+    "exactLookup": {
+      "titles": [
+        "File:Pastilla.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-124": {
+    "id": "dish-124",
+    "sourceRows": [
+      124
+    ],
+    "name": "M'semen",
+    "exactLookup": {
+      "titles": [
+        "File:M'semen.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-125": {
+    "id": "dish-125",
+    "sourceRows": [
+      125
+    ],
+    "name": "Zaalouk",
+    "exactLookup": {
+      "titles": [
+        "File:Zaalouk.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-126": {
+    "id": "dish-126",
+    "sourceRows": [
+      126
+    ],
+    "name": "Sweet Couscous",
+    "exactLookup": {
+      "titles": [
+        "File:Sweet Couscous.jpg",
+        "File:Sweet couscous.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-127": {
+    "id": "dish-127",
+    "sourceRows": [
+      127
+    ],
+    "name": "Ahriche",
+    "exactLookup": {
+      "titles": [
+        "File:Ahriche.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-128": {
+    "id": "dish-128",
+    "sourceRows": [
+      128
+    ],
+    "name": "Briouat",
+    "exactLookup": {
+      "titles": [
+        "File:Briouat.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-129": {
+    "id": "dish-129",
+    "sourceRows": [
+      129
+    ],
+    "name": "Chermoula",
+    "exactLookup": {
+      "titles": [
+        "File:Chermoula.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-130": {
+    "id": "dish-130",
+    "sourceRows": [
+      130
+    ],
+    "name": "Harira",
+    "exactLookup": {
+      "titles": [
+        "File:Harira.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-131": {
+    "id": "dish-131",
+    "sourceRows": [
+      131
+    ],
+    "name": "Bissara",
+    "exactLookup": {
+      "titles": [
+        "File:Bissara.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-132": {
+    "id": "dish-132",
+    "sourceRows": [
+      132
+    ],
+    "name": "Rfissa",
+    "exactLookup": {
+      "titles": [
+        "File:Rfissa.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-133": {
+    "id": "dish-133",
+    "sourceRows": [
+      133
+    ],
+    "name": "Seffa",
+    "exactLookup": {
+      "titles": [
+        "File:Seffa.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-134": {
+    "id": "dish-134",
+    "sourceRows": [
+      134
+    ],
+    "name": "Khobz",
+    "exactLookup": {
+      "titles": [
+        "File:Khobz.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-rejected-candidate",
+    "reason": "Bread appearance did not securely establish the submitted recipe; held for identity review."
+  },
+  "dish-135": {
+    "id": "dish-135",
+    "sourceRows": [
+      135
+    ],
+    "name": "Chebakia",
+    "exactLookup": {
+      "titles": [
+        "File:Chebakia.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-136": {
+    "id": "dish-136",
+    "sourceRows": [
+      136
+    ],
+    "name": "Baghrir",
+    "exactLookup": {
+      "titles": [
+        "File:Baghrir.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-137": {
+    "id": "dish-137",
+    "sourceRows": [
+      137
+    ],
+    "name": "Sfenj",
+    "exactLookup": {
+      "titles": [
+        "File:Sfenj.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-138": {
+    "id": "dish-138",
+    "sourceRows": [
+      138
+    ],
+    "name": "Taktouka",
+    "exactLookup": {
+      "titles": [
+        "File:Taktouka.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-139": {
+    "id": "dish-139",
+    "sourceRows": [
+      139
+    ],
+    "name": "Rechta",
+    "exactLookup": {
+      "titles": [
+        "File:Rechta.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-140": {
+    "id": "dish-140",
+    "sourceRows": [
+      140
+    ],
+    "name": "Chakhchoukha",
+    "exactLookup": {
+      "titles": [
+        "File:Chakhchoukha.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-141": {
+    "id": "dish-141",
+    "sourceRows": [
+      141
+    ],
+    "name": "L'hamdour",
+    "exactLookup": {
+      "titles": [
+        "File:L'hamdour.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-142": {
+    "id": "dish-142",
+    "sourceRows": [
+      142
+    ],
+    "name": "Tajine Zitoune",
+    "exactLookup": {
+      "titles": [
+        "File:Tajine Zitoune.jpg",
+        "File:Tajine zitoune.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-143": {
+    "id": "dish-143",
+    "sourceRows": [
+      143
+    ],
+    "name": "Dolma",
+    "exactLookup": {
+      "titles": [
+        "File:Dolma.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-144": {
+    "id": "dish-144",
+    "sourceRows": [
+      144
+    ],
+    "name": "Bourek",
+    "exactLookup": {
+      "titles": [
+        "File:Bourek.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-145": {
+    "id": "dish-145",
+    "sourceRows": [
+      145
+    ],
+    "name": "Mahjouba",
+    "exactLookup": {
+      "titles": [
+        "File:Mahjouba.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-146": {
+    "id": "dish-146",
+    "sourceRows": [
+      146
+    ],
+    "name": "Garantita",
+    "exactLookup": {
+      "titles": [
+        "File:Garantita.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-147": {
+    "id": "dish-147",
+    "sourceRows": [
+      147
+    ],
+    "name": "Chorba Frik",
+    "exactLookup": {
+      "titles": [
+        "File:Chorba Frik.jpg",
+        "File:Chorba frik.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-148": {
+    "id": "dish-148",
+    "sourceRows": [
+      148
+    ],
+    "name": "Kaldi",
+    "exactLookup": {
+      "titles": [
+        "File:Kaldi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-149": {
+    "id": "dish-149",
+    "sourceRows": [
+      149
+    ],
+    "name": "Makoud",
+    "exactLookup": {
+      "titles": [
+        "File:Makoud.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-150": {
+    "id": "dish-150",
+    "sourceRows": [
+      150
+    ],
+    "name": "Loubia",
+    "exactLookup": {
+      "titles": [
+        "File:Loubia.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-151": {
+    "id": "dish-151",
+    "sourceRows": [
+      151
+    ],
+    "name": "Shakshuka",
+    "exactLookup": {
+      "titles": [
+        "File:Shakshuka.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-152": {
+    "id": "dish-152",
+    "sourceRows": [
+      152
+    ],
+    "name": "Harissa Chicken Thighs",
+    "exactLookup": {
+      "titles": [
+        "File:Harissa Chicken Thighs.jpg",
+        "File:Harissa chicken thighs.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-153": {
+    "id": "dish-153",
+    "sourceRows": [
+      153
+    ],
+    "name": "Mechouia Salad",
+    "exactLookup": {
+      "titles": [
+        "File:Mechouia Salad.jpg",
+        "File:Mechouia salad.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-154": {
+    "id": "dish-154",
+    "sourceRows": [
+      154
+    ],
+    "name": "Brik",
+    "exactLookup": {
+      "titles": [
+        "File:Brik.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-155": {
+    "id": "dish-155",
+    "sourceRows": [
+      155
+    ],
+    "name": "Mloukhiya",
+    "exactLookup": {
+      "titles": [
+        "File:Mloukhiya.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-156": {
+    "id": "dish-156",
+    "sourceRows": [
+      156
+    ],
+    "name": "Lablabi",
+    "exactLookup": {
+      "titles": [
+        "File:Lablabi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-157": {
+    "id": "dish-157",
+    "sourceRows": [
+      157
+    ],
+    "name": "Kafteji",
+    "exactLookup": {
+      "titles": [
+        "File:Kafteji.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-158": {
+    "id": "dish-158",
+    "sourceRows": [
+      158
+    ],
+    "name": "Fricassé",
+    "exactLookup": {
+      "titles": [
+        "File:Fricassé.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-159": {
+    "id": "dish-159",
+    "sourceRows": [
+      159
+    ],
+    "name": "Kamounia",
+    "exactLookup": {
+      "titles": [
+        "File:Kamounia.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-160": {
+    "id": "dish-160",
+    "sourceRows": [
+      160,
+      161
+    ],
+    "name": "Osban",
+    "exactLookup": {
+      "titles": [
+        "File:Osban.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-162": {
+    "id": "dish-162",
+    "sourceRows": [
+      162
+    ],
+    "name": "Asida",
+    "exactLookup": {
+      "titles": [
+        "File:Asida.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-163": {
+    "id": "dish-163",
+    "sourceRows": [
+      163
+    ],
+    "name": "Bazeen",
+    "exactLookup": {
+      "titles": [
+        "File:Bazeen.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-164": {
+    "id": "dish-164",
+    "sourceRows": [
+      164
+    ],
+    "name": "Bichak",
+    "exactLookup": {
+      "titles": [
+        "File:Bichak.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-165": {
+    "id": "dish-165",
+    "sourceRows": [
+      165,
+      299
+    ],
+    "name": "Koshari",
+    "exactLookup": {
+      "titles": [
+        "File:Koshari.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-rejected-candidate",
+    "reason": "Serving composition did not securely establish Koshari; held for identity review."
+  },
+  "dish-166": {
+    "id": "dish-166",
+    "sourceRows": [
+      166
+    ],
+    "name": "Ful Medames",
+    "exactLookup": {
+      "titles": [
+        "File:Ful Medames.jpg",
+        "File:Ful medames.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-167": {
+    "id": "dish-167",
+    "sourceRows": [
+      167
+    ],
+    "name": "Om Ali",
+    "exactLookup": {
+      "titles": [
+        "File:Om Ali.jpg",
+        "File:Om ali.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-168": {
+    "id": "dish-168",
+    "sourceRows": [
+      168
+    ],
+    "name": "Mulukhiyah",
+    "exactLookup": {
+      "titles": [
+        "File:Mulukhiyah.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-169": {
+    "id": "dish-169",
+    "sourceRows": [
+      169
+    ],
+    "name": "Hawawshi",
+    "exactLookup": {
+      "titles": [
+        "File:Hawawshi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-170": {
+    "id": "dish-170",
+    "sourceRows": [
+      170
+    ],
+    "name": "Macarona Béchamel",
+    "exactLookup": {
+      "titles": [
+        "File:Macarona Béchamel.jpg",
+        "File:Macarona béchamel.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-171": {
+    "id": "dish-171",
+    "sourceRows": [
+      171
+    ],
+    "name": "Fiteer Meshmesh",
+    "exactLookup": {
+      "titles": [
+        "File:Fiteer Meshmesh.jpg",
+        "File:Fiteer meshmesh.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-172": {
+    "id": "dish-172",
+    "sourceRows": [
+      172
+    ],
+    "name": "Besbousa",
+    "exactLookup": {
+      "titles": [
+        "File:Besbousa.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-173": {
+    "id": "dish-173",
+    "sourceRows": [
+      173
+    ],
+    "name": "Qatayef",
+    "exactLookup": {
+      "titles": [
+        "File:Qatayef.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-174": {
+    "id": "dish-174",
+    "sourceRows": [
+      174
+    ],
+    "name": "Roz Bel Laban",
+    "exactLookup": {
+      "titles": [
+        "File:Roz Bel Laban.jpg",
+        "File:Roz bel laban.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-175": {
+    "id": "dish-175",
+    "sourceRows": [
+      175
+    ],
+    "name": "Bamia",
+    "exactLookup": {
+      "titles": [
+        "File:Bamia.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-176": {
+    "id": "dish-176",
+    "sourceRows": [
+      176
+    ],
+    "name": "Sayadiya",
+    "exactLookup": {
+      "titles": [
+        "File:Sayadiya.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-177": {
+    "id": "dish-177",
+    "sourceRows": [
+      177
+    ],
+    "name": "Ta'meya",
+    "exactLookup": {
+      "titles": [
+        "File:Ta'meya.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-178": {
+    "id": "dish-178",
+    "sourceRows": [
+      178
+    ],
+    "name": "Aish Baladi",
+    "exactLookup": {
+      "titles": [
+        "File:Aish Baladi.jpg",
+        "File:Aish baladi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-179": {
+    "id": "dish-179",
+    "sourceRows": [
+      179
+    ],
+    "name": "Matbucha",
+    "exactLookup": {
+      "titles": [
+        "File:Matbucha.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-180": {
+    "id": "dish-180",
+    "sourceRows": [
+      180
+    ],
+    "name": "Bunny Chow",
+    "exactLookup": {
+      "titles": [
+        "File:Bunny Chow.jpg",
+        "File:Bunny chow.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-181": {
+    "id": "dish-181",
+    "sourceRows": [
+      181
+    ],
+    "name": "Bobotie",
+    "exactLookup": {
+      "titles": [
+        "File:Bobotie.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-182": {
+    "id": "dish-182",
+    "sourceRows": [
+      182
+    ],
+    "name": "Biltong",
+    "exactLookup": {
+      "titles": [
+        "File:Biltong.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-rejected-candidate",
+    "reason": "Candidate showed retail packaging rather than a clear serving."
+  },
+  "dish-183": {
+    "id": "dish-183",
+    "sourceRows": [
+      183
+    ],
+    "name": "Boerewors",
+    "exactLookup": {
+      "titles": [
+        "File:Boerewors.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-184": {
+    "id": "dish-184",
+    "sourceRows": [
+      184
+    ],
+    "name": "Braaivleis",
+    "exactLookup": {
+      "titles": [
+        "File:Braaivleis.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-185": {
+    "id": "dish-185",
+    "sourceRows": [
+      185
+    ],
+    "name": "Chakalaka",
+    "exactLookup": {
+      "titles": [
+        "File:Chakalaka.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-186": {
+    "id": "dish-186",
+    "sourceRows": [
+      186
+    ],
+    "name": "Melktert",
+    "exactLookup": {
+      "titles": [
+        "File:Melktert.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-187": {
+    "id": "dish-187",
+    "sourceRows": [
+      187
+    ],
+    "name": "Malva Pudding",
+    "exactLookup": {
+      "titles": [
+        "File:Malva Pudding.jpg",
+        "File:Malva pudding.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 2,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-188": {
+    "id": "dish-188",
+    "sourceRows": [
+      188
+    ],
+    "name": "Biltong Soup",
+    "exactLookup": {
+      "titles": [
+        "File:Biltong Soup.jpg",
+        "File:Biltong soup.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-189": {
+    "id": "dish-189",
+    "sourceRows": [
+      189
+    ],
+    "name": "Tomato Bredie",
+    "exactLookup": {
+      "titles": [
+        "File:Tomato Bredie.jpg",
+        "File:Tomato bredie.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-190": {
+    "id": "dish-190",
+    "sourceRows": [
+      190
+    ],
+    "name": "Droëwors",
+    "exactLookup": {
+      "titles": [
+        "File:Droëwors.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-191": {
+    "id": "dish-191",
+    "sourceRows": [
+      191
+    ],
+    "name": "Frikkadels",
+    "exactLookup": {
+      "titles": [
+        "File:Frikkadels.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-192": {
+    "id": "dish-192",
+    "sourceRows": [
+      192
+    ],
+    "name": "Braaibroodjie",
+    "exactLookup": {
+      "titles": [
+        "File:Braaibroodjie.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-193": {
+    "id": "dish-193",
+    "sourceRows": [
+      193
+    ],
+    "name": "Potjiekos",
+    "exactLookup": {
+      "titles": [
+        "File:Potjiekos.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-download-limited",
+    "reason": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+  },
+  "dish-194": {
+    "id": "dish-194",
+    "sourceRows": [
+      194
+    ],
+    "name": "Vetkoek (Amagwinya)",
+    "exactLookup": {
+      "titles": [
+        "File:Vetkoek.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-195": {
+    "id": "dish-195",
+    "sourceRows": [
+      195
+    ],
+    "name": "Pap and Wors",
+    "exactLookup": {
+      "titles": [
+        "File:Pap and Wors.jpg",
+        "File:Pap and wors.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-196": {
+    "id": "dish-196",
+    "sourceRows": [
+      196
+    ],
+    "name": "Umngqusho",
+    "exactLookup": {
+      "titles": [
+        "File:Umngqusho.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-197": {
+    "id": "dish-197",
+    "sourceRows": [
+      197
+    ],
+    "name": "Morogo",
+    "exactLookup": {
+      "titles": [
+        "File:Morogo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-198": {
+    "id": "dish-198",
+    "sourceRows": [
+      198
+    ],
+    "name": "Walkie Talkies",
+    "exactLookup": {
+      "titles": [
+        "File:Walkie Talkies.jpg",
+        "File:Walkie talkies.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-199": {
+    "id": "dish-199",
+    "sourceRows": [
+      199
+    ],
+    "name": "Mashonzha",
+    "exactLookup": {
+      "titles": [
+        "File:Mashonzha.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-200": {
+    "id": "dish-200",
+    "sourceRows": [
+      200
+    ],
+    "name": "Phutu",
+    "exactLookup": {
+      "titles": [
+        "File:Phutu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-201": {
+    "id": "dish-201",
+    "sourceRows": [
+      201
+    ],
+    "name": "Smaaklik",
+    "exactLookup": {
+      "titles": [
+        "File:Smaaklik.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-202": {
+    "id": "dish-202",
+    "sourceRows": [
+      202
+    ],
+    "name": "Sosaties",
+    "exactLookup": {
+      "titles": [
+        "File:Sosaties.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-203": {
+    "id": "dish-203",
+    "sourceRows": [
+      203
+    ],
+    "name": "Koeksisters",
+    "exactLookup": {
+      "titles": [
+        "File:Koeksisters.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-204": {
+    "id": "dish-204",
+    "sourceRows": [
+      204
+    ],
+    "name": "Hertzoggies",
+    "exactLookup": {
+      "titles": [
+        "File:Hertzoggies.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-205": {
+    "id": "dish-205",
+    "sourceRows": [
+      205
+    ],
+    "name": "Peppermint Crisp Tart",
+    "exactLookup": {
+      "titles": [
+        "File:Peppermint Crisp Tart.jpg",
+        "File:Peppermint crisp tart.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-206": {
+    "id": "dish-206",
+    "sourceRows": [
+      206
+    ],
+    "name": "Snoek Braai",
+    "exactLookup": {
+      "titles": [
+        "File:Snoek Braai.jpg",
+        "File:Snoek braai.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-207": {
+    "id": "dish-207",
+    "sourceRows": [
+      207
+    ],
+    "name": "Gatsby Sandwich",
+    "exactLookup": {
+      "titles": [
+        "File:Gatsby Sandwich.jpg",
+        "File:Gatsby sandwich.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-208": {
+    "id": "dish-208",
+    "sourceRows": [
+      208
+    ],
+    "name": "Roosterkoek",
+    "exactLookup": {
+      "titles": [
+        "File:Roosterkoek.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-209": {
+    "id": "dish-209",
+    "sourceRows": [
+      209
+    ],
+    "name": "Skopo",
+    "exactLookup": {
+      "titles": [
+        "File:Skopo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-210": {
+    "id": "dish-210",
+    "sourceRows": [
+      210
+    ],
+    "name": "Kapenta",
+    "exactLookup": {
+      "titles": [
+        "File:Kapenta.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-211": {
+    "id": "dish-211",
+    "sourceRows": [
+      211
+    ],
+    "name": "Sadza",
+    "exactLookup": {
+      "titles": [
+        "File:Sadza.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-212": {
+    "id": "dish-212",
+    "sourceRows": [
+      212
+    ],
+    "name": "Mufushwa",
+    "exactLookup": {
+      "titles": [
+        "File:Mufushwa.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-213": {
+    "id": "dish-213",
+    "sourceRows": [
+      213
+    ],
+    "name": "Mutakura",
+    "exactLookup": {
+      "titles": [
+        "File:Mutakura.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-214": {
+    "id": "dish-214",
+    "sourceRows": [
+      214
+    ],
+    "name": "Nhopi",
+    "exactLookup": {
+      "titles": [
+        "File:Nhopi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-215": {
+    "id": "dish-215",
+    "sourceRows": [
+      215
+    ],
+    "name": "Rupiza",
+    "exactLookup": {
+      "titles": [
+        "File:Rupiza.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-216": {
+    "id": "dish-216",
+    "sourceRows": [
+      216
+    ],
+    "name": "Madora",
+    "exactLookup": {
+      "titles": [
+        "File:Madora.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-217": {
+    "id": "dish-217",
+    "sourceRows": [
+      217
+    ],
+    "name": "Matemba",
+    "exactLookup": {
+      "titles": [
+        "File:Matemba.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-218": {
+    "id": "dish-218",
+    "sourceRows": [
+      218
+    ],
+    "name": "Bota",
+    "exactLookup": {
+      "titles": [
+        "File:Bota.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-219": {
+    "id": "dish-219",
+    "sourceRows": [
+      219
+    ],
+    "name": "Dovi",
+    "exactLookup": {
+      "titles": [
+        "File:Dovi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-220": {
+    "id": "dish-220",
+    "sourceRows": [
+      220
+    ],
+    "name": "Nshima",
+    "exactLookup": {
+      "titles": [
+        "File:Nshima.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-221": {
+    "id": "dish-221",
+    "sourceRows": [
+      221
+    ],
+    "name": "Ifisashi",
+    "exactLookup": {
+      "titles": [
+        "File:Ifisashi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-222": {
+    "id": "dish-222",
+    "sourceRows": [
+      222
+    ],
+    "name": "Chikanda",
+    "exactLookup": {
+      "titles": [
+        "File:Chikanda.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-223": {
+    "id": "dish-223",
+    "sourceRows": [
+      223
+    ],
+    "name": "Delele",
+    "exactLookup": {
+      "titles": [
+        "File:Delele.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-rejected-candidate",
+    "reason": "Candidate showed dried ingredients, not a prepared dish."
+  },
+  "dish-224": {
+    "id": "dish-224",
+    "sourceRows": [
+      224
+    ],
+    "name": "Seswaa",
+    "exactLookup": {
+      "titles": [
+        "File:Seswaa.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-225": {
+    "id": "dish-225",
+    "sourceRows": [
+      225
+    ],
+    "name": "Ting",
+    "exactLookup": {
+      "titles": [
+        "File:Ting.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-226": {
+    "id": "dish-226",
+    "sourceRows": [
+      226
+    ],
+    "name": "Bogobe Jwa Lerotse",
+    "exactLookup": {
+      "titles": [
+        "File:Bogobe Jwa Lerotse.jpg",
+        "File:Bogobe jwa lerotse.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-download-limited",
+    "reason": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+  },
+  "dish-227": {
+    "id": "dish-227",
+    "sourceRows": [
+      227
+    ],
+    "name": "Serobe",
+    "exactLookup": {
+      "titles": [
+        "File:Serobe.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-228": {
+    "id": "dish-228",
+    "sourceRows": [
+      228
+    ],
+    "name": "Diphaphata",
+    "exactLookup": {
+      "titles": [
+        "File:Diphaphata.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-229": {
+    "id": "dish-229",
+    "sourceRows": [
+      229
+    ],
+    "name": "Dikgobe",
+    "exactLookup": {
+      "titles": [
+        "File:Dikgobe.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-download-limited",
+    "reason": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+  },
+  "dish-230": {
+    "id": "dish-230",
+    "sourceRows": [
+      230
+    ],
+    "name": "Magwinya",
+    "exactLookup": {
+      "titles": [
+        "File:Magwinya.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-231": {
+    "id": "dish-231",
+    "sourceRows": [
+      231
+    ],
+    "name": "Chotlo",
+    "exactLookup": {
+      "titles": [
+        "File:Chotlo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-232": {
+    "id": "dish-232",
+    "sourceRows": [
+      232
+    ],
+    "name": "Piri Piri Chicken",
+    "exactLookup": {
+      "titles": [
+        "File:Piri Piri Chicken.jpg",
+        "File:Piri piri chicken.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-233": {
+    "id": "dish-233",
+    "sourceRows": [
+      233
+    ],
+    "name": "Matapa",
+    "exactLookup": {
+      "titles": [
+        "File:Matapa.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-234": {
+    "id": "dish-234",
+    "sourceRows": [
+      234
+    ],
+    "name": "Frango Assado",
+    "exactLookup": {
+      "titles": [
+        "File:Frango Assado.jpg",
+        "File:Frango assado.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-235": {
+    "id": "dish-235",
+    "sourceRows": [
+      235
+    ],
+    "name": "Xima",
+    "exactLookup": {
+      "titles": [
+        "File:Xima.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-236": {
+    "id": "dish-236",
+    "sourceRows": [
+      236
+    ],
+    "name": "Mucapata",
+    "exactLookup": {
+      "titles": [
+        "File:Mucapata.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-237": {
+    "id": "dish-237",
+    "sourceRows": [
+      237
+    ],
+    "name": "Caril de Amendoim",
+    "exactLookup": {
+      "titles": [
+        "File:Caril de Amendoim.jpg",
+        "File:Caril de amendoim.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-238": {
+    "id": "dish-238",
+    "sourceRows": [
+      238
+    ],
+    "name": "Zambezi Bream",
+    "exactLookup": {
+      "titles": [
+        "File:Zambezi Bream.jpg",
+        "File:Zambezi bream.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-239": {
+    "id": "dish-239",
+    "sourceRows": [
+      239,
+      265
+    ],
+    "name": "Fumbwa",
+    "exactLookup": {
+      "titles": [
+        "File:Fumbwa.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-240": {
+    "id": "dish-240",
+    "sourceRows": [
+      240
+    ],
+    "name": "Nsaka Madesu",
+    "exactLookup": {
+      "titles": [
+        "File:Nsaka Madesu.jpg",
+        "File:Nsaka madesu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-241": {
+    "id": "dish-241",
+    "sourceRows": [
+      241
+    ],
+    "name": "Pondu",
+    "exactLookup": {
+      "titles": [
+        "File:Pondu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-242": {
+    "id": "dish-242",
+    "sourceRows": [
+      242
+    ],
+    "name": "Chikwangue",
+    "exactLookup": {
+      "titles": [
+        "File:Chikwangue.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-243": {
+    "id": "dish-243",
+    "sourceRows": [
+      243
+    ],
+    "name": "Makayabu",
+    "exactLookup": {
+      "titles": [
+        "File:Makayabu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-244": {
+    "id": "dish-244",
+    "sourceRows": [
+      244
+    ],
+    "name": "Saka Saka",
+    "exactLookup": {
+      "titles": [
+        "File:Saka Saka.jpg",
+        "File:Saka saka.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-245": {
+    "id": "dish-245",
+    "sourceRows": [
+      245
+    ],
+    "name": "Kamundele",
+    "exactLookup": {
+      "titles": [
+        "File:Kamundele.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-246": {
+    "id": "dish-246",
+    "sourceRows": [
+      246
+    ],
+    "name": "Dongo-Dongo",
+    "exactLookup": {
+      "titles": [
+        "File:Dongo-Dongo.jpg",
+        "File:Dongo-dongo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-247": {
+    "id": "dish-247",
+    "sourceRows": [
+      247
+    ],
+    "name": "Liboke",
+    "exactLookup": {
+      "titles": [
+        "File:Liboke.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-248": {
+    "id": "dish-248",
+    "sourceRows": [
+      248
+    ],
+    "name": "Moambe Chicken",
+    "exactLookup": {
+      "titles": [
+        "File:Moambe Chicken.jpg",
+        "File:Moambe chicken.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-249": {
+    "id": "dish-249",
+    "sourceRows": [
+      249
+    ],
+    "name": "Mwamba",
+    "exactLookup": {
+      "titles": [
+        "File:Mwamba.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-250": {
+    "id": "dish-250",
+    "sourceRows": [
+      250
+    ],
+    "name": "Makemba",
+    "exactLookup": {
+      "titles": [
+        "File:Makemba.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-download-limited",
+    "reason": "Metadata found, but Wikimedia thumbnail download returned HTTP 429. Image not included."
+  },
+  "dish-251": {
+    "id": "dish-251",
+    "sourceRows": [
+      251
+    ],
+    "name": "Loso na Madesu",
+    "exactLookup": {
+      "titles": [
+        "File:Loso na Madesu.jpg",
+        "File:Loso na madesu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-252": {
+    "id": "dish-252",
+    "sourceRows": [
+      252
+    ],
+    "name": "Madesu",
+    "exactLookup": {
+      "titles": [
+        "File:Madesu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-253": {
+    "id": "dish-253",
+    "sourceRows": [
+      253
+    ],
+    "name": "Fumbwa na Madesu",
+    "exactLookup": {
+      "titles": [
+        "File:Fumbwa na Madesu.jpg",
+        "File:Fumbwa na madesu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-254": {
+    "id": "dish-254",
+    "sourceRows": [
+      254
+    ],
+    "name": "Taba",
+    "exactLookup": {
+      "titles": [
+        "File:Taba.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-255": {
+    "id": "dish-255",
+    "sourceRows": [
+      255
+    ],
+    "name": "Ndakala",
+    "exactLookup": {
+      "titles": [
+        "File:Ndakala.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-256": {
+    "id": "dish-256",
+    "sourceRows": [
+      256
+    ],
+    "name": "Mboto",
+    "exactLookup": {
+      "titles": [
+        "File:Mboto.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-257": {
+    "id": "dish-257",
+    "sourceRows": [
+      257
+    ],
+    "name": "Ngolo",
+    "exactLookup": {
+      "titles": [
+        "File:Ngolo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-rejected-candidate",
+    "reason": "Exact-name metadata identified sea snail; conflicts with the intended regional identity, requiring confirmation."
+  },
+  "dish-258": {
+    "id": "dish-258",
+    "sourceRows": [
+      258
+    ],
+    "name": "Mbinzo",
+    "exactLookup": {
+      "titles": [
+        "File:Mbinzo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-259": {
+    "id": "dish-259",
+    "sourceRows": [
+      259
+    ],
+    "name": "Mitumba",
+    "exactLookup": {
+      "titles": [
+        "File:Mitumba.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-260": {
+    "id": "dish-260",
+    "sourceRows": [
+      260
+    ],
+    "name": "Ntaba",
+    "exactLookup": {
+      "titles": [
+        "File:Ntaba.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-261": {
+    "id": "dish-261",
+    "sourceRows": [
+      261
+    ],
+    "name": "Mayi Ya Pondu",
+    "exactLookup": {
+      "titles": [
+        "File:Mayi Ya Pondu.jpg",
+        "File:Mayi ya pondu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-262": {
+    "id": "dish-262",
+    "sourceRows": [
+      262
+    ],
+    "name": "Lituma",
+    "exactLookup": {
+      "titles": [
+        "File:Lituma.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-263": {
+    "id": "dish-263",
+    "sourceRows": [
+      263
+    ],
+    "name": "Ngai Ngai",
+    "exactLookup": {
+      "titles": [
+        "File:Ngai Ngai.jpg",
+        "File:Ngai ngai.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-264": {
+    "id": "dish-264",
+    "sourceRows": [
+      264
+    ],
+    "name": "Loso Ya Bulayi",
+    "exactLookup": {
+      "titles": [
+        "File:Loso Ya Bulayi.jpg",
+        "File:Loso ya bulayi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-266": {
+    "id": "dish-266",
+    "sourceRows": [
+      266
+    ],
+    "name": "Makara",
+    "exactLookup": {
+      "titles": [
+        "File:Makara.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-267": {
+    "id": "dish-267",
+    "sourceRows": [
+      267
+    ],
+    "name": "Mikate",
+    "exactLookup": {
+      "titles": [
+        "File:Mikate.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-268": {
+    "id": "dish-268",
+    "sourceRows": [
+      268
+    ],
+    "name": "Nsoso",
+    "exactLookup": {
+      "titles": [
+        "File:Nsoso.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-269": {
+    "id": "dish-269",
+    "sourceRows": [
+      269
+    ],
+    "name": "Cossa Cossa",
+    "exactLookup": {
+      "titles": [
+        "File:Cossa Cossa.jpg",
+        "File:Cossa cossa.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-270": {
+    "id": "dish-270",
+    "sourceRows": [
+      270
+    ],
+    "name": "Achu",
+    "exactLookup": {
+      "titles": [
+        "File:Achu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-271": {
+    "id": "dish-271",
+    "sourceRows": [
+      271
+    ],
+    "name": "Ndolé",
+    "exactLookup": {
+      "titles": [
+        "File:Ndolé.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-272": {
+    "id": "dish-272",
+    "sourceRows": [
+      272
+    ],
+    "name": "Poulet DG",
+    "exactLookup": {
+      "titles": [
+        "File:Poulet DG.jpg",
+        "File:Poulet dg.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-273": {
+    "id": "dish-273",
+    "sourceRows": [
+      273
+    ],
+    "name": "Sangah",
+    "exactLookup": {
+      "titles": [
+        "File:Sangah.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-274": {
+    "id": "dish-274",
+    "sourceRows": [
+      274
+    ],
+    "name": "Koki",
+    "exactLookup": {
+      "titles": [
+        "File:Koki.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-275": {
+    "id": "dish-275",
+    "sourceRows": [
+      275
+    ],
+    "name": "Eru",
+    "exactLookup": {
+      "titles": [
+        "File:Eru.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-276": {
+    "id": "dish-276",
+    "sourceRows": [
+      276
+    ],
+    "name": "Kati Kati",
+    "exactLookup": {
+      "titles": [
+        "File:Kati Kati.jpg",
+        "File:Kati kati.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-277": {
+    "id": "dish-277",
+    "sourceRows": [
+      277
+    ],
+    "name": "Soya",
+    "exactLookup": {
+      "titles": [
+        "File:Soya.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-278": {
+    "id": "dish-278",
+    "sourceRows": [
+      278
+    ],
+    "name": "Safou",
+    "exactLookup": {
+      "titles": [
+        "File:Safou.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-279": {
+    "id": "dish-279",
+    "sourceRows": [
+      279
+    ],
+    "name": "Kanda",
+    "exactLookup": {
+      "titles": [
+        "File:Kanda.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-280": {
+    "id": "dish-280",
+    "sourceRows": [
+      280
+    ],
+    "name": "Capitaine Garni",
+    "exactLookup": {
+      "titles": [
+        "File:Capitaine Garni.jpg",
+        "File:Capitaine garni.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-281": {
+    "id": "dish-281",
+    "sourceRows": [
+      281
+    ],
+    "name": "Fufu Corn",
+    "exactLookup": {
+      "titles": [
+        "File:Fufu Corn.jpg",
+        "File:Fufu corn.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-282": {
+    "id": "dish-282",
+    "sourceRows": [
+      282
+    ],
+    "name": "Water Fufu",
+    "exactLookup": {
+      "titles": [
+        "File:Water Fufu.jpg",
+        "File:Water fufu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-283": {
+    "id": "dish-283",
+    "sourceRows": [
+      283
+    ],
+    "name": "Kwacoco",
+    "exactLookup": {
+      "titles": [
+        "File:Kwacoco.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-284": {
+    "id": "dish-284",
+    "sourceRows": [
+      284
+    ],
+    "name": "Ekpang Nkukwo",
+    "exactLookup": {
+      "titles": [
+        "File:Ekpang Nkukwo.jpg",
+        "File:Ekpang nkukwo.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-285": {
+    "id": "dish-285",
+    "sourceRows": [
+      285
+    ],
+    "name": "Ndole with Plantains",
+    "exactLookup": {
+      "titles": [
+        "File:Ndole with Plantains.jpg",
+        "File:Ndole with plantains.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-286": {
+    "id": "dish-286",
+    "sourceRows": [
+      286
+    ],
+    "name": "Beignets (Cameroon)",
+    "exactLookup": {
+      "titles": [
+        "File:Beignets.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-287": {
+    "id": "dish-287",
+    "sourceRows": [
+      287
+    ],
+    "name": "Bongo'o Tobi",
+    "exactLookup": {
+      "titles": [
+        "File:Bongo'o Tobi.jpg",
+        "File:Bongo'o tobi.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-288": {
+    "id": "dish-288",
+    "sourceRows": [
+      288
+    ],
+    "name": "Kpem",
+    "exactLookup": {
+      "titles": [
+        "File:Kpem.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-289": {
+    "id": "dish-289",
+    "sourceRows": [
+      289
+    ],
+    "name": "Maboke de Poisson",
+    "exactLookup": {
+      "titles": [
+        "File:Maboke de Poisson.jpg",
+        "File:Maboke de poisson.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-290": {
+    "id": "dish-290",
+    "sourceRows": [
+      290
+    ],
+    "name": "Calulu",
+    "exactLookup": {
+      "titles": [
+        "File:Calulu.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+  },
+  "dish-291": {
+    "id": "dish-291",
+    "sourceRows": [
+      291
+    ],
+    "name": "Babute",
+    "exactLookup": {
+      "titles": [
+        "File:Babute.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-292": {
+    "id": "dish-292",
+    "sourceRows": [
+      292
+    ],
+    "name": "Muamba Ngal",
+    "exactLookup": {
+      "titles": [
+        "File:Muamba Ngal.jpg",
+        "File:Muamba ngal.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-293": {
+    "id": "dish-293",
+    "sourceRows": [
+      293
+    ],
+    "name": "Fufu de Milho",
+    "exactLookup": {
+      "titles": [
+        "File:Fufu de Milho.jpg",
+        "File:Fufu de milho.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-294": {
+    "id": "dish-294",
+    "sourceRows": [
+      294
+    ],
+    "name": "Pirão",
+    "exactLookup": {
+      "titles": [
+        "File:Pirão.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-candidate-review",
+    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+  },
+  "dish-295": {
+    "id": "dish-295",
+    "sourceRows": [
+      295
+    ],
+    "name": "Nyembwe Chicken (Gabon)",
+    "exactLookup": {
+      "titles": [
+        "File:Nyembwe Chicken.jpg",
+        "File:Nyembwe chicken.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-296": {
+    "id": "dish-296",
+    "sourceRows": [
+      296
+    ],
+    "name": "Maboké (CAR)",
+    "exactLookup": {
+      "titles": [
+        "File:Maboké.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 1,
+    "disposition": "pending-quality-review",
+    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+  },
+  "dish-297": {
+    "id": "dish-297",
+    "sourceRows": [
+      297
+    ],
+    "name": "Kuku Paka (East African Coast)",
+    "exactLookup": {
+      "titles": [
+        "File:Kuku Paka.jpg",
+        "File:Kuku paka.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  },
+  "dish-298": {
+    "id": "dish-298",
+    "sourceRows": [
+      298
+    ],
+    "name": "Vuswa (Southern Africa)",
+    "exactLookup": {
+      "titles": [
+        "File:Vuswa.jpg"
+      ],
+      "status": "checked"
+    },
+    "titleSearchAttempted": false,
+    "candidateCount": 0,
+    "disposition": "pending-no-exact-match",
+    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+  }
+}

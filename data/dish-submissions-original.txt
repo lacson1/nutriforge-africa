@@ -1,0 +1,354 @@
+**Nigeria**
+
+1. Jollof Rice
+2. Egusi Soup
+3. Fufu
+4. Suya
+5. Efo Riro
+6. Banga Soup
+7. Nkwobi
+8. Nigerian Beef Stew
+9. Ofada Stew
+10. Asun
+11. Ewa Agoyin
+12. Akara
+13. Moi Moi
+14. Pounded Yam
+15. Dambu Nama
+16. Chin Chin
+17. Masa
+18. Puff Puff
+19. Afang Soup
+20. Amala
+21. Ogi
+22. Eba
+23. Groundnut Soup
+24. Peppered Snail
+25. Edikang Ikong
+26. Ofe Owerri
+27. Ofe Onugbu (Bitterleaf Soup)
+28. Ofe Nsala (White Soup)
+29. Tuwo Shinkafa
+30. Tuwo Masara
+31. Kilishi
+32. Abacha (African Salad)
+33. Boli (Roasted Plantain)
+34. Gizdodo
+35. Gbegiri
+36. Ewedu
+37. Frejon
+38. Efo Elegusi
+39. Moin Moin
+
+**Ghana**
+40. Waakye
+41. Ga Kenkey
+42. Banku
+43. Gari Foto
+44. Hausa Koko
+45. Shitor Sauce
+46. Garden Egg Stew
+47. Red Red
+48. Kelewele
+49. Omo Tuo
+50. Tuo Zaafi
+51. Light Soup
+52. Kontomire Stew
+
+**Senegal**
+53. Thieboudienne
+54. Maafe (Senegalese Peanut Stew)
+55. Yassa Fish
+56. Ndambe
+
+**Côte d'Ivoire (Ivory Coast)**
+57. Alloco
+58. Attiéké
+
+**Gambia**
+59. Domoda
+
+**Liberia / Sierra Leone**
+60. Plasas
+61. Palm Butter
+
+**Ethiopia & Eritrea**
+62. Injera
+63. Doro Wat
+64. Shiro Wat
+65. Dabo Kolo
+66. Ethiopian Beef Tibs
+67. Kitfo
+68. Genfo
+69. Firfir
+70. Chechebsa
+71. Kik Alicha
+72. Misir Wat
+73. Gomen
+74. Ayib
+75. Kocho
+
+**Kenya**
+76. Ugali
+77. Nyama Choma
+78. Sukuma Wiki
+79. Mandazi
+80. Chapati
+81. Kienyeji Mboga
+82. Mursik
+83. Githeri
+84. Irio
+85. Mutura
+86. Mukimo
+87. Kachumbari
+88. Mahamri
+
+**Tanzania (including Zanzibar)**
+89. Beef Makange
+90. Chipsi Mayai
+91. Mishikaki
+92. Pweza wa Nazi
+93. Zanzibari Biryani
+94. Swahili Pilau
+95. Wali wa Nazi
+96. Ndizi Nyama
+97. Supu ya Ndizi
+98. Vitumbua
+99. Kaimati
+100. Kashata
+101. Zanzibar Mix (Urojo)
+102. Samosas (East African)
+103. Ming'oko
+
+**Uganda**
+104. Matoke
+105. Rolex (Uganda)
+106. Luwombo
+107. Kikkomando
+108. Nsenene (Grasshoppers)
+109. Eshabwe
+
+**Somalia**
+110. Bariis Iskukaris
+111. Somboosa
+112. Muqmad (Odkac)
+113. Suqaar
+114. Cambaabur
+115. Malawah
+116. Sabaayad
+117. Xalwo (Halwa)
+
+**Rwanda & Burundi**
+118. Agatogo
+119. Isombe
+120. Akabenz
+
+**Morocco**
+121. Couscous
+122. Tagine
+123. Pastilla
+124. M'semen
+125. Zaalouk
+126. Sweet Couscous
+127. Ahriche
+128. Briouat
+129. Chermoula
+130. Harira
+131. Bissara
+132. Rfissa
+133. Seffa
+134. Khobz
+135. Chebakia
+136. Baghrir
+137. Sfenj
+138. Taktouka
+
+**Algeria**
+139. Rechta
+140. Chakhchoukha
+141. L'hamdour
+142. Tajine Zitoune
+143. Dolma
+144. Bourek
+145. Mahjouba
+146. Garantita
+147. Chorba Frik
+148. Kaldi
+149. Makoud
+150. Loubia
+
+**Tunisia**
+151. Shakshuka
+152. Harissa Chicken Thighs
+153. Mechouia Salad
+154. Brik
+155. Mloukhiya
+156. Lablabi
+157. Kafteji
+158. Fricassé
+159. Kamounia
+160. Osban
+161. Usban
+
+**Libya**
+162. Asida
+163. Bazeen
+164. Bichak
+
+**Egypt**
+165. Koshari
+166. Ful Medames
+167. Om Ali
+168. Mulukhiyah
+169. Hawawshi
+170. Macarona Béchamel
+171. Fiteer Meshmesh
+172. Besbousa
+173. Qatayef
+174. Roz Bel Laban
+175. Bamia
+176. Sayadiya
+177. Ta'meya
+178. Aish Baladi
+179. Matbucha
+
+**South Africa**
+180. Bunny Chow
+181. Bobotie
+182. Biltong
+183. Boerewors
+184. Braaivleis
+185. Chakalaka
+186. Melktert
+187. Malva Pudding
+188. Biltong Soup
+189. Tomato Bredie
+190. Droëwors
+191. Frikkadels
+192. Braaibroodjie
+193. Potjiekos
+194. Vetkoek (Amagwinya)
+195. Pap and Wors
+196. Umngqusho
+197. Morogo
+198. Walkie Talkies
+199. Mashonzha
+200. Phutu
+201. Smaaklik
+202. Sosaties
+203. Koeksisters
+204. Hertzoggies
+205. Peppermint Crisp Tart
+206. Snoek Braai
+207. Gatsby Sandwich
+208. Roosterkoek
+209. Skopo
+
+**Zimbabwe**
+210. Kapenta
+211. Sadza
+212. Mufushwa
+213. Mutakura
+214. Nhopi
+215. Rupiza
+216. Madora
+217. Matemba
+218. Bota
+219. Dovi
+
+**Zambia**
+220. Nshima
+221. Ifisashi
+222. Chikanda
+223. Delele
+
+**Botswana**
+224. Seswaa
+225. Ting
+226. Bogobe Jwa Lerotse
+227. Serobe
+228. Diphaphata
+229. Dikgobe
+230. Magwinya
+231. Chotlo
+
+**Mozambique**
+232. Piri Piri Chicken
+233. Matapa
+234. Frango Assado
+235. Xima
+236. Mucapata
+237. Caril de Amendoim
+238. Zambezi Bream
+
+**Democratic Republic of Congo (DRC) & Republic of Congo**
+239. Fumbwa
+240. Nsaka Madesu
+241. Pondu
+242. Chikwangue
+243. Makayabu
+244. Saka Saka
+245. Kamundele
+246. Dongo-Dongo
+247. Liboke
+248. Moambe Chicken
+249. Mwamba
+250. Makemba
+251. Loso na Madesu
+252. Madesu
+253. Fumbwa na Madesu
+254. Taba
+255. Ndakala
+256. Mboto
+257. Ngolo
+258. Mbinzo
+259. Mitumba
+260. Ntaba
+261. Mayi Ya Pondu
+262. Lituma
+263. Ngai Ngai
+264. Loso Ya Bulayi
+265. Mfumbwa
+266. Makara
+267. Mikate
+268. Nsoso
+269. Cossa Cossa
+
+**Cameroon**
+270. Achu
+271. Ndolé
+272. Poulet DG
+273. Sangah
+274. Koki
+275. Eru
+276. Kati Kati
+277. Soya
+278. Safou
+279. Kanda
+280. Capitaine Garni
+281. Fufu Corn
+282. Water Fufu
+283. Kwacoco
+284. Ekpang Nkukwo
+285. Ndole with Plantains
+286. Beignets (Cameroon)
+287. Bongo'o Tobi
+288. Kpem
+289. Maboke de Poisson
+
+**Angola**
+290. Calulu
+291. Babute
+292. Muamba Ngal
+293. Fufu de Milho
+294. Pirão
+
+**Gabon / Central African Republic**
+295. Nyembwe Chicken (Gabon)
+296. Maboké (CAR)
+
+**General / Regional Variations**
+297. Kuku Paka (East African Coast)
+298. Vuswa (Southern Africa)
+299. Koshari (North Africa/Middle East)
+300. Eba (West Africa)
