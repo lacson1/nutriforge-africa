@@ -1,7 +1,7 @@
 /* Savourkin's shared cocoa, gold and cream system. */
 :root{--sk-cocoa:#1a1514;--sk-surface:#261e1c;--sk-gold:#c5904d;--sk-cream:#fdfbf7;--sk-line:#d6c5b1;--sk-muted:#68594e;--accent-green:#76501f;--accent-green-light:#f4eadb;--accent-amber:#80501f;--text-primary:#261e1c;--text-secondary:#68594e;--text-tertiary:#756352;--card-bg:#fdfbf7;--card-border:#d9cdbc;--card-border-hover:#af8455;--surface:#f4eee5;--surface-2:#eee3d4;--body-bg:#f6f0e7;--header-bg:#1a1514;--header-fg:#fdfbf7;--accent:#76501f;--ink:#261e1c;--muted:#68594e;--line:#d6c5b1}
 body{font-family:Lato,system-ui,sans-serif;background:var(--body-bg);color:var(--text-primary);caret-color:var(--accent-green)}
-body.dark-mode{--body-bg:#1a1514;--card-bg:#261e1c;--surface:#302622;--surface-2:#3c3028;--card-border:#6a5541;--card-border-hover:#c5904d;--text-primary:#fdfbf7;--text-secondary:#d5c6b5;--text-tertiary:#c9b49a;--accent-green:#e0af70;--accent-green-light:#3c3028;--accent-amber:#e0af70;--accent:#e0af70;--sk-muted:#d5c6b5}
+body.dark-mode{--body-bg:#1a1514;--card-bg:#261e1c;--surface:#302622;--surface-2:#3c3028;--card-border:#6a5541;--card-border-hover:#c5904d;--text-primary:#fdfbf7;--text-secondary:#d5c6b5;--text-tertiary:#c9b49a;--accent-green:#e0af70;--accent-green-light:#3c3028;--accent-amber:#e0af70;--accent:#e0af70;--sk-muted:#d5c6b5;--muted:#d5c6b5}
 :is(h1,h2,h3,.brand-mark,.wordmark,.drawer-title,.plate-center-icon,.pm-val){font-family:'Playfair Display',Georgia,serif!important}
 :is(button,input,select,textarea){font-family:Lato,system-ui,sans-serif}
 ::selection{background:#c5904d;color:#1a1514}*{scrollbar-color:#a98051 transparent;scrollbar-width:thin}
@@ -115,7 +115,7 @@ body{font-size:var(--sk-reading-body);line-height:1.6}
 #foodBrowser :is(.browse-desc,.browse-note),.filter-group-label{font-size:.875rem;line-height:1.6}
 #srch,.filter-select,.chip,.ctrl-btn{font-size:1rem!important;line-height:1.4;min-height:44px}
 .card .card-name{font-size:1.25rem!important;line-height:1.4;white-space:normal;overflow-wrap:break-word}
-.card .card-macros{flex-wrap:wrap;gap:8px 14px}.card .card-macros .mac-item{min-width:3.5rem}
+.card .card-macros{flex-wrap:wrap;gap:8px 14px}.card .card-macros .mac-item{min-width:3.5rem}.card .card-macros{grid-template-columns:repeat(auto-fit,minmax(3.5rem,1fr));column-gap:4px}
 .card .card-macros .mac-val{font:700 1.25rem/1.4 Lato,system-ui,sans-serif;font-variant-numeric:tabular-nums}
 .card .card-macros .mac-val span,.card .card-macros .mac-lbl{font-size:.875rem!important;opacity:1!important;line-height:1.5;color:var(--text-secondary)}
 .card .card-hover-actions .ca-btn,.card :is(.card-details-toggle,.card-swap-trigger,.exp-tab){font-size:.875rem;line-height:1.5;min-height:44px;white-space:normal}
@@ -151,8 +151,8 @@ body{font-size:var(--sk-reading-body);line-height:1.6}
 @container planner-reading (max-width:20rem){.planner-week-nav{display:grid;grid-template-columns:1fr 1fr}.planner-week-nav label{grid-column:1/-1;grid-row:1}.planner-week-nav button{grid-row:2}.weekly-planner .planner-week-nav input{width:100%}.planner-slot-actions .ca-btn{flex:1 1 auto}}
 
 /* Close by the panel's own width, including expanded Plate and Planner panels. */
-.drawer{right:0;transform:translateX(100%);visibility:hidden;pointer-events:none;transition:transform .25s ease,visibility .25s}
-.drawer.open{right:0;transform:translateX(0);visibility:visible;pointer-events:auto}
+.drawer{right:0;transform:translateX(100%);visibility:hidden;pointer-events:none;transition:transform .25s ease,visibility 0s linear .25s}
+.drawer.open{right:0;transform:translateX(0);visibility:visible;pointer-events:auto;transition:transform .25s ease,visibility 0s}
 .drawer .drawer-header{flex-shrink:0}.drawer .drawer-close{opacity:1;flex-shrink:0;border:1px solid #745735;min-width:48px;min-height:48px;color:#fdfbf7;background:#261e1c}
 .drawer .drawer-close:focus-visible{outline-color:#e0af70!important}.drawer .drawer-close:hover{background:#3c3028}
 

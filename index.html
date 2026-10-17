@@ -194,7 +194,7 @@ body.dark-mode .cond-pill:hover{background:var(--surface-2);border-color:var(--c
 .card-cat-row{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin-top:2px}
 .card-cat{font-size:8px;font-weight:600;padding:1px 6px;border-radius:20px;letter-spacing:.03em;text-transform:uppercase}
 .card-african-tag{font-size:8px;color:#B45309;font-weight:700;letter-spacing:.02em}
-.card-nigeria-tag{font-size:8px;color:#008751;font-weight:600}
+.card-nigeria-tag{font-size:8px;color:#007a49;font-weight:600}
 
 /* Macro bar */
 .card-macros{display:grid;grid-template-columns:repeat(5,1fr);margin:8px 0 0;border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border)}
@@ -344,7 +344,7 @@ body.dark-mode .exp-db-bridge{background:rgba(29,92,58,.25);border-color:#4ADE80
 .drawer.open{right:0}
 .drawer-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--card-border);flex-shrink:0}
 .drawer-title{font-size:14px;font-weight:700;color:var(--text-primary)}
-.drawer-close{font-size:16px;opacity:.4;cursor:pointer;padding:4px 8px;border-radius:6px;transition:all .12s;line-height:1}
+.drawer-close{font-size:16px;opacity:.4;cursor:pointer;padding:4px 8px;border-radius:6px;transition:opacity .12s,background-color .12s,color .12s,border-color .12s;line-height:1}
 .drawer-close:hover{opacity:.8;background:var(--surface)}
 .drawer-body{flex:1;overflow-y:auto;padding:16px 18px}
 
@@ -748,8 +748,8 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=41">
-<link rel="stylesheet" href="savourkin-theme.css?v=15">
+<link rel="stylesheet" href="layout.css?v=43">
+<link rel="stylesheet" href="savourkin-theme.css?v=17">
 </head>
 <body>
 
@@ -1167,12 +1167,12 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <script src="js/combinations.js?v=49"></script>
 <script src="js/planner-core.js?v=3"></script>
 <script src="js/shopping-recipes.js?v=1"></script>
-<script src="js/planner-ui.js?v=49"></script>
+<script src="js/planner-ui.js?v=50"></script>
 <script src="js/week-builder.js?v=2"></script>
 <script src="js/planner-journey.js?v=1"></script>
 <script src="js/guide-bridge.js?v=1"></script>
 <script src="js/swaps-core.js?v=49"></script>
-<script src="js/swaps-ui.js?v=7"></script>
+<script src="js/swaps-ui.js?v=8"></script>
 <script src="js/scoring-core.js?v=49"></script>
 <script src="js/dish-images.js?v=1"></script>
 <script src="js/plate-exploration.js?v=9"></script>
@@ -1864,7 +1864,7 @@ function buildPlateDrawer(){
     '<button type="button" class="ctrl-btn danger" onclick="clearPlate()">Clear plate</button></div></div>';
 }
 function buildCompareDrawer(){
-  return '<button type="button" class="ca-btn tool-primary" onclick="closeDrawer()">+ Choose foods to compare</button><div class="compare-grid" id="compareGrid"><div class="compare-slot" id="cs0"><span class="compare-slot-label">Slot 1</span></div><div class="compare-slot" id="cs1"><span class="compare-slot-label">Slot 2</span></div><div class="compare-slot" id="cs2"><span class="compare-slot-label">Slot 3</span></div></div>';
+  return '<button type="button" class="ca-btn tool-primary" onclick="chooseFoodsToCompare()">+ Choose foods to compare</button><div class="compare-grid" id="compareGrid"><div class="compare-slot" id="cs0"><span class="compare-slot-label">Slot 1</span></div><div class="compare-slot" id="cs1"><span class="compare-slot-label">Slot 2</span></div><div class="compare-slot" id="cs2"><span class="compare-slot-label">Slot 3</span></div></div>';
 }
 function buildDiaryDrawer(){
   var diaryNote = activeProfileId
@@ -1970,6 +1970,12 @@ function logFoodToDiaryFromCard(foodId){
   if(activeDrawer !== 'diary') openDrawer('diary');
 }
 
+function chooseFoodsToCompare(){
+  closeDrawer(false);
+  var browser=document.getElementById('foodBrowser');if(browser)browser.scrollIntoView({block:'start'});
+  var search=document.querySelector('#foodBrowser input[type=search], #foodBrowser input');if(search)search.focus({preventScroll:true});
+  cardNotice('Open a food’s details, then tap Compare. You can compare up to three foods.');
+}
 function logPlateToDiary(){
   loadDiaryAndProfiles();
   var entries = [];
@@ -1980,7 +1986,7 @@ function logPlateToDiary(){
     var g = portionSizes[fid] || portionSizes[id] || 100;
     entries.push({ foodId: fid, grams: g, label: f.name + ' (plate)' });
   });
-  if(!entries.length){ alert('My Plate is empty — tap + on food cards to add foods, then open My Plate to check the list.'); return; }
+  if(!entries.length){ cardNotice('My Plate is empty — tap + on food cards to add foods, then open My Plate to check the list.'); return; }
   addDiaryEntries(entries);
   if(activeDrawer !== 'diary') openDrawer('diary');
 }
@@ -2027,10 +2033,15 @@ function saveDiaryGoalsFromForm(){
   if(!isNaN(k) && k >= 500 && k <= 6000) diaryGoals.kcal = k;
   if(!isNaN(p) && p >= 20 && p <= 300) diaryGoals.protein = p;
   if(!isNaN(fi) && fi >= 5 && fi <= 80) diaryGoals.fiber = fi;
+  var rejected=[];
+  if(isNaN(k)||k<500||k>6000) rejected.push('energy 500–6,000 kcal');
+  if(isNaN(p)||p<20||p>300) rejected.push('protein 20–300 g');
+  if(isNaN(fi)||fi<5||fi>80) rejected.push('fibre 5–80 g');
   saveDiaryGoalsStore();
   refreshDiaryView();
   if(activeDrawer === 'plate') updatePlatePanel();
   refreshTodayDashboard();
+  cardNotice(rejected.length ? 'Not saved: use '+rejected.join(', ')+'.'+(rejected.length<3?' Other goals saved.':'') : 'Goals saved.');
 }
 
 function refreshDiaryView(){
@@ -2099,6 +2110,12 @@ function renderMealTemplatesIfOpen(){
       m.parts.map(function(p){ var ff = foodsById[p.id]; return (ff ? ff.emoji + ' ' + safeHtml(ff.name) : '') + ' ' + p.g + 'g'; }).join(' · ') +
       '</div><button type="button" class="ca-btn" onclick="logMealTemplate(\'' + m.id + '\')">Log all to diary</button></div>';
   }).join('');
+  var anyVerified = MEAL_TEMPLATES.some(function(m){return nutritionComplete(m.parts.map(function(p){return p.id;}));});
+  if(!anyVerified){
+    if(row) row.style.display = 'none';
+    host.innerHTML = '<div class="meal-tpl-card"><div class="meal-tpl-title">Meal templates are paused while their ingredients are verified.</div><p style="font-size:11px;color:var(--text-secondary);margin:6px 0 10px">Each template includes at least one food still under nutrition review. Reviewed meal combinations are available now.</p><button type="button" class="ca-btn" onclick="openDrawer(\'combos\')">Open food combinations →</button></div>';
+    return;
+  }
   if(!filtered.length){
     host.innerHTML = '<div class="meal-tpl-card"><div class="meal-tpl-title">No templates in this focus yet.</div><p style="font-size:11px;color:var(--text-secondary);margin:6px 0 0">Switch the filter above to see more templates, or use All templates.</p></div>';
   }
@@ -2112,7 +2129,7 @@ function saveCurrentProfile(){
   var nameInp = document.getElementById('profileNameInput');
   var noteInp = document.getElementById('profileNoteInput');
   var name = nameInp && nameInp.value.trim();
-  if(!name){ alert('Enter a name for this profile.'); return; }
+  if(!name){ cardNotice('Enter a name for this profile.'); return; }
   loadDiaryAndProfiles();
   var favIds = Object.keys(favourites).map(Number);
   var plateIds = Object.keys(plateMap).map(Number);
@@ -2836,7 +2853,7 @@ function savePlateToMealSlot(){
   var meal=sel?sel.value:'breakfast';
   if(['breakfast','lunch','dinner'].indexOf(meal)<0)return;
   var ids=Object.keys(plateMap).map(Number);
-  if(!ids.length){alert('Add foods to My Plate first (tap + on cards), choose '+mealPlateSlotLabel(meal)+', then Save to this meal.');return;}
+  if(!ids.length){cardNotice('Add foods to My Plate first (tap + on cards), choose '+mealPlateSlotLabel(meal)+', then Save to this meal.');return;}
   var portions={};
   ids.forEach(function(id){portions[id]=portionSizes[id]||100;});
   var o=getMealPlatesMap();
@@ -2849,7 +2866,7 @@ function loadPlateFromMealSlot(){
   var sel=document.getElementById('plateMealSlotSelect');
   var meal=sel?sel.value:'breakfast';
   var sp=getMealPlatesMap()[meal];
-  if(!sp||!sp.ids||!sp.ids.length){alert('Nothing saved for '+mealPlateSlotLabel(meal)+' yet. Build a plate, pick this meal, tap Save to this meal.');return;}
+  if(!sp||!sp.ids||!sp.ids.length){cardNotice('Nothing saved for '+mealPlateSlotLabel(meal)+' yet. Build a plate, pick this meal, tap Save to this meal.');return;}
   plateMap={};
   sp.ids.forEach(function(id){var f=foodsById[id];if(f)plateMap[id]=f;});
   Object.keys(sp.portions||{}).forEach(function(k){
@@ -2864,7 +2881,7 @@ function clearMealPlateSlot(){
   var sel=document.getElementById('plateMealSlotSelect');
   var meal=sel?sel.value:'breakfast';
   var sp=getMealPlatesMap()[meal];
-  if(!sp||!sp.ids||!sp.ids.length){alert(mealPlateSlotLabel(meal)+' slot is already empty.');return;}
+  if(!sp||!sp.ids||!sp.ids.length){cardNotice(mealPlateSlotLabel(meal)+' slot is already empty.');return;}
   if(!confirm('Clear only the saved '+mealPlateSlotLabel(meal)+' slot? Your current My Plate on screen stays as it is.'))return;
   var o=getMealPlatesMap();
   delete o[meal];
@@ -3087,9 +3104,9 @@ function refreshPlateSavedSelect(){
 function saveNamedPlateFromInput(){
   var inp=document.getElementById('plateSaveNameInput');
   var name=inp&&String(inp.value||'').trim();
-  if(!name){alert('Enter a short name for this plate.');return;}
+  if(!name){cardNotice('Enter a short name for this plate.');return;}
   var ids=Object.keys(plateMap).map(Number);
-  if(!ids.length){alert('Add foods to My Plate before saving.');return;}
+  if(!ids.length){cardNotice('Add foods to My Plate before saving.');return;}
   var portions={};
   ids.forEach(function(id){portions[id]=portionSizes[id]||100;});
   savedPlates.push({name:name,savedAt:Date.now(),ids:ids,portions:portions});
@@ -3122,9 +3139,9 @@ function deleteNamedPlate(){
   refreshPlateSavedSelect();
 }
 function sharePlate(){
-  if(!nutritionComplete(Object.keys(plateMap))){alert('Nutrition incomplete. Your plate is saved, but its nutrient summary cannot be shared as complete.');return;}
+  if(!nutritionComplete(Object.keys(plateMap))){cardNotice('Nutrition incomplete. Your plate is saved, but its nutrient summary cannot be shared as complete.');return;}
   var ids=Object.keys(plateMap);
-  if(!ids.length){alert('My Plate is empty.');return;}
+  if(!ids.length){cardNotice('My Plate is empty.');return;}
   var T=getPlateTargets();
   var lines=[];
   var totals={kcal:0,p:0,c:0,f:0,fi:0};
@@ -3997,6 +4014,7 @@ if(location.hash==='#guide-meal')reviewGuideMeal();
 (function(){
   var sel=document.getElementById('catSelect');if(!sel)return;
   var cats=[{v:'fish',l:'Fish'},{v:'seafood',l:'Seafood'},{v:'meat',l:'Meat'},{v:'dairy',l:'Dairy'},{v:'veg',l:'Vegetables'},{v:'leaf',l:'Leafy greens'},{v:'legume',l:'Legumes'},{v:'fruit',l:'Fruits'},{v:'nut',l:'Nuts & seeds'},{v:'grain',l:'Grains & cereals'},{v:'fungi',l:'Mushrooms'},{v:'spice',l:'Spices & herbs'},{v:'oil',l:'Oils'},{v:'fermented',l:'Fermented'},{v:'other',l:'Other'}];
+  cats=cats.filter(function(c){return foods.some(function(f){return f.cat===c.v&&f.nutritionStatus!=='unverified'&&!f.duplicateOf;});});
   sel.innerHTML='<option value="">All categories</option>'+cats.map(function(c){return'<option value="'+c.v+'">'+c.l+'</option>'}).join('');
 })();
 

@@ -281,6 +281,8 @@ body.dark-mode .community-start-btn[aria-pressed=true] { background:rgba(94,234,
 .browse-guide-wrap .browse-hero { padding:18px; }
 .browse-guide-wrap .browse-hero-text { font-size:13px; line-height:1.65; }
 @media(max-width:760px){.browse-guide-wrap {position:static}.browse-heading {position:relative}.browse-guide-wrap .brand-dropdown-panel {left:0;top:100%;}}
+.browse-heading .browse-guide-wrap { flex:0 0 auto; min-width:auto; }
+.browse-guide-wrap .brand-dd-chevron { color:currentColor; }
 
 /* Explain combined filters and keep provenance readable in food details. */
 .filter-help { margin: 0; padding: 8px 24px 0; color: var(--text-secondary); font-size: 12px; }
@@ -586,6 +588,7 @@ body.has-plate-tray .card button{scroll-margin-top:90px;scroll-margin-bottom:130
 .combo-meal-card summary,.combo-pairing-library>summary{cursor:pointer;font-size:12px;padding:10px 0}
 .combo-meal-add{display:block;width:100%;margin:16px 0 8px;padding:12px!important;background:var(--accent-green)!important;color:white!important;white-space:normal!important}
 .combo-meal-add:disabled{opacity:.55;cursor:default}
+body.dark-mode .combo-meal-add{color:var(--body-bg)!important}
 .combo-meal-card small{display:block;font-size:11px;line-height:1.5;color:var(--text-secondary)}
 .combo-pairing-library{margin-top:24px;border-top:1px solid var(--card-border);padding-top:12px}
 .combo-pairing-library>summary{font-weight:600;margin-bottom:12px}
@@ -635,3 +638,5 @@ body.has-plate-tray .card button{scroll-margin-top:90px;scroll-margin-bottom:130
 .brand-site-title{display:flex;align-items:center;gap:9px}.app-brand-symbol{display:block;flex:none;background:#f5f3eb;border-radius:7px;padding:2px}
 
 .nutrition-review-notice{padding:14px 18px;border:1px solid #cabd94;background:#faf6e9;color:#453c27;font-size:13px;line-height:1.6;border-radius:8px;margin:14px 0}.nutrition-review-notice a{text-decoration:underline}.nutrition-status{font-size:11px;color:var(--text-secondary)}
+.swap-method summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
+@media(pointer:coarse){.btt{width:44px;height:44px}}
