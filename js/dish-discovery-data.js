@@ -420,7 +420,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-016",
@@ -727,7 +727,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-027",
@@ -1047,7 +1047,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-040",
@@ -2583,7 +2583,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-096",
@@ -2686,7 +2686,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-100",
@@ -2705,7 +2705,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-101",
@@ -2780,7 +2780,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-104",
@@ -3025,7 +3025,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-113",
@@ -3044,7 +3044,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-114",
@@ -3063,7 +3063,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-115",
@@ -3166,7 +3166,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-119",
@@ -3213,7 +3213,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-121",
@@ -3786,7 +3786,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-142",
@@ -3966,7 +3966,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-149",
@@ -4069,7 +4069,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-153",
@@ -5029,7 +5029,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-189",
@@ -5371,7 +5371,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-202",
@@ -5476,7 +5476,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-206",
@@ -5570,7 +5570,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-210",
@@ -5677,7 +5677,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-214",
@@ -5696,7 +5696,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows the dish being stirred in a pot during cooking."
+    "imageReviewNote": "Commons candidate shows the dish being stirred during cooking; the Shona Wikipedia image is American mashed pumpkin, not nhopi; not used."
   },
   {
     "id": "dish-215",
@@ -5715,7 +5715,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-216",
@@ -6059,7 +6059,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-229",
@@ -6134,7 +6134,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-232",
@@ -6267,7 +6267,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-237",
@@ -6460,7 +6460,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-244",
@@ -6538,7 +6538,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-247",
@@ -6651,7 +6651,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-252",
@@ -6717,7 +6717,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-255",
@@ -6736,7 +6736,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-256",
@@ -6755,7 +6755,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-257",
@@ -6830,7 +6830,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-260",
@@ -6887,7 +6887,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-263",
@@ -6925,7 +6925,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-266",
@@ -7028,7 +7028,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-270",
@@ -7311,7 +7311,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-281",
@@ -7530,7 +7530,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-289",
@@ -7606,7 +7606,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-292",
@@ -7758,7 +7758,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-298",
@@ -7779,6 +7779,6 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   }
 ];
