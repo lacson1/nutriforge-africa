@@ -16,33 +16,33 @@ function loadScoring() {
 }
 
 describe('scoring-core.js', () => {
-  it('classifyDrug picks critical for cyanide mention', () => {
+  it('classifyDrug does not infer severity from cyanide mentions', () => {
     const s = loadScoring();
-    expect(s.classifyDrug('Raw forms contain cyanide risk')).toBe('critical');
+    expect(s.classifyDrug('Raw forms contain cyanide risk')).toBeNull();
   });
 
-  it('classifyDrug picks moderate for warfarin', () => {
+  it('classifyDrug does not infer severity from warfarin', () => {
     const s = loadScoring();
-    expect(s.classifyDrug('Vitamin K — warfarin interaction')).toBe('moderate');
+    expect(s.classifyDrug('Vitamin K — warfarin interaction')).toBeNull();
   });
 
-  it('classifyDrug picks mild for oxalate', () => {
+  it('classifyDrug does not infer severity from oxalate', () => {
     const s = loadScoring();
-    expect(s.classifyDrug('High oxalate content')).toBe('mild');
+    expect(s.classifyDrug('High oxalate content')).toBeNull();
   });
 
-  it('confStars maps evidence tiers', () => {
+  it('confStars does not display unsupported evidence ratings', () => {
     const s = loadScoring();
-    expect(s.confStars('High')).toBe(5);
-    expect(s.confStars('Moderate')).toBe(3);
-    expect(s.confStars('Low')).toBe(1);
+    expect(s.confStars('High')).toBe(0);
+    expect(s.confStars('Moderate')).toBe(0);
+    expect(s.confStars('Low')).toBe(0);
   });
 
-  it('calcLongevity is monotonic with evidence and fibre', () => {
+  it('does not infer longevity from keywords or nutrient amounts', () => {
     const s = loadScoring();
     const low = { evidence: 'Low', fiber: 0, protein: 1, bio: '', benefits: '', gi: 'High', top3: false };
     const hi = { evidence: 'High', fiber: 10, protein: 20, bio: 'rct inflammation', benefits: 'cancer mortality', gi: 'Low', top3: true };
-    expect(s.calcLongevity(hi)).toBeGreaterThan(s.calcLongevity(low));
-    expect(s.calcLongevity(hi)).toBeLessThanOrEqual(100);
+    expect(s.calcLongevity(hi)).toBeNull();
+    expect(s.calcLongevity(low)).toBeNull();
   });
 });

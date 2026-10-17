@@ -38,9 +38,10 @@ describe('meals-core.js', () => {
     expect(t.protein).toBe(10);
   });
 
-  it('ignores unknown foods', () => {
+  it('marks unknown foods incomplete', () => {
     const M = loadMeals();
     const t = M.computeMealTotals([{ id: 99, g: 100 }], foodsById);
-    expect(t.kcal).toBe(0);
+    expect(t.kcal).toBeNull();
+    expect(t.incomplete).toBe(true);
   });
 });

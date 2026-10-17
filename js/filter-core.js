@@ -1,6 +1,7 @@
 /* One query for the visible list, CSV export and assistant food context. */
 function queryFoods(items, state, matchesSearch, relevance) {
   var list = items.filter(function(f) {
+    if(f.nutritionStatus==='unverified') return false;
     if(f.duplicateOf && state.scope !== "favourites") return false;
     if(state.scope === 'african' && !f.african) return false;
     if(state.scope === 'nigeria' && !f.nigeria) return false;
@@ -14,7 +15,7 @@ function queryFoods(items, state, matchesSearch, relevance) {
     if(state.drug === 'moderate' && ['critical','moderate'].indexOf(f.drugSev)<0) return false;
     if(state.drug === 'mild' && (!f.drugSev || f.drugSev === 'none')) return false;
     if(state.region && state.region !== 'all' && (f.regions || []).indexOf(state.region)<0) return false;
-    return !state.condition || (f.conditions || []).indexOf(state.condition)>-1;
+    return typeof EVIDENCE_REVIEW_ACTIVE!=='undefined' || !state.condition || (f.conditions || []).indexOf(state.condition)>-1;
   });
   var numeric = {kcal_asc:['kcal',1],kcal_desc:['kcal',-1],protein:['protein',-1],protein_asc:['protein',1],carbs:['carbs',-1],carbs_asc:['carbs',1],fat:['fat',-1],fat_asc:['fat',1],fiber:['fiber',-1],fiber_asc:['fiber',1],longevity:['longevity',-1],longevity_asc:['longevity',1],confidence:['stars',-1],confidence_asc:['stars',1]};
   return list.sort(function(a,b) {

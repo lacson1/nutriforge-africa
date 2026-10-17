@@ -21,10 +21,10 @@ it('uses actual catalogue foods and clamps interactive portions',()=>{
 });
 it('adds the edited example without replacing the existing plate',()=>{
  const {c}=setup();c.changeWelcomePortion(0,25);c.addWelcomePlate();
- expect(c.portionSizes[398]).toBe(175);expect(c.portionSizes[999]).toBe(75);expect(Object.keys(c.plateMap)).toHaveLength(4);
+ expect(c.portionSizes[398]).toBe(175);expect(c.portionSizes[999]).toBe(75);expect(Object.keys(c.plateMap)).toHaveLength(5);
  expect(c.saved).toBe(1);expect(c.drawer).toBe('plate');
 });
 it('rejects oversized additions atomically rather than silently clipping portions',()=>{
  const {c,feedback}=setup();c.plateMap[398]=c.foodsById[398];c.portionSizes[398]=500;c.addWelcomePlate();
- expect(c.saved).toBe(0);expect(c.plateMap[37]).toBeUndefined();expect(c.portionSizes[398]).toBe(500);expect(feedback.textContent).toContain('600 g');
+ expect(c.saved).toBe(0);expect(c.plateMap[411]).toBeUndefined();expect(c.portionSizes[398]).toBe(500);expect(feedback.textContent).toContain('600 g');
 });
