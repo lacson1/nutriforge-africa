@@ -1,6 +1,9 @@
 /* NutriForge — pure meal/diary macro aggregation (no DOM). */
 var NFMealsCore = {
   computeMealTotals: function (parts, foodsById) {
+    var bases=new Set((parts||[]).map(function(p){return foodsById[p.id]&&foodsById[p.id].carbohydrateBasis;}).filter(Boolean));
+    var incomplete=bases.size>1||(parts||[]).some(function(p){var f=foodsById[p.id];return !f||f.nutritionStatus==='unverified'||!Number.isFinite(p.g)||p.g<=0||['kcal','protein','carbs','fat','fiber'].some(function(k){return !Number.isFinite(f[k]);});});
+    if(incomplete)return {kcal:null,protein:null,carbs:null,fat:null,fiber:null,incomplete:true};
     var o = { kcal: 0, protein: 0, carbs: 0, fat: 0, fiber: 0 };
     (parts || []).forEach(function (p) {
       var food = foodsById[p.id];
@@ -20,6 +23,9 @@ var NFMealsCore = {
     return o;
   },
   aggregateDiaryEntries: function (entries, foodsById) {
+    var bases=new Set((entries||[]).map(function(p){return foodsById[p.foodId]&&foodsById[p.foodId].carbohydrateBasis;}).filter(Boolean));
+    var incomplete=bases.size>1||(entries||[]).some(function(p){var f=foodsById[p.foodId];return !f||f.nutritionStatus==='unverified'||(p.grams!==undefined&&(!Number.isFinite(p.grams)||p.grams<=0))||['kcal','protein','carbs','fat','fiber'].some(function(k){return !Number.isFinite(f[k]);});});
+    if(incomplete)return {kcal:null,protein:null,carbs:null,fat:null,fiber:null,incomplete:true};
     var t = { kcal: 0, protein: 0, carbs: 0, fat: 0, fiber: 0 };
     (entries || []).forEach(function (entry) {
       var food = foodsById[entry.foodId];

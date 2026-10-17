@@ -1,5 +1,5 @@
 /* Interactive welcome uses the same food records and persistence as My Plate. */
-var welcomeParts = [{id:398,g:150},{id:37,g:150},{id:22,g:100}];
+var welcomeParts = [{id:398,g:150},{id:411,g:100},{id:429,g:60},{id:418,g:75}];
 function exploreWelcomeFoods(){
   closeDrawer();
   document.getElementById('foodBrowser').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
@@ -16,7 +16,14 @@ function initWelcome(){
   try{if(localStorage.getItem('nf_welcome_collapsed')==='1')toggleWelcome()}catch(e){}
   updateWelcome();
   initJourneyMeasurement();
-  if(new URLSearchParams(location.search).get("start")==="planner")setTimeout(previewPlannerWeek,0);
+  var entry=new URLSearchParams(location.search);
+  if(entry.get('start')==='planner')setTimeout(previewPlannerWeek,0);
+  if(entry.get('start')==='dish')setTimeout(function(){skDishId='welcome';openDrawer('plate');},0);
+  if(entry.get('start')==='plate')setTimeout(function(){openDrawer('plate');},0);
+  if(entry.get('start')==='food'){
+    var food=foodsById[Number(entry.get('id'))];
+    if(food)setTimeout(function(){clearAll();term=food.name.toLowerCase();document.getElementById('srch').value=food.name;render();var card=document.getElementById('c'+food.id);if(card){setCardExpanded(card,true);card.scrollIntoView({block:'start',behavior:'auto'});var button=card.querySelector('[data-card-toggle]');if(button)button.focus({preventScroll:true});}else{document.getElementById('foodBrowser').scrollIntoView({block:'start',behavior:'auto'});document.getElementById('srch').focus({preventScroll:true});}},0);
+  }
 }
 function changeWelcomePortion(index,delta){
   var part=welcomeParts[index];if(!part)return;
@@ -39,8 +46,8 @@ function updateWelcome(){
   var ids=Object.keys(plateMap),count=ids.length;
   document.getElementById('welcomeStatus').textContent=count?'Your plate has '+count+' food'+(count===1?'':'s')+'. Pick up where you left off.':'Your week starts with familiar food.';
   document.getElementById('welcomePlateAction').innerHTML=(count?'Continue my plate':'Build my plate')+' <span aria-hidden="true">→</span>';
-  var colors=['#82a27c','#dcb562','#51a7a3'];
-  var names=['Brown rice','Cowpeas','Tomatoes'];
+  var colors=['#cdbb83','#a78858','#d59b42','#63875e'];
+  var names=['Brown rice','Cowpeas','Plantain','Sweet potato leaves'];
   var total=welcomeParts.reduce(function(n,p){return n+p.g},0),angle=0;
   visual.style.background='conic-gradient('+welcomeParts.map(function(p,i){var start=angle;angle+=p.g/total*360;return colors[i]+' '+start+'deg '+angle+'deg'}).join(',')+')';
   visual.setAttribute('aria-label','Example plate by weight: '+welcomeParts.map(function(p,i){return names[i]+' '+p.g+' grams'}).join(', '));

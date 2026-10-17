@@ -61,3 +61,5 @@ function planComboMeal(id){
  document.getElementById('plannerStatus').textContent='Choose a day and meal slot, then save this combination. Your current plate stays unchanged.';
  document.getElementById('plannerDay').focus();
 }
+
+if(typeof nutritionComplete==='function')COMBINATION_MEALS=COMBINATION_MEALS.filter(function(m){return nutritionComplete(m.parts.map(function(p){return p.id;}));});

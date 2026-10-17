@@ -4,7 +4,7 @@ function findFoodSwaps(items, source, goal, africanOnly) {
   var metric = {fiber:['fiber',1],protein:['protein',1],carbs:['carbs',-1],kcal:['kcal',-1]}[goal];
   var keys = ['kcal','protein','carbs','fat','fiber'];
   function valid(f) { return keys.every(function(k){return typeof f[k]==='number' && Number.isFinite(f[k]) && f[k]>=0;}); }
-  if (!valid(source)) return [];
+  if (!valid(source) || source.nutritionStatus==='unverified') return [];
   function preparation(f) {
     var text=(f.name+' '+(f.catLabel||'')).toLowerCase();
     if(/\b(dried|dry|powder|flour|bran)\b/.test(text)) return 'dry';
@@ -14,7 +14,7 @@ function findFoodSwaps(items, source, goal, africanOnly) {
   }
   var prep=preparation(source);
   return items.filter(function(f){
-    return !f.duplicateOf && f.id!==(source.duplicateOf||source.id) && f.id!==source.id && f.name.toLowerCase()!==source.name.toLowerCase() && preparation(f)===prep && f.cat===source.cat && !!f.browseAsDish===!!source.browseAsDish && valid(f) &&
+    return f.nutritionStatus!=='unverified' && (!metric || goal!=='carbs' || (f.carbohydrateBasis||'unknown')===(source.carbohydrateBasis||'unknown')) && !f.duplicateOf && f.id!==(source.duplicateOf||source.id) && f.id!==source.id && f.name.toLowerCase()!==source.name.toLowerCase() && preparation(f)===prep && f.cat===source.cat && !!f.browseAsDish===!!source.browseAsDish && valid(f) &&
       (!africanOnly || f.african) && (!metric || (f[metric[0]]-source[metric[0]])*metric[1]>0.05);
   }).sort(function(a,b){
     function distance(f){return keys.reduce(function(sum,k){return sum+(metric && k===metric[0]?0:Math.abs(f[k]-source[k])/Math.max(1,source[k]));},0);}

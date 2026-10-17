@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="description" content="Savourkin v6.1 — Evidence-based foods & African dishes, Nigeria spotlight filter, daily diary, goals, client profiles, drug–food checker, meal templates, offline-ready PWA.">
+<meta name="description" content="Savourkin v6.1 — Food nutrition estimates & African dishes, Nigeria spotlight filter, daily diary, goals, client profiles, drug–food checker, meal templates, offline-ready PWA.">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0f2a30">
@@ -10,7 +10,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,600;0,8..144,700;1,8..144,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 /* ═══ NUTRIFORGE v6 — MINIMAL REDESIGN ═══ */
 *{box-sizing:border-box;margin:0;padding:0}
@@ -748,12 +748,13 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=40">
+<link rel="stylesheet" href="layout.css?v=41">
+<link rel="stylesheet" href="savourkin-theme.css?v=9">
 </head>
 <body>
 
 <div class="header">
-  <h1 class="brand-site-title"><img class="app-brand-symbol" src="assets/brand/savourkin-symbol.svg" width="30" height="30" alt=""><span class="brand-mark" lang="en">Savourkin</span></h1>
+  <h1 class="brand-site-title"><a class="brand-home" href="landing.html" aria-label="Savourkin home — return to landing"><img class="app-brand-symbol" src="assets/brand/savourkin-symbol.svg" width="30" height="30" alt=""><span class="brand-mark" lang="en">Savourkin</span><small>Home ↗</small></a></h1>
   <div class="today-dashboard-wrap" id="todayDashboardWrap">
     <button type="button" class="today-dashboard-trigger" id="todayDashboardBtn" onclick="toggleTodayDashboardPanel(event)" aria-expanded="false" aria-haspopup="true" aria-controls="todayDashboardPanel" title="Today — diary, plate, and protocol focus">
       Today
@@ -857,7 +858,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     </div>
     <div class="welcome-demo">
       <div class="welcome-demo-heading"><h3>Start with one good plate</h3><span>EXAMPLE PLATE</span></div>
-      <div class="welcome-preview"><div id="welcomePlateVisual" class="welcome-plate" role="img"></div><div><p class="welcome-food-names">Brown rice<br>Cowpeas<br>Tomatoes</p><p class="welcome-preview-note">Everyday foods, brought together.</p></div></div>
+      <div class="welcome-preview"><div id="welcomePlateVisual" class="welcome-plate" role="img"></div><div><p class="welcome-food-names">Brown rice<br>Cowpeas<br>Plantain &amp; greens</p><p class="welcome-preview-note">Example serving · estimated nutrition.</p></div></div>
       <div id="welcomeNutrition" class="welcome-nutrition" aria-live="polite" aria-atomic="true"></div>
       <details class="welcome-customize"><summary>Make this plate yours <span aria-hidden="true">+</span></summary>
         <p>Adjust the portions, then add to My Plate.</p>
@@ -922,7 +923,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
           <option value="fat">Fat ↓</option><option value="fat_asc">Fat ↑</option>
           <option value="fiber">Fibre ↓</option><option value="fiber_asc">Fibre ↑</option>
           <option value="gi">GI: Low first</option><option value="gi_desc">GI: High first</option>
-          <option value="longevity">Longevity Score ↓</option><option value="longevity_asc">Longevity Score ↑</option>
+
           <option value="confidence">Evidence Stars ↓</option><option value="confidence_asc">Evidence Stars ↑</option>
         </select></div>
       <details class="advanced-filters"><summary>Evidence &amp; interaction filters</summary>      <div class="fp-group"><label for="evidence_filter" class="fp-label">Evidence</label>
@@ -944,10 +945,10 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     </div>
   </div>
   <div class="filters-popover-wrap cond-dropdown-wrap" id="condDropdownWrap">
-    <button type="button" class="cond-dropdown-trigger" id="condDropdownBtn" onclick="toggleCondDropdown(event)" aria-expanded="false" aria-haspopup="listbox" aria-controls="condDropdownPanel">
+    <button type="button" class="cond-dropdown-trigger" id="condDropdownBtn" onclick="openMethodology()">
       <span class="cond-dd-inner">
-        <span class="cond-dd-label">Health focus</span>
-        <span class="cond-dd-value" id="condDropdownLabel">All foods</span>
+        <span class="cond-dd-label">Evidence review</span>
+        <span class="cond-dd-value" id="condDropdownLabel">Clinical filters paused</span>
       </span>
       <svg class="cond-dd-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
     </button>
@@ -1019,9 +1020,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
       </div>
       <div class="t2dm-guide-actions">
         <button type="button" class="t2dm-guide-home" onclick="closeT2dmClinicalGuide()">Back to Savourkin</button>
-        <button type="button" class="t2dm-guide-chip" onclick="t2dmGuideNavigate('view=principles&amp;state=all')">Principles</button>
-        <button type="button" class="t2dm-guide-chip" onclick="t2dmGuideNavigate('view=principles&amp;state=remission')">Remission</button>
-        <button type="button" class="t2dm-guide-chip" onclick="t2dmGuideNavigate('view=foods&amp;state=all')">Foods</button>
+        <a class="t2dm-guide-chip" href="nutrition-review.html">Evidence review</a>
         <button type="button" class="t2dm-guide-newtab" onclick="openT2dmGuideNewTab()">New tab</button>
         <button type="button" class="t2dm-guide-close" onclick="closeT2dmClinicalGuide()" aria-label="Close field guide">&#10005;</button>
       </div>
@@ -1038,21 +1037,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
         <button type="button" class="drawer-close" onclick="closeMethodology()" aria-label="Close">&#10005;</button>
       </div>
       <div class="nf-doc-body">
-        <h3>What Savourkin is</h3>
-        <p>A curated, evidence-graded food reference for clinical and public use, with emphasis on African ingredients and diaspora plates. It is <strong>not</strong> a full national food composition table: many trace nutrients are described narratively (micronutrients field) rather than as a complete analytic panel.</p>
-        <h3>Data &amp; updates</h3>
-        <ul>
-          <li>Macros and core composition align with USDA FoodData Central, WHO references, and peer-reviewed sources cited in card copy.</li>
-          <li>Traditional <strong>dishes</strong> use typical-portion estimates; recipes vary — treat numbers as orientation, not laboratory analysis.</li>
-          <li>Editorial updates are batched; check the footer version string for the build you are viewing.</li>
-        </ul>
-        <h3>Drug–food screening</h3>
-        <p>The drawer matches your medication search against <strong>keyword rules</strong> and each food’s <strong>limits</strong> text. Severities are editorial flags for teaching, not verified drug–nutrient interaction pairs. It does <strong>not</strong> replace Lexicomp, Stockley’s, your formulary, or pharmacist review. Always confirm with the prescriber.</p>
-        <h3>AI assistant</h3>
-        <p>The assistant uses an external model with a short system prompt and a slice of your current filter context. On hosted builds, requests are sent to this site’s <code>/api/chat</code> proxy so your browser never holds an API key. It can still be wrong — verify critical facts on the food cards and original literature.</p>
-        <h3>Visceral adiposity (VAT) protocol</h3>
-        <p>For clinicians and motivated clients working on <strong>visceral fat</strong>, metabolic markers, and structured meal timing: we host an evidence-aligned protocol hub with an in-app outline (always available here) and optional gated PDF / web outline from your deployment.</p>
-        <p><button type="button" class="ca-btn" onclick="closeMethodology();openVatProtocol()">Open VAT hub</button></p>
+        <h3>Nutrition evidence review</h3><p>60 of 430 original food records have source-matched macro values: 25 reference entries and 35 calculated estimates. The other 370 remain quarantined. Another 78 explicitly named reference variants are separate choices, not replacements for saved foods.</p><p>Longevity scores, clinical evidence grades, GI ratings, drug interaction rules and food-specific therapeutic claims are suspended. They were not supported by a documented validated method or a per-claim evidence trail.</p><p>Numbers are not personalised dietary advice. Some carbohydrate entries exclude fibre while legacy definitions are unknown. Existing plans remain saved but their totals may be unverified.</p><p><a href="nutrition-review.html">Read the full review, sources and limitations</a></p><h3>AI assistant</h3><p>AI output can be wrong and is not an independent verification of this catalogue. Do not use it for medication changes or insulin dosing.</p>
         <h3>Privacy &amp; portability</h3>
         <p>Diary, goals, and client profiles are saved in this browser (<code>localStorage</code>). Clearing site data removes them. There is no signed-in account in this build. When you use AI, messages, recent replies, food filters, plate and nutrition targets are sent to the AI service. Client names and clinical notes are not added automatically.</p>
         <p>Use <strong>More → Download data backup</strong> to save a JSON file (keep it private — it may contain visit notes). Use <strong>Restore from backup</strong> on this or another device to reload that snapshot.</p>
@@ -1146,7 +1131,8 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     </div>
   </div>
 
-  <div id="grid" class="grid"></div>
+  <p class="nutrition-review-notice"><strong>Nutrition verification in progress.</strong> Unverified foods are quarantined from browsing. Saved meals remain recoverable; incomplete nutrition is marked. Clinical scores and claims are suspended. <a href="nutrition-review.html">See the evidence review</a>.</p>
+<div id="grid" class="grid"></div>
 </div>
 
 <!-- Back to top -->
@@ -1158,7 +1144,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
     <div>
       <div style="font-size:14px;font-weight:700;margin-bottom:3px"><span class="brand-mark">Savourkin</span></div>
       <div style="opacity:.5;line-height:1.6;font-size:10px">
-        Evidence-based nutrition for Africa and the African diaspora.<br>
+        Food planning for Africa and the African diaspora. Nutrition verification in progress.<br>
         Food library · dishes filter · Nigeria spotlight · diary &amp; goals · client profiles · drug–food checker · meal templates · offline PWA · AI assistant<br>
         Data: FAO/INFOODS, USDA FoodData Central, WHO, peer-reviewed literature.<br>
         <button type="button" onclick="openT2dmClinicalGuide()" style="margin-top:8px;font-size:11px;font-weight:600;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);cursor:pointer;margin-right:6px">Open the field guide</button>
@@ -1171,23 +1157,27 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 </footer>
 
 <div class="tooltip" id="tooltip"></div>
-<script src="js/foods-data.js?v=13"></script>
+<script src="js/foods-data.js?v=49"></script>
+<script src="js/source-corrections.js?v=49"></script>
+<script src="js/evidence-audit.js?v=49"></script>
 <script src="js/search-core.js?v=12"></script>
-<script src="js/filter-core.js?v=13"></script>
-<script src="js/welcome.js?v=18"></script>
+<script src="js/filter-core.js?v=49"></script>
+<script src="js/welcome.js?v=52"></script>
 <script src="js/meals-core.js"></script>
-<script src="js/combinations.js?v=4"></script>
+<script src="js/combinations.js?v=49"></script>
 <script src="js/planner-core.js?v=3"></script>
 <script src="js/shopping-recipes.js?v=1"></script>
-<script src="js/planner-ui.js?v=9"></script>
+<script src="js/planner-ui.js?v=49"></script>
 <script src="js/week-builder.js?v=2"></script>
 <script src="js/planner-journey.js?v=1"></script>
 <script src="js/guide-bridge.js?v=1"></script>
-<script src="js/swaps-core.js?v=5"></script>
+<script src="js/swaps-core.js?v=49"></script>
 <script src="js/swaps-ui.js?v=7"></script>
-<script src="js/scoring-core.js?v=12"></script>
+<script src="js/scoring-core.js?v=49"></script>
+<script src="js/dish-images.js?v=1"></script>
+<script src="js/plate-exploration.js?v=6"></script>
 <script>
-// ── ENRICHMENT (classifyDrug, calcLongevity, confStars — ./js/scoring-core.js?v=12)
+// ── ENRICHMENT (classifyDrug, calcLongevity, confStars — ./js/scoring-core.js?v=49)
 
 // ── RADAR SVG ────────────────────────────────────────────────
 function radarSVG(axes, color, size) {
@@ -1295,333 +1285,13 @@ function prepNote(f) {
 foods.forEach(function(f) {
   f.longevity   = calcLongevity(f);
   f.stars       = confStars(f.evidence);
-  f.drugSev     = classifyDrug(f.limits || '');
+  f.drugSev     = 'none'; // No inferred drug severity during evidence review.
   f.radar       = radarAxes(f);
   f.regions     = f.regions || africanRegions(f);
-  f.prep        = prepNote(f);
+  f.prep        = ''; // Food safety preparation instructions require source review.
 });
 
-var COMBOS = [
-  {id:'c1',emoji:'🌿🍋',title:'Non-haem iron + Vitamin C',type:'absorption',evidence:'High',
-   foods:['Spinach','Lentils','Moringa','Bitter leaf','Cowpeas (Black-eyed peas)'],
-   paired:['Kiwi','Guava','Roselle fruit','Bell peppers','Acerola cherry'],
-   boost:'↑ Iron absorption 3–6×',
-   mechanism:'Vitamin C reduces Fe³⁺ to Fe²⁺ and chelates iron, preventing phytate inhibition. RCT: 50–100mg Vit C with a meal increases non-haem iron absorption 3–6×. Critical for West African plant-based diets.',
-   ref:'Hallberg et al., Am J Clin Nutr; Cook & Reddy 2001'},
-  {id:'c2',emoji:'💛🫙',title:'Fat-soluble vitamins + healthy fat',type:'absorption',evidence:'High',
-   foods:['Carrots','Tomatoes','Kale','Spinach','Sweet potato'],
-   paired:['Extra virgin olive oil','Avocado','Walnuts','Almonds'],
-   boost:'↑ Carotenoid absorption 3–5×',
-   mechanism:'Beta-carotene, lycopene, lutein are lipophilic — require fat for micellar solubilisation. Adding 3–5g fat to a carotenoid-rich meal increases absorption 3–5×. EVOO is optimal (polyphenols also present).',
-   ref:'Unlu et al., AJCN 2005; Goltz et al., J Nutr 2012'},
-  {id:'c3',emoji:'🌿🌶️',title:'Curcumin + Piperine + fat',type:'absorption',evidence:'High',
-   foods:['Turmeric'],
-   paired:['Black pepper','Extra virgin olive oil','Coconut (fresh meat)'],
-   boost:'↑ Curcumin bioavailability 2000%',
-   mechanism:'Piperine inhibits CYP3A4 and P-glycoprotein — the primary curcumin metabolising enzymes. Increases curcumin serum AUC by 2000% in RCTs. Fat solubilises curcumin before absorption.',
-   ref:'Shoba et al., Planta Med 1998 (RCT)'},
-  {id:'c4',emoji:'🫐🔬',title:'Vitamin D + Vitamin K2 + Calcium',type:'absorption',evidence:'High',
-   foods:['Wild salmon','Sardines','Mackerel','Gravlax (cured salmon)'],
-   paired:['Aged Gruyère','Kale','Cultured butter','Nettle tea / Stinging nettle'],
-   boost:'Synergistic bone + arterial protection',
-   mechanism:'Vitamin D upregulates calcium absorption. K2 (MK-7/MK-9) activates osteocalcin (directs calcium into bone) and matrix Gla protein (prevents arterial calcification). Without K2, Vit D–driven calcium can calcify arteries.',
-   ref:'Schurgers et al., Thromb Haemost 2007'},
-  {id:'c5',emoji:'🐟🫒',title:'Omega-3 + Astaxanthin',type:'absorption',evidence:'Moderate',
-   foods:['Wild salmon','Gravlax (cured salmon)','Rainbow trout'],
-   paired:['Wild salmon','Smoked mackerel'],
-   boost:'↑ EPA/DHA stability + antioxidant protection',
-   mechanism:'Omega-3 fatty acids are susceptible to lipid peroxidation. Astaxanthin (co-naturally present with omega-3 in salmon) is 500× more potent than Vit E — protects EPA/DHA from oxidation in vivo. This explains why whole salmon is superior to fish oil supplements.',
-   ref:'Park et al., Nutr Metab 2010'},
-  {id:'c6',emoji:'🥦🧄',title:'Glucosinolates + Myrosinase (raw prep)',type:'absorption',evidence:'High',
-   foods:['Broccoli','Watercress','Kale','Brussels sprouts'],
-   paired:['Radish (daikon)','Mustard seeds','Watercress microgreens'],
-   boost:'↑ Sulforaphane yield 3–4×',
-   mechanism:'Glucosinolates require myrosinase enzyme to convert to active isothiocyanates (sulforaphane). Cooking destroys myrosinase. Adding raw myrosinase-rich foods (radish, mustard) to cooked broccoli restores sulforaphane formation.',
-   ref:'Vermeulen et al., Mol Nutr Food Res 2008'},
-  {id:'c7',emoji:'🥜🫘',title:'Legume + grain (complementary protein)',type:'absorption',evidence:'High',
-   foods:['Lentils','Chickpeas','Cowpeas (Black-eyed peas)','Black beans'],
-   paired:['Oats','Brown rice','Fonio','Teff','Barley (hulled)'],
-   boost:'Complete amino acid profile',
-   mechanism:'Legumes are rich in lysine but low in methionine. Grains are the opposite. Combining creates a complete protein with PDCAAS approaching 1.0. The nutritional basis of traditional African complementary protein diets (rice and beans, injera and lentils).',
-   ref:'Young & Pellett, AJCN 1994'},
-  {id:'c8',emoji:'🫒🍅',title:'Lycopene + EVOO (Mediterranean synergy)',type:'absorption',evidence:'High',
-   foods:['Tomatoes','Sun-dried tomatoes'],
-   paired:['Extra virgin olive oil','Kalamata olives','Avocado oil'],
-   boost:'↑ Lycopene bioavailability 4×',
-   mechanism:'Lycopene is lipophilic. Cooking tomatoes ruptures cell walls (freeing lycopene) and fat solubilises it for absorption. Olive oil polyphenols may also enhance lycopene antioxidant activity synergistically.',
-   ref:'Fielding et al., Br J Nutr 2005'},
-  {id:'c9',emoji:'🐟🌿',title:'Omega-3 + Turmeric/Curcumin',type:'antiinflam',evidence:'High',
-   foods:['Wild salmon','Sardines','Mackerel','Anchovies'],
-   paired:['Turmeric','Black pepper','Ginger'],
-   boost:'Multi-pathway anti-inflammatory',
-   mechanism:'EPA/DHA inhibit COX-2 and LOX pathways. Curcumin inhibits NF-κB (upstream regulator of all inflammatory cytokines). Ginger gingerols inhibit both COX-2 and 5-LOX. Together they suppress inflammation through 3 independent pathways simultaneously.',
-   ref:'Calder, J Nutr 2012; Aggarwal, Cancer Lett 2008'},
-  {id:'c10',emoji:'🫐🍫',title:'Anthocyanins + Epicatechin (berry + dark chocolate)',type:'antiinflam',evidence:'High',
-   foods:['Blueberries','Açaí','Nordic berry mix'],
-   paired:['Dark chocolate (≥85%)','Cacao nibs'],
-   boost:'Synergistic endothelial protection',
-   mechanism:'Anthocyanins activate eNOS via PI3K/Akt pathway. Epicatechin directly activates eNOS and inhibits NADPH oxidase. Both upregulate nitric oxide — improving FMD. RCT combination studies show additive BP reduction beyond each component alone.',
-   ref:'Grassi et al., AJCN 2005; Heiss et al., PNAS 2010'},
-  {id:'c11',emoji:'🌿🌱',title:'Polyphenols + Resistant starch',type:'antiinflam',evidence:'Moderate',
-   foods:['Blueberries','Pomegranate','Green tea','Matcha green tea'],
-   paired:['Resistant starch (green banana)','Oats','Barley (hulled)'],
-   boost:'Systemic anti-inflammatory via gut axis',
-   mechanism:'Polyphenols are poorly absorbed in the small intestine — 90% reach the colon. Resistant starch feeds Bifidobacterium and Akkermansia which produce butyrate. Butyrate activates GPR109a — reducing systemic inflammation and TNF-alpha.',
-   ref:'Scott et al., Gut 2011; Donohoe et al., Cell Metab 2011'},
-  {id:'c12',emoji:'🧄🍃',title:'Garlic + Green tea (allicin + EGCG)',type:'antiinflam',evidence:'Moderate',
-   foods:['Garlic'],
-   paired:['Green tea','Matcha green tea'],
-   boost:'Synergistic NF-κB suppression',
-   mechanism:'Allicin and EGCG both inhibit NF-κB via different binding sites — allicin targets IKK-beta while EGCG inhibits IKK-alpha. Together they suppress NF-κB more completely than either alone. Both also have anti-H. pylori activity.',
-   ref:'Feng et al., Biochem Pharmacol 2002'},
-  {id:'c13',emoji:'🫀🌶️',title:'Beetroot nitrate + Vitamin C',type:'antiinflam',evidence:'Moderate',
-   foods:['Beets','Beetroot (roasted)'],
-   paired:['Bell peppers','Kiwi','Acerola cherry','Guava'],
-   boost:'↑ NO bioavailability + ↓ oxidation',
-   mechanism:'Dietary nitrate converts to nitrite (saliva) then NO (gastric/tissue). Vitamin C prevents nitrite oxidation back to nitrate, preserving NO bioavailability. Combining beetroot juice with vitamin C-rich juice is clinically more effective than beetroot alone for BP.',
-   ref:'Lundberg et al., Nat Rev Drug Discov 2008'},
-  {id:'c14',emoji:'🦠🌱',title:'Synbiotic pair: Kefir + Inulin/FOS',type:'gut',evidence:'High',
-   foods:['Kefir (European style)','Greek yogurt'],
-   paired:['Senegalia senegal (Gum arabic)','Asparagus','Garlic','Artichoke hearts'],
-   boost:'Strongest combined microbiome stimulus',
-   mechanism:'Synbiotics = probiotic + prebiotic together. Prebiotics (inulin/FOS) selectively feed the probiotic organisms, increasing their survival and colonisation in the colon. Kefir + inulin-rich vegetables: Bifidobacterium from kefir proliferates on inulin, producing butyrate.',
-   ref:'Liber & Szajewska, J Pediatr Gastroenterol Nutr 2014'},
-  {id:'c15',emoji:'🫘🥬',title:'Fermented foods + Prebiotic fibre',type:'gut',evidence:'High',
-   foods:['Kimchi','Sauerkraut (German style)','Kefir (European style)','Miso (European barley)'],
-   paired:['Lentils','Oats','Resistant starch (green banana)','Barley (hulled)'],
-   boost:'Maximum microbiome diversity',
-   mechanism:'2021 Stanford RCT (Sonnenburg lab): high-fermented food diet increased microbiome diversity and reduced 19 inflammatory proteins — superior to high-fibre diet alone. Fermented foods deliver live organisms; prebiotic fibre provides substrate. Synergistic.',
-   ref:'Wastyk et al., Cell 2021 (RCT)'},
-  {id:'c16',emoji:'🍌🥛',title:'Resistant starch + Calcium (colon protection)',type:'gut',evidence:'Moderate',
-   foods:['Resistant starch (green banana)','Oats','Boiled new potatoes'],
-   paired:['Greek yogurt','Kefir','Sardines','Canned sardines in tomato sauce'],
-   boost:'↓ Colorectal cancer risk (dual mechanism)',
-   mechanism:'Resistant starch produces butyrate (colonocyte fuel + anti-tumour). Calcium binds to bile acids and fatty acids in the colon, preventing their tumour-promoting effects. Two independent mechanisms that are additive for colorectal cancer risk reduction.',
-   ref:'Bingham et al., Lancet 2003'},
-  {id:'c17',emoji:'🫒🦠',title:'Polyphenols + Akkermansia (prebiotic)',type:'gut',evidence:'Moderate',
-   foods:['Pomegranate','Cranberries','Green tea','Matcha green tea'],
-   paired:['Psyllium husk','Senegalia senegal (Gum arabic)','Resistant starch (green banana)'],
-   boost:'↑ Akkermansia muciniphila',
-   mechanism:'Akkermansia muciniphila is inversely associated with obesity and T2D. Polyphenols (ellagitannins from pomegranate, catechins from green tea) selectively increase Akkermansia counts. Psyllium mucilage provides additional substrate for mucus-layer bacteria.',
-   ref:'Plovier et al., Nat Med 2017'},
-  {id:'c18',emoji:'🍶🍚',title:'Acetic acid (vinegar) + carbohydrate meal',type:'glycaemic',evidence:'High',
-   foods:['Apple cider vinegar','Cider vinegar (unfiltered)'],
-   paired:['Brown rice','Oats','Barley (hulled)','Lentils','Sweet potato'],
-   boost:'↓ Postprandial glucose 20–35%',
-   mechanism:'Acetic acid inhibits alpha-amylase (starch digestion) and sucrase, and delays gastric emptying. 1 tbsp vinegar before a high-carb meal reduces postprandial glucose AUC by 20–35% (RCT). Most effective taken 10–15 min before the meal.',
-   ref:'Johnston et al., JAMA Intern Med 2004 (RCT)'},
-  {id:'c19',emoji:'🌾🦠',title:'Oat beta-glucan + meal',type:'glycaemic',evidence:'High',
-   foods:['Oats','Barley (hulled)','Psyllium husk'],
-   paired:['Blueberries','Almonds','Chia seeds','Greek yogurt'],
-   boost:'↓ Postprandial glucose + LDL',
-   mechanism:'Beta-glucan forms a viscous gel in the GI tract, slowing gastric emptying and glucose absorption. FDA-approved claim: ≥3g beta-glucan/day reduces LDL. Combining with protein (yogurt) and fat (almonds) further reduces glycaemic response.',
-   ref:'Wolever et al., AJCN 1994; FDA health claim 21 CFR 101.81'},
-  {id:'c20',emoji:'🫘🌮',title:'Legumes + protein at start of meal',type:'glycaemic',evidence:'High',
-   foods:['Lentils','Chickpeas','Black beans','Hummus'],
-   paired:['Wild salmon','Eggs','Greek yogurt'],
-   boost:'↓ Postprandial glucose 30%',
-   mechanism:'Eating protein and legumes at the start of a mixed meal reduces postprandial glycaemia by 30% vs eating carbohydrates first (Jenkins "food order" RCTs). Legume soluble fibre slows gastric emptying; protein stimulates GLP-1 and delays carbohydrate absorption.',
-   ref:'Shukla et al., Diabetes Care 2015 (RCT)'},
-  {id:'c21',emoji:'🌿📉',title:'Cinnamon + carbohydrate',type:'glycaemic',evidence:'Moderate',
-   foods:['Cinnamon'],
-   paired:['Oats','Apple','Sweet potato','Carrots'],
-   boost:'↓ Postprandial glucose + ↑ insulin sensitivity',
-   mechanism:'Cinnamaldehyde activates GLUT4 translocation (insulin-independent glucose uptake), inhibits alpha-glucosidase, and activates AMPK. Meta-analysis: 1–6g/day cinnamon reduces fasting glucose and HbA1c in T2D.',
-   ref:'Davis & Yokoyama, J Med Food 2011'},
-  {id:'c22',emoji:'🥑📉',title:'Avocado + high-GI carbohydrate',type:'glycaemic',evidence:'Moderate',
-   foods:['Avocado'],
-   paired:['Brown rice','Sourdough bread (wheat)','Sweet potato'],
-   boost:'↓ Postprandial glucose + ↑ satiety',
-   mechanism:'Avocado MUFA and fibre slow gastric emptying, blunting the glycaemic spike from co-consumed carbohydrates. 2019 RCT: half an avocado at lunch reduced postprandial insulin and glucose while increasing GLP-1 and satiety hormones over 5 hours.',
-   ref:'Edelman et al., Nutrients 2019 (RCT)'},
-  {id:'c23',emoji:'❤️🫒',title:'PREDIMED Mediterranean core stack',type:'cardiovascular',evidence:'High',
-   foods:['Extra virgin olive oil','Wild salmon','Sardines','Walnuts'],
-   paired:['Tomatoes','Garlic','Kalamata olives','Blueberries','Dark chocolate (≥85%)'],
-   boost:'↓ CVD events 30% (RCT)',
-   mechanism:'PREDIMED trial (7,447 participants, 5 years): Mediterranean diet supplemented with EVOO or nuts reduced major cardiovascular events by 30% vs low-fat diet. Core mechanisms: EVOO oleocanthal (COX inhibition), omega-3 (TG reduction), walnut ALA, tomato lycopene (LDL oxidation prevention), garlic allicin (BP).',
-   ref:'Estruch et al., NEJM 2013 (PREDIMED RCT)'},
-  {id:'c24',emoji:'🫀🧂',title:'Potassium + reduced sodium (BP stack)',type:'cardiovascular',evidence:'High',
-   foods:['Avocado','Beetroot (roasted)','Spinach','Sweet potato','Plantain'],
-   paired:['Wild salmon','Sardines','Watermelon'],
-   boost:'↓ SBP 4–8 mmHg',
-   mechanism:'Potassium competes with sodium for renal tubular reabsorption (via Na+/K+ ATPase), increasing urinary sodium excretion and reducing blood volume. DASH diet (high K, low Na) produces 8–14 mmHg BP reduction — equivalent to single antihypertensive drug.',
-   ref:'DASH trial: Appel et al., NEJM 1997'},
-  {id:'c25',emoji:'🐟🥦',title:'Omega-3 + Vitamin D',type:'cardiovascular',evidence:'High',
-   foods:['Wild salmon','Mackerel','Sardines','Cod liver oil'],
-   paired:['Broccoli','Kale','Eggs'],
-   boost:'Synergistic CVD + immune protection',
-   mechanism:'EPA/DHA reduce TG (15–30%), suppress arrhythmia, and have anti-inflammatory vascular effects. VITAL trial (2022): omega-3 supplementation reduced MI risk 28% in low fish consumers. Vitamin D and omega-3 share anti-inflammatory immune pathways.',
-   ref:'VITAL trial: Manson et al., NEJM 2019'},
-  {id:'c26',emoji:'🫒🧄',title:'EVOO + Garlic + Herbs',type:'cardiovascular',evidence:'High',
-   foods:['Extra virgin olive oil','Garlic'],
-   paired:['Rosemary','Thyme','Oregano','Sage'],
-   boost:'Synergistic endothelial protection',
-   mechanism:'EVOO hydroxytyrosol protects LDL from oxidation. Garlic allicin inhibits HMG-CoA reductase (statin-like), reduces platelet aggregation, and lowers BP. Mediterranean herbs provide additional antioxidants (rosmarinic acid, carvacrol) that prevent lipid peroxidation.',
-   ref:'Ried et al., J Nutr 2016 (meta)'},
-  {id:'c27',emoji:'❤️🍫',title:'Dark chocolate + Berries',type:'cardiovascular',evidence:'High',
-   foods:['Dark chocolate (≥85%)','Cacao nibs'],
-   paired:['Blueberries','Pomegranate','Nordic berry mix'],
-   boost:'↑ FMD + ↓ BP synergistically',
-   mechanism:'Epicatechin (dark chocolate) + anthocyanins (berries) both activate eNOS via different receptors. RCT: combined dark chocolate and berries improve FMD more than either alone. Epicatechin bioavailability is enhanced by quercetin in berries.',
-   ref:'Hooper et al., BMJ 2012 (meta)'},
-  {id:'c28',emoji:'⏳🍄',title:'Spermidine + Autophagy inducers',type:'longevity',evidence:'Moderate',
-   foods:['Natto (Japanese fermented soy)','Wheat bran'],
-   paired:['Green tea','Matcha green tea','Coffee'],
-   boost:'↑ Autophagy — cellular rejuvenation',
-   mechanism:'Spermidine (highest in natto) induces autophagy — the cellular self-cleaning process directly associated with longevity. EGCG from green tea and chlorogenic acid from coffee activate SIRT1 via AMPK — the same longevity pathway. This stack targets multiple longevity pathways simultaneously.',
-   ref:'Eisenberg et al., Nat Med 2016'},
-  {id:'c29',emoji:'⏳🌿',title:'Polyphenol longevity stack (SIRT1/mTOR)',type:'longevity',evidence:'Moderate',
-   foods:['Green tea','Coffee','Dark chocolate (≥85%)','Blueberries'],
-   paired:['Walnuts','Extra virgin olive oil','Pomegranate'],
-   boost:'Multi-pathway longevity activation',
-   mechanism:'EGCG, chlorogenic acid, epicatechin, resveratrol, and hydroxytyrosol all activate AMPK and SIRT1. SIRT1 activation mimics caloric restriction — extending lifespan in animal models. These polyphenols also inhibit mTORC1 (pro-ageing) and activate Nrf2 (antioxidant response).',
-   ref:'Cantó & Auwerx, Curr Opin Lipidol 2009'},
-  {id:'c30',emoji:'⏳🫐',title:'Ergothioneine + Glutathione foods',type:'longevity',evidence:'Moderate',
-   foods:['Porcini mushrooms','Shiitake mushrooms','Oyster mushrooms'],
-   paired:['Avocado','Asparagus','Broccoli','Watermelon'],
-   boost:'Master antioxidant + longevity protection',
-   mechanism:'Ergothioneine (from mushrooms) is transported by a unique transporter and accumulates in mitochondria — protecting against oxidative stress at the cellular energy centre. Proposed as a "longevity vitamin." Glutathione (avocado, asparagus, broccoli) is the master intracellular antioxidant.',
-   ref:'Halliwell et al., FASEB J 2018'},
-  {id:'c31',emoji:'🧠🐟',title:'DHA + Choline (brain structure stack)',type:'brain',evidence:'High',
-   foods:['Wild salmon','Mackerel','Sardines'],
-   paired:['Eggs','Clams','Beef liver'],
-   boost:'Optimal neurodevelopment + neuroprotection',
-   mechanism:'DHA is the primary structural fatty acid of neuronal membranes (40% of brain PUFA). Choline is the precursor to acetylcholine (memory neurotransmitter) and phosphatidylcholine (neuronal membrane phospholipid). DHA incorporation requires adequate choline-containing phospholipids. Critical during pregnancy and early life.',
-   ref:'Caudill et al., FASEB J 2018'},
-  {id:'c32',emoji:'🧠🍃',title:"Lion's mane + Omega-3",type:'brain',evidence:'Moderate',
-   foods:["Lion's mane mushroom",'Medicinal mushroom blend'],
-   paired:['Wild salmon','Sardines','Walnuts'],
-   boost:'NGF stimulation + neuronal membrane support',
-   mechanism:"Lion's mane hericenones and erinacines stimulate NGF (nerve growth factor) — promoting neuronal growth, synaptic plasticity, and neuroprotection. DHA provides the membrane substrate for new synapses to form and function efficiently. Lion's mane provides the growth signal; omega-3 provides the structural material.",
-   ref:'Mori et al., Phytother Res 2009 (RCT)'},
-  {id:'c33',emoji:'🧠☕',title:'L-theanine + Caffeine',type:'brain',evidence:'High',
-   foods:['Green tea','Matcha green tea'],
-   paired:['Coffee'],
-   boost:'↑ Focus + ↓ anxiety (RCT evidence)',
-   mechanism:'L-theanine crosses the BBB and promotes alpha-wave generation — calm alertness. Caffeine increases dopamine and norepinephrine, improving focus but also anxiety. The combination produces greater improvement in attention and working memory than either alone, while L-theanine blunts caffeine-induced anxiety. Optimal ratio: 100mg theanine : 50mg caffeine.',
-   ref:'Haskell et al., Biol Psychol 2008 (RCT)'},
-  {id:'c34',emoji:'🧠🫐',title:'Anthocyanins + BDNF foods',type:'brain',evidence:'Moderate',
-   foods:['Blueberries','Nordic berry mix','Açaí'],
-   paired:['Walnuts','Wild salmon','Dark chocolate (≥85%)','Turmeric'],
-   boost:'↑ BDNF + cognitive protection',
-   mechanism:'Cyanidin-3-glucoside and pterostilbene from berries cross the BBB and increase BDNF (brain-derived neurotrophic factor) — the primary neuroplasticity protein. Walnuts provide ALA and ellagitannins that also support BDNF. DHA from salmon supports synaptic BDNF signalling.',
-   ref:'Rendeiro et al., Free Radic Biol Med 2012'},
-  {id:'c35',emoji:'🦴💊',title:'Calcium + Vit D + K2 + Magnesium',type:'bone',evidence:'High',
-   foods:['Sardines','Aged Gruyère','Kefir (European style)','Nettle tea / Stinging nettle'],
-   paired:['Wild salmon','Cod liver oil','Kale','Pumpkin seeds'],
-   boost:'Complete bone mineralisation system',
-   mechanism:'Calcium is the structural mineral. Vit D increases intestinal calcium absorption 2–4×. Vit K2 (MK-7) activates osteocalcin (binds calcium into bone matrix) and matrix Gla protein (prevents ectopic calcification). Magnesium is cofactor for Vit D activation — Vit D supplementation is ineffective in magnesium-deficient individuals.',
-   ref:'Deng et al., Am J Clin Nutr 2013; Iwamoto et al., Osteoporos Int 2000'},
-  {id:'c36',emoji:'💪🥚',title:'Leucine-rich protein + resistance exercise',type:'bone',evidence:'High',
-   foods:['Eggs','Wild salmon','Greek yogurt'],
-   paired:['Cottage cheese','Turkey breast','Edamame'],
-   boost:'↑ Muscle protein synthesis 3× baseline',
-   mechanism:'Leucine is the key mTORC1 activator for muscle protein synthesis (MPS). The post-exercise anabolic window (0–2 hours post-resistance exercise) amplifies mTORC1 sensitivity. During this window, 20g protein with adequate leucine maximally stimulates MPS. Critical for sarcopenia prevention.',
-   ref:'Phillips et al., J Am Diet Assoc 2009'},
-  {id:'c37',emoji:'🦴🌿',title:'Collagen precursors stack',type:'bone',evidence:'Moderate',
-   foods:['Wild salmon','Chicken breast'],
-   paired:['Bell peppers','Kiwi','Guava','Acerola cherry','Blueberries'],
-   boost:'↑ Collagen synthesis',
-   mechanism:'Collagen synthesis requires: glycine (abundant in animal protein), proline, vitamin C (cofactor for prolyl hydroxylase — rate-limiting collagen step), and copper (lysyl oxidase). Vitamin C deficiency completely halts collagen synthesis. Taking protein + high Vit C simultaneously maximises collagen output.',
-   ref:'Shaw et al., Am J Clin Nutr 2017 (RCT)'},
-  {id:'c38',emoji:'🌍🥬',title:'Moringa + Baobab (W. African malnutrition stack)',type:'african',evidence:'Moderate',
-   foods:['Moringa','Moringa powder'],
-   paired:['Baobab fruit','Baobab leaf powder'],
-   boost:'↑ Iron absorption + complete micronutrient',
-   mechanism:'Moringa provides iron (4mg/100g fresh) and complete amino acids. Baobab provides vitamin C (280mg/100g) which converts Fe³⁺ to bioavailable Fe²⁺ and chelates iron against phytate inhibition. Together they form the malnutrition-fighting combination endorsed by WHO/UNICEF for Sub-Saharan Africa.',
-   ref:'WHO 2018 malnutrition guidelines; Gannon et al., Plant Foods Hum Nutr 2014'},
-  {id:'c39',emoji:'🌍🥣',title:'Egusi soup nutritional synergy',type:'african',evidence:'Low',
-   foods:['Melon seeds (Egusi)','Pumpkin leaves (Ugu)','Crayfish (Dried)'],
-   paired:['Red palm oil (Ofe akwu soup)','Bitter leaf','Fermented locust beans (Dawadawa)'],
-   boost:'Complete macro + micro nutrition in one pot',
-   mechanism:'Traditional egusi soup is nutritionally synergistic: egusi (protein 28g, zinc 8.7mg) + ugu leaves (iron, folate, Vit A) + crayfish (calcium 1,088mg) + red palm oil (provitamin A carotenoids — fat increases carotenoid absorption 3–5×) + dawadawa (fibrinolytic enzymes, protein).',
-   ref:'Ene-Obong et al., Food Chem 2009'},
-  {id:'c40',emoji:'🌍🫘',title:'Cowpeas + Fonio + Moringa (Sahel complete meal)',type:'african',evidence:'Moderate',
-   foods:['Cowpeas (Black-eyed peas)','Fonio','Moringa powder'],
-   paired:['Red palm oil (Ofe akwu soup)','Hibiscus (Zobo/Bissap)'],
-   boost:'Complete protein + iron + Vit C + Vit A',
-   mechanism:'Fonio provides sulphur amino acids (methionine, cysteine) that cowpeas lack — together forming complete protein. Moringa adds iron, complete amino acids, and anti-inflammatory isothiocyanates. Red palm oil provides provitamin A. Hibiscus provides vitamin C to enhance moringa iron absorption.',
-   ref:'FAO 2018; WHO VAD Report; Glew et al., Food Chem 2010'},
-  {id:'c41',emoji:'🌍🍲',title:'Injera + Lentil/legume stew (E. African synergy)',type:'african',evidence:'Moderate',
-   foods:['Injera (fermented teff bread)','Teff'],
-   paired:['Lentils','Chickpeas','Spinach','Moringa'],
-   boost:'↑ Iron bioavailability 3× (vs unfermented)',
-   mechanism:'Teff injera fermentation (72hrs) reduces phytate by 60–80% — dramatically improving iron and zinc bioavailability. Lentil stew provides additional plant iron and folate. Spinach or moringa adds Vit C to further enhance non-haem iron absorption.',
-   ref:'Umeta et al., Eur J Clin Nutr 2000'},
-  {id:'c42',emoji:'🌍🫙',title:'Red palm oil + dark leafy greens (Vit A delivery)',type:'african',evidence:'Moderate',
-   foods:['Red palm oil (Ofe akwu soup)'],
-   paired:['Pumpkin leaves (Ugu)','Bitter leaf','Moringa','Amaranth leaves'],
-   boost:'↑ Provitamin A absorption 4–5×',
-   mechanism:'Red palm oil provides the richest dietary source of provitamin A carotenoids. The fat in palm oil solubilises and emulsifies fat-soluble provitamin A carotenoids from both itself and the greens — increasing bioavailability 4–5×. This is why traditional West African soups cooked with palm oil and leafy greens efficiently deliver vitamin A.',
-   ref:'WHO 2009 Red palm oil for combating VAD'},
-  {id:'c43',emoji:'🫒🍷',title:'EVOO + Red wine polyphenols',type:'med',evidence:'Moderate',
-   foods:['Extra virgin olive oil','Kalamata olives'],
-   paired:['Pomegranate','Blueberries','Dark chocolate (≥85%)'],
-   boost:'Synergistic LDL oxidation prevention',
-   mechanism:'EVOO hydroxytyrosol and oleocanthal protect LDL via different mechanisms to resveratrol/anthocyanins in grapes. Together they inhibit LDL oxidation more completely — hydroxytyrosol at the lipid-water interface and resveratrol within the LDL particle itself.',
-   ref:'Fitó et al., J Lipid Res 2007'},
-  {id:'c44',emoji:'🫒🐟',title:'EVOO + Oily fish (Mediterranean anti-ageing core)',type:'med',evidence:'High',
-   foods:['Extra virgin olive oil'],
-   paired:['Wild salmon','Sardines','Mackerel','Anchovies in olive oil'],
-   boost:'↓ All-cause mortality 25–30%',
-   mechanism:'PREDIMED core combination. EVOO oleocanthal (anti-inflammatory — same target as ibuprofen at dietary doses) + omega-3 EPA/DHA (anti-inflammatory, anti-arrhythmic, TG-lowering) act on complementary inflammatory pathways. Olive oil polyphenols also increase EPA/DHA incorporation into cell membranes.',
-   ref:'PREDIMED: Estruch et al., NEJM 2013'},
-  {id:'c45',emoji:'🍅🧄',title:'Tomato + garlic + EVOO (Italian soffritto)',type:'med',evidence:'High',
-   foods:['Tomatoes','Sun-dried tomatoes','Garlic'],
-   paired:['Extra virgin olive oil','Olive tapenade'],
-   boost:'Lycopene bioavailability + allicin cardiovascular synergy',
-   mechanism:'The Italian soffritto (sauté garlic in EVOO then add tomatoes) is nutritionally optimal: heat ruptures tomato cell walls (releasing lycopene), EVOO fat solubilises lycopene (↑3–4× absorption), garlic allicin releases during cooking (CV protection), and EVOO polyphenols survive moderate heat.',
-   ref:'La Vecchia et al., Eur J Cancer Prev 1997'},
-  // ══════════ v5.0 — NEW COMBINATIONS ══════════
-  {id:'c46',emoji:'🌿🫚',title:'Moringa + Ginger + Lemon (African immune stack)',type:'african',evidence:'Moderate',
-   foods:['Moringa','Ginger root (fresh)'],
-   paired:['Kiwi','Bell peppers','Guava'],
-   boost:'Iron absorption + anti-inflammatory + immune',
-   mechanism:'Moringa provides iron (28mg/100g powder) and all essential amino acids. Ginger gingerols suppress COX-2 and TNF-alpha. Lemon/vitamin C converts non-haem iron to ferrous form (2–6× absorption increase). Traditional W. African immune-boosting combination taken as morning tea.',
-   ref:'Stohs & Hartman, Phytother Res 2015'},
-  {id:'c47',emoji:'🍵🫘',title:'Rooibos + Legume meal (CKD-safe antioxidant)',type:'african',evidence:'Moderate',
-   foods:['Rooibos tea','Lentils','Chickpeas'],
-   paired:['Bambara groundnut'],
-   boost:'Renal-safe polyphenol + low-phosphorus protein',
-   mechanism:'Rooibos is zero-oxalate, zero-caffeine, and low-potassium — ideal beverage for CKD patients who must restrict these. Aspalathin antioxidant protects renal tubules (animal models). Legumes provide protein with lower phosphorus:protein ratio than meat — preferred in CKD stages 3-4.',
-   ref:'Marnewick et al., Phytomedicine 2011'},
-  {id:'c48',emoji:'🔴🌿',title:'Folate + Zinc + Omega-3 (Sickle cell support stack)',type:'african',evidence:'Moderate',
-   foods:['Spinach','Lentils','Moringa'],
-   paired:['Wild salmon','Sardines','Pumpkin seeds'],
-   boost:'Anti-sickling + red cell membrane support',
-   mechanism:'Folate supports rapid erythropoiesis in chronic haemolysis. Zinc deficiency is common in SCD — zinc supplementation reduces vaso-occlusive crises (RCT). Omega-3 improves red cell membrane flexibility, reducing sickling tendency. This combination addresses the three key nutritional deficits in sickle cell disease.',
-   ref:'Tomer et al., Am J Hematol 2001'},
-  {id:'c49',emoji:'🦶🍒',title:'Cherry + Vitamin C + Low-purine diet (Gout stack)',type:'antiinflam',evidence:'High',
-   foods:['Tart cherry juice'],
-   paired:['Bell peppers','Kiwi','Coffee','Green tea'],
-   boost:'↓ Uric acid + ↓ gout flares 35%',
-   mechanism:'Tart cherry anthocyanins inhibit xanthine oxidase (same mechanism as allopurinol). RCT: cherry consumption reduces gout attacks by 35%. Vitamin C (≥500mg/day) reduces serum uric acid by 0.5mg/dL (meta-analysis). Coffee: inverse dose-response with uric acid. Combining all three targets uric acid via three different pathways.',
-   ref:'Zhang et al., Arthritis Rheum 2012 (RCT)'},
-  {id:'c50',emoji:'🔄🌿',title:'Inositol + Anti-inflammatory foods (PCOS stack)',type:'antiinflam',evidence:'Moderate',
-   foods:['Cacao (Raw)','Buckwheat (whole grain)','Lentils'],
-   paired:['Wild salmon','Green tea','Cinnamon'],
-   boost:'Insulin sensitisation + anti-androgen',
-   mechanism:'Myo-inositol and D-chiro-inositol improve insulin signalling in PCOS (multiple RCTs — comparable to metformin for ovulation induction). Buckwheat and legumes are the richest food sources of inositol. Omega-3 reduces testosterone and SHBG. Cinnamon activates AMPK (insulin sensitisation). Green tea EGCG: anti-androgenic.',
-   ref:'Unfer et al., Eur Rev Med Pharmacol Sci 2017 (meta)'},
-  {id:'c51',emoji:'🫁🌿',title:'Thymol + 1,8-Cineole (Respiratory stack)',type:'antiinflam',evidence:'Moderate',
-   foods:['Thyme','Oregano'],
-   paired:['Ginger root (fresh)','Garlic','Cardamom','Honey (raw Manuka)'],
-   boost:'Mucolytic + bronchospasmolytic + antimicrobial',
-   mechanism:'Thymol: mucolytic (breaks down mucus) and bronchospasmolytic (relaxes airways). 1,8-Cineole (from cardamom/eucalyptus): RCT evidence for improved lung function in COPD and asthma (reduces exacerbations). Ginger gingerols: bronchodilatory. Garlic allicin: antimicrobial across respiratory pathogens. Traditional W. African and European respiratory remedy.',
-   ref:'Worth et al., Cough 2009 (1,8-cineole RCT)'},
-  {id:'c52',emoji:'🦴🧀',title:'Vitamin K2 + Calcium + Vitamin D (Bone mineralisation triad)',type:'bone',evidence:'High',
-   foods:['Natto (Japanese fermented soy)','Comte cheese'],
-   paired:['Sardines','Eggs','Kale','Spinach'],
-   boost:'Maximum bone mineral density',
-   mechanism:'Vitamin K2 (MK-7 from natto, MK-4 from cheese) activates osteocalcin — the protein that binds calcium into bone matrix. Without K2, calcium deposits in arteries instead. Vitamin D increases intestinal calcium absorption from 10% to 40%. The triad K2+Ca+D is synergistic: D absorbs, K2 directs to bone, Ca mineralises. Multiple RCTs support each pair.',
-   ref:'Knapen et al., Osteoporos Int 2013 (MK-7 RCT)'},
-  {id:'c53',emoji:'🌍🥜',title:'Bambara groundnut + Amaranth greens (Southern African complete meal)',type:'african',evidence:'Low',
-   foods:['Bambara groundnut','Amaranth greens (Morogo)'],
-   paired:['Tomatoes','Bell peppers'],
-   boost:'Complete amino acids + iron + calcium (plant-based)',
-   mechanism:'Bambara groundnut provides complete protein (unusual for a legume — balanced methionine). Amaranth greens provide calcium (215mg, low oxalate — superior bioavailability vs spinach), iron, and folate. Tomato vitamin C enhances non-haem iron absorption from both foods. Traditional Southern African combination that addresses protein, calcium, and iron deficiency simultaneously.',
-   ref:'Mubaiwa et al., J Food Compos Anal 2017'}
-];
+var COMBOS = []; // Unsupported pairing mechanisms withdrawn; archival review retained.
 
 var CONDITIONS = [
   {id:'t2d',       emoji:'🩸',pro:'Type 2 Diabetes',          patient:'Blood sugar management',
@@ -1977,7 +1647,7 @@ function openDrawer(name){
     diary:['Your day, in view.','Keep track of meals and see progress towards your daily targets.'],
     compare:['Find your best fit.','Compare up to three foods on the same 100 g basis.'],
     meals:['A starting point for your next meal.','Browse ready-made plates, then make them your own.'],
-    drugs:['Check before you combine.','Explore the database’s educational medication flags.'],
+    drugs:['Medication guidance paused.','Ask your pharmacist or prescriber.'],
     profiles:['A workspace for each client.','Keep food preferences, targets and visit notes organised.'],
     chart:['See foods differently.','Explore energy and protein across the food database.']
   };
@@ -2022,7 +1692,7 @@ function t2dmGuideNavigate(fragment){
   var frame = document.getElementById('t2dmGuideFrame');
   if(!frame) return;
   var f = String(fragment||'').replace(/^#/,'');
-  frame.src = 't2dm-clinical-field-guide.html?v=24#' + f;
+  frame.src = 't2dm-clinical-field-guide.html?v=49#' + f;
 }
 function openT2dmClinicalGuide(fragment){
   closeDrawer();
@@ -2033,7 +1703,7 @@ function openT2dmClinicalGuide(fragment){
   var frame = document.getElementById('t2dmGuideFrame');
   if(!overlay||!frame) return;
   var frag = (fragment && String(fragment).replace(/^#/,'')) || 'view=principles&state=all';
-  frame.src = 't2dm-clinical-field-guide.html?v=24#' + frag;
+  frame.src = 't2dm-clinical-field-guide.html?v=49#' + frag;
   overlay.classList.add('open');
   overlay.setAttribute('aria-hidden','false');
   document.body.style.overflow = 'hidden';
@@ -2054,7 +1724,7 @@ function openT2dmGuideNewTab(){
       if(i>-1) hash = frame.src.slice(i);
     }
   }catch(e){}
-  window.open('t2dm-clinical-field-guide.html?v=24'+hash,'_blank','noopener');
+  window.open('t2dm-clinical-field-guide.html?v=49'+hash,'_blank','noopener');
 }
 
 /** Deep links: #condition=t2d or #cond=t2d, optional &food=123, #vat or &vat=1 opens VAT hub */
@@ -2154,7 +1824,7 @@ function buildAIDrawer(){
 function buildPlateDrawer(){
   return '<div class="plate-premium">' +
     '<div class="plate-intro"><h2>Build your plate.</h2><p>'+safeHtml(currentGoalLabel())+'</p><button type="button" class="ca-btn" onclick="openCommunityStart()">Change goal</button></div>' +
-    '<div class="plate-stage"><div id="plateVisual" class="plate-visual"></div><p class="plate-visual-caption">Food proportions by weight</p></div>' +
+    '<div class="dish-explorer-controls"><label for="orbitDishSelect">Explore a dish<select id="orbitDishSelect" onchange="selectOrbitDish(this.value)"></select></label><label for="orbitNutrient">Ingredient contributions<select id="orbitNutrient" onchange="skNutrient=this.value;renderDishOrbit(skOrbitParts)"><option value="fiber">Fibre</option><option value="protein">Protein</option><option value="kcal">Energy</option><option value="carbs">Carbohydrate</option><option value="fat">Fat</option></select></label></div><div class="plate-orbit"><div class="plate-stage"><div id="plateVisual" class="plate-visual"></div><p class="plate-visual-caption"></p><div id="orbitDishSummary"></div></div><div id="orbitIngredients" class="orbit-ingredients"></div></div><p id="orbitArithmetic" class="orbit-arithmetic"></p><section class="portion-scale" aria-label="Scale current plate portions"><label for="plateScale">Adjust all portions</label><output id="plateScaleValue" for="plateScale">1×</output><input id="plateScale" type="range" min="0.5" max="3" step="0.25" value="1" oninput="previewPlateScale(this.value)"><p>Multiplier of the displayed ingredient weights, not a daily target or a family-size recommendation.</p><p id="plateScalePreview" role="status" aria-live="polite"></p><button id="plateScaleApply" type="button" class="ca-btn" disabled onclick="applyPlateScale()">Apply portions to plate</button></section>' +
     '<div class="plate-main-actions"><button type="button" class="ca-btn" onclick="planPlateJourney()">Plan this plate</button><button type="button" class="ca-btn" onclick="openDrawer(\'meals\')">Meal ideas</button><button type="button" class="ca-btn" onclick="openDrawer(\'swaps\')">⇄ Find a swap</button><button type="button" class="ca-btn" onclick="exploreWelcomeFoods()">+ Add foods</button><button type="button" class="ca-btn" id="logPlateButton" onclick="logPlateToDiary()">Log plate to diary ↗</button></div>' +
     '<div class="plate-section-heading"><h3>On your plate</h3><span id="plateFoodCount">0 foods</span></div>' +
     '<div class="plate-items" id="plateItems">' +
@@ -2163,7 +1833,7 @@ function buildPlateDrawer(){
     '<div class="plate-status ps-neutral" id="plateStatus"><span id="plateStatusText">Add foods to see how you compare to the reference bars below.</span></div>' +
     '<div class="plate-section-heading"><h3>Your daily targets</h3><button type="button" class="plate-hint-action" onclick="openDrawer(\'diary\')">Edit goals</button></div>' +
     '<div class="plate-energy-mix" id="plateEnergyMix"><strong>Energy from macros</strong> (approx.): <span id="plateEnergyMixText">Add foods to see % of calories from protein, carbs, and fat.</span><div class="plate-energy-bar" id="plateEnergyBar" style="display:none"><span class="plate-energy-seg pes-p" id="plateEnergySegP" style="width:0%"></span><span class="plate-energy-seg pes-c" id="plateEnergySegC" style="width:0%"></span><span class="plate-energy-seg pes-f" id="plateEnergySegF" style="width:0%"></span></div></div>' +
-    '<div class="plate-insights" id="plateInsightsWrap"><div class="plate-insights-title">Plate insights</div><div id="plateInsightsBody">Add foods for longevity mix, categories, and glycaemic notes.</div></div>' +
+    '<div class="plate-insights" id="plateInsightsWrap"><div class="plate-insights-title">Plate insights</div><div id="plateInsightsBody">Add foods to explore portions and estimated nutrition.</div></div>' +
     '<div class="plate-bar-wrap">' +
     '<div class="pb-row"><div class="pb-label"><span>Calories vs <strong id="plateBarGoalKcal">1,750</strong> kcal</span><span class="pb-pct" id="pct-kcal">0%</span></div><div class="pb-track"><div class="pb-fill pb-band-low" id="bar-kcal" style="width:0%"></div></div></div>' +
     '<div class="pb-row"><div class="pb-label"><span>Protein vs <strong id="plateBarGoalP">140</strong> g</span><span class="pb-pct" id="pct-p">0%</span></div><div class="pb-track"><div class="pb-fill pb-band-low" id="bar-p" style="width:0%"></div></div></div>' +
@@ -2384,8 +2054,8 @@ function refreshDiaryView(){
     var f = foodsById[entry.foodId];
     var name = safeHtml(entry.label || (f ? f.name : 'Unknown'));
     var g = entry.grams || 100;
-    var kcalLine = '';
-    if(f){
+    var kcalLine = '<div>Nutrition incomplete — source review pending</div>';
+    if(f && nutritionComplete([entry.foodId])){
       var m = g / 100;
       kcalLine = '<div style="font-size:10px;color:var(--text-secondary)">~' + Math.round(f.kcal * m) + ' kcal · P ' + Math.round(f.protein * m * 10) / 10 + ' g · carbs ' + Math.round(f.carbs * m * 10) / 10 + ' g</div>';
     }
@@ -2411,6 +2081,7 @@ function renderMealTemplatesIfOpen(){
   var host = document.getElementById('mealTemplatesList');
   if(!host) return;
   var filtered = MEAL_TEMPLATES.filter(function(m){
+    if(!nutritionComplete(m.parts.map(function(p){return p.id;})))return false;
     if(activeMealTemplateFocus === 'all') return true;
     if(!m.focus || !m.focus.length) return false;
     return m.focus.indexOf(activeMealTemplateFocus) > -1;
@@ -2877,7 +2548,7 @@ function updateCondDropdownLabel(){
   var el = document.getElementById('condDropdownLabel');
   if(!el) return;
   var pill = document.querySelector('.cond-pill.active');
-  el.textContent = pill ? (pill.textContent || '').replace(/\s+/g, ' ').trim() : 'All foods';
+  el.textContent = 'Clinical filters paused';
 }
 function selectConditionPill(btn,condId){
   document.querySelectorAll('.cond-pill').forEach(function(p){p.classList.remove('active')});
@@ -3009,7 +2680,7 @@ function updatePlateTray(){
   var names=ids.map(function(id){return plateMap[id].name;}).join(' · ');
   document.getElementById('plateTrayCount').textContent='My plate · '+ids.length+' food'+(ids.length===1?'':'s');
   var foodsEl=document.getElementById('plateTrayFoods');foodsEl.textContent=names;foodsEl.title=names;
-  document.getElementById('plateTrayTotals').textContent=totals.kcal+' kcal · '+totals.protein+' g protein · '+totals.fiber+' g fibre';
+  document.getElementById('plateTrayTotals').textContent=nutritionComplete(ids)?totals.kcal+' kcal · '+totals.protein+' g protein · '+totals.fiber+' g fibre':'Nutrition incomplete — your saved foods are retained';
 }
 
 // ── CARD INTERACTION ──
@@ -3070,7 +2741,7 @@ function updateComparePanel(){
       var f=foods.filter(function(x){return x.id===compareSet[i]})[0];
       if(!f)continue;
       slot.className='compare-slot filled';
-      slot.innerHTML='<div style="font-size:12px;font-weight:600">'+f.emoji+' '+safeHtml(f.name)+'</div><div style="font-size:11px;color:var(--text-secondary);margin-top:4px">'+f.kcal+' kcal · '+f.protein+' g protein · '+f.fiber+' g fibre · Longevity '+(f.compositionOnly?'Not rated':f.longevity)+'</div><button onclick="compareSet.splice('+i+',1);updateComparePanel();render()" style="position:absolute;top:6px;right:8px;font-size:14px;opacity:.4;cursor:pointer;background:none;border:none;color:inherit">x</button>';
+      slot.innerHTML='<div style="font-size:12px;font-weight:600">'+f.emoji+' '+safeHtml(f.name)+'</div><div style="font-size:11px;color:var(--text-secondary);margin-top:4px">'+f.kcal+' kcal · '+f.protein+' g protein · '+f.fiber+' g fibre · '+safeHtml(f.nutritionLabel)+'</div><button onclick="compareSet.splice('+i+',1);updateComparePanel();render()" style="position:absolute;top:6px;right:8px;font-size:14px;opacity:.4;cursor:pointer;background:none;border:none;color:inherit">x</button>';
     } else {
       slot.className='compare-slot';
       slot.innerHTML='<span class="compare-slot-label">Slot '+(i+1)+'</span>';
@@ -3333,6 +3004,7 @@ function refreshTodayDashboard(){
   var totals=NFMealsCore.aggregateDiaryEntries(dayEntries,foodsById);
   var gk=diaryGoals.kcal,gp=diaryGoals.protein,gfi=diaryGoals.fiber;
   function bar(label,val,goal){
+    if(val===null||!Number.isFinite(val))return '<p class="today-muted">'+label+': nutrition incomplete — saved foods await verification.</p>';
     var actual=Math.round(val*10)/10;
     var pct=goal>0?Math.round(val/goal*100):0;
     var extra=goal>0&&val>goal?' · '+(Math.round((val-goal)*10)/10)+' above target':'';
@@ -3371,7 +3043,7 @@ function refreshTodayDashboard(){
     '<section class="today-section" aria-label="Logged today"><h3>Logged today <span>'+dayEntries.length+' entr'+(dayEntries.length===1?'y':'ies')+'</span></h3>'+
     (dayEntries.length?'':'<p class="today-empty">No meals logged today. Add a food or log your plate to get started.</p>')+
     bar('Energy (kcal)',totals.kcal,gk)+bar('Protein (g)',totals.protein,gp)+bar('Fibre (g)',totals.fiber,gfi)+'</section>'+
-    '<section class="today-section" aria-label="Meal planning"><h3>Meal planning</h3><p><strong>My Plate</strong> · '+plateIds.length+' food'+(plateIds.length===1?'':'s')+(plateIds.length?' · ~'+Math.round(plateK)+' kcal':'')+'</p><p class="today-muted">'+mealLine+'</p></section>'+
+    '<section class="today-section" aria-label="Meal planning"><h3>Meal planning</h3><p><strong>My Plate</strong> · '+plateIds.length+' food'+(plateIds.length===1?'':'s')+(plateIds.length?(nutritionComplete(plateIds)?' · ~'+Math.round(plateK)+' kcal':' · Nutrition incomplete'):'')+'</p><p class="today-muted">'+mealLine+'</p></section>'+
     '<details class="today-details" id="todayFocusDetails"'+(focusOpen?' open':'')+'><summary>Today’s focus <span>'+safeHtml(ef?todayFocusLabel(ef.protocolId):'Optional')+'</span></summary><div class="today-details-body">'+staleNote+
     '<p class="today-muted">Choose an intention for today. Saved on this device; your food filters stay as they are.</p>'+
     '<div class="today-focus-chips">'+chips+'</div>'+
@@ -3443,6 +3115,7 @@ function deleteNamedPlate(){
   refreshPlateSavedSelect();
 }
 function sharePlate(){
+  if(!nutritionComplete(Object.keys(plateMap))){alert('Nutrition incomplete. Your plate is saved, but its nutrient summary cannot be shared as complete.');return;}
   var ids=Object.keys(plateMap);
   if(!ids.length){alert('My Plate is empty.');return;}
   var T=getPlateTargets();
@@ -3496,6 +3169,7 @@ function renderPlateVisual(ids){
   visual.setAttribute('aria-label',ids.length?'Plate of '+total+' grams: '+ids.map(function(id){return plateMap[id].name+' '+(portionSizes[id]||100)+' grams'}).join(', '):'Empty plate. Add foods to begin.');
   visual.innerHTML='<div class="plate-visual-center"><span class="plate-center-icon" aria-hidden="true">'+(ids.length?'◌':'＋')+'</span><strong>'+ (total?total+'<small>g</small>':'Your plate')+'</strong><span>'+(ids.length?ids.length+' food'+(ids.length===1?'':'s'):'Starts with one food')+'</span></div>';
   var count=document.getElementById('plateFoodCount');if(count)count.textContent=ids.length+' food'+(ids.length===1?'':'s');
+  renderPlateExploration(ids);
 }
 function updatePlatePanel(){
   var logButton=document.getElementById('logPlateButton');if(logButton)logButton.disabled=!Object.keys(plateMap).length;
@@ -3524,7 +3198,7 @@ function updatePlatePanel(){
       var g=portionSizes[fid]||portionSizes[id]||100;
       var m=g/100;
       var pk=Math.round(f.kcal*m),pp=Math.round(f.protein*m*10)/10,pfi=Math.round(f.fiber*m*10)/10;
-      return'<div class="plate-item" style="--food-color:'+plateColors[i%plateColors.length]+'"><div class="plate-item-emoji" aria-hidden="true">'+f.emoji+'</div><div class="plate-item-body"><span class="plate-item-name">'+safeHtml(f.name)+'</span><span class="plate-item-meta">'+g+' g · ~'+pk+' kcal · '+pp+'g protein · '+pfi+'g fibre</span><div class="plate-item-portion" onclick="event.stopPropagation()"><button type="button" class="portion-btn" onclick="changePortion('+fid+',-25)" aria-label="Reduce '+safeHtml(f.name)+' by 25 grams" title="Smaller portion">−</button><span class="portion-label">'+g+'g</span><button type="button" class="portion-btn" onclick="changePortion('+fid+',25)" aria-label="Increase '+safeHtml(f.name)+' by 25 grams" title="Larger portion">+</button></div></div><button type="button" class="plate-item-remove" onclick="togglePlate('+fid+')" title="Remove from plate" aria-label="Remove from plate">×</button></div>';
+      return'<div class="plate-item" style="--food-color:'+plateColors[i%plateColors.length]+'"><div class="plate-item-emoji" aria-hidden="true">'+f.emoji+'</div><div class="plate-item-body"><span class="plate-item-name">'+safeHtml(f.name)+'</span><span class="plate-item-meta">'+g+' g · '+(nutritionComplete([fid])?'~'+pk+' kcal · '+pp+'g protein · '+pfi+'g fibre':'Nutrition incomplete')+'</span><div class="plate-item-portion" onclick="event.stopPropagation()"><button type="button" class="portion-btn" onclick="changePortion('+fid+',-25)" aria-label="Reduce '+safeHtml(f.name)+' by 25 grams" title="Smaller portion">−</button><span class="portion-label">'+g+'g</span><button type="button" class="portion-btn" onclick="changePortion('+fid+',25)" aria-label="Increase '+safeHtml(f.name)+' by 25 grams" title="Larger portion">+</button></div></div><button type="button" class="plate-item-remove" onclick="togglePlate('+fid+')" title="Remove from plate" aria-label="Remove from plate">×</button></div>';
     }).join('');
   }
   var totals={kcal:0,p:0,c:0,f:0,fi:0};
@@ -3569,7 +3243,7 @@ function updatePlatePanel(){
   var ins=document.getElementById('plateInsightsBody');
   if(ins){
     if(!ids.length){
-      ins.textContent='Add foods for longevity mix, categories, and glycaemic notes.';
+      ins.textContent='Add foods to explore portions and estimated nutrition.';
     }else{
       var wL=wLongDen>0?Math.round(wLongNum/wLongDen):0;
       var parts=[];
@@ -3584,7 +3258,7 @@ function updatePlatePanel(){
       if(totals.kcal>0&&hiGiKcal>0)giLine=' About '+Math.round(hiGiKcal/totals.kcal*100)+'% of calories come from High-GI items.';
       if(activeCondition==='t2d')giLine+=' For structured glycaemic tiers, use the field guide from the menu.';
       var hasUnrated=ids.some(function(id){return plateMap[id].compositionOnly;});
-      ins.textContent=(hasUnrated?'Longevity score unavailable: this plate includes foods not yet rated. ':'Kcal-weighted longevity score (approx.): '+wL+'/100. ')+'Mix by calories: '+parts.join(' · ')+'.'+giLine+(hasUnrated?' New FAO entries report available carbs (excluding fibre); other entries may use total carbs.':'');
+      ins.textContent='Estimated mix by calories: '+parts.join(' · ')+'. Values may be unverified. Carbohydrate definitions differ between records; do not use these totals for insulin dosing. Longevity scoring is suspended.';
     }
   }
   var rK=TK?totals.kcal/TK*100:0;
@@ -3626,7 +3300,7 @@ function updatePlatePanel(){
       msg+=' For glycaemic pillars alongside this plate, use the field guide (overflow menu or the button when Diabetes is your active filter).';
     }
     statusEl.className='plate-status '+statusClass;
-    statusText.textContent=msg;
+    statusText.textContent=nutritionComplete(ids)?msg:'Nutrition incomplete — target comparisons are unavailable.';
   }
   refreshTodayDashboard();
 }
@@ -3646,7 +3320,7 @@ function shareFood(id){
   var f=foods.filter(function(x){return x.id===id})[0];
   if(!f)return;
   var deep=(location.href.split('#')[0])+'#food='+id;
-  var text=f.emoji+' '+f.name+' | '+f.kcal+'kcal | '+f.protein+'g protein | Longevity: '+f.longevity+'/100 | Savourkin\n'+deep;
+  var text=f.emoji+' '+f.name+' | '+f.kcal+'kcal | '+f.protein+'g protein | '+f.nutritionLabel+' | Savourkin\n'+deep;
   if(navigator.clipboard)navigator.clipboard.writeText(text);
   else prompt('Copy:',text);
 }
@@ -3950,7 +3624,7 @@ function changePortion(foodId,delta){
 function buildDensityChart(){
   var wrap=document.getElementById('densityChart');if(!wrap)return;
   var W=340,H=260,pad=35;
-  var data=foods.filter(function(f){return f.kcal>0&&f.protein>0});
+  var data=foods.filter(function(f){return f.nutritionStatus!=='unverified'&&f.kcal>0&&f.protein>0});
   var maxX=Math.max.apply(null,data.map(function(f){return f.kcal}));
   var maxY=Math.max.apply(null,data.map(function(f){return f.protein}));
   var scaleX=function(v){return pad+(v/maxX)*(W-2*pad)};
@@ -3965,7 +3639,7 @@ function buildDensityChart(){
 function nfBackupFilename(){
   var d=new Date();
   function pad(n){return n<10?'0'+n:''+n}
-  return 'nutriforge-backup-'+d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+'.json';
+  return 'savourkin-backup-'+d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+'.json';
 }
 function exportFullDataBackup(){
   toggleOverflow();
@@ -4007,12 +3681,12 @@ function importFullDataBackupPick(){
 // ── EXPORT / PRINT ──
 function exportCSV(){
   var list=getVisibleFoods();
-  var headers=['Name','Latin/Aka','Category','African','Kcal','Protein(g)','Carbs(g)','Fat(g)','Fibre(g)','GI','Evidence','Longevity','Drug','Micronutrients','Use','Nutrition source','Source code','Carbohydrate basis'];
+  var headers=['Name','Latin/Aka','Category','African','Kcal','Protein(g)','Carbs(g)','Fat(g)','Fibre(g)','GI','Evidence','Nutrition verification','Drug review','Micronutrients','Use','Nutrition source','Source code','Carbohydrate basis'];
   var rows=[headers];
-  list.forEach(function(f){rows.push([f.name,f.aka||'',f.catLabel,f.african?'Yes':'No',f.kcal,f.protein,f.carbs,f.fat,f.fiber,f.gi,f.evidence,f.longevity,f.drugSev,(f.micro||'').replace(/,/g,';'),(f.use||'').replace(/,/g,';'),f.sourceUrl||'',f.sourceCode||'',f.carbohydrateBasis||'Not specified'].map(function(v){return'"'+String(v).replace(/"/g,'""')+'"'}))});
+  list.forEach(function(f){rows.push([f.name,f.aka||'',f.catLabel,f.african?'Yes':'No',f.kcal,f.protein,f.carbs,f.fat,f.fiber,f.gi,f.evidence,f.nutritionLabel,'Not assessed',(f.micro||'').replace(/,/g,';'),(f.use||'').replace(/,/g,';'),f.sourceUrl||'',f.sourceCode||'',f.carbohydrateBasis||'Not specified'].map(function(v){return'"'+String(v).replace(/"/g,'""')+'"'}))});
   var csv=rows.map(function(r){return r.join(',')}).join('\n');
   var blob=new Blob([csv],{type:'text/csv'});var url=URL.createObjectURL(blob);
-  var a=document.createElement('a');a.href=url;a.download='nutriforge-'+(activeCondition||filter||'all')+'.csv';
+  var a=document.createElement('a');a.href=url;a.download='savourkin-'+(activeCondition||filter||'all')+'.csv';
   document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
 }
 function printView(){window.print()}
@@ -4025,6 +3699,7 @@ function setMobileTab(btn){document.querySelectorAll('.mnav-btn').forEach(functi
 
 // ── KEYBOARD SHORTCUTS ──
 document.addEventListener('keydown',function(e){
+  var ingredientDialog=document.getElementById('plateIngredientDialog');if(ingredientDialog&&ingredientDialog.open)return;
   if(e.key==='Escape'){
     var cs = document.getElementById('communityStartOverlay');
     if(cs && cs.classList.contains('open')){ closeCommunityStart(); e.preventDefault(); return }
@@ -4093,7 +3768,7 @@ var render = (function(){
       thtml+='<th class="tv-num '+thSortCls(['fat','fat_asc'])+'" onclick="cycleSort(\'fat\')">Fat '+thArrow(['fat','fat_asc'])+'</th>';
       thtml+='<th class="tv-num '+thSortCls(['fiber','fiber_asc'])+'" onclick="cycleSort(\'fiber\')">Fibre '+thArrow(['fiber','fiber_asc'])+'</th>';
       thtml+='<th class="'+thSortCls(['gi','gi_desc'])+'" onclick="cycleSort(\'gi\')">GI '+thArrow(['gi','gi_desc'])+'</th>';
-      thtml+='<th class="tv-num '+thSortCls(['longevity','longevity_asc'])+'" onclick="cycleSort(\'longevity\')">LS '+thArrow(['longevity','longevity_asc'])+'</th>';
+      thtml+='<th>Nutrition status</th>';
       thtml+='<th class="'+thSortCls(['confidence','confidence_asc'])+'" onclick="cycleSort(\'confidence\')">Evidence '+thArrow(['confidence','confidence_asc'])+'</th>';
       thtml+='<th>Drug</th>';
       thtml+='<th>Actions</th>';
@@ -4113,7 +3788,7 @@ var render = (function(){
           '<td class="tv-num">'+tf.fat+'g</td>'+
           '<td class="tv-num">'+tf.fiber+'g</td>'+
           '<td><span class="'+(tf.gi==='Low'?'ev-hi':tf.gi==='High'?'ev-lo':'ev-mo')+'" style="font-size:8px">'+tf.gi+'</span></td>'+
-          '<td class="tv-num"><span class="tv-ls"><span class="tv-ls-bar"><span class="tv-ls-fill '+tlsFill+'" style="width:'+tf.longevity+'%"></span></span><span class="tv-ls-val">'+(tf.compositionOnly?'—':tf.longevity)+'</span></span></td>'+
+          '<td>'+safeHtml(tf.nutritionLabel)+'</td>'+
           '<td>'+tevBadge+'</td>'+
           '<td>'+tdpill+'</td>'+
           '<td class="tv-action">'+
@@ -4165,7 +3840,7 @@ var render = (function(){
       var evSpan=appMode==='patient'?(f.evidence==='High'?'<span class="ev-hi">Strong</span>':f.evidence==='Moderate'?'<span class="ev-mo">Good</span>':'<span class="ev-lo">Traditional</span>'):'<span class="ev-'+f.evidence.toLowerCase().substring(0,2)+'">'+f.evidence+'</span>';
 
       if(f.compositionOnly){evSpan='<span class="ev-lo">Not rated</span>';starHtml='<span class="stars-mini">Not rated</span>';}
-      var sourceHtml=f.sourceUrl?'<div class="food-source" onclick="event.stopPropagation()"><a href="'+safeHtml(f.sourceUrl)+'" target="_blank" rel="noopener noreferrer">FAO/INFOODS 2019 · '+safeHtml(f.sourceCode)+'</a><p>'+safeHtml(f.sourceNote)+'</p></div>':'';
+      var sourceHtml=f.sourceUrl?'<div class="food-source" onclick="event.stopPropagation()"><a href="'+safeHtml(f.sourceUrl)+'" target="_blank" rel="noopener noreferrer">'+safeHtml(f.source||'FAO/INFOODS 2019')+' · '+safeHtml(f.sourceCode)+'</a><p>'+safeHtml(f.sourceNote||f.carbohydrateBasis||'Per 100 g edible portion')+'</p></div>':'<p class="nutrition-review-notice">Unverified nutrition: source, preparation and per-100 g basis have not been confirmed. Values are retained for compatibility, not certified as accurate.</p>';
       html+=
       '<div class="card'+(f.nigeria?' nigeria-food':(f.african?' african-food':''))+(inCompare?' in-compare':'')+(inPlate?' in-plate':'')+'" id="c'+f.id+'" style="animation-delay:'+Math.min(i*0.02,0.2)+'s">'+
       '<div class="card-top">'+
@@ -4184,7 +3859,7 @@ var render = (function(){
         '<div class="mac-item"><span class="mac-val">'+(Math.round(f.fiber*pg/100*10)/10)+'<span style="font-size:6px;font-weight:400;opacity:.5">g</span></span><span class="mac-lbl">fibre</span></div>'+
       '</div>'+
       '<div class="card-scores">'+
-        '<div class="longevity-bar-wrap" title="Longevity: '+(f.compositionOnly?'Not rated':f.longevity+'/100')+'"><span class="longevity-label">Longevity</span><div class="longevity-bar-track"><div class="longevity-bar-fill '+lsFill+'" style="width:'+f.longevity+'%"></div></div><span class="longevity-score">'+(f.compositionOnly?'—':f.longevity)+'</span></div>'+
+        '<div class="nutrition-status">'+safeHtml(f.nutritionLabel)+'</div>'+
         starHtml+
       '</div>'+
       '<div class="card-hover-actions" onclick="event.stopPropagation()">'+
@@ -4286,6 +3961,21 @@ var render = (function(){
 
 // ── INIT ──
 loadDiaryAndProfiles();
+var previousOpenDrawer=openDrawer;
+openDrawer=function(name){previousOpenDrawer(name);var host=document.getElementById('drawerBody');if(host)host.insertAdjacentHTML('afterbegin',nutritionReviewNotice());};
+buildAIDrawer=function(){return '<h3>Nutrition assistant paused during evidence review</h3><p>The catalogue is being verified. AI output cannot validate missing source evidence. Meal planning and sourced food exploration remain available.</p>';};
+buildDrugsDrawer=function(){return '<h3>Medication checker under review</h3><p>The previous keyword rules were not a validated interaction checker. This feature is paused. Ask your pharmacist or prescriber about food and medicine interactions.</p><a href="nutrition-review.html">Review findings</a>';};
+openVatProtocol=function(){openMethodology();};
+openVatPdf=function(){openMethodology();};
+openVatGuide=function(){openMethodology();};
+renderCombos=function(){var host=document.getElementById('combosGrid');if(host)host.innerHTML='<p>Food-pairing health claims are under review. Meal templates remain available; nutrition totals may include unverified foods.</p>';};
+buildCombosDrawer=function(){return buildComboMealIdeas()+'<p>These are meal ideas, not validated therapeutic combinations.</p>';};
+openCommunityStart=function(){openMethodology();};
+currentGoalLabel=function(){return 'Add foods and adjust your portions. Clinical goal-based advice is paused during evidence review.';};
+var auditPlateUpdate=updatePlatePanel;
+updatePlatePanel=function(){auditPlateUpdate();if(!nutritionComplete(Object.keys(plateMap))){['pm-kcal','pm-p','pm-c','pm-f','pm-fi'].forEach(function(id){var e=document.getElementById(id);if(e)e.textContent='—';});var e=document.getElementById('plateInsightsBody');if(e)e.textContent='Nutrition incomplete: saved foods are unverified or use different carbohydrate definitions. Your foods and portions are retained; no complete total is available.';var mix=document.getElementById('plateEnergyMixText');if(mix)mix.textContent='Macro proportions unavailable for incomplete nutrition.';var bar=document.getElementById('plateEnergyBar');if(bar)bar.hidden=true;['kcal','p','fi'].forEach(function(k){var el=document.getElementById('bar-'+k);if(el)el.style.width='0%';var pct=document.getElementById('pct-'+k);if(pct)pct.textContent='Unavailable';});}};
+var auditDiaryUpdate=refreshDiaryView;
+refreshDiaryView=function(){auditDiaryUpdate();if(!nutritionComplete(getDiaryDay().map(function(e){return e.foodId;}))){var e=document.getElementById('diaryTotalsSummary');if(e)e.textContent='Nutrition incomplete — saved entries are retained, but some foods await verification.';var bars=document.getElementById('diaryGoalBars');if(bars)bars.innerHTML='';}};
 loadPersistence();
 applyStateFromURL();
 render();

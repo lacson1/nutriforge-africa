@@ -1,0 +1,100 @@
+{
+  "title": "Rice, cowpeas, plantain & greens",
+  "rows": [
+    {
+      "id": 398,
+      "grams": 150,
+      "label": "Brown rice",
+      "preparation": "Boiled, drained",
+      "sourceCode": "01_035",
+      "sourceUrl": "https://www.fao.org/fileadmin/user_upload/faoweb/2020/WAFCT_2019.xlsx",
+      "per100g": {
+        "kcal": 138,
+        "protein": 3.1,
+        "carbs": 29.1,
+        "fat": 0.6,
+        "fiber": 1.8
+      },
+      "values": {
+        "kcal": 207,
+        "protein": 4.65,
+        "carbs": 43.65,
+        "fat": 0.9,
+        "fiber": 2.7
+      }
+    },
+    {
+      "id": 411,
+      "grams": 100,
+      "label": "Cowpeas",
+      "preparation": "Boiled, drained",
+      "sourceCode": "03_007",
+      "sourceUrl": "https://www.fao.org/fileadmin/user_upload/faoweb/2020/WAFCT_2019.xlsx",
+      "per100g": {
+        "kcal": 122,
+        "protein": 8.5,
+        "carbs": 18.3,
+        "fat": 0.5,
+        "fiber": 4.7
+      },
+      "values": {
+        "kcal": 122,
+        "protein": 8.5,
+        "carbs": 18.3,
+        "fat": 0.5,
+        "fiber": 4.7
+      }
+    },
+    {
+      "id": 429,
+      "grams": 60,
+      "label": "Plantain",
+      "preparation": "Deep-fried in vegetable oil",
+      "sourceCode": "02_084",
+      "sourceUrl": "https://www.fao.org/fileadmin/user_upload/faoweb/2020/WAFCT_2019.xlsx",
+      "per100g": {
+        "kcal": 375,
+        "protein": 2.1,
+        "carbs": 51.7,
+        "fat": 16.9,
+        "fiber": 3.7
+      },
+      "values": {
+        "kcal": 225,
+        "protein": 1.26,
+        "carbs": 31.02,
+        "fat": 10.139999999999999,
+        "fiber": 2.22
+      }
+    },
+    {
+      "id": 418,
+      "grams": 75,
+      "label": "Sweet potato leaves",
+      "preparation": "Boiled, drained",
+      "sourceCode": "04_060",
+      "sourceUrl": "https://www.fao.org/fileadmin/user_upload/faoweb/2020/WAFCT_2019.xlsx",
+      "per100g": {
+        "kcal": 53,
+        "protein": 4.8,
+        "carbs": 5.1,
+        "fat": 0.2,
+        "fiber": 5.5
+      },
+      "values": {
+        "kcal": 39.75,
+        "protein": 3.6,
+        "carbs": 3.825,
+        "fat": 0.15,
+        "fiber": 4.125
+      }
+    }
+  ],
+  "totals": {
+    "kcal": 593.75,
+    "protein": 18.01,
+    "carbs": 96.795,
+    "fat": 11.69,
+    "fiber": 13.745000000000001
+  }
+}

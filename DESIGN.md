@@ -1,0 +1,11 @@
+# Savourkin visual system
+Reference: user-supplied Taste of Africa HTML, 17 October 2026. Retain Savourkin identity and product truth.
+Cocoa #1A1514 / #261e1c anchors navigation and Plate exploration; cream #FDFBF7 supports dense working panels; gold #c5904d highlights actions with dark text. Dark theme uses cocoa surfaces and light text. Playfair Display headlines, Lato controls/body, Georgia/system fallbacks. Source/data labels must remain legible, not low-opacity ornament.
+Operate: static planner, clear day/meal hierarchy, readable controls, quantities and source status. Experience within Plate: static circular weight diagram surrounded by ingredient buttons; no rotating text, particle steam or invented nutrient percentages. Mobile ingredients stack in flow. Serving preview derives from current weighed portions and applies only on explicit action.
+Landing: small ingredient photographs lead into large illustrative plate, source-derived recipe figures kept separate from photography. Shared tokens in savourkin-theme.css load after existing styles. All data calculations remain in existing audited modules.
+
+Dish exploration: source-backed combinations can be previewed independently of the current plate. The example uses a clearly labelled generated illustration of plain brown rice, boiled cowpeas, fried plantain and boiled leaves. Other dishes retain honest prepared-weight diagrams where imagery is unavailable. Five nutrient contributions reconcile through largest-remainder rounding. Preview changes all component weights and totals; explicit addition preserves existing plate portions. Planner has no orbit.
+
+Readability: Plate uses 16px body/control text, 14px support/source labels, 24px tabular nutrient values and 28px dish headings at the default root size. Values and units are separate spans. Container queries reflow the orbit when the panel or available text measure narrows, including enlarged root text. Planner remains a separate simple working surface.
+
+App-wide readability: shared 16px reading/control text, 14px supporting text and units, 20px food values; rem-based sizes respect enlarged text. Planner uses container reflow for days, meal editor and shopping quantities. Evidence exclusions and source notes remain visible; landing retains the approved editorial composition.
