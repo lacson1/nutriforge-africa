@@ -1,0 +1,3430 @@
+[
+  {
+    "sourceRow": 1,
+    "submittedName": "Jollof Rice",
+    "region": "Nigeria",
+    "canonicalId": "dish-001",
+    "decision": "linked-existing",
+    "existingCatalogueId": 170,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [
+      {
+        "id": 170,
+        "name": "Jollof rice (traditional)"
+      }
+    ],
+    "note": "Existing named dish linked; source preparation and nutrition status are not generalized."
+  },
+  {
+    "sourceRow": 2,
+    "submittedName": "Egusi Soup",
+    "region": "Nigeria",
+    "canonicalId": "dish-002",
+    "decision": "linked-existing",
+    "existingCatalogueId": 171,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [
+      {
+        "id": 171,
+        "name": "Egusi soup"
+      }
+    ],
+    "note": "Existing named dish linked; source preparation and nutrition status are not generalized."
+  },
+  {
+    "sourceRow": 3,
+    "submittedName": "Fufu",
+    "region": "Nigeria",
+    "canonicalId": "dish-003",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      287,
+      428
+    ],
+    "candidateMatches": [],
+    "note": "Fufu covers several starches and preparations; specify the recipe before nutrition matching."
+  },
+  {
+    "sourceRow": 4,
+    "submittedName": "Suya",
+    "region": "Nigeria",
+    "canonicalId": "dish-004",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 5,
+    "submittedName": "Efo Riro",
+    "region": "Nigeria",
+    "canonicalId": "dish-005",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 6,
+    "submittedName": "Banga Soup",
+    "region": "Nigeria",
+    "canonicalId": "dish-006",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 7,
+    "submittedName": "Nkwobi",
+    "region": "Nigeria",
+    "canonicalId": "dish-007",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 8,
+    "submittedName": "Nigerian Beef Stew",
+    "region": "Nigeria",
+    "canonicalId": "dish-008",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 9,
+    "submittedName": "Ofada Stew",
+    "region": "Nigeria",
+    "canonicalId": "dish-009",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 10,
+    "submittedName": "Asun",
+    "region": "Nigeria",
+    "canonicalId": "dish-010",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 11,
+    "submittedName": "Ewa Agoyin",
+    "region": "Nigeria",
+    "canonicalId": "dish-011",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 12,
+    "submittedName": "Akara",
+    "region": "Nigeria",
+    "canonicalId": "dish-012",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      37
+    ],
+    "candidateMatches": [
+      {
+        "id": 37,
+        "name": "Cowpeas (Black-eyed peas)"
+      }
+    ],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 13,
+    "submittedName": "Moi Moi",
+    "region": "Nigeria",
+    "canonicalId": "dish-013",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 14,
+    "submittedName": "Pounded Yam",
+    "region": "Nigeria",
+    "canonicalId": "dish-014",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 15,
+    "submittedName": "Dambu Nama",
+    "region": "Nigeria",
+    "canonicalId": "dish-015",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 16,
+    "submittedName": "Chin Chin",
+    "region": "Nigeria",
+    "canonicalId": "dish-016",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 17,
+    "submittedName": "Masa",
+    "region": "Nigeria",
+    "canonicalId": "dish-017",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 18,
+    "submittedName": "Puff Puff",
+    "region": "Nigeria",
+    "canonicalId": "dish-018",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 19,
+    "submittedName": "Afang Soup",
+    "region": "Nigeria",
+    "canonicalId": "dish-019",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 20,
+    "submittedName": "Amala",
+    "region": "Nigeria",
+    "canonicalId": "dish-020",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 21,
+    "submittedName": "Ogi",
+    "region": "Nigeria",
+    "canonicalId": "dish-021",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 22,
+    "submittedName": "Eba",
+    "region": "Nigeria",
+    "canonicalId": "dish-022",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 23,
+    "submittedName": "Groundnut Soup",
+    "region": "Nigeria",
+    "canonicalId": "dish-023",
+    "decision": "linked-existing",
+    "existingCatalogueId": 156,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [
+      {
+        "id": 156,
+        "name": "Groundnut soup (peanut soup)"
+      },
+      {
+        "id": 197,
+        "name": "Groundnut soup base"
+      }
+    ],
+    "note": "Existing named dish linked; source preparation and nutrition status are not generalized."
+  },
+  {
+    "sourceRow": 24,
+    "submittedName": "Peppered Snail",
+    "region": "Nigeria",
+    "canonicalId": "dish-024",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 25,
+    "submittedName": "Edikang Ikong",
+    "region": "Nigeria",
+    "canonicalId": "dish-025",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 26,
+    "submittedName": "Ofe Owerri",
+    "region": "Nigeria",
+    "canonicalId": "dish-026",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 27,
+    "submittedName": "Ofe Onugbu (Bitterleaf Soup)",
+    "region": "Nigeria",
+    "canonicalId": "dish-027",
+    "decision": "linked-existing",
+    "existingCatalogueId": 172,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [
+      {
+        "id": 172,
+        "name": "Ofe onugbu / Bitter leaf soup"
+      }
+    ],
+    "note": "Existing named dish linked; source preparation and nutrition status are not generalized."
+  },
+  {
+    "sourceRow": 28,
+    "submittedName": "Ofe Nsala (White Soup)",
+    "region": "Nigeria",
+    "canonicalId": "dish-028",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 29,
+    "submittedName": "Tuwo Shinkafa",
+    "region": "Nigeria",
+    "canonicalId": "dish-029",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 30,
+    "submittedName": "Tuwo Masara",
+    "region": "Nigeria",
+    "canonicalId": "dish-030",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 31,
+    "submittedName": "Kilishi",
+    "region": "Nigeria",
+    "canonicalId": "dish-031",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 32,
+    "submittedName": "Abacha (African Salad)",
+    "region": "Nigeria",
+    "canonicalId": "dish-032",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 33,
+    "submittedName": "Boli (Roasted Plantain)",
+    "region": "Nigeria",
+    "canonicalId": "dish-033",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 34,
+    "submittedName": "Gizdodo",
+    "region": "Nigeria",
+    "canonicalId": "dish-034",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 35,
+    "submittedName": "Gbegiri",
+    "region": "Nigeria",
+    "canonicalId": "dish-035",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 36,
+    "submittedName": "Ewedu",
+    "region": "Nigeria",
+    "canonicalId": "dish-036",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      414
+    ],
+    "candidateMatches": [
+      {
+        "id": 414,
+        "name": "Jute mallow leaves (boiled, drained)"
+      }
+    ],
+    "note": "Ewedu may mean the leaf or prepared soup. The boiled-leaf record is related, not a complete soup recipe."
+  },
+  {
+    "sourceRow": 37,
+    "submittedName": "Frejon",
+    "region": "Nigeria",
+    "canonicalId": "dish-037",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 38,
+    "submittedName": "Efo Elegusi",
+    "region": "Nigeria",
+    "canonicalId": "dish-038",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 39,
+    "submittedName": "Moin Moin",
+    "region": "Nigeria",
+    "canonicalId": "dish-013",
+    "decision": "merged-alias",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Spelling duplicate; original name retained as searchable alias."
+  },
+  {
+    "sourceRow": 40,
+    "submittedName": "Waakye",
+    "region": "Ghana",
+    "canonicalId": "dish-040",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 41,
+    "submittedName": "Ga Kenkey",
+    "region": "Ghana",
+    "canonicalId": "dish-041",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      379
+    ],
+    "candidateMatches": [],
+    "note": "Ga Kenkey is retained as a regional variant; the current record groups Ga and Fante."
+  },
+  {
+    "sourceRow": 42,
+    "submittedName": "Banku",
+    "region": "Ghana",
+    "canonicalId": "dish-042",
+    "decision": "linked-existing",
+    "existingCatalogueId": 380,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [
+      {
+        "id": 380,
+        "name": "Banku (fermented maize and cassava)"
+      }
+    ],
+    "note": "Existing named dish linked; source preparation and nutrition status are not generalized."
+  },
+  {
+    "sourceRow": 43,
+    "submittedName": "Gari Foto",
+    "region": "Ghana",
+    "canonicalId": "dish-043",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 44,
+    "submittedName": "Hausa Koko",
+    "region": "Ghana",
+    "canonicalId": "dish-044",
+    "decision": "linked-existing",
+    "existingCatalogueId": 419,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [
+      {
+        "id": 419,
+        "name": "Hausa koko (fermented millet porridge)"
+      }
+    ],
+    "note": "Existing named dish linked; source preparation and nutrition status are not generalized."
+  },
+  {
+    "sourceRow": 45,
+    "submittedName": "Shitor Sauce",
+    "region": "Ghana",
+    "canonicalId": "dish-045",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 46,
+    "submittedName": "Garden Egg Stew",
+    "region": "Ghana",
+    "canonicalId": "dish-046",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 47,
+    "submittedName": "Red Red",
+    "region": "Ghana",
+    "canonicalId": "dish-047",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      411
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 48,
+    "submittedName": "Kelewele",
+    "region": "Ghana",
+    "canonicalId": "dish-048",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 49,
+    "submittedName": "Omo Tuo",
+    "region": "Ghana",
+    "canonicalId": "dish-049",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 50,
+    "submittedName": "Tuo Zaafi",
+    "region": "Ghana",
+    "canonicalId": "dish-050",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 51,
+    "submittedName": "Light Soup",
+    "region": "Ghana",
+    "canonicalId": "dish-051",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 52,
+    "submittedName": "Kontomire Stew",
+    "region": "Ghana",
+    "canonicalId": "dish-052",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 53,
+    "submittedName": "Thieboudienne",
+    "region": "Senegal",
+    "canonicalId": "dish-053",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 54,
+    "submittedName": "Maafe (Senegalese Peanut Stew)",
+    "region": "Senegal",
+    "canonicalId": "dish-054",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 55,
+    "submittedName": "Yassa Fish",
+    "region": "Senegal",
+    "canonicalId": "dish-055",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 56,
+    "submittedName": "Ndambe",
+    "region": "Senegal",
+    "canonicalId": "dish-056",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 57,
+    "submittedName": "Alloco",
+    "region": "Côte d'Ivoire (Ivory Coast)",
+    "canonicalId": "dish-057",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      429
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 58,
+    "submittedName": "Attiéké",
+    "region": "Côte d'Ivoire (Ivory Coast)",
+    "canonicalId": "dish-058",
+    "decision": "linked-existing",
+    "existingCatalogueId": 381,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [
+      {
+        "id": 381,
+        "name": "Attiéké (fermented cassava couscous)"
+      }
+    ],
+    "note": "Existing named dish linked; source preparation and nutrition status are not generalized."
+  },
+  {
+    "sourceRow": 59,
+    "submittedName": "Domoda",
+    "region": "Gambia",
+    "canonicalId": "dish-059",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 60,
+    "submittedName": "Plasas",
+    "region": "Liberia / Sierra Leone",
+    "canonicalId": "dish-060",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 61,
+    "submittedName": "Palm Butter",
+    "region": "Liberia / Sierra Leone",
+    "canonicalId": "dish-061",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 62,
+    "submittedName": "Injera",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-062",
+    "decision": "linked-existing",
+    "existingCatalogueId": 288,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [
+      {
+        "id": 288,
+        "name": "Injera (fermented teff bread)"
+      }
+    ],
+    "note": "Existing named dish linked; source preparation and nutrition status are not generalized."
+  },
+  {
+    "sourceRow": 63,
+    "submittedName": "Doro Wat",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-063",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 64,
+    "submittedName": "Shiro Wat",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-064",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 65,
+    "submittedName": "Dabo Kolo",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-065",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 66,
+    "submittedName": "Ethiopian Beef Tibs",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-066",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 67,
+    "submittedName": "Kitfo",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-067",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 68,
+    "submittedName": "Genfo",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-068",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 69,
+    "submittedName": "Firfir",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-069",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 70,
+    "submittedName": "Chechebsa",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-070",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 71,
+    "submittedName": "Kik Alicha",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-071",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 72,
+    "submittedName": "Misir Wat",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-072",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 73,
+    "submittedName": "Gomen",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-073",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 74,
+    "submittedName": "Ayib",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-074",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 75,
+    "submittedName": "Kocho",
+    "region": "Ethiopia & Eritrea",
+    "canonicalId": "dish-075",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 76,
+    "submittedName": "Ugali",
+    "region": "Kenya",
+    "canonicalId": "dish-076",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      337
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 77,
+    "submittedName": "Nyama Choma",
+    "region": "Kenya",
+    "canonicalId": "dish-077",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 78,
+    "submittedName": "Sukuma Wiki",
+    "region": "Kenya",
+    "canonicalId": "dish-078",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 79,
+    "submittedName": "Mandazi",
+    "region": "Kenya",
+    "canonicalId": "dish-079",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 80,
+    "submittedName": "Chapati",
+    "region": "Kenya",
+    "canonicalId": "dish-080",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 81,
+    "submittedName": "Kienyeji Mboga",
+    "region": "Kenya",
+    "canonicalId": "dish-081",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      374
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 82,
+    "submittedName": "Mursik",
+    "region": "Kenya",
+    "canonicalId": "dish-082",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 83,
+    "submittedName": "Githeri",
+    "region": "Kenya",
+    "canonicalId": "dish-083",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 84,
+    "submittedName": "Irio",
+    "region": "Kenya",
+    "canonicalId": "dish-084",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 85,
+    "submittedName": "Mutura",
+    "region": "Kenya",
+    "canonicalId": "dish-085",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 86,
+    "submittedName": "Mukimo",
+    "region": "Kenya",
+    "canonicalId": "dish-086",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 87,
+    "submittedName": "Kachumbari",
+    "region": "Kenya",
+    "canonicalId": "dish-087",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 88,
+    "submittedName": "Mahamri",
+    "region": "Kenya",
+    "canonicalId": "dish-088",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 89,
+    "submittedName": "Beef Makange",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-089",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 90,
+    "submittedName": "Chipsi Mayai",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-090",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 91,
+    "submittedName": "Mishikaki",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-091",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 92,
+    "submittedName": "Pweza wa Nazi",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-092",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 93,
+    "submittedName": "Zanzibari Biryani",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-093",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 94,
+    "submittedName": "Swahili Pilau",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-094",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 95,
+    "submittedName": "Wali wa Nazi",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-095",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 96,
+    "submittedName": "Ndizi Nyama",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-096",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 97,
+    "submittedName": "Supu ya Ndizi",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-097",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 98,
+    "submittedName": "Vitumbua",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-098",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 99,
+    "submittedName": "Kaimati",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-099",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 100,
+    "submittedName": "Kashata",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-100",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 101,
+    "submittedName": "Zanzibar Mix (Urojo)",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-101",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 102,
+    "submittedName": "Samosas (East African)",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-102",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 103,
+    "submittedName": "Ming'oko",
+    "region": "Tanzania (including Zanzibar)",
+    "canonicalId": "dish-103",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 104,
+    "submittedName": "Matoke",
+    "region": "Uganda",
+    "canonicalId": "dish-104",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      356
+    ],
+    "candidateMatches": [
+      {
+        "id": 356,
+        "name": "Matoke (cooking banana)"
+      }
+    ],
+    "note": "The catalogue contains cooking banana, not a fully specified matoke dish."
+  },
+  {
+    "sourceRow": 105,
+    "submittedName": "Rolex (Uganda)",
+    "region": "Uganda",
+    "canonicalId": "dish-105",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 106,
+    "submittedName": "Luwombo",
+    "region": "Uganda",
+    "canonicalId": "dish-106",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 107,
+    "submittedName": "Kikkomando",
+    "region": "Uganda",
+    "canonicalId": "dish-107",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 108,
+    "submittedName": "Nsenene (Grasshoppers)",
+    "region": "Uganda",
+    "canonicalId": "dish-108",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 109,
+    "submittedName": "Eshabwe",
+    "region": "Uganda",
+    "canonicalId": "dish-109",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 110,
+    "submittedName": "Bariis Iskukaris",
+    "region": "Somalia",
+    "canonicalId": "dish-110",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 111,
+    "submittedName": "Somboosa",
+    "region": "Somalia",
+    "canonicalId": "dish-111",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 112,
+    "submittedName": "Muqmad (Odkac)",
+    "region": "Somalia",
+    "canonicalId": "dish-112",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 113,
+    "submittedName": "Suqaar",
+    "region": "Somalia",
+    "canonicalId": "dish-113",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 114,
+    "submittedName": "Cambaabur",
+    "region": "Somalia",
+    "canonicalId": "dish-114",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 115,
+    "submittedName": "Malawah",
+    "region": "Somalia",
+    "canonicalId": "dish-115",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 116,
+    "submittedName": "Sabaayad",
+    "region": "Somalia",
+    "canonicalId": "dish-116",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 117,
+    "submittedName": "Xalwo (Halwa)",
+    "region": "Somalia",
+    "canonicalId": "dish-117",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 118,
+    "submittedName": "Agatogo",
+    "region": "Rwanda & Burundi",
+    "canonicalId": "dish-118",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 119,
+    "submittedName": "Isombe",
+    "region": "Rwanda & Burundi",
+    "canonicalId": "dish-119",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 120,
+    "submittedName": "Akabenz",
+    "region": "Rwanda & Burundi",
+    "canonicalId": "dish-120",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 121,
+    "submittedName": "Couscous",
+    "region": "Morocco",
+    "canonicalId": "dish-121",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      396
+    ],
+    "candidateMatches": [],
+    "note": "Couscous is a broad dish name; cereal and preparation need confirmation."
+  },
+  {
+    "sourceRow": 122,
+    "submittedName": "Tagine",
+    "region": "Morocco",
+    "canonicalId": "dish-122",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Tagine describes many recipes; ingredients need confirmation."
+  },
+  {
+    "sourceRow": 123,
+    "submittedName": "Pastilla",
+    "region": "Morocco",
+    "canonicalId": "dish-123",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 124,
+    "submittedName": "M'semen",
+    "region": "Morocco",
+    "canonicalId": "dish-124",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 125,
+    "submittedName": "Zaalouk",
+    "region": "Morocco",
+    "canonicalId": "dish-125",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 126,
+    "submittedName": "Sweet Couscous",
+    "region": "Morocco",
+    "canonicalId": "dish-126",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Sweet Couscous and Seffa may overlap; retained until the submitted recipes can be compared."
+  },
+  {
+    "sourceRow": 127,
+    "submittedName": "Ahriche",
+    "region": "Morocco",
+    "canonicalId": "dish-127",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 128,
+    "submittedName": "Briouat",
+    "region": "Morocco",
+    "canonicalId": "dish-128",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 129,
+    "submittedName": "Chermoula",
+    "region": "Morocco",
+    "canonicalId": "dish-129",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 130,
+    "submittedName": "Harira",
+    "region": "Morocco",
+    "canonicalId": "dish-130",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 131,
+    "submittedName": "Bissara",
+    "region": "Morocco",
+    "canonicalId": "dish-131",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 132,
+    "submittedName": "Rfissa",
+    "region": "Morocco",
+    "canonicalId": "dish-132",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 133,
+    "submittedName": "Seffa",
+    "region": "Morocco",
+    "canonicalId": "dish-133",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "May overlap Sweet Couscous, but ingredients and serving style are unspecified."
+  },
+  {
+    "sourceRow": 134,
+    "submittedName": "Khobz",
+    "region": "Morocco",
+    "canonicalId": "dish-134",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 135,
+    "submittedName": "Chebakia",
+    "region": "Morocco",
+    "canonicalId": "dish-135",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 136,
+    "submittedName": "Baghrir",
+    "region": "Morocco",
+    "canonicalId": "dish-136",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 137,
+    "submittedName": "Sfenj",
+    "region": "Morocco",
+    "canonicalId": "dish-137",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 138,
+    "submittedName": "Taktouka",
+    "region": "Morocco",
+    "canonicalId": "dish-138",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 139,
+    "submittedName": "Rechta",
+    "region": "Algeria",
+    "canonicalId": "dish-139",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 140,
+    "submittedName": "Chakhchoukha",
+    "region": "Algeria",
+    "canonicalId": "dish-140",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 141,
+    "submittedName": "L'hamdour",
+    "region": "Algeria",
+    "canonicalId": "dish-141",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Unclear spelling: L’hamdour. Identity needs confirmation; no automatic correction."
+  },
+  {
+    "sourceRow": 142,
+    "submittedName": "Tajine Zitoune",
+    "region": "Algeria",
+    "canonicalId": "dish-142",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 143,
+    "submittedName": "Dolma",
+    "region": "Algeria",
+    "canonicalId": "dish-143",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 144,
+    "submittedName": "Bourek",
+    "region": "Algeria",
+    "canonicalId": "dish-144",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      333
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 145,
+    "submittedName": "Mahjouba",
+    "region": "Algeria",
+    "canonicalId": "dish-145",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 146,
+    "submittedName": "Garantita",
+    "region": "Algeria",
+    "canonicalId": "dish-146",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 147,
+    "submittedName": "Chorba Frik",
+    "region": "Algeria",
+    "canonicalId": "dish-147",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 148,
+    "submittedName": "Kaldi",
+    "region": "Algeria",
+    "canonicalId": "dish-148",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 149,
+    "submittedName": "Makoud",
+    "region": "Algeria",
+    "canonicalId": "dish-149",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Makoud may be a spelling variant of another dish; identity needs confirmation."
+  },
+  {
+    "sourceRow": 150,
+    "submittedName": "Loubia",
+    "region": "Algeria",
+    "canonicalId": "dish-150",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 151,
+    "submittedName": "Shakshuka",
+    "region": "Tunisia",
+    "canonicalId": "dish-151",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 152,
+    "submittedName": "Harissa Chicken Thighs",
+    "region": "Tunisia",
+    "canonicalId": "dish-152",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 153,
+    "submittedName": "Mechouia Salad",
+    "region": "Tunisia",
+    "canonicalId": "dish-153",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 154,
+    "submittedName": "Brik",
+    "region": "Tunisia",
+    "canonicalId": "dish-154",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 155,
+    "submittedName": "Mloukhiya",
+    "region": "Tunisia",
+    "canonicalId": "dish-155",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 156,
+    "submittedName": "Lablabi",
+    "region": "Tunisia",
+    "canonicalId": "dish-156",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 157,
+    "submittedName": "Kafteji",
+    "region": "Tunisia",
+    "canonicalId": "dish-157",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 158,
+    "submittedName": "Fricassé",
+    "region": "Tunisia",
+    "canonicalId": "dish-158",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 159,
+    "submittedName": "Kamounia",
+    "region": "Tunisia",
+    "canonicalId": "dish-159",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 160,
+    "submittedName": "Osban",
+    "region": "Tunisia",
+    "canonicalId": "dish-160",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 161,
+    "submittedName": "Usban",
+    "region": "Tunisia",
+    "canonicalId": "dish-160",
+    "decision": "merged-alias",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Spelling duplicate; original name retained as searchable alias."
+  },
+  {
+    "sourceRow": 162,
+    "submittedName": "Asida",
+    "region": "Libya",
+    "canonicalId": "dish-162",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 163,
+    "submittedName": "Bazeen",
+    "region": "Libya",
+    "canonicalId": "dish-163",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Bazeen retained as submitted; confirm preferred local spelling and recipe."
+  },
+  {
+    "sourceRow": 164,
+    "submittedName": "Bichak",
+    "region": "Libya",
+    "canonicalId": "dish-164",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Regional attribution and exact Bichak recipe need confirmation."
+  },
+  {
+    "sourceRow": 165,
+    "submittedName": "Koshari",
+    "region": "Egypt",
+    "canonicalId": "dish-165",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 166,
+    "submittedName": "Ful Medames",
+    "region": "Egypt",
+    "canonicalId": "dish-166",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 167,
+    "submittedName": "Om Ali",
+    "region": "Egypt",
+    "canonicalId": "dish-167",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 168,
+    "submittedName": "Mulukhiyah",
+    "region": "Egypt",
+    "canonicalId": "dish-168",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 169,
+    "submittedName": "Hawawshi",
+    "region": "Egypt",
+    "canonicalId": "dish-169",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 170,
+    "submittedName": "Macarona Béchamel",
+    "region": "Egypt",
+    "canonicalId": "dish-170",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 171,
+    "submittedName": "Fiteer Meshmesh",
+    "region": "Egypt",
+    "canonicalId": "dish-171",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Fiteer Meshmesh needs confirmation; do not silently substitute feteer meshaltet."
+  },
+  {
+    "sourceRow": 172,
+    "submittedName": "Besbousa",
+    "region": "Egypt",
+    "canonicalId": "dish-172",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 173,
+    "submittedName": "Qatayef",
+    "region": "Egypt",
+    "canonicalId": "dish-173",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 174,
+    "submittedName": "Roz Bel Laban",
+    "region": "Egypt",
+    "canonicalId": "dish-174",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 175,
+    "submittedName": "Bamia",
+    "region": "Egypt",
+    "canonicalId": "dish-175",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 176,
+    "submittedName": "Sayadiya",
+    "region": "Egypt",
+    "canonicalId": "dish-176",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 177,
+    "submittedName": "Ta'meya",
+    "region": "Egypt",
+    "canonicalId": "dish-177",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      311
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 178,
+    "submittedName": "Aish Baladi",
+    "region": "Egypt",
+    "canonicalId": "dish-178",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 179,
+    "submittedName": "Matbucha",
+    "region": "Egypt",
+    "canonicalId": "dish-179",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 180,
+    "submittedName": "Bunny Chow",
+    "region": "South Africa",
+    "canonicalId": "dish-180",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 181,
+    "submittedName": "Bobotie",
+    "region": "South Africa",
+    "canonicalId": "dish-181",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Retained as a distinct South African dish; do not merge with Babute on spelling similarity."
+  },
+  {
+    "sourceRow": 182,
+    "submittedName": "Biltong",
+    "region": "South Africa",
+    "canonicalId": "dish-182",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      352
+    ],
+    "candidateMatches": [
+      {
+        "id": 352,
+        "name": "Biltong (game meat)"
+      }
+    ],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 183,
+    "submittedName": "Boerewors",
+    "region": "South Africa",
+    "canonicalId": "dish-183",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 184,
+    "submittedName": "Braaivleis",
+    "region": "South Africa",
+    "canonicalId": "dish-184",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 185,
+    "submittedName": "Chakalaka",
+    "region": "South Africa",
+    "canonicalId": "dish-185",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 186,
+    "submittedName": "Melktert",
+    "region": "South Africa",
+    "canonicalId": "dish-186",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 187,
+    "submittedName": "Malva Pudding",
+    "region": "South Africa",
+    "canonicalId": "dish-187",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 188,
+    "submittedName": "Biltong Soup",
+    "region": "South Africa",
+    "canonicalId": "dish-188",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 189,
+    "submittedName": "Tomato Bredie",
+    "region": "South Africa",
+    "canonicalId": "dish-189",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 190,
+    "submittedName": "Droëwors",
+    "region": "South Africa",
+    "canonicalId": "dish-190",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 191,
+    "submittedName": "Frikkadels",
+    "region": "South Africa",
+    "canonicalId": "dish-191",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 192,
+    "submittedName": "Braaibroodjie",
+    "region": "South Africa",
+    "canonicalId": "dish-192",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 193,
+    "submittedName": "Potjiekos",
+    "region": "South Africa",
+    "canonicalId": "dish-193",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 194,
+    "submittedName": "Vetkoek (Amagwinya)",
+    "region": "South Africa",
+    "canonicalId": "dish-194",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Vetkoek/Amagwinya retained as the submitted South African version."
+  },
+  {
+    "sourceRow": 195,
+    "submittedName": "Pap and Wors",
+    "region": "South Africa",
+    "canonicalId": "dish-195",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 196,
+    "submittedName": "Umngqusho",
+    "region": "South Africa",
+    "canonicalId": "dish-196",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 197,
+    "submittedName": "Morogo",
+    "region": "South Africa",
+    "canonicalId": "dish-197",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      354
+    ],
+    "candidateMatches": [],
+    "note": "Morogo covers different greens; no single plant or prepared recipe is assumed."
+  },
+  {
+    "sourceRow": 198,
+    "submittedName": "Walkie Talkies",
+    "region": "South Africa",
+    "canonicalId": "dish-198",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 199,
+    "submittedName": "Mashonzha",
+    "region": "South Africa",
+    "canonicalId": "dish-199",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      355
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 200,
+    "submittedName": "Phutu",
+    "region": "South Africa",
+    "canonicalId": "dish-200",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 201,
+    "submittedName": "Smaaklik",
+    "region": "South Africa",
+    "canonicalId": "dish-201",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Smaaklik needs confirmation as a dish name; may be a descriptive word."
+  },
+  {
+    "sourceRow": 202,
+    "submittedName": "Sosaties",
+    "region": "South Africa",
+    "canonicalId": "dish-202",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 203,
+    "submittedName": "Koeksisters",
+    "region": "South Africa",
+    "canonicalId": "dish-203",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 204,
+    "submittedName": "Hertzoggies",
+    "region": "South Africa",
+    "canonicalId": "dish-204",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 205,
+    "submittedName": "Peppermint Crisp Tart",
+    "region": "South Africa",
+    "canonicalId": "dish-205",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 206,
+    "submittedName": "Snoek Braai",
+    "region": "South Africa",
+    "canonicalId": "dish-206",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 207,
+    "submittedName": "Gatsby Sandwich",
+    "region": "South Africa",
+    "canonicalId": "dish-207",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 208,
+    "submittedName": "Roosterkoek",
+    "region": "South Africa",
+    "canonicalId": "dish-208",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 209,
+    "submittedName": "Skopo",
+    "region": "South Africa",
+    "canonicalId": "dish-209",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 210,
+    "submittedName": "Kapenta",
+    "region": "Zimbabwe",
+    "canonicalId": "dish-210",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      372
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 211,
+    "submittedName": "Sadza",
+    "region": "Zimbabwe",
+    "canonicalId": "dish-211",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      337
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 212,
+    "submittedName": "Mufushwa",
+    "region": "Zimbabwe",
+    "canonicalId": "dish-212",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 213,
+    "submittedName": "Mutakura",
+    "region": "Zimbabwe",
+    "canonicalId": "dish-213",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 214,
+    "submittedName": "Nhopi",
+    "region": "Zimbabwe",
+    "canonicalId": "dish-214",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 215,
+    "submittedName": "Rupiza",
+    "region": "Zimbabwe",
+    "canonicalId": "dish-215",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 216,
+    "submittedName": "Madora",
+    "region": "Zimbabwe",
+    "canonicalId": "dish-216",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      355
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 217,
+    "submittedName": "Matemba",
+    "region": "Zimbabwe",
+    "canonicalId": "dish-217",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      372
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 218,
+    "submittedName": "Bota",
+    "region": "Zimbabwe",
+    "canonicalId": "dish-218",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 219,
+    "submittedName": "Dovi",
+    "region": "Zimbabwe",
+    "canonicalId": "dish-219",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 220,
+    "submittedName": "Nshima",
+    "region": "Zambia",
+    "canonicalId": "dish-220",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      337
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 221,
+    "submittedName": "Ifisashi",
+    "region": "Zambia",
+    "canonicalId": "dish-221",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 222,
+    "submittedName": "Chikanda",
+    "region": "Zambia",
+    "canonicalId": "dish-222",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 223,
+    "submittedName": "Delele",
+    "region": "Zambia",
+    "canonicalId": "dish-223",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 224,
+    "submittedName": "Seswaa",
+    "region": "Botswana",
+    "canonicalId": "dish-224",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 225,
+    "submittedName": "Ting",
+    "region": "Botswana",
+    "canonicalId": "dish-225",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 226,
+    "submittedName": "Bogobe Jwa Lerotse",
+    "region": "Botswana",
+    "canonicalId": "dish-226",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 227,
+    "submittedName": "Serobe",
+    "region": "Botswana",
+    "canonicalId": "dish-227",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 228,
+    "submittedName": "Diphaphata",
+    "region": "Botswana",
+    "canonicalId": "dish-228",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 229,
+    "submittedName": "Dikgobe",
+    "region": "Botswana",
+    "canonicalId": "dish-229",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 230,
+    "submittedName": "Magwinya",
+    "region": "Botswana",
+    "canonicalId": "dish-230",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Magwinya retained as Botswana variant, distinct from submitted South African Vetkoek."
+  },
+  {
+    "sourceRow": 231,
+    "submittedName": "Chotlo",
+    "region": "Botswana",
+    "canonicalId": "dish-231",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 232,
+    "submittedName": "Piri Piri Chicken",
+    "region": "Mozambique",
+    "canonicalId": "dish-232",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 233,
+    "submittedName": "Matapa",
+    "region": "Mozambique",
+    "canonicalId": "dish-233",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 234,
+    "submittedName": "Frango Assado",
+    "region": "Mozambique",
+    "canonicalId": "dish-234",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 235,
+    "submittedName": "Xima",
+    "region": "Mozambique",
+    "canonicalId": "dish-235",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      337
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 236,
+    "submittedName": "Mucapata",
+    "region": "Mozambique",
+    "canonicalId": "dish-236",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 237,
+    "submittedName": "Caril de Amendoim",
+    "region": "Mozambique",
+    "canonicalId": "dish-237",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 238,
+    "submittedName": "Zambezi Bream",
+    "region": "Mozambique",
+    "canonicalId": "dish-238",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 239,
+    "submittedName": "Fumbwa",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-239",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Mfumbwa merged as spelling alias; recipe composition remains unspecified."
+  },
+  {
+    "sourceRow": 240,
+    "submittedName": "Nsaka Madesu",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-240",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 241,
+    "submittedName": "Pondu",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-241",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      103,
+      416
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 242,
+    "submittedName": "Chikwangue",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-242",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 243,
+    "submittedName": "Makayabu",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-243",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 244,
+    "submittedName": "Saka Saka",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-244",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      103,
+      416
+    ],
+    "candidateMatches": [
+      {
+        "id": 103,
+        "name": "Cassava leaves"
+      }
+    ],
+    "note": "Saka Saka may overlap Pondu; retained as a named regional preparation pending recipe comparison."
+  },
+  {
+    "sourceRow": 245,
+    "submittedName": "Kamundele",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-245",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 246,
+    "submittedName": "Dongo-Dongo",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-246",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 247,
+    "submittedName": "Liboke",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-247",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 248,
+    "submittedName": "Moambe Chicken",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-248",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 249,
+    "submittedName": "Mwamba",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-249",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Mwamba is ambiguous; do not infer a chicken or peanut recipe."
+  },
+  {
+    "sourceRow": 250,
+    "submittedName": "Makemba",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-250",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 251,
+    "submittedName": "Loso na Madesu",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-251",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 252,
+    "submittedName": "Madesu",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-252",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 253,
+    "submittedName": "Fumbwa na Madesu",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-253",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 254,
+    "submittedName": "Taba",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-254",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Taba and Ntaba may overlap; meat and preparation need confirmation before merging."
+  },
+  {
+    "sourceRow": 255,
+    "submittedName": "Ndakala",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-255",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 256,
+    "submittedName": "Mboto",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-256",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 257,
+    "submittedName": "Ngolo",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-257",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Ngolo requires identity confirmation; an exact-name photo source described sea snail, which cannot establish the intended regional dish."
+  },
+  {
+    "sourceRow": 258,
+    "submittedName": "Mbinzo",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-258",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 259,
+    "submittedName": "Mitumba",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-259",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Mitumba identity needs confirmation; no food identity inferred."
+  },
+  {
+    "sourceRow": 260,
+    "submittedName": "Ntaba",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-260",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Ntaba and Taba may overlap; retained pending recipe confirmation."
+  },
+  {
+    "sourceRow": 261,
+    "submittedName": "Mayi Ya Pondu",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-261",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 262,
+    "submittedName": "Lituma",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-262",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 263,
+    "submittedName": "Ngai Ngai",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-263",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 264,
+    "submittedName": "Loso Ya Bulayi",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-264",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 265,
+    "submittedName": "Mfumbwa",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-239",
+    "decision": "merged-alias",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Spelling duplicate; original name retained as searchable alias."
+  },
+  {
+    "sourceRow": 266,
+    "submittedName": "Makara",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-266",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 267,
+    "submittedName": "Mikate",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-267",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 268,
+    "submittedName": "Nsoso",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-268",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Nsoso is a broad name; preparation needs confirmation."
+  },
+  {
+    "sourceRow": 269,
+    "submittedName": "Cossa Cossa",
+    "region": "Democratic Republic of Congo (DRC) & Republic of Congo",
+    "canonicalId": "dish-269",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 270,
+    "submittedName": "Achu",
+    "region": "Cameroon",
+    "canonicalId": "dish-270",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 271,
+    "submittedName": "Ndolé",
+    "region": "Cameroon",
+    "canonicalId": "dish-271",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 272,
+    "submittedName": "Poulet DG",
+    "region": "Cameroon",
+    "canonicalId": "dish-272",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 273,
+    "submittedName": "Sangah",
+    "region": "Cameroon",
+    "canonicalId": "dish-273",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 274,
+    "submittedName": "Koki",
+    "region": "Cameroon",
+    "canonicalId": "dish-274",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 275,
+    "submittedName": "Eru",
+    "region": "Cameroon",
+    "canonicalId": "dish-275",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 276,
+    "submittedName": "Kati Kati",
+    "region": "Cameroon",
+    "canonicalId": "dish-276",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 277,
+    "submittedName": "Soya",
+    "region": "Cameroon",
+    "canonicalId": "dish-277",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 278,
+    "submittedName": "Safou",
+    "region": "Cameroon",
+    "canonicalId": "dish-278",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      239
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 279,
+    "submittedName": "Kanda",
+    "region": "Cameroon",
+    "canonicalId": "dish-279",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Kanda can identify different foods; confirm the intended Cameroon dish."
+  },
+  {
+    "sourceRow": 280,
+    "submittedName": "Capitaine Garni",
+    "region": "Cameroon",
+    "canonicalId": "dish-280",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 281,
+    "submittedName": "Fufu Corn",
+    "region": "Cameroon",
+    "canonicalId": "dish-281",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      337
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 282,
+    "submittedName": "Water Fufu",
+    "region": "Cameroon",
+    "canonicalId": "dish-282",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      287
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 283,
+    "submittedName": "Kwacoco",
+    "region": "Cameroon",
+    "canonicalId": "dish-283",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 284,
+    "submittedName": "Ekpang Nkukwo",
+    "region": "Cameroon",
+    "canonicalId": "dish-284",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 285,
+    "submittedName": "Ndole with Plantains",
+    "region": "Cameroon",
+    "canonicalId": "dish-285",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Ndole with Plantains is a composite meal, retained separately from Ndolé."
+  },
+  {
+    "sourceRow": 286,
+    "submittedName": "Beignets (Cameroon)",
+    "region": "Cameroon",
+    "canonicalId": "dish-286",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 287,
+    "submittedName": "Bongo'o Tobi",
+    "region": "Cameroon",
+    "canonicalId": "dish-287",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 288,
+    "submittedName": "Kpem",
+    "region": "Cameroon",
+    "canonicalId": "dish-288",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 289,
+    "submittedName": "Maboke de Poisson",
+    "region": "Cameroon",
+    "canonicalId": "dish-289",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 290,
+    "submittedName": "Calulu",
+    "region": "Angola",
+    "canonicalId": "dish-290",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 291,
+    "submittedName": "Babute",
+    "region": "Angola",
+    "canonicalId": "dish-291",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 292,
+    "submittedName": "Muamba Ngal",
+    "region": "Angola",
+    "canonicalId": "dish-292",
+    "decision": "identity-review",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Muamba Ngal needs spelling/recipe confirmation; no automatic substitution."
+  },
+  {
+    "sourceRow": 293,
+    "submittedName": "Fufu de Milho",
+    "region": "Angola",
+    "canonicalId": "dish-293",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      337
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 294,
+    "submittedName": "Pirão",
+    "region": "Angola",
+    "canonicalId": "dish-294",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 295,
+    "submittedName": "Nyembwe Chicken (Gabon)",
+    "region": "Gabon / Central African Republic",
+    "canonicalId": "dish-295",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 296,
+    "submittedName": "Maboké (CAR)",
+    "region": "Gabon / Central African Republic",
+    "canonicalId": "dish-296",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 297,
+    "submittedName": "Kuku Paka (East African Coast)",
+    "region": "General / Regional Variations",
+    "canonicalId": "dish-297",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "No exact catalogue or alias match accepted; preserved as a regional discovery entry."
+  },
+  {
+    "sourceRow": 298,
+    "submittedName": "Vuswa (Southern Africa)",
+    "region": "General / Regional Variations",
+    "canonicalId": "dish-298",
+    "decision": "discovery-added",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [
+      337
+    ],
+    "candidateMatches": [],
+    "note": "Related ingredient or preparation only; not an exact recipe or nutrition match."
+  },
+  {
+    "sourceRow": 299,
+    "submittedName": "Koshari (North Africa/Middle East)",
+    "region": "General / Regional Variations",
+    "canonicalId": "dish-165",
+    "decision": "merged-alias",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Repeated Koshari entry merged with Egypt entry; original regional label preserved."
+  },
+  {
+    "sourceRow": 300,
+    "submittedName": "Eba (West Africa)",
+    "region": "General / Regional Variations",
+    "canonicalId": "dish-022",
+    "decision": "merged-alias",
+    "existingCatalogueId": null,
+    "relatedCatalogueIds": [],
+    "candidateMatches": [],
+    "note": "Repeated Eba entry merged with Nigeria entry; original regional label preserved."
+  }
+]

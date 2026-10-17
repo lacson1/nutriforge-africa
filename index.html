@@ -749,7 +749,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
 <link rel="stylesheet" href="layout.css?v=41">
-<link rel="stylesheet" href="savourkin-theme.css?v=14">
+<link rel="stylesheet" href="savourkin-theme.css?v=15">
 </head>
 <body>
 
@@ -872,7 +872,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 </section>
 
 <section id="foodBrowser" class="browse-toolbar" aria-label="Browse foods">
-  <div class="browse-heading"><h2>Browse foods</h2>  <div class="brand-dropdown-wrap browse-guide-wrap" id="brandBrowseWrap">
+  <div class="browse-heading"><h2>Browse foods</h2><a class="dish-library-link" href="dish-library.html?v=2">Regional dishes</a>  <div class="brand-dropdown-wrap browse-guide-wrap" id="brandBrowseWrap">
       <button type="button" class="brand-dropdown-trigger" id="brandBrowseBtn" onclick="toggleBrandBrowsePanel(event)" aria-expanded="false" aria-haspopup="true" aria-controls="brandBrowsePanel" title="How browsing &amp; filters work">
         <span>Browse guide</span>
         <svg class="brand-dd-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
@@ -1831,7 +1831,7 @@ function buildAIDrawer(){
 function buildPlateDrawer(){
   return '<div class="plate-premium">' +
     '<div class="plate-intro"><h2>Build your plate.</h2><p>'+safeHtml(currentGoalLabel())+'</p><button type="button" class="ca-btn" onclick="openCommunityStart()">Change goal</button></div>' +
-    '<div class="dish-explorer-controls"><label for="orbitDishSelect">Explore a dish<select id="orbitDishSelect" onchange="selectOrbitDish(this.value)"></select></label><label for="orbitNutrient">Ingredient contributions<select id="orbitNutrient" onchange="skNutrient=this.value;renderDishOrbit(skOrbitParts)"><option value="fiber">Fibre</option><option value="protein">Protein</option><option value="kcal">Energy</option><option value="carbs">Carbohydrate</option><option value="fat">Fat</option></select></label></div><div class="plate-orbit"><div class="plate-stage"><div id="plateVisual" class="plate-visual"></div><p class="plate-visual-caption"></p></div><div id="orbitIngredients" class="orbit-ingredients"></div><div id="orbitDishSummary"></div></div><p id="orbitArithmetic" class="orbit-arithmetic"></p><section class="portion-scale" aria-label="Scale current plate portions"><label for="plateScale">Adjust all portions</label><output id="plateScaleValue" for="plateScale">1×</output><input id="plateScale" type="range" min="0.5" max="3" step="0.25" value="1" oninput="previewPlateScale(this.value)"><p>Multiplier of the displayed ingredient weights, not a daily target or a family-size recommendation.</p><p id="plateScalePreview" role="status" aria-live="polite"></p><button id="plateScaleApply" type="button" class="ca-btn" disabled onclick="applyPlateScale()">Apply portions to plate</button></section>' +
+    '<a class="dish-library-link" href="dish-library.html?v=2">Explore regional dishes →</a><div class="dish-explorer-controls"><label for="orbitDishSelect">Explore a dish<select id="orbitDishSelect" onchange="selectOrbitDish(this.value)"></select></label><label for="orbitNutrient">Ingredient contributions<select id="orbitNutrient" onchange="skNutrient=this.value;renderDishOrbit(skOrbitParts)"><option value="fiber">Fibre</option><option value="protein">Protein</option><option value="kcal">Energy</option><option value="carbs">Carbohydrate</option><option value="fat">Fat</option></select></label></div><div class="plate-orbit"><div class="plate-stage"><div id="plateVisual" class="plate-visual"></div><p class="plate-visual-caption"></p></div><div id="orbitIngredients" class="orbit-ingredients"></div><div id="orbitDishSummary"></div></div><p id="orbitArithmetic" class="orbit-arithmetic"></p><section class="portion-scale" aria-label="Scale current plate portions"><label for="plateScale">Adjust all portions</label><output id="plateScaleValue" for="plateScale">1×</output><input id="plateScale" type="range" min="0.5" max="3" step="0.25" value="1" oninput="previewPlateScale(this.value)"><p>Multiplier of the displayed ingredient weights, not a daily target or a family-size recommendation.</p><p id="plateScalePreview" role="status" aria-live="polite"></p><button id="plateScaleApply" type="button" class="ca-btn" disabled onclick="applyPlateScale()">Apply portions to plate</button></section>' +
     '<div class="plate-main-actions"><button type="button" class="ca-btn" onclick="planPlateJourney()">Plan this plate</button><button type="button" class="ca-btn" onclick="openDrawer(\'meals\')">Meal ideas</button><button type="button" class="ca-btn" onclick="openDrawer(\'swaps\')">⇄ Find a swap</button><button type="button" class="ca-btn" onclick="exploreWelcomeFoods()">+ Add foods</button><button type="button" class="ca-btn" id="logPlateButton" onclick="logPlateToDiary()">Log plate to diary ↗</button></div>' +
     '<div class="plate-section-heading"><h3>On your plate</h3><span id="plateFoodCount">0 foods</span></div>' +
     '<div class="plate-items" id="plateItems">' +

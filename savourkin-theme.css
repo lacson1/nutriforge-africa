@@ -208,3 +208,5 @@ body{font-size:var(--sk-reading-body);line-height:1.6}
  .plate-orbit .dish-nutrients{grid-template-columns:repeat(2,minmax(0,1fr))}
  .plate-orbit .orbit-food:nth-child(n){grid-column:1}
 }
+
+.dish-library-link{display:inline-block;margin:12px 0;font-size:1rem;color:var(--accent-green);font-weight:bold;padding:8px 0}
