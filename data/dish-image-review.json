@@ -648,8 +648,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openverse lists a Commons recipe image for Frejon but the file is no longer on Commons, so its license cannot be verified; not used."
   },
   "dish-038": {
     "id": "dish-038",
@@ -950,7 +950,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows hands mixing the food in a bowl; not a clear finished-dish photo."
+    "reason": "Only openly licensed match (Flickr \"fish yassa\" by dolapo) is a black-and-white photo of a half-eaten bowl; not used."
   },
   "dish-056": {
     "id": "dish-056",
@@ -1520,8 +1520,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-089": {
     "id": "dish-089",
@@ -1591,8 +1591,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Only openly licensed match shows grilled octopus with ugali, not octopus in coconut sauce; not used."
   },
   "dish-093": {
     "id": "dish-093",
@@ -2381,8 +2381,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openverse lists a Commons photo (\"Moroccan Taktouka\") but the file has been deleted from Commons, so its license cannot be verified; not used."
   },
   "dish-139": {
     "id": "dish-139",
@@ -2467,8 +2467,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "included",
-    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+    "disposition": "pending-no-exact-match",
+    "reason": "Earlier stand-in showed Albanian stuffed peppers, not Algerian dolma; removed. Commons and Openverse searches for Algerian dolma found no exact openly licensed photo."
   },
   "dish-144": {
     "id": "dish-144",
@@ -3281,8 +3281,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "included",
-    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+    "disposition": "pending-no-exact-match",
+    "reason": "Earlier stand-in showed Danish frikadeller, not South African frikkadels; removed. Commons and Openverse searches for frikkadel(s) found no exact openly licensed photo."
   },
   "dish-192": {
     "id": "dish-192",
@@ -3385,7 +3385,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: the openly licensed morogo photos show raw or dried leaves, not the cooked dish."
+    "reason": "Openly licensed candidates show dried morogo leaves or a vegetable garden, not the cooked dish; not used."
   },
   "dish-198": {
     "id": "dish-198",
@@ -3729,7 +3729,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 1,
     "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows heaps of dried fish at a market, not a prepared dish."
+    "reason": "Openly licensed candidates show kapenta (a different small fish) or dried fish at market; not used."
   },
   "dish-218": {
     "id": "dish-218",
@@ -4282,8 +4282,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Moambe (palm-nut chicken) photos exist, but the dish identity is unconfirmed and must not be inferred as a chicken recipe; not used."
   },
   "dish-250": {
     "id": "dish-250",

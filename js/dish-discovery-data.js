@@ -1028,7 +1028,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openverse lists a Commons recipe image for Frejon but the file is no longer on Commons, so its license cannot be verified; not used."
   },
   {
     "id": "dish-038",
@@ -1481,7 +1481,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows hands mixing the food in a bowl; not a clear finished-dish photo."
+    "imageReviewNote": "Only openly licensed match (Flickr \"fish yassa\" by dolapo) is a black-and-white photo of a half-eaten bowl; not used."
   },
   {
     "id": "dish-056",
@@ -2376,9 +2376,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-088.jpg",
+      "alt": "Mahamri (coconut-cardamom fried bread) served with a bowl of mbaazi pigeon peas",
+      "author": "Chief kairu",
+      "source": "https://commons.wikimedia.org/wiki/File:Mbaazi_na_Mahamri.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-089",
@@ -2472,7 +2481,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Only openly licensed match shows grilled octopus with ugali, not octopus in coconut sauce; not used."
   },
   {
     "id": "dish-093",
@@ -3665,7 +3674,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Openverse lists a Commons photo (\"Moroccan Taktouka\") but the file has been deleted from Commons, so its license cannot be verified; not used."
   },
   {
     "id": "dish-139",
@@ -3786,18 +3795,9 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "reviewed",
-    "image": {
-      "src": "assets/discovery/dish-143.jpg",
-      "alt": "Peppers and vegetables stuffed with spiced meat (dolma), baked in a dish",
-      "author": "Violetamyftari",
-      "source": "https://commons.wikimedia.org/wiki/File:Speca_te_mbushura_me_mish.JPG",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
-      "reviewed": "2026-10-17"
-    },
-    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
+    "imageStatus": "pending",
+    "image": null,
+    "imageReviewNote": "Earlier stand-in showed Albanian stuffed peppers, not Algerian dolma; removed. Commons and Openverse searches for Algerian dolma found no exact openly licensed photo."
   },
   {
     "id": "dish-144",
@@ -4682,9 +4682,9 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-177.jpg",
-      "alt": "Fried falafel balls; Egyptian ta'meya is made with fava beans",
-      "author": "Popo le Chien",
-      "source": "https://commons.wikimedia.org/wiki/File:Falafels_2.jpg",
+      "alt": "Egyptian ta'meya: flat fried fava-bean patties on a plate",
+      "author": "Losttraveller (Karoleen Lindberg)",
+      "source": "https://commons.wikimedia.org/wiki/File:Tameya_Karoleen_Lindberg.jpg",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
       "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
@@ -5066,18 +5066,9 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "reviewed",
-    "image": {
-      "src": "assets/discovery/dish-191.jpg",
-      "alt": "Fried frikkadel meatballs in a pan",
-      "author": "Kenneth Jorgensen",
-      "source": "https://commons.wikimedia.org/wiki/File:Frikadeller.jpg",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
-      "reviewed": "2026-10-17"
-    },
-    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
+    "imageStatus": "pending",
+    "image": null,
+    "imageReviewNote": "Earlier stand-in showed Danish frikadeller, not South African frikkadels; removed. Commons and Openverse searches for frikkadel(s) found no exact openly licensed photo."
   },
   {
     "id": "dish-192",
@@ -5238,7 +5229,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "Openly licensed candidate reviewed and not used: the openly licensed morogo photos show raw or dried leaves, not the cooked dish."
+    "imageReviewNote": "Openly licensed candidates show dried morogo leaves or a vegetable garden, not the cooked dish; not used."
   },
   {
     "id": "dish-198",
@@ -5739,7 +5730,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows heaps of dried fish at a market, not a prepared dish."
+    "imageReviewNote": "Openly licensed candidates show kapenta (a different small fish) or dried fish at market; not used."
   },
   {
     "id": "dish-218",
@@ -6586,7 +6577,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "Moambe (palm-nut chicken) photos exist, but the dish identity is unconfirmed and must not be inferred as a chicken recipe; not used."
   },
   {
     "id": "dish-250",

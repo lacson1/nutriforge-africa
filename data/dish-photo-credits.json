@@ -1932,9 +1932,9 @@
   },
   "dish-177": {
     "src": "assets/discovery/dish-177.jpg",
-    "alt": "Fried falafel balls; Egyptian ta'meya is made with fava beans",
-    "author": "Popo le Chien",
-    "source": "https://commons.wikimedia.org/wiki/File:Falafels_2.jpg",
+    "alt": "Egyptian ta'meya: flat fried fava-bean patties on a plate",
+    "author": "Losttraveller (Karoleen Lindberg)",
+    "source": "https://commons.wikimedia.org/wiki/File:Tameya_Karoleen_Lindberg.jpg",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
@@ -1958,16 +1958,6 @@
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
     "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY 2.0.",
-    "reviewed": "2026-10-17"
-  },
-  "dish-191": {
-    "src": "assets/discovery/dish-191.jpg",
-    "alt": "Fried frikkadel meatballs in a pan",
-    "author": "Kenneth Jorgensen",
-    "source": "https://commons.wikimedia.org/wiki/File:Frikadeller.jpg",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-    "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
     "reviewed": "2026-10-17"
   },
   "dish-293": {
@@ -2075,16 +2065,6 @@
     "alt": "Rfissa: chicken over shredded msemen in a lentil and fenugreek sauce",
     "author": "Mokhtaroo",
     "source": "https://commons.wikimedia.org/wiki/File:Rfissa_marocaine.jpg",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-    "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
-    "reviewed": "2026-10-17"
-  },
-  "dish-143": {
-    "src": "assets/discovery/dish-143.jpg",
-    "alt": "Peppers and vegetables stuffed with spiced meat (dolma), baked in a dish",
-    "author": "Violetamyftari",
-    "source": "https://commons.wikimedia.org/wiki/File:Speca_te_mbushura_me_mish.JPG",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 3.0.",
@@ -2285,6 +2265,16 @@
     "alt": "White sadza with tsunga greens cooked in dovi (peanut butter)",
     "author": "Shark2025",
     "source": "https://commons.wikimedia.org/wiki/File:White_sadza_and_tsunga_with_dovi.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+    "reviewed": "2026-10-17"
+  },
+  "dish-088": {
+    "src": "assets/discovery/dish-088.jpg",
+    "alt": "Mahamri (coconut-cardamom fried bread) served with a bowl of mbaazi pigeon peas",
+    "author": "Chief kairu",
+    "source": "https://commons.wikimedia.org/wiki/File:Mbaazi_na_Mahamri.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
