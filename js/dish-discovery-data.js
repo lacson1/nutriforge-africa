@@ -18,7 +18,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-001.jpg",
-      "alt": "Nigerian party jollof rice served with chicken pieces",
+      "alt": "Nigerian party jollof rice in a pot, topped with fried chicken pieces",
       "author": "Bint awwal",
       "source": "https://commons.wikimedia.org/wiki/File:Nigerian_party_jollof.jpg",
       "license": "CC BY-SA 4.0",
@@ -144,7 +144,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-007.jpg",
-      "alt": "Nigerian Spicy Nkwobi (cow foot) · example serving",
+      "alt": "Nkwobi: cow foot in thick spiced palm-oil sauce, topped with sliced onion rings and utazi leaves",
       "author": "Agbapulonwu cherish",
       "source": "https://commons.wikimedia.org/wiki/File:Nigerian_Spicy_Nkwobi_(cow_foot).jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/0/06/Nigerian_Spicy_Nkwobi_%28cow_foot%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -230,7 +230,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-011.jpg",
-      "alt": "Ewa agoyin · example serving",
+      "alt": "Ewa agoyin: soft mashed beans in a white dish, with dark pepper sauce alongside",
       "author": "Atimukoh",
       "source": "https://commons.wikimedia.org/wiki/File:Ewa_agoyin.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/6/68/Ewa_agoyin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -261,7 +261,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-012.jpg",
-      "alt": "Akara · example serving",
+      "alt": "Two golden fried akara bean fritters on a white plate, garnished with a red chilli",
       "author": "Atimukoh",
       "source": "https://commons.wikimedia.org/wiki/File:Akara.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/4/45/Akara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -407,7 +407,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-019.jpg",
-      "alt": "Afang soup · example serving",
+      "alt": "Afang soup: dark green shredded-leaf soup in a metal bowl",
       "author": "Ukpong1",
       "source": "https://commons.wikimedia.org/wiki/File:Afang_soup.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/4/49/Afang_soup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -436,7 +436,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-020.jpg",
-      "alt": "Amala · example serving",
+      "alt": "A smooth brown mound of amala on a white plate",
       "author": "secretlondon123",
       "source": "https://commons.wikimedia.org/wiki/File:Amala.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/5/54/Amala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -526,7 +526,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-024.jpg",
-      "alt": "Peppered Snail · example serving",
+      "alt": "Peppered snail: pieces of snail coated in red pepper sauce",
       "author": "Aderiqueza",
       "source": "https://commons.wikimedia.org/wiki/File:Peppered_Snail.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Peppered_Snail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -555,7 +555,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-025.jpg",
-      "alt": "Edikang ikong · example serving",
+      "alt": "Edikang ikong: dark green vegetable soup with pieces of meat, in a red-rimmed bowl",
       "author": "Aderiqueza",
       "source": "https://commons.wikimedia.org/wiki/File:Edikang_ikong.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/0/07/Edikang_ikong.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -1062,19 +1062,9 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "reviewed",
-    "image": {
-      "src": "assets/discovery/dish-052.jpg",
-      "alt": "Kontomire stew · example serving",
-      "author": "daSupremo",
-      "source": "https://commons.wikimedia.org/wiki/File:Kontomire_stew.jpg",
-      "originalFile": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Kontomire_stew.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "changes": "Resized and JPEG-encoded for display; no crop or content edits. Image remains under CC BY-SA 4.0.",
-      "reviewed": "2026-10-17"
-    },
-    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
+    "imageStatus": "pending",
+    "image": null,
+    "imageReviewNote": "Photo removed 2026-10-17 after visual re-review: it shows egusi (melon-seed) soup with cow foot, cow skin and chicken in palm oil, with only flecks of leaves. Kontomire stew is defined by cocoyam leaves, so the photo does not represent this dish."
   },
   {
     "id": "dish-053",
@@ -1372,7 +1362,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-067.jpg",
-      "alt": "Kitfo · example serving",
+      "alt": "Kitfo: seasoned minced beef in a black clay dish, topped with green chilli",
       "author": "Stu Spivack; colour adjustment by ReneeWrites (Commons file history)",
       "source": "https://commons.wikimedia.org/wiki/File:Kitfo.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Kitfo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -1687,19 +1677,9 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "reviewed",
-    "image": {
-      "src": "assets/discovery/dish-083.jpg",
-      "alt": "Githeri · example serving",
-      "author": "Mukuba",
-      "source": "https://commons.wikimedia.org/wiki/File:Githeri.jpg",
-      "originalFile": "https://upload.wikimedia.org/wikipedia/commons/1/11/Githeri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "changes": "Resized and JPEG-encoded for display; no crop or content edits. Image remains under CC BY-SA 4.0.",
-      "reviewed": "2026-10-17"
-    },
-    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
+    "imageStatus": "pending",
+    "image": null,
+    "imageReviewNote": "Photo removed 2026-10-17 after visual re-review: it shows a red-bean, chickpea and kale stew with no visible maize. Githeri is maize and beans boiled together, so the photo does not represent this dish."
   },
   {
     "id": "dish-084",
@@ -1776,7 +1756,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-087.jpg",
-      "alt": "Kachumbari · example serving",
+      "alt": "Kachumbari: chopped tomato, onion and green pepper salad with shredded cabbage on an oval plate",
       "author": "Charles Haynes",
       "source": "https://commons.wikimedia.org/wiki/File:Kachumbari.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/9/96/Kachumbari.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -2797,7 +2777,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-140.jpg",
-      "alt": "Chakhchoukha · example serving",
+      "alt": "Chakhchoukha: torn flatbread pieces in a tomato and meat sauce, topped with herbs, in a patterned bowl",
       "author": "Slothtysloth",
       "source": "https://commons.wikimedia.org/wiki/File:Chakhchoukha.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/9/97/Chakhchoukha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -3113,7 +3093,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-156.jpg",
-      "alt": "Lablabi · example serving",
+      "alt": "Lablabi: chickpea soup with bread pieces and egg in an earthenware bowl",
       "author": "Drmaik",
       "source": "https://commons.wikimedia.org/wiki/File:Lablabi.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Lablabi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -3240,7 +3220,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-163.jpg",
-      "alt": "Bazeen · example serving",
+      "alt": "Bazeen: a dome of barley dough in tomato stew, surrounded by boiled eggs, potatoes and meat",
       "author": "Saudarh2",
       "source": "https://commons.wikimedia.org/wiki/File:Bazeen.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/8/89/Bazeen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -3330,7 +3310,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-167.jpg",
-      "alt": "Om ali · example serving",
+      "alt": "Om ali: baked pastry and milk pudding topped with almonds and pistachios",
       "author": "Mkevy",
       "source": "https://commons.wikimedia.org/wiki/File:Om_ali.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Om_ali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -3705,7 +3685,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-186.jpg",
-      "alt": "Melktert · example serving",
+      "alt": "Melktert: a whole milk tart dusted with cinnamon, on a cooling rack",
       "author": "DimiTalen",
       "source": "https://commons.wikimedia.org/wiki/File:Melktert.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/6/69/Melktert.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -3734,7 +3714,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-187.jpg",
-      "alt": "Malva Pudding · example serving",
+      "alt": "Malva pudding: a close-up of soft, caramelised sponge pudding",
       "author": "Jon Mountjoy",
       "source": "https://commons.wikimedia.org/wiki/File:Malva_Pudding.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Malva_Pudding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -3995,7 +3975,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-200.jpg",
-      "alt": "Phutu · example serving",
+      "alt": "Phutu: crumbly white maize meal in a bowl, with tomato relish on a spoon",
       "author": "Craigfraser",
       "source": "https://commons.wikimedia.org/wiki/File:Phutu.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Phutu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -4043,7 +4023,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-202.jpg",
-      "alt": "Sosaties · example serving",
+      "alt": "Sosaties: meat and pepper skewers served on mashed potato",
       "author": "Anrie",
       "source": "https://commons.wikimedia.org/wiki/File:Sosaties.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/6/69/Sosaties.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -4072,7 +4052,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-203.jpg",
-      "alt": "Koeksisters · example serving",
+      "alt": "Koeksisters: braided, syrup-glazed fried pastries piled together",
       "author": "Arnold Goodway",
       "source": "https://commons.wikimedia.org/wiki/File:Koeksisters.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Koeksisters.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -4434,7 +4414,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-221.jpg",
-      "alt": "Ifisashi · example serving",
+      "alt": "Ifisashi: chopped greens in groundnut sauce in a white bowl",
       "author": "LittleT889",
       "source": "https://commons.wikimedia.org/wiki/File:Ifisashi.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/7/74/Ifisashi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -4908,19 +4888,9 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "reviewed",
-    "image": {
-      "src": "assets/discovery/dish-245.jpg",
-      "alt": "Kamundele · example serving",
-      "author": "Fanny Schertzer",
-      "source": "https://commons.wikimedia.org/wiki/File:Kamundele.jpg",
-      "originalFile": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Kamundele.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "changes": "Resized and JPEG-encoded for display; no crop or content edits. Image remains under CC BY-SA 4.0.",
-      "reviewed": "2026-10-17"
-    },
-    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
+    "imageStatus": "pending",
+    "image": null,
+    "imageReviewNote": "Photo removed 2026-10-17 after visual re-review: it shows sliced beef stir-fried with onions and peppers beside plantain chips and vegetables. Kamundele are skewered, grilled beef brochettes, so the photo does not represent this dish."
   },
   {
     "id": "dish-246",
@@ -5763,7 +5733,7 @@ var SKDishDiscovery = [
     "imageStatus": "reviewed",
     "image": {
       "src": "assets/discovery/dish-290.jpg",
-      "alt": "Calulu · example serving",
+      "alt": "Calulu: greens and fish in orange palm-oil sauce, served with funge",
       "author": "elingunnur",
       "source": "https://commons.wikimedia.org/wiki/File:Calulu.jpg",
       "originalFile": "https://upload.wikimedia.org/wikipedia/commons/5/59/Calulu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
