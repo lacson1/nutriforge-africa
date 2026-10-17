@@ -1,9 +1,9 @@
 /* NutriForge — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-layout-72';
+var CACHE_NAME = 'nutriforge-layout-73';
 var PRECACHE = [
   './dish-library.html?v=2',
   './dish-library.css?v=3',
-  './js/dish-discovery-data.js?v=7',
+  './js/dish-discovery-data.js?v=8',
   './js/dish-discovery.js?v=4',
   './savourkin-theme.css?v=19',
   './js/plate-exploration.js?v=9',

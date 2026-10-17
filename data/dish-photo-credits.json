@@ -2309,5 +2309,25 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "changes": "Captured from the Wikimedia Commons rendering, cropped to the food and resized for display. Adapted image remains under CC BY-SA 4.0.",
     "reviewed": "2026-10-17"
+  },
+  "dish-084": {
+    "src": "assets/discovery/dish-084.jpg",
+    "alt": "Irio (also called mukimo): green mash of potato, maize and greens with beef stew and slaw",
+    "author": "MusomiP",
+    "source": "https://commons.wikimedia.org/wiki/File:Kikuyu_Dish.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+    "reviewed": "2026-10-17"
+  },
+  "dish-089": {
+    "src": "assets/discovery/dish-089.jpg",
+    "alt": "Makange: fried potatoes stir-fried with minced beef, onion and tomato, served with sliced tomato and lemon",
+    "author": "Daudi Mkwela",
+    "source": "https://commons.wikimedia.org/wiki/File:French_Fries_in_African_Style_(Makange).jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+    "reviewed": "2026-10-17"
   }
 }

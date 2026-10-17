@@ -420,7 +420,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-016",
@@ -727,7 +727,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-027",
@@ -1047,7 +1047,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-040",
@@ -2281,9 +2281,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-084.jpg",
+      "alt": "Irio (also called mukimo): green mash of potato, maize and greens with beef stew and slaw",
+      "author": "MusomiP",
+      "source": "https://commons.wikimedia.org/wiki/File:Kikuyu_Dish.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-085",
@@ -2413,9 +2422,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-089.jpg",
+      "alt": "Makange: fried potatoes stir-fried with minced beef, onion and tomato, served with sliced tomato and lemon",
+      "author": "Daudi Mkwela",
+      "source": "https://commons.wikimedia.org/wiki/File:French_Fries_in_African_Style_(Makange).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-090",
@@ -2565,7 +2583,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-096",
@@ -2668,7 +2686,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-100",
@@ -2687,7 +2705,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-101",
@@ -2762,7 +2780,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-104",
@@ -3007,7 +3025,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-113",
@@ -3026,7 +3044,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-114",
@@ -3045,7 +3063,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-115",
@@ -3148,7 +3166,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-119",
@@ -3195,7 +3213,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-121",
@@ -3768,7 +3786,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-142",
@@ -3948,7 +3966,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-149",
@@ -4051,7 +4069,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-153",
@@ -5011,7 +5029,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-189",
@@ -5353,7 +5371,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-202",
@@ -5458,7 +5476,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-206",
@@ -5552,7 +5570,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-210",
@@ -5659,7 +5677,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-214",
@@ -5697,7 +5715,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-216",
@@ -6041,7 +6059,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-229",
@@ -6116,7 +6134,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-232",
@@ -6249,7 +6267,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-237",
@@ -6442,7 +6460,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-244",
@@ -6520,7 +6538,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-247",
@@ -6633,7 +6651,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-252",
@@ -6699,7 +6717,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-255",
@@ -6718,7 +6736,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-256",
@@ -6737,7 +6755,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-257",
@@ -6812,7 +6830,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-260",
@@ -6869,7 +6887,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-263",
@@ -6907,7 +6925,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-266",
@@ -7010,7 +7028,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-270",
@@ -7293,7 +7311,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-281",
@@ -7512,7 +7530,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-289",
@@ -7588,7 +7606,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-292",
@@ -7740,7 +7758,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   {
     "id": "dish-298",
@@ -7761,6 +7779,6 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "imageReviewNote": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   }
 ];

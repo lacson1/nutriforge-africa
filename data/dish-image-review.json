@@ -263,7 +263,7 @@
     "titleSearchAttempted": true,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-016": {
     "id": "dish-016",
@@ -458,7 +458,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-027": {
     "id": "dish-027",
@@ -667,7 +667,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-040": {
     "id": "dish-040",
@@ -1452,8 +1452,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-085": {
     "id": "dish-085",
@@ -1538,8 +1538,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-090": {
     "id": "dish-090",
@@ -1646,7 +1646,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-096": {
     "id": "dish-096",
@@ -1716,7 +1716,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-100": {
     "id": "dish-100",
@@ -1733,7 +1733,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-101": {
     "id": "dish-101",
@@ -1785,7 +1785,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-104": {
     "id": "dish-104",
@@ -1939,7 +1939,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-113": {
     "id": "dish-113",
@@ -1956,7 +1956,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-114": {
     "id": "dish-114",
@@ -1973,7 +1973,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-115": {
     "id": "dish-115",
@@ -2041,7 +2041,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-119": {
     "id": "dish-119",
@@ -2075,7 +2075,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-121": {
     "id": "dish-121",
@@ -2433,7 +2433,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-142": {
     "id": "dish-142",
@@ -2554,7 +2554,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-149": {
     "id": "dish-149",
@@ -2623,7 +2623,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-153": {
     "id": "dish-153",
@@ -3230,7 +3230,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-189": {
     "id": "dish-189",
@@ -3454,7 +3454,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-202": {
     "id": "dish-202",
@@ -3523,7 +3523,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-206": {
     "id": "dish-206",
@@ -3593,7 +3593,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-210": {
     "id": "dish-210",
@@ -3661,7 +3661,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-214": {
     "id": "dish-214",
@@ -3695,7 +3695,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-216": {
     "id": "dish-216",
@@ -3917,7 +3917,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-229": {
     "id": "dish-229",
@@ -3968,7 +3968,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-232": {
     "id": "dish-232",
@@ -4055,7 +4055,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-237": {
     "id": "dish-237",
@@ -4178,7 +4178,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-244": {
     "id": "dish-244",
@@ -4231,7 +4231,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-247": {
     "id": "dish-247",
@@ -4318,7 +4318,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-252": {
     "id": "dish-252",
@@ -4370,7 +4370,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-255": {
     "id": "dish-255",
@@ -4387,7 +4387,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-256": {
     "id": "dish-256",
@@ -4404,7 +4404,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-257": {
     "id": "dish-257",
@@ -4455,7 +4455,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-260": {
     "id": "dish-260",
@@ -4507,7 +4507,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-263": {
     "id": "dish-263",
@@ -4543,7 +4543,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-266": {
     "id": "dish-266",
@@ -4612,7 +4612,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-270": {
     "id": "dish-270",
@@ -4802,7 +4802,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-281": {
     "id": "dish-281",
@@ -4943,7 +4943,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-289": {
     "id": "dish-289",
@@ -4995,7 +4995,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-292": {
     "id": "dish-292",
@@ -5101,7 +5101,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-298": {
     "id": "dish-298",
@@ -5118,6 +5118,6 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), Wikipedia page images and Openverse (Flickr and other CC sources) on 2026-10-17."
   }
 }
