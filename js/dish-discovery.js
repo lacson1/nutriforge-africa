@@ -10,5 +10,6 @@ if(typeof document!=='undefined'){
  var regionSelect=document.getElementById('dishRegion');Array.from(new Set(SKDishDiscovery.flatMap(function(d){return d.regions;}))).sort().forEach(function(r){var o=document.createElement('option');o.value=r;o.textContent=r;regionSelect.appendChild(o);});
  document.getElementById('discoveryFilters').addEventListener('submit',function(e){e.preventDefault();});['dishSearch','dishRegion','dishStatus'].forEach(function(id){document.getElementById(id).addEventListener(id==='dishSearch'?'input':'change',function(){SKDiscovery.page=0;discoveryRender();});});
  document.getElementById('dishReset').onclick=function(){document.getElementById('discoveryFilters').reset();SKDiscovery.page=0;discoveryRender();document.getElementById('dishSearch').focus();};
- ['dishPrev','dishNext'].forEach(function(id){document.getElementById(id).onclick=function(){SKDiscovery.page+=id==='dishPrev'?-1:1;discoveryRender();document.getElementById('dishSearch').focus();};});discoveryRender();
+ ['dishPrev','dishNext'].forEach(function(id){document.getElementById(id).onclick=function(){SKDiscovery.page+=id==='dishPrev'?-1:1;discoveryRender();document.getElementById('dishSearch').focus();};});
+ var initialQuery=new URLSearchParams(location.search).get('q');if(initialQuery)document.getElementById('dishSearch').value=initialQuery;discoveryRender();
 }

@@ -263,7 +263,7 @@
     "titleSearchAttempted": true,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-016": {
     "id": "dish-016",
@@ -458,7 +458,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-027": {
     "id": "dish-027",
@@ -597,8 +597,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-035": {
     "id": "dish-035",
@@ -648,8 +648,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openverse lists a Commons recipe image for Frejon but the file is no longer on Commons, so its license cannot be verified; not used."
   },
   "dish-038": {
     "id": "dish-038",
@@ -667,7 +667,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-040": {
     "id": "dish-040",
@@ -772,8 +772,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-046": {
     "id": "dish-046",
@@ -843,8 +843,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows a person pounding in a yard, not the finished dish."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-050": {
     "id": "dish-050",
@@ -931,8 +931,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: a collage of several dishes rather than a single photo of maafe."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-055": {
     "id": "dish-055",
@@ -950,7 +950,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows hands mixing the food in a bowl; not a clear finished-dish photo."
+    "reason": "Only openly licensed match (Flickr \"fish yassa\" by dolapo) is a black-and-white photo of a half-eaten bowl; not used."
   },
   "dish-056": {
     "id": "dish-056",
@@ -1034,8 +1034,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-061": {
     "id": "dish-061",
@@ -1175,8 +1175,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-069": {
     "id": "dish-069",
@@ -1192,8 +1192,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: the plate is mostly covered by folded injera; firfir is not visible."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-070": {
     "id": "dish-070",
@@ -1296,8 +1296,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: the only openly licensed candidate shows several foods on a mat and does not clearly show kocho."
   },
   "dish-076": {
     "id": "dish-076",
@@ -1452,8 +1452,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-085": {
     "id": "dish-085",
@@ -1469,8 +1469,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: a vendor's face dominates the photo; not a clean dish photo."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-086": {
     "id": "dish-086",
@@ -1520,8 +1520,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-089": {
     "id": "dish-089",
@@ -1538,8 +1538,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-090": {
     "id": "dish-090",
@@ -1591,8 +1591,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Only openly licensed match shows grilled octopus with ugali, not octopus in coconut sauce; not used."
   },
   "dish-093": {
     "id": "dish-093",
@@ -1646,7 +1646,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-096": {
     "id": "dish-096",
@@ -1716,7 +1716,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-100": {
     "id": "dish-100",
@@ -1733,7 +1733,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-101": {
     "id": "dish-101",
@@ -1785,7 +1785,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-104": {
     "id": "dish-104",
@@ -1869,8 +1869,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows raw grasshoppers on a table, not the prepared dish."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-109": {
     "id": "dish-109",
@@ -1939,7 +1939,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-113": {
     "id": "dish-113",
@@ -1956,7 +1956,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-114": {
     "id": "dish-114",
@@ -1973,7 +1973,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-115": {
     "id": "dish-115",
@@ -2023,8 +2023,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-118": {
     "id": "dish-118",
@@ -2041,7 +2041,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-119": {
     "id": "dish-119",
@@ -2075,7 +2075,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-121": {
     "id": "dish-121",
@@ -2194,8 +2194,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-128": {
     "id": "dish-128",
@@ -2279,8 +2279,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-133": {
     "id": "dish-133",
@@ -2381,8 +2381,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openverse lists a Commons photo (\"Moroccan Taktouka\") but the file has been deleted from Commons, so its license cannot be verified; not used."
   },
   "dish-139": {
     "id": "dish-139",
@@ -2433,7 +2433,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-142": {
     "id": "dish-142",
@@ -2467,8 +2467,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-no-exact-match",
+    "reason": "Earlier stand-in showed Albanian stuffed peppers, not Algerian dolma; removed. Commons and Openverse searches for Algerian dolma found no exact openly licensed photo."
   },
   "dish-144": {
     "id": "dish-144",
@@ -2554,7 +2554,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-149": {
     "id": "dish-149",
@@ -2623,7 +2623,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-153": {
     "id": "dish-153",
@@ -2777,8 +2777,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-163": {
     "id": "dish-163",
@@ -2811,8 +2811,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: the openly licensed photo shows Central Asian bichak, a different pastry."
   },
   "dish-165": {
     "id": "dish-165",
@@ -2935,8 +2935,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: the openly licensed photo shows feteer meshaltet; the submitted dish should not be silently substituted."
   },
   "dish-172": {
     "id": "dish-172",
@@ -2987,8 +2987,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: the openly licensed photo shows Indian kheer, not Egyptian roz bel laban."
   },
   "dish-175": {
     "id": "dish-175",
@@ -3021,8 +3021,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-177": {
     "id": "dish-177",
@@ -3038,8 +3038,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-178": {
     "id": "dish-178",
@@ -3056,8 +3056,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows a breakfast table in which the bread is small and not the focus."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-179": {
     "id": "dish-179",
@@ -3159,8 +3159,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows raw meat on the grill, not cooked braaivleis."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-185": {
     "id": "dish-185",
@@ -3230,7 +3230,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-189": {
     "id": "dish-189",
@@ -3282,7 +3282,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "Earlier stand-in showed Danish frikadeller, not South African frikkadels; removed. Commons and Openverse searches for frikkadel(s) found no exact openly licensed photo."
   },
   "dish-192": {
     "id": "dish-192",
@@ -3384,8 +3384,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidates show dried morogo leaves or a vegetable garden, not the cooked dish; not used."
   },
   "dish-198": {
     "id": "dish-198",
@@ -3402,8 +3402,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-199": {
     "id": "dish-199",
@@ -3454,7 +3454,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-202": {
     "id": "dish-202",
@@ -3523,7 +3523,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-206": {
     "id": "dish-206",
@@ -3540,8 +3540,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: the openly licensed snoek braai photo shows only the fire, not the fish."
   },
   "dish-207": {
     "id": "dish-207",
@@ -3575,8 +3575,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows bread rolls inside plastic retail packaging."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-209": {
     "id": "dish-209",
@@ -3593,7 +3593,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-210": {
     "id": "dish-210",
@@ -3661,7 +3661,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-214": {
     "id": "dish-214",
@@ -3678,7 +3678,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows the dish being stirred in a pot during cooking."
+    "reason": "Commons candidate shows the dish being stirred during cooking; the Shona Wikipedia image is American mashed pumpkin, not nhopi; not used."
   },
   "dish-215": {
     "id": "dish-215",
@@ -3695,7 +3695,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-216": {
     "id": "dish-216",
@@ -3711,8 +3711,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-217": {
     "id": "dish-217",
@@ -3729,7 +3729,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 1,
     "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows heaps of dried fish at a market, not a prepared dish."
+    "reason": "Openly licensed candidates show kapenta (a different small fish) or dried fish at market; not used."
   },
   "dish-218": {
     "id": "dish-218",
@@ -3745,8 +3745,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-rejected-candidate",
+    "reason": "The exact-name Commons file (Bota.jpg) shows an unrelated event in Réunion, not Zimbabwean bota porridge; not used."
   },
   "dish-219": {
     "id": "dish-219",
@@ -3762,8 +3762,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows a jar of peanut butter, not a prepared dish."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-220": {
     "id": "dish-220",
@@ -3779,8 +3779,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: three people posing dominate the photo."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-221": {
     "id": "dish-221",
@@ -3917,7 +3917,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-229": {
     "id": "dish-229",
@@ -3968,7 +3968,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-232": {
     "id": "dish-232",
@@ -4002,8 +4002,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-quality-review",
-    "reason": "Candidate visually reviewed but rejected for lighting, clutter, blur, insufficient dish detail or showing preparation rather than a finished serving."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-234": {
     "id": "dish-234",
@@ -4020,8 +4020,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-235": {
     "id": "dish-235",
@@ -4037,8 +4037,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-236": {
     "id": "dish-236",
@@ -4055,7 +4055,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-237": {
     "id": "dish-237",
@@ -4090,8 +4090,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-239": {
     "id": "dish-239",
@@ -4126,8 +4126,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-241": {
     "id": "dish-241",
@@ -4143,8 +4143,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows a growing cassava plant, not cooked pondu."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-242": {
     "id": "dish-242",
@@ -4178,7 +4178,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-244": {
     "id": "dish-244",
@@ -4212,8 +4212,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Photo removed 2026-10-17 after visual re-review: it shows sliced beef stir-fried with onions and peppers beside plantain chips and vegetables. Kamundele are skewered, grilled beef brochettes, so the photo does not represent this dish."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-246": {
     "id": "dish-246",
@@ -4231,7 +4231,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-247": {
     "id": "dish-247",
@@ -4282,8 +4282,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Moambe (palm-nut chicken) photos exist, but the dish identity is unconfirmed and must not be inferred as a chicken recipe; not used."
   },
   "dish-250": {
     "id": "dish-250",
@@ -4318,7 +4318,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-252": {
     "id": "dish-252",
@@ -4352,8 +4352,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-254": {
     "id": "dish-254",
@@ -4370,7 +4370,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-255": {
     "id": "dish-255",
@@ -4387,7 +4387,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-256": {
     "id": "dish-256",
@@ -4404,7 +4404,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-257": {
     "id": "dish-257",
@@ -4420,8 +4420,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Exact-name metadata identified sea snail; conflicts with the intended regional identity, requiring confirmation."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-258": {
     "id": "dish-258",
@@ -4437,8 +4437,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows dried caterpillars beside raw vegetables, not the prepared dish."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-259": {
     "id": "dish-259",
@@ -4455,7 +4455,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-260": {
     "id": "dish-260",
@@ -4471,8 +4471,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-rejected-candidate",
+    "reason": "The exact-name Commons file (Ntaba.jpg) shows a live goat in a field, not the prepared dish; not used."
   },
   "dish-261": {
     "id": "dish-261",
@@ -4507,7 +4507,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-263": {
     "id": "dish-263",
@@ -4543,7 +4543,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-266": {
     "id": "dish-266",
@@ -4559,8 +4559,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-267": {
     "id": "dish-267",
@@ -4576,8 +4576,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-268": {
     "id": "dish-268",
@@ -4593,8 +4593,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-269": {
     "id": "dish-269",
@@ -4612,7 +4612,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-270": {
     "id": "dish-270",
@@ -4680,8 +4680,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-274": {
     "id": "dish-274",
@@ -4749,8 +4749,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: the openly licensed soya photo is a busy street scene where the dish is not visible."
   },
   "dish-278": {
     "id": "dish-278",
@@ -4766,8 +4766,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows a raw cut fruit, not the prepared safou."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-279": {
     "id": "dish-279",
@@ -4783,8 +4783,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-rejected-candidate",
+    "reason": "The exact-name Commons file (Kanda.jpg) is a landscape in India, not the Cameroonian dish; not used."
   },
   "dish-280": {
     "id": "dish-280",
@@ -4802,7 +4802,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-281": {
     "id": "dish-281",
@@ -4907,8 +4907,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-287": {
     "id": "dish-287",
@@ -4943,7 +4943,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-289": {
     "id": "dish-289",
@@ -4995,7 +4995,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-292": {
     "id": "dish-292",
@@ -5030,8 +5030,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-294": {
     "id": "dish-294",
@@ -5047,8 +5047,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Openly licensed candidate reviewed and not used: the only openly licensed candidate shows a Brazilian pirão with banana, not the Angolan dish."
   },
   "dish-295": {
     "id": "dish-295",
@@ -5101,7 +5101,7 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   },
   "dish-298": {
     "id": "dish-298",
@@ -5118,6 +5118,6 @@
     "titleSearchAttempted": false,
     "candidateCount": 0,
     "disposition": "pending-no-exact-match",
-    "reason": "No file found by the documented exact-name JPG lookup. Broader category/alias research remains; this does not prove no licensed image exists."
+    "reason": "No exact openly licensed photo found after searching Wikimedia Commons (exact name, full-text and cuisine categories), English, French, Portuguese and local-language (Swahili, Somali, Kinyarwanda, Lingala, Shona, Setswana, Afrikaans, Arabic) Wikipedia page images, and Openverse (Flickr and other CC sources) on 2026-10-17."
   }
 }
