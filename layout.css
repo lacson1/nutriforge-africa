@@ -638,3 +638,5 @@ body.dark-mode .combo-meal-add{color:var(--body-bg)!important}
 .brand-site-title{display:flex;align-items:center;gap:9px}.app-brand-symbol{display:block;flex:none;background:#f5f3eb;border-radius:7px;padding:2px}
 
 .nutrition-review-notice{padding:14px 18px;border:1px solid #cabd94;background:#faf6e9;color:#453c27;font-size:13px;line-height:1.6;border-radius:8px;margin:14px 0}.nutrition-review-notice a{text-decoration:underline}.nutrition-status{font-size:11px;color:var(--text-secondary)}
+.swap-method summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
+@media(pointer:coarse){.btt{width:44px;height:44px}}

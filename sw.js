@@ -1,15 +1,15 @@
 /* NutriForge — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-layout-65';
+var CACHE_NAME = 'nutriforge-layout-66';
 var PRECACHE = [
   './dish-library.html?v=2',
   './dish-library.css?v=2',
   './js/dish-discovery-data.js?v=2',
-  './js/dish-discovery.js?v=2',
-  './savourkin-theme.css?v=16',
+  './js/dish-discovery.js?v=3',
+  './savourkin-theme.css?v=17',
   './js/plate-exploration.js?v=9',
   './js/dish-images.js?v=1',
   './index.html',
-  './layout.css?v=42',
+  './layout.css?v=43',
   './landing.html',
   './landing-premium.css?v=5',
   './assets/planner-table.jpg',
@@ -35,10 +35,10 @@ var PRECACHE = [
   './js/guide-bridge.js?v=1',
   './js/planner-core.js?v=3',
   './js/shopping-recipes.js?v=1',
-  './js/planner-ui.js?v=49',
+  './js/planner-ui.js?v=50',
   './js/week-builder.js?v=2',
   './js/planner-journey.js?v=1',
-  './js/swaps-ui.js?v=7',
+  './js/swaps-ui.js?v=8',
   './js/welcome.js?v=52',
   './js/scoring-core.js?v=49',
 ];

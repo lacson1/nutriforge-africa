@@ -151,8 +151,8 @@ body{font-size:var(--sk-reading-body);line-height:1.6}
 @container planner-reading (max-width:20rem){.planner-week-nav{display:grid;grid-template-columns:1fr 1fr}.planner-week-nav label{grid-column:1/-1;grid-row:1}.planner-week-nav button{grid-row:2}.weekly-planner .planner-week-nav input{width:100%}.planner-slot-actions .ca-btn{flex:1 1 auto}}
 
 /* Close by the panel's own width, including expanded Plate and Planner panels. */
-.drawer{right:0;transform:translateX(100%);visibility:hidden;pointer-events:none;transition:transform .25s ease,visibility .25s}
-.drawer.open{right:0;transform:translateX(0);visibility:visible;pointer-events:auto}
+.drawer{right:0;transform:translateX(100%);visibility:hidden;pointer-events:none;transition:transform .25s ease,visibility 0s linear .25s}
+.drawer.open{right:0;transform:translateX(0);visibility:visible;pointer-events:auto;transition:transform .25s ease,visibility 0s}
 .drawer .drawer-header{flex-shrink:0}.drawer .drawer-close{opacity:1;flex-shrink:0;border:1px solid #745735;min-width:48px;min-height:48px;color:#fdfbf7;background:#261e1c}
 .drawer .drawer-close:focus-visible{outline-color:#e0af70!important}.drawer .drawer-close:hover{background:#3c3028}
 
