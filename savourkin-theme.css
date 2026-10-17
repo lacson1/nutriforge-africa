@@ -210,3 +210,5 @@ body{font-size:var(--sk-reading-body);line-height:1.6}
 }
 
 .dish-library-link{display:inline-block;margin:12px 0;font-size:1rem;color:var(--accent-green);font-weight:bold;padding:8px 0}
+.drawer-review-notice{padding:0 16px}.drawer-review-notice summary{list-style:none;min-height:44px;display:flex;align-items:center;flex-wrap:wrap;gap:4px;cursor:pointer}.drawer-review-notice summary::-webkit-details-marker{display:none}.drawer-review-notice .review-notice-more{color:var(--accent-green);text-decoration:underline;text-underline-offset:3px}.drawer-review-notice[open] .review-notice-more{display:none}.drawer-review-notice p{margin:0 0 14px}
+#proToolsBtn{display:flex!important;justify-content:space-between;align-items:center}#proToolsBtn::after{content:'▸';opacity:.6}#proToolsBtn[aria-pressed=true]::after{content:'▾'}.pro-tools-group[hidden]{display:none}.pro-tools-group button{padding-left:28px!important}

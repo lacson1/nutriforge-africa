@@ -897,8 +897,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "included",
-    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Photo removed 2026-10-17 after visual re-review: it shows egusi (melon-seed) soup with cow foot, cow skin and chicken in palm oil, with only flecks of leaves. Kontomire stew is defined by cocoyam leaves, so the photo does not represent this dish."
   },
   "dish-053": {
     "id": "dish-053",
@@ -1435,8 +1435,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "included",
-    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Photo removed 2026-10-17 after visual re-review: it shows a red-bean, chickpea and kale stew with no visible maize. Githeri is maize and beans boiled together, so the photo does not represent this dish."
   },
   "dish-084": {
     "id": "dish-084",
@@ -4212,8 +4212,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "included",
-    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
+    "disposition": "pending-rejected-candidate",
+    "reason": "Photo removed 2026-10-17 after visual re-review: it shows sliced beef stir-fried with onions and peppers beside plantain chips and vegetables. Kamundele are skewered, grilled beef brochettes, so the photo does not represent this dish."
   },
   "dish-246": {
     "id": "dish-246",
