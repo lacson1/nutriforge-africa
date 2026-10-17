@@ -15,6 +15,8 @@ function toggleWelcome(){
 function initWelcome(){
   try{if(localStorage.getItem('nf_welcome_collapsed')==='1')toggleWelcome()}catch(e){}
   updateWelcome();
+  initJourneyMeasurement();
+  if(new URLSearchParams(location.search).get("start")==="planner")setTimeout(previewPlannerWeek,0);
 }
 function changeWelcomePortion(index,delta){
   var part=welcomeParts[index];if(!part)return;
@@ -35,7 +37,7 @@ function addWelcomePlate(){
 function updateWelcome(){
   var visual=document.getElementById('welcomePlateVisual');if(!visual)return;
   var ids=Object.keys(plateMap),count=ids.length;
-  document.getElementById('welcomeStatus').textContent=count?'Your plate has '+count+' food'+(count===1?'':'s')+'. Pick up where you left off.':'Your next meal starts here.';
+  document.getElementById('welcomeStatus').textContent=count?'Your plate has '+count+' food'+(count===1?'':'s')+'. Pick up where you left off.':'Your week starts with familiar food.';
   document.getElementById('welcomePlateAction').innerHTML=(count?'Continue my plate':'Build my plate')+' <span aria-hidden="true">→</span>';
   var colors=['#82a27c','#dcb562','#51a7a3'];
   var names=['Brown rice','Cowpeas','Tomatoes'];

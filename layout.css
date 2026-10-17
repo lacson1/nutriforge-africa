@@ -597,3 +597,16 @@ body.has-plate-tray .card button{scroll-margin-top:90px;scroll-margin-bottom:130
 .combo-week-builder{border:1px solid var(--card-border);padding:16px;border-radius:12px;margin:18px 0}.combo-week-builder>summary{cursor:pointer;font-weight:600;font-size:14px}.combo-week-day{border-top:1px solid var(--card-border);padding:12px 0}.combo-week-day h4{margin:8px 0}.combo-week-slot{display:grid;grid-template-columns:1fr 100px;gap:8px;margin:12px 0}.combo-week-slot label{text-transform:capitalize;grid-column:1/-1;font-size:12px}.combo-week-slot select{min-width:0;width:100%;padding:10px 6px;color:var(--text-primary);background:var(--surface);border:1px solid var(--card-border);border-radius:6px;font:inherit;font-size:12px}.combo-week-slot small{grid-column:1/-1;font-size:11px;color:var(--text-secondary)}.combo-week-builder .swap-action{white-space:normal;line-height:1.5}
 .shopping-family{display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:13px}.shopping-family input{width:90px;padding:10px;border:1px solid var(--card-border);border-radius:8px;background:var(--surface);color:var(--text-primary)}.shopping-source{margin:14px 0;font-size:12px;line-height:1.6}.shopping-source summary{cursor:pointer}.shopping-items li b{white-space:nowrap}
 .weekly-planner .shopping-family{display:flex;margin:12px 0}.weekly-planner .shopping-family input{width:90px}.weekly-planner .shopping-mode{display:flex;align-items:center;gap:10px;margin:14px 0}.weekly-planner .shopping-mode input{width:20px;height:20px;flex-shrink:0}
+
+/* Planner-first journey; existing tools remain available. */
+.planner-journey{list-style:none;padding:0;margin:1.4rem 0;display:grid;gap:.85rem}
+.planner-journey li{display:grid;gap:.2rem}.planner-journey span{font-size:.9rem;color:var(--muted,#64746c)}
+.planner-save-disclosure,.draft-shopping,.journey-measurement{padding:1rem;border:1px solid var(--border,#cdd8ce);border-radius:12px;margin:1rem 0;line-height:1.55}
+.draft-shopping input{display:block;width:100%;max-width:150px;padding:12px;margin:8px 0;border:1px solid var(--border,#cdd8ce);border-radius:8px;background:var(--bg,#fff);color:inherit}
+.draft-shopping summary,.journey-measurement summary{cursor:pointer;padding:10px 0;font-weight:600}
+.draft-shopping-list{list-style:none;padding:0}.draft-shopping-list li{display:flex;justify-content:space-between;gap:1rem;padding:.65rem 0;border-bottom:1px solid var(--border,#cdd8ce)}
+.draft-shopping-list small{display:block;color:var(--muted,#64746c)}.draft-shopping-list b{white-space:nowrap}.journey-measurement{font-size:.85rem}
+@media(max-width:640px){.welcome h2{font-size:2rem}.planner-journey{gap:.6rem}.draft-shopping-list li{font-size:.9rem}}
+.welcome-copy .welcome-footnote{font-size:12px;line-height:1.6;color:var(--text-secondary);margin:12px 0}
+.welcome-copy .planner-journey{grid-template-columns:repeat(3,minmax(0,1fr));font-size:13px}.welcome-copy .planner-journey span{font-size:12px}
+@media(max-width:640px){.welcome-copy .planner-journey{grid-template-columns:1fr}}

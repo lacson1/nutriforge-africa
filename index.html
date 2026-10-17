@@ -747,7 +747,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(2){animation-delay:.2s}
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
-<link rel="stylesheet" href="layout.css?v=37">
+<link rel="stylesheet" href="layout.css?v=38">
 </head>
 <body>
 
@@ -821,9 +821,9 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5"/></svg>
       Plate
     </button>
-    <button class="mnav-btn" onclick="openDrawer('diary');setMobileTab(this)">
+    <button class="mnav-btn" onclick="openDrawer('planner');setMobileTab(this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 2v4M16 2v4M4 10h16M8 14h3M8 17h6"/></svg>
-      Diary
+      Planner
     </button>
     <button class="mnav-btn" onclick="openDrawer('combos');setMobileTab(this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
@@ -845,16 +845,17 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
   <div class="welcome-summary"><p id="welcomeStatus">Your next meal starts here.</p><button type="button" id="welcomeToggle" aria-expanded="true" aria-controls="welcomeBody" onclick="toggleWelcome()">Hide welcome</button></div>
   <div class="welcome-body" id="welcomeBody">
     <div class="welcome-copy">
-      <h2 id="welcomeTitle">Eat well. Start with your plate.</h2>
-      <p class="welcome-lead">Familiar foods. Clear nutrition. A plan that fits your week.</p>
-      <div class="welcome-actions"><button type="button" class="welcome-primary" onclick="openCommunityStart()">Choose a health goal</button><button type="button" class="welcome-secondary" id="welcomePlateAction" onclick="openDrawer('plate')">Build my plate <span aria-hidden="true">→</span></button></div>
-      <div class="welcome-paths" aria-label="More ways to start">
-        <button type="button" onclick="openDrawer('planner')">Weekly planner <span aria-hidden="true">↗</span></button>
+      <h2 id="welcomeTitle">Familiar meals. A week made easier.</h2>
+      <p class="welcome-lead">Plan a week of familiar African meals for your household. Adapt the portions, reuse meals and bring everything into one shopping list.</p>
+      <div class="welcome-actions"><button type="button" class="welcome-primary" onclick="previewPlannerWeek()">Preview my week</button><button type="button" class="welcome-secondary" id="welcomePlateAction" onclick="openDrawer('plate')">Build my plate <span aria-hidden="true">→</span></button></div>
+      <p class="welcome-footnote">Try Plate and swaps freely. No registration or payment needed.</p><div class="welcome-paths" aria-label="More ways to start">
+        <button type="button" onclick="openDrawer('planner')">My saved weeks <span aria-hidden="true">↗</span></button><button type="button" onclick="openCommunityStart()">Health goals</button>
         <button type="button" onclick="exploreWelcomeFoods()">Explore foods <span aria-hidden="true">↓</span></button>
       </div>
+      <ol class="planner-journey"><li><b>1 · Make it yours</b><span>Start with a plate or meal ideas.</span></li><li><b>2 · Shape your week</b><span>Change meals and repeat favourites.</span></li><li><b>3 · Shop together</b><span>One list, scaled for your household.</span></li></ol><p class="welcome-footnote">Choose meals to suit your time and budget. Prices and cooking times are not estimated.</p>
     </div>
     <div class="welcome-demo">
-      <div class="welcome-demo-heading"><h3>A little inspiration</h3><span>EXAMPLE PLATE</span></div>
+      <div class="welcome-demo-heading"><h3>Start with one good plate</h3><span>EXAMPLE PLATE</span></div>
       <div class="welcome-preview"><div id="welcomePlateVisual" class="welcome-plate" role="img"></div><div><p class="welcome-food-names">Brown rice<br>Cowpeas<br>Tomatoes</p><p class="welcome-preview-note">Everyday foods, brought together.</p></div></div>
       <div id="welcomeNutrition" class="welcome-nutrition" aria-live="polite" aria-atomic="true"></div>
       <details class="welcome-customize"><summary>Make this plate yours <span aria-hidden="true">+</span></summary>
@@ -1172,13 +1173,14 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <script src="js/foods-data.js?v=13"></script>
 <script src="js/search-core.js?v=12"></script>
 <script src="js/filter-core.js?v=13"></script>
-<script src="js/welcome.js?v=17"></script>
+<script src="js/welcome.js?v=18"></script>
 <script src="js/meals-core.js"></script>
 <script src="js/combinations.js?v=4"></script>
 <script src="js/planner-core.js?v=3"></script>
 <script src="js/shopping-recipes.js?v=1"></script>
-<script src="js/planner-ui.js?v=7"></script>
-<script src="js/week-builder.js?v=1"></script>
+<script src="js/planner-ui.js?v=8"></script>
+<script src="js/week-builder.js?v=2"></script>
+<script src="js/planner-journey.js?v=1"></script>
 <script src="js/guide-bridge.js?v=1"></script>
 <script src="js/swaps-core.js?v=5"></script>
 <script src="js/swaps-ui.js?v=7"></script>
@@ -2152,7 +2154,7 @@ function buildPlateDrawer(){
   return '<div class="plate-premium">' +
     '<div class="plate-intro"><h2>Build your plate.</h2><p>'+safeHtml(currentGoalLabel())+'</p><button type="button" class="ca-btn" onclick="openCommunityStart()">Change goal</button></div>' +
     '<div class="plate-stage"><div id="plateVisual" class="plate-visual"></div><p class="plate-visual-caption">Food proportions by weight</p></div>' +
-    '<div class="plate-main-actions"><button type="button" class="ca-btn" onclick="openDrawer(\'planner\')">Plan this plate</button><button type="button" class="ca-btn" onclick="openDrawer(\'meals\')">Meal ideas</button><button type="button" class="ca-btn" onclick="openDrawer(\'swaps\')">⇄ Find a swap</button><button type="button" class="ca-btn" onclick="exploreWelcomeFoods()">+ Add foods</button><button type="button" class="ca-btn" id="logPlateButton" onclick="logPlateToDiary()">Log plate to diary ↗</button></div>' +
+    '<div class="plate-main-actions"><button type="button" class="ca-btn" onclick="planPlateJourney()">Plan this plate</button><button type="button" class="ca-btn" onclick="openDrawer(\'meals\')">Meal ideas</button><button type="button" class="ca-btn" onclick="openDrawer(\'swaps\')">⇄ Find a swap</button><button type="button" class="ca-btn" onclick="exploreWelcomeFoods()">+ Add foods</button><button type="button" class="ca-btn" id="logPlateButton" onclick="logPlateToDiary()">Log plate to diary ↗</button></div>' +
     '<div class="plate-section-heading"><h3>On your plate</h3><span id="plateFoodCount">0 foods</span></div>' +
     '<div class="plate-items" id="plateItems">' +
     '<div class="plate-empty" id="plateEmptyHint"><div class="plate-empty-title">No foods yet</div>Tap + on a card (expand on mobile if needed).</div></div>' +
@@ -3958,7 +3960,7 @@ function buildDensityChart(){
   wrap.addEventListener('click',function(e){var circle=e.target.closest('circle');if(circle&&circle.dataset.id){closeDrawer();setTimeout(function(){var el=document.getElementById('c'+circle.dataset.id);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});if(!el.classList.contains('open'))el.click()}},200)}});
 }
 
-// ── FULL BACKUP (JSON) — logic in ./js/backup-core.mjs ──
+// ── FULL BACKUP (JSON) — logic in ./js/backup-core.mjs?v=2 ──
 function nfBackupFilename(){
   var d=new Date();
   function pad(n){return n<10?'0'+n:''+n}
@@ -3969,7 +3971,7 @@ function exportFullDataBackup(){
   var core=window.NFBackupCore;
   if(!core||typeof core.buildBackupDocument!=='function'){alert('Backup module is still loading — try again in a moment.');return}
   try{
-    var doc=core.buildBackupDocument(function(k){try{return localStorage.getItem(k)}catch(e){return null}});
+    var doc=core.buildBackupDocument(function(k){try{return localStorage.getItem(k)}catch(e){return null}}, {}, Object.keys(localStorage));
     var blob=new Blob([JSON.stringify(doc,null,2)],{type:'application/json'});
     var url=URL.createObjectURL(blob);
     var a=document.createElement('a');a.href=url;a.download=nfBackupFilename();
@@ -3992,7 +3994,7 @@ function importFullDataBackupPick(){
         if(!core||typeof core.validateBackupDocument!=='function'||typeof core.applyBackupKeys!=='function'){alert('Backup module not ready.');return}
         if(!core.validateBackupDocument(doc)){alert('This file is not a NutriForge backup (unrecognised format).');return}
         if(!confirm('Replace all NutriForge data in this browser with this backup? This overwrites diary, profiles, favourites, plate, chat, and related settings. You cannot undo it.'))return;
-        core.applyBackupKeys(doc.keys,function(k,v){try{localStorage.setItem(k,v)}catch(e2){}},function(k){try{localStorage.removeItem(k)}catch(e3){}},{mode:'replace'});
+        core.applyBackupKeys(doc.keys,function(k,v){try{localStorage.setItem(k,v)}catch(e2){}},function(k){try{localStorage.removeItem(k)}catch(e3){}},{mode:'replace',availableKeys:Object.keys(localStorage)});
         location.reload();
       }catch(err){alert('Could not restore: '+(err&&err.message?err.message:String(err)))}
     };
@@ -4312,7 +4314,7 @@ if('serviceWorker' in navigator){
 }
 </script>
 <script type="module">
-import * as NFBackupCore from './js/backup-core.mjs';
+import * as NFBackupCore from './js/backup-core.mjs?v=2';
 window.NFBackupCore = NFBackupCore;
 </script>
 </body>

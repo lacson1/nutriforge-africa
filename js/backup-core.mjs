@@ -24,9 +24,13 @@ export const NF_BACKUP_KEYS = [
  * @param {(key: string) => string | null} getItem
  * @returns {Record<string, string>}
  */
-export function collectBackupKeys(getItem) {
+export function isBackupKey(key) {
+  return NF_BACKUP_KEYS.includes(key) || /^nf_weekly_plan_[A-Za-z0-9_-]+$/.test(key) || /^nf_shopping_[A-Za-z0-9_-]+_\d{4}-\d{2}-\d{2}(?:_options)?$/.test(key);
+}
+
+export function collectBackupKeys(getItem, availableKeys = []) {
   const keys = {};
-  for (const k of NF_BACKUP_KEYS) {
+  for (const k of new Set([...NF_BACKUP_KEYS, ...availableKeys.filter(isBackupKey)])) {
     let v;
     try {
       v = getItem(k);
@@ -42,13 +46,13 @@ export function collectBackupKeys(getItem) {
  * @param {(key: string) => string | null} getItem
  * @param {Record<string, unknown>} [meta]
  */
-export function buildBackupDocument(getItem, meta = {}) {
+export function buildBackupDocument(getItem, meta = {}, availableKeys = []) {
   return {
     schema: NF_BACKUP_SCHEMA,
     version: NF_BACKUP_VERSION,
     exportedAt: new Date().toISOString(),
     app: 'nutriforge-africa',
-    keys: collectBackupKeys(getItem),
+    keys: collectBackupKeys(getItem, availableKeys),
     ...meta,
   };
 }
@@ -69,7 +73,7 @@ export function validateBackupDocument(doc) {
 export function applyBackupKeys(keysPayload, setItem, removeItem, opts = {}) {
   const mode = opts.mode === 'merge' ? 'merge' : 'replace';
   if (mode === 'replace') {
-    for (const k of NF_BACKUP_KEYS) {
+    for (const k of new Set([...NF_BACKUP_KEYS, ...(opts.availableKeys || []).filter(isBackupKey)])) {
       try {
         removeItem(k);
       } catch {
@@ -78,7 +82,7 @@ export function applyBackupKeys(keysPayload, setItem, removeItem, opts = {}) {
     }
   }
   for (const [k, val] of Object.entries(keysPayload)) {
-    if (!NF_BACKUP_KEYS.includes(k)) continue;
+    if (!isBackupKey(k)) continue;
     if (typeof val !== 'string') continue;
     try {
       setItem(k, val);

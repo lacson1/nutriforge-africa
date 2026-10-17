@@ -85,3 +85,9 @@ describe('backup-core', () => {
     expect(mem.snapshot().nf_diary).toBe('{"y":[]}');
   });
 });
+
+it('backs up and restores household plans without usage counts or unrelated keys',()=>{
+ const mem=memoryStore({nf_weekly_plan_personal:'{"meals":[]}',nf_shopping_personal_2026_ignored:'no', 'nf_shopping_personal_2026-10-12_options':'{"family":4}',nf_journey_metrics:'private-local',other:'untouched'});
+ const doc=buildBackupDocument(mem.getItem,{},Object.keys(mem.snapshot()));expect(doc.keys.nf_weekly_plan_personal).toBe('{"meals":[]}');expect(doc.keys['nf_shopping_personal_2026-10-12_options']).toBe('{"family":4}');expect(doc.keys.nf_journey_metrics).toBeUndefined();
+ const target=memoryStore({nf_weekly_plan_old:'{}',other:'untouched'});applyBackupKeys(doc.keys,target.setItem,target.removeItem,{availableKeys:Object.keys(target.snapshot())});expect(target.snapshot().nf_weekly_plan_old).toBeUndefined();expect(target.snapshot().nf_weekly_plan_personal).toBe('{"meals":[]}');expect(target.snapshot().other).toBe('untouched');
+});
