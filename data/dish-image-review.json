@@ -1469,8 +1469,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: a vendor's face dominates the photo; not a clean dish photo."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-086": {
     "id": "dish-086",
@@ -1869,8 +1869,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 0,
-    "disposition": "pending-rejected-candidate",
-    "reason": "Openly licensed candidate reviewed and not used: shows raw grasshoppers on a table, not the prepared dish."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-109": {
     "id": "dish-109",
@@ -3745,8 +3745,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-rejected-candidate",
+    "reason": "The exact-name Commons file (Bota.jpg) shows an unrelated event in Réunion, not Zimbabwean bota porridge; not used."
   },
   "dish-219": {
     "id": "dish-219",
@@ -4471,8 +4471,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-rejected-candidate",
+    "reason": "The exact-name Commons file (Ntaba.jpg) shows a live goat in a field, not the prepared dish; not used."
   },
   "dish-261": {
     "id": "dish-261",
@@ -4559,8 +4559,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "included",
+    "reason": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   "dish-267": {
     "id": "dish-267",
@@ -4783,8 +4783,8 @@
     },
     "titleSearchAttempted": false,
     "candidateCount": 1,
-    "disposition": "pending-candidate-review",
-    "reason": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "disposition": "pending-rejected-candidate",
+    "reason": "The exact-name Commons file (Kanda.jpg) is a landscape in India, not the Cameroonian dish; not used."
   },
   "dish-280": {
     "id": "dish-280",

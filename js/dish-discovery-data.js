@@ -2300,9 +2300,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Openly licensed candidate reviewed and not used: a vendor's face dominates the photo; not a clean dish photo."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-085.jpg",
+      "alt": "Grilled mutura sausages on a street-vendor tray in Kenya",
+      "author": "Leemwangi29",
+      "source": "https://commons.wikimedia.org/wiki/File:Mutura.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering, cropped to the food and resized for display. Adapted image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-086",
@@ -2884,9 +2893,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Openly licensed candidate reviewed and not used: shows raw grasshoppers on a table, not the prepared dish."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-108.jpg",
+      "alt": "A bowl of fried nsenene grasshoppers in Uganda",
+      "author": "B722N",
+      "source": "https://commons.wikimedia.org/wiki/File:Fried_Grasshoppers_in_Uganda.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering and resized for display; no content edits. Image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-109",
@@ -5749,7 +5767,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageReviewNote": "The exact-name Commons file (Bota.jpg) shows an unrelated event in Réunion, not Zimbabwean bota porridge; not used."
   },
   {
     "id": "dish-219",
@@ -6813,7 +6831,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageReviewNote": "The exact-name Commons file (Ntaba.jpg) shows a live goat in a field, not the prepared dish; not used."
   },
   {
     "id": "dish-261",
@@ -6906,9 +6924,18 @@ var SKDishDiscovery = [
     "identityStatus": "submitted",
     "reviewNote": "",
     "nutritionStatus": "pending",
-    "imageStatus": "pending",
-    "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageStatus": "reviewed",
+    "image": {
+      "src": "assets/discovery/dish-266.jpg",
+      "alt": "Makara fried dough balls in a plastic bucket",
+      "author": "Yowan christo",
+      "source": "https://commons.wikimedia.org/wiki/File:Makara.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Captured from the Wikimedia Commons rendering, cropped to the food and resized for display. Adapted image remains under CC BY-SA 4.0.",
+      "reviewed": "2026-10-17"
+    },
+    "imageReviewNote": "Visually reviewed matching serving photo; licensed asset included with attribution."
   },
   {
     "id": "dish-267",
@@ -7247,7 +7274,7 @@ var SKDishDiscovery = [
     "nutritionStatus": "pending",
     "imageStatus": "pending",
     "image": null,
-    "imageReviewNote": "Exact-name candidates exist, but identity/region/visual quality is not approved; no automatic filename-based image assignment."
+    "imageReviewNote": "The exact-name Commons file (Kanda.jpg) is a landscape in India, not the Cameroonian dish; not used."
   },
   {
     "id": "dish-280",
