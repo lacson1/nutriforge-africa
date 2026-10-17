@@ -34,3 +34,6 @@ Verified desktop and mobile first view, no horizontal overflow, image loading, n
 
 ## Typography and interaction refinement
 Kept the accepted image and split layout. Refined responsive headline size/leading, increased supporting-copy legibility, strengthened heading/body/label separation, added a warm terracotta primary CTA and subtle arrow/pressed feedback. Reviewed the installed GSAP guidance; CSS transitions are sufficient here, so no animation library or dependency was added. Reduced-motion rules remove decorative travel and entrance effects. Weekly preview now uses stronger day headings, larger controls, full-width mobile meal selectors and distinct primary/secondary draft actions. Removed the visible “Food illustration” production label at the user's request; asset provenance remains in this document. Desktop/mobile CTAs and console checks passed; no horizontal planner overflow. No functionality or data changes.
+
+## Savourkin preview branding
+User-approved name Savourkin and tagline “Familiar food. Your way.” now appear on landing/app/guide surfaces. Original table/food symbol replaces the SK initials following same-category screening. See BRAND-SCREENING.md for limitations. Favicon and manifest use the same vector identity. Local storage keys, backup schema, package name, original deployment domains and saved data remain unchanged.

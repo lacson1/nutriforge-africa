@@ -632,3 +632,4 @@ body.has-plate-tray .card button{scroll-margin-top:90px;scroll-margin-bottom:130
 .combo-week-builder>.ca-btn:first-of-type{color:var(--card-bg)}
 .weekly-planner :is(input,select,button):focus-visible{outline:2px solid var(--accent-green,#38694b);outline-offset:3px}
 @media(max-width:640px){.weekly-planner input:not([type=checkbox]),.weekly-planner select{font-size:16px}}
+.brand-site-title{display:flex;align-items:center;gap:9px}.app-brand-symbol{display:block;flex:none;background:#f5f3eb;border-radius:7px;padding:2px}

@@ -23,3 +23,6 @@ h3{font-size:19px;line-height:1.35;font-weight:600;margin-bottom:10px}.steps p{f
 .secondary:hover span{transform:translateX(3px)}.secondary:hover{color:var(--ink);border-color:var(--accent)}
 .nav-open:hover{background:#ece9dd;border-color:#8e9a88}.steps li>span{color:#a94329}
 @media(prefers-reduced-motion:reduce){.primary:hover,.primary:active,.primary span,.secondary span,.nav-open span,.text-link span{transform:none!important}}
+.wordmark .brand-symbol{width:36px;height:36px;display:block}.wordmark{font-family:'Instrument Serif',Georgia,serif;font-size:32px;letter-spacing:-.8px;font-weight:400}.footer-brand{font-size:26px}@media(max-width:640px){.wordmark{font-size:28px}.wordmark .brand-symbol{width:30px;height:30px}.footer-brand{font-size:24px}}
+
+.wordmark{font-family:Georgia,serif;font-size:30px}@media(max-width:640px){.wordmark{font-size:25px}}

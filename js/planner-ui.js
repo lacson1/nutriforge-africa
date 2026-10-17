@@ -53,7 +53,7 @@ function togglePlannerShopping(id,checked){
 }
 function downloadPlannerShopping(){
   var items=plannerShoppingRows(),checks=plannerShoppingChecks();if(!items.length)return;
-  var week=plannerWeek(plannerAnchor),text='NutriForge shopping list — '+plannerShoppingOptions().family+' people\n'+week[0]+' to '+week[6]+'\n\n'+items.map(function(item){return (plannerShoppingChecked(item,checks)?'[x] ':'[ ] ')+item.name+' — '+item.grams+' g ('+item.kind+')';}).join('\n')+'\n\nRaw estimates use FAO recipe observations and cooking yields; edible weights exclude peels and bones. Unsupported dishes are flagged as prepared weights. Tap water excluded. Source: https://www.fao.org/fileadmin/user_upload/faoweb/2020/WAFCT_2019.xlsx\n';
+  var week=plannerWeek(plannerAnchor),text='Savourkin shopping list — '+plannerShoppingOptions().family+' people\n'+week[0]+' to '+week[6]+'\n\n'+items.map(function(item){return (plannerShoppingChecked(item,checks)?'[x] ':'[ ] ')+item.name+' — '+item.grams+' g ('+item.kind+')';}).join('\n')+'\n\nRaw estimates use FAO recipe observations and cooking yields; edible weights exclude peels and bones. Unsupported dishes are flagged as prepared weights. Tap water excluded. Source: https://www.fao.org/fileadmin/user_upload/faoweb/2020/WAFCT_2019.xlsx\n';
   var url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'})),link=document.createElement('a');link.href=url;link.download='nutriforge-shopping-'+week[0]+'.txt';document.body.appendChild(link);link.click();link.remove();setTimeout(function(){URL.revokeObjectURL(url);},1000);document.getElementById('shoppingStatus').textContent='Shopping list download started.';
 }
 

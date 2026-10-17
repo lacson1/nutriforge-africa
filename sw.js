@@ -1,13 +1,15 @@
 /* NutriForge — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-layout-44';
+var CACHE_NAME = 'nutriforge-layout-45';
 var PRECACHE = [
   './index.html',
-  './layout.css?v=39',
+  './layout.css?v=40',
   './landing.html',
-  './landing-premium.css?v=2',
+  './landing-premium.css?v=3',
   './assets/planner-table.jpg',
   './manifest.json',
-  './t2dm-clinical-field-guide.html?v=23',
+  './assets/brand/savourkin-symbol.svg',
+  './assets/brand/savourkin-icon.svg',
+  './t2dm-clinical-field-guide.html?v=24',
   './js/backup-core.mjs?v=2',
   './js/foods-data.js?v=13',
   './js/search-core.js?v=12',
@@ -18,7 +20,7 @@ var PRECACHE = [
   './js/guide-bridge.js?v=1',
   './js/planner-core.js?v=3',
   './js/shopping-recipes.js?v=1',
-  './js/planner-ui.js?v=8',
+  './js/planner-ui.js?v=9',
   './js/week-builder.js?v=2',
   './js/planner-journey.js?v=1',
   './js/swaps-ui.js?v=7',
