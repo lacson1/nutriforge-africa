@@ -177,3 +177,34 @@ body{font-size:var(--sk-reading-body);line-height:1.6}
 .plate-orbit[data-motion=playing] .plate-visual::after{animation-play-state:running}
 @keyframes sk-orbit-marker{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.plate-orbit .plate-visual::after{display:none}}
+
+/* Compact dish workspace: totals use the full width rather than stretching the image column. */
+.plate-orbit,.plate-orbit[data-motion-allowed=true]{padding:24px;gap:24px 32px;grid-template-columns:minmax(0,1fr) minmax(0,16rem) minmax(0,1fr);align-items:start}
+.plate-orbit .plate-stage{grid-column:2;grid-row:1 / span var(--orbit-rows,2);align-self:center}
+.plate-orbit .orbit-food:nth-child(n){grid-column:var(--ingredient-column);grid-row:var(--ingredient-row);display:flex;height:auto;min-height:0;padding:14px;gap:12px;align-items:flex-start}
+.plate-orbit .orbit-food small{margin-top:4px}.plate-orbit .orbit-food b{margin-top:8px}
+.plate-orbit .orbit-food img{width:2.75rem;height:2.75rem;margin:0}
+.plate-orbit .plate-visual-caption{margin:12px 0 0}
+.plate-orbit #orbitDishSummary{grid-column:1/-1;grid-row:calc(var(--orbit-rows,2) + 1);text-align:left;border-top:1px solid #725b43;padding-top:18px}
+.plate-orbit #orbitDishSummary h3{margin:0 0 8px}
+.plate-orbit #orbitDishSummary .dish-weight{font-size:1.5rem}
+.plate-orbit #orbitDishSummary p{display:inline;margin:0 0 0 12px}
+.plate-orbit .dish-nutrients{grid-template-columns:repeat(5,minmax(0,1fr));max-width:none;gap:12px;margin:16px 0 12px}
+.plate-orbit .dish-nutrients div:first-child{grid-column:auto;text-align:left;padding:0;border:0}
+.plate-orbit .dish-nutrients dd{margin-top:2px}
+@container plate-reading (max-width:54rem){
+ .plate-orbit,.plate-orbit[data-motion-allowed=true]{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .plate-orbit .plate-stage{grid-column:1;grid-row:1;max-width:15rem;margin:auto}
+ .plate-orbit #orbitDishSummary{grid-column:2;grid-row:1;border:0;padding:0}
+ .plate-orbit #orbitDishSummary h3{font-size:1.5rem}
+ .plate-orbit #orbitDishSummary p{display:block;margin:4px 0 0}
+ .plate-orbit .dish-nutrients{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .plate-orbit .orbit-food:nth-child(n){grid-column:auto;grid-row:auto}
+}
+@container plate-reading (max-width:34rem){
+ .plate-orbit,.plate-orbit[data-motion-allowed=true]{grid-template-columns:minmax(0,1fr);padding:18px;gap:18px}
+ .plate-orbit .plate-stage{grid-column:1;grid-row:1;max-width:12rem}
+ .plate-orbit #orbitDishSummary{grid-column:1;grid-row:2}
+ .plate-orbit .dish-nutrients{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .plate-orbit .orbit-food:nth-child(n){grid-column:1}
+}

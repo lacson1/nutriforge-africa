@@ -749,7 +749,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
 <link rel="stylesheet" href="layout.css?v=41">
-<link rel="stylesheet" href="savourkin-theme.css?v=13">
+<link rel="stylesheet" href="savourkin-theme.css?v=14">
 </head>
 <body>
 
@@ -1175,7 +1175,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <script src="js/swaps-ui.js?v=7"></script>
 <script src="js/scoring-core.js?v=49"></script>
 <script src="js/dish-images.js?v=1"></script>
-<script src="js/plate-exploration.js?v=8"></script>
+<script src="js/plate-exploration.js?v=9"></script>
 <script>
 // ── ENRICHMENT (classifyDrug, calcLongevity, confStars — ./js/scoring-core.js?v=49)
 
@@ -1831,7 +1831,7 @@ function buildAIDrawer(){
 function buildPlateDrawer(){
   return '<div class="plate-premium">' +
     '<div class="plate-intro"><h2>Build your plate.</h2><p>'+safeHtml(currentGoalLabel())+'</p><button type="button" class="ca-btn" onclick="openCommunityStart()">Change goal</button></div>' +
-    '<div class="dish-explorer-controls"><label for="orbitDishSelect">Explore a dish<select id="orbitDishSelect" onchange="selectOrbitDish(this.value)"></select></label><label for="orbitNutrient">Ingredient contributions<select id="orbitNutrient" onchange="skNutrient=this.value;renderDishOrbit(skOrbitParts)"><option value="fiber">Fibre</option><option value="protein">Protein</option><option value="kcal">Energy</option><option value="carbs">Carbohydrate</option><option value="fat">Fat</option></select></label></div><div class="plate-orbit"><div class="plate-stage"><div id="plateVisual" class="plate-visual"></div><p class="plate-visual-caption"></p><div id="orbitDishSummary"></div></div><div id="orbitIngredients" class="orbit-ingredients"></div></div><p id="orbitArithmetic" class="orbit-arithmetic"></p><section class="portion-scale" aria-label="Scale current plate portions"><label for="plateScale">Adjust all portions</label><output id="plateScaleValue" for="plateScale">1×</output><input id="plateScale" type="range" min="0.5" max="3" step="0.25" value="1" oninput="previewPlateScale(this.value)"><p>Multiplier of the displayed ingredient weights, not a daily target or a family-size recommendation.</p><p id="plateScalePreview" role="status" aria-live="polite"></p><button id="plateScaleApply" type="button" class="ca-btn" disabled onclick="applyPlateScale()">Apply portions to plate</button></section>' +
+    '<div class="dish-explorer-controls"><label for="orbitDishSelect">Explore a dish<select id="orbitDishSelect" onchange="selectOrbitDish(this.value)"></select></label><label for="orbitNutrient">Ingredient contributions<select id="orbitNutrient" onchange="skNutrient=this.value;renderDishOrbit(skOrbitParts)"><option value="fiber">Fibre</option><option value="protein">Protein</option><option value="kcal">Energy</option><option value="carbs">Carbohydrate</option><option value="fat">Fat</option></select></label></div><div class="plate-orbit"><div class="plate-stage"><div id="plateVisual" class="plate-visual"></div><p class="plate-visual-caption"></p></div><div id="orbitIngredients" class="orbit-ingredients"></div><div id="orbitDishSummary"></div></div><p id="orbitArithmetic" class="orbit-arithmetic"></p><section class="portion-scale" aria-label="Scale current plate portions"><label for="plateScale">Adjust all portions</label><output id="plateScaleValue" for="plateScale">1×</output><input id="plateScale" type="range" min="0.5" max="3" step="0.25" value="1" oninput="previewPlateScale(this.value)"><p>Multiplier of the displayed ingredient weights, not a daily target or a family-size recommendation.</p><p id="plateScalePreview" role="status" aria-live="polite"></p><button id="plateScaleApply" type="button" class="ca-btn" disabled onclick="applyPlateScale()">Apply portions to plate</button></section>' +
     '<div class="plate-main-actions"><button type="button" class="ca-btn" onclick="planPlateJourney()">Plan this plate</button><button type="button" class="ca-btn" onclick="openDrawer(\'meals\')">Meal ideas</button><button type="button" class="ca-btn" onclick="openDrawer(\'swaps\')">⇄ Find a swap</button><button type="button" class="ca-btn" onclick="exploreWelcomeFoods()">+ Add foods</button><button type="button" class="ca-btn" id="logPlateButton" onclick="logPlateToDiary()">Log plate to diary ↗</button></div>' +
     '<div class="plate-section-heading"><h3>On your plate</h3><span id="plateFoodCount">0 foods</span></div>' +
     '<div class="plate-items" id="plateItems">' +
