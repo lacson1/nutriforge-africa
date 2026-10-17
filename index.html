@@ -749,7 +749,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 .ai-loading span:nth-child(3){animation-delay:.4s}
 </style>
 <link rel="stylesheet" href="layout.css?v=43">
-<link rel="stylesheet" href="savourkin-theme.css?v=17">
+<link rel="stylesheet" href="savourkin-theme.css?v=18">
 </head>
 <body>
 
@@ -788,25 +788,19 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
       <div class="overflow-menu" id="overflowMenu">
         <button onclick="openDrawer('swaps');toggleOverflow()">Food swaps</button>
         <button onclick="openDrawer('compare');toggleOverflow()">Compare foods</button>
-        <button onclick="openDrawer('combos');toggleOverflow()">Food combinations</button>
         <button onclick="openDrawer('chart');toggleOverflow()">Nutrient chart</button>
-        <button onclick="openT2dmClinicalGuide();toggleOverflow()">The field guide</button>
-        <button type="button" onclick="openVatProtocol();toggleOverflow()">VAT hub (visceral fat protocol)</button>
-        <hr>
-        <button onclick="openDrawer('planner');toggleOverflow()">Weekly planner</button>
         <button onclick="openDrawer('diary');toggleOverflow()">Daily diary &amp; goals</button>
-        <button onclick="openCommunityStart();toggleOverflow()">Start guide (goals)</button>
-        <button onclick="openDrawer('meals');toggleOverflow()">Meal templates (plates)</button>
-        <button onclick="openDrawer('drugs');toggleOverflow()">Drug–food checker</button>
-        <button onclick="openDrawer('profiles');toggleOverflow()">Client profiles</button>
-        <button onclick="openMethodology();toggleOverflow()">Methodology &amp; trust</button>
         <hr>
-        <button onclick="exportCSV();toggleOverflow()">Export CSV</button>
         <button type="button" onclick="exportFullDataBackup()">Download data backup…</button>
         <button type="button" onclick="importFullDataBackupPick()">Restore from backup…</button>
         <button onclick="printView();toggleOverflow()">Print</button>
         <hr>
-        <button onclick="toggleAppMode();toggleOverflow()" id="modeMenuBtn">Clinician mode</button>
+        <button type="button" id="proToolsBtn" aria-pressed="false" aria-controls="proToolsGroup" onclick="setProTools(this.getAttribute('aria-pressed')!=='true')">Professional tools</button>
+        <div id="proToolsGroup" class="pro-tools-group" hidden>
+          <button onclick="openDrawer('profiles');toggleOverflow()">Client profiles</button>
+          <button onclick="exportCSV();toggleOverflow()">Export CSV</button>
+          <button onclick="toggleAppMode();toggleOverflow()" id="modeMenuBtn">Use patient wording</button>
+        </div>
       </div>
     </div>
   </div>
@@ -1159,7 +1153,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <div class="tooltip" id="tooltip"></div>
 <script src="js/foods-data.js?v=49"></script>
 <script src="js/source-corrections.js?v=49"></script>
-<script src="js/evidence-audit.js?v=49"></script>
+<script src="js/evidence-audit.js?v=50"></script>
 <script src="js/search-core.js?v=12"></script>
 <script src="js/filter-core.js?v=49"></script>
 <script src="js/welcome.js?v=52"></script>
@@ -1167,7 +1161,7 @@ button:focus-visible,.ca-btn:focus-visible{outline:2px solid var(--accent-green)
 <script src="js/combinations.js?v=49"></script>
 <script src="js/planner-core.js?v=3"></script>
 <script src="js/shopping-recipes.js?v=1"></script>
-<script src="js/planner-ui.js?v=50"></script>
+<script src="js/planner-ui.js?v=51"></script>
 <script src="js/week-builder.js?v=2"></script>
 <script src="js/planner-journey.js?v=1"></script>
 <script src="js/guide-bridge.js?v=1"></script>
@@ -2473,6 +2467,11 @@ function buildCombosDrawer(){
 }
 
 // ── OVERFLOW MENU ──
+function setProTools(on){
+  var group=document.getElementById('proToolsGroup'),btn=document.getElementById('proToolsBtn');if(!group||!btn)return;
+  group.hidden=!on;btn.setAttribute('aria-pressed',on?'true':'false');
+  try{localStorage.setItem('sk_pro_tools',on?'1':'0');}catch(e){}
+}
 function toggleOverflow(){document.getElementById('overflowMenu').classList.toggle('open')}
 
 function closeBrandBrowsePanel(){
@@ -3625,7 +3624,7 @@ function applyDarkMode(on){document.body.classList.toggle('dark-mode',on);var hb
 (function(){var stored=null;try{stored=localStorage.getItem('nf_darkmode')}catch(e){}if(stored!==null)darkMode=stored==='1';else darkMode=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;applyDarkMode(darkMode)})();
 
 // ── APP MODE ──
-function toggleAppMode(){appMode=appMode==='pro'?'patient':'pro';document.body.classList.toggle('patient-mode',appMode==='patient');var btn=document.getElementById('modeMenuBtn');if(btn)btn.textContent=appMode==='pro'?'Patient mode':'Clinician mode';render();if(activeDrawer==='profiles')refreshProfilesView()}
+function toggleAppMode(){appMode=appMode==='pro'?'patient':'pro';document.body.classList.toggle('patient-mode',appMode==='patient');var btn=document.getElementById('modeMenuBtn');if(btn)btn.textContent=appMode==='pro'?'Use patient wording':'Use clinician wording';render();if(activeDrawer==='profiles')refreshProfilesView()}
 function setMode(mode){appMode=mode;document.body.classList.toggle('patient-mode',mode==='patient');render();if(activeDrawer==='profiles')refreshProfilesView()}
 
 // ── PORTION ──
@@ -3987,6 +3986,8 @@ var render = (function(){
 // ── INIT ──
 loadDiaryAndProfiles();
 var previousOpenDrawer=openDrawer;
+(function(){var on=false;try{on=localStorage.getItem('sk_pro_tools')==='1';}catch(e){}setProTools(on);
+  if(typeof EVIDENCE_REVIEW_ACTIVE!=='undefined'&&EVIDENCE_REVIEW_ACTIVE)document.querySelectorAll('.mnav-btn').forEach(function(b){if(b.textContent.trim()==='AI')b.style.display='none';});})();
 openDrawer=function(name){previousOpenDrawer(name);var host=document.getElementById('drawerBody');if(host)host.insertAdjacentHTML('afterbegin',nutritionReviewNotice());};
 buildAIDrawer=function(){return '<h3>Nutrition assistant paused during evidence review</h3><p>The catalogue is being verified. AI output cannot validate missing source evidence. Meal planning and sourced food exploration remain available.</p>';};
 buildDrugsDrawer=function(){return '<h3>Medication checker under review</h3><p>The previous keyword rules were not a validated interaction checker. This feature is paused. Ask your pharmacist or prescriber about food and medicine interactions.</p><a href="nutrition-review.html">Review findings</a>';};
