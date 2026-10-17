@@ -18,3 +18,16 @@ No account or checkout was added. Existing local-storage keys and saved plates a
 
 Run from this checkout: python3 -m http.server 8774 --bind 127.0.0.1
 Review: http://127.0.0.1:8774/landing.html
+
+## Premium landing redesign — 17 October 2026
+
+Rebuilt landing.html as an editorial split composition rather than a centred SaaS-style headline and card grid. Warm ivory, ink typography and terracotta accent; oversized Instrument Serif heading paired with DM Sans controls; one food-led hero, one primary Planner CTA, secondary Plate entry and three unboxed explanatory rows. Mobile places the CTA before the image. Reduced-motion preferences disable entrance animation. No clinical or commercial claims were introduced.
+
+References actually opened and visually inspected:
+- Cynthia Ugwudike, “Landing Page For Meal Planning Website” (Behance): https://www.behance.net/gallery/131650841/Landing-Page-For-Meal-Planning-Website — strong split hero, oversized plate imagery and a direct meal-plan action. Promotional banners and discount claims were not adopted.
+- Mouad Yming, “Modern Meal Plan Landing Page UI Design” (Dribbble): https://dribbble.com/shots/27204804-Modern-Meal-Plan-Landing-Page-UI-Design — large typographic hierarchy, restrained navigation and one strong coloured action. Layout and content are original.
+- Ottolenghi recipes: https://ottolenghi.co.uk/pages/recipes — sparse navigation, warm neutral ground, red accent and large food photography. Cookie/promotion overlays obscured some of the recipe page; no claim of a complete site audit.
+
+assets/planner-table.jpg is an original AI-generated editorial food illustration, created for this preview, not copied from the references. It is labelled as an illustration and is not a nutrition or portion measurement. Converted to JPEG for web delivery.
+
+Verified desktop and mobile first view, no horizontal overflow, image loading, no console errors, Planner CTA opening a populated editable week preview, and Plate entry opening the existing app. All 74 regression tests and AI flow script pass. Production remains unchanged.
