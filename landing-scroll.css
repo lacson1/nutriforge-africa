@@ -56,6 +56,8 @@ h1 em,h2 em{font-style:italic;font-weight:600;color:var(--gold)}
 .hero-plate{margin:0;justify-self:center;width:min(100%,560px)}
 .hero-plate img{width:100%;height:auto;border-radius:50%;aspect-ratio:1;object-fit:cover}
 .hero-plate figcaption{margin-top:12px;text-align:center;font-size:.875rem;color:var(--on-dark-muted)}
+.hero-plate figcaption a{color:inherit}
+.hero-plate--photo img{border-radius:var(--r);aspect-ratio:4/5}
 .scroll-cue{position:absolute;left:var(--gutter);bottom:28px;font-size:.875rem;color:var(--on-dark-muted);text-decoration:none}
 .scroll-cue:hover{color:var(--gold)}
 @media (max-width:899px){
@@ -74,6 +76,7 @@ h1 em,h2 em{font-style:italic;font-weight:600;color:var(--gold)}
 .pf-3{right:-6%;bottom:6%}
 .pf-4{left:-6%;bottom:6%}
 .ledger h2{font-size:clamp(1.875rem,3.2vw,2.625rem);margin-bottom:20px}
+.ledger-intro{margin:-8px 0 16px;font-size:.9375rem;color:var(--muted)}
 .ledger-rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .ledger-row{display:grid;grid-template-columns:48px minmax(0,1fr) auto;align-items:center;gap:14px;padding:9px 0 9px 12px;border-bottom:1px solid var(--line);border-left:3px solid transparent;transition:border-color .15s,background-color .15s}
 .ledger-row img{width:48px;height:48px;border-radius:50%;object-fit:cover}
