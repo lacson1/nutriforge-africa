@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./doc-page.js"></script><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet"><style>doc-page:not(:defined){visibility:hidden}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#1a1a1a}a{color:#0b6e4f}a:hover{color:#095940}</style></helmet>
+<doc-page size="a4" margin="14mm">
+<div style="font-size:{{ fs }};line-height:1.4;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2.5px solid #1a1a1a;padding-bottom:8px;gap:16px">
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:9pt;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#0b6e4f">NutriForge · patient summary</span><h1 style="font-family:Fraunces,serif;font-weight:700;font-size:{{ h1 }};line-height:1.1;margin:0">Food and medicines: {{ name }}</h1></div>
+<span style="color:#444;white-space:nowrap">{{ date }}</span>
+</div>
+<div style="display:grid;grid-template-columns:auto 1fr;gap:3px 12px"><strong>Conditions</strong><span>{{ condLine }}</span><strong>Medicines</strong><span>{{ medLine }}</span></div>
+
+<div style="display:flex;flex-direction:column;gap:6px;break-inside:avoid">
+<h2 style="font-family:Fraunces,serif;font-size:{{ h2 }};margin:0">What to eat</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+<sc-for list="{{ buckets }}" as="b" hint-placeholder-count="3"><div style="border-top:4px solid {{ b.c }};padding-top:6px;display:flex;flex-direction:column;gap:3px"><strong style="color:{{ b.c }};letter-spacing:1px">{{ b.label }}</strong><sc-for list="{{ b.items }}" as="i" hint-placeholder-count="4"><span>{{ i }}</span></sc-for></div></sc-for>
+</div>
+<div style="display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;background:#f4f1ec;padding:8px 10px;margin-top:4px"><strong>The plate rule</strong><span>Half vegetables, a quarter protein, a quarter starch. The starch should be about the size of your fist.</span></div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:6px;break-inside:avoid">
+<h2 style="font-family:Fraunces,serif;font-size:{{ h2 }};margin:0">Medicine warnings</h2>
+<div style="border:1.5px solid #1a1a1a;display:flex;flex-direction:column">
+<sc-for list="{{ warns }}" as="w" hint-placeholder-count="4"><div style="display:grid;grid-template-columns:7.5em 1fr;gap:10px;padding:6px 10px;border-bottom:1px solid #ddd"><strong style="letter-spacing:1px">{{ w.sev }}</strong><span><strong>{{ w.title }}.</strong> {{ w.text }}</span></div></sc-for>
+</div>
+<span style="color:#444">Never stop or change a medicine because of this sheet. Ask your GP or pharmacist first.</span>
+</div>
+
+<div style="border:2.5px solid #1a1a1a;padding:10px 12px;display:flex;flex-direction:column;gap:5px;break-inside:avoid">
+<strong style="font-size:{{ h3 }}">If you are being sick or have diarrhoea</strong>
+<span>{{ sickLine }}</span>
+<span>Keep sipping fluids. Restart 24–48 hours after you are eating and drinking normally.</span>
+<sc-if value="{{ hasInsulin }}" hint-placeholder-val="{{ false }}"><span><strong>Insulin: do not stop it.</strong> Check your blood sugar more often and call 111 for advice.</span></sc-if>
+<span style="font-size:{{ h3 }};margin-top:4px"><strong>Confused, very drowsy, breathing fast or chest pain: call 999.</strong> Otherwise call 111.</span>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px;break-inside:avoid">
+<div style="display:flex;flex-direction:column;gap:14px"><span style="border-bottom:1px solid #1a1a1a;padding-bottom:3px;color:#444">Checked by (GP / dietitian)</span></div>
+<div style="display:flex;flex-direction:column;gap:14px"><span style="border-bottom:1px solid #1a1a1a;padding-bottom:3px;color:#444">Date</span></div>
+</div>
+<div style="display:flex;justify-content:space-between;gap:16px;color:#444;font-size:9pt;border-top:1px solid #ccc;padding-top:6px"><span>Food guidance only, not a diagnosis. Sources: NICE NG28, NG136; BNF; NHS sick day guidance.</span><span style="white-space:nowrap">nutriforge.africa</span></div>
+</div>
+</doc-page>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const FOOD = {
+  t2d: { eat: ['Moi moi and beans', 'Okra soup with fish', 'Efo riro and other greens', 'Boiled unripe plantain'], easy: ['Jollof rice: one fist-sized scoop', 'Pounded yam or eba: tennis-ball size', 'Dodo: 4–5 slices', 'Soft white bread'], avoid: ['Malt drinks', 'Zobo with added sugar', 'Puff-puff'] },
+  bp: { eat: ['Efo riro and other greens', 'Fresh fish, grilled', 'Moi moi and beans', 'Boiled unripe plantain'], easy: ['Stock cubes: use half', 'Stockfish and smoked fish: soak overnight', 'Suya', 'Ground crayfish'], avoid: ['Chin chin and salted crisps', 'Corned beef and tinned meat', 'More than 14 units of alcohol a week'] }
+};
+const COND = { t2d: 'Type 2 diabetes', pre: 'Prediabetes', bp: 'High blood pressure', chol: 'High cholesterol' };
+const MEDS = { metformin: 'Metformin 500 mg twice a day with food', gliclazide: 'Gliclazide', sitagliptin: 'Sitagliptin', insulin: 'Insulin', amlodipine: 'Amlodipine', ramipril: 'Ramipril 5 mg once a day', atorvastatin: 'Atorvastatin' };
+const WARN = {
+  metformin: [['MAJOR', 'Metformin and alcohol', 'Keep alcohol small and always eat with it. Heavy drinking raises the risk of lactic acidosis.'], ['MODERATE', 'Metformin and vitamin B12', 'Ask your GP for a yearly B12 blood test.']],
+  gliclazide: [['MAJOR', 'Gliclazide and alcohol', 'This can cause a hypo, sometimes hours later. Always eat when you drink.'], ['MODERATE', 'Gliclazide and small meals', "Don't cut out starch completely. A meal that is too small can cause a hypo."]],
+  insulin: [['MAJOR', 'Insulin and alcohol', 'This can cause a hypo, sometimes hours later. Always eat when you drink.']],
+  ramipril: [['MAJOR', 'Ramipril and salt substitutes', 'LoSalt and similar products are high in potassium, which can rise to a dangerous level.'], ['MODERATE', 'Ramipril and coconut water', 'It is high in potassium. A glass now and then is fine.']]
+};
+const PAUSE = { metformin: 'metformin', gliclazide: 'gliclazide', ramipril: 'ramipril' };
+class Component extends DCLogic {
+  state = { q: new URLSearchParams(location.search) };
+  componentDidMount() { if (this.state.q.get('print') === '1') setTimeout(() => window.print(), 700); }
+  renderVals() {
+    const q = this.state.q;
+    const conds = (q.get('c') || 't2d,bp').split(',').filter(c => COND[c]);
+    const meds = (q.get('m') || 'metformin,ramipril').split(',').filter(m => MEDS[m]);
+    const large = q.get('lp') === '1';
+    const uniq = a => [...new Set(a)];
+    const pick = k => uniq(conds.filter(c => FOOD[c]).flatMap(c => FOOD[c][k]));
+    const avoid = pick('avoid'); if (meds.includes('ramipril')) avoid.unshift('Salt substitutes (LoSalt)');
+    const warns = meds.flatMap(m => (WARN[m] || []).map(([sev, title, text]) => ({ sev, title, text })));
+    const other = meds.filter(m => !WARN[m]).map(m => MEDS[m]);
+    if (other.length) warns.push({ sev: 'NOTE', title: other.join(', '), text: 'This app has no food warnings for these medicines yet. Ask your pharmacist.' });
+    if (!warns.length) warns.push({ sev: 'NOTE', title: 'No medicines listed', text: 'Tell your GP about any medicines or supplements you take.' });
+    const pause = meds.filter(m => PAUSE[m]).map(m => PAUSE[m]);
+    return {
+      fs: large ? '14pt' : '11.5pt', h1: large ? '26pt' : '21pt', h2: large ? '18pt' : '14pt', h3: large ? '15pt' : '12.5pt',
+      name: q.get('n') || 'Adaeze O.',
+      date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }),
+      condLine: conds.map(c => COND[c]).join(', ') || 'Not given',
+      medLine: meds.map(m => MEDS[m]).join(' · ') || 'None',
+      buckets: [['EAT OFTEN', '#0b6e4f', pick('eat')], ['GO EASY', '#7a5a22', pick('easy')], ['AVOID', '#b3261e', avoid]].map(([label, c, items]) => ({ label, c, items: items.length ? items : ['Follow the plate rule'] })),
+      warns,
+      sickLine: pause.length ? 'Pause ' + pause.join(' and ') + ' until you are better.' : 'Ask your pharmacist which of your medicines to pause.',
+      hasInsulin: meds.includes('insulin')
+    };
+  }
+}
+</script>
+</body>
+</html>

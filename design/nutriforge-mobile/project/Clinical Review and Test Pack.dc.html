@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#f9f6f1;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#1a1a1a}a{color:#0b6e4f}a:hover{color:#095940}@media print{.noprint{display:none!important}body{background:#fff}}</style></helmet>
+<div style="max-width:1040px;margin:0 auto;padding:40px 24px 64px;display:flex;flex-direction:column;gap:40px">
+<header style="display:flex;flex-direction:column;gap:8px;border-bottom:2px solid #1a1a1a;padding-bottom:16px">
+<span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#0b6e4f">NutriForge patient app · before launch</span>
+<h1 style="font-family:Fraunces,serif;font-weight:700;font-size:40px;line-height:1.05;margin:0">Clinical review and patient test pack</h1>
+<p style="margin:0;max-width:680px;font-size:15px;line-height:1.5;color:#555;text-wrap:pretty">Part 1 lists every clinical claim in the prototype for a GP or dietitian to sign off. Part 2 is a script for testing the app with 5 patients. Both parts can be printed.</p>
+<div class="noprint" style="display:flex;gap:10px;margin-top:6px"><a href="NutriForge Patient App.dc.html" style="font-size:13px">← Back to app designs</a></div>
+</header>
+
+<section style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;font-weight:700;letter-spacing:1px;color:#555">PART 1</span><h2 style="font-family:Fraunces,serif;font-size:28px;margin:0">Content sign-off</h2></div>
+<div style="display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap"><span><strong style="color:#0b6e4f">{{ nApprove }}</strong> approved</span><span><strong style="color:#8a6a2e">{{ nEdit }}</strong> to edit</span><span><strong style="color:#b3261e">{{ nRemove }}</strong> to remove</span><span style="color:#555">{{ nOpen }} of {{ nTotal }} not reviewed</span></div>
+</div>
+<div class="noprint" style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{ filters }}" as="f" hint-placeholder-count="4"><button onClick="{{ f.pick }}" style="border:1px solid {{ f.border }};background:{{ f.bg }};color:{{ f.fg }};font:inherit;font-size:13px;padding:6px 12px;border-radius:999px;cursor:pointer;white-space:nowrap;flex:none">{{ f.label }} · {{ f.count }}</button></sc-for></div>
+<div style="background:#fff;border:1px solid #d6cfc4;border-radius:6px;overflow:hidden">
+<div style="display:grid;grid-template-columns:52px minmax(0,1.1fr) minmax(0,2.4fr) minmax(0,1.1fr) 190px;gap:12px;padding:10px 14px;background:#f4f1ec;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555"><span>ID</span><span>Item</span><span>What the app says</span><span>Source shown</span><span>Verdict</span></div>
+<sc-for list="{{ rows }}" as="r" hint-placeholder-count="10">
+<div style="display:grid;grid-template-columns:52px minmax(0,1.1fr) minmax(0,2.4fr) minmax(0,1.1fr) 190px;gap:12px;padding:10px 14px;border-top:1px solid #eee;font-size:13px;line-height:1.4;align-items:start;background:{{ r.rowBg }}">
+<span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#555">{{ r.id }}</span>
+<span style="display:flex;flex-direction:column;gap:3px"><strong>{{ r.item }}</strong><span style="font-size:10px;font-weight:700;letter-spacing:1px;color:{{ r.tagFg }};background:{{ r.tagBg }};padding:1px 5px;border-radius:3px;align-self:flex-start">{{ r.tag }}</span></span>
+<span style="color:#333;text-wrap:pretty">{{ r.claim }}</span>
+<span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#555">{{ r.src }}</span>
+<span style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px"><sc-for list="{{ r.opts }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.pick }}" style="border:1px solid {{ o.border }};background:{{ o.bg }};color:{{ o.fg }};font:inherit;font-size:11px;font-weight:600;padding:5px 2px;border-radius:4px;cursor:pointer">{{ o.label }}</button></sc-for></span>
+</div>
+</sc-for>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:6px;font-size:13px">
+<div style="display:flex;flex-direction:column;gap:18px"><span style="border-bottom:1px solid #1a1a1a;padding-bottom:4px">Reviewer name and role</span></div>
+<div style="display:flex;flex-direction:column;gap:18px"><span style="border-bottom:1px solid #1a1a1a;padding-bottom:4px">GMC / HCPC number</span></div>
+<div style="display:flex;flex-direction:column;gap:18px"><span style="border-bottom:1px solid #1a1a1a;padding-bottom:4px">Signature and date</span></div>
+</div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:16px;break-before:page">
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;font-weight:700;letter-spacing:1px;color:#555">PART 2</span><h2 style="font-family:Fraunces,serif;font-size:28px;margin:0">Patient test, 5 people × 30 minutes</h2></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;font-size:14px;line-height:1.5">
+<div style="background:#fff;border:1px solid #d6cfc4;border-radius:6px;padding:14px;display:flex;flex-direction:column;gap:6px"><strong>Who to recruit</strong><span>UK adults of West African or Caribbean heritage with type 2 diabetes and/or high blood pressure. At least 2 aged over 60, 1 person with low confidence using phones, and 1 who is not a first-language English speaker.</span></div>
+<div style="background:#fff;border:1px solid #d6cfc4;border-radius:6px;padding:14px;display:flex;flex-direction:column;gap:6px"><strong>Setup</strong><span>Use a real iPhone, or a phone-sized screen. Start from onboarding at <a href="NutriForge Patient App.dc.html#2a">2a</a>, then use <a href="NutriForge Patient App.dc.html#3a">3a</a> and <a href="NutriForge Patient App.dc.html#t4">tabs 4a–4d</a>. Ask them to think aloud. Don't help unless they're stuck for 60 seconds.</span></div>
+<div style="background:#fff;border:1px solid #d6cfc4;border-radius:6px;padding:14px;display:flex;flex-direction:column;gap:6px"><strong>The home-screen decision</strong><span>Task 2 settles it. If 3 or more of the 5 go straight to search, make "Check" the home screen. Otherwise keep "Today".</span></div>
+</div>
+<div style="background:#fff;border:1px solid #d6cfc4;border-radius:6px;overflow:hidden">
+<div style="display:grid;grid-template-columns:32px minmax(0,2fr) minmax(0,1.6fr) repeat(5,56px);gap:10px;padding:10px 14px;background:#f4f1ec;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;align-items:end"><span>#</span><span>Task (read aloud)</span><span>Counts as a pass</span><sc-for list="{{ pCols }}" as="p" hint-placeholder-count="5"><span style="text-align:center">{{ p }}</span></sc-for></div>
+<sc-for list="{{ tasks }}" as="t" hint-placeholder-count="6">
+<div style="display:grid;grid-template-columns:32px minmax(0,2fr) minmax(0,1.6fr) repeat(5,56px);gap:10px;padding:12px 14px;border-top:1px solid #eee;font-size:13px;line-height:1.4;align-items:center">
+<span style="font-family:Fraunces,serif;font-weight:700;font-size:18px;color:#0b6e4f">{{ t.n }}</span>
+<span>{{ t.task }}</span>
+<span style="color:#555">{{ t.pass }}</span>
+<sc-for list="{{ t.cells }}" as="c" hint-placeholder-count="5"><button onClick="{{ c.cycle }}" aria-label="{{ c.aria }}" style="height:36px;border:1px solid {{ c.border }};background:{{ c.bg }};color:{{ c.fg }};font:inherit;font-size:12px;font-weight:700;border-radius:4px;cursor:pointer">{{ c.label }}</button></sc-for>
+</div>
+</sc-for>
+</div>
+<p class="noprint" style="margin:0;font-size:12px;color:#555">Tap a cell to cycle through: – → Pass → Partly → Fail.</p>
+<div style="background:#fff;border:1px solid #d6cfc4;border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5"><strong>After the tasks, ask</strong>
+<span>1. What did the dots next to each food mean to you?</span>
+<span>2. Was there a food you cook that we didn't have?</span>
+<span>3. Would you show the handout to your GP? Why, or why not?</span>
+<span>4. Did anything make you worried about your medicines?</span>
+<span>5. Would you open this tomorrow? What would make you open it?</span></div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const R = [
+  ['S01', 'Metformin + alcohol', 'MAJOR', 'Heavy drinking raises the risk of lactic acidosis, which is rare but serious. Keep alcohol small and always have it with food.', 'BNF: metformin · MHRA'],
+  ['S02', 'Gliclazide + alcohol', 'MAJOR', 'Can cause a hypo, sometimes hours later. Always eat when you drink.', 'BNF: gliclazide'],
+  ['S03', 'Insulin + alcohol', 'MAJOR', 'Can cause a hypo, sometimes hours later. Always eat when you drink.', 'BNF: insulin'],
+  ['S04', 'Ramipril + salt substitutes', 'MAJOR', 'LoSalt and similar products are high in potassium and can push it up to a dangerous level.', 'BNF: ramipril'],
+  ['S05', 'Ramipril + coconut water', 'MODERATE', "High in potassium. Don't drink it every day without asking your GP.", 'BNF: ramipril · labels'],
+  ['S06', 'Gliclazide + small starch meals', 'MODERATE', "Don't cut out starch completely. A meal that is too small can cause a hypo.", 'BNF: gliclazide'],
+  ['S07', 'Metformin + vitamin B12', 'MODERATE', 'Long-term use can lower B12. Ask for a yearly blood test.', 'NICE NG28 · MHRA 2022'],
+  ['S08', 'Metformin on an empty stomach', 'MINOR', 'Can upset your stomach. Take it with your first bite of food.', 'BNF: metformin'],
+  ['S09', 'Sick day rules', 'SAFETY', 'Pause metformin and ramipril when being sick or having diarrhoea. Keep sipping fluids. Restart 24–48 hours after eating normally.', 'NHS sick day guidance'],
+  ['S10', 'Escalation', 'SAFETY', 'Confused, very drowsy, breathing fast or chest pain: call 999. Otherwise call 111.', 'NHS 111'],
+  ['S11', 'Diabetes: fasting', 'SAFETY', 'Talk to your GP before fasting. Your metformin times may need to move to suhoor and iftar.', 'IDF-DAR 2021'],
+  ['S12', 'Diabetes: pregnancy', 'SAFETY', 'Tell your GP or midwife straight away. Targets and medicines may change.', 'NICE NG3'],
+  ['S13', 'Diabetes: unwell', 'SAFETY', "If you are being sick or can't keep fluids down, stop metformin and call 111 or your GP.", 'NHS sick day guidance'],
+  ['S14', 'BP: pregnancy', 'SAFETY', 'Ramipril must not be taken in pregnancy. Tell your GP or midwife straight away.', 'BNF: ramipril'],
+  ['S15', 'BP: salt target', 'SAFETY', 'Aim for less than 6 g of salt a day, about one teaspoon, including salt already in food.', 'NICE NG136'],
+  ['S16', 'Stock cube salt content', 'SAFETY', 'One cube has about half a day of salt.', 'Product labels'],
+  ['F01', 'Jollof rice (diabetes)', 'GO EASY', 'One scoop the size of your fist, about 150 g cooked.', 'GI tables 2021'],
+  ['F02', 'Pounded yam', 'GO EASY', 'A ball the size of a tennis ball.', 'GI tables 2021'],
+  ['F03', 'Moi moi', 'EAT OFTEN', 'Beans give protein and fibre and raise sugar slowly.', 'NICE NG28'],
+  ['F04', 'Malt drink', 'AVOID', 'About 9 teaspoons of sugar in a 330 ml bottle.', 'Product labels'],
+  ['F05', 'Palm wine', 'AVOID', 'Contains alcohol and sugar.', 'BNF · MHRA'],
+  ['F06', 'Dodo', 'GO EASY', '4–5 slices, as your starch. Unripe or boiled is better.', 'GI tables 2021'],
+  ['F07', 'Kenkey', 'GO EASY', 'Half a ball, with shito and fish.', 'GI tables 2021'],
+  ['F08', 'Waakye', 'FINE', 'A fist-sized portion. The beans slow the rise in sugar.', 'NICE NG28'],
+  ['F09', 'Rice and peas', 'FINE', 'A fist-sized portion.', 'NICE NG28'],
+  ['F10', 'Fried dumpling', 'GO EASY', 'One small dumpling.', 'GI tables 2021'],
+  ['F11', 'Canjeero', 'FINE', 'One or two pieces.', 'GI tables 2021'],
+  ['F12', 'Coconut water', 'FINE', 'One small glass (200 ml).', 'Product labels'],
+  ['F13', 'Okra soup with fish', 'EAT OFTEN', 'The fibre slows the rise in blood sugar.', 'Tier 3'],
+  ['F14', 'Boiled unripe plantain', 'EAT OFTEN', 'Raises sugar less than ripe plantain. Rich in potassium.', 'Tier 3'],
+  ['F15', 'Zobo with added sugar', 'AVOID', 'Make it with no sugar, or drink water.', 'Tier 2'],
+  ['F16', 'Stockfish and smoked fish (BP)', 'GO EASY', 'Soak overnight to remove salt.', 'Tier 3'],
+  ['F17', 'Suya (BP)', 'GO EASY', 'The spice mix is often very salty.', 'Tier 3'],
+  ['F18', 'Corned beef and tinned meat (BP)', 'AVOID', 'Very high in salt.', 'Tier 2'],
+  ['F19', 'Alcohol over 14 units a week (BP)', 'AVOID', 'Raises blood pressure.', 'Tier 1'],
+  ['F20', 'Plate rule', 'EAT OFTEN', 'Half vegetables, a quarter protein, a quarter starch.', 'NHS Eatwell']
+];
+const TAG = { MAJOR: ['#fff', '#b3261e'], MODERATE: ['#7a5a22', '#f4ecdc'], MINOR: ['#4b5563', '#eef0f2'], SAFETY: ['#fff', '#1a1a1a'], 'EAT OFTEN': ['#0b6e4f', '#e6f0eb'], FINE: ['#4b5563', '#eef0f2'], 'GO EASY': ['#7a5a22', '#f4ecdc'], AVOID: ['#b3261e', '#fbeceb'] };
+const V = { approve: ['Approve', '#0b6e4f'], edit: ['Edit', '#8a6a2e'], remove: ['Remove', '#b3261e'] };
+const TASKS = [
+  ['Set the app up as if it were yours.', 'Finishes onboarding with correct medicines in under 3 min'],
+  ['You are about to eat. Open the app and check if jollof rice is OK.', 'Gets the verdict in under 10 s (record: search or Today first?)'],
+  ['What does it say about palm wine and your tablets?', 'Finds the MAJOR warning and can say it back'],
+  ['Build tonight’s dinner and make it a good plate.', 'Reaches "Good plate" without help'],
+  ['You have been sick since this morning. What should you do?', 'Finds sick day rules and says to call 111'],
+  ['Get something to show your GP at your next appointment.', 'Finds the handout and prints or shares it']
+];
+const CYCLE = ['', 'pass', 'part', 'fail'];
+const CELL = { '': ['–', '#fff', '#888', '#d6cfc4'], pass: ['Pass', '#e6f0eb', '#0b6e4f', '#0b6e4f'], part: ['Partly', '#f4ecdc', '#7a5a22', '#b89150'], fail: ['Fail', '#fbeceb', '#b3261e', '#b3261e'] };
+
+class Component extends DCLogic {
+  state = { v: {}, filter: 'all', cells: {} };
+  componentDidMount() { try { const s = JSON.parse(localStorage.getItem('nf-review-pack') || '{}'); if (s.v || s.cells) this.setState({ v: s.v || {}, cells: s.cells || {} }); } catch (e) {} }
+  save(p) { this.setState(p, () => { try { localStorage.setItem('nf-review-pack', JSON.stringify({ v: this.state.v, cells: this.state.cells })); } catch (e) {} }); }
+  renderVals() {
+    const s = this.state;
+    const isSafety = r => r[0][0] === 'S';
+    const groups = [['all', 'All', () => true], ['safety', 'Safety-critical', isSafety], ['food', 'Food verdicts', r => !isSafety(r)], ['open', 'Not reviewed', r => !s.v[r[0]]]];
+    const fn = groups.find(g => g[0] === s.filter)[2];
+    const count = k => Object.values(s.v).filter(x => x === k).length;
+    return {
+      filters: groups.map(([k, label, f]) => { const on = s.filter === k; return { label, count: R.filter(f).length, bg: on ? '#1a1a1a' : '#fff', fg: on ? '#fff' : '#1a1a1a', border: on ? '#1a1a1a' : '#d6cfc4', pick: () => this.setState({ filter: k }) }; }),
+      rows: R.filter(fn).map(([id, item, tag, claim, src]) => ({ id, item, tag, claim, src, tagFg: TAG[tag][0], tagBg: TAG[tag][1],
+        rowBg: s.v[id] === 'remove' ? '#fdf6f5' : s.v[id] === 'approve' ? '#f7fbf9' : '#fff',
+        opts: Object.entries(V).map(([k, [label, c]]) => { const on = s.v[id] === k; return { label, bg: on ? c : '#fff', fg: on ? '#fff' : c, border: on ? c : '#d6cfc4', pick: () => this.save({ v: { ...s.v, [id]: on ? undefined : k } }) }; }) })),
+      nApprove: count('approve'), nEdit: count('edit'), nRemove: count('remove'), nTotal: R.length, nOpen: R.filter(r => !s.v[r[0]]).length,
+      pCols: ['P1', 'P2', 'P3', 'P4', 'P5'],
+      tasks: TASKS.map(([task, pass], ti) => ({ n: ti + 1, task, pass, cells: [0, 1, 2, 3, 4].map(pi => { const key = ti + '-' + pi, val = s.cells[key] || '', [label, bg, fg, border] = CELL[val];
+        return { label, bg, fg, border, aria: 'Task ' + (ti + 1) + ', participant ' + (pi + 1) + ': ' + (val || 'not recorded'), cycle: () => this.save({ cells: { ...s.cells, [key]: CYCLE[(CYCLE.indexOf(val) + 1) % 4] } }) }; }) }))
+    };
+  }
+}
+</script>
+</body>
+</html>
