@@ -1,0 +1,564 @@
+{
+  "communities": {
+    "0": [
+      "js_planner_ui",
+      "js_planner_ui_buildplannerdrawer",
+      "js_planner_ui_changeplannerweek",
+      "js_planner_ui_changeshoppingoptions",
+      "js_planner_ui_chooseplannerslot",
+      "js_planner_ui_downloadplannershopping",
+      "js_planner_ui_loadplannedmeal",
+      "js_planner_ui_loadweeklyplan",
+      "js_planner_ui_plannerdaylabel",
+      "js_planner_ui_plannershoppingchecks",
+      "js_planner_ui_plannershoppingkey",
+      "js_planner_ui_plannershoppingoptions",
+      "js_planner_ui_plannershoppingrows",
+      "js_planner_ui_plannershoppingsharetext",
+      "js_planner_ui_plannersourcechanged",
+      "js_planner_ui_plannerstoragekey",
+      "js_planner_ui_printplannershopping",
+      "js_planner_ui_removeplannedmeal",
+      "js_planner_ui_renderplanner",
+      "js_planner_ui_renderplannershopping",
+      "js_planner_ui_saveplannedmeal",
+      "js_planner_ui_shareplannershopping",
+      "js_planner_ui_shiftplannerweek",
+      "js_planner_ui_storeweeklyplan",
+      "js_planner_ui_toggleplannershopping",
+      "js_planner_ui_updateplannertarget",
+      "js_planner_ui_whatsappplannershopping"
+    ],
+    "1": [
+      "ref_assert",
+      "ref_fs",
+      "ref_vm",
+      "test_ai_flow",
+      "test_ai_flow_assert",
+      "test_ai_flow_c",
+      "test_ai_flow_els",
+      "test_ai_flow_fs",
+      "test_ai_flow_html",
+      "test_ai_flow_reply",
+      "test_ai_flow_requests",
+      "test_ai_flow_settle",
+      "test_ai_flow_vm",
+      "test_planner_test",
+      "test_planner_test_appendchild",
+      "test_planner_test_c",
+      "test_planner_test_click",
+      "test_planner_test_createelement",
+      "test_planner_test_createobjecturl",
+      "test_planner_test_getelementbyid",
+      "test_planner_test_getitem",
+      "test_planner_test_remove",
+      "test_planner_test_revokeobjecturl",
+      "test_planner_test_settimeout"
+    ],
+    "2": [
+      "js_planner_journey",
+      "js_planner_journey_buildjourneymeasurement",
+      "js_planner_journey_initjourneymeasurement",
+      "js_planner_journey_journeycounttext",
+      "js_planner_journey_journeyread",
+      "js_planner_journey_journeyrecord",
+      "js_planner_journey_makereuseweekdraft",
+      "js_planner_journey_planplatejourney",
+      "js_planner_journey_previewplannerweek",
+      "js_planner_journey_previousplanneranchor",
+      "js_planner_journey_renderdraftshopping",
+      "js_planner_journey_reusepreviousplannerweek",
+      "js_planner_journey_setjourneymeasurement",
+      "js_welcome",
+      "js_welcome_addwelcomeplate",
+      "js_welcome_changewelcomeportion",
+      "js_welcome_explorewelcomefoods",
+      "js_welcome_initwelcome",
+      "js_welcome_togglewelcome",
+      "js_welcome_updatewelcome"
+    ],
+    "3": [
+      "ref_node_fs",
+      "ref_vitest",
+      "test_dish_discovery_test",
+      "test_dish_discovery_test_c",
+      "test_dish_discovery_test_rows",
+      "test_dish_images_test",
+      "test_dish_images_test_c",
+      "test_food_library_expansion_test",
+      "test_food_library_expansion_test_c",
+      "test_food_library_expansion_test_source",
+      "test_guide_navigation_test",
+      "test_orbit_motion_test",
+      "test_orbit_motion_test_c",
+      "test_planner_journey_test",
+      "test_planner_journey_test_setup",
+      "test_welcome_test",
+      "test_welcome_test_setup"
+    ],
+    "4": [
+      "ref_node_path",
+      "ref_node_url",
+      "test_foods_data_parse_test",
+      "test_foods_data_parse_test_dirname",
+      "test_foods_data_parse_test_foodspath",
+      "test_meals_core_test",
+      "test_meals_core_test_dirname",
+      "test_meals_core_test_loadmeals",
+      "test_meals_core_test_mealspath",
+      "test_scoring_core_test",
+      "test_scoring_core_test_dirname",
+      "test_scoring_core_test_loadscoring",
+      "test_scoring_core_test_path",
+      "test_search_core_test",
+      "test_search_core_test_dirname",
+      "test_search_core_test_loadsearchsandbox",
+      "test_search_core_test_searchpath"
+    ],
+    "5": [
+      "api_chat",
+      "api_chat_handler",
+      "api_protocol_guide",
+      "api_protocol_guide_handler",
+      "api_protocol_pdf",
+      "api_protocol_pdf_handler",
+      "api_protocol_session",
+      "api_protocol_session_handler",
+      "lib_protocol_token",
+      "lib_protocol_token_parsecookie",
+      "lib_protocol_token_protocol_cookie_name",
+      "lib_protocol_token_signprotocolcookie",
+      "lib_protocol_token_verifyprotocolcookie",
+      "ref_node_crypto",
+      "test_api_integration_test",
+      "test_api_integration_test_response"
+    ],
+    "6": [
+      "js_plate_exploration",
+      "js_plate_exploration_applyplatescale",
+      "js_plate_exploration_dishimagefailed",
+      "js_plate_exploration_dishimageloaded",
+      "js_plate_exploration_openplateingredient",
+      "js_plate_exploration_previewplatescale",
+      "js_plate_exploration_renderdishorbit",
+      "js_plate_exploration_renderplateexploration",
+      "js_plate_exploration_selectorbitdish",
+      "js_plate_exploration_skdishes",
+      "js_plate_exploration_skinitmotion",
+      "js_plate_exploration_skpausemotion",
+      "js_plate_exploration_sktogglemotion",
+      "js_plate_exploration_skupdatemotion",
+      "js_plate_exploration_skweightgradient"
+    ],
+    "7": [
+      "scripts_reconcile_dishes",
+      "scripts_reconcile_dishes_ambiguous",
+      "scripts_reconcile_dishes_c",
+      "scripts_reconcile_dishes_credits",
+      "scripts_reconcile_dishes_existingnames",
+      "scripts_reconcile_dishes_imagereview",
+      "scripts_reconcile_dishes_linked",
+      "scripts_reconcile_dishes_merged",
+      "scripts_reconcile_dishes_norm",
+      "scripts_reconcile_dishes_notes",
+      "scripts_reconcile_dishes_reconciliation",
+      "scripts_reconcile_dishes_records",
+      "scripts_reconcile_dishes_related",
+      "scripts_reconcile_dishes_rows"
+    ],
+    "8": [
+      "js_swaps_ui",
+      "js_swaps_ui_buildswapsdrawer",
+      "js_swaps_ui_filterswapsources",
+      "js_swaps_ui_initswaps",
+      "js_swaps_ui_opencardswap",
+      "js_swaps_ui_pickplateswap",
+      "js_swaps_ui_renderswapplatechoices",
+      "js_swaps_ui_renderswapresults",
+      "js_swaps_ui_renderswapresults_num",
+      "js_swaps_ui_resetswapfilters",
+      "js_swaps_ui_selectswapsource",
+      "js_swaps_ui_undolastfoodswap",
+      "js_swaps_ui_usefoodswap"
+    ],
+    "9": [
+      "js_filter_core",
+      "js_filter_core_getvisiblefoods",
+      "js_filter_core_queryfoods",
+      "js_search_core",
+      "js_search_core_affordsynonymgroup",
+      "js_search_core_foodmatchessearch",
+      "js_search_core_foodsearchhaystack",
+      "js_search_core_foodsearchhaystackshort",
+      "js_search_core_foodsearchrelevance",
+      "js_search_core_fuzzysubsequence",
+      "js_search_core_tokenmatcheshaystack",
+      "js_search_core_tokenmatcheswithfuzzy"
+    ],
+    "10": [
+      "js_backup_core",
+      "js_backup_core_applybackupkeys",
+      "js_backup_core_buildbackupdocument",
+      "js_backup_core_collectbackupkeys",
+      "js_backup_core_isbackupkey",
+      "js_backup_core_nf_backup_keys",
+      "js_backup_core_nf_backup_schema",
+      "js_backup_core_nf_backup_version",
+      "js_backup_core_validatebackupdocument",
+      "test_backup_core_test",
+      "test_backup_core_test_memorystore"
+    ],
+    "11": [
+      "js_week_builder",
+      "js_week_builder_applycomboweekdraft",
+      "js_week_builder_buildcomboweeksection",
+      "js_week_builder_makecomboweekdraft",
+      "js_week_builder_opencomboweekbuilder",
+      "js_week_builder_rendercomboweekdraft",
+      "js_week_builder_savecomboweek",
+      "js_week_builder_setcomboweekchoice",
+      "js_week_builder_suggestcomboweek",
+      "js_week_builder_weekbuilderscope"
+    ],
+    "12": [
+      "manifest",
+      "manifest_background_color",
+      "manifest_description",
+      "manifest_display",
+      "manifest_icons",
+      "manifest_name",
+      "manifest_scope",
+      "manifest_short_name",
+      "manifest_start_url",
+      "manifest_theme_color"
+    ],
+    "13": [
+      "js_combinations",
+      "js_combinations_addcombomeal",
+      "js_combinations_buildcombomealideas",
+      "js_combinations_combomealmerge",
+      "js_combinations_combomealparts",
+      "js_combinations_comboplannersnapshot",
+      "js_combinations_plancombomeal",
+      "js_combinations_rendercombomeals",
+      "js_combinations_undocombomeal"
+    ],
+    "14": [
+      "ref_node_vm",
+      "test_combinations_test",
+      "test_combinations_test_c",
+      "test_combinations_test_lookup",
+      "test_guide_bridge_test",
+      "test_guide_bridge_test_c",
+      "test_week_builder_test",
+      "test_week_builder_test_c",
+      "test_week_builder_test_lookup"
+    ],
+    "15": [
+      "js_planner_core",
+      "js_planner_core_plannerdatekey",
+      "js_planner_core_planneringredientshoppinglist",
+      "js_planner_core_plannerput",
+      "js_planner_core_plannershoppingchecked",
+      "js_planner_core_plannershoppinglist",
+      "js_planner_core_plannersnapshot",
+      "js_planner_core_plannerweek"
+    ],
+    "16": [
+      "js_swaps_core",
+      "js_swaps_core_applyfoodswap",
+      "js_swaps_core_findfoodswaps",
+      "js_swaps_core_findfoodswaps_distance",
+      "js_swaps_core_findfoodswaps_preparation",
+      "js_swaps_core_findfoodswaps_valid",
+      "js_swaps_core_foodswapreason",
+      "js_swaps_core_undofoodswap"
+    ],
+    "17": [
+      "package",
+      "package_devdependencies",
+      "package_devdependencies_vitest",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_test",
+      "package_type"
+    ],
+    "18": [
+      "test_landing_nutrition_test",
+      "test_landing_nutrition_test_addeventlistener",
+      "test_landing_nutrition_test_c",
+      "test_landing_nutrition_test_example",
+      "test_landing_nutrition_test_initjourneymeasurement",
+      "test_landing_nutrition_test_mjs_c",
+      "test_landing_nutrition_test_mjs_c_updatewelcome",
+      "test_landing_nutrition_test_read"
+    ],
+    "19": [
+      "js_guide_bridge",
+      "js_guide_bridge_buildguideimportdrawer",
+      "js_guide_bridge_confirmguideimport",
+      "js_guide_bridge_mergeguidemeal",
+      "js_guide_bridge_readguidemeal",
+      "js_guide_bridge_reviewguidemeal",
+      "js_guide_bridge_validateguidemeal"
+    ],
+    "20": [
+      "js_evidence_audit",
+      "js_evidence_audit_applyevidenceaudit",
+      "js_evidence_audit_nutritioncomplete",
+      "js_evidence_audit_nutritionreviewnotice",
+      "js_evidence_audit_plannernutritiontext"
+    ],
+    "21": [
+      "test_ingredient_shopping_test",
+      "test_ingredient_shopping_test_c",
+      "test_ingredient_shopping_test_list",
+      "test_ingredient_shopping_test_lookup",
+      "test_ingredient_shopping_test_plan"
+    ],
+    "22": [
+      "test_swaps_test",
+      "test_swaps_test_a",
+      "test_swaps_test_b",
+      "test_swaps_test_c",
+      "test_swaps_test_d"
+    ],
+    "23": [
+      "test_welcome_test_setup_c",
+      "test_welcome_test_setup_c_opendrawer",
+      "test_welcome_test_setup_c_render",
+      "test_welcome_test_setup_c_savepersistence",
+      "test_welcome_test_setup_c_updatewelcome"
+    ],
+    "24": [
+      "js_scoring_core",
+      "js_scoring_core_calclongevity",
+      "js_scoring_core_classifydrug",
+      "js_scoring_core_confstars"
+    ],
+    "25": [
+      "test_filter_core_test",
+      "test_filter_core_test_c",
+      "test_filter_core_test_items",
+      "test_filter_core_test_query"
+    ],
+    "26": [
+      "js_dish_discovery",
+      "js_dish_discovery_discoveryescape",
+      "js_dish_discovery_discoveryrender"
+    ],
+    "27": [
+      "test_drawer_dismissal_test",
+      "test_drawer_dismissal_test_close",
+      "test_drawer_dismissal_test_html"
+    ],
+    "28": [
+      "test_evidence_audit_test",
+      "test_evidence_audit_test_context",
+      "test_evidence_audit_test_read"
+    ],
+    "29": [
+      "test_plate_exploration_test",
+      "test_plate_exploration_test_c",
+      "test_plate_exploration_test_lookup"
+    ],
+    "30": [
+      "test_today_summary_test",
+      "test_today_summary_test_html",
+      "test_today_summary_test_summary"
+    ],
+    "31": [
+      "vercel",
+      "vercel_redirects",
+      "vercel_rewrites"
+    ],
+    "32": [
+      "api_protocol_private_block",
+      "api_protocol_private_block_handler"
+    ],
+    "33": [
+      "js_dish_discovery_data"
+    ],
+    "34": [
+      "js_dish_images"
+    ],
+    "35": [
+      "js_foods_data"
+    ],
+    "36": [
+      "js_meals_core"
+    ],
+    "37": [
+      "js_shopping_recipes"
+    ],
+    "38": [
+      "js_source_corrections"
+    ],
+    "39": [
+      "sw"
+    ]
+  },
+  "cohesion": {
+    "0": 0.19373219373219372,
+    "1": 0.08333333333333333,
+    "2": 0.1736842105263158,
+    "3": 0.16176470588235295,
+    "4": 0.13970588235294118,
+    "5": 0.18333333333333332,
+    "6": 0.26666666666666666,
+    "7": 0.15384615384615385,
+    "8": 0.32051282051282054,
+    "9": 0.2878787878787879,
+    "10": 0.34545454545454546,
+    "11": 0.35555555555555557,
+    "12": 0.2,
+    "13": 0.4166666666666667,
+    "14": 0.2222222222222222,
+    "15": 0.39285714285714285,
+    "16": 0.25,
+    "17": 0.25,
+    "18": 0.25,
+    "19": 0.42857142857142855,
+    "20": 0.5,
+    "21": 0.4,
+    "22": 0.4,
+    "23": 0.4,
+    "24": 0.5,
+    "25": 0.5,
+    "26": 0.6666666666666666,
+    "27": 0.6666666666666666,
+    "28": 1.0,
+    "29": 0.6666666666666666,
+    "30": 0.6666666666666666,
+    "31": 0.6666666666666666,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0
+  },
+  "gods": [
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "degree": 26
+    },
+    {
+      "id": "js_planner_ui_renderplanner",
+      "label": "renderPlanner()",
+      "degree": 8
+    },
+    {
+      "id": "js_planner_ui_renderplannershopping",
+      "label": "renderPlannerShopping()",
+      "degree": 8
+    },
+    {
+      "id": "js_planner_ui_plannershoppingchecks",
+      "label": "plannerShoppingChecks()",
+      "degree": 7
+    },
+    {
+      "id": "js_planner_ui_plannershoppingoptions",
+      "label": "plannerShoppingOptions()",
+      "degree": 7
+    },
+    {
+      "id": "js_planner_ui_plannershoppingrows",
+      "label": "plannerShoppingRows()",
+      "degree": 7
+    },
+    {
+      "id": "js_planner_ui_plannershoppingsharetext",
+      "label": "plannerShoppingShareText()",
+      "degree": 7
+    },
+    {
+      "id": "js_swaps_ui_renderswapresults",
+      "label": "renderSwapResults()",
+      "degree": 7
+    },
+    {
+      "id": "js_planner_ui_plannerdaylabel",
+      "label": "plannerDayLabel()",
+      "degree": 6
+    },
+    {
+      "id": "js_plate_exploration_renderdishorbit",
+      "label": "renderDishOrbit()",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "handler()",
+      "target": "signProtocolCookie()",
+      "source_files": [
+        "api/protocol-session.js",
+        "lib/protocol-token.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "initWelcome()",
+      "target": "previewPlannerWeek()",
+      "source_files": [
+        "js/welcome.js",
+        "js/planner-journey.js"
+      ],
+      "confidence": "INFERRED",
+      "relation": "indirect_call",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "getVisibleFoods()",
+      "target": "foodMatchesSearch()",
+      "source_files": [
+        "js/filter-core.js",
+        "js/search-core.js"
+      ],
+      "confidence": "INFERRED",
+      "relation": "indirect_call",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "getVisibleFoods()",
+      "target": "foodSearchRelevance()",
+      "source_files": [
+        "js/filter-core.js",
+        "js/search-core.js"
+      ],
+      "confidence": "INFERRED",
+      "relation": "indirect_call",
+      "why": "inferred connection - not explicitly stated in source"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `vitest` connect `vitest` to `test-ai-flow.cjs`, `meals-core.test.mjs`, `api-integration.test.mjs`, `backup-core.mjs`, `ref_node_vm`, `package.json`, `landing-nutrition.test.mjs`, `ingredient-shopping.test.mjs`, `swaps.test.mjs`, `filter-core.test.mjs`, `drawer-dismissal.test.mjs`, `evidence-audit.test.mjs`, `plate-exploration.test.mjs`, `today-summary.test.mjs`?",
+      "why": "High betweenness centrality (0.123) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `test-ai-flow.cjs` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `setup()` connect `vitest` to `c`?",
+      "why": "High betweenness centrality (0.015) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `meals-core.test.mjs` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13970588235294118 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
