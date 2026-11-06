@@ -190,14 +190,17 @@ export function mount(host, opts = {}) {
   try { reviewerName = storage.getItem(REVIEWER_KEY) || ''; } catch { /* ignore */ }
 
   host.innerHTML = '<section class="rr-panel" aria-labelledby="rrTitle">' +
-    `<h3 id="rrTitle" class="rr-title">Records waiting for clinician review <span class="rr-count">${pending.length}</span></h3>` +
-    '<p class="rr-hint">Saved snapshots are being moved to the new patient record. Each copy stays on hold until a clinician confirms it. The original snapshots below are not changed.</p>' +
+    (pending.length
+      ? `<h3 id="rrTitle" class="rr-title">Records waiting for clinician review <span class="rr-count" aria-label="${pending.length} waiting">${pending.length}</span></h3>` +
+        '<p class="rr-hint">Saved snapshots are being moved to the new patient record. Each copy stays on hold until a clinician confirms it. The original snapshots below are not changed.</p>'
+      : '<h3 id="rrTitle" class="rr-title">Reviewed patient records</h3>' +
+        '<p class="rr-hint">Every saved snapshot has a confirmed patient record. New snapshots will appear here for review.</p>') +
     '<p class="rr-live sr-only" role="status" aria-live="polite"></p>' +
     (pending.length
       ? `<label class="rr-reviewer">Reviewing clinician <input type="text" id="rrReviewer" maxlength="80" autocomplete="name" value="${esc(reviewerName)}" placeholder="e.g. Dr A. Okafor, RD" aria-describedby="rrReviewerHelp rrReviewerErr"></label>` +
         '<p class="rr-hint" id="rrReviewerHelp">Recorded with every decision. There is no sign-in in this build, so this is the name you enter.</p>' +
         '<p class="rr-field-error" id="rrReviewerErr" hidden></p>'
-      : '<p class="rr-hint">All migrated records have been reviewed.</p>') +
+      : '') +
     pending.map((r, i) => {
       const fid = `rr${i}`;
       const items = pendingReviewItems(r);
@@ -211,7 +214,7 @@ export function mount(host, opts = {}) {
         '</form>';
     }).join('') +
     (done.length
-      ? `<details class="rr-done"><summary>Reviewed (${done.length})</summary><ul>` +
+      ? `<details class="rr-done"${pending.length ? '' : ' open'}><summary>Reviewed (${done.length})</summary><ul>` +
         done.map((r) => `<li><strong>${esc(r.identity.displayName || 'Unnamed')}</strong> — reviewed by ${esc(r.review.completedBy.name)} on ${esc(formatDate(r.review.completedAt))}</li>`).join('') +
         '</ul></details>'
       : '') +
