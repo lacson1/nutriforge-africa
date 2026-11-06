@@ -167,7 +167,8 @@ function showErrors(form, errors) {
 
 /**
  * @param {HTMLElement} host
- * @param {{ storage?: Storage, conditionLabel?: (code:string)=>string, now?: () => string }} [opts]
+ * @param {{ storage?: Storage, conditionLabel?: (code:string)=>string, now?: () => string,
+ *   confirm?: (message:string) => boolean|Promise<boolean> }} [opts]
  */
 export function mount(host, opts = {}) {
   if (!host) return;
@@ -266,10 +267,13 @@ export function mount(host, opts = {}) {
       const reviewer = getReviewer();
       if (!reviewer) return;
       const name = record.identity.displayName || 'this profile';
-      if (!window.confirm(`Discard the migrated copy of ${name}? The original snapshot stays in Client profiles and will not be migrated again.`)) return;
-      const res = discardMigratedRecord(storage, record.id, reviewer, { now: now() });
-      if (!res.ok) { showErrors(form, { record: res.error }); return; }
-      rerender(`Migrated copy of ${name} discarded.`);
+      const ask = opts.confirm || ((msg) => window.confirm(msg));
+      Promise.resolve(ask(`Discard the migrated copy of ${name}? The original snapshot stays in Client profiles and will not be migrated again.`)).then((yes) => {
+        if (!yes) return;
+        const res = discardMigratedRecord(storage, record.id, reviewer, { now: now() });
+        if (!res.ok) { showErrors(form, { record: res.error }); return; }
+        rerender(`Migrated copy of ${name} discarded.`);
+      });
     });
   });
   if (live && opts.message) live.textContent = opts.message;
