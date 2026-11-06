@@ -11,6 +11,8 @@ import {
   migrateProfiles,
   migrateStorage,
   isLegacyProfile,
+  isRecordUsable,
+  DISCARDED_LEGACY_KEY,
 } from '../js/patient-record.mjs';
 import { NF_BACKUP_KEYS } from '../js/backup-core.mjs';
 
@@ -113,7 +115,12 @@ describe('migration from v1 profiles', () => {
     expect(r.goals[0].targets.kcal).toEqual({ value: 1800, unit: 'kcal/day' });
     expect(r.notes[0].text).toBe('Prefers eba at lunch.');
     expect(r.app).toEqual({ favouriteFoodIds: [3, 7], plateFoodIds: [12], diaryKey: 'p1730000000000' });
-    expect(r.migration).toEqual({ from: 1, legacyId: 'p1730000000000', at: NOW, review: ['consent', 'createdBy', 'conditions', 'goals'] });
+    expect(r.migration).toEqual({ from: 1, legacyId: 'p1730000000000', at: NOW });
+    expect(r.review.status).toBe('pending');
+    expect(r.review.items.map((it) => it.kind)).toEqual(['consent', 'created_by', 'condition', 'goal']);
+    expect(r.review.items[2].ref).toBe(r.conditions[0].id);
+    expect(r.review.items[3].ref).toBe(r.goals[0].id);
+    expect(isRecordUsable(r)).toBe(false);
   });
 
   it('does not invent consent, measurements or demographics', () => {
@@ -143,6 +150,7 @@ describe('migration from v1 profiles', () => {
     const r = migrateProfileV1({ ...v1, condition: 'gout' }, { now: NOW });
     expect(r.conditions).toEqual([]);
     expect(r.notes[0].text).toMatch(/unrecognised condition "gout"/);
+    expect(r.review.items.find((it) => it.kind === 'unmapped_condition').ref).toBe(r.notes[0].id);
   });
 
   it('is idempotent and reports bad entries', () => {
@@ -153,6 +161,32 @@ describe('migration from v1 profiles', () => {
     expect(second.migrated).toEqual([]);
     expect(second.skipped).toEqual(['p1730000000000', 'p2']);
     expect(second.records).toHaveLength(2);
+  });
+
+  it('rebuilds a pending copy when its snapshot changes, and removes it when deleted', () => {
+    const first = migrateProfiles([v1], [], { now: NOW });
+    const same = migrateProfiles([v1], first.records, { now: NOW });
+    expect(same.refreshed).toEqual([]);
+    const edited = migrateProfiles([{ ...v1, note: 'Now prefers amala.' }], first.records, { now: NOW });
+    expect(edited.refreshed).toEqual(['p1730000000000']);
+    expect(edited.records).toHaveLength(1);
+    expect(edited.records[0].notes[0].text).toBe('Now prefers amala.');
+    const deleted = migrateProfiles([], first.records, { now: NOW });
+    expect(deleted.removed).toEqual(['p1730000000000']);
+    expect(deleted.records).toEqual([]);
+  });
+
+  it('never touches a reviewed copy, even if the snapshot changes or is deleted', () => {
+    const rec = migrateProfiles([v1], [], { now: NOW }).records[0];
+    const reviewed = { ...rec, review: { ...rec.review, status: 'complete' } };
+    expect(migrateProfiles([{ ...v1, note: 'x' }], [reviewed]).records[0]).toBe(reviewed);
+    expect(migrateProfiles([], [reviewed]).records[0]).toBe(reviewed);
+  });
+
+  it('skips discarded profiles', () => {
+    const res = migrateProfiles([v1], [], { now: NOW, discarded: ['p1730000000000'] });
+    expect(res.migrated).toEqual([]);
+    expect(res.skipped).toEqual(['p1730000000000']);
   });
 
   it('does not treat a v2 record as a v1 profile', () => {
@@ -188,5 +222,6 @@ describe('migrateStorage', () => {
 
   it('v2 records are included in backups', () => {
     expect(NF_BACKUP_KEYS).toContain(PATIENT_RECORDS_KEY);
+    expect(NF_BACKUP_KEYS).toContain(DISCARDED_LEGACY_KEY);
   });
 });

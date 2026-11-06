@@ -20,6 +20,8 @@ export const PATIENT_RECORD_SCHEMA = 'nutriforge-patient-record';
 export const PATIENT_RECORD_VERSION = 2;
 export const PATIENT_RECORDS_KEY = 'nf_patient_records';
 export const LEGACY_PROFILES_KEY = 'nf_profiles';
+/** Legacy profile ids whose migrated copy a clinician discarded; migration skips them. */
+export const DISCARDED_LEGACY_KEY = 'nf_patient_records_discarded';
 
 /** Condition codes. The first 15 match CONDITIONS in index.html; ckd is new in v2. */
 export const CONDITION_CODES = [
@@ -36,6 +38,19 @@ export const ALLERGY_SEVERITIES = ['intolerance', 'mild', 'moderate', 'severe', 
 export const ACTIVITY_LEVELS = ['sedentary', 'light', 'moderate', 'active', 'very_active'];
 export const BUDGET_BANDS = ['low', 'medium', 'high'];
 export const GOAL_SETTERS = ['clinician', 'patient', 'app_default', 'unknown'];
+
+/**
+ * Clinician review. Migrated records start `pending`; each item a person must
+ * confirm is listed, and the record is not usable until the review is `complete`.
+ *   consent            — v1 never asked for consent
+ *   created_by         — v1 did not record who made the profile
+ *   condition          — v1 condition was a browsing filter, not a diagnosis
+ *   goal               — v1 targets may be app defaults
+ *   unmapped_condition — v1 condition code not recognised; kept as a note
+ */
+export const REVIEW_ITEM_KINDS = ['consent', 'created_by', 'condition', 'goal', 'unmapped_condition'];
+export const REVIEW_STATUSES = ['pending', 'complete'];
+export const REVIEW_ITEM_STATUSES = ['pending', 'decided'];
 
 /**
  * Medication flags that change nutrition advice. Stored as data only; nothing in
@@ -181,7 +196,9 @@ export function createPatientRecord(opts = {}) {
       diaryKey: null,             // profile id under nf_diary_by_profile
     },
 
-    migration: null,              // { from, legacyId, at, review[] }
+    migration: null,              // { from, legacyId, at }
+    review: null,                 // null for records made in v2; see REVIEW_ITEM_KINDS
+    audit: [],                    // { at, by, role, action, itemKey, kind, decision, before, after }
   };
 }
 
@@ -331,7 +348,47 @@ export function validatePatientRecord(r) {
     if (ls[k] != null && !(Number.isInteger(ls[k]) && ls[k] >= 1 && ls[k] <= 5)) err(`lifestyle.${k} must be 1–5 or null`);
   }
 
+  if (r.review != null) {
+    const rv = r.review;
+    if (!REVIEW_STATUSES.includes(rv.status)) err('review.status invalid');
+    if (!Array.isArray(rv.items)) err('review.items must be a list');
+    else {
+      const keys = new Set();
+      rv.items.forEach((it, i) => {
+        if (!REVIEW_ITEM_KINDS.includes(it.kind)) err(`review.items[${i}].kind invalid`);
+        if (!REVIEW_ITEM_STATUSES.includes(it.status)) err(`review.items[${i}].status invalid`);
+        if (typeof it.key !== 'string' || keys.has(it.key)) err(`review.items[${i}].key missing or duplicate`);
+        keys.add(it.key);
+      });
+      if (rv.status === 'complete') {
+        if (rv.items.some((it) => it.status !== 'decided')) err('review complete but items are still pending');
+        if (!rv.completedBy || typeof rv.completedBy.name !== 'string' || !rv.completedBy.name.trim()) err('review.completedBy required');
+        if (!isIsoDate(rv.completedAt)) err('review.completedAt must be an ISO date');
+        if (r.consent && r.consent.status !== 'given') err('review cannot be complete without consent');
+      }
+    }
+  }
+  if (r.audit !== undefined && !Array.isArray(r.audit)) err('audit must be a list');
+
   return { ok: errors.length === 0, errors };
+}
+
+/**
+ * A record may be shown or used for planning only when it is valid and, if it
+ * came from a migration, a clinician has completed the review.
+ */
+export function isRecordUsable(r) {
+  if (!validatePatientRecord(r).ok) return false;
+  return r.review == null || r.review.status === 'complete';
+}
+
+/** Items still waiting for a clinician decision. */
+export function pendingReviewItems(r) {
+  return r && r.review && Array.isArray(r.review.items) ? r.review.items.filter((it) => it.status === 'pending') : [];
+}
+
+function reviewItem(kind, ref = null) {
+  return { key: ref ? `${kind}:${ref}` : kind, kind, ref, status: 'pending', decision: null, decidedAt: null, decidedBy: null };
 }
 
 /** True when the value looks like a v1 profile from nf_profiles. */
@@ -367,26 +424,28 @@ export function migrateProfileV1(p, opts = {}) {
     now,
   });
   record.createdAt = createdAt;
-  const review = ['consent', 'createdBy'];
+  const items = [reviewItem('consent'), reviewItem('created_by')];
 
   if (typeof p.condition === 'string' && p.condition) {
     if (CONDITION_CODES.includes(p.condition)) {
-      record.conditions.push({
+      const cond = {
         id: newId('cond'),
         code: p.condition,
         status: 'active',
         diagnosedOn: null,
         source: 'legacy_profile',
         addedAt: createdAt,
-      });
-      review.push('conditions');
+      };
+      record.conditions.push(cond);
+      items.push(reviewItem('condition', cond.id));
     } else {
       // Keep the unknown code visible rather than dropping it.
-      record.notes.push({
+      const note = {
         id: newId('note'), at: createdAt, author: null, role: 'unknown',
         text: `Migrated from v1: unrecognised condition "${String(p.condition).slice(0, 40)}".`,
-      });
-      review.push('conditions');
+      };
+      record.notes.push(note);
+      items.push(reviewItem('unmapped_condition', note.id));
     }
   }
 
@@ -398,15 +457,16 @@ export function migrateProfileV1(p, opts = {}) {
       // A missing or non-numeric goal stays null; it is never coerced to 0.
       targets[code] = { value: isFiniteNumber(v) && v >= 0 ? v : null, unit: TARGET_CODES[code] };
     }
+    const goalId = newId('goal');
+    items.push(reviewItem('goal', goalId));
     record.goals.push({
-      id: newId('goal'),
+      id: goalId,
       targets,
       setBy: 'unknown',
       basis: 'Snapshot of diary goals when the v1 profile was saved; may be app defaults.',
       setOn: createdAt,
       reviewOn: null,
     });
-    review.push('goals');
   }
 
   if (typeof p.note === 'string' && p.note.trim()) {
@@ -417,39 +477,85 @@ export function migrateProfileV1(p, opts = {}) {
   record.app.plateFoodIds = uniqInts(p.plateIds);
   record.app.diaryKey = p.id;
 
-  record.migration = { from: 1, legacyId: p.id, at: now, review };
+  record.migration = { from: 1, legacyId: p.id, at: now };
+  record.review = { status: 'pending', items, completedBy: null, completedAt: null };
+  record.audit.push({ at: now, by: null, role: 'unknown', action: 'migrated', itemKey: null, kind: null, decision: null, before: null, after: { legacyId: p.id } });
   return record;
+}
+
+/** Short fingerprint of a v1 profile, so a changed snapshot can be detected. */
+export function legacyFingerprint(p) {
+  const str = JSON.stringify(p);
+  let h = 0x811c9dc5;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return (h >>> 0).toString(16).padStart(8, '0');
+}
+
+function isPendingMigration(r) {
+  return !!(r && r.migration && r.review && r.review.status === 'pending');
 }
 
 /**
  * Migrates a list of v1 profiles, merging with records that already exist.
- * Profiles already migrated (same legacyId) are skipped, so this is safe to re-run.
+ *
+ * - Profiles already migrated (same legacyId) are skipped, so this is safe to re-run.
+ * - Profiles whose migrated copy a clinician discarded (`opts.discarded`) are skipped.
+ * - A copy still waiting for review is rebuilt if its v1 snapshot changed, and
+ *   removed if the v1 snapshot was deleted. Reviewed copies are never touched.
  *
  * @param {unknown[]} legacyProfiles parsed nf_profiles
  * @param {object[]} [existingRecords] parsed nf_patient_records
- * @returns {{ records: object[], migrated: string[], skipped: string[], failed: {id:any, reason:string}[] }}
+ * @returns {{ records: object[], migrated: string[], refreshed: string[], removed: string[], skipped: string[], failed: {id:any, reason:string}[] }}
  */
 export function migrateProfiles(legacyProfiles, existingRecords = [], opts = {}) {
-  const records = Array.isArray(existingRecords) ? existingRecords.slice() : [];
-  const done = new Set(records.map((r) => r && r.migration && r.migration.legacyId).filter(Boolean));
+  const legacy = Array.isArray(legacyProfiles) ? legacyProfiles : [];
+  const legacyById = new Map(legacy.filter(isLegacyProfile).map((p) => [p.id, p]));
+  const discarded = new Set(Array.isArray(opts.discarded) ? opts.discarded : []);
   const migrated = [];
+  const refreshed = [];
+  const removed = [];
   const skipped = [];
   const failed = [];
-  for (const p of Array.isArray(legacyProfiles) ? legacyProfiles : []) {
-    if (!isLegacyProfile(p)) { failed.push({ id: p && p.id, reason: 'not a v1 profile' }); continue; }
-    if (done.has(p.id)) { skipped.push(p.id); continue; }
+
+  const build = (p) => {
+    const rec = migrateProfileV1(p, opts);
+    rec.migration.sourceHash = legacyFingerprint(p);
+    const v = validatePatientRecord(rec);
+    if (!v.ok) throw new Error(v.errors.join('; '));
+    return rec;
+  };
+
+  const records = [];
+  for (const r of Array.isArray(existingRecords) ? existingRecords : []) {
+    if (!isPendingMigration(r)) { records.push(r); continue; }
+    const p = legacyById.get(r.migration.legacyId);
+    if (!p) { removed.push(r.migration.legacyId); continue; }
+    if (r.migration.sourceHash && r.migration.sourceHash === legacyFingerprint(p)) { records.push(r); continue; }
     try {
-      const rec = migrateProfileV1(p, opts);
-      const v = validatePatientRecord(rec);
-      if (!v.ok) { failed.push({ id: p.id, reason: v.errors.join('; ') }); continue; }
-      records.push(rec);
+      records.push(build(p));
+      refreshed.push(p.id);
+    } catch (e) {
+      records.push(r);
+      failed.push({ id: p.id, reason: String(e && e.message || e) });
+    }
+  }
+
+  const done = new Set(records.map((r) => r && r.migration && r.migration.legacyId).filter(Boolean));
+  for (const p of legacy) {
+    if (!isLegacyProfile(p)) { failed.push({ id: p && p.id, reason: 'not a v1 profile' }); continue; }
+    if (done.has(p.id) || discarded.has(p.id)) { skipped.push(p.id); continue; }
+    try {
+      records.push(build(p));
       done.add(p.id);
       migrated.push(p.id);
     } catch (e) {
       failed.push({ id: p.id, reason: String(e && e.message || e) });
     }
   }
-  return { records, migrated, skipped, failed };
+  return { records, migrated, refreshed, removed, skipped, failed };
 }
 
 /**
@@ -470,10 +576,11 @@ export function migrateStorage(storage, opts = {}) {
   };
   const legacy = read(LEGACY_PROFILES_KEY);
   const existing = read(PATIENT_RECORDS_KEY);
+  const discarded = read(DISCARDED_LEGACY_KEY) || [];
   if (legacy === null) return { ok: false, error: `${LEGACY_PROFILES_KEY} is not valid JSON` };
   if (existing === null) return { ok: false, error: `${PATIENT_RECORDS_KEY} is not valid JSON; left untouched` };
-  const result = migrateProfiles(legacy, existing, opts);
-  if (result.migrated.length) {
+  const result = migrateProfiles(legacy, existing, { ...opts, discarded });
+  if (result.migrated.length || result.refreshed.length || result.removed.length) {
     try {
       storage.setItem(PATIENT_RECORDS_KEY, JSON.stringify(result.records));
     } catch (e) {

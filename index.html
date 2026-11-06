@@ -435,6 +435,31 @@ body.dark-mode .community-start-btn{background:var(--surface);border-color:var(-
 body.dark-mode .community-start-btn:hover{border-color:var(--accent-green);background:rgba(94,234,212,.08)}
 body.dark-mode .portion-hand-hint{border-color:var(--card-border);background:var(--surface)}
 body.dark-mode .exp-condition-why{background:rgba(94,234,212,.1);border-left-color:var(--accent-green)}
+/* Clinician review of migrated patient records */
+.rr-panel{border:1px solid var(--card-border);border-radius:12px;padding:12px;margin:10px 0 14px;background:var(--surface)}
+.rr-title{font-size:14px;font-weight:600;margin:0 0 4px;color:var(--text-primary);display:flex;align-items:center;gap:8px}
+.rr-count{font-size:11px;font-weight:600;min-width:22px;padding:1px 7px;border-radius:999px;background:var(--accent-green);color:var(--card-bg);text-align:center}
+.rr-hint{font-size:12px;line-height:1.45;color:var(--text-secondary);margin:2px 0 8px}
+.rr-reviewer,.rr-inline{display:flex;flex-direction:column;gap:4px;font-size:12px;font-weight:600;color:var(--text-primary);margin:6px 0}
+.rr-reviewer input,.rr-inline input{font:inherit;font-weight:400;font-size:14px;min-height:40px;padding:6px 10px;border:1px solid var(--card-border);border-radius:8px;background:var(--card-bg);color:var(--text-primary);max-width:100%}
+.rr-card{border:1px solid var(--card-border);border-radius:10px;padding:12px;margin:12px 0 0;background:var(--card-bg)}
+.rr-card-title{font-size:14px;margin:0 0 2px;color:var(--text-primary)}
+.rr-item{border:1px solid var(--card-border);border-radius:8px;padding:10px 12px;margin:10px 0 0;min-width:0}
+.rr-item legend{font-size:12px;font-weight:600;padding:0 4px;color:var(--text-primary)}
+.rr-item.rr-invalid{border-color:var(--red,#B42318);border-width:2px}
+.rr-choice{display:flex;align-items:center;gap:8px;min-height:40px;font-size:13px;color:var(--text-primary);cursor:pointer}
+.rr-choice input{width:18px;height:18px;flex-shrink:0;accent-color:var(--accent-green)}
+.rr-sub{padding-left:26px}
+.rr-goal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px}
+.rr-field-error,.rr-form-error{font-size:12px;font-weight:600;color:var(--red,#B42318);margin:6px 0 0}
+.rr-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.rr-primary,.rr-secondary{font:inherit;font-size:13px;font-weight:600;min-height:44px;padding:8px 16px;border-radius:999px;cursor:pointer;border:1px solid var(--accent-green)}
+.rr-primary{background:var(--accent-green);color:var(--card-bg)}
+.rr-secondary{background:transparent;color:var(--text-primary);border-color:var(--card-border)}
+.rr-primary:focus-visible,.rr-secondary:focus-visible,.rr-choice input:focus-visible,.rr-panel input:focus-visible{outline:3px solid var(--accent-amber);outline-offset:2px}
+.rr-done{margin-top:12px;font-size:12px;color:var(--text-secondary)}
+.rr-done summary{cursor:pointer;font-weight:600;min-height:32px;display:flex;align-items:center}
+.rr-done ul{margin:4px 0 0;padding-left:18px}
 .profile-row{display:flex;align-items:flex-start;gap:10px;padding:10px;border:1px solid var(--card-border);border-radius:10px;margin-bottom:8px;background:var(--surface)}
 .profile-row.profile-row-active{border-color:var(--accent-green);box-shadow:0 0 0 1px var(--accent-green-light)}
 .profile-row-main{flex:1;min-width:0}
@@ -1635,7 +1660,7 @@ function openDrawer(name){
   else if(name==='diary'){body.innerHTML = buildDiaryDrawer();refreshDiaryView();}
   else if(name==='meals'){body.innerHTML = buildMealsDrawer();renderMealTemplatesIfOpen();}
   else if(name==='drugs'){body.innerHTML = buildDrugsDrawer();}
-  else if(name==='profiles'){body.innerHTML = buildProfilesDrawer();refreshProfilesView();}
+  else if(name==='profiles'){body.innerHTML = buildProfilesDrawer();refreshProfilesView();mountRecordReview();}
   drawer.dataset.panel=name;
   var introductions={
     ai:['Ask, explore, understand.','Nutrition questions, with your current foods and plate in context.'],
@@ -1906,6 +1931,7 @@ function buildProfilesDrawer(){
     '<label for="profileNoteInput" style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text-tertiary);display:block">Focus for this visit (optional)</label>' +
     '<textarea id="profileNoteInput" class="profile-note-input" maxlength="280" rows="2" placeholder="e.g. Tighten portions on starches · prefers soups · warfarin"></textarea>' +
     '<div id="profileSessionBanner" class="profile-session-bar"></div>' +
+    '<div id="recordReviewHost"></div>' +
     '<div id="profilesList"></div>';
 }
 
@@ -2151,6 +2177,7 @@ function saveCurrentProfile(){
     note: note || ''
   });
   saveProfilesStore();
+  mountRecordReview();
   if(nameInp) nameInp.value = '';
   if(noteInp) noteInp.value = '';
   refreshProfilesView();
@@ -2270,6 +2297,10 @@ function deleteProfile(pid){
   }
 }
 
+function mountRecordReview(){
+  var host = document.getElementById('recordReviewHost');
+  if(host && window.NFRecordReview) window.NFRecordReview.mount(host);
+}
 function refreshProfilesView(){
   var banner = document.getElementById('profileSessionBanner');
   if(banner){
@@ -3668,7 +3699,7 @@ function buildDensityChart(){
   wrap.addEventListener('click',function(e){var circle=e.target.closest('circle');if(circle&&circle.dataset.id){closeDrawer();setTimeout(function(){var el=document.getElementById('c'+circle.dataset.id);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});if(!el.classList.contains('open'))el.click()}},200)}});
 }
 
-// ── FULL BACKUP (JSON) — logic in ./js/backup-core.mjs?v=2 ──
+// ── FULL BACKUP (JSON) — logic in ./js/backup-core.mjs?v=3 ──
 function nfBackupFilename(){
   var d=new Date();
   function pad(n){return n<10?'0'+n:''+n}
@@ -4042,8 +4073,11 @@ if('serviceWorker' in navigator){
 }
 </script>
 <script type="module">
-import * as NFBackupCore from './js/backup-core.mjs?v=2';
+import * as NFBackupCore from './js/backup-core.mjs?v=3';
+import * as NFRecordReview from './js/record-review-ui.mjs?v=1';
 window.NFBackupCore = NFBackupCore;
+window.NFRecordReview = NFRecordReview;
+if(typeof activeDrawer!=='undefined' && activeDrawer==='profiles') NFRecordReview.mount(document.getElementById('recordReviewHost'));
 </script>
 </body>
 </html>

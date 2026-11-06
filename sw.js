@@ -1,5 +1,5 @@
 /* NutriForge — offline shell for static assets (same-origin only). */
-var CACHE_NAME = 'nutriforge-layout-73';
+var CACHE_NAME = 'nutriforge-layout-74';
 var PRECACHE = [
   './dish-library.html?v=2',
   './dish-library.css?v=3',
@@ -20,7 +20,10 @@ var PRECACHE = [
   './assets/brand/savourkin-symbol.svg',
   './assets/brand/savourkin-icon.svg',
   './t2dm-clinical-field-guide.html?v=49',
-  './js/backup-core.mjs?v=2',
+  './js/backup-core.mjs?v=3',
+  './js/patient-record.mjs',
+  './js/record-review-core.mjs',
+  './js/record-review-ui.mjs?v=1',
   './js/foods-data.js?v=49',
   './js/source-corrections.js?v=49',
   './js/evidence-audit.js?v=50',
