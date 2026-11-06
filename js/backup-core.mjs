@@ -7,6 +7,7 @@ export const NF_BACKUP_KEYS = [
   'nf_diary_by_profile',
   'nf_diary_goals',
   'nf_profiles',
+  'nf_patient_records',
   'nf_active_profile',
   'nf_favourites',
   'nf_plate',
